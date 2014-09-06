@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1SD-w0-bby">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9Rz-zX-kpJ">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="1SD-w0-bby" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Djk-2p-c3S">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OGI-JR-xGh" kind="relationship" relationship="rootViewController" id="dmj-CG-Gfo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ya-TO-D9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="972"/>
+        </scene>
+        <!--Music Box View Controller-->
+        <scene sceneID="EZT-Ww-Yna">
+            <objects>
+                <viewController id="OGI-JR-xGh" customClass="CMBMusicBoxViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aKK-ho-WT9"/>
+                        <viewControllerLayoutGuide type="bottom" id="cFU-af-w2i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="liS-On-GVe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPC-Sn-I1o">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ty7-zv-Xef">
+                                        <rect key="frame" x="0.0" y="0.0" width="960" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bKy-8R-19x">
+                                                <rect key="frame" x="0.0" y="66" width="960" height="568"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <prototypes>
+                                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicBoxCell" id="eat-gf-db6" customClass="CMBMusicBoxViewCell">
+                                                        <rect key="frame" x="0.0" y="22" width="960" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eat-gf-db6" id="jCb-TV-DH6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="960" height="43"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <sections/>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="960" id="HrN-cx-aFy"/>
+                                            <constraint firstAttribute="height" constant="568" id="pxb-hW-tHE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ty7-zv-Xef" firstAttribute="top" secondItem="dPC-Sn-I1o" secondAttribute="top" id="8FB-Eu-6m2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ty7-zv-Xef" secondAttribute="trailing" id="Kdr-ON-eHf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ty7-zv-Xef" secondAttribute="bottom" id="N0k-sF-96E"/>
+                                    <constraint firstItem="Ty7-zv-Xef" firstAttribute="leading" secondItem="dPC-Sn-I1o" secondAttribute="leading" id="V9U-02-0Cm"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nIN-k4-Uqe">
+                                <rect key="frame" x="-320" y="279" width="960" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZmP-5A-KYj">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="z1h-DT-MZw"/>
+                                    <barButtonItem title="■" id="tPI-bR-fBF">
+                                        <connections>
+                                            <action selector="stopButtonDidTap:" destination="OGI-JR-xGh" id="grL-Zi-lqy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="SCE-I8-7bt"/>
+                                    <barButtonItem title="▼" id="zHS-0g-qN3">
+                                        <connections>
+                                            <action selector="playButtonDidTap:" destination="OGI-JR-xGh" id="rhQ-eF-rQo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pKZ-nN-yfc"/>
+                                    <barButtonItem title="Trk3" id="F4N-Qt-Qnc"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NJk-cq-ONj"/>
+                                    <barButtonItem title="Trk4" id="z8K-ti-htV"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Qia-Oo-PtM"/>
+                                    <barButtonItem title="Menue" id="43b-Ox-G0z"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4ps-rj-8VF"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dPC-Sn-I1o" secondAttribute="trailing" id="7WL-vG-k86"/>
+                            <constraint firstItem="dPC-Sn-I1o" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="E4p-mv-lrP"/>
+                            <constraint firstItem="dPC-Sn-I1o" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" id="caT-b6-hti"/>
+                            <constraint firstAttribute="bottom" secondItem="dPC-Sn-I1o" secondAttribute="bottom" id="fnM-eG-qKK"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hd1-Ln-0DV">
+                        <barButtonItem key="leftBarButtonItem" title="Menue" id="Tc4-ZJ-xQT"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="scrollView" destination="dPC-Sn-I1o" id="yVg-2A-uyo"/>
+                        <outlet property="tableView" destination="bKy-8R-19x" id="Vhu-mS-RaV"/>
+                        <outlet property="tineView" destination="nIN-k4-Uqe" id="T33-eb-2wS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8be-Yi-Aj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="1007"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

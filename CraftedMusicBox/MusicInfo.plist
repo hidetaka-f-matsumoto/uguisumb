@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>OctaveMax</key>
+	<integer>2</integer>
+	<key>OctaveMin</key>
+	<integer>5</integer>
+	<key>Scales</key>
+	<array>
+		<string>C</string>
+		<string>^C</string>
+		<string>D</string>
+		<string>^D</string>
+		<string>E</string>
+		<string>F</string>
+		<string>^F</string>
+		<string>G</string>
+		<string>^G</string>
+		<string>A</string>
+		<string>^A</string>
+		<string>B</string>
+	</array>
+</dict>
+</plist>
