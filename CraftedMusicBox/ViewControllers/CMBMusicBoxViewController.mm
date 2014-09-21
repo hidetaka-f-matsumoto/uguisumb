@@ -180,10 +180,40 @@
 
 - (void)saveButtonDidTap
 {
-    BOOL isSuccess = [[CMBUtility sharedInstance] saveScoreWithSequences:_sequences
-                                                                fileName:@"test"];
-    if (!isSuccess) {
-    }
+    // 確認ダイアログ
+    UIAlertController *alertController =
+    [UIAlertController alertControllerWithTitle:@"楽譜の保存"
+                                        message:@"楽譜を保存します。よろしいですか？"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    // OK処理
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction *action) {
+        // 保存実行
+        BOOL isSuccess = [[CMBUtility sharedInstance] saveScoreWithSequences:_sequences
+                                                                    fileName:@"test"];
+        if (!isSuccess) {
+            // 保存失敗
+            UIAlertController *alertController =
+            [UIAlertController alertControllerWithTitle:@"楽譜の保存"
+                                                message:@"楽譜の保存に失敗しました。"
+                                         preferredStyle:UIAlertControllerStyleAlert];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:nil]];
+            [self presentViewController:alertController
+                               animated:YES
+                             completion:nil];
+        }
+    }]];
+    // Cancel処理
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:nil]];
+    // ダイアログを表示
+    [self presentViewController:alertController
+                       animated:YES
+                     completion:nil];
 }
 
 - (void)scrollAuto:(NSTimer*)timer
@@ -253,6 +283,7 @@
     }else{
         switch (buttonIndex) {
             case 0: // Save
+                [self saveButtonDidTap];
                 break;
             case 1: // Load
                 break;
