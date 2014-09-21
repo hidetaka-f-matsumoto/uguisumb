@@ -14,6 +14,7 @@
     NSTimer *_timer;
     BOOL _isPlaying;
     CGPoint _scrollPointBegin;
+    NSMutableDictionary *_sequences; // Dictionary<NSIndexPath *, CMBSequenceOneData *>
 }
 
 @property (nonatomic, assign) RingBuffer *ringBuffer;
@@ -21,6 +22,14 @@
 @end
 
 @implementation CMBMusicBoxViewController
+
+- (void)_init
+{
+    _timer = nil;
+    _isPlaying = NO;
+    _scrollPointBegin = CGPointZero;
+    _sequences = [NSMutableDictionary dictionary];
+}
 
 - (void)loadSounds
 {
@@ -58,7 +67,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self _init];
     }
     return self;
 }
@@ -71,7 +80,9 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
 
+    [self _init];
     [self loadSounds];
+    [self loadSequencesWithFileName:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -166,7 +177,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return 100;
+    return _sequences.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -177,6 +188,7 @@
     cell.delegate = self;
     cell.parentTableView = _tableView;
     cell.tineView = _tineView;
+    [cell updateWithSequenceOne:_sequences[indexPath]];
     
     return cell;
 }
@@ -208,20 +220,58 @@
 
 #pragma mark - CMBMusicBoxViewCellDelegate
 
-- (void)noteDidTapWithInfo:(NSDictionary *)info
+/**
+ * 音符がタップされた
+ */
+- (void)noteDidTapWithInfo:(NSMutableDictionary *)info
 {
     if (!info) {
         return;
     }
-    [self playWithScale:info[CMBNoteInfoKeyScale]
-                 octave:info[CMBNoteInfoKeyOctave]];
+    BOOL isTapOn = [info[@"isTapOn"] boolValue];
+    // 音を再生
+    if (isTapOn) {
+        [self playWithScale:info[CMBNoteInfoKeyScale]
+                     octave:info[CMBNoteInfoKeyOctave]];
+    }
+    // シーケンスを更新
+    NSIndexPath *indexPath = (NSIndexPath *)info[@"indexPath"];
+    NSLog(@"%d", indexPath.row);
+    CMBSequenceOneData *seqOneData = _sequences[indexPath];
+    // シーケンスデータが新規の場合
+    if (!seqOneData) {
+        seqOneData = [CMBSequenceOneData sequenceOneData];
+    }
+    CMBNoteData *noteData = [[CMBNoteData alloc] initWithInfo:info];
+    // TapOnの場合: 追加
+    if (isTapOn) {
+        [seqOneData addNoteData:noteData];
+    }
+    // TapOffの場合: 削除
+    else {
+        [seqOneData removeNoteData:noteData];
+    }
 }
 
+/**
+ * 音符が弾かれた
+ */
 - (void)notesDidPickWithInfos:(NSArray *)infos
 {
     for (NSDictionary *info in infos) {
         [self playWithScale:info[CMBNoteInfoKeyScale]
                      octave:info[CMBNoteInfoKeyOctave]];
+    }
+}
+
+#pragma mark - Load Score.
+
+- (void)loadSequencesWithFileName:(NSString *)name
+{
+    // TODO:
+    for (NSInteger i=0; i<100; i++) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+        [_sequences setObject:[CMBSequenceOneData sequenceOneData] forKey:indexPath];
     }
 }
 

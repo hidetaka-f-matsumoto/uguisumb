@@ -13,10 +13,14 @@
 @protocol CMBMusicBoxOctaveViewDelegate <NSObject>
 
 @required
-- (void)noteDidTapWithInfo:(id)info;
+/** 音符がタップされた */
+- (void)noteDidTapWithInfo:(NSMutableDictionary *)info;
 
 @end
 
+/**
+ * 1オクターブのView
+ */
 @interface CMBMusicBoxOctaveView : UIView
 
 @property (nonatomic, assign) id<CMBMusicBoxOctaveViewDelegate> delegate;
@@ -27,7 +31,7 @@
 
 - (IBAction)noteButtonDidTap:(id)sender;
 
-- (void)updateWithOctaveOne:(CMBSequenceOneData *)soData;
+- (void)updateWithSequenceOneData:(CMBSequenceOneData *)soData;
 
 + (NSString *)scaleWithIndex:(NSInteger)index;
 + (NSInteger)indexWithScale:(NSString *)scale;

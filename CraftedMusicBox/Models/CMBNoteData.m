@@ -16,21 +16,18 @@
     return [NSString stringWithFormat: @"CMBNoteData: scale=%@ octave=%@", _scale, _octave];
 }
 
-- (id)initWithInfo:(NSDictionary *)info
+- (id)initWithABCParts:(NSDictionary *)parts
 {
     self = [super init];
     if (self) {
-        _scale = @0;
+        _scale = @"C";
         _octave = @0;
-        if (info) {
+        if (parts) {
             NSInteger sharp = 0;
-            sharp += [info[CMBNoteInfoKeyChange] countWithChar:CMBSharpPrefix];
-            sharp -= [info[CMBNoteInfoKeyChange] countWithChar:CMBFlatPrefix];
-            NSInteger scale = [CMBScales indexOfObject:info[CMBNoteInfoKeyScale]];
-            if (NSNotFound != scale) {
-                _scale = [NSNumber numberWithInteger:(scale + sharp)];
-            }
-            NSInteger octave = [info[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveUpSuffix] - [info[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveDownSuffix];
+            sharp += [parts[CMBNoteInfoKeyChange] countWithChar:CMBSharpPrefix];
+            sharp -= [parts[CMBNoteInfoKeyChange] countWithChar:CMBFlatPrefix];
+            _scale = parts[CMBNoteInfoKeyScale];
+            NSInteger octave = [parts[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveUpSuffix] - [parts[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveDownSuffix];
             _octave = [NSNumber numberWithInteger:octave];
         }
     }
@@ -41,12 +38,22 @@
 {
     self = [super init];
     if (self) {
-        _scale = @0;
+        _scale = @"C";
         _octave = @0;
         if (abc) {
-            NSArray *infos = [CMBUtility noteInfosWithABCString:abc];
-            self = [self initWithInfo:infos[0]];
+            NSArray *partss = [CMBUtility noteInfosWithABCString:abc];
+            self = [self initWithABCParts:partss[0]];
         }
+    }
+    return self;
+}
+
+- (id)initWithInfo:(NSDictionary *)info
+{
+    self = [super init];
+    if (self) {
+        _scale = info[CMBNoteInfoKeyScale];
+        _octave = info[CMBNoteInfoKeyOctave];
     }
     return self;
 }

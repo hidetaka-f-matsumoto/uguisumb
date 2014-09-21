@@ -19,12 +19,16 @@ static NSString * const CMBFlatPrefix = @"_";
 static NSString * const CMBOctaveUpSuffix = @"'";
 static NSString * const CMBOctaveDownSuffix = @",";
 
+/**
+ * 1音符データ
+ */
 @interface CMBNoteData : NSObject
 
-@property (nonatomic, strong) NSNumber *scale;
+@property (nonatomic, strong) NSString *scale;
 @property (nonatomic, strong) NSNumber *octave;
 
-- (id)initWithInfo:(NSDictionary *)info;
+- (id)initWithABCParts:(NSDictionary *)parts;
 - (id)initWithABCString:(NSString *)abc;
+- (id)initWithInfo:(NSDictionary *)info;
 
 @end

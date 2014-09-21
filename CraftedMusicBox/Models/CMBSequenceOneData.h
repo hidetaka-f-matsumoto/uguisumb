@@ -9,6 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "CMBNoteData.h"
 
-@interface CMBSequenceOneData : NSMutableArray
+/**
+ * 1シーケンスデータ
+ *  List<CMBNoteData *>
+ */
+@interface CMBSequenceOneData : NSObject
+
+@property (nonatomic, strong, readonly) NSMutableArray *notes;
+
++ (CMBSequenceOneData *)sequenceOneData;
++ (CMBSequenceOneData *)sequenceOneDataWithNoteData:(CMBNoteData *)noteData;
++ (CMBSequenceOneData *)sequenceOneDataWithNoteDatas:(NSArray *)noteDatas;
+- (id)initWithNoteData:(CMBNoteData *)noteData;
+- (id)initWithNoteDatas:(NSArray *)noteDatas;
+- (void)addNoteData:(CMBNoteData *)noteData;
+- (void)removeNoteData:(CMBNoteData *)noteData;
 
 @end

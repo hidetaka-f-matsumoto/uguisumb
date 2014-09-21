@@ -11,11 +11,25 @@
 
 @implementation CMBMusicBoxOctaveView
 
+- (void)_init
+{
+    _delegate = nil;
+    _octave = nil;
+    [self _initViews];
+}
+
+- (void)_initViews
+{
+    for (UIButton *noteButton in _noteButtons) {
+        noteButton.selected = NO;
+    }
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self _init];
     }
     return self;
 }
@@ -53,21 +67,28 @@
 
 - (IBAction)noteButtonDidTap:(id)sender
 {
+    // ボタン選択状態を反転
     UIButton *noteButton = (UIButton *)sender;
     noteButton.selected = !noteButton.selected;
-    if (noteButton.selected) {
-        NSInteger index = [_noteButtons indexOfObject:noteButton];
-        [_delegate noteDidTapWithInfo:[self noteInfoWithButtonIndex:index]];
-    }
+    // 通知情報を作成
+    NSMutableDictionary *info = [NSMutableDictionary dictionary];
+    // 音符
+    NSInteger index = [_noteButtons indexOfObject:noteButton];
+    [info addEntriesFromDictionary:[NSMutableDictionary dictionaryWithDictionary:[self noteInfoWithButtonIndex:index]]];
+    // on/off
+    [info setObject:[NSNumber numberWithBool:noteButton.selected] forKey:@"isTapOn"];
+    // 通知
+    [_delegate noteDidTapWithInfo:info];
 }
 
-- (void)updateWithOctaveOne:(CMBSequenceOneData *)soData
+- (void)updateWithSequenceOneData:(CMBSequenceOneData *)soData;
 {
-    for (CMBNoteData *note in soData) {
+    [self _initViews];
+    for (CMBNoteData *note in soData.notes) {
         if (!note || note.octave != _octave) {
             continue;
         }
-        [_noteButtons[note.scale.integerValue] setSelected:YES];
+        [_noteButtons[[CMBMusicBoxOctaveView indexWithScale:note.scale]] setSelected:YES];
     }
 }
 

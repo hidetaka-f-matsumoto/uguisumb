@@ -12,11 +12,17 @@
 
 @protocol CMBMusicBoxViewCellDelegate <NSObject>
 
-- (void)noteDidTapWithInfo:(NSDictionary *)info;
+@required
+/** 音符がタップされた */
+- (void)noteDidTapWithInfo:(NSMutableDictionary *)info;
+/** 音符が弾かれた */
 - (void)notesDidPickWithInfos:(NSArray *)infos;
 
 @end
 
+/**
+ * 1シーケンスのCell
+ */
 @interface CMBMusicBoxViewCell : UITableViewCell <CMBMusicBoxOctaveViewDelegate>
 
 @property (nonatomic, assign) id<CMBMusicBoxViewCellDelegate> delegate;

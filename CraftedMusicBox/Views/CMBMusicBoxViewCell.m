@@ -17,7 +17,7 @@
 
 @implementation CMBMusicBoxViewCell
 
-- (void)setup
+- (void)_init
 {
     _octaveViews = [NSMutableArray array];
     for (NSInteger i=0; i<CMBOctaveRange; i++) {
@@ -40,14 +40,14 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self setup];
+        [self _init];
     }
     return self;
 }
 
 - (void)awakeFromNib
 {
-    [self setup];
+    [self _init];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -79,14 +79,22 @@
         if (!octaveView) {
             continue;
         }
-        [octaveView updateWithOctaveOne:soData];
+        [octaveView updateWithSequenceOneData:soData];
     }
 }
 
 #pragma mark CMBMusicBoxOctaveViewDelegate
 
-- (void)noteDidTapWithInfo:(id)info
+/**
+ * 音符がタップされた
+ */
+- (void)noteDidTapWithInfo:(NSMutableDictionary *)info
 {
+    if (info) {
+        // indexPathを付加
+        [info setObject:[self.parentTableView indexPathForCell:self]
+                 forKey:@"indexPath"];
+    }
     [_delegate noteDidTapWithInfo:info];
 }
 

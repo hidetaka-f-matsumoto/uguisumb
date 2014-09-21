@@ -35,11 +35,11 @@
 - (void)testNoteDataWithABCString
 {
     NSString *testAbc = @"^C,,3/4_D'";
-    NSArray *infos = [CMBUtility noteInfosWithABCString:testAbc];
-    NSLog(@"abc-string to note-infos %@ -> %@", testAbc, infos);
-    for (NSDictionary *info in infos) {
-        CMBNoteData *data = [[CMBNoteData alloc] initWithInfo:info];
-        NSLog(@"note-info to note-data %@ -> %@", info, data);
+    NSArray *partss = [CMBUtility noteInfosWithABCString:testAbc];
+    NSLog(@"abc-string to note-infos %@ -> %@", testAbc, partss);
+    for (NSDictionary *parts in partss) {
+        CMBNoteData *data = [[CMBNoteData alloc] initWithABCParts:parts];
+        NSLog(@"note-info to note-data %@ -> %@", parts, data);
     }
 }
 
