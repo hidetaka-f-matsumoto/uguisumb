@@ -14,7 +14,7 @@
 #import "AudioFileReader.h"
 #import "AudioFileWriter.h"
 
-@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, CMBMusicBoxViewCellDelegate>
+@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, CMBMusicBoxViewCellDelegate>
 {
     NSMutableDictionary *_dataSource;
 }
@@ -30,5 +30,6 @@
 
 - (IBAction)playButtonDidTap:(id)sender;
 - (IBAction)stopButtonDidTap:(id)sender;
+- (IBAction)menueButtonDidTap:(id)sender;
 
 @end

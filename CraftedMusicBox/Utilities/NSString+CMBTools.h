@@ -10,6 +10,8 @@
 
 @interface NSString (CMBTools)
 
++ (NSString *)stringABCWithSequence:(NSArray *)sequences;
+
 - (NSInteger)countWithChar:(NSString *)target;
 - (NSInteger)countWithString:(NSString *)target;
 

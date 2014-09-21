@@ -11,9 +11,10 @@
 
 #import <Foundation/Foundation.h>
 
-static NSInteger const CMBOctaveMin = 2;
+static NSInteger const CMBOctaveMin = 3;
 static NSInteger const CMBOctaveMax = 5;
-static NSInteger const CMBOctaveRange = CMBOctaveMax - CMBOctaveMin;
+static NSInteger const CMBOctaveBase = 4;
+static NSInteger const CMBOctaveRange = CMBOctaveMax - CMBOctaveMin + 1;
 static NSInteger const CMBScaleNum = 11;
 
 #endif

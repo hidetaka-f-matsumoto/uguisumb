@@ -7,8 +7,30 @@
 //
 
 #import "NSString+CMBTools.h"
+#import "CMBNoteData.h"
+#import "CMBSequenceOneData.h"
 
 @implementation NSString (CMBTools)
+
++ (NSString *)stringABCWithSequence:(NSArray *)sequences
+{
+    NSMutableString *abc = [NSMutableString string];
+    for (CMBSequenceOneData *seqOneData in sequences) {
+        NSMutableString *abcOne = [NSMutableString string];
+        BOOL isChord = 1 < seqOneData.notes.count;
+        for (CMBNoteData *noteData in seqOneData.notes) {
+            [abcOne appendString:[noteData abcString]];
+        }
+        if (isChord) {
+            [abc appendString:@"["];
+        }
+        [abc appendString:abcOne];
+        if (isChord) {
+            [abc appendString:@"]"];
+        }
+    }
+    return abc;
+}
 
 - (NSInteger)countWithChar:(NSString *)target
 {

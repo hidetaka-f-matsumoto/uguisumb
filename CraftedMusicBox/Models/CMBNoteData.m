@@ -58,4 +58,16 @@
     return self;
 }
 
+- (NSString *)abcString
+{
+    // オクターブ
+    NSInteger octaveCnt = _octave.integerValue - CMBOctaveBase;
+    NSString *octaveSuffix = octaveCnt > 0 ? CMBOctaveUpSuffix : CMBOctaveDownSuffix;
+    NSString *octaveStr = @"";
+    for (NSInteger i=0; i<abs(octaveCnt); i++) {
+        [octaveStr stringByAppendingString:octaveSuffix];
+    }
+    return [NSString stringWithFormat:@"%@%@", _scale, octaveStr];
+}
+
 @end

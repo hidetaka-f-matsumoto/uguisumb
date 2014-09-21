@@ -8,13 +8,14 @@
 
 #import "CMBMusicBoxViewController.h"
 #import "CMBMusicBoxViewCell.h"
+#import "CMBUtility.h"
 
 @interface CMBMusicBoxViewController ()
 {
     NSTimer *_timer;
     BOOL _isPlaying;
     CGPoint _scrollPointBegin;
-    NSMutableDictionary *_sequences; // Dictionary<NSIndexPath *, CMBSequenceOneData *>
+    NSMutableArray *_sequences; // List<CMBSequenceOneData *>
 }
 
 @property (nonatomic, assign) RingBuffer *ringBuffer;
@@ -28,7 +29,7 @@
     _timer = nil;
     _isPlaying = NO;
     _scrollPointBegin = CGPointZero;
-    _sequences = [NSMutableDictionary dictionary];
+    _sequences = [NSMutableArray array];
 }
 
 - (void)loadSounds
@@ -163,6 +164,28 @@
     [_tableView setContentOffset:CGPointMake(0.0f, 0.0f) animated:YES];
 }
 
+- (IBAction)menueButtonDidTap:(id)sender
+{
+    UIActionSheet *sheet =[[UIActionSheet alloc]
+                           initWithTitle:@"Action Sheet"
+                           delegate:self
+                           cancelButtonTitle:@"Cancel"
+                           destructiveButtonTitle:nil
+                           otherButtonTitles:@"Save", @"Load", @"Config", nil];
+    
+    [sheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+    
+    [sheet showInView:self.view];
+}
+
+- (void)saveButtonDidTap
+{
+    BOOL isSuccess = [[CMBUtility sharedInstance] saveScoreWithSequences:_sequences
+                                                                fileName:@"test"];
+    if (!isSuccess) {
+    }
+}
+
 - (void)scrollAuto:(NSTimer*)timer
 {
     CGPoint offset = _tableView.contentOffset;
@@ -188,7 +211,7 @@
     cell.delegate = self;
     cell.parentTableView = _tableView;
     cell.tineView = _tineView;
-    [cell updateWithSequenceOne:_sequences[indexPath]];
+    [cell updateWithSequenceOne:_sequences[indexPath.row]];
     
     return cell;
 }
@@ -218,6 +241,29 @@
     }
 }
 
+#pragma mark - UIActionSheetDelegate
+
+-   (void)actionSheet:(UIActionSheet *)actionSheet
+ clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == [actionSheet cancelButtonIndex]) {
+        // nothing to do.
+    }else if (buttonIndex == [actionSheet destructiveButtonIndex]) {
+        // nothing to do.
+    }else{
+        switch (buttonIndex) {
+            case 0: // Save
+                break;
+            case 1: // Load
+                break;
+            case 2: // Config
+                break;
+            default:
+                break;
+        }
+    }
+}
+
 #pragma mark - CMBMusicBoxViewCellDelegate
 
 /**
@@ -237,7 +283,7 @@
     // シーケンスを更新
     NSIndexPath *indexPath = (NSIndexPath *)info[@"indexPath"];
     NSLog(@"%d", indexPath.row);
-    CMBSequenceOneData *seqOneData = _sequences[indexPath];
+    CMBSequenceOneData *seqOneData = _sequences[indexPath.row];
     // シーケンスデータが新規の場合
     if (!seqOneData) {
         seqOneData = [CMBSequenceOneData sequenceOneData];
@@ -264,14 +310,13 @@
     }
 }
 
-#pragma mark - Load Score.
+#pragma mark - Save/Load Score.
 
 - (void)loadSequencesWithFileName:(NSString *)name
 {
     // TODO:
     for (NSInteger i=0; i<100; i++) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
-        [_sequences setObject:[CMBSequenceOneData sequenceOneData] forKey:indexPath];
+        [_sequences addObject:[CMBSequenceOneData sequenceOneData]];
     }
 }
 

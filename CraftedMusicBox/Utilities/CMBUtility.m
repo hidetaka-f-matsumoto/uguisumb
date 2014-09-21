@@ -7,6 +7,7 @@
 //
 
 #import "CMBUtility.h"
+#import "NSString+CMBTools.h"
 
 @implementation CMBUtility
 
@@ -60,6 +61,44 @@ static CMBUtility *_instance = nil;
 //             [abc substringWithRange:[match rangeAtIndex:3]],
 //             [abc substringWithRange:[match rangeAtIndex:4]]
 //             ];
+}
+
+- (BOOL)saveScoreWithSequences:(NSArray *)sequences
+                      fileName:(NSString *)fileName
+{
+    @try {
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        // ホームディレクトリ直下にあるDocumentsフォルダを取得する
+        NSArray *fileDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                                NSUserDomainMask,
+                                                                YES);
+        // 楽譜ディレクトリ
+        NSString *fileDir = [fileDirs[0] stringByAppendingPathComponent:@"scores/"];
+        // 存在しない場合は作成
+        if (![fileManager fileExistsAtPath:fileDir]) {
+            NSError *error = nil;
+            BOOL created = [fileManager createDirectoryAtPath:fileDir
+                                  withIntermediateDirectories:YES
+                                                   attributes:nil
+                                                        error:&error];
+            if (!created) {
+                NSLog(@"failed to create directory. reason is %@ - %@", error, error.userInfo);
+                return NO;
+            }
+        }
+        // 楽譜ファイル
+        NSString *filePath = [fileDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.abc", fileName]];
+        // ABC文字列に変換
+        NSString *abc = [NSString stringABCWithSequence:sequences];
+        //ファイルを作成する
+        [abc writeToFile:filePath atomically:NO
+                encoding:NSUTF8StringEncoding
+                   error:nil];
+    }
+    @catch (NSException *exception) {
+        return NO;
+    }
+    return YES;
 }
 
 @end

@@ -14,4 +14,7 @@
 + (CMBUtility *)sharedInstance;
 + (NSArray *)noteInfosWithABCString:(NSString *)abc;
 
+- (BOOL)saveScoreWithSequences:(NSArray *)sequences
+                      fileName:(NSString *)fileName;
+
 @end

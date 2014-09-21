@@ -30,5 +30,6 @@ static NSString * const CMBOctaveDownSuffix = @",";
 - (id)initWithABCParts:(NSDictionary *)parts;
 - (id)initWithABCString:(NSString *)abc;
 - (id)initWithInfo:(NSDictionary *)info;
+- (NSString *)abcString;
 
 @end
