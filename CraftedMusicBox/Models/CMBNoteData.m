@@ -21,13 +21,13 @@
     self = [super init];
     if (self) {
         _scale = @"C";
-        _octave = @0;
+        _octave = [NSNumber numberWithInteger:CMBOctaveBase];
         if (parts) {
             NSInteger sharp = 0;
             sharp += [parts[CMBNoteInfoKeyChange] countWithChar:CMBSharpPrefix];
             sharp -= [parts[CMBNoteInfoKeyChange] countWithChar:CMBFlatPrefix];
             _scale = parts[CMBNoteInfoKeyScale];
-            NSInteger octave = [parts[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveUpSuffix] - [parts[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveDownSuffix];
+            NSInteger octave = CMBOctaveBase + [parts[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveUpSuffix] - [parts[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveDownSuffix];
             _octave = [NSNumber numberWithInteger:octave];
         }
     }
@@ -39,7 +39,7 @@
     self = [super init];
     if (self) {
         _scale = @"C";
-        _octave = @0;
+        _octave = [NSNumber numberWithInteger:CMBOctaveBase];
         if (abc) {
             NSArray *partss = [CMBUtility noteInfosWithABCString:abc];
             self = [self initWithABCParts:partss[0]];

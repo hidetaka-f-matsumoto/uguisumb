@@ -12,6 +12,7 @@
 		086BA16319D0FA4E00991574 /* CMBScoreSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16219D0FA4E00991574 /* CMBScoreSelectViewController.m */; };
 		086BA16619D0FDA400991574 /* CMBScoreSelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16519D0FDA400991574 /* CMBScoreSelectTableViewCell.m */; };
 		086BA16919D10C4B00991574 /* CMBBaseModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16819D10C4B00991574 /* CMBBaseModalViewController.m */; };
+		086BA16C19D19F5700991574 /* NSMutableDictionary+CMBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16B19D19F5700991574 /* NSMutableDictionary+CMBTools.m */; };
 		08883AD41956CC6A00F7EB68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD31956CC6A00F7EB68 /* Foundation.framework */; };
 		08883AD61956CC6A00F7EB68 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD51956CC6A00F7EB68 /* CoreGraphics.framework */; };
 		08883AD81956CC6A00F7EB68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD71956CC6A00F7EB68 /* UIKit.framework */; };
@@ -73,6 +74,8 @@
 		086BA16519D0FDA400991574 /* CMBScoreSelectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBScoreSelectTableViewCell.m; path = Views/CMBScoreSelectTableViewCell.m; sourceTree = "<group>"; };
 		086BA16719D10C4B00991574 /* CMBBaseModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBBaseModalViewController.h; path = ViewControllers/CMBBaseModalViewController.h; sourceTree = "<group>"; };
 		086BA16819D10C4B00991574 /* CMBBaseModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBBaseModalViewController.m; path = ViewControllers/CMBBaseModalViewController.m; sourceTree = "<group>"; };
+		086BA16A19D19F5700991574 /* NSMutableDictionary+CMBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+CMBTools.h"; path = "Utilities/NSMutableDictionary+CMBTools.h"; sourceTree = "<group>"; };
+		086BA16B19D19F5700991574 /* NSMutableDictionary+CMBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+CMBTools.m"; path = "Utilities/NSMutableDictionary+CMBTools.m"; sourceTree = "<group>"; };
 		08883AD01956CC6A00F7EB68 /* CraftedMusicBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CraftedMusicBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08883AD31956CC6A00F7EB68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08883AD51956CC6A00F7EB68 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -280,6 +283,8 @@
 			children = (
 				08883B1A1956D40600F7EB68 /* NSString+CMBTools.h */,
 				08883B1B1956D40600F7EB68 /* NSString+CMBTools.m */,
+				086BA16A19D19F5700991574 /* NSMutableDictionary+CMBTools.h */,
+				086BA16B19D19F5700991574 /* NSMutableDictionary+CMBTools.m */,
 				08A769DC1972C93000143638 /* CMBUtility.h */,
 				08A769DD1972C93000143638 /* CMBUtility.m */,
 			);
@@ -471,6 +476,7 @@
 				08A769D71972992900143638 /* CMBMusicBoxTableViewCell.m in Sources */,
 				08C696541984264E0096BC20 /* CMBMusicBoxOctaveView.m in Sources */,
 				08B66F74198DFC3000376683 /* AudioFileReader.mm in Sources */,
+				086BA16C19D19F5700991574 /* NSMutableDictionary+CMBTools.m in Sources */,
 				08A769DE1972C93000143638 /* CMBUtility.m in Sources */,
 				08883B1C1956D40600F7EB68 /* NSString+CMBTools.m in Sources */,
 				08883AE01956CC6A00F7EB68 /* main.m in Sources */,

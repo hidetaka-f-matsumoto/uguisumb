@@ -12,24 +12,49 @@
 
 @implementation NSString (CMBTools)
 
-+ (NSString *)stringABCWithSequence:(NSArray *)sequences
++ (NSString *)jsonWithDictionary:(NSDictionary *)dic
+                          pretty:(BOOL)isPretty
 {
-    NSMutableString *abc = [NSMutableString string];
-    for (CMBSequenceOneData *seqOneData in sequences) {
-        NSMutableString *abcOne = [NSMutableString string];
-        BOOL isChord = 1 < seqOneData.notes.count;
-        for (CMBNoteData *noteData in seqOneData.notes) {
-            [abcOne appendString:[noteData abcString]];
-        }
-        if (isChord) {
-            [abc appendString:@"["];
-        }
-        [abc appendString:abcOne];
-        if (isChord) {
-            [abc appendString:@"]"];
-        }
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic
+                                                       options:(NSJSONWritingOptions)(isPretty ? NSJSONWritingPrettyPrinted : 0)
+                                                         error:&error];
+    if (error) {
+        return nil;
     }
-    return abc;
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+
++ (NSString *)abcWithSequences:(NSDictionary *)sequences
+{
+    NSMutableDictionary *abcDic = [NSMutableDictionary dictionary];
+    for (NSNumber *time in sequences) {
+        CMBSequenceOneData *seqOneData = sequences[time];
+        if (!seqOneData) {
+            continue;
+        }
+        NSString *timeStr = time.stringValue;
+        id abcOne;
+        // 和音
+        if (1 < seqOneData.notes.count) {
+            NSMutableArray *abcArr = [NSMutableArray array];
+            for (CMBNoteData *noteData in seqOneData.notes) {
+                [abcArr addObject:[noteData abcString]];
+            }
+            abcOne = abcArr;
+        }
+        // 単音
+        else if (1 == seqOneData.notes.count) {
+            abcOne = [seqOneData.notes[0] abcString];
+        }
+        [abcDic setObject:abcOne forKey:timeStr];
+    }
+    return [NSString jsonWithDictionary:abcDic pretty:NO];
+}
+
+- (NSNumber *)getNumberValue
+{
+    return [NSNumber numberWithInteger:self.integerValue];
 }
 
 - (NSInteger)countWithChar:(NSString *)target

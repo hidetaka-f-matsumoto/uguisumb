@@ -15,7 +15,7 @@
     NSTimer *_timer;
     BOOL _isPlaying;
     CGPoint _scrollPointBegin;
-    NSMutableArray *_sequences; // List<CMBSequenceOneData *>
+    NSMutableDictionary *_sequences; // Dictionary<NSNumber *, CMBSequenceOneData *>
 }
 
 @property (nonatomic, assign) RingBuffer *ringBuffer;
@@ -29,7 +29,7 @@
     _timer = nil;
     _isPlaying = NO;
     _scrollPointBegin = CGPointZero;
-    _sequences = [NSMutableArray array];
+    _sequences = [NSMutableDictionary dictionary];
 }
 
 - (void)loadSounds
@@ -89,8 +89,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [_tableView reloadData];
+
+    [self updateViews];
     
     _ringBuffer = new RingBuffer(32768, 2);
     _audioManager = [Novocaine audioManager];
@@ -149,7 +149,7 @@
 - (void)playWithScale:(NSString *)scale
                octave:(NSNumber *)octave
 {
-    SystemSoundID sound = [_sounds[octave][scale] longValue];
+    SystemSoundID sound = [_sounds[octave][scale] unsignedIntValue];
     if (sound) {
         AudioServicesPlayAlertSound(sound);
     }
@@ -245,7 +245,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return _sequences.count;
+    return 100;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -256,7 +256,7 @@
     cell.delegate = self;
     cell.parentTableView = _tableView;
     cell.tineView = _tineView;
-    [cell updateWithSequenceOne:_sequences[indexPath.row]];
+    [cell updateWithSequenceOne:_sequences[[NSNumber numberWithInteger:indexPath.row]]];
     
     return cell;
 }
@@ -329,11 +329,12 @@
     }
     // シーケンスを更新
     NSIndexPath *indexPath = (NSIndexPath *)info[@"indexPath"];
-    NSLog(@"%d", indexPath.row);
-    CMBSequenceOneData *seqOneData = _sequences[indexPath.row];
+    NSLog(@"%zd", indexPath.row);
+    CMBSequenceOneData *seqOneData = _sequences[[NSNumber numberWithInteger:indexPath.row]];
     // シーケンスデータが新規の場合
     if (!seqOneData) {
         seqOneData = [CMBSequenceOneData sequenceOneData];
+        [_sequences setObject:seqOneData forKey:[NSNumber numberWithInteger:indexPath.row]];
     }
     CMBNoteData *noteData = [[CMBNoteData alloc] initWithInfo:info];
     // TapOnの場合: 追加
@@ -343,6 +344,17 @@
     // TapOffの場合: 削除
     else {
         [seqOneData removeNoteData:noteData];
+    }
+}
+
+/**
+ * 音符が弾かれた
+ */
+- (void)notesDidPickWithInfos:(NSArray *)infos
+{
+    for (NSDictionary *info in infos) {
+        [self playWithScale:info[CMBNoteInfoKeyScale]
+                     octave:info[CMBNoteInfoKeyOctave]];
     }
 }
 
@@ -392,10 +404,11 @@
 - (void)scoreDidSelectWithInfo:(NSDictionary *)info
 {
     // シーケンスを読み込み
-    BOOL isSuccess = [[CMBUtility sharedInstance] loadScoreWithSequences:nil
+    NSMutableDictionary *sequences;
+    BOOL isSuccess = [[CMBUtility sharedInstance] loadScoreWithSequences:&sequences
                                                                 fileName:info[@"name"]];
     if (!isSuccess) {
-        // 保存失敗
+        // 失敗
         UIAlertController *alertController =
         [UIAlertController alertControllerWithTitle:@"楽譜の読み込み"
                                             message:@"楽譜の読み込みに失敗しました。"
@@ -407,19 +420,10 @@
                            animated:YES
                          completion:nil];
     }
+    // データ更新
+    _sequences = sequences;
     // 表示更新
     [self updateViews];
-}
-
-/**
- * 音符が弾かれた
- */
-- (void)notesDidPickWithInfos:(NSArray *)infos
-{
-    for (NSDictionary *info in infos) {
-        [self playWithScale:info[CMBNoteInfoKeyScale]
-                     octave:info[CMBNoteInfoKeyOctave]];
-    }
 }
 
 #pragma mark - Save/Load Score.
@@ -427,9 +431,6 @@
 - (void)loadSequencesWithFileName:(NSString *)name
 {
     // TODO:
-    for (NSInteger i=0; i<100; i++) {
-        [_sequences addObject:[CMBSequenceOneData sequenceOneData]];
-    }
 }
 
 #pragma mark - Debug.

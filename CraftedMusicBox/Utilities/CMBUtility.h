@@ -15,9 +15,9 @@
 + (NSArray *)noteInfosWithABCString:(NSString *)abc;
 
 - (NSMutableArray *)getScoreInfos;
-- (BOOL)loadScoreWithSequences:(NSArray *)sequences
+- (BOOL)loadScoreWithSequences:(NSMutableDictionary **)sequences
                       fileName:(NSString *)fileName;
-- (BOOL)saveScoreWithSequences:(NSArray *)sequences
+- (BOOL)saveScoreWithSequences:(NSMutableDictionary *)sequences
                       fileName:(NSString *)fileName;
 
 @end

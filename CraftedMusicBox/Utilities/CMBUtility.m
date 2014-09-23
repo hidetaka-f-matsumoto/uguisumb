@@ -8,6 +8,7 @@
 
 #import "CMBUtility.h"
 #import "NSString+CMBTools.h"
+#import "NSMutableDictionary+CMBTools.h"
 
 @implementation CMBUtility
 
@@ -63,7 +64,7 @@ static CMBUtility *_instance = nil;
 //             ];
 }
 
-- (NSString *)getScoresPath
+- (NSString *)getScoreDirPath
 {
     NSString *path = nil;
     @try {
@@ -95,10 +96,26 @@ static CMBUtility *_instance = nil;
     }
 }
 
+- (NSString *)getScorePathWithFileName:(NSString *)fileName
+{
+    NSString *path = [self getScoreDirPath];
+    if (!path) {
+        return nil;
+    }
+    // 楽譜ファイル
+    return [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.abc", fileName]];
+}
+
+/**
+ * 楽譜情報一覧を取得
+ * @return List<Dictionary *>
+ *  name: 楽譜名
+ *  path: パス
+ */
 - (NSMutableArray *)getScoreInfos
 {
     // 楽譜ディレクトリ
-    NSString *dir = [self getScoresPath];
+    NSString *dir = [self getScoreDirPath];
     // 楽譜一覧を取得
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError *error = nil;
@@ -121,24 +138,41 @@ static CMBUtility *_instance = nil;
     return infos;
 }
 
-- (BOOL)loadScoreWithSequences:(NSArray *)sequences
+- (BOOL)loadScoreWithSequences:(NSMutableDictionary **)sequences
                       fileName:(NSString *)fileName
 {
-    // TODO
-    return YES;
-}
-
-- (BOOL)saveScoreWithSequences:(NSArray *)sequences
-                      fileName:(NSString *)fileName
-{
-    NSString *path = [self getScoresPath];
+    // 楽譜ファイルパス
+    NSString *path = [self getScorePathWithFileName:fileName];
     if (!path) {
         return NO;
     }
-    // 楽譜ファイル
-    path = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.abc", fileName]];
+    NSError *error = nil;
+    NSString *abc = [[NSString alloc] initWithContentsOfFile:path
+                                                     encoding:NSUTF8StringEncoding
+                                                        error:&error];
+    if (error) {
+        return NO;
+    }
+    *sequences = [NSMutableDictionary sequencesWithABC:abc];
+    if (!sequences) {
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)saveScoreWithSequences:(NSMutableDictionary *)sequences
+                      fileName:(NSString *)fileName
+{
+    // 楽譜ファイルパス
+    NSString *path = [self getScorePathWithFileName:fileName];
+    if (!path) {
+        return NO;
+    }
     // ABC文字列に変換
-    NSString *abc = [NSString stringABCWithSequence:sequences];
+    NSString *abc = [NSString abcWithSequences:sequences];
+    if (!abc) {
+        return NO;
+    }
     //ファイルを作成する
     NSError *error = nil;
     [abc writeToFile:path

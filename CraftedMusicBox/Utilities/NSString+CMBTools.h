@@ -10,7 +10,11 @@
 
 @interface NSString (CMBTools)
 
-+ (NSString *)stringABCWithSequence:(NSArray *)sequences;
+@property (nonatomic, getter=getNumberValue) NSNumber *numberValue;
+
++ (NSString *)jsonWithDictionary:(NSDictionary *)dic
+                          pretty:(BOOL)isPretty;
++ (NSString *)abcWithSequences:(NSDictionary *)sequences;
 
 - (NSInteger)countWithChar:(NSString *)target;
 - (NSInteger)countWithString:(NSString *)target;
