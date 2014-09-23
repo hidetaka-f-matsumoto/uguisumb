@@ -63,39 +63,89 @@ static CMBUtility *_instance = nil;
 //             ];
 }
 
-- (BOOL)saveScoreWithSequences:(NSArray *)sequences
-                      fileName:(NSString *)fileName
+- (NSString *)getScoresPath
 {
+    NSString *path = nil;
     @try {
         NSFileManager *fileManager = [NSFileManager defaultManager];
         // ホームディレクトリ直下にあるDocumentsフォルダを取得する
-        NSArray *fileDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                                NSUserDomainMask,
-                                                                YES);
+        NSArray *pathes = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                              NSUserDomainMask,
+                                                              YES);
         // 楽譜ディレクトリ
-        NSString *fileDir = [fileDirs[0] stringByAppendingPathComponent:@"scores/"];
+        path = [pathes[0] stringByAppendingPathComponent:@"scores/"];
         // 存在しない場合は作成
-        if (![fileManager fileExistsAtPath:fileDir]) {
+        if (![fileManager fileExistsAtPath:path]) {
             NSError *error = nil;
-            BOOL created = [fileManager createDirectoryAtPath:fileDir
+            BOOL created = [fileManager createDirectoryAtPath:path
                                   withIntermediateDirectories:YES
                                                    attributes:nil
                                                         error:&error];
             if (!created) {
                 NSLog(@"failed to create directory. reason is %@ - %@", error, error.userInfo);
-                return NO;
+                path = nil;
             }
         }
-        // 楽譜ファイル
-        NSString *filePath = [fileDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.abc", fileName]];
-        // ABC文字列に変換
-        NSString *abc = [NSString stringABCWithSequence:sequences];
-        //ファイルを作成する
-        [abc writeToFile:filePath atomically:NO
-                encoding:NSUTF8StringEncoding
-                   error:nil];
     }
     @catch (NSException *exception) {
+        path = nil;
+    }
+    @finally {
+        return path;
+    }
+}
+
+- (NSMutableArray *)getScoreInfos
+{
+    // 楽譜ディレクトリ
+    NSString *dir = [self getScoresPath];
+    // 楽譜一覧を取得
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error = nil;
+    NSArray *files = [fileManager contentsOfDirectoryAtPath:dir
+                                                     error:&error];
+    if (error) {
+        return nil;
+    }
+    // 楽譜情報
+    NSMutableArray *infos = [NSMutableArray array];
+    for (NSString *file in files) {
+        NSString *name = [file stringByReplacingOccurrencesOfString:@".abc" withString:@""];
+        NSString *path = [dir stringByAppendingString:file];
+        NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:
+                              name, @"name",
+                              path, @"path",
+                              nil];
+        [infos addObject:info];
+    }
+    return infos;
+}
+
+- (BOOL)loadScoreWithSequences:(NSArray *)sequences
+                      fileName:(NSString *)fileName
+{
+    // TODO
+    return YES;
+}
+
+- (BOOL)saveScoreWithSequences:(NSArray *)sequences
+                      fileName:(NSString *)fileName
+{
+    NSString *path = [self getScoresPath];
+    if (!path) {
+        return NO;
+    }
+    // 楽譜ファイル
+    path = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.abc", fileName]];
+    // ABC文字列に変換
+    NSString *abc = [NSString stringABCWithSequence:sequences];
+    //ファイルを作成する
+    NSError *error = nil;
+    [abc writeToFile:path
+          atomically:NO
+            encoding:NSUTF8StringEncoding
+               error:&error];
+    if (error) {
         return NO;
     }
     return YES;

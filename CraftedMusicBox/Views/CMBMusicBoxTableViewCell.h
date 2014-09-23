@@ -1,5 +1,5 @@
 //
-//  CMBMusicBoxViewCell.h
+//  CMBMusicBoxTableViewCell.h
 //  CraftedMusicBox
 //
 //  Created by hide on 2014/07/13.
@@ -10,7 +10,7 @@
 #import "CMBSequenceOneData.h"
 #import "CMBMusicBoxOctaveView.h"
 
-@protocol CMBMusicBoxViewCellDelegate <NSObject>
+@protocol CMBMusicBoxTableViewCellDelegate <NSObject>
 
 @required
 /** 音符がタップされた */
@@ -23,9 +23,9 @@
 /**
  * 1シーケンスのCell
  */
-@interface CMBMusicBoxViewCell : UITableViewCell <CMBMusicBoxOctaveViewDelegate>
+@interface CMBMusicBoxTableViewCell : UITableViewCell <CMBMusicBoxOctaveViewDelegate>
 
-@property (nonatomic, assign) id<CMBMusicBoxViewCellDelegate> delegate;
+@property (nonatomic, assign) id<CMBMusicBoxTableViewCellDelegate> delegate;
 @property (nonatomic, assign) UITableView *parentTableView;
 @property (nonatomic, assign) UIView *tineView;
 @property (nonatomic, strong) NSMutableArray *octaveViews;

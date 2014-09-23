@@ -1,21 +1,21 @@
 //
-//  CMBMusicBoxViewCell.m
+//  CMBMusicBoxTableViewCell.m
 //  CraftedMusicBox
 //
 //  Created by hide on 2014/07/13.
 //  Copyright (c) 2014年 hidetaka.f.matsumoto. All rights reserved.
 //
 
-#import "CMBMusicBoxViewCell.h"
+#import "CMBMusicBoxTableViewCell.h"
 
-@interface CMBMusicBoxViewCell ()
+@interface CMBMusicBoxTableViewCell ()
 {
     CGFloat _preY;
 }
 
 @end
 
-@implementation CMBMusicBoxViewCell
+@implementation CMBMusicBoxTableViewCell
 
 - (void)_init
 {

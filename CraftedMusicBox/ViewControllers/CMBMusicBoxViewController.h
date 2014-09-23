@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "CMBBaseViewController.h"
-#import "CMBMusicBoxViewCell.h"
+#import "CMBMusicBoxTableViewCell.h"
+#import "CMBScoreNameEditViewController.h"
+#import "CMBScoreSelectViewController.h"
 #import "Novocaine.h"
 #import "RingBuffer.h"
 #import "AudioFileReader.h"
 #import "AudioFileWriter.h"
 
-@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, CMBMusicBoxViewCellDelegate>
+@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, CMBMusicBoxTableViewCellDelegate, CMBScoreNameEditDelegate, CMBScoreSelectDelegate>
 {
     NSMutableDictionary *_dataSource;
 }

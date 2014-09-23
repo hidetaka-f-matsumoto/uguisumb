@@ -7,7 +7,7 @@
 //
 
 #import "CMBMusicBoxViewController.h"
-#import "CMBMusicBoxViewCell.h"
+#import "CMBMusicBoxTableViewCell.h"
 #import "CMBUtility.h"
 
 @interface CMBMusicBoxViewController ()
@@ -113,9 +113,29 @@
 }
 */
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender
+{
+    // 楽譜名入力
+    if ([segue.identifier isEqualToString:@"ScoreNameEdit"]) {
+        UINavigationController *nc = segue.destinationViewController;
+        CMBScoreNameEditViewController *vc = (CMBScoreNameEditViewController *)nc.topViewController;
+        vc.delegate = self;
+    }
+    // 楽譜選択
+    else if ([segue.identifier isEqualToString:@"ScoreSelect"]) {
+        UINavigationController *nc = segue.destinationViewController;
+        CMBScoreSelectViewController *vc = (CMBScoreSelectViewController *)nc.topViewController;
+        vc.delegate = self;
+    }
+}
+
+/**
+ * 表示更新
+ */
 - (void)updateViews
 {
-    
+    [_tableView reloadData];
 }
 
 - (void)updateDataSource
@@ -123,6 +143,9 @@
     
 }
 
+/**
+ * 1音再生
+ */
 - (void)playWithScale:(NSString *)scale
                octave:(NSNumber *)octave
 {
@@ -132,6 +155,9 @@
     }
 }
 
+/**
+ * 再生ボタン
+ */
 - (IBAction)playButtonDidTap:(id)sender
 {
     // 再生中の場合
@@ -155,6 +181,9 @@
     }
 }
 
+/**
+ * ストップボタン
+ */
 - (IBAction)stopButtonDidTap:(id)sender
 {
     // タイマー停止 & 破棄
@@ -164,6 +193,9 @@
     [_tableView setContentOffset:CGPointMake(0.0f, 0.0f) animated:YES];
 }
 
+/**
+ * メニューボタン
+ */
 - (IBAction)menueButtonDidTap:(id)sender
 {
     UIActionSheet *sheet =[[UIActionSheet alloc]
@@ -178,44 +210,27 @@
     [sheet showInView:self.view];
 }
 
+/**
+ * 保存ボタン
+ */
 - (void)saveButtonDidTap
 {
-    // 確認ダイアログ
-    UIAlertController *alertController =
-    [UIAlertController alertControllerWithTitle:@"楽譜の保存"
-                                        message:@"楽譜を保存します。よろしいですか？"
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    // OK処理
-    [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction *action) {
-        // 保存実行
-        BOOL isSuccess = [[CMBUtility sharedInstance] saveScoreWithSequences:_sequences
-                                                                    fileName:@"test"];
-        if (!isSuccess) {
-            // 保存失敗
-            UIAlertController *alertController =
-            [UIAlertController alertControllerWithTitle:@"楽譜の保存"
-                                                message:@"楽譜の保存に失敗しました。"
-                                         preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                                style:UIAlertActionStyleDefault
-                                                              handler:nil]];
-            [self presentViewController:alertController
-                               animated:YES
-                             completion:nil];
-        }
-    }]];
-    // Cancel処理
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:nil]];
-    // ダイアログを表示
-    [self presentViewController:alertController
-                       animated:YES
-                     completion:nil];
+    [self performSegueWithIdentifier:@"ScoreNameEdit"
+                              sender:self];
 }
 
+/**
+ * 読み込みボタン
+ */
+- (void)loadButtonDidTap
+{
+    [self performSegueWithIdentifier:@"ScoreSelect"
+                              sender:self];
+}
+
+/**
+ * 自動スクロール
+ */
 - (void)scrollAuto:(NSTimer*)timer
 {
     CGPoint offset = _tableView.contentOffset;
@@ -236,8 +251,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellIdentifier = @"MusicBoxCell";
-    CMBMusicBoxViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    NSString *cellIdentifier = @"MusicBoxTableViewCell";
+    CMBMusicBoxTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     cell.delegate = self;
     cell.parentTableView = _tableView;
     cell.tineView = _tineView;
@@ -266,7 +281,7 @@
 //    CGPoint currentPoint = scrollView.contentOffset;
 //    currentPoint.y = _scrollPointBegin.y;
 //    [scrollView setContentOffset:currentPoint];
-    for (CMBMusicBoxViewCell *cell in [_tableView visibleCells]) {
+    for (CMBMusicBoxTableViewCell *cell in [_tableView visibleCells]) {
         [cell process];
     }
 }
@@ -286,6 +301,7 @@
                 [self saveButtonDidTap];
                 break;
             case 1: // Load
+                [self loadButtonDidTap];
                 break;
             case 2: // Config
                 break;
@@ -295,7 +311,7 @@
     }
 }
 
-#pragma mark - CMBMusicBoxViewCellDelegate
+#pragma mark - CMBMusicBoxTableViewCellDelegate
 
 /**
  * 音符がタップされた
@@ -328,6 +344,71 @@
     else {
         [seqOneData removeNoteData:noteData];
     }
+}
+
+#pragma mark - CMBScoreNameEditDelegate
+
+- (void)scoreNameDidEditWithName:(NSString *)name
+{
+    // 確認ダイアログ
+    UIAlertController *alertController =
+    [UIAlertController alertControllerWithTitle:@"楽譜の保存"
+                                        message:[NSString stringWithFormat:@"%@ で楽譜を保存します。よろしいですか？", name]
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    // OK処理
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction *action)
+    {
+        // 保存実行
+        BOOL isSuccess = [[CMBUtility sharedInstance] saveScoreWithSequences:_sequences
+                                                                    fileName:name];
+        if (!isSuccess) {
+            // 失敗
+            UIAlertController *alertController =
+            [UIAlertController alertControllerWithTitle:@"楽譜の保存"
+                                                message:@"楽譜の保存に失敗しました。"
+                                         preferredStyle:UIAlertControllerStyleAlert];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:nil]];
+            [self presentViewController:alertController
+                               animated:YES
+                             completion:nil];
+        }
+    }]];
+    // Cancel処理
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:nil]];
+    // ダイアログを表示
+    [self presentViewController:alertController
+                       animated:YES
+                     completion:nil];
+}
+
+#pragma mark - CMBScoreSelectDelegate
+
+- (void)scoreDidSelectWithInfo:(NSDictionary *)info
+{
+    // シーケンスを読み込み
+    BOOL isSuccess = [[CMBUtility sharedInstance] loadScoreWithSequences:nil
+                                                                fileName:info[@"name"]];
+    if (!isSuccess) {
+        // 保存失敗
+        UIAlertController *alertController =
+        [UIAlertController alertControllerWithTitle:@"楽譜の読み込み"
+                                            message:@"楽譜の読み込みに失敗しました。"
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:nil]];
+        [self presentViewController:alertController
+                           animated:YES
+                         completion:nil];
+    }
+    // 表示更新
+    [self updateViews];
 }
 
 /**
