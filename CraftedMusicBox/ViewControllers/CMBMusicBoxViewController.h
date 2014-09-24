@@ -7,23 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "CMBBaseViewController.h"
+#import "CMBNoteData.h"
+#import "CMBSequenceOneData.h"
+#import "CMBSongHeaderData.h"
 #import "CMBMusicBoxTableViewCell.h"
 #import "CMBScoreNameEditViewController.h"
 #import "CMBScoreSelectViewController.h"
-#import "Novocaine.h"
-#import "RingBuffer.h"
-#import "AudioFileReader.h"
-#import "AudioFileWriter.h"
 
 @interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, CMBMusicBoxTableViewCellDelegate, CMBScoreNameEditDelegate, CMBScoreSelectDelegate>
 {
     NSMutableDictionary *_dataSource;
 }
 
-@property (nonatomic, strong) Novocaine *audioManager;
-@property (nonatomic, strong) AudioFileReader *fileReader;
-@property (nonatomic, strong) AudioFileWriter *fileWriter;
 @property (strong, nonatomic) NSMutableDictionary *sounds;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;

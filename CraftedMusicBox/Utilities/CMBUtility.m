@@ -64,6 +64,9 @@ static CMBUtility *_instance = nil;
 //             ];
 }
 
+/**
+ * 楽譜ディレクトリパス取得
+ */
 - (NSString *)getScoreDirPath
 {
     NSString *path = nil;
@@ -96,6 +99,9 @@ static CMBUtility *_instance = nil;
     }
 }
 
+/**
+ * 楽譜ファイルパス取得
+ */
 - (NSString *)getScorePathWithFileName:(NSString *)fileName
 {
     NSString *path = [self getScoreDirPath];
@@ -103,7 +109,7 @@ static CMBUtility *_instance = nil;
         return nil;
     }
     // 楽譜ファイル
-    return [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.abc", fileName]];
+    return [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.song", fileName]];
 }
 
 /**
@@ -127,7 +133,7 @@ static CMBUtility *_instance = nil;
     // 楽譜情報
     NSMutableArray *infos = [NSMutableArray array];
     for (NSString *file in files) {
-        NSString *name = [file stringByReplacingOccurrencesOfString:@".abc" withString:@""];
+        NSString *name = [file stringByReplacingOccurrencesOfString:@".song" withString:@""];
         NSString *path = [dir stringByAppendingString:file];
         NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:
                               name, @"name",
@@ -138,8 +144,9 @@ static CMBUtility *_instance = nil;
     return infos;
 }
 
-- (BOOL)loadScoreWithSequences:(NSMutableDictionary **)sequences
-                      fileName:(NSString *)fileName
+- (BOOL)loadSongWithSequences:(NSMutableDictionary **)sequences
+                       header:(CMBSongHeaderData **)header
+                     fileName:(NSString *)fileName
 {
     // 楽譜ファイルパス
     NSString *path = [self getScorePathWithFileName:fileName];
@@ -147,21 +154,23 @@ static CMBUtility *_instance = nil;
         return NO;
     }
     NSError *error = nil;
-    NSString *abc = [[NSString alloc] initWithContentsOfFile:path
-                                                     encoding:NSUTF8StringEncoding
-                                                        error:&error];
+    NSString *songJson = [[NSString alloc] initWithContentsOfFile:path
+                                                         encoding:NSUTF8StringEncoding
+                                                            error:&error];
     if (error) {
         return NO;
     }
-    *sequences = [NSMutableDictionary sequencesWithABC:abc];
-    if (!sequences) {
+    [songJson sequences:sequences
+                 header:header];
+    if (!sequences || !header) {
         return NO;
     }
     return YES;
 }
 
-- (BOOL)saveScoreWithSequences:(NSMutableDictionary *)sequences
-                      fileName:(NSString *)fileName
+- (BOOL)saveSongWithSequences:(NSMutableDictionary *)sequences
+                       header:(CMBSongHeaderData *)header
+                     fileName:(NSString *)fileName
 {
     // 楽譜ファイルパス
     NSString *path = [self getScorePathWithFileName:fileName];
@@ -169,7 +178,8 @@ static CMBUtility *_instance = nil;
         return NO;
     }
     // ABC文字列に変換
-    NSString *abc = [NSString abcWithSequences:sequences];
+    NSString *abc = [NSString songJsonWithSequences:sequences
+                                        header:header];
     if (!abc) {
         return NO;
     }

@@ -13,6 +13,7 @@
 		086BA16619D0FDA400991574 /* CMBScoreSelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16519D0FDA400991574 /* CMBScoreSelectTableViewCell.m */; };
 		086BA16919D10C4B00991574 /* CMBBaseModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16819D10C4B00991574 /* CMBBaseModalViewController.m */; };
 		086BA16C19D19F5700991574 /* NSMutableDictionary+CMBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16B19D19F5700991574 /* NSMutableDictionary+CMBTools.m */; };
+		086BA16F19D2BA1B00991574 /* CMBSongHeaderData.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16E19D2BA1B00991574 /* CMBSongHeaderData.m */; };
 		08883AD41956CC6A00F7EB68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD31956CC6A00F7EB68 /* Foundation.framework */; };
 		08883AD61956CC6A00F7EB68 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD51956CC6A00F7EB68 /* CoreGraphics.framework */; };
 		08883AD81956CC6A00F7EB68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD71956CC6A00F7EB68 /* UIKit.framework */; };
@@ -27,7 +28,7 @@
 		08883AF81956CC6A00F7EB68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD71956CC6A00F7EB68 /* UIKit.framework */; };
 		08883B001956CC6A00F7EB68 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08883AFE1956CC6A00F7EB68 /* InfoPlist.strings */; };
 		08883B021956CC6A00F7EB68 /* CraftedMusicBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883B011956CC6A00F7EB68 /* CraftedMusicBoxTests.m */; };
-		08883B111956CFEF00F7EB68 /* CMBMusicBoxViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08883B101956CFEF00F7EB68 /* CMBMusicBoxViewController.mm */; };
+		08883B111956CFEF00F7EB68 /* CMBMusicBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883B101956CFEF00F7EB68 /* CMBMusicBoxViewController.m */; };
 		08883B161956D03D00F7EB68 /* CMBTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883B131956D03D00F7EB68 /* CMBTabViewController.m */; };
 		08883B171956D03D00F7EB68 /* CMBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883B151956D03D00F7EB68 /* CMBBaseViewController.m */; };
 		08883B1C1956D40600F7EB68 /* NSString+CMBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883B1B1956D40600F7EB68 /* NSString+CMBTools.m */; };
@@ -36,10 +37,6 @@
 		08A769DE1972C93000143638 /* CMBUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A769DD1972C93000143638 /* CMBUtility.m */; };
 		08A769E11972CA1900143638 /* CMBNoteData.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A769E01972CA1900143638 /* CMBNoteData.m */; };
 		08A769E31972D30900143638 /* CMBUtilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A769E21972D30900143638 /* CMBUtilityTests.m */; };
-		08B66F74198DFC3000376683 /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08B66F6D198DFC3000376683 /* AudioFileReader.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		08B66F75198DFC3000376683 /* AudioFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B66F6F198DFC3000376683 /* AudioFileWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		08B66F76198DFC3000376683 /* Novocaine.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B66F71198DFC3000376683 /* Novocaine.m */; };
-		08B66F77198DFC3000376683 /* RingBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 08B66F73198DFC3000376683 /* RingBuffer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		08B66F79198DFCA200376683 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B66F78198DFCA200376683 /* Accelerate.framework */; };
 		08B66F7B198DFCAD00376683 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B66F7A198DFCAD00376683 /* AudioToolbox.framework */; };
 		08B66F7F198DFCBD00376683 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B66F7E198DFCBD00376683 /* AVFoundation.framework */; };
@@ -76,6 +73,8 @@
 		086BA16819D10C4B00991574 /* CMBBaseModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBBaseModalViewController.m; path = ViewControllers/CMBBaseModalViewController.m; sourceTree = "<group>"; };
 		086BA16A19D19F5700991574 /* NSMutableDictionary+CMBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+CMBTools.h"; path = "Utilities/NSMutableDictionary+CMBTools.h"; sourceTree = "<group>"; };
 		086BA16B19D19F5700991574 /* NSMutableDictionary+CMBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+CMBTools.m"; path = "Utilities/NSMutableDictionary+CMBTools.m"; sourceTree = "<group>"; };
+		086BA16D19D2BA1B00991574 /* CMBSongHeaderData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBSongHeaderData.h; path = Models/CMBSongHeaderData.h; sourceTree = "<group>"; };
+		086BA16E19D2BA1B00991574 /* CMBSongHeaderData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBSongHeaderData.m; path = Models/CMBSongHeaderData.m; sourceTree = "<group>"; };
 		08883AD01956CC6A00F7EB68 /* CraftedMusicBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CraftedMusicBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08883AD31956CC6A00F7EB68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08883AD51956CC6A00F7EB68 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,7 +94,7 @@
 		08883AFF1956CC6A00F7EB68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08883B011956CC6A00F7EB68 /* CraftedMusicBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CraftedMusicBoxTests.m; sourceTree = "<group>"; };
 		08883B0F1956CFEF00F7EB68 /* CMBMusicBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxViewController.h; path = ViewControllers/CMBMusicBoxViewController.h; sourceTree = "<group>"; };
-		08883B101956CFEF00F7EB68 /* CMBMusicBoxViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CMBMusicBoxViewController.mm; path = ViewControllers/CMBMusicBoxViewController.mm; sourceTree = "<group>"; };
+		08883B101956CFEF00F7EB68 /* CMBMusicBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxViewController.m; path = ViewControllers/CMBMusicBoxViewController.m; sourceTree = "<group>"; };
 		08883B121956D03D00F7EB68 /* CMBTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBTabViewController.h; path = ViewControllers/CMBTabViewController.h; sourceTree = "<group>"; };
 		08883B131956D03D00F7EB68 /* CMBTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBTabViewController.m; path = ViewControllers/CMBTabViewController.m; sourceTree = "<group>"; };
 		08883B141956D03D00F7EB68 /* CMBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBBaseViewController.h; path = ViewControllers/CMBBaseViewController.h; sourceTree = "<group>"; };
@@ -111,14 +110,6 @@
 		08A769DF1972CA1900143638 /* CMBNoteData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBNoteData.h; path = Models/CMBNoteData.h; sourceTree = "<group>"; };
 		08A769E01972CA1900143638 /* CMBNoteData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBNoteData.m; path = Models/CMBNoteData.m; sourceTree = "<group>"; };
 		08A769E21972D30900143638 /* CMBUtilityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBUtilityTests.m; sourceTree = "<group>"; };
-		08B66F6C198DFC3000376683 /* AudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileReader.h; sourceTree = "<group>"; };
-		08B66F6D198DFC3000376683 /* AudioFileReader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioFileReader.mm; sourceTree = "<group>"; };
-		08B66F6E198DFC3000376683 /* AudioFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileWriter.h; sourceTree = "<group>"; };
-		08B66F6F198DFC3000376683 /* AudioFileWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileWriter.m; sourceTree = "<group>"; };
-		08B66F70198DFC3000376683 /* Novocaine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Novocaine.h; sourceTree = "<group>"; };
-		08B66F71198DFC3000376683 /* Novocaine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Novocaine.m; sourceTree = "<group>"; };
-		08B66F72198DFC3000376683 /* RingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingBuffer.h; sourceTree = "<group>"; };
-		08B66F73198DFC3000376683 /* RingBuffer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RingBuffer.mm; sourceTree = "<group>"; };
 		08B66F78198DFCA200376683 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		08B66F7A198DFCAD00376683 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		08B66F7C198DFCB500376683 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
@@ -269,7 +260,7 @@
 				086BA16719D10C4B00991574 /* CMBBaseModalViewController.h */,
 				086BA16819D10C4B00991574 /* CMBBaseModalViewController.m */,
 				08883B0F1956CFEF00F7EB68 /* CMBMusicBoxViewController.h */,
-				08883B101956CFEF00F7EB68 /* CMBMusicBoxViewController.mm */,
+				08883B101956CFEF00F7EB68 /* CMBMusicBoxViewController.m */,
 				086BA15E19D0401000991574 /* CMBScoreNameEditViewController.h */,
 				086BA15F19D0401000991574 /* CMBScoreNameEditViewController.m */,
 				086BA16119D0FA4E00991574 /* CMBScoreSelectViewController.h */,
@@ -312,6 +303,8 @@
 				08A769DA1972A82D00143638 /* CMBSequenceOneData.m */,
 				08A769DF1972CA1900143638 /* CMBNoteData.h */,
 				08A769E01972CA1900143638 /* CMBNoteData.m */,
+				086BA16D19D2BA1B00991574 /* CMBSongHeaderData.h */,
+				086BA16E19D2BA1B00991574 /* CMBSongHeaderData.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -319,25 +312,8 @@
 		08B66F6A198DFBDC00376683 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				08B66F6B198DFC3000376683 /* Novocaine */,
 			);
 			name = Libraries;
-			sourceTree = "<group>";
-		};
-		08B66F6B198DFC3000376683 /* Novocaine */ = {
-			isa = PBXGroup;
-			children = (
-				08B66F6C198DFC3000376683 /* AudioFileReader.h */,
-				08B66F6D198DFC3000376683 /* AudioFileReader.mm */,
-				08B66F6E198DFC3000376683 /* AudioFileWriter.h */,
-				08B66F6F198DFC3000376683 /* AudioFileWriter.m */,
-				08B66F70198DFC3000376683 /* Novocaine.h */,
-				08B66F71198DFC3000376683 /* Novocaine.m */,
-				08B66F72198DFC3000376683 /* RingBuffer.h */,
-				08B66F73198DFC3000376683 /* RingBuffer.mm */,
-			);
-			name = Novocaine;
-			path = ../_Libraries/novocain/Novocaine;
 			sourceTree = "<group>";
 		};
 		08B66F82198E004300376683 /* Sounds */ = {
@@ -468,22 +444,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08B66F77198DFC3000376683 /* RingBuffer.mm in Sources */,
 				086BA16619D0FDA400991574 /* CMBScoreSelectTableViewCell.m in Sources */,
-				08B66F75198DFC3000376683 /* AudioFileWriter.m in Sources */,
 				08A769E11972CA1900143638 /* CMBNoteData.m in Sources */,
+				086BA16F19D2BA1B00991574 /* CMBSongHeaderData.m in Sources */,
 				086BA16019D0401000991574 /* CMBScoreNameEditViewController.m in Sources */,
 				08A769D71972992900143638 /* CMBMusicBoxTableViewCell.m in Sources */,
 				08C696541984264E0096BC20 /* CMBMusicBoxOctaveView.m in Sources */,
-				08B66F74198DFC3000376683 /* AudioFileReader.mm in Sources */,
 				086BA16C19D19F5700991574 /* NSMutableDictionary+CMBTools.m in Sources */,
 				08A769DE1972C93000143638 /* CMBUtility.m in Sources */,
 				08883B1C1956D40600F7EB68 /* NSString+CMBTools.m in Sources */,
 				08883AE01956CC6A00F7EB68 /* main.m in Sources */,
 				08883AE41956CC6A00F7EB68 /* CMBAppDelegate.m in Sources */,
-				08883B111956CFEF00F7EB68 /* CMBMusicBoxViewController.mm in Sources */,
+				08883B111956CFEF00F7EB68 /* CMBMusicBoxViewController.m in Sources */,
 				086BA16319D0FA4E00991574 /* CMBScoreSelectViewController.m in Sources */,
-				08B66F76198DFC3000376683 /* Novocaine.m in Sources */,
 				086BA16919D10C4B00991574 /* CMBBaseModalViewController.m in Sources */,
 				08883B161956D03D00F7EB68 /* CMBTabViewController.m in Sources */,
 				08A769DB1972A82D00143638 /* CMBSequenceOneData.m in Sources */,

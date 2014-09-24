@@ -16,9 +16,8 @@
     BOOL _isPlaying;
     CGPoint _scrollPointBegin;
     NSMutableDictionary *_sequences; // Dictionary<NSNumber *, CMBSequenceOneData *>
+    CMBSongHeaderData *_header;
 }
-
-@property (nonatomic, assign) RingBuffer *ringBuffer;
 
 @end
 
@@ -30,6 +29,7 @@
     _isPlaying = NO;
     _scrollPointBegin = CGPointZero;
     _sequences = [NSMutableDictionary dictionary];
+    _header = [[CMBSongHeaderData alloc] initWithInfo:nil];
 }
 
 - (void)loadSounds
@@ -83,7 +83,6 @@
 
     [self _init];
     [self loadSounds];
-    [self loadSequencesWithFileName:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -91,9 +90,6 @@
     [super viewWillAppear:animated];
 
     [self updateViews];
-    
-    _ringBuffer = new RingBuffer(32768, 2);
-    _audioManager = [Novocaine audioManager];
 }
 
 - (void)didReceiveMemoryWarning
@@ -135,6 +131,9 @@
  */
 - (void)updateViews
 {
+    // ナビゲーションバー更新
+    self.navigationItem.title = _header.name;
+    // テーブルビュー更新
     [_tableView reloadData];
 }
 
@@ -373,8 +372,9 @@
                                                       handler:^(UIAlertAction *action)
     {
         // 保存実行
-        BOOL isSuccess = [[CMBUtility sharedInstance] saveScoreWithSequences:_sequences
-                                                                    fileName:name];
+        BOOL isSuccess = [[CMBUtility sharedInstance] saveSongWithSequences:_sequences
+                                                                     header:_header
+                                                                   fileName:name];
         if (!isSuccess) {
             // 失敗
             UIAlertController *alertController =
@@ -405,7 +405,9 @@
 {
     // シーケンスを読み込み
     NSMutableDictionary *sequences;
-    BOOL isSuccess = [[CMBUtility sharedInstance] loadScoreWithSequences:&sequences
+    CMBSongHeaderData *header;
+    BOOL isSuccess = [[CMBUtility sharedInstance] loadSongWithSequences:&sequences
+                                                                 header:&header
                                                                 fileName:info[@"name"]];
     if (!isSuccess) {
         // 失敗
@@ -422,15 +424,9 @@
     }
     // データ更新
     _sequences = sequences;
+    _header = header;
     // 表示更新
     [self updateViews];
-}
-
-#pragma mark - Save/Load Score.
-
-- (void)loadSequencesWithFileName:(NSString *)name
-{
-    // TODO:
 }
 
 #pragma mark - Debug.
@@ -438,30 +434,6 @@
 - (void)soundTest
 {
     [self playWithScale:@"C" octave:[NSNumber numberWithInteger:4]];
-}
-
-- (void)soundTest2
-{
-    __weak CMBMusicBoxViewController * wself = self;
-
-    NSURL *inputFileURL = [[NSBundle mainBundle] URLForResource:@"xylophone.C4" withExtension:@"wav"];
-    
-    _fileReader = [[AudioFileReader alloc]
-                       initWithAudioFileURL:inputFileURL
-                       samplingRate:_audioManager.samplingRate
-                       numChannels:_audioManager.numOutputChannels];
-    
-    [_fileReader play];
-    _fileReader.currentTime = 0.0;
-    
-    
-    [_audioManager setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels)
-     {
-         [wself.fileReader retrieveFreshAudio:data numFrames:numFrames numChannels:numChannels];
-         NSLog(@"Time: %f", wself.fileReader.currentTime);
-     }];
-
-    [self.audioManager play];
 }
 
 @end

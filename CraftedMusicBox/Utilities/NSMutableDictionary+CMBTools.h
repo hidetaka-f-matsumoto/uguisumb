@@ -10,6 +10,4 @@
 
 @interface NSMutableDictionary (CMBTools)
 
-+ (NSMutableDictionary *)sequencesWithABC:(NSString *)abc;
-
 @end

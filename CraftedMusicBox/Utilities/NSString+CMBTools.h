@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CMBSongHeaderData.h"
 
 @interface NSString (CMBTools)
 
-@property (nonatomic, getter=getNumberValue) NSNumber *numberValue;
+@property (nonatomic, readonly, getter=getNumberValue) NSNumber *numberValue;
 
 + (NSString *)jsonWithDictionary:(NSDictionary *)dic
                           pretty:(BOOL)isPretty;
-+ (NSString *)abcWithSequences:(NSDictionary *)sequences;
-
++ (NSString *)songJsonWithSequences:(NSDictionary *)sequences
+                             header:(CMBSongHeaderData *)header;
+- (void)sequences:(NSMutableDictionary **)sequences
+           header:(CMBSongHeaderData **)header;
 - (NSInteger)countWithChar:(NSString *)target;
 - (NSInteger)countWithString:(NSString *)target;
 

@@ -8,16 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import "CMBNoteData.h"
+#import "CMBSequenceOneData.h"
+#import "CMBSongHeaderData.h"
 
 @interface CMBUtility : NSObject
 
 + (CMBUtility *)sharedInstance;
 + (NSArray *)noteInfosWithABCString:(NSString *)abc;
 
+- (NSString *)getScoreDirPath;
+- (NSString *)getScorePathWithFileName:(NSString *)fileName;
 - (NSMutableArray *)getScoreInfos;
-- (BOOL)loadScoreWithSequences:(NSMutableDictionary **)sequences
-                      fileName:(NSString *)fileName;
-- (BOOL)saveScoreWithSequences:(NSMutableDictionary *)sequences
-                      fileName:(NSString *)fileName;
+- (BOOL)loadSongWithSequences:(NSMutableDictionary **)sequences
+                       header:(CMBSongHeaderData **)header
+                     fileName:(NSString *)fileName;
+- (BOOL)saveSongWithSequences:(NSMutableDictionary *)sequences
+                       header:(CMBSongHeaderData *)header
+                     fileName:(NSString *)fileName;
 
 @end

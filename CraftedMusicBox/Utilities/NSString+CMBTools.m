@@ -25,9 +25,14 @@
     return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
-+ (NSString *)abcWithSequences:(NSDictionary *)sequences
++ (NSString *)songJsonWithSequences:(NSDictionary *)sequences
+                             header:(CMBSongHeaderData *)header
 {
-    NSMutableDictionary *abcDic = [NSMutableDictionary dictionary];
+    NSMutableDictionary *songDic = [NSMutableDictionary dictionary];
+    // ヘッダ
+    [songDic setObject:[header dictionary] forKey:@"header"];
+    // シーケンス
+    NSMutableDictionary *seqDic = [NSMutableDictionary dictionary];
     for (NSNumber *time in sequences) {
         CMBSequenceOneData *seqOneData = sequences[time];
         if (!seqOneData) {
@@ -47,9 +52,49 @@
         else if (1 == seqOneData.notes.count) {
             abcOne = [seqOneData.notes[0] abcString];
         }
-        [abcDic setObject:abcOne forKey:timeStr];
+        [seqDic setObject:abcOne forKey:timeStr];
     }
-    return [NSString jsonWithDictionary:abcDic pretty:NO];
+    [songDic setObject:seqDic forKey:@"sequences"];
+    return [NSString jsonWithDictionary:songDic pretty:NO];
+}
+
+- (void)sequences:(NSMutableDictionary **)sequences
+           header:(CMBSongHeaderData **)header;
+{
+    NSError *error;
+    NSDictionary *songDic =
+    [NSJSONSerialization JSONObjectWithData:[self dataUsingEncoding:NSUTF8StringEncoding]
+                                    options:NSJSONReadingMutableContainers
+                                      error:&error];
+    if (error) {
+        return;
+    }
+    // ヘッダ作成
+    *header = [[CMBSongHeaderData alloc] initWithInfo:songDic[@"header"]];
+    // シーケンス作成
+    *sequences = [NSMutableDictionary dictionary];
+    NSDictionary *seqDic = songDic[@"sequences"];
+    for (NSString *timeStr in seqDic) {
+        id abcOne = seqDic[timeStr];
+        if (!abcOne) {
+            continue;
+        }
+        NSNumber *time = timeStr.numberValue;
+        CMBSequenceOneData *sequence = [CMBSequenceOneData sequenceOneData];
+        // 和音
+        if ([abcOne isKindOfClass:[NSArray class]]) {
+            for (NSString *abc in (NSArray *)abcOne) {
+                CMBNoteData *noteData = [[CMBNoteData alloc] initWithABCString:abc];
+                [sequence.notes addObject:noteData];
+            }
+        }
+        // 単音
+        else if ([abcOne isKindOfClass:[NSString class]]) {
+            CMBNoteData *noteData = [[CMBNoteData alloc] initWithABCString:abcOne];
+            [sequence.notes addObject:noteData];
+        }
+        [*sequences setObject:sequence forKey:time];
+    }
 }
 
 - (NSNumber *)getNumberValue

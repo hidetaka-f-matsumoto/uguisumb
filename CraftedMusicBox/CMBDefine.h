@@ -11,6 +11,8 @@
 
 #import <Foundation/Foundation.h>
 
+static NSInteger const CMBTempoDefault = 120;
+static NSString * const CMBBeatDefault = @"4/4";
 static NSInteger const CMBOctaveMin = 3;
 static NSInteger const CMBOctaveMax = 5;
 static NSInteger const CMBOctaveBase = 4;

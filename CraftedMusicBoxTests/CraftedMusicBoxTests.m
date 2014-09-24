@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "CMBUtility.h"
 
 @interface CraftedMusicBoxTests : XCTestCase
 
@@ -29,6 +30,12 @@
 - (void)testExample
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testPath
+{
+    CMBUtility *utility = [CMBUtility sharedInstance];
+    NSLog(@"[TEST] score dir = %@", [utility getScoreDirPath]);
 }
 
 @end
