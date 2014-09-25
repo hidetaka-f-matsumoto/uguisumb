@@ -20,17 +20,19 @@
 /**
  * Song設定
  */
-@interface CMBSongConfigViewController : CMBBaseModalViewController <UITextFieldDelegate>
+@interface CMBSongConfigViewController : CMBBaseModalViewController <UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (nonatomic, assign) id<CMBSongConfigDelegate> delegate;
 @property (atomic, assign) NSDictionary *sequences;
 @property (atomic, assign) CMBSongHeaderData *header;
 
+@property (nonatomic, weak) IBOutlet UITextField *nameText;
 @property (nonatomic, weak) IBOutlet UISlider *tempoSlider;
 @property (nonatomic, weak) IBOutlet UILabel *tempoLabel;
-@property (nonatomic, weak) IBOutlet UITextField *nameText;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *divisionControl;
 @property (nonatomic, weak) IBOutlet UIButton *saveButton;
 
+- (IBAction)applyButtonDidTap:(id)sender;
 - (IBAction)saveButtonDidTap:(id)sender;
 
 @end

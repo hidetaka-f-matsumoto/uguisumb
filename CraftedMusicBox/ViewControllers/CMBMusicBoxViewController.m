@@ -88,7 +88,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+}
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    // 表示更新
     [self updateViews];
 }
 
@@ -133,8 +139,9 @@
  */
 - (void)updateViews
 {
+    // スクロール初期位置
     _scrollView.contentOffset = CGPointMake(320, 0);
-    _tableView.contentOffset = CGPointMake(-100, 0);
+    _tableView.contentOffset = CGPointMake(0, 0);
     // ナビゲーションバー更新
     self.navigationItem.title = _header.name;
     // テーブルビュー更新

@@ -20,6 +20,9 @@
     [super viewDidLoad];
     
     _nameText.delegate = self;
+    _tempoSlider.minimumValue = CMBTempoMin;
+    _tempoSlider.maximumValue = CMBTempoMax;
+    [_tempoSlider addTarget:self action:@selector(tempoSliderDidChange:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -27,7 +30,9 @@
     [super viewWillAppear:animated];
     
     _nameText.text = _header.name;
-    _tempoLabel.text = _header.tempo.stringValue;
+    _tempoLabel.text = [NSString stringWithFormat:@"%zd", _header.tempo.integerValue];
+    _tempoSlider.value = _header.tempo.floatValue;
+    [_divisionControl setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,6 +51,18 @@
 }
 */
 
+- (void)applyConfig
+{
+    _header.name = _nameText.text;
+    _header.tempo = [NSNumber numberWithInteger:(NSInteger)_tempoSlider.value];
+    _header.division = CMBDivisions[_divisionControl.selectedSegmentIndex];
+}
+
+- (IBAction)applyButtonDidTap:(id)sender
+{
+    [self applyConfig];
+}
+
 - (IBAction)saveButtonDidTap:(id)sender
 {
     // 確認ダイアログ
@@ -58,6 +75,7 @@
                                                         style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction *action)
     {
+        [self applyConfig];
         // 保存実行
         BOOL isSuccess = [[CMBUtility sharedInstance] saveSongWithSequences:_sequences
                                                                      header:_header
@@ -118,6 +136,13 @@
 {
     [self.view endEditing:YES];
     return YES;
+}
+
+#pragma mark - UISlider
+
+- (void)tempoSliderDidChange:(id)sender
+{
+    _tempoLabel.text = [NSString stringWithFormat:@"%zd", (NSInteger)_tempoSlider.value];
 }
 
 @end

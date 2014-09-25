@@ -15,8 +15,8 @@
     self = [super init];
     if (self) {
         _name = (info && info[@"name"]) ? info[@"name"] : @"";
-        _tempo = (info && info[@"tempo"]) ? info[@"tempo"] : [NSNumber numberWithInteger:CMBTempoDefault];
-        _beat = (info && info[@"beat"]) ? info[@"beat"] : CMBBeatDefault;
+        _tempo = (info && info[@"tempo"]) ? info[@"tempo"] : [NSNumber numberWithFloat:CMBTempoDefault];
+        _division = (info && info[@"division"]) ? info[@"division"] : [NSNumber numberWithInteger:CMBDivisionDefault];
     }
     return self;
 }
@@ -28,7 +28,7 @@
             version, @"version",
             _name, @"name",
             _tempo, @"tempo",
-            _beat, @"beat",
+            _division, @"division",
             nil];
 }
 

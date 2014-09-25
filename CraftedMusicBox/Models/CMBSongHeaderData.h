@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *tempo;
-@property (nonatomic, strong) NSString *beat;
+@property (nonatomic, strong) NSNumber *division;
 
 - (id)initWithInfo:(NSDictionary *)info;
 - (NSDictionary *)dictionary;
