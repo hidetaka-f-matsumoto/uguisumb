@@ -292,7 +292,7 @@
 //    currentPoint.y = _scrollPointBegin.y;
 //    [scrollView setContentOffset:currentPoint];
     for (CMBMusicBoxTableViewCell *cell in [_tableView visibleCells]) {
-//        [cell process];
+        [cell process];
     }
 }
 
