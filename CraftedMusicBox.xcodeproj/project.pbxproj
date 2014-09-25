@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		080617011957286E00C46771 /* national-wildlife-reserve-bolivia_46878_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 080617001957286E00C46771 /* national-wildlife-reserve-bolivia_46878_990x742.jpg */; };
-		086BA16019D0401000991574 /* CMBScoreNameEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA15F19D0401000991574 /* CMBScoreNameEditViewController.m */; };
-		086BA16319D0FA4E00991574 /* CMBScoreSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16219D0FA4E00991574 /* CMBScoreSelectViewController.m */; };
-		086BA16619D0FDA400991574 /* CMBScoreSelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16519D0FDA400991574 /* CMBScoreSelectTableViewCell.m */; };
+		086BA16019D0401000991574 /* CMBSongConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA15F19D0401000991574 /* CMBSongConfigViewController.m */; };
+		086BA16319D0FA4E00991574 /* CMBSongManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16219D0FA4E00991574 /* CMBSongManageViewController.m */; };
+		086BA16619D0FDA400991574 /* CMBSongManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16519D0FDA400991574 /* CMBSongManageTableViewCell.m */; };
 		086BA16919D10C4B00991574 /* CMBBaseModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16819D10C4B00991574 /* CMBBaseModalViewController.m */; };
 		086BA16C19D19F5700991574 /* NSMutableDictionary+CMBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16B19D19F5700991574 /* NSMutableDictionary+CMBTools.m */; };
 		086BA16F19D2BA1B00991574 /* CMBSongHeaderData.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16E19D2BA1B00991574 /* CMBSongHeaderData.m */; };
@@ -49,6 +49,12 @@
 		08C2816E199D112C0037F6D0 /* MusicInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08C2816D199D112C0037F6D0 /* MusicInfo.plist */; };
 		08C696511984260C0096BC20 /* CMBMusicBoxOctaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08C696501984260C0096BC20 /* CMBMusicBoxOctaveView.xib */; };
 		08C696541984264E0096BC20 /* CMBMusicBoxOctaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C696531984264E0096BC20 /* CMBMusicBoxOctaveView.m */; };
+		08DE16DD19D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16D219D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m */; };
+		08DE16DE19D3B6BC00315BE4 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16D419D3B6BC00315BE4 /* SWCellScrollView.m */; };
+		08DE16DF19D3B6BC00315BE4 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16D619D3B6BC00315BE4 /* SWLongPressGestureRecognizer.m */; };
+		08DE16E019D3B6BC00315BE4 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16D819D3B6BC00315BE4 /* SWTableViewCell.m */; };
+		08DE16E119D3B6BC00315BE4 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16DA19D3B6BC00315BE4 /* SWUtilityButtonTapGestureRecognizer.m */; };
+		08DE16E219D3B6BC00315BE4 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16DC19D3B6BC00315BE4 /* SWUtilityButtonView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +69,12 @@
 
 /* Begin PBXFileReference section */
 		080617001957286E00C46771 /* national-wildlife-reserve-bolivia_46878_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "national-wildlife-reserve-bolivia_46878_990x742.jpg"; sourceTree = "<group>"; };
-		086BA15E19D0401000991574 /* CMBScoreNameEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBScoreNameEditViewController.h; path = ViewControllers/CMBScoreNameEditViewController.h; sourceTree = "<group>"; };
-		086BA15F19D0401000991574 /* CMBScoreNameEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBScoreNameEditViewController.m; path = ViewControllers/CMBScoreNameEditViewController.m; sourceTree = "<group>"; };
-		086BA16119D0FA4E00991574 /* CMBScoreSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBScoreSelectViewController.h; path = ViewControllers/CMBScoreSelectViewController.h; sourceTree = "<group>"; };
-		086BA16219D0FA4E00991574 /* CMBScoreSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBScoreSelectViewController.m; path = ViewControllers/CMBScoreSelectViewController.m; sourceTree = "<group>"; };
-		086BA16419D0FDA400991574 /* CMBScoreSelectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBScoreSelectTableViewCell.h; path = Views/CMBScoreSelectTableViewCell.h; sourceTree = "<group>"; };
-		086BA16519D0FDA400991574 /* CMBScoreSelectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBScoreSelectTableViewCell.m; path = Views/CMBScoreSelectTableViewCell.m; sourceTree = "<group>"; };
+		086BA15E19D0401000991574 /* CMBSongConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBSongConfigViewController.h; path = ViewControllers/CMBSongConfigViewController.h; sourceTree = "<group>"; };
+		086BA15F19D0401000991574 /* CMBSongConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBSongConfigViewController.m; path = ViewControllers/CMBSongConfigViewController.m; sourceTree = "<group>"; };
+		086BA16119D0FA4E00991574 /* CMBSongManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBSongManageViewController.h; path = ViewControllers/CMBSongManageViewController.h; sourceTree = "<group>"; };
+		086BA16219D0FA4E00991574 /* CMBSongManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBSongManageViewController.m; path = ViewControllers/CMBSongManageViewController.m; sourceTree = "<group>"; };
+		086BA16419D0FDA400991574 /* CMBSongManageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBSongManageTableViewCell.h; path = Views/CMBSongManageTableViewCell.h; sourceTree = "<group>"; };
+		086BA16519D0FDA400991574 /* CMBSongManageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBSongManageTableViewCell.m; path = Views/CMBSongManageTableViewCell.m; sourceTree = "<group>"; };
 		086BA16719D10C4B00991574 /* CMBBaseModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBBaseModalViewController.h; path = ViewControllers/CMBBaseModalViewController.h; sourceTree = "<group>"; };
 		086BA16819D10C4B00991574 /* CMBBaseModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBBaseModalViewController.m; path = ViewControllers/CMBBaseModalViewController.m; sourceTree = "<group>"; };
 		086BA16A19D19F5700991574 /* NSMutableDictionary+CMBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+CMBTools.h"; path = "Utilities/NSMutableDictionary+CMBTools.h"; sourceTree = "<group>"; };
@@ -125,6 +131,18 @@
 		08C696501984260C0096BC20 /* CMBMusicBoxOctaveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMBMusicBoxOctaveView.xib; path = Views/CMBMusicBoxOctaveView.xib; sourceTree = "<group>"; };
 		08C696521984264E0096BC20 /* CMBMusicBoxOctaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxOctaveView.h; path = Views/CMBMusicBoxOctaveView.h; sourceTree = "<group>"; };
 		08C696531984264E0096BC20 /* CMBMusicBoxOctaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxOctaveView.m; path = Views/CMBMusicBoxOctaveView.m; sourceTree = "<group>"; };
+		08DE16D119D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		08DE16D219D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		08DE16D319D3B6BC00315BE4 /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
+		08DE16D419D3B6BC00315BE4 /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellScrollView.m; sourceTree = "<group>"; };
+		08DE16D519D3B6BC00315BE4 /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		08DE16D619D3B6BC00315BE4 /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		08DE16D719D3B6BC00315BE4 /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
+		08DE16D819D3B6BC00315BE4 /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
+		08DE16D919D3B6BC00315BE4 /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		08DE16DA19D3B6BC00315BE4 /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		08DE16DB19D3B6BC00315BE4 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
+		08DE16DC19D3B6BC00315BE4 /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,10 +279,10 @@
 				086BA16819D10C4B00991574 /* CMBBaseModalViewController.m */,
 				08883B0F1956CFEF00F7EB68 /* CMBMusicBoxViewController.h */,
 				08883B101956CFEF00F7EB68 /* CMBMusicBoxViewController.m */,
-				086BA15E19D0401000991574 /* CMBScoreNameEditViewController.h */,
-				086BA15F19D0401000991574 /* CMBScoreNameEditViewController.m */,
-				086BA16119D0FA4E00991574 /* CMBScoreSelectViewController.h */,
-				086BA16219D0FA4E00991574 /* CMBScoreSelectViewController.m */,
+				086BA15E19D0401000991574 /* CMBSongConfigViewController.h */,
+				086BA15F19D0401000991574 /* CMBSongConfigViewController.m */,
+				086BA16119D0FA4E00991574 /* CMBSongManageViewController.h */,
+				086BA16219D0FA4E00991574 /* CMBSongManageViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -290,8 +308,8 @@
 				08C696501984260C0096BC20 /* CMBMusicBoxOctaveView.xib */,
 				08C696521984264E0096BC20 /* CMBMusicBoxOctaveView.h */,
 				08C696531984264E0096BC20 /* CMBMusicBoxOctaveView.m */,
-				086BA16419D0FDA400991574 /* CMBScoreSelectTableViewCell.h */,
-				086BA16519D0FDA400991574 /* CMBScoreSelectTableViewCell.m */,
+				086BA16419D0FDA400991574 /* CMBSongManageTableViewCell.h */,
+				086BA16519D0FDA400991574 /* CMBSongManageTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -312,6 +330,7 @@
 		08B66F6A198DFBDC00376683 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				08DE16CF19D3B6A500315BE4 /* SWTableViewCell */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -335,6 +354,34 @@
 			);
 			name = xylophone;
 			path = Sounds/xylophone;
+			sourceTree = "<group>";
+		};
+		08DE16CF19D3B6A500315BE4 /* SWTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				08DE16D019D3B6BC00315BE4 /* PodFiles */,
+			);
+			name = SWTableViewCell;
+			sourceTree = "<group>";
+		};
+		08DE16D019D3B6BC00315BE4 /* PodFiles */ = {
+			isa = PBXGroup;
+			children = (
+				08DE16D119D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.h */,
+				08DE16D219D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m */,
+				08DE16D319D3B6BC00315BE4 /* SWCellScrollView.h */,
+				08DE16D419D3B6BC00315BE4 /* SWCellScrollView.m */,
+				08DE16D519D3B6BC00315BE4 /* SWLongPressGestureRecognizer.h */,
+				08DE16D619D3B6BC00315BE4 /* SWLongPressGestureRecognizer.m */,
+				08DE16D719D3B6BC00315BE4 /* SWTableViewCell.h */,
+				08DE16D819D3B6BC00315BE4 /* SWTableViewCell.m */,
+				08DE16D919D3B6BC00315BE4 /* SWUtilityButtonTapGestureRecognizer.h */,
+				08DE16DA19D3B6BC00315BE4 /* SWUtilityButtonTapGestureRecognizer.m */,
+				08DE16DB19D3B6BC00315BE4 /* SWUtilityButtonView.h */,
+				08DE16DC19D3B6BC00315BE4 /* SWUtilityButtonView.m */,
+			);
+			name = PodFiles;
+			path = ../_Libraries/SWTableViewCell/SWTableViewCell/PodFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,19 +491,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				086BA16619D0FDA400991574 /* CMBScoreSelectTableViewCell.m in Sources */,
+				086BA16619D0FDA400991574 /* CMBSongManageTableViewCell.m in Sources */,
+				08DE16DE19D3B6BC00315BE4 /* SWCellScrollView.m in Sources */,
 				08A769E11972CA1900143638 /* CMBNoteData.m in Sources */,
+				08DE16DF19D3B6BC00315BE4 /* SWLongPressGestureRecognizer.m in Sources */,
 				086BA16F19D2BA1B00991574 /* CMBSongHeaderData.m in Sources */,
-				086BA16019D0401000991574 /* CMBScoreNameEditViewController.m in Sources */,
+				086BA16019D0401000991574 /* CMBSongConfigViewController.m in Sources */,
 				08A769D71972992900143638 /* CMBMusicBoxTableViewCell.m in Sources */,
 				08C696541984264E0096BC20 /* CMBMusicBoxOctaveView.m in Sources */,
+				08DE16E119D3B6BC00315BE4 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				086BA16C19D19F5700991574 /* NSMutableDictionary+CMBTools.m in Sources */,
 				08A769DE1972C93000143638 /* CMBUtility.m in Sources */,
+				08DE16DD19D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m in Sources */,
+				08DE16E019D3B6BC00315BE4 /* SWTableViewCell.m in Sources */,
 				08883B1C1956D40600F7EB68 /* NSString+CMBTools.m in Sources */,
 				08883AE01956CC6A00F7EB68 /* main.m in Sources */,
 				08883AE41956CC6A00F7EB68 /* CMBAppDelegate.m in Sources */,
 				08883B111956CFEF00F7EB68 /* CMBMusicBoxViewController.m in Sources */,
-				086BA16319D0FA4E00991574 /* CMBScoreSelectViewController.m in Sources */,
+				08DE16E219D3B6BC00315BE4 /* SWUtilityButtonView.m in Sources */,
+				086BA16319D0FA4E00991574 /* CMBSongManageViewController.m in Sources */,
 				086BA16919D10C4B00991574 /* CMBBaseModalViewController.m in Sources */,
 				08883B161956D03D00F7EB68 /* CMBTabViewController.m in Sources */,
 				08A769DB1972A82D00143638 /* CMBSequenceOneData.m in Sources */,

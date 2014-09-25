@@ -28,6 +28,9 @@
 + (NSString *)songJsonWithSequences:(NSDictionary *)sequences
                              header:(CMBSongHeaderData *)header
 {
+    if (!sequences || !header) {
+        return nil;
+    }
     NSMutableDictionary *songDic = [NSMutableDictionary dictionary];
     // ヘッダ
     [songDic setObject:[header dictionary] forKey:@"header"];

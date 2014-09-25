@@ -35,7 +35,7 @@
 - (void)testPath
 {
     CMBUtility *utility = [CMBUtility sharedInstance];
-    NSLog(@"[TEST] score dir = %@", [utility getScoreDirPath]);
+    NSLog(@"[TEST] song dir = %@", [utility getSongDirPath]);
 }
 
 @end

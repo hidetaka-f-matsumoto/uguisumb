@@ -13,10 +13,10 @@
 #import "CMBSequenceOneData.h"
 #import "CMBSongHeaderData.h"
 #import "CMBMusicBoxTableViewCell.h"
-#import "CMBScoreNameEditViewController.h"
-#import "CMBScoreSelectViewController.h"
+#import "CMBSongConfigViewController.h"
+#import "CMBSongManageViewController.h"
 
-@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, CMBMusicBoxTableViewCellDelegate, CMBScoreNameEditDelegate, CMBScoreSelectDelegate>
+@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, CMBMusicBoxTableViewCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate>
 {
     NSMutableDictionary *_dataSource;
 }

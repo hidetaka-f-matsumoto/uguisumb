@@ -16,14 +16,15 @@
 + (CMBUtility *)sharedInstance;
 + (NSArray *)noteInfosWithABCString:(NSString *)abc;
 
-- (NSString *)getScoreDirPath;
-- (NSString *)getScorePathWithFileName:(NSString *)fileName;
-- (NSMutableArray *)getScoreInfos;
+- (NSString *)getSongDirPath;
+- (NSString *)getSongPathWithFileName:(NSString *)fileName;
+- (NSMutableArray *)getSongInfos;
 - (BOOL)loadSongWithSequences:(NSMutableDictionary **)sequences
                        header:(CMBSongHeaderData **)header
                      fileName:(NSString *)fileName;
 - (BOOL)saveSongWithSequences:(NSMutableDictionary *)sequences
                        header:(CMBSongHeaderData *)header
                      fileName:(NSString *)fileName;
+- (BOOL)deleteSongWithFileName:(NSString *)fileName;
 
 @end

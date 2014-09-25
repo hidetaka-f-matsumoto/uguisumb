@@ -65,9 +65,9 @@ static CMBUtility *_instance = nil;
 }
 
 /**
- * 楽譜ディレクトリパス取得
+ * Songディレクトリパス取得
  */
-- (NSString *)getScoreDirPath
+- (NSString *)getSongDirPath
 {
     NSString *path = nil;
     @try {
@@ -76,8 +76,8 @@ static CMBUtility *_instance = nil;
         NSArray *pathes = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
                                                               NSUserDomainMask,
                                                               YES);
-        // 楽譜ディレクトリ
-        path = [pathes[0] stringByAppendingPathComponent:@"scores/"];
+        // Songディレクトリ
+        path = [pathes[0] stringByAppendingPathComponent:@"songs/"];
         // 存在しない場合は作成
         if (![fileManager fileExistsAtPath:path]) {
             NSError *error = nil;
@@ -86,7 +86,6 @@ static CMBUtility *_instance = nil;
                                                    attributes:nil
                                                         error:&error];
             if (!created) {
-                NSLog(@"failed to create directory. reason is %@ - %@", error, error.userInfo);
                 path = nil;
             }
         }
@@ -100,29 +99,29 @@ static CMBUtility *_instance = nil;
 }
 
 /**
- * 楽譜ファイルパス取得
+ * Songファイルパス取得
  */
-- (NSString *)getScorePathWithFileName:(NSString *)fileName
+- (NSString *)getSongPathWithFileName:(NSString *)fileName
 {
-    NSString *path = [self getScoreDirPath];
+    NSString *path = [self getSongDirPath];
     if (!path) {
         return nil;
     }
-    // 楽譜ファイル
+    // Songファイル
     return [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.song", fileName]];
 }
 
 /**
- * 楽譜情報一覧を取得
+ * Song情報一覧を取得
  * @return List<Dictionary *>
- *  name: 楽譜名
+ *  name: Song名
  *  path: パス
  */
-- (NSMutableArray *)getScoreInfos
+- (NSMutableArray *)getSongInfos
 {
-    // 楽譜ディレクトリ
-    NSString *dir = [self getScoreDirPath];
-    // 楽譜一覧を取得
+    // Songディレクトリ
+    NSString *dir = [self getSongDirPath];
+    // Song一覧を取得
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError *error = nil;
     NSArray *files = [fileManager contentsOfDirectoryAtPath:dir
@@ -130,10 +129,13 @@ static CMBUtility *_instance = nil;
     if (error) {
         return nil;
     }
-    // 楽譜情報
+    // Song情報
     NSMutableArray *infos = [NSMutableArray array];
     for (NSString *file in files) {
-        NSString *name = [file stringByReplacingOccurrencesOfString:@".song" withString:@""];
+        if (![file hasSuffix:@".song"]) {
+            continue;
+        }
+        NSString *name = [file stringByDeletingPathExtension];
         NSString *path = [dir stringByAppendingString:file];
         NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:
                               name, @"name",
@@ -148,12 +150,13 @@ static CMBUtility *_instance = nil;
                        header:(CMBSongHeaderData **)header
                      fileName:(NSString *)fileName
 {
-    // 楽譜ファイルパス
-    NSString *path = [self getScorePathWithFileName:fileName];
+    // Songファイルパス
+    NSString *path = [self getSongPathWithFileName:fileName];
     if (!path) {
         return NO;
     }
-    NSError *error = nil;
+    // ファイルを読む
+    NSError *error;
     NSString *songJson = [[NSString alloc] initWithContentsOfFile:path
                                                          encoding:NSUTF8StringEncoding
                                                             error:&error];
@@ -172,23 +175,41 @@ static CMBUtility *_instance = nil;
                        header:(CMBSongHeaderData *)header
                      fileName:(NSString *)fileName
 {
-    // 楽譜ファイルパス
-    NSString *path = [self getScorePathWithFileName:fileName];
+    // Songファイルパス
+    NSString *path = [self getSongPathWithFileName:fileName];
     if (!path) {
         return NO;
     }
-    // ABC文字列に変換
-    NSString *abc = [NSString songJsonWithSequences:sequences
-                                        header:header];
-    if (!abc) {
+    // Song-jsonに変換
+    NSString *songJson = [NSString songJsonWithSequences:sequences
+                                                  header:header];
+    if (!songJson) {
         return NO;
     }
-    //ファイルを作成する
-    NSError *error = nil;
-    [abc writeToFile:path
-          atomically:NO
-            encoding:NSUTF8StringEncoding
-               error:&error];
+    // ファイルを作成する
+    NSError *error;
+    [songJson writeToFile:path
+               atomically:NO
+                 encoding:NSUTF8StringEncoding
+                    error:&error];
+    if (error) {
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)deleteSongWithFileName:(NSString *)fileName
+{
+    // Songファイルパス
+    NSString *path = [self getSongPathWithFileName:fileName];
+    if (!path) {
+        return NO;
+    }
+    // ファイルを削除する
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    [fileManager removeItemAtPath:path
+                            error:&error];
     if (error) {
         return NO;
     }

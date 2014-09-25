@@ -113,15 +113,17 @@
                  sender:(id)sender
 {
     // 楽譜名入力
-    if ([segue.identifier isEqualToString:@"ScoreNameEdit"]) {
+    if ([segue.identifier isEqualToString:@"SongConfig"]) {
         UINavigationController *nc = segue.destinationViewController;
-        CMBScoreNameEditViewController *vc = (CMBScoreNameEditViewController *)nc.topViewController;
+        CMBSongConfigViewController *vc = (CMBSongConfigViewController *)nc.topViewController;
         vc.delegate = self;
+        vc.sequences = _sequences;
+        vc.header = _header;
     }
     // 楽譜選択
-    else if ([segue.identifier isEqualToString:@"ScoreSelect"]) {
+    else if ([segue.identifier isEqualToString:@"SongManage"]) {
         UINavigationController *nc = segue.destinationViewController;
-        CMBScoreSelectViewController *vc = (CMBScoreSelectViewController *)nc.topViewController;
+        CMBSongManageViewController *vc = (CMBSongManageViewController *)nc.topViewController;
         vc.delegate = self;
     }
 }
@@ -131,6 +133,8 @@
  */
 - (void)updateViews
 {
+    _scrollView.contentOffset = CGPointMake(320, 0);
+    _tableView.contentOffset = CGPointMake(-100, 0);
     // ナビゲーションバー更新
     self.navigationItem.title = _header.name;
     // テーブルビュー更新
@@ -202,7 +206,7 @@
                            delegate:self
                            cancelButtonTitle:@"Cancel"
                            destructiveButtonTitle:nil
-                           otherButtonTitles:@"Save", @"Load", @"Config", nil];
+                           otherButtonTitles:@"Config this song", @"Manage songs", nil];
     
     [sheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
     
@@ -210,20 +214,20 @@
 }
 
 /**
- * 保存ボタン
+ * Song設定ボタン
  */
-- (void)saveButtonDidTap
+- (void)songConfigButtonDidTap
 {
-    [self performSegueWithIdentifier:@"ScoreNameEdit"
+    [self performSegueWithIdentifier:@"SongConfig"
                               sender:self];
 }
 
 /**
- * 読み込みボタン
+ * Song管理ボタン
  */
-- (void)loadButtonDidTap
+- (void)songManageButtonDidTap
 {
-    [self performSegueWithIdentifier:@"ScoreSelect"
+    [self performSegueWithIdentifier:@"SongManage"
                               sender:self];
 }
 
@@ -250,6 +254,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TestTableViewCell"];
     NSString *cellIdentifier = @"MusicBoxTableViewCell";
     CMBMusicBoxTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     cell.delegate = self;
@@ -258,6 +263,12 @@
     [cell updateWithSequenceOne:_sequences[[NSNumber numberWithInteger:indexPath.row]]];
     
     return cell;
+}
+
+- (CGFloat)     tableView:(UITableView *)tableView
+  heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -281,7 +292,7 @@
 //    currentPoint.y = _scrollPointBegin.y;
 //    [scrollView setContentOffset:currentPoint];
     for (CMBMusicBoxTableViewCell *cell in [_tableView visibleCells]) {
-        [cell process];
+//        [cell process];
     }
 }
 
@@ -296,13 +307,11 @@
         // nothing to do.
     }else{
         switch (buttonIndex) {
-            case 0: // Save
-                [self saveButtonDidTap];
+            case 0: // Config this song
+                [self songConfigButtonDidTap];
                 break;
-            case 1: // Load
-                [self loadButtonDidTap];
-                break;
-            case 2: // Config
+            case 1: // Manage songs
+                [self songManageButtonDidTap];
                 break;
             default:
                 break;
@@ -328,7 +337,6 @@
     }
     // シーケンスを更新
     NSIndexPath *indexPath = (NSIndexPath *)info[@"indexPath"];
-    NSLog(@"%zd", indexPath.row);
     CMBSequenceOneData *seqOneData = _sequences[[NSNumber numberWithInteger:indexPath.row]];
     // シーケンスデータが新規の場合
     if (!seqOneData) {
@@ -357,40 +365,17 @@
     }
 }
 
-#pragma mark - CMBScoreNameEditDelegate
+#pragma mark - CMBSongSaveDelegate
 
-- (void)scoreNameDidEditWithName:(NSString *)name
+- (void)songDidSaveWithName:(NSString *)name
 {
     // 確認ダイアログ
     UIAlertController *alertController =
-    [UIAlertController alertControllerWithTitle:@"楽譜の保存"
-                                        message:[NSString stringWithFormat:@"%@ で楽譜を保存します。よろしいですか？", name]
+    [UIAlertController alertControllerWithTitle:@"Save song"
+                                        message:[NSString stringWithFormat:@"Complete to save the song as %@.", name]
                                  preferredStyle:UIAlertControllerStyleAlert];
     // OK処理
     [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction *action)
-    {
-        // 保存実行
-        BOOL isSuccess = [[CMBUtility sharedInstance] saveSongWithSequences:_sequences
-                                                                     header:_header
-                                                                   fileName:name];
-        if (!isSuccess) {
-            // 失敗
-            UIAlertController *alertController =
-            [UIAlertController alertControllerWithTitle:@"楽譜の保存"
-                                                message:@"楽譜の保存に失敗しました。"
-                                         preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                                style:UIAlertActionStyleDefault
-                                                              handler:nil]];
-            [self presentViewController:alertController
-                               animated:YES
-                             completion:nil];
-        }
-    }]];
-    // Cancel処理
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
                                                         style:UIAlertActionStyleDefault
                                                       handler:nil]];
     // ダイアログを表示
@@ -399,29 +384,11 @@
                      completion:nil];
 }
 
-#pragma mark - CMBScoreSelectDelegate
+#pragma mark - CMBSongManageDelegate
 
-- (void)scoreDidSelectWithInfo:(NSDictionary *)info
+- (void)songDidLoadWithSequence:(NSMutableDictionary *)sequences
+                         header:(CMBSongHeaderData *)header
 {
-    // シーケンスを読み込み
-    NSMutableDictionary *sequences;
-    CMBSongHeaderData *header;
-    BOOL isSuccess = [[CMBUtility sharedInstance] loadSongWithSequences:&sequences
-                                                                 header:&header
-                                                                fileName:info[@"name"]];
-    if (!isSuccess) {
-        // 失敗
-        UIAlertController *alertController =
-        [UIAlertController alertControllerWithTitle:@"楽譜の読み込み"
-                                            message:@"楽譜の読み込みに失敗しました。"
-                                     preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:nil]];
-        [self presentViewController:alertController
-                           animated:YES
-                         completion:nil];
-    }
     // データ更新
     _sequences = sequences;
     _header = header;

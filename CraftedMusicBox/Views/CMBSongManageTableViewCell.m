@@ -1,14 +1,14 @@
 //
-//  CMBScoreSelectTableViewCell.m
+//  CMBSongManageTableViewCell.m
 //  CraftedMusicBox
 //
 //  Created by hide on 2014/09/23.
 //  Copyright (c) 2014年 hidetaka.f.matsumoto. All rights reserved.
 //
 
-#import "CMBScoreSelectTableViewCell.h"
+#import "CMBSongManageTableViewCell.h"
 
-@implementation CMBScoreSelectTableViewCell
+@implementation CMBSongManageTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -20,10 +20,10 @@
     // Configure the view for the selected state
 }
 
-- (void)setupWithScoreInfo:(NSDictionary *)info
+- (void)setupWithSongInfo:(NSDictionary *)info
 {
-    _scoreInfo = info;
-    _scoreNameLabel.text = info[@"name"];
+    _info = info;
+    _nameLabel.text = info[@"name"];
 }
 
 @end
