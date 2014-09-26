@@ -22,6 +22,7 @@
 {
     for (UIButton *noteButton in _noteButtons) {
         noteButton.selected = NO;
+        [noteButton.imageView setContentMode:UIViewContentModeScaleAspectFit];
     }
 }
 

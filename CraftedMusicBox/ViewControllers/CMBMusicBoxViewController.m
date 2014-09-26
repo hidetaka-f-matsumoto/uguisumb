@@ -95,7 +95,7 @@
     [super viewDidAppear:animated];
 
     // 表示更新
-    [self updateViews];
+    [self updateViewsWithResetScroll:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -137,20 +137,17 @@
 /**
  * 表示更新
  */
-- (void)updateViews
+- (void)updateViewsWithResetScroll:(BOOL)resetScroll
 {
-    // スクロール初期位置
-    _scrollView.contentOffset = CGPointMake(320, 0);
-    _tableView.contentOffset = CGPointMake(0, 0);
+    if (resetScroll) {
+        // スクロール初期位置
+        _scrollView.contentOffset = CGPointMake(320, 0);
+        _tableView.contentOffset = CGPointMake(0, 0);
+    }
     // ナビゲーションバー更新
     self.navigationItem.title = _header.name;
     // テーブルビュー更新
     [_tableView reloadData];
-}
-
-- (void)updateDataSource
-{
-    
 }
 
 /**
@@ -180,7 +177,7 @@
     else {
         // タイマー開始 (自動スクロール)
         if (!_timer) {
-            _timer = [NSTimer scheduledTimerWithTimeInterval:0.05f
+            _timer = [NSTimer scheduledTimerWithTimeInterval:CMBTimeDivAutoScroll
                                                       target:self
                                                     selector:@selector(scrollAuto:)
                                                     userInfo:nil
@@ -244,9 +241,14 @@
 - (void)scrollAuto:(NSTimer*)timer
 {
     CGPoint offset = _tableView.contentOffset;
-    offset.y = offset.y + 4; // TODO: テンポから算出
-    if (offset.y < _tableView.frame.origin.y + _tableView.frame.size.height) {
+    offset.y = offset.y + (CMBMusicBoxTableViewCellHeight * _header.tempo.floatValue * 4 * CMBTimeDivAutoScroll / 60.0f);
+    // 曲中
+    if (offset.y < _tableView.contentSize.height) {
         _tableView.contentOffset = offset;
+    }
+    // 曲終わり
+    else {
+        [self playButtonDidTap:nil];
     }
 }
 
@@ -255,19 +257,47 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return 100;
+    NSInteger numberOfRows = 0;
+    switch (section) {
+        case 0:
+            numberOfRows = 1;
+            break;
+        case 1:
+            numberOfRows = 100;
+            break;
+        case 2:
+            numberOfRows = 1;
+            break;
+        default:
+            break;
+    }
+    return numberOfRows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TestTableViewCell"];
-    NSString *cellIdentifier = @"MusicBoxTableViewCell";
-    CMBMusicBoxTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    cell.delegate = self;
-    cell.parentTableView = _tableView;
-    cell.tineView = _tineView;
-    [cell updateWithSequenceOne:_sequences[[NSNumber numberWithInteger:indexPath.row]]];
+    UITableViewCell *cell = nil;
+    switch (indexPath.section) {
+        case 0:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewHeadCell"];
+            break;
+        case 1:
+        {
+            CMBMusicBoxTableViewCell *mbCell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewCell"];
+            mbCell.delegate = self;
+            mbCell.parentTableView = _tableView;
+            mbCell.tineView = _tineView;
+            [mbCell updateWithSequenceOne:_sequences[[NSNumber numberWithInteger:indexPath.row]]];
+            cell = mbCell;
+            break;
+        }
+        case 2:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewFootCell"];
+            break;
+        default:
+            break;
+    }
     
     return cell;
 }
@@ -275,12 +305,26 @@
 - (CGFloat)     tableView:(UITableView *)tableView
   heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44;
+    CGFloat height = 0.0f;
+    switch (indexPath.section) {
+        case 0:
+            height = 88.0f;
+            break;
+        case 1:
+            height = CMBMusicBoxTableViewCellHeight;
+            break;
+        case 2:
+            height = 88.0f;
+            break;
+        default:
+            break;
+    }
+    return height;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 3;
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -298,8 +342,12 @@
 //    CGPoint currentPoint = scrollView.contentOffset;
 //    currentPoint.y = _scrollPointBegin.y;
 //    [scrollView setContentOffset:currentPoint];
-    for (CMBMusicBoxTableViewCell *cell in [_tableView visibleCells]) {
-        [cell process];
+    for (UITableViewCell *cell in [_tableView visibleCells]) {
+        if (![cell isKindOfClass:[CMBMusicBoxTableViewCell class]]) {
+            continue;
+        }
+        CMBMusicBoxTableViewCell *mbCell = (CMBMusicBoxTableViewCell *)cell;
+        [mbCell process];
     }
 }
 
@@ -400,7 +448,7 @@
     _sequences = sequences;
     _header = header;
     // 表示更新
-    [self updateViews];
+    [self updateViewsWithResetScroll:YES];
 }
 
 #pragma mark - Debug.

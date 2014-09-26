@@ -16,6 +16,8 @@
 #import "CMBSongConfigViewController.h"
 #import "CMBSongManageViewController.h"
 
+static CGFloat const CMBTimeDivAutoScroll = 0.01f; // [s]
+
 @interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, CMBMusicBoxTableViewCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate>
 {
     NSMutableDictionary *_dataSource;

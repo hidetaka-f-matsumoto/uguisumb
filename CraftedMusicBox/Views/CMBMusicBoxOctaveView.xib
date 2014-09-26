@@ -12,145 +12,121 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6c-Dd-kYb">
-                    <rect key="frame" x="4" y="0.0" width="26" height="43"/>
-                    <state key="normal" title="C">
+                    <rect key="frame" x="4" y="0.0" width="30" height="43"/>
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="selected" image="circle.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="umO-iW-5At"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt7-fj-Hga">
-                    <rect key="frame" x="30" y="0.0" width="26" height="43"/>
-                    <state key="normal" title="C#">
+                    <rect key="frame" x="30" y="0.0" width="30" height="43"/>
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="selected" image="circle.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="RT1-bU-zl4"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8n-tB-spb">
-                    <rect key="frame" x="56" y="0.0" width="26" height="43"/>
-                    <state key="normal" title="D">
+                    <rect key="frame" x="56" y="0.0" width="30" height="43"/>
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="selected" image="circle.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="rQl-Xa-bAe"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGb-YN-ctO">
-                    <rect key="frame" x="82" y="0.0" width="26" height="43"/>
-                    <state key="normal" title="D#">
+                    <rect key="frame" x="82" y="0.0" width="30" height="43"/>
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="selected" image="circle.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="HPx-eA-t6g"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMi-CK-OkL">
-                    <rect key="frame" x="108" y="0.0" width="26" height="43"/>
-                    <state key="normal" title="E">
+                    <rect key="frame" x="108" y="0.0" width="30" height="43"/>
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="selected" image="circle.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="rkO-ZA-ZtT"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo5-4V-RBg">
-                    <rect key="frame" x="134" y="0.0" width="26" height="43"/>
-                    <state key="normal" title="F">
+                    <rect key="frame" x="134" y="0.0" width="30" height="43"/>
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="selected" image="circle.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="4lu-pk-7Ru"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCw-Na-8iE">
-                    <rect key="frame" x="160" y="0.0" width="26" height="43"/>
-                    <state key="normal" title="F#">
+                    <rect key="frame" x="160" y="0.0" width="30" height="43"/>
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="selected" image="circle.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="fxc-U9-2rL"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6l-fB-XcB">
-                    <rect key="frame" x="186" y="0.0" width="26" height="43"/>
-                    <state key="normal" title="G">
+                    <rect key="frame" x="186" y="0.0" width="30" height="43"/>
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="selected" image="circle.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="yIG-Z6-Wod"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl3-ix-jGZ">
-                    <rect key="frame" x="212" y="0.0" width="26" height="43"/>
-                    <state key="normal" title="G#">
+                    <rect key="frame" x="212" y="0.0" width="30" height="43"/>
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="selected" image="circle.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="bpz-MT-Mj4"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqs-PX-gGY">
-                    <rect key="frame" x="238" y="0.0" width="26" height="43"/>
-                    <state key="normal" title="A">
+                    <rect key="frame" x="238" y="0.0" width="30" height="43"/>
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="selected" image="circle.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="lAW-nd-YSA"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmb-qn-L1u">
-                    <rect key="frame" x="264" y="0.0" width="26" height="43"/>
-                    <state key="normal" title="A#">
+                    <rect key="frame" x="264" y="0.0" width="30" height="43"/>
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="selected" image="circle.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="uXn-VZ-qqB"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a68-FB-Pf0">
-                    <rect key="frame" x="290" y="0.0" width="26" height="43"/>
-                    <state key="normal" title="B">
+                    <rect key="frame" x="290" y="0.0" width="30" height="43"/>
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="selected" image="circle.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="udc-2g-eSG"/>
                     </connections>
@@ -177,6 +153,9 @@
         </view>
         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="B3l-Nm-hhL"/>
     </objects>
+    <resources>
+        <image name="circle.png" width="104" height="104"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

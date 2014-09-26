@@ -55,6 +55,7 @@
 		08DE16E019D3B6BC00315BE4 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16D819D3B6BC00315BE4 /* SWTableViewCell.m */; };
 		08DE16E119D3B6BC00315BE4 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16DA19D3B6BC00315BE4 /* SWUtilityButtonTapGestureRecognizer.m */; };
 		08DE16E219D3B6BC00315BE4 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16DC19D3B6BC00315BE4 /* SWUtilityButtonView.m */; };
+		08DE171619D4E99E00315BE4 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 08DE171519D4E99E00315BE4 /* circle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		08DE16DA19D3B6BC00315BE4 /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
 		08DE16DB19D3B6BC00315BE4 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
 		08DE16DC19D3B6BC00315BE4 /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
+		08DE171519D4E99E00315BE4 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 		080616FF1957286E00C46771 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				08DE171519D4E99E00315BE4 /* circle.png */,
 				080617001957286E00C46771 /* national-wildlife-reserve-bolivia_46878_990x742.jpg */,
 			);
 			path = Images;
@@ -471,6 +474,7 @@
 				08B66F8A198E031100376683 /* xylophone.C4s.wav in Resources */,
 				08883ADE1956CC6A00F7EB68 /* InfoPlist.strings in Resources */,
 				08B66F8C198E031100376683 /* xylophone.D4s.wav in Resources */,
+				08DE171619D4E99E00315BE4 /* circle.png in Resources */,
 				08C2816E199D112C0037F6D0 /* MusicInfo.plist in Resources */,
 				080617011957286E00C46771 /* national-wildlife-reserve-bolivia_46878_990x742.jpg in Resources */,
 			);

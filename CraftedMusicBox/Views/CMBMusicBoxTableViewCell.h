@@ -10,6 +10,8 @@
 #import "CMBSequenceOneData.h"
 #import "CMBMusicBoxOctaveView.h"
 
+static CGFloat const CMBMusicBoxTableViewCellHeight = 44.0f;
+
 @protocol CMBMusicBoxTableViewCellDelegate <NSObject>
 
 @required
