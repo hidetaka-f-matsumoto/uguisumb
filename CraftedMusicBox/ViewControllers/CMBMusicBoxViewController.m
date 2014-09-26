@@ -163,28 +163,63 @@
 }
 
 /**
+ * 再生
+ */
+- (void)play
+{
+    // ヘッダViewを非表示
+    [self hideHeadView];
+    // タイマー開始 (自動スクロール)
+    if (!_timer) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:CMBTimeDivAutoScroll
+                                                  target:self
+                                                selector:@selector(scrollAuto:)
+                                                userInfo:nil
+                                                 repeats:YES];
+    }
+    [_timer fire];
+    _isPlaying = YES;
+}
+
+/**
+ * 一時停止
+ */
+- (void)pause
+{
+    // タイマー停止
+    [_timer invalidate];
+    _isPlaying = NO;
+    // ヘッダViewを表示
+    [self showHeadView];
+}
+
+/**
+ * 停止
+ */
+- (void)stop
+{
+    // タイマー停止 & 破棄
+    [_timer invalidate];
+    _timer = nil;
+    _isPlaying = NO;
+    // 上までスクロールする
+    [_tableView setContentOffset:CGPointMake(0.0f, 0.0f) animated:YES];
+    // ヘッダViewを表示
+    [self showHeadView];
+}
+
+/**
  * 再生ボタン
  */
 - (IBAction)playButtonDidTap:(id)sender
 {
     // 再生中の場合
     if (_isPlaying) {
-        // タイマー停止
-        [_timer invalidate];
-        _isPlaying = NO;
+        [self pause];
     }
     // 再生中でない場合
     else {
-        // タイマー開始 (自動スクロール)
-        if (!_timer) {
-            _timer = [NSTimer scheduledTimerWithTimeInterval:CMBTimeDivAutoScroll
-                                                      target:self
-                                                    selector:@selector(scrollAuto:)
-                                                    userInfo:nil
-                                                     repeats:YES];
-        }
-        [_timer fire];
-        _isPlaying = YES;
+        [self play];
     }
 }
 
@@ -193,11 +228,7 @@
  */
 - (IBAction)stopButtonDidTap:(id)sender
 {
-    // タイマー停止 & 破棄
-    [_timer invalidate];
-    _timer = nil;
-    // 上までスクロールする
-    [_tableView setContentOffset:CGPointMake(0.0f, 0.0f) animated:YES];
+    [self stop];
 }
 
 /**
@@ -250,6 +281,30 @@
     else {
         [self playButtonDidTap:nil];
     }
+}
+
+- (void)showHeadView
+{
+    [UIView animateWithDuration:0.2f
+                     animations:^(void)
+     {
+         _headView.frame = CGRectMake(0,
+                                      0,
+                                      _headView.frame.size.width,
+                                      _headView.frame.size.height);
+     }];
+}
+
+- (void)hideHeadView
+{
+    [UIView animateWithDuration:0.4f
+                     animations:^(void)
+     {
+         _headView.frame = CGRectMake(0,
+                                      -1 * _headView.frame.size.height,
+                                      _headView.frame.size.width,
+                                      _headView.frame.size.height);
+     }];
 }
 
 #pragma mark - UITableViewDataSource
@@ -329,25 +384,37 @@
 
 #pragma mark - UIScrollViewDelegate
 
-/**
- * スクロール管理の初期化
- */
 - (void)scrollViewWillBeginDragging:(UIScrollView*)scrollView
 {
-    _scrollPointBegin = [scrollView contentOffset];
+    // オルゴールテーブルの場合
+    if (scrollView == _tableView) {
+        // スクロール開始位置を記録
+        _scrollPointBegin = [scrollView contentOffset];
+        // ヘッダViewを非表示
+        [self showHeadView];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    // オルゴールテーブルの場合
+    if (scrollView == _tableView) {
+        // ヘッダViewを表示
+        [self hideHeadView];
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView*)scrollView
 {
-//    CGPoint currentPoint = scrollView.contentOffset;
-//    currentPoint.y = _scrollPointBegin.y;
-//    [scrollView setContentOffset:currentPoint];
-    for (UITableViewCell *cell in [_tableView visibleCells]) {
-        if (![cell isKindOfClass:[CMBMusicBoxTableViewCell class]]) {
-            continue;
+    // オルゴールテーブルの場合
+    if (scrollView == _tableView) {
+        for (UITableViewCell *cell in [_tableView visibleCells]) {
+            if (![cell isKindOfClass:[CMBMusicBoxTableViewCell class]]) {
+                continue;
+            }
+            CMBMusicBoxTableViewCell *mbCell = (CMBMusicBoxTableViewCell *)cell;
+            [mbCell process];
         }
-        CMBMusicBoxTableViewCell *mbCell = (CMBMusicBoxTableViewCell *)cell;
-        [mbCell process];
     }
 }
 
