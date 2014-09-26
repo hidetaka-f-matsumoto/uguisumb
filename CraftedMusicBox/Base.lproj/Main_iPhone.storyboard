@@ -3,6 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -13,6 +14,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Djk-2p-c3S">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="onZ-Ms-1UY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="OGI-JR-xGh" kind="relationship" relationship="rootViewController" id="dmj-CG-Gfo"/>
                     </connections>
@@ -353,7 +357,7 @@
                                 <rect key="frame" x="-320" y="279" width="960" height="10"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZmP-5A-KYj">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZmP-5A-KYj">
                                 <rect key="frame" x="0.0" y="524" width="320" height="45"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="z1h-DT-MZw"/>
@@ -382,6 +386,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="dPC-Sn-I1o" secondAttribute="trailing" id="7WL-vG-k86"/>
                             <constraint firstItem="dPC-Sn-I1o" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="E4p-mv-lrP"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ZmP-5A-KYj" secondAttribute="bottom" constant="-1" id="MV2-g7-SDR"/>
                             <constraint firstItem="dPC-Sn-I1o" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" id="caT-b6-hti"/>
                             <constraint firstAttribute="bottom" secondItem="dPC-Sn-I1o" secondAttribute="bottom" id="fnM-eG-qKK"/>
                         </constraints>
@@ -522,7 +527,7 @@
                                     <action selector="saveButtonDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="bwA-O2-Lc4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xO-NP-Jtg">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xO-NP-Jtg">
                                 <rect key="frame" x="16" y="480" width="288" height="30"/>
                                 <state key="normal" title="Apply">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -557,6 +562,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="C76-f1-BiQ" firstAttribute="top" secondItem="Loi-4t-azG" secondAttribute="bottom" constant="20" id="mVt-jW-Tbi"/>
+                            <constraint firstItem="Loi-4t-azG" firstAttribute="top" secondItem="4xO-NP-Jtg" secondAttribute="bottom" constant="8" id="nuX-lf-uLA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Song Config" id="IkL-fO-Kbl">

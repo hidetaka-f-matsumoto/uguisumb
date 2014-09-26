@@ -158,7 +158,7 @@
 {
     SystemSoundID sound = [_sounds[octave][scale] unsignedIntValue];
     if (sound) {
-        AudioServicesPlayAlertSound(sound);
+        AudioServicesPlaySystemSound(sound);
     }
 }
 
@@ -391,7 +391,7 @@
         // スクロール開始位置を記録
         _scrollPointBegin = [scrollView contentOffset];
         // ヘッダViewを非表示
-        [self showHeadView];
+        [self hideHeadView];
     }
 }
 
@@ -400,7 +400,7 @@
     // オルゴールテーブルの場合
     if (scrollView == _tableView) {
         // ヘッダViewを表示
-        [self hideHeadView];
+        [self showHeadView];
     }
 }
 
