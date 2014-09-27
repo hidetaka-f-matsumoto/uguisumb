@@ -58,9 +58,19 @@
     return self;
 }
 
+- (BOOL)isContainNoteData:(CMBNoteData *)noteData
+{
+    for (CMBNoteData *nd in _notes) {
+        if (noteData.scale == nd.scale && noteData.octave == nd.octave) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 - (void)addNoteData:(CMBNoteData *)noteData
 {
-    if ([_notes containsObject:noteData]) {
+    if ([self isContainNoteData:noteData]) {
         return;
     }
     [_notes addObject:noteData];
@@ -68,7 +78,15 @@
 
 - (void)removeNoteData:(CMBNoteData *)noteData
 {
-    [_notes removeObject:noteData];
+    CMBNoteData *target;
+    for (CMBNoteData *nd in _notes) {
+        if (noteData.scale == nd.scale && noteData.octave == nd.octave) {
+            target = nd;
+        }
+    }
+    if (target) {
+        [_notes removeObject:target];
+    }
 }
 
 @end

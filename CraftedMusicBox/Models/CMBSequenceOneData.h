@@ -22,6 +22,7 @@
 + (CMBSequenceOneData *)sequenceOneDataWithNoteDatas:(NSArray *)noteDatas;
 - (id)initWithNoteData:(CMBNoteData *)noteData;
 - (id)initWithNoteDatas:(NSArray *)noteDatas;
+- (BOOL)isContainNoteData:(CMBNoteData *)noteData;
 - (void)addNoteData:(CMBNoteData *)noteData;
 - (void)removeNoteData:(CMBNoteData *)noteData;
 
