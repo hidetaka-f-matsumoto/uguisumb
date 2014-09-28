@@ -13,10 +13,10 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6c-Dd-kYb">
                     <rect key="frame" x="4" y="0.0" width="30" height="43"/>
-                    <state key="normal" image="musicbox.bump.off.png">
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected" image="musicbox.bump.on.png"/>
+                    <state key="selected" image="mb.bump.on.png"/>
                     <state key="highlighted" image="musicbox.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="umO-iW-5At"/>
@@ -24,10 +24,10 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt7-fj-Hga">
                     <rect key="frame" x="30" y="0.0" width="30" height="43"/>
-                    <state key="normal" image="musicbox.bump.off.png">
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected" image="musicbox.bump.on.png"/>
+                    <state key="selected" image="mb.bump.on.png"/>
                     <state key="highlighted" image="musicbox.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="RT1-bU-zl4"/>
@@ -35,10 +35,10 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8n-tB-spb">
                     <rect key="frame" x="56" y="0.0" width="30" height="43"/>
-                    <state key="normal" image="musicbox.bump.off.png">
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected" image="musicbox.bump.on.png"/>
+                    <state key="selected" image="mb.bump.on.png"/>
                     <state key="highlighted" image="musicbox.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="rQl-Xa-bAe"/>
@@ -46,10 +46,10 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGb-YN-ctO">
                     <rect key="frame" x="82" y="0.0" width="30" height="43"/>
-                    <state key="normal" image="musicbox.bump.off.png">
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected" image="musicbox.bump.on.png"/>
+                    <state key="selected" image="mb.bump.on.png"/>
                     <state key="highlighted" image="musicbox.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="HPx-eA-t6g"/>
@@ -57,10 +57,10 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMi-CK-OkL">
                     <rect key="frame" x="108" y="0.0" width="30" height="43"/>
-                    <state key="normal" image="musicbox.bump.off.png">
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected" image="musicbox.bump.on.png"/>
+                    <state key="selected" image="mb.bump.on.png"/>
                     <state key="highlighted" image="musicbox.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="rkO-ZA-ZtT"/>
@@ -68,10 +68,10 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo5-4V-RBg">
                     <rect key="frame" x="134" y="0.0" width="30" height="43"/>
-                    <state key="normal" image="musicbox.bump.off.png">
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected" image="musicbox.bump.on.png"/>
+                    <state key="selected" image="mb.bump.on.png"/>
                     <state key="highlighted" image="musicbox.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="4lu-pk-7Ru"/>
@@ -79,10 +79,10 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCw-Na-8iE">
                     <rect key="frame" x="160" y="0.0" width="30" height="43"/>
-                    <state key="normal" image="musicbox.bump.off.png">
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected" image="musicbox.bump.on.png"/>
+                    <state key="selected" image="mb.bump.on.png"/>
                     <state key="highlighted" image="musicbox.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="fxc-U9-2rL"/>
@@ -90,10 +90,10 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6l-fB-XcB">
                     <rect key="frame" x="186" y="0.0" width="30" height="43"/>
-                    <state key="normal" image="musicbox.bump.off.png">
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected" image="musicbox.bump.on.png"/>
+                    <state key="selected" image="mb.bump.on.png"/>
                     <state key="highlighted" image="musicbox.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="yIG-Z6-Wod"/>
@@ -101,10 +101,10 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl3-ix-jGZ">
                     <rect key="frame" x="212" y="0.0" width="30" height="43"/>
-                    <state key="normal" image="musicbox.bump.off.png">
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected" image="musicbox.bump.on.png"/>
+                    <state key="selected" image="mb.bump.on.png"/>
                     <state key="highlighted" image="musicbox.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="bpz-MT-Mj4"/>
@@ -112,10 +112,10 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqs-PX-gGY">
                     <rect key="frame" x="238" y="0.0" width="30" height="43"/>
-                    <state key="normal" image="musicbox.bump.off.png">
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected" image="musicbox.bump.on.png"/>
+                    <state key="selected" image="mb.bump.on.png"/>
                     <state key="highlighted" image="musicbox.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="lAW-nd-YSA"/>
@@ -123,10 +123,10 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmb-qn-L1u">
                     <rect key="frame" x="264" y="0.0" width="30" height="43"/>
-                    <state key="normal" image="musicbox.bump.off.png">
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected" image="musicbox.bump.on.png"/>
+                    <state key="selected" image="mb.bump.on.png"/>
                     <state key="highlighted" image="musicbox.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="uXn-VZ-qqB"/>
@@ -134,10 +134,10 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a68-FB-Pf0">
                     <rect key="frame" x="290" y="0.0" width="30" height="43"/>
-                    <state key="normal" image="musicbox.bump.off.png">
+                    <state key="normal">
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected" image="musicbox.bump.on.png"/>
+                    <state key="selected" image="mb.bump.on.png"/>
                     <state key="highlighted" image="musicbox.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="udc-2g-eSG"/>
@@ -166,7 +166,7 @@
         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="B3l-Nm-hhL"/>
     </objects>
     <resources>
-        <image name="musicbox.bump.off.png" width="104" height="104"/>
+        <image name="mb.bump.on.png" width="88" height="88"/>
         <image name="musicbox.bump.on.png" width="104" height="104"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

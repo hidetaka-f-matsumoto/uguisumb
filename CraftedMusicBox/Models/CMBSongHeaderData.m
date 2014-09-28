@@ -10,6 +10,11 @@
 
 @implementation CMBSongHeaderData
 
+- (id)init
+{
+    return [self initWithInfo:nil];
+}
+
 - (id)initWithInfo:(NSDictionary *)info
 {
     self = [super init];

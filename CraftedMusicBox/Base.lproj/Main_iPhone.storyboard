@@ -361,23 +361,23 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="45"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="z1h-DT-MZw"/>
-                                    <barButtonItem title="■" id="tPI-bR-fBF">
+                                    <barButtonItem image="stop.png" style="plain" id="tPI-bR-fBF">
                                         <connections>
                                             <action selector="stopButtonDidTap:" destination="OGI-JR-xGh" id="grL-Zi-lqy"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SCE-I8-7bt"/>
-                                    <barButtonItem title="▼" id="zHS-0g-qN3">
+                                    <barButtonItem image="play.png" style="plain" id="zHS-0g-qN3">
                                         <connections>
                                             <action selector="playButtonDidTap:" destination="OGI-JR-xGh" id="rhQ-eF-rQo"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="pKZ-nN-yfc"/>
-                                    <barButtonItem title="Trk3" id="F4N-Qt-Qnc"/>
+                                    <barButtonItem title="Trk3" style="plain" id="F4N-Qt-Qnc"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="NJk-cq-ONj"/>
-                                    <barButtonItem title="Trk4" id="z8K-ti-htV"/>
+                                    <barButtonItem title="Trk4" style="plain" id="z8K-ti-htV"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Qia-Oo-PtM"/>
-                                    <barButtonItem title="Menue" id="43b-Ox-G0z"/>
+                                    <barButtonItem title="Menue" style="plain" id="43b-Ox-G0z"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4ps-rj-8VF"/>
                                 </items>
                             </toolbar>
@@ -402,6 +402,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="headView" destination="n6L-s3-EZe" id="j7V-xj-MKv"/>
+                        <outlet property="playButton" destination="zHS-0g-qN3" id="cHY-iE-9Mx"/>
                         <outlet property="scrollView" destination="dPC-Sn-I1o" id="yVg-2A-uyo"/>
                         <outlet property="tableView" destination="bKy-8R-19x" id="Vhu-mS-RaV"/>
                         <outlet property="tineView" destination="nIN-k4-Uqe" id="T33-eb-2wS"/>
@@ -618,6 +619,10 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.png" width="40" height="40"/>
+        <image name="stop.png" width="40" height="40"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -29,6 +29,7 @@ static CGFloat const CMBTimeDivAutoScroll = 0.01f; // [s]
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *tineView;
 @property (weak, nonatomic) IBOutlet UIView *headView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *playButton;
 
 - (IBAction)playButtonDidTap:(id)sender;
 - (IBAction)stopButtonDidTap:(id)sender;

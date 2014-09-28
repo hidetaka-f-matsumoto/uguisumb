@@ -14,6 +14,8 @@
 {
     NSTimer *_timer;
     BOOL _isPlaying;
+    BOOL _isFirstViewWillAppear;
+    BOOL _isFirstViewDidAppear;
     CGPoint _scrollPointBegin;
     NSMutableDictionary *_sequences; // Dictionary<NSNumber *, CMBSequenceOneData *>
     CMBSongHeaderData *_header;
@@ -23,13 +25,19 @@
 
 @implementation CMBMusicBoxViewController
 
+- (void)_initFirst
+{
+    _isFirstViewWillAppear = YES;
+    _isFirstViewDidAppear = YES;
+}
+
 - (void)_init
 {
     _timer = nil;
     _isPlaying = NO;
     _scrollPointBegin = CGPointZero;
     _sequences = [NSMutableDictionary dictionary];
-    _header = [[CMBSongHeaderData alloc] initWithInfo:nil];
+    _header = [[CMBSongHeaderData alloc] init];
 }
 
 - (void)loadSounds
@@ -68,6 +76,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        [self _initFirst];
         [self _init];
     }
     return self;
@@ -81,6 +90,7 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
 
+    [self _initFirst];
     [self _init];
     [self loadSounds];
 }
@@ -88,6 +98,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    _isFirstViewWillAppear = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -95,7 +107,9 @@
     [super viewDidAppear:animated];
 
     // 表示更新
-    [self updateViewsWithResetScroll:YES];
+    [self updateViewsWithResetScroll:_isFirstViewDidAppear];
+    
+    _isFirstViewDidAppear = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -167,11 +181,15 @@
  */
 - (void)play
 {
+    // フラグon
+    _isPlaying = YES;
     // スクロール禁止
     [_scrollView setScrollEnabled:NO];
     [_tableView setScrollEnabled:NO];
     // ヘッダViewを非表示
     [self hideHeadView];
+    // ポーズボタンに変更
+    [_playButton setImage:[UIImage imageNamed:@"pause.png"]];
     // タイマー開始 (自動スクロール)
     if (!_timer) {
         _timer = [NSTimer scheduledTimerWithTimeInterval:CMBTimeDivAutoScroll
@@ -181,7 +199,6 @@
                                                  repeats:YES];
     }
     [_timer fire];
-    _isPlaying = YES;
 }
 
 /**
@@ -191,30 +208,39 @@
 {
     // タイマー停止
     [_timer invalidate];
-    _isPlaying = NO;
+    // 再生ボタンに変更
+    [_playButton setImage:[UIImage imageNamed:@"play.png"]];
     // ヘッダViewを表示
     [self showHeadView];
     // スクロール許可
     [_scrollView setScrollEnabled:YES];
     [_tableView setScrollEnabled:YES];
+    // フラグoff
+    _isPlaying = NO;
 }
 
 /**
  * 停止
  */
-- (void)stop
+- (void)stopWithAnimation:(BOOL)animation
 {
-    // タイマー停止 & 破棄
-    [_timer invalidate];
+    if (_isPlaying) {
+        // タイマー停止
+        [_timer invalidate];
+        // 再生ボタンに変更
+        [_playButton setImage:[UIImage imageNamed:@"play.png"]];
+    }
+    // タイマー破棄
     _timer = nil;
-    _isPlaying = NO;
     // 上までスクロールする
-    [_tableView setContentOffset:CGPointMake(0.0f, 0.0f) animated:YES];
+    [_tableView setContentOffset:CGPointMake(0.0f, 0.0f) animated:animation];
     // ヘッダViewを表示
     [self showHeadView];
     // スクロール許可
     [_scrollView setScrollEnabled:YES];
     [_tableView setScrollEnabled:YES];
+    // フラグoff
+    _isPlaying = NO;
 }
 
 /**
@@ -237,7 +263,7 @@
  */
 - (IBAction)stopButtonDidTap:(id)sender
 {
-    [self stop];
+    [self stopWithAnimation:YES];
 }
 
 /**
@@ -250,7 +276,7 @@
                            delegate:self
                            cancelButtonTitle:@"Cancel"
                            destructiveButtonTitle:nil
-                           otherButtonTitles:@"Config this song", @"Manage songs", nil];
+                           otherButtonTitles:@"New song", @"Config song", @"Manage songs", nil];
     
     [sheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
     
@@ -258,10 +284,28 @@
 }
 
 /**
+ * Song新規ボタン
+ */
+- (void)songNewButtonDidTap
+{
+    if (_isPlaying) {
+        // 一時停止
+        [self pause];
+    }
+    // パラメータ初期化
+    [self _init];
+    // 表示更新
+    [self updateViewsWithResetScroll:YES];
+}
+
+/**
  * Song設定ボタン
  */
 - (void)songConfigButtonDidTap
 {
+    if (_isPlaying) {
+        [self pause];
+    }
     [self performSegueWithIdentifier:@"SongConfig"
                               sender:self];
 }
@@ -271,6 +315,9 @@
  */
 - (void)songManageButtonDidTap
 {
+    if (_isPlaying) {
+        [self pause];
+    }
     [self performSegueWithIdentifier:@"SongManage"
                               sender:self];
 }
@@ -438,10 +485,13 @@
         // nothing to do.
     }else{
         switch (buttonIndex) {
-            case 0: // Config this song
+            case 0: // New song.
+                [self songNewButtonDidTap];
+                break;
+            case 1: // Config this song.
                 [self songConfigButtonDidTap];
                 break;
-            case 1: // Manage songs
+            case 2: // Manage songs.
                 [self songManageButtonDidTap];
                 break;
             default:
