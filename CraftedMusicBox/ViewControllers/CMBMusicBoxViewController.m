@@ -167,6 +167,9 @@
  */
 - (void)play
 {
+    // スクロール禁止
+    [_scrollView setScrollEnabled:NO];
+    [_tableView setScrollEnabled:NO];
     // ヘッダViewを非表示
     [self hideHeadView];
     // タイマー開始 (自動スクロール)
@@ -191,6 +194,9 @@
     _isPlaying = NO;
     // ヘッダViewを表示
     [self showHeadView];
+    // スクロール許可
+    [_scrollView setScrollEnabled:YES];
+    [_tableView setScrollEnabled:YES];
 }
 
 /**
@@ -206,6 +212,9 @@
     [_tableView setContentOffset:CGPointMake(0.0f, 0.0f) animated:YES];
     // ヘッダViewを表示
     [self showHeadView];
+    // スクロール許可
+    [_scrollView setScrollEnabled:YES];
+    [_tableView setScrollEnabled:YES];
 }
 
 /**
