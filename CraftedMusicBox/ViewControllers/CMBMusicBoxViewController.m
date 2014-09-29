@@ -158,8 +158,8 @@
         _scrollView.contentOffset = CGPointMake(320, 0);
         _tableView.contentOffset = CGPointMake(0, 0);
     }
-    // ナビゲーションバー更新
-    self.navigationItem.title = _header.name;
+    // タイトル更新
+    _titleLabel.text = _header.name;
     // テーブルビュー更新
     [_tableView reloadData];
 }
@@ -272,7 +272,7 @@
 - (IBAction)menueButtonDidTap:(id)sender
 {
     UIActionSheet *sheet =[[UIActionSheet alloc]
-                           initWithTitle:@"Action Sheet"
+                           initWithTitle:@"Menue"
                            delegate:self
                            cancelButtonTitle:@"Cancel"
                            destructiveButtonTitle:nil
@@ -449,6 +449,25 @@
         // ヘッダViewを非表示
         [self hideHeadView];
     }
+    // ページング用スクロールの場合
+    else if (scrollView == _scrollView) {
+        // 縦スクロール禁止
+        CGPoint offset = scrollView.contentOffset;
+        offset.y = 0.0f;
+        scrollView.contentOffset = offset;
+    }
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
+{
+    // オルゴールテーブルの場合
+    if (scrollView == _tableView) {
+        // ヘッダViewを表示
+        [self showHeadView];
+    }
+    // ページング用スクロールの場合
+    else if (scrollView == _scrollView) {
+    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
@@ -457,6 +476,9 @@
     if (scrollView == _tableView) {
         // ヘッダViewを表示
         [self showHeadView];
+    }
+    // ページング用スクロールの場合
+    else if (scrollView == _scrollView) {
     }
 }
 
@@ -471,6 +493,9 @@
             CMBMusicBoxTableViewCell *mbCell = (CMBMusicBoxTableViewCell *)cell;
             [mbCell process];
         }
+    }
+    // ページング用スクロールの場合
+    else if (scrollView == _scrollView) {
     }
 }
 
