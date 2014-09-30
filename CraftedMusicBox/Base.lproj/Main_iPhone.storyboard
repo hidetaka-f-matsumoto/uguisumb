@@ -5,6 +5,59 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="sp-setofont.ttf">
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Music Box View Controller-->
         <scene sceneID="EZT-Ww-Yna">
@@ -51,8 +104,8 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="end" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-Ac-EW5">
                                                                     <rect key="frame" x="8" y="58" width="29" height="21"/>
-                                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                                                    <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -64,424 +117,385 @@
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n6L-s3-EZe">
                                                 <rect key="frame" x="0.0" y="0.0" width="960" height="88"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSg-uY-Uve" userLabel="OctaveView">
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSg-uY-Uve" userLabel="OctaveView">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.c.png" translatesAutoresizingMaskIntoConstraints="NO" id="pnq-cv-6rO">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Octave3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge2-C6-zQF">
+                                                                <rect key="frame" x="233" y="42" width="79" height="21"/>
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6is-ct-Zwb">
                                                                 <rect key="frame" x="4" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="HN4-8a-30i"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="Q17-F3-Rb2"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="t3t-ak-3Ns">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="C#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-a7-4su">
                                                                 <rect key="frame" x="30" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="3d1-MO-ldb"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="btl-Mi-cMp"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.d.png" translatesAutoresizingMaskIntoConstraints="NO" id="amw-uZ-uQB">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCE-Ru-H5S">
                                                                 <rect key="frame" x="56" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="YRN-gU-ULg"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="k6k-Ob-8h1"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vv0-Ed-lBV">
-                                                                <rect key="frame" x="82" y="63" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="0xX-a3-Bjq"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="ThB-Xi-PhE"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.e.png" translatesAutoresizingMaskIntoConstraints="NO" id="MNb-hQ-F3X">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="D#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6un-Vg-Onf">
+                                                                <rect key="frame" x="82" y="62" width="26" height="26"/>
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGA-bt-6SB">
                                                                 <rect key="frame" x="108" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="bQd-j3-jkf"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="lPD-VU-Y2i"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.f.png" translatesAutoresizingMaskIntoConstraints="NO" id="QTg-T6-pws">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPb-qa-SWj">
                                                                 <rect key="frame" x="134" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="3hy-gV-zxQ"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="rSa-W0-Zld"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jwy-hZ-uCz">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="F#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSJ-rO-l0D">
                                                                 <rect key="frame" x="160" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="2hA-4M-zrB"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="UUm-Uk-g4Z"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.g.png" translatesAutoresizingMaskIntoConstraints="NO" id="9kP-Ov-9kJ">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX1-x2-jVn">
                                                                 <rect key="frame" x="186" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="gpS-OZ-mxs"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="kVw-2Y-qqu"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="1bm-VV-JxQ">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="G#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMu-ns-MIO">
                                                                 <rect key="frame" x="212" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="Dnc-5v-gMi"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="Un9-8A-fnF"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.a.png" translatesAutoresizingMaskIntoConstraints="NO" id="qSE-It-mem">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXc-zu-bBA">
                                                                 <rect key="frame" x="238" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="pe7-Za-5f3"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="yhW-qr-1Cf"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="0qq-3S-tNo">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="A#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8B-se-TdV">
                                                                 <rect key="frame" x="264" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="0HG-JM-pX6"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="yQO-OU-2qS"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.b.png" translatesAutoresizingMaskIntoConstraints="NO" id="LMR-hQ-Wfy">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYE-0l-Uex">
                                                                 <rect key="frame" x="290" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="2uR-zJ-7xE"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="WTY-vc-hP5"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="octave.png" translatesAutoresizingMaskIntoConstraints="NO" id="nwT-4i-mvy">
-                                                                <rect key="frame" x="210" y="38" width="83" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="83" id="Wsf-BH-GE9"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="Wxh-qg-KfL"/>
-                                                                </constraints>
-                                                            </imageView>
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstItem="pnq-cv-6rO" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="1rh-er-pEp"/>
-                                                            <constraint firstAttribute="bottom" secondItem="0qq-3S-tNo" secondAttribute="bottom" id="1zA-Yf-CmX"/>
-                                                            <constraint firstItem="t3t-ak-3Ns" firstAttribute="leading" secondItem="pnq-cv-6rO" secondAttribute="trailing" id="3bp-2e-X7x"/>
-                                                            <constraint firstItem="1bm-VV-JxQ" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="4GY-xr-VB3"/>
-                                                            <constraint firstItem="t3t-ak-3Ns" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="5Rz-1f-yQ5"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Jwy-hZ-uCz" secondAttribute="bottom" id="5lY-yq-qyp"/>
-                                                            <constraint firstAttribute="bottom" secondItem="amw-uZ-uQB" secondAttribute="bottom" id="68K-cQ-dG7"/>
-                                                            <constraint firstItem="0qq-3S-tNo" firstAttribute="leading" secondItem="qSE-It-mem" secondAttribute="trailing" id="6bB-1d-Lv6"/>
-                                                            <constraint firstItem="MNb-hQ-F3X" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="7NO-m3-S1u"/>
-                                                            <constraint firstAttribute="bottom" secondItem="qSE-It-mem" secondAttribute="bottom" id="8cR-RK-9dD"/>
-                                                            <constraint firstItem="Jwy-hZ-uCz" firstAttribute="leading" secondItem="QTg-T6-pws" secondAttribute="trailing" id="8p7-Bh-iNn"/>
-                                                            <constraint firstAttribute="bottom" secondItem="QTg-T6-pws" secondAttribute="bottom" id="APR-jl-f5y"/>
-                                                            <constraint firstItem="Vv0-Ed-lBV" firstAttribute="leading" secondItem="amw-uZ-uQB" secondAttribute="trailing" id="FQE-sm-vTu"/>
-                                                            <constraint firstItem="QTg-T6-pws" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="Fz5-Ko-F8d"/>
-                                                            <constraint firstAttribute="bottom" secondItem="1bm-VV-JxQ" secondAttribute="bottom" id="GN5-if-aW9"/>
-                                                            <constraint firstItem="amw-uZ-uQB" firstAttribute="leading" secondItem="t3t-ak-3Ns" secondAttribute="trailing" id="Ggu-it-IJd"/>
-                                                            <constraint firstAttribute="bottom" secondItem="pnq-cv-6rO" secondAttribute="bottom" id="HjG-1L-uXz"/>
-                                                            <constraint firstAttribute="trailing" secondItem="nwT-4i-mvy" secondAttribute="trailing" constant="27" id="KE9-bD-ZxF"/>
-                                                            <constraint firstItem="pnq-cv-6rO" firstAttribute="leading" secondItem="aSg-uY-Uve" secondAttribute="leading" constant="4" id="N1K-fR-N6X"/>
-                                                            <constraint firstAttribute="bottom" secondItem="LMR-hQ-Wfy" secondAttribute="bottom" id="QvW-nX-dW4"/>
-                                                            <constraint firstItem="LMR-hQ-Wfy" firstAttribute="leading" secondItem="0qq-3S-tNo" secondAttribute="trailing" id="Ub7-Ce-r4Z"/>
-                                                            <constraint firstItem="nwT-4i-mvy" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="38" id="Uo9-bR-kk8"/>
-                                                            <constraint firstItem="QTg-T6-pws" firstAttribute="leading" secondItem="MNb-hQ-F3X" secondAttribute="trailing" id="Vr8-m9-lvz"/>
-                                                            <constraint firstItem="MNb-hQ-F3X" firstAttribute="leading" secondItem="Vv0-Ed-lBV" secondAttribute="trailing" id="WSO-02-pEf"/>
-                                                            <constraint firstAttribute="bottom" secondItem="nwT-4i-mvy" secondAttribute="bottom" constant="24" id="WWS-3M-pK2"/>
-                                                            <constraint firstAttribute="bottom" secondItem="MNb-hQ-F3X" secondAttribute="bottom" id="XqZ-UV-8Dx"/>
-                                                            <constraint firstItem="Jwy-hZ-uCz" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="Z8I-gD-tmW"/>
-                                                            <constraint firstItem="Vv0-Ed-lBV" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="63" id="aIG-xh-Nya"/>
-                                                            <constraint firstItem="amw-uZ-uQB" firstAttribute="leading" secondItem="t3t-ak-3Ns" secondAttribute="trailing" id="bfc-ZJ-v0I"/>
-                                                            <constraint firstItem="amw-uZ-uQB" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="bie-DH-dIS"/>
-                                                            <constraint firstItem="LMR-hQ-Wfy" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="cK6-3w-7TL"/>
-                                                            <constraint firstItem="9kP-Ov-9kJ" firstAttribute="leading" secondItem="Jwy-hZ-uCz" secondAttribute="trailing" id="dGB-Ie-eYM"/>
-                                                            <constraint firstItem="9kP-Ov-9kJ" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="eOU-oM-WCx"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Vv0-Ed-lBV" secondAttribute="bottom" constant="-1" id="iwb-8K-822"/>
-                                                            <constraint firstAttribute="bottom" secondItem="t3t-ak-3Ns" secondAttribute="bottom" id="jGh-Lb-leC"/>
-                                                            <constraint firstItem="qSE-It-mem" firstAttribute="leading" secondItem="1bm-VV-JxQ" secondAttribute="trailing" id="lJj-5G-RBo"/>
-                                                            <constraint firstAttribute="bottom" secondItem="9kP-Ov-9kJ" secondAttribute="bottom" id="qVn-0t-fqC"/>
-                                                            <constraint firstAttribute="trailing" secondItem="LMR-hQ-Wfy" secondAttribute="trailing" constant="4" id="rb2-hZ-IVb"/>
-                                                            <constraint firstItem="0qq-3S-tNo" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="syI-lV-0uo"/>
-                                                            <constraint firstItem="1bm-VV-JxQ" firstAttribute="leading" secondItem="9kP-Ov-9kJ" secondAttribute="trailing" id="udl-cI-caz"/>
-                                                            <constraint firstItem="qSE-It-mem" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="unH-K7-ACf"/>
+                                                            <constraint firstItem="hX1-x2-jVn" firstAttribute="leading" secondItem="JSJ-rO-l0D" secondAttribute="trailing" id="07c-Pe-OaB"/>
+                                                            <constraint firstItem="pPb-qa-SWj" firstAttribute="leading" secondItem="PGA-bt-6SB" secondAttribute="trailing" id="17u-dX-Wzs"/>
+                                                            <constraint firstAttribute="bottom" secondItem="6un-Vg-Onf" secondAttribute="bottom" id="3TF-A2-xHj"/>
+                                                            <constraint firstItem="PGA-bt-6SB" firstAttribute="leading" secondItem="6un-Vg-Onf" secondAttribute="trailing" id="4JE-ND-gY3"/>
+                                                            <constraint firstItem="QXc-zu-bBA" firstAttribute="leading" secondItem="hMu-ns-MIO" secondAttribute="trailing" id="4Ll-Yp-Ls9"/>
+                                                            <constraint firstAttribute="bottom" secondItem="QXc-zu-bBA" secondAttribute="bottom" id="6Xj-SF-rUr"/>
+                                                            <constraint firstItem="JSJ-rO-l0D" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="A2n-Y6-0Uu"/>
+                                                            <constraint firstAttribute="bottom" secondItem="fcC-a7-4su" secondAttribute="bottom" id="ANu-tD-Dj8"/>
+                                                            <constraint firstItem="hX1-x2-jVn" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="Aux-lX-Wbr"/>
+                                                            <constraint firstItem="pPb-qa-SWj" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="CcT-oE-ecO"/>
+                                                            <constraint firstAttribute="bottom" secondItem="kCE-Ru-H5S" secondAttribute="bottom" id="FDw-rv-GUa"/>
+                                                            <constraint firstAttribute="bottom" secondItem="hX1-x2-jVn" secondAttribute="bottom" id="GUr-oE-d7d"/>
+                                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="Gi1-yS-vmH"/>
+                                                            <constraint firstAttribute="bottom" secondItem="PGA-bt-6SB" secondAttribute="bottom" id="H14-gn-MEl"/>
+                                                            <constraint firstItem="Ge2-C6-zQF" firstAttribute="leading" secondItem="aSg-uY-Uve" secondAttribute="leading" constant="233" id="In9-lx-lpV"/>
+                                                            <constraint firstItem="hMu-ns-MIO" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="Jvl-Vd-eqv"/>
+                                                            <constraint firstItem="6un-Vg-Onf" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="Jy7-xn-Xon"/>
+                                                            <constraint firstItem="V8B-se-TdV" firstAttribute="leading" secondItem="QXc-zu-bBA" secondAttribute="trailing" id="Muk-PD-vAU"/>
+                                                            <constraint firstItem="Ge2-C6-zQF" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="42" id="V7z-29-DBE"/>
+                                                            <constraint firstItem="6un-Vg-Onf" firstAttribute="leading" secondItem="kCE-Ru-H5S" secondAttribute="trailing" id="VYn-ja-QpR"/>
+                                                            <constraint firstItem="kCE-Ru-H5S" firstAttribute="leading" secondItem="fcC-a7-4su" secondAttribute="trailing" id="Xk2-cu-vyQ"/>
+                                                            <constraint firstItem="fcC-a7-4su" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="YZU-BN-rwC"/>
+                                                            <constraint firstAttribute="bottom" secondItem="tYE-0l-Uex" secondAttribute="bottom" id="agf-zs-JMt"/>
+                                                            <constraint firstItem="JSJ-rO-l0D" firstAttribute="leading" secondItem="pPb-qa-SWj" secondAttribute="trailing" id="dKz-Rb-Z0E"/>
+                                                            <constraint firstAttribute="bottom" secondItem="6is-ct-Zwb" secondAttribute="bottom" id="dRa-L0-XXp"/>
+                                                            <constraint firstAttribute="bottom" secondItem="hMu-ns-MIO" secondAttribute="bottom" id="e6w-SX-7vw"/>
+                                                            <constraint firstItem="tYE-0l-Uex" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="eW9-YO-kUM"/>
+                                                            <constraint firstItem="QXc-zu-bBA" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="gQU-1p-s3C"/>
+                                                            <constraint firstItem="kCE-Ru-H5S" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="khc-IR-x8W"/>
+                                                            <constraint firstAttribute="bottom" secondItem="pPb-qa-SWj" secondAttribute="bottom" id="l3C-Ub-NAJ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="tYE-0l-Uex" secondAttribute="trailing" constant="4" id="l9l-dH-Bz3"/>
+                                                            <constraint firstAttribute="bottom" secondItem="JSJ-rO-l0D" secondAttribute="bottom" id="mn3-cZ-oUO"/>
+                                                            <constraint firstItem="fcC-a7-4su" firstAttribute="leading" secondItem="6is-ct-Zwb" secondAttribute="trailing" id="nub-Hr-F3K"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Ge2-C6-zQF" secondAttribute="bottom" constant="25" id="pM0-4y-ZUb"/>
+                                                            <constraint firstItem="tYE-0l-Uex" firstAttribute="leading" secondItem="V8B-se-TdV" secondAttribute="trailing" id="qEs-h1-KzI"/>
+                                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="leading" secondItem="aSg-uY-Uve" secondAttribute="leading" constant="4" id="rbk-r4-Bp3"/>
+                                                            <constraint firstItem="V8B-se-TdV" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="sXA-F0-jxW"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Ge2-C6-zQF" secondAttribute="trailing" constant="8" id="uJR-mc-1aS"/>
+                                                            <constraint firstItem="PGA-bt-6SB" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="top" constant="62" id="vXC-zZ-MCC"/>
+                                                            <constraint firstAttribute="bottom" secondItem="V8B-se-TdV" secondAttribute="bottom" id="xAy-tm-8Lt"/>
+                                                            <constraint firstItem="hMu-ns-MIO" firstAttribute="leading" secondItem="hX1-x2-jVn" secondAttribute="trailing" id="xSx-vc-yMh"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vlG-sZ-0uT" userLabel="OctaveView">
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1X-7S-y0h" userLabel="OctaveView">
                                                         <rect key="frame" x="320" y="0.0" width="320" height="88"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.c.png" translatesAutoresizingMaskIntoConstraints="NO" id="ypG-nb-PZv">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Octave3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqy-TC-DjT">
+                                                                <rect key="frame" x="233" y="42" width="79" height="21"/>
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISd-dB-7mf">
                                                                 <rect key="frame" x="4" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="CYK-af-eZk"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="qig-TI-POK"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="UT1-qT-hvx">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="C#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Z2-rB-Toz">
                                                                 <rect key="frame" x="30" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="Hvm-Ae-3K8"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="TGn-iI-yil"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.d.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hbo-iN-up2">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvw-jh-RzX">
                                                                 <rect key="frame" x="56" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="0VL-Ty-u3Q"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="Y91-vx-OAn"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="82J-GF-vzN">
-                                                                <rect key="frame" x="82" y="63" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="nQu-xf-sno"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="ns9-uR-RXb"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.e.png" translatesAutoresizingMaskIntoConstraints="NO" id="8wG-n2-f8w">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="D#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roZ-en-JAL">
+                                                                <rect key="frame" x="82" y="62" width="26" height="26"/>
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJa-TF-OuS">
                                                                 <rect key="frame" x="108" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="EW6-uB-1TH"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="cqk-Pj-Qqo"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.f.png" translatesAutoresizingMaskIntoConstraints="NO" id="W8X-DI-HR0">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nb6-HJ-e8T">
                                                                 <rect key="frame" x="134" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="MJD-Cb-0Jb"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="YHy-Vg-HPp"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="arb-zC-PSQ">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="F#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgZ-Fe-mvu">
                                                                 <rect key="frame" x="160" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="P2o-CS-Z3G"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="lgB-WU-MAY"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.g.png" translatesAutoresizingMaskIntoConstraints="NO" id="IEY-bu-8ta">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGz-nh-99J">
                                                                 <rect key="frame" x="186" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="6ql-gE-uDF"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="V2V-8K-fm1"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="QV0-uj-3G7">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="G#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0R4-gU-1sR">
                                                                 <rect key="frame" x="212" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="cBj-P8-lW0"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="wYF-fz-kfZ"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.a.png" translatesAutoresizingMaskIntoConstraints="NO" id="wKr-4P-abS">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdV-Lo-4GK">
                                                                 <rect key="frame" x="238" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="9uK-0p-Ny5"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="KaE-Lh-ErX"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="h0s-WZ-h0L">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="A#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVh-p3-NJW">
                                                                 <rect key="frame" x="264" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="Cew-Bh-cWv"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="vy8-08-Dbn"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.b.png" translatesAutoresizingMaskIntoConstraints="NO" id="rbO-Yv-CfL">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJp-67-oTj">
                                                                 <rect key="frame" x="290" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="dpf-oB-PFP"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="qJj-P4-6WT"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="octave.png" translatesAutoresizingMaskIntoConstraints="NO" id="3To-m2-9na">
-                                                                <rect key="frame" x="210" y="38" width="83" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="D0M-Yt-4Nj"/>
-                                                                    <constraint firstAttribute="width" constant="83" id="JBd-s1-MfH"/>
-                                                                </constraints>
-                                                            </imageView>
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="arb-zC-PSQ" secondAttribute="bottom" id="1Vl-5Q-gmP"/>
-                                                            <constraint firstItem="3To-m2-9na" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="38" id="2I2-HF-cRi"/>
-                                                            <constraint firstAttribute="bottom" secondItem="wKr-4P-abS" secondAttribute="bottom" id="2Jc-3C-o51"/>
-                                                            <constraint firstAttribute="bottom" secondItem="ypG-nb-PZv" secondAttribute="bottom" id="3sc-1a-R17"/>
-                                                            <constraint firstItem="82J-GF-vzN" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="63" id="6OK-aC-4HJ"/>
-                                                            <constraint firstItem="IEY-bu-8ta" firstAttribute="leading" secondItem="arb-zC-PSQ" secondAttribute="trailing" id="7xZ-Ec-6dV"/>
-                                                            <constraint firstAttribute="bottom" secondItem="3To-m2-9na" secondAttribute="bottom" constant="24" id="B7d-2O-tSd"/>
-                                                            <constraint firstItem="QV0-uj-3G7" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="62" id="DAw-NK-cWt"/>
-                                                            <constraint firstItem="wKr-4P-abS" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="62" id="DLl-6x-ZL0"/>
-                                                            <constraint firstAttribute="bottom" secondItem="IEY-bu-8ta" secondAttribute="bottom" id="FwB-sh-Y0X"/>
-                                                            <constraint firstItem="ypG-nb-PZv" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="62" id="JHL-YW-6nK"/>
-                                                            <constraint firstAttribute="trailing" secondItem="rbO-Yv-CfL" secondAttribute="trailing" constant="4" id="Kbq-74-O68"/>
-                                                            <constraint firstItem="Hbo-iN-up2" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="62" id="Mdl-yT-1xa"/>
-                                                            <constraint firstItem="h0s-WZ-h0L" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="62" id="N9B-4H-qxk"/>
-                                                            <constraint firstAttribute="bottom" secondItem="rbO-Yv-CfL" secondAttribute="bottom" id="NCy-FE-4rG"/>
-                                                            <constraint firstItem="Hbo-iN-up2" firstAttribute="leading" secondItem="UT1-qT-hvx" secondAttribute="trailing" id="OZd-SB-AZn"/>
-                                                            <constraint firstItem="h0s-WZ-h0L" firstAttribute="leading" secondItem="wKr-4P-abS" secondAttribute="trailing" id="PfB-Nl-ZdJ"/>
-                                                            <constraint firstItem="wKr-4P-abS" firstAttribute="leading" secondItem="QV0-uj-3G7" secondAttribute="trailing" id="RpH-id-PP2"/>
-                                                            <constraint firstItem="82J-GF-vzN" firstAttribute="leading" secondItem="Hbo-iN-up2" secondAttribute="trailing" id="SMS-Yf-Z5o"/>
-                                                            <constraint firstAttribute="bottom" secondItem="h0s-WZ-h0L" secondAttribute="bottom" id="Si7-tn-hBR"/>
-                                                            <constraint firstAttribute="bottom" secondItem="82J-GF-vzN" secondAttribute="bottom" constant="-1" id="Uao-QD-ybo"/>
-                                                            <constraint firstAttribute="trailing" secondItem="3To-m2-9na" secondAttribute="trailing" constant="27" id="Wf3-6m-1DH"/>
-                                                            <constraint firstItem="8wG-n2-f8w" firstAttribute="leading" secondItem="82J-GF-vzN" secondAttribute="trailing" id="XIC-oC-Ax1"/>
-                                                            <constraint firstItem="arb-zC-PSQ" firstAttribute="leading" secondItem="W8X-DI-HR0" secondAttribute="trailing" id="Xck-iv-XFQ"/>
-                                                            <constraint firstItem="rbO-Yv-CfL" firstAttribute="leading" secondItem="h0s-WZ-h0L" secondAttribute="trailing" id="aRv-aJ-6O6"/>
-                                                            <constraint firstAttribute="bottom" secondItem="QV0-uj-3G7" secondAttribute="bottom" id="ceg-U3-r4v"/>
-                                                            <constraint firstItem="arb-zC-PSQ" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="62" id="f44-VW-ZkE"/>
-                                                            <constraint firstAttribute="bottom" secondItem="UT1-qT-hvx" secondAttribute="bottom" id="gdh-64-Vfe"/>
-                                                            <constraint firstItem="W8X-DI-HR0" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="62" id="gmH-nu-9SN"/>
-                                                            <constraint firstAttribute="bottom" secondItem="W8X-DI-HR0" secondAttribute="bottom" id="jDn-VI-wnD"/>
-                                                            <constraint firstItem="IEY-bu-8ta" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="62" id="kXO-wi-Tyw"/>
-                                                            <constraint firstItem="ypG-nb-PZv" firstAttribute="leading" secondItem="vlG-sZ-0uT" secondAttribute="leading" constant="4" id="oN6-bZ-UF6"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Hbo-iN-up2" secondAttribute="bottom" id="qDz-8g-ZBG"/>
-                                                            <constraint firstItem="rbO-Yv-CfL" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="62" id="qSn-pF-zxG"/>
-                                                            <constraint firstItem="QV0-uj-3G7" firstAttribute="leading" secondItem="IEY-bu-8ta" secondAttribute="trailing" id="qzl-Uo-gdT"/>
-                                                            <constraint firstItem="UT1-qT-hvx" firstAttribute="leading" secondItem="ypG-nb-PZv" secondAttribute="trailing" id="rAJ-Wp-2R6"/>
-                                                            <constraint firstItem="Hbo-iN-up2" firstAttribute="leading" secondItem="UT1-qT-hvx" secondAttribute="trailing" id="tdn-he-mM5"/>
-                                                            <constraint firstItem="W8X-DI-HR0" firstAttribute="leading" secondItem="8wG-n2-f8w" secondAttribute="trailing" id="uF1-vl-ab1"/>
-                                                            <constraint firstItem="UT1-qT-hvx" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="62" id="ucb-NH-czS"/>
-                                                            <constraint firstAttribute="bottom" secondItem="8wG-n2-f8w" secondAttribute="bottom" id="uek-nh-TDz"/>
-                                                            <constraint firstItem="8wG-n2-f8w" firstAttribute="top" secondItem="vlG-sZ-0uT" secondAttribute="top" constant="62" id="vX7-NW-Tsp"/>
+                                                            <constraint firstItem="ISd-dB-7mf" firstAttribute="leading" secondItem="P1X-7S-y0h" secondAttribute="leading" constant="4" id="0ha-tW-nFC"/>
+                                                            <constraint firstItem="EJa-TF-OuS" firstAttribute="leading" secondItem="roZ-en-JAL" secondAttribute="trailing" id="0jR-cW-gvR"/>
+                                                            <constraint firstItem="CdV-Lo-4GK" firstAttribute="leading" secondItem="0R4-gU-1sR" secondAttribute="trailing" id="193-DC-bcq"/>
+                                                            <constraint firstItem="aVh-p3-NJW" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="62" id="3bJ-GR-ziT"/>
+                                                            <constraint firstAttribute="bottom" secondItem="aVh-p3-NJW" secondAttribute="bottom" id="4T5-hs-VwE"/>
+                                                            <constraint firstItem="0R4-gU-1sR" firstAttribute="leading" secondItem="rGz-nh-99J" secondAttribute="trailing" id="7Ma-jY-ZaK"/>
+                                                            <constraint firstAttribute="bottom" secondItem="rGz-nh-99J" secondAttribute="bottom" id="9Qu-0K-ql0"/>
+                                                            <constraint firstItem="Cvw-jh-RzX" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="62" id="BDF-Xa-8ZS"/>
+                                                            <constraint firstItem="1Z2-rB-Toz" firstAttribute="leading" secondItem="ISd-dB-7mf" secondAttribute="trailing" id="BI7-4Z-unE"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Nb6-HJ-e8T" secondAttribute="bottom" id="D2C-0s-5lU"/>
+                                                            <constraint firstAttribute="bottom" secondItem="SgZ-Fe-mvu" secondAttribute="bottom" id="ELl-W7-OkT"/>
+                                                            <constraint firstItem="wJp-67-oTj" firstAttribute="leading" secondItem="aVh-p3-NJW" secondAttribute="trailing" id="F9i-TL-FhK"/>
+                                                            <constraint firstAttribute="bottom" secondItem="roZ-en-JAL" secondAttribute="bottom" id="FeC-fa-rs8"/>
+                                                            <constraint firstItem="CdV-Lo-4GK" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="62" id="ISn-fi-zKw"/>
+                                                            <constraint firstItem="Gqy-TC-DjT" firstAttribute="leading" secondItem="P1X-7S-y0h" secondAttribute="leading" constant="233" id="IZv-q1-Uhr"/>
+                                                            <constraint firstItem="EJa-TF-OuS" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="62" id="JpC-Aw-kJ0"/>
+                                                            <constraint firstAttribute="bottom" secondItem="wJp-67-oTj" secondAttribute="bottom" id="K7v-Ni-blU"/>
+                                                            <constraint firstItem="SgZ-Fe-mvu" firstAttribute="leading" secondItem="Nb6-HJ-e8T" secondAttribute="trailing" id="KMn-5k-cYa"/>
+                                                            <constraint firstItem="Nb6-HJ-e8T" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="62" id="KTD-Vl-k97"/>
+                                                            <constraint firstItem="Cvw-jh-RzX" firstAttribute="leading" secondItem="1Z2-rB-Toz" secondAttribute="trailing" id="MQm-Gq-ZHk"/>
+                                                            <constraint firstItem="1Z2-rB-Toz" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="62" id="MUl-ih-VVt"/>
+                                                            <constraint firstItem="0R4-gU-1sR" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="62" id="MoX-yX-5IE"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ISd-dB-7mf" secondAttribute="bottom" id="RIa-2m-Sry"/>
+                                                            <constraint firstItem="rGz-nh-99J" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="62" id="RRZ-EI-FWt"/>
+                                                            <constraint firstItem="wJp-67-oTj" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="62" id="VAR-Uj-imN"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Gqy-TC-DjT" secondAttribute="bottom" constant="25" id="Vq0-2E-jjM"/>
+                                                            <constraint firstAttribute="trailing" secondItem="wJp-67-oTj" secondAttribute="trailing" constant="4" id="XUi-7V-lg4"/>
+                                                            <constraint firstItem="roZ-en-JAL" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="62" id="Xei-qd-tgy"/>
+                                                            <constraint firstAttribute="bottom" secondItem="EJa-TF-OuS" secondAttribute="bottom" id="Zf8-aA-QFW"/>
+                                                            <constraint firstItem="ISd-dB-7mf" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="62" id="cHq-ns-7O6"/>
+                                                            <constraint firstItem="rGz-nh-99J" firstAttribute="leading" secondItem="SgZ-Fe-mvu" secondAttribute="trailing" id="cWm-zf-9gf"/>
+                                                            <constraint firstItem="Gqy-TC-DjT" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="42" id="j2q-WZ-8dk"/>
+                                                            <constraint firstItem="roZ-en-JAL" firstAttribute="leading" secondItem="Cvw-jh-RzX" secondAttribute="trailing" id="kGF-YF-AHb"/>
+                                                            <constraint firstItem="SgZ-Fe-mvu" firstAttribute="top" secondItem="P1X-7S-y0h" secondAttribute="top" constant="62" id="ksr-Hg-uE4"/>
+                                                            <constraint firstItem="aVh-p3-NJW" firstAttribute="leading" secondItem="CdV-Lo-4GK" secondAttribute="trailing" id="nZm-13-zfj"/>
+                                                            <constraint firstItem="Nb6-HJ-e8T" firstAttribute="leading" secondItem="EJa-TF-OuS" secondAttribute="trailing" id="qa7-iQ-HJ4"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Cvw-jh-RzX" secondAttribute="bottom" id="u3Z-Kb-sAy"/>
+                                                            <constraint firstAttribute="bottom" secondItem="0R4-gU-1sR" secondAttribute="bottom" id="yfm-oF-u83"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Gqy-TC-DjT" secondAttribute="trailing" constant="8" id="zOn-ZZ-022"/>
+                                                            <constraint firstAttribute="bottom" secondItem="1Z2-rB-Toz" secondAttribute="bottom" id="zoJ-8o-4c0"/>
+                                                            <constraint firstAttribute="bottom" secondItem="CdV-Lo-4GK" secondAttribute="bottom" id="zs2-XR-E6I"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rx6-nW-biC" userLabel="OctaveView">
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QRV-3c-r54" userLabel="OctaveView">
                                                         <rect key="frame" x="640" y="0.0" width="320" height="88"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.c.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Dr-cc-H2m">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Octave3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xln-3L-fVf">
+                                                                <rect key="frame" x="233" y="42" width="79" height="21"/>
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFw-9y-VXm">
                                                                 <rect key="frame" x="4" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="ATy-mj-V0o"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="L7X-vI-R42"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="JmX-g6-GGR">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="C#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="die-d4-7Hj">
                                                                 <rect key="frame" x="30" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="7H7-mB-aGD"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="sk3-uL-u6a"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.d.png" translatesAutoresizingMaskIntoConstraints="NO" id="GjT-ZV-q1L">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKX-K3-erb">
                                                                 <rect key="frame" x="56" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="LPh-by-ety"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="i0p-QB-jbe"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="WMm-j5-rbu">
-                                                                <rect key="frame" x="82" y="63" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="6Jx-Op-ufh"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="uui-0a-mdP"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.e.png" translatesAutoresizingMaskIntoConstraints="NO" id="R7h-DQ-c09">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="D#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3f-Ak-tdT">
+                                                                <rect key="frame" x="82" y="62" width="26" height="26"/>
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuR-Qc-MTR">
                                                                 <rect key="frame" x="108" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="b4J-vm-Z2z"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="yec-fX-x1I"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.f.png" translatesAutoresizingMaskIntoConstraints="NO" id="2MY-jA-luh">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-Tu-HTu">
                                                                 <rect key="frame" x="134" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="X1e-iJ-SBb"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="zQJ-KY-fgv"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="TiQ-Xm-93M">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="F#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoW-Uk-te8">
                                                                 <rect key="frame" x="160" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="7iy-pe-YXW"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="tOn-LF-VNz"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.g.png" translatesAutoresizingMaskIntoConstraints="NO" id="Frs-KF-vFo">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIT-pD-OYj">
                                                                 <rect key="frame" x="186" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="5Yz-Ia-yFa"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="h34-hQ-V28"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="daJ-Uz-Fe9">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="G#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7o-Zv-ya5">
                                                                 <rect key="frame" x="212" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="20e-Kb-9De"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="coJ-AR-ACk"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.a.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Dn-85-Wi0">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mz2-N2-yek">
                                                                 <rect key="frame" x="238" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="Sk6-QC-BtH"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="eEH-x0-86x"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.sharp.png" translatesAutoresizingMaskIntoConstraints="NO" id="IOQ-aK-jI3">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="A#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lu-nE-V09">
                                                                 <rect key="frame" x="264" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="26" id="8gi-hj-RUZ"/>
-                                                                    <constraint firstAttribute="width" constant="26" id="TGe-Zl-HKu"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="scale.b.png" translatesAutoresizingMaskIntoConstraints="NO" id="exo-iM-Y2H">
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6m-tE-3yA">
                                                                 <rect key="frame" x="290" y="62" width="26" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="26" id="oSM-dh-iVp"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="wcq-na-w3k"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="octave.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZS5-R0-Um0">
-                                                                <rect key="frame" x="210" y="38" width="83" height="26"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="83" id="Lxv-PE-y2h"/>
-                                                                    <constraint firstAttribute="height" constant="26" id="zOp-un-2ZZ"/>
-                                                                </constraints>
-                                                            </imageView>
+                                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="ZS5-R0-Um0" secondAttribute="trailing" constant="27" id="17C-vl-oXz"/>
-                                                            <constraint firstItem="GjT-ZV-q1L" firstAttribute="leading" secondItem="JmX-g6-GGR" secondAttribute="trailing" id="2Up-Vi-qjg"/>
-                                                            <constraint firstItem="daJ-Uz-Fe9" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="62" id="3SJ-ik-U9K"/>
-                                                            <constraint firstItem="WMm-j5-rbu" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="63" id="8IY-ox-F27"/>
-                                                            <constraint firstItem="Frs-KF-vFo" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="62" id="92c-Kn-xtP"/>
-                                                            <constraint firstAttribute="trailing" secondItem="exo-iM-Y2H" secondAttribute="trailing" constant="4" id="9FO-Z3-8s9"/>
-                                                            <constraint firstItem="TiQ-Xm-93M" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="62" id="Agh-gs-qKv"/>
-                                                            <constraint firstAttribute="bottom" secondItem="R7h-DQ-c09" secondAttribute="bottom" id="DPM-1G-L8W"/>
-                                                            <constraint firstItem="daJ-Uz-Fe9" firstAttribute="leading" secondItem="Frs-KF-vFo" secondAttribute="trailing" id="ECg-oq-Hvf"/>
-                                                            <constraint firstItem="7Dr-cc-H2m" firstAttribute="leading" secondItem="Rx6-nW-biC" secondAttribute="leading" constant="4" id="Fza-JP-ygo"/>
-                                                            <constraint firstItem="1Dn-85-Wi0" firstAttribute="leading" secondItem="daJ-Uz-Fe9" secondAttribute="trailing" id="GbT-yx-91E"/>
-                                                            <constraint firstItem="exo-iM-Y2H" firstAttribute="leading" secondItem="IOQ-aK-jI3" secondAttribute="trailing" id="PMi-PM-Ufs"/>
-                                                            <constraint firstItem="TiQ-Xm-93M" firstAttribute="leading" secondItem="2MY-jA-luh" secondAttribute="trailing" id="Pki-Yy-S5r"/>
-                                                            <constraint firstAttribute="bottom" secondItem="ZS5-R0-Um0" secondAttribute="bottom" constant="24" id="W6l-q3-eQE"/>
-                                                            <constraint firstItem="GjT-ZV-q1L" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="62" id="WEj-P1-8dg"/>
-                                                            <constraint firstItem="7Dr-cc-H2m" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="62" id="XCa-Et-9mp"/>
-                                                            <constraint firstItem="JmX-g6-GGR" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="62" id="XpH-J2-RQx"/>
-                                                            <constraint firstItem="1Dn-85-Wi0" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="62" id="Zf0-4d-6dq"/>
-                                                            <constraint firstAttribute="bottom" secondItem="1Dn-85-Wi0" secondAttribute="bottom" id="aH2-IK-7iV"/>
-                                                            <constraint firstItem="GjT-ZV-q1L" firstAttribute="leading" secondItem="JmX-g6-GGR" secondAttribute="trailing" id="bL6-Bt-744"/>
-                                                            <constraint firstAttribute="bottom" secondItem="GjT-ZV-q1L" secondAttribute="bottom" id="d4I-BY-4zt"/>
-                                                            <constraint firstItem="2MY-jA-luh" firstAttribute="leading" secondItem="R7h-DQ-c09" secondAttribute="trailing" id="efz-TR-wgL"/>
-                                                            <constraint firstItem="JmX-g6-GGR" firstAttribute="leading" secondItem="7Dr-cc-H2m" secondAttribute="trailing" id="enc-HW-Tw9"/>
-                                                            <constraint firstItem="IOQ-aK-jI3" firstAttribute="leading" secondItem="1Dn-85-Wi0" secondAttribute="trailing" id="hl7-32-mwu"/>
-                                                            <constraint firstAttribute="bottom" secondItem="TiQ-Xm-93M" secondAttribute="bottom" id="kbR-Mv-itT"/>
-                                                            <constraint firstAttribute="bottom" secondItem="2MY-jA-luh" secondAttribute="bottom" id="lBC-5h-iIG"/>
-                                                            <constraint firstAttribute="bottom" secondItem="IOQ-aK-jI3" secondAttribute="bottom" id="mj5-3b-zwv"/>
-                                                            <constraint firstItem="2MY-jA-luh" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="62" id="q3Q-qw-ASA"/>
-                                                            <constraint firstItem="R7h-DQ-c09" firstAttribute="leading" secondItem="WMm-j5-rbu" secondAttribute="trailing" id="rNx-sy-IWD"/>
-                                                            <constraint firstAttribute="bottom" secondItem="exo-iM-Y2H" secondAttribute="bottom" id="rQU-zJ-QW3"/>
-                                                            <constraint firstAttribute="bottom" secondItem="JmX-g6-GGR" secondAttribute="bottom" id="reS-ck-nWm"/>
-                                                            <constraint firstItem="ZS5-R0-Um0" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="38" id="ruA-IO-MI6"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Frs-KF-vFo" secondAttribute="bottom" id="sio-k4-bUo"/>
-                                                            <constraint firstAttribute="bottom" secondItem="daJ-Uz-Fe9" secondAttribute="bottom" id="tBm-hz-hAT"/>
-                                                            <constraint firstItem="exo-iM-Y2H" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="62" id="txa-Y1-mdz"/>
-                                                            <constraint firstItem="R7h-DQ-c09" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="62" id="uQh-Cr-qzV"/>
-                                                            <constraint firstItem="Frs-KF-vFo" firstAttribute="leading" secondItem="TiQ-Xm-93M" secondAttribute="trailing" id="xDa-Qw-Qf5"/>
-                                                            <constraint firstAttribute="bottom" secondItem="7Dr-cc-H2m" secondAttribute="bottom" id="xKO-5r-J93"/>
-                                                            <constraint firstItem="WMm-j5-rbu" firstAttribute="leading" secondItem="GjT-ZV-q1L" secondAttribute="trailing" id="xmO-vl-qbf"/>
-                                                            <constraint firstItem="IOQ-aK-jI3" firstAttribute="top" secondItem="Rx6-nW-biC" secondAttribute="top" constant="62" id="yJH-c5-eve"/>
-                                                            <constraint firstAttribute="bottom" secondItem="WMm-j5-rbu" secondAttribute="bottom" constant="-1" id="zl2-5J-GbM"/>
+                                                            <constraint firstItem="vuR-Qc-MTR" firstAttribute="leading" secondItem="G3f-Ak-tdT" secondAttribute="trailing" id="2Gj-UQ-8C7"/>
+                                                            <constraint firstItem="n7o-Zv-ya5" firstAttribute="leading" secondItem="nIT-pD-OYj" secondAttribute="trailing" id="6MH-HJ-Kvv"/>
+                                                            <constraint firstItem="n7o-Zv-ya5" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="62" id="9B0-nO-DM3"/>
+                                                            <constraint firstAttribute="bottom" secondItem="gKX-K3-erb" secondAttribute="bottom" id="B4J-Ka-6bz"/>
+                                                            <constraint firstAttribute="trailing" secondItem="I6m-tE-3yA" secondAttribute="trailing" constant="4" id="CXg-7P-EHq"/>
+                                                            <constraint firstItem="qoW-Uk-te8" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="62" id="DCG-Rf-1X6"/>
+                                                            <constraint firstItem="UFw-9y-VXm" firstAttribute="leading" secondItem="QRV-3c-r54" secondAttribute="leading" constant="4" id="DV7-rB-9Kc"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Mz2-N2-yek" secondAttribute="bottom" id="HsT-70-evs"/>
+                                                            <constraint firstItem="xln-3L-fVf" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="42" id="JG6-75-TzJ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="qoW-Uk-te8" secondAttribute="bottom" id="Ldy-9G-SOP"/>
+                                                            <constraint firstItem="die-d4-7Hj" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="62" id="Sgq-ek-fx6"/>
+                                                            <constraint firstItem="xxk-Tu-HTu" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="62" id="V7v-PP-7ir"/>
+                                                            <constraint firstItem="UFw-9y-VXm" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="62" id="ZSf-0s-lLt"/>
+                                                            <constraint firstAttribute="bottom" secondItem="G3f-Ak-tdT" secondAttribute="bottom" id="aSG-Ch-MoK"/>
+                                                            <constraint firstAttribute="bottom" secondItem="xxk-Tu-HTu" secondAttribute="bottom" id="aqa-4j-hyw"/>
+                                                            <constraint firstItem="G3f-Ak-tdT" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="62" id="ctT-V0-nNf"/>
+                                                            <constraint firstAttribute="bottom" secondItem="vuR-Qc-MTR" secondAttribute="bottom" id="ed1-S5-SMl"/>
+                                                            <constraint firstItem="4lu-nE-V09" firstAttribute="leading" secondItem="Mz2-N2-yek" secondAttribute="trailing" id="f0S-9f-xnX"/>
+                                                            <constraint firstAttribute="bottom" secondItem="xln-3L-fVf" secondAttribute="bottom" constant="25" id="f8f-iu-nbl"/>
+                                                            <constraint firstItem="gKX-K3-erb" firstAttribute="leading" secondItem="die-d4-7Hj" secondAttribute="trailing" id="fXw-q4-5sg"/>
+                                                            <constraint firstAttribute="bottom" secondItem="n7o-Zv-ya5" secondAttribute="bottom" id="fv0-AT-x2H"/>
+                                                            <constraint firstItem="xxk-Tu-HTu" firstAttribute="leading" secondItem="vuR-Qc-MTR" secondAttribute="trailing" id="g1b-nE-w5m"/>
+                                                            <constraint firstItem="I6m-tE-3yA" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="62" id="g41-ac-CsL"/>
+                                                            <constraint firstAttribute="trailing" secondItem="xln-3L-fVf" secondAttribute="trailing" constant="8" id="gdO-7x-vxf"/>
+                                                            <constraint firstItem="Mz2-N2-yek" firstAttribute="leading" secondItem="n7o-Zv-ya5" secondAttribute="trailing" id="get-ff-VrV"/>
+                                                            <constraint firstItem="nIT-pD-OYj" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="62" id="gvT-4u-IHy"/>
+                                                            <constraint firstItem="I6m-tE-3yA" firstAttribute="leading" secondItem="4lu-nE-V09" secondAttribute="trailing" id="iZV-46-QQp"/>
+                                                            <constraint firstAttribute="bottom" secondItem="I6m-tE-3yA" secondAttribute="bottom" id="jhH-RD-rmR"/>
+                                                            <constraint firstItem="G3f-Ak-tdT" firstAttribute="leading" secondItem="gKX-K3-erb" secondAttribute="trailing" id="kho-3a-Fw5"/>
+                                                            <constraint firstItem="vuR-Qc-MTR" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="62" id="krw-8c-lkT"/>
+                                                            <constraint firstItem="die-d4-7Hj" firstAttribute="leading" secondItem="UFw-9y-VXm" secondAttribute="trailing" id="lDb-eC-ffg"/>
+                                                            <constraint firstAttribute="bottom" secondItem="UFw-9y-VXm" secondAttribute="bottom" id="lXq-VP-LkZ"/>
+                                                            <constraint firstItem="Mz2-N2-yek" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="62" id="mqh-TU-3wV"/>
+                                                            <constraint firstItem="xln-3L-fVf" firstAttribute="leading" secondItem="QRV-3c-r54" secondAttribute="leading" constant="233" id="rZV-hc-5GP"/>
+                                                            <constraint firstItem="qoW-Uk-te8" firstAttribute="leading" secondItem="xxk-Tu-HTu" secondAttribute="trailing" id="s9R-gb-gco"/>
+                                                            <constraint firstItem="gKX-K3-erb" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="62" id="sWo-yN-iqm"/>
+                                                            <constraint firstItem="nIT-pD-OYj" firstAttribute="leading" secondItem="qoW-Uk-te8" secondAttribute="trailing" id="tdn-Op-RKf"/>
+                                                            <constraint firstAttribute="bottom" secondItem="4lu-nE-V09" secondAttribute="bottom" id="uFY-ti-Oxk"/>
+                                                            <constraint firstAttribute="bottom" secondItem="nIT-pD-OYj" secondAttribute="bottom" id="uGm-QZ-NHi"/>
+                                                            <constraint firstItem="4lu-nE-V09" firstAttribute="top" secondItem="QRV-3c-r54" secondAttribute="top" constant="62" id="urQ-JU-mHf"/>
+                                                            <constraint firstAttribute="bottom" secondItem="die-d4-7Hj" secondAttribute="bottom" id="xTd-xD-MmD"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -502,13 +516,13 @@
                                     <constraint firstItem="Ty7-zv-Xef" firstAttribute="leading" secondItem="dPC-Sn-I1o" secondAttribute="leading" id="V9U-02-0Cm"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nIN-k4-Uqe">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nIN-k4-Uqe">
                                 <rect key="frame" x="-320" y="279" width="960" height="10"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="song title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGT-ur-QoD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="song title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGT-ur-QoD">
                                 <rect key="frame" x="0.0" y="20" width="320" height="24"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.27843138575553894" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -542,8 +556,12 @@
                             <constraint firstAttribute="trailing" secondItem="dPC-Sn-I1o" secondAttribute="trailing" id="7WL-vG-k86"/>
                             <constraint firstItem="dPC-Sn-I1o" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="E4p-mv-lrP"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ZmP-5A-KYj" secondAttribute="bottom" constant="-1" id="MV2-g7-SDR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TGT-ur-QoD" secondAttribute="trailing" constant="-16" id="S55-hf-qei"/>
+                            <constraint firstItem="TGT-ur-QoD" firstAttribute="top" secondItem="aKK-ho-WT9" secondAttribute="bottom" id="UfZ-EH-F85"/>
                             <constraint firstItem="dPC-Sn-I1o" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" id="caT-b6-hti"/>
                             <constraint firstAttribute="bottom" secondItem="dPC-Sn-I1o" secondAttribute="bottom" id="fnM-eG-qKK"/>
+                            <constraint firstItem="TGT-ur-QoD" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leadingMargin" constant="-16" id="iZo-JS-4YM"/>
+                            <constraint firstAttribute="centerY" secondItem="nIN-k4-Uqe" secondAttribute="centerY" id="zhk-gK-e4K"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -604,8 +622,8 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDa-ea-333">
                                                     <rect key="frame" x="8" y="12" width="304" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -620,7 +638,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Song Manage" id="KYI-ep-6f1">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="nHJ-Fw-rsH">
+                        <barButtonItem key="leftBarButtonItem" title="Close" style="plain" id="nHJ-Fw-rsH">
                             <connections>
                                 <action selector="closeButtonDidTap:" destination="BNw-bU-GSf" id="iBR-mw-kjg"/>
                             </connections>
@@ -648,29 +666,31 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvv-i9-5PE">
                                 <rect key="frame" x="16" y="72" width="288" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                <color key="textColor" red="0.98587214946746826" green="0.30782565710745596" blue="0.59978766584444076" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed (Tempo):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw8-Dg-In0">
                                 <rect key="frame" x="16" y="139" width="120" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                <color key="textColor" red="0.98587214950000002" green="0.30782565709999998" blue="0.59978766579999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Division (Beat):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-PQ-DvD">
-                                <rect key="frame" x="16" y="206" width="115" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="16" y="206" width="155" height="21"/>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                <color key="textColor" red="0.98587214950000002" green="0.30782565709999998" blue="0.59978766579999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ih3-UP-yhx">
                                 <rect key="frame" x="16" y="101" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Loi-4t-azG">
                                 <rect key="frame" x="16" y="518" width="288" height="30"/>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -680,6 +700,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xO-NP-Jtg">
                                 <rect key="frame" x="16" y="480" width="288" height="30"/>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
                                 <state key="normal" title="Apply">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -705,8 +726,8 @@
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="120" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apQ-aw-88J">
                                 <rect key="frame" x="144" y="139" width="64" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -770,16 +791,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="octave.png" width="230" height="88"/>
         <image name="play.png" width="40" height="40"/>
-        <image name="scale.a.png" width="88" height="88"/>
-        <image name="scale.b.png" width="88" height="88"/>
-        <image name="scale.c.png" width="88" height="88"/>
-        <image name="scale.d.png" width="88" height="88"/>
-        <image name="scale.e.png" width="88" height="88"/>
-        <image name="scale.f.png" width="88" height="88"/>
-        <image name="scale.g.png" width="88" height="88"/>
-        <image name="scale.sharp.png" width="88" height="88"/>
         <image name="stop.png" width="40" height="40"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -787,4 +799,5 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
 </document>

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		080617011957286E00C46771 /* national-wildlife-reserve-bolivia_46878_990x742.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 080617001957286E00C46771 /* national-wildlife-reserve-bolivia_46878_990x742.jpg */; };
 		086BA16019D0401000991574 /* CMBSongConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA15F19D0401000991574 /* CMBSongConfigViewController.m */; };
 		086BA16319D0FA4E00991574 /* CMBSongManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16219D0FA4E00991574 /* CMBSongManageViewController.m */; };
 		086BA16619D0FDA400991574 /* CMBSongManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16519D0FDA400991574 /* CMBSongManageTableViewCell.m */; };
@@ -49,15 +48,7 @@
 		08C2816E199D112C0037F6D0 /* MusicInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08C2816D199D112C0037F6D0 /* MusicInfo.plist */; };
 		08C696511984260C0096BC20 /* CMBMusicBoxOctaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08C696501984260C0096BC20 /* CMBMusicBoxOctaveView.xib */; };
 		08C696541984264E0096BC20 /* CMBMusicBoxOctaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C696531984264E0096BC20 /* CMBMusicBoxOctaveView.m */; };
-		08DA5C2F19D98DA600966772 /* scale.a.png in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C2719D98DA600966772 /* scale.a.png */; };
-		08DA5C3019D98DA600966772 /* scale.b.png in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C2819D98DA600966772 /* scale.b.png */; };
-		08DA5C3119D98DA600966772 /* scale.c.png in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C2919D98DA600966772 /* scale.c.png */; };
-		08DA5C3219D98DA600966772 /* scale.d.png in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C2A19D98DA600966772 /* scale.d.png */; };
-		08DA5C3319D98DA600966772 /* scale.e.png in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C2B19D98DA600966772 /* scale.e.png */; };
-		08DA5C3419D98DA600966772 /* scale.f.png in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C2C19D98DA600966772 /* scale.f.png */; };
-		08DA5C3519D98DA600966772 /* scale.g.png in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C2D19D98DA600966772 /* scale.g.png */; };
-		08DA5C3619D98DA600966772 /* scale.sharp.png in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C2E19D98DA600966772 /* scale.sharp.png */; };
-		08DA5C3819D9912900966772 /* octave.png in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C3719D9912900966772 /* octave.png */; };
+		08DA5C3A19DA500B00966772 /* sp-setofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C3919DA4AD400966772 /* sp-setofont.ttf */; };
 		08DE16DD19D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16D219D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m */; };
 		08DE16DE19D3B6BC00315BE4 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16D419D3B6BC00315BE4 /* SWCellScrollView.m */; };
 		08DE16DF19D3B6BC00315BE4 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16D619D3B6BC00315BE4 /* SWLongPressGestureRecognizer.m */; };
@@ -81,7 +72,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		080617001957286E00C46771 /* national-wildlife-reserve-bolivia_46878_990x742.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "national-wildlife-reserve-bolivia_46878_990x742.jpg"; sourceTree = "<group>"; };
 		086BA15E19D0401000991574 /* CMBSongConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBSongConfigViewController.h; path = ViewControllers/CMBSongConfigViewController.h; sourceTree = "<group>"; };
 		086BA15F19D0401000991574 /* CMBSongConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBSongConfigViewController.m; path = ViewControllers/CMBSongConfigViewController.m; sourceTree = "<group>"; };
 		086BA16119D0FA4E00991574 /* CMBSongManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBSongManageViewController.h; path = ViewControllers/CMBSongManageViewController.h; sourceTree = "<group>"; };
@@ -144,15 +134,7 @@
 		08C696501984260C0096BC20 /* CMBMusicBoxOctaveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMBMusicBoxOctaveView.xib; path = Views/CMBMusicBoxOctaveView.xib; sourceTree = "<group>"; };
 		08C696521984264E0096BC20 /* CMBMusicBoxOctaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxOctaveView.h; path = Views/CMBMusicBoxOctaveView.h; sourceTree = "<group>"; };
 		08C696531984264E0096BC20 /* CMBMusicBoxOctaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxOctaveView.m; path = Views/CMBMusicBoxOctaveView.m; sourceTree = "<group>"; };
-		08DA5C2719D98DA600966772 /* scale.a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.a.png; sourceTree = "<group>"; };
-		08DA5C2819D98DA600966772 /* scale.b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.b.png; sourceTree = "<group>"; };
-		08DA5C2919D98DA600966772 /* scale.c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.c.png; sourceTree = "<group>"; };
-		08DA5C2A19D98DA600966772 /* scale.d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.d.png; sourceTree = "<group>"; };
-		08DA5C2B19D98DA600966772 /* scale.e.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.e.png; sourceTree = "<group>"; };
-		08DA5C2C19D98DA600966772 /* scale.f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.f.png; sourceTree = "<group>"; };
-		08DA5C2D19D98DA600966772 /* scale.g.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.g.png; sourceTree = "<group>"; };
-		08DA5C2E19D98DA600966772 /* scale.sharp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.sharp.png; sourceTree = "<group>"; };
-		08DA5C3719D9912900966772 /* octave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octave.png; sourceTree = "<group>"; };
+		08DA5C3919DA4AD400966772 /* sp-setofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sp-setofont.ttf"; sourceTree = "<group>"; };
 		08DE16D119D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
 		08DE16D219D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
 		08DE16D319D3B6BC00315BE4 /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
@@ -205,17 +187,7 @@
 				08DE171919D7A92200315BE4 /* pause.png */,
 				08DE171A19D7A92200315BE4 /* play.png */,
 				08DE171B19D7A92200315BE4 /* stop.png */,
-				08DA5C3719D9912900966772 /* octave.png */,
-				08DA5C2719D98DA600966772 /* scale.a.png */,
-				08DA5C2819D98DA600966772 /* scale.b.png */,
-				08DA5C2919D98DA600966772 /* scale.c.png */,
-				08DA5C2A19D98DA600966772 /* scale.d.png */,
-				08DA5C2B19D98DA600966772 /* scale.e.png */,
-				08DA5C2C19D98DA600966772 /* scale.f.png */,
-				08DA5C2D19D98DA600966772 /* scale.g.png */,
-				08DA5C2E19D98DA600966772 /* scale.sharp.png */,
 				08DE171F19D7B3AB00315BE4 /* mb.bump.on.png */,
-				080617001957286E00C46771 /* national-wildlife-reserve-bolivia_46878_990x742.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -284,6 +256,7 @@
 				08883AE11956CC6A00F7EB68 /* CraftedMusicBox-Prefix.pch */,
 				08C2816C199A82820037F6D0 /* CMBDefine.h */,
 				08C2816D199D112C0037F6D0 /* MusicInfo.plist */,
+				08DA5C3919DA4AD400966772 /* sp-setofont.ttf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -500,31 +473,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08DA5C3219D98DA600966772 /* scale.d.png in Resources */,
 				08883AEA1956CC6A00F7EB68 /* Main_iPad.storyboard in Resources */,
 				08DE171D19D7A92200315BE4 /* play.png in Resources */,
-				08DA5C2F19D98DA600966772 /* scale.a.png in Resources */,
 				08C696511984260C0096BC20 /* CMBMusicBoxOctaveView.xib in Resources */,
 				08DE171C19D7A92200315BE4 /* pause.png in Resources */,
-				08DA5C3419D98DA600966772 /* scale.f.png in Resources */,
 				08883AEF1956CC6A00F7EB68 /* Images.xcassets in Resources */,
 				08B66F8B198E031100376683 /* xylophone.D4.wav in Resources */,
 				08883AE71956CC6A00F7EB68 /* Main_iPhone.storyboard in Resources */,
 				08DE172019D7B3AB00315BE4 /* mb.bump.on.png in Resources */,
-				08DA5C3319D98DA600966772 /* scale.e.png in Resources */,
-				08DA5C3819D9912900966772 /* octave.png in Resources */,
-				08DA5C3519D98DA600966772 /* scale.g.png in Resources */,
 				08DE171E19D7A92200315BE4 /* stop.png in Resources */,
-				08DA5C3119D98DA600966772 /* scale.c.png in Resources */,
 				08B66F89198E031100376683 /* xylophone.C4.wav in Resources */,
+				08DA5C3A19DA500B00966772 /* sp-setofont.ttf in Resources */,
 				08B66F8D198E031100376683 /* xylophone.E4.wav in Resources */,
 				08B66F8A198E031100376683 /* xylophone.C4s.wav in Resources */,
 				08883ADE1956CC6A00F7EB68 /* InfoPlist.strings in Resources */,
 				08B66F8C198E031100376683 /* xylophone.D4s.wav in Resources */,
 				08C2816E199D112C0037F6D0 /* MusicInfo.plist in Resources */,
-				08DA5C3019D98DA600966772 /* scale.b.png in Resources */,
-				08DA5C3619D98DA600966772 /* scale.sharp.png in Resources */,
-				080617011957286E00C46771 /* national-wildlife-reserve-bolivia_46878_990x742.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
