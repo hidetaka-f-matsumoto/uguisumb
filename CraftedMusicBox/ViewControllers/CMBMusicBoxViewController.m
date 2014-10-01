@@ -1,3 +1,4 @@
+
 //
 //  CMBMusicBoxViewController.m
 //  CraftedMusicBox
@@ -17,6 +18,7 @@
     BOOL _isFirstViewWillAppear;
     BOOL _isFirstViewDidAppear;
     CGPoint _scrollPointBegin;
+    CGRect _headViewOriginalFrame;
     NSMutableDictionary *_sequences; // Dictionary<NSNumber *, CMBSequenceOneData *>
     CMBSongHeaderData *_header;
 }
@@ -89,6 +91,14 @@
     _scrollView.delegate = self;
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    // UIScrollView中のViewはAutoLayoutが効かないようなので、調整する
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    CGRect frame = CGRectMake(_scrollView.frame.origin.x,
+                              _scrollView.frame.origin.y,
+                              _scrollView.frame.size.width * 3,
+                              _scrollView.frame.size.height);
+    _tableView.frame = frame;
+    _scrollView.contentSize = frame.size;
 
     [self _initFirst];
     [self _init];
@@ -109,6 +119,7 @@
     // 表示更新
     [self updateViewsWithResetScroll:_isFirstViewDidAppear];
     
+    _headViewOriginalFrame = _headView.frame;
     _isFirstViewDidAppear = NO;
 }
 
@@ -155,7 +166,7 @@
 {
     if (resetScroll) {
         // スクロール初期位置
-        _scrollView.contentOffset = CGPointMake(320, 0);
+        _scrollView.contentOffset = CGPointMake(_scrollView.contentSize.width, 0);
         _tableView.contentOffset = CGPointMake(0, 0);
     }
     // タイトル更新
@@ -344,10 +355,7 @@
     [UIView animateWithDuration:0.2f
                      animations:^(void)
      {
-         _headView.frame = CGRectMake(0,
-                                      0,
-                                      _headView.frame.size.width,
-                                      _headView.frame.size.height);
+         _headView.frame = _headViewOriginalFrame;
      }];
 }
 

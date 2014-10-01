@@ -17,7 +17,7 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="selected" image="mb.bump.on.png"/>
-                    <state key="highlighted" image="musicbox.bump.on.png"/>
+                    <state key="highlighted" image="mb.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="umO-iW-5At"/>
                     </connections>
@@ -28,7 +28,7 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="selected" image="mb.bump.on.png"/>
-                    <state key="highlighted" image="musicbox.bump.on.png"/>
+                    <state key="highlighted" image="mb.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="RT1-bU-zl4"/>
                     </connections>
@@ -39,7 +39,7 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="selected" image="mb.bump.on.png"/>
-                    <state key="highlighted" image="musicbox.bump.on.png"/>
+                    <state key="highlighted" image="mb.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="rQl-Xa-bAe"/>
                     </connections>
@@ -50,7 +50,7 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="selected" image="mb.bump.on.png"/>
-                    <state key="highlighted" image="musicbox.bump.on.png"/>
+                    <state key="highlighted" image="mb.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="HPx-eA-t6g"/>
                     </connections>
@@ -61,7 +61,7 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="selected" image="mb.bump.on.png"/>
-                    <state key="highlighted" image="musicbox.bump.on.png"/>
+                    <state key="highlighted" image="mb.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="rkO-ZA-ZtT"/>
                     </connections>
@@ -72,7 +72,7 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="selected" image="mb.bump.on.png"/>
-                    <state key="highlighted" image="musicbox.bump.on.png"/>
+                    <state key="highlighted" image="mb.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="4lu-pk-7Ru"/>
                     </connections>
@@ -83,7 +83,7 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="selected" image="mb.bump.on.png"/>
-                    <state key="highlighted" image="musicbox.bump.on.png"/>
+                    <state key="highlighted" image="mb.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="fxc-U9-2rL"/>
                     </connections>
@@ -94,7 +94,7 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="selected" image="mb.bump.on.png"/>
-                    <state key="highlighted" image="musicbox.bump.on.png"/>
+                    <state key="highlighted" image="mb.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="yIG-Z6-Wod"/>
                     </connections>
@@ -105,7 +105,7 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="selected" image="mb.bump.on.png"/>
-                    <state key="highlighted" image="musicbox.bump.on.png"/>
+                    <state key="highlighted" image="mb.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="bpz-MT-Mj4"/>
                     </connections>
@@ -116,7 +116,7 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="selected" image="mb.bump.on.png"/>
-                    <state key="highlighted" image="musicbox.bump.on.png"/>
+                    <state key="highlighted" image="mb.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="lAW-nd-YSA"/>
                     </connections>
@@ -127,7 +127,7 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="selected" image="mb.bump.on.png"/>
-                    <state key="highlighted" image="musicbox.bump.on.png"/>
+                    <state key="highlighted" image="mb.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="uXn-VZ-qqB"/>
                     </connections>
@@ -138,7 +138,7 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="selected" image="mb.bump.on.png"/>
-                    <state key="highlighted" image="musicbox.bump.on.png"/>
+                    <state key="highlighted" image="mb.bump.on.png"/>
                     <connections>
                         <action selector="noteButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="udc-2g-eSG"/>
                     </connections>
@@ -167,7 +167,6 @@
     </objects>
     <resources>
         <image name="mb.bump.on.png" width="88" height="88"/>
-        <image name="musicbox.bump.on.png" width="104" height="104"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -23,6 +23,9 @@
     _tempoSlider.minimumValue = CMBTempoMin;
     _tempoSlider.maximumValue = CMBTempoMax;
     [_tempoSlider addTarget:self action:@selector(tempoSliderDidChange:) forControlEvents:UIControlEventValueChanged];
+    _tempoStepper.minimumValue = CMBTempoMin;
+    _tempoStepper.maximumValue = CMBTempoMax;
+    _tempoStepper.stepValue = 1;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -32,6 +35,7 @@
     _nameText.text = _header.name;
     _tempoLabel.text = [NSString stringWithFormat:@"%zd", _header.tempo.integerValue];
     _tempoSlider.value = _header.tempo.floatValue;
+    _tempoStepper.value = _header.tempo.floatValue;
     [_divisionControl setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division]];
 }
 
@@ -61,6 +65,9 @@
 - (IBAction)applyButtonDidTap:(id)sender
 {
     [self applyConfig];
+    // 閉じる
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
 }
 
 - (IBAction)saveButtonDidTap:(id)sender
@@ -110,6 +117,12 @@
                      completion:nil];
 }
 
+- (IBAction)tempoStepperDidTap:(id)sender
+{
+    _tempoLabel.text = [NSString stringWithFormat:@"%zd", (NSInteger)_tempoStepper.value];
+    _tempoSlider.value = _tempoStepper.value;
+}
+
 #pragma mark - UITextViewDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
@@ -143,6 +156,7 @@
 - (void)tempoSliderDidChange:(id)sender
 {
     _tempoLabel.text = [NSString stringWithFormat:@"%zd", (NSInteger)_tempoSlider.value];
+    _tempoStepper.value = _tempoSlider.value;
 }
 
 @end

@@ -28,10 +28,12 @@
 
 @property (nonatomic, weak) IBOutlet UITextField *nameText;
 @property (nonatomic, weak) IBOutlet UISlider *tempoSlider;
+@property (nonatomic, weak) IBOutlet UIStepper *tempoStepper;
 @property (nonatomic, weak) IBOutlet UILabel *tempoLabel;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *divisionControl;
 @property (nonatomic, weak) IBOutlet UIButton *saveButton;
 
+- (IBAction)tempoStepperDidTap:(id)sender;
 - (IBAction)applyButtonDidTap:(id)sender;
 - (IBAction)saveButtonDidTap:(id)sender;
 
