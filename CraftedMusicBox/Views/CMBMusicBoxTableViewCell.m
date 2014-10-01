@@ -60,7 +60,7 @@
 - (void)process
 {
 //    NSLog(@"process y=%f", self.frame.origin.y - _parentTableView.contentOffset.y);
-    CGFloat tineY = _tineView.frame.origin.y - 64.0f; // NavigationBar+StatusBar分
+    CGFloat tineY = _tineView.frame.origin.y - 20.0f; // StatusBar分
     CGFloat curY = self.frame.origin.y - _parentTableView.contentOffset.y;
     if (tineY >= curY && tineY < _preY) {
         NSLog(@"process tineY=%f, curY=%f, preY=%f", tineY, curY, _preY);
