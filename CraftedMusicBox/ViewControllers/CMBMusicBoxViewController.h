@@ -15,6 +15,7 @@
 #import "CMBMusicBoxTableViewCell.h"
 #import "CMBSongConfigViewController.h"
 #import "CMBSongManageViewController.h"
+#import "CMBMusicBoxTableView.h"
 
 static CGFloat const CMBTimeDivAutoScroll = 0.01f; // [s]
 
@@ -26,7 +27,7 @@ static CGFloat const CMBTimeDivAutoScroll = 0.01f; // [s]
 @property (strong, nonatomic) NSMutableDictionary *sounds;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet CMBMusicBoxTableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *tineView;
 @property (weak, nonatomic) IBOutlet UIView *headView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *playButton;

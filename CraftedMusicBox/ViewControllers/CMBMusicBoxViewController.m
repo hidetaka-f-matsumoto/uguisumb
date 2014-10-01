@@ -91,15 +91,10 @@
     _scrollView.delegate = self;
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    // UIScrollView中のViewはAutoLayoutが効かないようなので、調整する
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    CGRect frame = CGRectMake(_scrollView.frame.origin.x,
-                              _scrollView.frame.origin.y,
-                              _scrollView.frame.size.width * 3,
-                              _scrollView.frame.size.height);
-    _tableView.frame = frame;
-    _scrollView.contentSize = frame.size;
 
+    // UIScrollView中のコンテンツを調整
+    [self adjustScrollViewContents];
+    
     [self _initFirst];
     [self _init];
     [self loadSounds];
@@ -123,6 +118,12 @@
     _isFirstViewDidAppear = NO;
 }
 
+- (void)viewDidLayoutSubviews
+{
+    _tableView.layoutSize = CGSizeMake(_scrollView.frame.size.width * 3.f,
+                                       _scrollView.frame.size.height);
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -139,6 +140,50 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+/**
+ * UIScrollView中のコンテンツを調整
+ *  AutoLayoutが効かないらしい
+ *  http://blogios.stack3.net/archives/2094
+ */
+- (void)adjustScrollViewContents
+{
+    // 一旦subViewから外す
+    [_tableView removeFromSuperview];
+    // AutoResizingMaskを切る
+    _tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    // subViewに入れる
+    [_scrollView addSubview:_tableView];
+    // 制約を設定
+    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:_tableView
+                                                            attribute:NSLayoutAttributeLeading
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:_scrollView
+                                                            attribute:NSLayoutAttributeLeading
+                                                           multiplier:1.0f
+                                                             constant:0]];
+    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:_tableView
+                                                            attribute:NSLayoutAttributeTrailing
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:_scrollView
+                                                            attribute:NSLayoutAttributeTrailing
+                                                           multiplier:1.0f
+                                                             constant:0]];
+    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:_tableView
+                                                            attribute:NSLayoutAttributeTop
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:_scrollView
+                                                            attribute:NSLayoutAttributeTop
+                                                           multiplier:1.0f
+                                                             constant:0]];
+    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:_tableView
+                                                            attribute:NSLayoutAttributeBottom
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:_scrollView
+                                                            attribute:NSLayoutAttributeBottom
+                                                           multiplier:1.0f
+                                                             constant:0]];
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue
                  sender:(id)sender
@@ -166,11 +211,13 @@
 {
     if (resetScroll) {
         // スクロール初期位置
-        _scrollView.contentOffset = CGPointMake(_scrollView.contentSize.width, 0);
+        _scrollView.contentOffset = CGPointMake(_scrollView.frame.size.width, 0);
         _tableView.contentOffset = CGPointMake(0, 0);
     }
     // タイトル更新
     _titleLabel.text = _header.name;
+    // オクターブ表示更新
+    _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
     // テーブルビュー更新
     [_tableView reloadData];
 }
@@ -373,7 +420,8 @@
 
 - (NSInteger)getCurrentOctave
 {
-    return (NSInteger)(CMBOctaveMin + _scrollView.contentSize.width / _scrollView.contentOffset.x);
+    NSInteger page = _scrollView.contentOffset.x / (NSInteger)_scrollView.frame.size.width;
+    return CMBOctaveMin + page;
 }
 
 #pragma mark - UITableViewDataSource
@@ -492,7 +540,7 @@
     }
     // ページング用スクロールの場合
     else if (scrollView == _scrollView) {
-        // オクターブ表示を更新
+        // オクターブ表示更新
         _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
     }
 }
