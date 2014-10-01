@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OGI-JR-xGh">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="sp-setofont.ttf">
+            <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
@@ -221,6 +221,16 @@
                                         <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYE-0l-Uex">
+                                        <rect key="frame" x="572" y="62" width="20" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="29h-xe-SSa"/>
+                                            <constraint firstAttribute="height" constant="26" id="HAT-PG-Thx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXc-zu-bBA">
                                         <rect key="frame" x="386" y="62" width="20" height="26"/>
                                         <constraints>
@@ -308,8 +318,8 @@
                                             <constraint firstAttribute="height" constant="26" id="znp-zo-fod"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Octave3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge2-C6-zQF">
-                                        <rect key="frame" x="513" y="33" width="79" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge2-C6-zQF">
+                                        <rect key="frame" x="572" y="33" width="20" height="21"/>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
@@ -320,18 +330,15 @@
                                         <color key="textColor" red="1" green="0.0" blue="0.27843138575553894" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYE-0l-Uex">
-                                        <rect key="frame" x="572" y="62" width="20" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="29h-xe-SSa"/>
-                                            <constraint firstAttribute="height" constant="26" id="HAT-PG-Thx"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Octave" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPq-6m-SqI">
+                                        <rect key="frame" x="485" y="33" width="79" height="21"/>
+                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.27843138579999999" alpha="0.14999999999999999" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstItem="4Mm-9S-DeJ" firstAttribute="width" secondItem="KpY-ce-dbc" secondAttribute="width" id="1gY-es-69f"/>
                                     <constraint firstItem="VYk-wa-zDo" firstAttribute="width" secondItem="3SA-2v-on1" secondAttribute="width" id="1xd-5A-nK0"/>
@@ -339,6 +346,7 @@
                                     <constraint firstItem="6is-ct-Zwb" firstAttribute="leading" secondItem="aSg-uY-Uve" secondAttribute="leadingMargin" id="6he-7S-01s"/>
                                     <constraint firstItem="bZJ-Ct-iUY" firstAttribute="leading" secondItem="JSJ-rO-l0D" secondAttribute="trailing" id="6id-Bh-WNo"/>
                                     <constraint firstItem="iWy-y0-np0" firstAttribute="leading" secondItem="V8B-se-TdV" secondAttribute="trailing" id="6wC-iM-kJg"/>
+                                    <constraint firstAttribute="bottom" secondItem="jPq-6m-SqI" secondAttribute="bottom" constant="34" id="7r4-13-FZ3"/>
                                     <constraint firstItem="TiI-PF-7b4" firstAttribute="leading" secondItem="QXc-zu-bBA" secondAttribute="trailing" id="7yN-8s-cGJ"/>
                                     <constraint firstItem="tYE-0l-Uex" firstAttribute="trailing" secondItem="aSg-uY-Uve" secondAttribute="trailingMargin" id="8kt-b5-zxK"/>
                                     <constraint firstItem="VYk-wa-zDo" firstAttribute="width" secondItem="TiI-PF-7b4" secondAttribute="width" id="B5g-ka-7dn"/>
@@ -350,6 +358,7 @@
                                     <constraint firstItem="VYk-wa-zDo" firstAttribute="width" secondItem="Ejv-sB-kdl" secondAttribute="width" id="GLp-Kf-Ly0"/>
                                     <constraint firstItem="6is-ct-Zwb" firstAttribute="leading" secondItem="aSg-uY-Uve" secondAttribute="leadingMargin" id="GTc-p2-Gjb"/>
                                     <constraint firstItem="VYk-wa-zDo" firstAttribute="leading" secondItem="6is-ct-Zwb" secondAttribute="trailing" constant="8" id="IxG-VC-gVO"/>
+                                    <constraint firstItem="jPq-6m-SqI" firstAttribute="top" secondItem="TGT-ur-QoD" secondAttribute="bottom" constant="1" id="KrO-Ha-tqf"/>
                                     <constraint firstItem="hX1-x2-jVn" firstAttribute="leading" secondItem="bZJ-Ct-iUY" secondAttribute="trailing" id="LwF-tN-3Ii"/>
                                     <constraint firstItem="3SA-2v-on1" firstAttribute="leading" secondItem="fcC-a7-4su" secondAttribute="trailing" id="M9t-la-cEn"/>
                                     <constraint firstItem="VYk-wa-zDo" firstAttribute="width" secondItem="KpY-ce-dbc" secondAttribute="width" id="MDM-0C-nAX"/>
@@ -361,9 +370,11 @@
                                     <constraint firstItem="VYk-wa-zDo" firstAttribute="leading" secondItem="6is-ct-Zwb" secondAttribute="trailing" id="XPq-fr-OXd"/>
                                     <constraint firstItem="9sk-mn-4Ku" firstAttribute="leading" secondItem="pPb-qa-SWj" secondAttribute="trailing" id="Y9E-0m-4Am"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="TGT-ur-QoD" secondAttribute="trailing" id="bdL-iw-iVK"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="Ge2-C6-zQF" secondAttribute="bottom" constant="15" id="c3F-9f-blD"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Ge2-C6-zQF" secondAttribute="bottom" constant="34" id="c3F-9f-blD"/>
+                                    <constraint firstItem="Ge2-C6-zQF" firstAttribute="leading" secondItem="jPq-6m-SqI" secondAttribute="trailing" constant="8" id="cX5-64-JwJ"/>
                                     <constraint firstItem="9sk-mn-4Ku" firstAttribute="width" secondItem="VYk-wa-zDo" secondAttribute="width" id="dFz-Nd-d9x"/>
                                     <constraint firstItem="4Mm-9S-DeJ" firstAttribute="leading" secondItem="6un-Vg-Onf" secondAttribute="trailing" id="dxf-2Q-l6l"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ge2-C6-zQF" secondAttribute="bottom" constant="34" id="eBq-s2-bB0"/>
                                     <constraint firstItem="KpY-ce-dbc" firstAttribute="width" secondItem="3SA-2v-on1" secondAttribute="width" id="eFc-J8-30P"/>
                                     <constraint firstItem="6un-Vg-Onf" firstAttribute="leading" secondItem="KpY-ce-dbc" secondAttribute="trailing" id="g9p-UK-KfR"/>
                                     <constraint firstItem="88S-A8-Q3A" firstAttribute="width" secondItem="VYk-wa-zDo" secondAttribute="width" id="gNZ-cU-gy2"/>
@@ -393,6 +404,8 @@
                                         <exclude reference="eFc-J8-30P"/>
                                         <exclude reference="1gY-es-69f"/>
                                         <exclude reference="3cN-9e-aay"/>
+                                        <exclude reference="KrO-Ha-tqf"/>
+                                        <exclude reference="c3F-9f-blD"/>
                                         <exclude reference="8kt-b5-zxK"/>
                                     </mask>
                                 </variation>
@@ -445,10 +458,12 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="headView" destination="aSg-uY-Uve" id="XcF-nD-iIH"/>
+                        <outlet property="octaveLabel" destination="Ge2-C6-zQF" id="hYl-3o-XhN"/>
                         <outlet property="playButton" destination="zHS-0g-qN3" id="cHY-iE-9Mx"/>
                         <outlet property="scrollView" destination="dPC-Sn-I1o" id="yVg-2A-uyo"/>
                         <outlet property="tableView" destination="bKy-8R-19x" id="Vhu-mS-RaV"/>
                         <outlet property="tineView" destination="nIN-k4-Uqe" id="T33-eb-2wS"/>
+                        <outlet property="titleLabel" destination="TGT-ur-QoD" id="Bfk-bh-fNk"/>
                         <segue destination="kGK-1K-za0" kind="presentation" identifier="SongConfig" id="ViF-hj-1bm"/>
                         <segue destination="N8n-7A-X4L" kind="presentation" identifier="SongManage" id="5DY-Rs-aJ2"/>
                     </connections>

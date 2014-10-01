@@ -36,11 +36,16 @@
 {
     NSString *testAbc = @"^C,,3/4_D'";
     NSArray *partss = [CMBUtility noteInfosWithABCString:testAbc];
-    NSLog(@"abc-string to note-infos %@ -> %@", testAbc, partss);
+    NSLog(@"[TEST] abc-string to note-infos %@ -> %@", testAbc, partss);
     for (NSDictionary *parts in partss) {
         CMBNoteData *data = [[CMBNoteData alloc] initWithABCParts:parts];
-        NSLog(@"note-info to note-data %@ -> %@", parts, data);
+        NSLog(@"[TEST] note-info to note-data %@ -> %@", parts, data);
     }
+}
+
+- (void)testColor
+{
+    NSLog(@"[TEST] tint color = %@", [CMBUtility tintColor]);
 }
 
 @end

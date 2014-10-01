@@ -7,6 +7,7 @@
 //
 
 #import "CMBBaseViewController.h"
+#import "CMBUtility.h"
 
 @interface CMBBaseViewController ()
 
@@ -17,7 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"SetoFont-SP" size:19.0]} forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTintColor:[CMBUtility tintColor]];
 }
 
 - (void)didReceiveMemoryWarning

@@ -371,6 +371,11 @@
      }];
 }
 
+- (NSInteger)getCurrentOctave
+{
+    return (NSInteger)(CMBOctaveMin + _scrollView.contentSize.width / _scrollView.contentOffset.x);
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -487,6 +492,8 @@
     }
     // ページング用スクロールの場合
     else if (scrollView == _scrollView) {
+        // オクターブ表示を更新
+        _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
     }
 }
 
@@ -508,6 +515,21 @@
 }
 
 #pragma mark - UIActionSheetDelegate
+
+- (void)willPresentActionSheet:(UIActionSheet *)actionSheet
+{
+    for (UIView *v in actionSheet.subviews) {
+        if ([v isKindOfClass:[UILabel class]]) {
+            UILabel *l = (UILabel *)v;
+            l.font = [UIFont fontWithName:@"SetoFont-SP" size:17.f];
+        }
+        if ([v isKindOfClass:[UIButton class]]) {
+            UIButton *b = (UIButton *)v;
+            b.titleLabel.font = [UIFont fontWithName:@"SetoFont-SP" size:19.f];
+            [b setTitleColor:[CMBUtility tintColor] forState:UIControlStateNormal];
+        }
+    }
+}
 
 -   (void)actionSheet:(UIActionSheet *)actionSheet
  clickedButtonAtIndex:(NSInteger)buttonIndex

@@ -64,6 +64,15 @@ static CMBUtility *_instance = nil;
 //             ];
 }
 
++ (UIColor *)tintColor
+{
+    UIColor *color = [UIApplication sharedApplication].keyWindow.tintColor;
+    if (!color) {
+        color = [UIColor colorWithRed:1.f green:0.f blue:0.278431f alpha:1.f];
+    }
+    return color;
+}
+
 /**
  * Songディレクトリパス取得
  */

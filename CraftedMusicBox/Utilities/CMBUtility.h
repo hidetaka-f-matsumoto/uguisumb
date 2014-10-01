@@ -16,6 +16,8 @@
 + (CMBUtility *)sharedInstance;
 + (NSArray *)noteInfosWithABCString:(NSString *)abc;
 
++ (UIColor *)tintColor;
+
 - (NSString *)getSongDirPath;
 - (NSString *)getSongPathWithFileName:(NSString *)fileName;
 - (NSMutableArray *)getSongInfos;
