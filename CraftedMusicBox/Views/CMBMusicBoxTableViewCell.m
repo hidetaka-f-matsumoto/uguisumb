@@ -23,11 +23,12 @@
     for (NSInteger i=0; i<CMBOctaveRange; i++) {
         NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"CMBMusicBoxOctaveView" owner:self options:nil];
         CMBMusicBoxOctaveView *octaveView = nibs[0];
-        CGRect frame = CGRectMake(320 * i,
-                                  0,
-                                  octaveView.frame.size.width,
-                                  octaveView.frame.size.height);
-        octaveView.frame = frame;
+//        CGRect frame = CGRectMake(320 * i,
+//                                  0,
+//                                  320,
+//                                  43);
+//        octaveView.frame = frame;
+//        octaveView.layoutSize = CGSizeMake(320.f, 43.f);
         octaveView.delegate = self;
         octaveView.octave = [NSNumber numberWithInteger:(CMBOctaveMin + i)];
         [self.contentView addSubview:octaveView];
@@ -55,6 +56,26 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setLayoutSize:(CGSize)layoutSize
+{
+    // 設定
+    _layoutSize = layoutSize;
+    for (NSInteger i=0; i<CMBOctaveRange; i++) {
+        CMBMusicBoxOctaveView *octaveView = _octaveViews[i];
+        CGSize size = CGSizeMake(layoutSize.width / (CGFloat)CMBOctaveRange, layoutSize.height);
+        CGRect frame = CGRectMake(size.width * i, 0.f, size.width, size.height);
+        octaveView.frame = frame;
+        octaveView.layoutSize = size;
+    }
+    // intrinsicContentSizeが変わったことをAuto Layoutに知らせる
+    [self invalidateIntrinsicContentSize];
+}
+
+- (CGSize)intrinsicContentSize
+{
+    return _layoutSize;
 }
 
 - (void)process

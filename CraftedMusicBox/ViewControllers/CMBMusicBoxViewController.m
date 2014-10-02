@@ -461,6 +461,7 @@
             mbCell.parentTableView = _tableView;
             mbCell.tineView = _tineView;
             [mbCell updateWithSequenceOne:_sequences[[NSNumber numberWithInteger:indexPath.row]]];
+            mbCell.layoutSize = [self sizeOfMusicBoxCell];
             cell = mbCell;
             break;
         }
@@ -604,6 +605,22 @@
 }
 
 #pragma mark - CMBMusicBoxTableViewCellDelegate
+
+/**
+ * セルのサイズを返す
+ */
+- (CGSize)sizeOfMusicBoxCell
+{
+    return CGSizeMake(_tableView.frame.size.width, CMBMusicBoxTableViewCellHeight);
+}
+
+/**
+ * 1オクターブのサイズを返す
+ */
+- (CGSize)sizeOfOctave
+{
+    return CGSizeMake(_scrollView.frame.size.width, CMBMusicBoxTableViewCellHeight);
+}
 
 /**
  * 音符がタップされた

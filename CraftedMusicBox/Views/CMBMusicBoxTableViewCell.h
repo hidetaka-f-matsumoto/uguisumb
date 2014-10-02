@@ -10,11 +10,13 @@
 #import "CMBSequenceOneData.h"
 #import "CMBMusicBoxOctaveView.h"
 
-static CGFloat const CMBMusicBoxTableViewCellHeight = 44.0f;
+static CGFloat const CMBMusicBoxTableViewCellHeight = 44.f;
 
 @protocol CMBMusicBoxTableViewCellDelegate <NSObject>
 
 @required
+/** 1オクターブのサイズを返す */
+- (CGSize)sizeOfOctave;
 /** 音符がタップされた */
 - (void)noteDidTapWithInfo:(NSMutableDictionary *)info;
 /** 音符が弾かれた */
@@ -31,6 +33,8 @@ static CGFloat const CMBMusicBoxTableViewCellHeight = 44.0f;
 @property (nonatomic, assign) UITableView *parentTableView;
 @property (nonatomic, assign) UIView *tineView;
 @property (nonatomic, strong) NSMutableArray *octaveViews;
+
+@property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
 
 - (void)process;
 - (void)updateWithSequenceOne:(CMBSequenceOneData *)soData;

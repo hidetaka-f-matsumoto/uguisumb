@@ -29,6 +29,8 @@
 @property (nonatomic, strong) NSNumber *octave;
 @property (nonatomic, readonly, getter = getOnNoteInfos) NSArray *onNoteInfos;
 
+@property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
+
 - (IBAction)noteButtonDidTap:(id)sender;
 
 - (void)updateWithSequenceOneData:(CMBSequenceOneData *)soData;

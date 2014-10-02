@@ -44,6 +44,19 @@
 }
 */
 
+- (void)setLayoutSize:(CGSize)layoutSize
+{
+    // 設定
+    _layoutSize = layoutSize;
+    // intrinsicContentSizeが変わったことをAuto Layoutに知らせる
+    [self invalidateIntrinsicContentSize];
+}
+
+- (CGSize)intrinsicContentSize
+{
+    return _layoutSize;
+}
+
 - (NSArray *)getOnNoteInfos
 {
     NSMutableArray *notes = [NSMutableArray array];
