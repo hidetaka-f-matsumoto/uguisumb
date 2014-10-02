@@ -91,6 +91,7 @@
     _scrollView.delegate = self;
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.scrollsToTop = YES;
 
     // UIScrollView中のコンテンツを調整
     [self adjustScrollViewContents];
@@ -478,16 +479,16 @@
 - (CGFloat)     tableView:(UITableView *)tableView
   heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat height = 0.0f;
+    CGFloat height = 0.f;
     switch (indexPath.section) {
         case 0:
-            height = 88.0f;
+            height = CMBMusicBoxTableViewHeadCellHeight;
             break;
         case 1:
             height = CMBMusicBoxTableViewCellHeight;
             break;
         case 2:
-            height = 88.0f;
+            height = CMBMusicBoxTableViewFootCellHeight;
             break;
         default:
             break;
@@ -520,7 +521,8 @@
     }
 }
 
-- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
+                  willDecelerate:(BOOL)decelerate
 {
     // オルゴールテーブルの場合
     if (scrollView == _tableView) {
@@ -529,6 +531,8 @@
     }
     // ページング用スクロールの場合
     else if (scrollView == _scrollView) {
+        // オクターブ表示更新
+        _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
     }
 }
 
