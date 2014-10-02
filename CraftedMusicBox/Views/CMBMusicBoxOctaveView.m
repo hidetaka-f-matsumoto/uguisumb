@@ -96,9 +96,11 @@
     [_delegate noteDidTapWithInfo:info];
 }
 
-- (void)updateWithSequenceOneData:(CMBSequenceOneData *)soData;
+- (void)updateWithSequenceOneData:(CMBSequenceOneData *)soData
+                            color:(UIColor *)color;
 {
     [self _initViews];
+    self.backgroundColor = color;
     for (CMBNoteData *note in soData.notes) {
         if (!note || note.octave != _octave) {
             continue;

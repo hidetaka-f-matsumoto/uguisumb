@@ -405,7 +405,7 @@
 - (void)scrollAuto:(NSTimer*)timer
 {
     CGPoint offset = _tableView.contentOffset;
-    offset.y = offset.y + (CMBMusicBoxTableViewCellHeight * _header.tempo.floatValue * 4 * CMBTimeDivAutoScroll / 60.0f);
+    offset.y = offset.y + (CMBMusicBoxTableViewCellHeight * _header.speed.floatValue * 4 * CMBTimeDivAutoScroll / 60.0f);
     // 曲中
     if (offset.y < _tableView.contentSize.height) {
         _tableView.contentOffset = offset;
@@ -479,7 +479,8 @@
             mbCell.delegate = self;
             mbCell.parentTableView = _tableView;
             mbCell.tineView = _tineView;
-            [mbCell updateWithSequenceOne:_sequences[[NSNumber numberWithInteger:indexPath.row]]];
+            [mbCell updateWithSequenceOne:_sequences[[NSNumber numberWithInteger:indexPath.row]]
+                                    color:[self cellColorWithRow:indexPath.row]];
             mbCell.layoutSize = [self sizeOfMusicBoxCell];
             cell = mbCell;
             break;
@@ -492,6 +493,17 @@
     }
     
     return cell;
+}
+
+- (UIColor *)cellColorWithRow:(NSInteger)row
+{
+    UIColor *color;
+    if (0 == row / _header.division1.integerValue % 2) {
+        color = [UIColor whiteColor];
+    } else {
+        color = [CMBUtility tintColorAlpha25];
+    }
+    return color;
 }
 
 - (CGFloat)     tableView:(UITableView *)tableView

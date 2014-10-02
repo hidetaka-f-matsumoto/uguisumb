@@ -19,8 +19,7 @@
 		08883ADE1956CC6A00F7EB68 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08883ADC1956CC6A00F7EB68 /* InfoPlist.strings */; };
 		08883AE01956CC6A00F7EB68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883ADF1956CC6A00F7EB68 /* main.m */; };
 		08883AE41956CC6A00F7EB68 /* CMBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883AE31956CC6A00F7EB68 /* CMBAppDelegate.m */; };
-		08883AE71956CC6A00F7EB68 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08883AE51956CC6A00F7EB68 /* Main_iPhone.storyboard */; };
-		08883AEA1956CC6A00F7EB68 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08883AE81956CC6A00F7EB68 /* Main_iPad.storyboard */; };
+		08883AE71956CC6A00F7EB68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08883AE51956CC6A00F7EB68 /* Main.storyboard */; };
 		08883AEF1956CC6A00F7EB68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08883AEE1956CC6A00F7EB68 /* Images.xcassets */; };
 		08883AF61956CC6A00F7EB68 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AF51956CC6A00F7EB68 /* XCTest.framework */; };
 		08883AF71956CC6A00F7EB68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD31956CC6A00F7EB68 /* Foundation.framework */; };
@@ -95,8 +94,7 @@
 		08883AE11956CC6A00F7EB68 /* CraftedMusicBox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CraftedMusicBox-Prefix.pch"; sourceTree = "<group>"; };
 		08883AE21956CC6A00F7EB68 /* CMBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBAppDelegate.h; sourceTree = "<group>"; };
 		08883AE31956CC6A00F7EB68 /* CMBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBAppDelegate.m; sourceTree = "<group>"; };
-		08883AE61956CC6A00F7EB68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		08883AE91956CC6A00F7EB68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		08883AE61956CC6A00F7EB68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08883AEE1956CC6A00F7EB68 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		08883AF41956CC6A00F7EB68 /* CraftedMusicBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CraftedMusicBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08883AF51956CC6A00F7EB68 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -240,8 +238,7 @@
 				08883B191956D3E300F7EB68 /* Utilities */,
 				08883AE21956CC6A00F7EB68 /* CMBAppDelegate.h */,
 				08883AE31956CC6A00F7EB68 /* CMBAppDelegate.m */,
-				08883AE51956CC6A00F7EB68 /* Main_iPhone.storyboard */,
-				08883AE81956CC6A00F7EB68 /* Main_iPad.storyboard */,
+				08883AE51956CC6A00F7EB68 /* Main.storyboard */,
 				08883AEE1956CC6A00F7EB68 /* Images.xcassets */,
 				080616FF1957286E00C46771 /* Images */,
 				08B66F82198E004300376683 /* Sounds */,
@@ -478,13 +475,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08883AEA1956CC6A00F7EB68 /* Main_iPad.storyboard in Resources */,
 				08DE171D19D7A92200315BE4 /* play.png in Resources */,
 				08C696511984260C0096BC20 /* CMBMusicBoxOctaveView.xib in Resources */,
 				08DE171C19D7A92200315BE4 /* pause.png in Resources */,
 				08883AEF1956CC6A00F7EB68 /* Images.xcassets in Resources */,
 				08B66F8B198E031100376683 /* xylophone.D4.wav in Resources */,
-				08883AE71956CC6A00F7EB68 /* Main_iPhone.storyboard in Resources */,
+				08883AE71956CC6A00F7EB68 /* Main.storyboard in Resources */,
 				08DE172019D7B3AB00315BE4 /* mb.bump.on.png in Resources */,
 				08DE171E19D7A92200315BE4 /* stop.png in Resources */,
 				08B66F89198E031100376683 /* xylophone.C4.wav in Resources */,
@@ -567,20 +563,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		08883AE51956CC6A00F7EB68 /* Main_iPhone.storyboard */ = {
+		08883AE51956CC6A00F7EB68 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				08883AE61956CC6A00F7EB68 /* Base */,
 			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		08883AE81956CC6A00F7EB68 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08883AE91956CC6A00F7EB68 /* Base */,
-			);
-			name = Main_iPad.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		08883AFE1956CC6A00F7EB68 /* InfoPlist.strings */ = {

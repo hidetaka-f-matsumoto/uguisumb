@@ -89,12 +89,14 @@
 }
 
 - (void)updateWithSequenceOne:(CMBSequenceOneData *)soData
+                        color:(UIColor *)color
 {
     for (CMBMusicBoxOctaveView *octaveView in _octaveViews) {
         if (!octaveView) {
             continue;
         }
-        [octaveView updateWithSequenceOneData:soData];
+        [octaveView updateWithSequenceOneData:soData
+                                        color:color];
     }
 }
 

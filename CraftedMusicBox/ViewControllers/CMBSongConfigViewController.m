@@ -20,12 +20,12 @@
     [super viewDidLoad];
     
     _nameText.delegate = self;
-    _tempoSlider.minimumValue = CMBTempoMin;
-    _tempoSlider.maximumValue = CMBTempoMax;
-    [_tempoSlider addTarget:self action:@selector(tempoSliderDidChange:) forControlEvents:UIControlEventValueChanged];
-    _tempoStepper.minimumValue = CMBTempoMin;
-    _tempoStepper.maximumValue = CMBTempoMax;
-    _tempoStepper.stepValue = 1;
+    _speedSlider.minimumValue = CMBSpeedMin;
+    _speedSlider.maximumValue = CMBSpeedMax;
+    [_speedSlider addTarget:self action:@selector(tempoSliderDidChange:) forControlEvents:UIControlEventValueChanged];
+    _speedStepper.minimumValue = CMBSpeedMin;
+    _speedStepper.maximumValue = CMBSpeedMax;
+    _speedStepper.stepValue = 1;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -33,10 +33,11 @@
     [super viewWillAppear:animated];
     
     _nameText.text = _header.name;
-    _tempoLabel.text = [NSString stringWithFormat:@"%zd", _header.tempo.integerValue];
-    _tempoSlider.value = _header.tempo.floatValue;
-    _tempoStepper.value = _header.tempo.floatValue;
-    [_divisionControl setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division]];
+    _speedLabel.text = [NSString stringWithFormat:@"%zd", _header.speed.integerValue];
+    _speedSlider.value = _header.speed.floatValue;
+    _speedStepper.value = _header.speed.floatValue;
+    [_division1Control setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division1]];
+    [_division2Control setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division2]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,8 +59,9 @@
 - (void)applyConfig
 {
     _header.name = _nameText.text;
-    _header.tempo = [NSNumber numberWithInteger:(NSInteger)_tempoSlider.value];
-    _header.division = CMBDivisions[_divisionControl.selectedSegmentIndex];
+    _header.speed = [NSNumber numberWithInteger:(NSInteger)_speedSlider.value];
+    _header.division1 = CMBDivisions[_division1Control.selectedSegmentIndex];
+    _header.division2 = CMBDivisions[_division2Control.selectedSegmentIndex];
 }
 
 - (IBAction)applyButtonDidTap:(id)sender
@@ -117,10 +119,10 @@
                      completion:nil];
 }
 
-- (IBAction)tempoStepperDidTap:(id)sender
+- (IBAction)speedStepperDidTap:(id)sender
 {
-    _tempoLabel.text = [NSString stringWithFormat:@"%zd", (NSInteger)_tempoStepper.value];
-    _tempoSlider.value = _tempoStepper.value;
+    _speedLabel.text = [NSString stringWithFormat:@"%zd", (NSInteger)_speedStepper.value];
+    _speedSlider.value = _speedStepper.value;
 }
 
 #pragma mark - UITextViewDelegate
@@ -155,8 +157,8 @@
 
 - (void)tempoSliderDidChange:(id)sender
 {
-    _tempoLabel.text = [NSString stringWithFormat:@"%zd", (NSInteger)_tempoSlider.value];
-    _tempoStepper.value = _tempoSlider.value;
+    _speedLabel.text = [NSString stringWithFormat:@"%zd", (NSInteger)_speedSlider.value];
+    _speedStepper.value = _speedSlider.value;
 }
 
 @end

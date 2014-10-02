@@ -594,14 +594,14 @@
                                 <color key="textColor" red="0.98587214946746826" green="0.30782565710745596" blue="0.59978766584444076" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Speed (Tempo):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw8-Dg-In0">
-                                <rect key="frame" x="16" y="139" width="120" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Speed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw8-Dg-In0">
+                                <rect key="frame" x="16" y="139" width="65" height="21"/>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                 <color key="textColor" red="0.98587214950000002" green="0.30782565709999998" blue="0.59978766579999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Division (Beat):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-PQ-DvD">
-                                <rect key="frame" x="16" y="214" width="155" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Division:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-PQ-DvD">
+                                <rect key="frame" x="16" y="214" width="77" height="21"/>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                 <color key="textColor" red="0.98587214950000002" green="0.30782565709999998" blue="0.59978766579999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -644,10 +644,10 @@
                                     <action selector="applyButtonDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="5tS-gL-qiE"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0x5-ul-Bf8">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0x5-ul-Bf8">
                                 <rect key="frame" x="14" y="176" width="572" height="31"/>
                             </slider>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bF1-Hh-rgh">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bF1-Hh-rgh">
                                 <rect key="frame" x="16" y="243" width="568" height="29"/>
                                 <segments>
                                     <segment title="2"/>
@@ -660,16 +660,29 @@
                                     <segment title="11"/>
                                 </segments>
                             </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="We1-Ap-gzE">
+                                <rect key="frame" x="16" y="279" width="568" height="29"/>
+                                <segments>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                    <segment title="6"/>
+                                    <segment title="7"/>
+                                    <segment title="8"/>
+                                    <segment title="11"/>
+                                </segments>
+                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="120" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apQ-aw-88J">
-                                <rect key="frame" x="144" y="139" width="64" height="21"/>
+                                <rect key="frame" x="89" y="139" width="64" height="21"/>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-lZ-Lhc">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-lZ-Lhc">
                                 <rect key="frame" x="490" y="139" width="94" height="29"/>
                                 <connections>
-                                    <action selector="tempoStepperDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="jid-3x-fSi"/>
+                                    <action selector="speedStepperDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="qKK-ZG-nCE"/>
                                 </connections>
                             </stepper>
                         </subviews>
@@ -680,8 +693,11 @@
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="top" secondItem="apQ-aw-88J" secondAttribute="bottom" constant="8" id="3Mt-No-Zsg"/>
                             <constraint firstItem="mvv-i9-5PE" firstAttribute="top" secondItem="Xhi-Gf-Npa" secondAttribute="bottom" constant="8" id="7ZF-Ci-4mD"/>
                             <constraint firstItem="Loi-4t-azG" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="DVI-O6-jug"/>
+                            <constraint firstItem="We1-Ap-gzE" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="Et1-lw-akn"/>
+                            <constraint firstAttribute="centerY" secondItem="IcS-PQ-DvD" secondAttribute="centerY" id="FQ4-h1-XUn"/>
                             <constraint firstItem="k3U-lZ-Lhc" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="G4h-P2-dfo"/>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="HlS-tC-6fe"/>
+                            <constraint firstItem="We1-Ap-gzE" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="IBv-lw-sxr"/>
                             <constraint firstItem="bw8-Dg-In0" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="JUi-DV-T7C"/>
                             <constraint firstItem="bF1-Hh-rgh" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="MHn-Wh-iQ4"/>
                             <constraint firstItem="apQ-aw-88J" firstAttribute="leading" secondItem="bw8-Dg-In0" secondAttribute="trailing" constant="8" id="Mci-E4-rVq"/>
@@ -698,8 +714,10 @@
                             <constraint firstItem="bF1-Hh-rgh" firstAttribute="top" secondItem="IcS-PQ-DvD" secondAttribute="bottom" constant="8" id="cYz-iW-9U2"/>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="evJ-7f-rhO"/>
                             <constraint firstItem="ih3-UP-yhx" firstAttribute="top" secondItem="mvv-i9-5PE" secondAttribute="bottom" constant="8" id="gHN-se-JOK"/>
+                            <constraint firstItem="apQ-aw-88J" firstAttribute="centerY" secondItem="bw8-Dg-In0" secondAttribute="centerY" id="idA-tI-P3Z"/>
                             <constraint firstItem="4xO-NP-Jtg" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="ioq-PR-f9G"/>
                             <constraint firstItem="mvv-i9-5PE" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="iuP-oL-5CL"/>
+                            <constraint firstItem="We1-Ap-gzE" firstAttribute="top" secondItem="bF1-Hh-rgh" secondAttribute="bottom" constant="8" id="jf5-Ho-LMP"/>
                             <constraint firstItem="C76-f1-BiQ" firstAttribute="top" secondItem="Loi-4t-azG" secondAttribute="bottom" constant="20" id="mVt-jW-Tbi"/>
                             <constraint firstItem="Loi-4t-azG" firstAttribute="top" secondItem="4xO-NP-Jtg" secondAttribute="bottom" constant="8" id="nuX-lf-uLA"/>
                             <constraint firstItem="mvv-i9-5PE" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="vQP-5P-UdL"/>
@@ -711,10 +729,13 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="vQP-5P-UdL"/>
+                                <exclude reference="V7K-rJ-cbq"/>
                                 <exclude reference="0Li-MD-XpV"/>
                                 <exclude reference="3Mt-No-Zsg"/>
                                 <exclude reference="Sds-ZG-rnD"/>
                                 <exclude reference="evJ-7f-rhO"/>
+                                <exclude reference="FQ4-h1-XUn"/>
+                                <exclude reference="QEJ-OO-LMC"/>
                                 <exclude reference="RdF-84-PYt"/>
                                 <exclude reference="ZTT-L4-v0m"/>
                             </mask>
@@ -728,12 +749,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="divisionControl" destination="bF1-Hh-rgh" id="1hz-QT-AIA"/>
+                        <outlet property="division1Control" destination="bF1-Hh-rgh" id="JgH-Xf-kfS"/>
+                        <outlet property="division2Control" destination="We1-Ap-gzE" id="3Xc-pN-Nwe"/>
                         <outlet property="nameText" destination="ih3-UP-yhx" id="swY-5k-WpR"/>
                         <outlet property="saveButton" destination="Loi-4t-azG" id="dfL-X5-HlS"/>
-                        <outlet property="tempoLabel" destination="apQ-aw-88J" id="79Q-8g-Kne"/>
-                        <outlet property="tempoSlider" destination="0x5-ul-Bf8" id="o7R-f8-hnC"/>
-                        <outlet property="tempoStepper" destination="k3U-lZ-Lhc" id="I2X-FQ-TxM"/>
+                        <outlet property="speedLabel" destination="apQ-aw-88J" id="UAo-s9-iRz"/>
+                        <outlet property="speedSlider" destination="0x5-ul-Bf8" id="UQW-4q-65Y"/>
+                        <outlet property="speedStepper" destination="k3U-lZ-Lhc" id="zXt-Or-uFT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwA-x7-gaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

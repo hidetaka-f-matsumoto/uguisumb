@@ -37,6 +37,7 @@ static CGFloat const CMBMusicBoxTableViewCellHeight = 44.f;
 @property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
 
 - (void)process;
-- (void)updateWithSequenceOne:(CMBSequenceOneData *)soData;
+- (void)updateWithSequenceOne:(CMBSequenceOneData *)soData
+                        color:(UIColor *)color;
 
 @end

@@ -17,6 +17,8 @@
 + (NSArray *)noteInfosWithABCString:(NSString *)abc;
 
 + (UIColor *)tintColor;
++ (UIColor *)tintColorAlpha50;
++ (UIColor *)tintColorAlpha25;
 
 - (NSString *)getSongDirPath;
 - (NSString *)getSongPathWithFileName:(NSString *)fileName;

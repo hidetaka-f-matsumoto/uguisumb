@@ -27,13 +27,14 @@
 @property (atomic, assign) CMBSongHeaderData *header;
 
 @property (nonatomic, weak) IBOutlet UITextField *nameText;
-@property (nonatomic, weak) IBOutlet UISlider *tempoSlider;
-@property (nonatomic, weak) IBOutlet UIStepper *tempoStepper;
-@property (nonatomic, weak) IBOutlet UILabel *tempoLabel;
-@property (nonatomic, weak) IBOutlet UISegmentedControl *divisionControl;
+@property (nonatomic, weak) IBOutlet UISlider *speedSlider;
+@property (nonatomic, weak) IBOutlet UIStepper *speedStepper;
+@property (nonatomic, weak) IBOutlet UILabel *speedLabel;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *division1Control;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *division2Control;
 @property (nonatomic, weak) IBOutlet UIButton *saveButton;
 
-- (IBAction)tempoStepperDidTap:(id)sender;
+- (IBAction)speedStepperDidTap:(id)sender;
 - (IBAction)applyButtonDidTap:(id)sender;
 - (IBAction)saveButtonDidTap:(id)sender;
 

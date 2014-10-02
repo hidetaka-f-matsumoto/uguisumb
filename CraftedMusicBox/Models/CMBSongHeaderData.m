@@ -20,8 +20,9 @@
     self = [super init];
     if (self) {
         _name = (info && info[@"name"]) ? info[@"name"] : @"";
-        _tempo = (info && info[@"tempo"]) ? info[@"tempo"] : [NSNumber numberWithFloat:CMBTempoDefault];
-        _division = (info && info[@"division"]) ? info[@"division"] : [NSNumber numberWithInteger:CMBDivisionDefault];
+        _speed = (info && info[@"speed"]) ? info[@"speed"] : [NSNumber numberWithFloat:CMBSpeedDefault];
+        _division1 = (info && info[@"division1"]) ? info[@"division1"] : [NSNumber numberWithInteger:CMBDivisionDefault];
+        _division2 = (info && info[@"division2"]) ? info[@"division2"] : [NSNumber numberWithInteger:CMBDivisionDefault];
     }
     return self;
 }
@@ -32,8 +33,9 @@
     return [NSDictionary dictionaryWithObjectsAndKeys:
             version, @"version",
             _name, @"name",
-            _tempo, @"tempo",
-            _division, @"division",
+            _speed, @"speed",
+            _division1, @"division1",
+            _division2, @"division2",
             nil];
 }
 

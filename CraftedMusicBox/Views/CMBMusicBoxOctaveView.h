@@ -33,7 +33,8 @@
 
 - (IBAction)noteButtonDidTap:(id)sender;
 
-- (void)updateWithSequenceOneData:(CMBSequenceOneData *)soData;
+- (void)updateWithSequenceOneData:(CMBSequenceOneData *)soData
+                            color:(UIColor *)color;
 
 + (NSString *)scaleWithIndex:(NSInteger)index;
 + (NSInteger)indexWithScale:(NSString *)scale;

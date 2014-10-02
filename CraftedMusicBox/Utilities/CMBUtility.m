@@ -73,6 +73,16 @@ static CMBUtility *_instance = nil;
     return color;
 }
 
++ (UIColor *)tintColorAlpha50
+{
+    return [UIColor colorWithRed:1.f green:0.f blue:0.278431f alpha:0.5f];
+}
+
++ (UIColor *)tintColorAlpha25
+{
+    return [UIColor colorWithRed:1.f green:0.f blue:0.278431f alpha:0.25f];
+}
+
 /**
  * Songディレクトリパス取得
  */
