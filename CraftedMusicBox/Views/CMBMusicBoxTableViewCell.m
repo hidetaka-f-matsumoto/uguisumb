@@ -23,12 +23,6 @@
     for (NSInteger i=0; i<CMBOctaveRange; i++) {
         NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"CMBMusicBoxOctaveView" owner:self options:nil];
         CMBMusicBoxOctaveView *octaveView = nibs[0];
-//        CGRect frame = CGRectMake(320 * i,
-//                                  0,
-//                                  320,
-//                                  43);
-//        octaveView.frame = frame;
-//        octaveView.layoutSize = CGSizeMake(320.f, 43.f);
         octaveView.delegate = self;
         octaveView.octave = [NSNumber numberWithInteger:(CMBOctaveMin + i)];
         [self.contentView addSubview:octaveView];
