@@ -15,6 +15,7 @@
 {
     NSTimer *_timer;
     BOOL _isPlaying;
+    BOOL _isStopping;
     BOOL _isFirstViewWillAppear;
     BOOL _isFirstViewDidAppear;
     CGPoint _scrollPointBegin;
@@ -37,6 +38,7 @@
 {
     _timer = nil;
     _isPlaying = NO;
+    _isStopping = NO;
     _scrollPointBegin = CGPointZero;
     _sequences = [NSMutableDictionary dictionary];
     _header = [[CMBSongHeaderData alloc] init];
@@ -229,6 +231,11 @@
 - (void)playWithScale:(NSString *)scale
                octave:(NSNumber *)octave
 {
+    // ミュート中は鳴らさない
+    if ([self isMute]) {
+        return;
+    }
+    // 鳴らす
     SystemSoundID sound = [_sounds[octave][scale] unsignedIntValue];
     if (sound) {
         AudioServicesPlaySystemSound(sound);
@@ -283,6 +290,9 @@
  */
 - (void)stopWithAnimation:(BOOL)animation
 {
+    // 停止フラグon
+    _isStopping = YES;
+    
     if (_isPlaying) {
         // タイマー停止
         [_timer invalidate];
@@ -298,8 +308,16 @@
     // スクロール許可
     [_scrollView setScrollEnabled:YES];
     [_tableView setScrollEnabled:YES];
-    // フラグoff
+    // 再生フラグoff
     _isPlaying = NO;
+}
+
+/**
+ * ミュート中か
+ */
+- (BOOL)isMute
+{
+    return _isStopping;
 }
 
 /**
@@ -503,6 +521,17 @@
 
 #pragma mark - UIScrollViewDelegate
 
+- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
+{
+    _isStopping = YES;
+    return YES;
+}
+
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView
+{
+    _isStopping = NO;
+}
+
 - (void)scrollViewWillBeginDragging:(UIScrollView*)scrollView
 {
     // オルゴールテーブルの場合
@@ -526,8 +555,10 @@
 {
     // オルゴールテーブルの場合
     if (scrollView == _tableView) {
-        // ヘッダViewを表示
-        [self showHeadView];
+        if (!decelerate) {
+            // ヘッダViewを表示
+            [self showHeadView];
+        }
     }
     // ページング用スクロールの場合
     else if (scrollView == _scrollView) {
@@ -564,6 +595,14 @@
     }
     // ページング用スクロールの場合
     else if (scrollView == _scrollView) {
+    }
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    // 停止中フラグonならoffにする
+    if (_isStopping) {
+        _isStopping = NO;
     }
 }
 
