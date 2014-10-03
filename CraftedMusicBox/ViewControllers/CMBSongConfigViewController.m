@@ -8,6 +8,7 @@
 
 #import "CMBSongConfigViewController.h"
 #import "CMBUtility.h"
+#import "UIAlertView+Blocks.h"
 
 @interface CMBSongConfigViewController ()
 
@@ -64,6 +65,31 @@
     _header.division2 = CMBDivisions[_division2Control.selectedSegmentIndex];
 }
 
+- (void)saveSong
+{
+    [self applyConfig];
+    // 保存実行
+    BOOL isSuccess = [[CMBUtility sharedInstance] saveSongWithSequences:_sequences
+                                                                 header:_header
+                                                               fileName:_nameText.text];
+    if (!isSuccess) {
+        // 失敗
+        NSString *title = @"Save song";
+        NSString *message = [NSString stringWithFormat:@"Fail to save %@.", _nameText.text];
+        // 通知ダイアログ
+        [self showAlertDialogWithTitle:title
+                               message:message
+                              handler1:nil
+                              handler2:nil];
+    }
+    // 閉じる
+    [self dismissViewControllerAnimated:YES
+                             completion:^(void)
+     {
+         [_delegate songDidSaveWithName:_nameText.text];
+     }];
+}
+
 - (IBAction)applyButtonDidTap:(id)sender
 {
     [self applyConfig];
@@ -75,48 +101,16 @@
 - (IBAction)saveButtonDidTap:(id)sender
 {
     // 確認ダイアログ
-    UIAlertController *alertController =
-    [UIAlertController alertControllerWithTitle:@"Save song"
-                                        message:[NSString stringWithFormat:@"You wanna save %@?", _nameText.text]
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    // OK処理
-    [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction *action)
-    {
-        [self applyConfig];
-        // 保存実行
-        BOOL isSuccess = [[CMBUtility sharedInstance] saveSongWithSequences:_sequences
-                                                                     header:_header
-                                                                   fileName:_nameText.text];
-        if (!isSuccess) {
-            // 失敗
-            UIAlertController *alertController =
-            [UIAlertController alertControllerWithTitle:@"Save song"
-                                                message:[NSString stringWithFormat:@"Fail to save %@.", _nameText.text]
-                                         preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                                style:UIAlertActionStyleDefault
-                                                              handler:nil]];
-            [self presentViewController:alertController
-                               animated:YES
-                             completion:nil];
-        }
-        // 閉じる
-        [self dismissViewControllerAnimated:YES
-                                 completion:^(void)
-        {
-            [_delegate songDidSaveWithName:_nameText.text];
-        }];
-    }]];
-    // Cancel処理
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:nil]];
-    // ダイアログを表示
-    [self presentViewController:alertController
-                       animated:YES
-                     completion:nil];
+    NSString *title = @"Save song";
+    NSString *message = [NSString stringWithFormat:@"You wanna save %@?", _nameText.text];
+    [self showConfirmDialogWithTitle:title
+                             message:message
+                            handler1:^(UIAlertAction *action) {
+                                [self saveSong];
+                            }
+                            handler2:^(void) {
+                                [self saveSong];
+                            }];
 }
 
 - (IBAction)speedStepperDidTap:(id)sender

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CMBBaseViewController.h"
 
-@interface CMBBaseModalViewController : UIViewController
+@interface CMBBaseModalViewController : CMBBaseViewController
 
 - (IBAction)closeButtonDidTap:(id)sender;
 

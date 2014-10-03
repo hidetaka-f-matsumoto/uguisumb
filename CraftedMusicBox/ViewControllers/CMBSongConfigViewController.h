@@ -23,7 +23,7 @@
 @interface CMBSongConfigViewController : CMBBaseModalViewController <UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (nonatomic, assign) id<CMBSongConfigDelegate> delegate;
-@property (atomic, assign) NSDictionary *sequences;
+@property (atomic, assign) NSMutableDictionary *sequences;
 @property (atomic, assign) CMBSongHeaderData *header;
 
 @property (nonatomic, weak) IBOutlet UITextField *nameText;

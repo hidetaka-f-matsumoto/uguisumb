@@ -10,4 +10,13 @@
 
 @interface CMBBaseViewController : UIViewController
 
+- (void)showAlertDialogWithTitle:(NSString *)title
+                         message:(NSString *)message
+                        handler1:(void (^)(UIAlertAction *action))handler1
+                        handler2:(void (^)(void))handler2;
+- (void)showConfirmDialogWithTitle:(NSString *)title
+                           message:(NSString *)message
+                          handler1:(void (^)(UIAlertAction *action))handler1
+                          handler2:(void (^)(void))handler2;
+
 @end

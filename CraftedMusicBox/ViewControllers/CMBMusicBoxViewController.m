@@ -732,19 +732,12 @@
 
 - (void)songDidSaveWithName:(NSString *)name
 {
-    // 確認ダイアログ
-    UIAlertController *alertController =
-    [UIAlertController alertControllerWithTitle:@"Save song"
-                                        message:[NSString stringWithFormat:@"Complete to save the song as %@.", name]
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    // OK処理
-    [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:nil]];
-    // ダイアログを表示
-    [self presentViewController:alertController
-                       animated:YES
-                     completion:nil];
+    NSString *title = @"Save song";
+    NSString *message = [NSString stringWithFormat:@"Complete to save the song as %@.", name];
+    [self showAlertDialogWithTitle:title
+                           message:message
+                          handler1:nil
+                          handler2:nil];
 }
 
 #pragma mark - CMBSongManageDelegate

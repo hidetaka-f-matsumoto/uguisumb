@@ -106,13 +106,35 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:songCell];
     switch (index) {
         case 0:
-            // Load button was pressed;
-            [self loadSongWithInfo:songCell.info];
+        {
+            // Load button was pressed
+            NSString *title = @"Load song";
+            NSString *message = [NSString stringWithFormat:@"You wanna load %@?", songCell.info[@"name"]];
+            [self showConfirmDialogWithTitle:title
+                                     message:message
+                                    handler1:^(UIAlertAction *action) {
+                                        [self loadSongWithInfo:songCell.info];
+                                    }
+                                    handler2:^(void) {
+                                        [self loadSongWithInfo:songCell.info];
+                                    }];
             break;
+        }
         case 1:
+        {
             // Delete button was pressed
-            [self deleteSongWithInfo:songCell.info indexPath:cellIndexPath];
+            NSString *title = @"Delete song";
+            NSString *message = [NSString stringWithFormat:@"You wanna delete %@?", songCell.info[@"name"]];
+            [self showConfirmDialogWithTitle:title
+                                     message:message
+                                    handler1:^(UIAlertAction *action) {
+                                        [self deleteSongWithInfo:songCell.info indexPath:cellIndexPath];
+                                    }
+                                    handler2:^(void) {
+                                        [self deleteSongWithInfo:songCell.info indexPath:cellIndexPath];
+                                    }];
             break;
+        }
         default:
             break;
     }
@@ -120,93 +142,47 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (void)loadSongWithInfo:(NSDictionary *)songInfo
 {
-    // 確認ダイアログ
-    UIAlertController *alertController =
-    [UIAlertController alertControllerWithTitle:@"Load song"
-                                        message:[NSString stringWithFormat:@"You wanna load %@?", songInfo[@"name"]]
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    // OK処理
-    [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction *action)
-    {
-        // シーケンス、ヘッダを読み込み
-        NSMutableDictionary *sequences;
-        CMBSongHeaderData *header;
-        BOOL isSuccess = [[CMBUtility sharedInstance] loadSongWithSequences:&sequences
-                                                                     header:&header
-                                                                   fileName:songInfo[@"name"]];
-        if (!isSuccess) {
-            // 失敗
-            UIAlertController *alertController =
-            [UIAlertController alertControllerWithTitle:@"Load song"
-                                                message:[NSString stringWithFormat:@"Fail to load %@.", songInfo[@"name"]]
-                                         preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                                style:UIAlertActionStyleDefault
-                                                              handler:nil]];
-            [self presentViewController:alertController
-                               animated:YES
-                             completion:nil];
-            return;
-        }
-        // 画面を閉じてデリゲートに通知する
-        [self dismissViewControllerAnimated:YES completion:^(void) {
-            [_delegate songDidLoadWithSequence:sequences
-                                        header:header];
-        }];
-    }]];
-    // Cancel処理
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:nil]];
-    // ダイアログを表示
-    [self presentViewController:alertController
-                       animated:YES
-                     completion:nil];
+    // シーケンス、ヘッダを読み込み
+    NSMutableDictionary *sequences;
+    CMBSongHeaderData *header;
+    BOOL isSuccess = [[CMBUtility sharedInstance] loadSongWithSequences:&sequences
+                                                                 header:&header
+                                                               fileName:songInfo[@"name"]];
+    if (!isSuccess) {
+        // 失敗
+        NSString *title = @"Load song";
+        NSString *message = [NSString stringWithFormat:@"Fail to load %@.", songInfo[@"name"]];
+        [self showAlertDialogWithTitle:title
+                               message:message
+                              handler1:nil
+                              handler2:nil];
+        return;
+    }
+    // 画面を閉じてデリゲートに通知する
+    [self dismissViewControllerAnimated:YES completion:^(void) {
+        [_delegate songDidLoadWithSequence:sequences
+                                    header:header];
+    }];
 }
 
 - (void)deleteSongWithInfo:(NSDictionary *)songInfo
                  indexPath:(NSIndexPath *)indexPath
 {
-    // 確認ダイアログ
-    UIAlertController *alertController =
-    [UIAlertController alertControllerWithTitle:@"Delete song"
-                                        message:[NSString stringWithFormat:@"You wanna delete %@?", songInfo[@"name"]]
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    // OK処理
-    [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction *action)
-    {
-        BOOL isSuccess = [[CMBUtility sharedInstance] deleteSongWithFileName:songInfo[@"name"]];
-        if (!isSuccess) {
-            // 失敗
-            UIAlertController *alertController =
-            [UIAlertController alertControllerWithTitle:@"Delete song"
-                                                message:[NSString stringWithFormat:@"Fail to delete %@.", songInfo[@"name"]]
-                                         preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                                style:UIAlertActionStyleDefault
-                                                              handler:nil]];
-            [self presentViewController:alertController
-                               animated:YES
-                             completion:nil];
-            return;
-        }
-        // 表示更新
-        [_songInfos removeObjectAtIndex:indexPath.row];
-        [self.tableView deleteRowsAtIndexPaths:@[indexPath]
-                              withRowAnimation:UITableViewRowAnimationAutomatic];
-    }]];
-    // Cancel処理
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:nil]];
-    // ダイアログを表示
-    [self presentViewController:alertController
-                       animated:YES
-                     completion:nil];
+    BOOL isSuccess = [[CMBUtility sharedInstance] deleteSongWithFileName:songInfo[@"name"]];
+    if (!isSuccess) {
+        // 失敗
+        NSString *title = @"Delete song";
+        NSString *message = [NSString stringWithFormat:@"Fail to delete %@.", songInfo[@"name"]];
+        [self showAlertDialogWithTitle:title
+                               message:message
+                              handler1:nil
+                              handler2:nil];
+        return;
+    }
+    // 表示更新
+    [_songInfos removeObjectAtIndex:indexPath.row];
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 @end
