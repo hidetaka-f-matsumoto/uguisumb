@@ -687,6 +687,7 @@
                             </stepper>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="03z-wv-o1e"/>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="0Li-MD-XpV"/>

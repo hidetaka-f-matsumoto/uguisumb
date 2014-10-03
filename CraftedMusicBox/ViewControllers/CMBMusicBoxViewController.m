@@ -10,6 +10,7 @@
 #import "CMBMusicBoxViewController.h"
 #import "CMBMusicBoxTableViewCell.h"
 #import "CMBUtility.h"
+#import "UIColor+CMBTools.h"
 
 @interface CMBMusicBoxViewController ()
 {
@@ -497,13 +498,19 @@
 
 - (UIColor *)cellColorWithRow:(NSInteger)row
 {
-    UIColor *color;
+    UIColor *d1Color;
+    UIColor *d2Color;
     if (0 == row / _header.division1.integerValue % 2) {
-        color = [UIColor whiteColor];
+        d1Color = [CMBUtility whiteColorAlpha25];
     } else {
-        color = [CMBUtility tintColorAlpha25];
+        d1Color = [CMBUtility tintColorAlpha25];
     }
-    return color;
+    if (0 == row / _header.division1.integerValue / _header.division2.integerValue % 2) {
+        d2Color = [CMBUtility whiteColorAlpha25];
+    } else {
+        d2Color = [CMBUtility yellowColorAlpha25];
+    }
+    return [d1Color blendWithColor:d2Color alpha:0.5f];
 }
 
 - (CGFloat)     tableView:(UITableView *)tableView

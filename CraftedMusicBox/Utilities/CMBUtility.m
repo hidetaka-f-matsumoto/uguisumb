@@ -83,6 +83,31 @@ static CMBUtility *_instance = nil;
     return [UIColor colorWithRed:1.f green:0.f blue:0.278431f alpha:0.25f];
 }
 
++ (UIColor *)whiteColorAlpha25
+{
+    return [UIColor colorWithRed:1.f green:1.f blue:1.f alpha:0.25f];
+}
+
++ (UIColor *)yellowColorAlpha25
+{
+    return [UIColor colorWithRed:1.f green:1.f blue:0.5f alpha:0.25f];
+}
+
++ (UIColor *)redColorAlpha25
+{
+    return [UIColor colorWithRed:1.f green:0.f blue:0.f alpha:0.25f];
+}
+
++ (UIColor *)greenColorAlpha25
+{
+    return [UIColor colorWithRed:0.f green:1.f blue:0.f alpha:0.25f];
+}
+
++ (UIColor *)blueColorAlpha25
+{
+    return [UIColor colorWithRed:0.f green:0.f blue:1.f alpha:0.25f];
+}
+
 /**
  * Songディレクトリパス取得
  */
