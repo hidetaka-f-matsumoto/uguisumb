@@ -10,7 +10,6 @@
 #import "NSString+CMBTools.h"
 #import "NSMutableDictionary+CMBTools.h"
 #import "UIColor+CMBTools.h"
-#import "UIAlertView+Blocks.h"
 
 @implementation CMBUtility
 

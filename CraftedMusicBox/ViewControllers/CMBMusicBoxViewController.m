@@ -349,16 +349,55 @@
  */
 - (IBAction)menueButtonDidTap:(id)sender
 {
+    [self showActionSheetWithTitle:@"Menue"
+                           message:nil
+                          buttons1:@[
+                                     @{@"title": @"New song",
+                                       @"handler": ^(UIAlertAction *action)
+    {
+        [self songNewButtonDidTap];
+    }},
+                                     @{@"title": @"Config song",
+                                       @"handler": ^(UIAlertAction *action)
+    {
+        [self songConfigButtonDidTap];
+    }},
+                                     @{@"title": @"Manage songs",
+                                       @"handler": ^(UIAlertAction *action)
+    {
+        [self songManageButtonDidTap];
+    }}
+                                     ]
+                          buttons2:@[
+                                     @{@"title": @"New song",
+                                       @"handler": ^(void)
+    {
+        [self songNewButtonDidTap];
+    }},
+                                     @{@"title": @"Config song",
+                                       @"handler": ^(void)
+    {
+        [self songConfigButtonDidTap];
+    }},
+                                     @{@"title": @"Manage songs",
+                                       @"handler": ^(void)
+    {
+        [self songManageButtonDidTap];
+    }}
+                                     ]
+     ];
+    
+    
+    /*
     UIActionSheet *sheet =[[UIActionSheet alloc]
                            initWithTitle:@"Menue"
                            delegate:self
                            cancelButtonTitle:@"Cancel"
                            destructiveButtonTitle:nil
                            otherButtonTitles:@"New song", @"Config song", @"Manage songs", nil];
-    
     [sheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
-    
     [sheet showInView:self.view];
+     */
 }
 
 /**
@@ -638,30 +677,6 @@
             UIButton *b = (UIButton *)v;
             b.titleLabel.font = [UIFont fontWithName:@"SetoFont-SP" size:19.f];
             [b setTitleColor:[CMBUtility tintColor] forState:UIControlStateNormal];
-        }
-    }
-}
-
--   (void)actionSheet:(UIActionSheet *)actionSheet
- clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == [actionSheet cancelButtonIndex]) {
-        // nothing to do.
-    }else if (buttonIndex == [actionSheet destructiveButtonIndex]) {
-        // nothing to do.
-    }else{
-        switch (buttonIndex) {
-            case 0: // New song.
-                [self songNewButtonDidTap];
-                break;
-            case 1: // Config this song.
-                [self songConfigButtonDidTap];
-                break;
-            case 2: // Manage songs.
-                [self songManageButtonDidTap];
-                break;
-            default:
-                break;
         }
     }
 }

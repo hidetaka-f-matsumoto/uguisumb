@@ -49,12 +49,8 @@
 		08C696541984264E0096BC20 /* CMBMusicBoxOctaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C696531984264E0096BC20 /* CMBMusicBoxOctaveView.m */; };
 		08CC5DB519DC240A0049AAD5 /* CMBMusicBoxTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5DB419DC240A0049AAD5 /* CMBMusicBoxTableView.m */; };
 		08CC5E2119DEADAF0049AAD5 /* UIColor+CMBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5E2019DEADAF0049AAD5 /* UIColor+CMBTools.m */; };
-		08CC5E2C19DEB7E10049AAD5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 08CC5E2319DEB7E10049AAD5 /* LICENSE */; };
-		08CC5E2D19DEB7E10049AAD5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5E2419DEB7E10049AAD5 /* README.md */; };
-		08CC5E2E19DEB7E10049AAD5 /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5E2619DEB7E10049AAD5 /* RIButtonItem.m */; };
-		08CC5E2F19DEB7E10049AAD5 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5E2819DEB7E10049AAD5 /* UIActionSheet+Blocks.m */; };
-		08CC5E3019DEB7E10049AAD5 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5E2A19DEB7E10049AAD5 /* UIAlertView+Blocks.m */; };
-		08CC5E3119DEB7E10049AAD5 /* UIAlertView-Blocks.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 08CC5E2B19DEB7E10049AAD5 /* UIAlertView-Blocks.podspec */; };
+		08CC5E6019DFC70C0049AAD5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CC5E5F19DFC70C0049AAD5 /* MessageUI.framework */; };
+		08CC5E6619DFD4140049AAD5 /* libBlocksKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CC5E6519DFD4140049AAD5 /* libBlocksKit.a */; };
 		08DA5C3A19DA500B00966772 /* sp-setofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C3919DA4AD400966772 /* sp-setofont.ttf */; };
 		08DE16DD19D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16D219D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m */; };
 		08DE16DE19D3B6BC00315BE4 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16D419D3B6BC00315BE4 /* SWCellScrollView.m */; };
@@ -144,15 +140,8 @@
 		08CC5DB419DC240A0049AAD5 /* CMBMusicBoxTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxTableView.m; path = Views/CMBMusicBoxTableView.m; sourceTree = "<group>"; };
 		08CC5E1F19DEADAF0049AAD5 /* UIColor+CMBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+CMBTools.h"; path = "Utilities/UIColor+CMBTools.h"; sourceTree = "<group>"; };
 		08CC5E2019DEADAF0049AAD5 /* UIColor+CMBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CMBTools.m"; path = "Utilities/UIColor+CMBTools.m"; sourceTree = "<group>"; };
-		08CC5E2319DEB7E10049AAD5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		08CC5E2419DEB7E10049AAD5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		08CC5E2519DEB7E10049AAD5 /* RIButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIButtonItem.h; sourceTree = "<group>"; };
-		08CC5E2619DEB7E10049AAD5 /* RIButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIButtonItem.m; sourceTree = "<group>"; };
-		08CC5E2719DEB7E10049AAD5 /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
-		08CC5E2819DEB7E10049AAD5 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
-		08CC5E2919DEB7E10049AAD5 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
-		08CC5E2A19DEB7E10049AAD5 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
-		08CC5E2B19DEB7E10049AAD5 /* UIAlertView-Blocks.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIAlertView-Blocks.podspec"; sourceTree = "<group>"; };
+		08CC5E5F19DFC70C0049AAD5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		08CC5E6519DFD4140049AAD5 /* libBlocksKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBlocksKit.a; path = Libraries/BlocksKit/libBlocksKit.a; sourceTree = "<group>"; };
 		08DA5C3919DA4AD400966772 /* sp-setofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sp-setofont.ttf"; sourceTree = "<group>"; };
 		08DE16D119D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
 		08DE16D219D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
@@ -177,6 +166,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08CC5E6619DFD4140049AAD5 /* libBlocksKit.a in Frameworks */,
+				08CC5E6019DFC70C0049AAD5 /* MessageUI.framework in Frameworks */,
 				08B66F81198DFCC500376683 /* CoreAudio.framework in Frameworks */,
 				08B66F7F198DFCBD00376683 /* AVFoundation.framework in Frameworks */,
 				08B66F7B198DFCAD00376683 /* AudioToolbox.framework in Frameworks */,
@@ -234,6 +225,8 @@
 		08883AD21956CC6A00F7EB68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08CC5E6519DFD4140049AAD5 /* libBlocksKit.a */,
+				08CC5E5F19DFC70C0049AAD5 /* MessageUI.framework */,
 				08B66F80198DFCC500376683 /* CoreAudio.framework */,
 				08B66F7E198DFCBD00376683 /* AVFoundation.framework */,
 				08B66F7C198DFCB500376683 /* AudioUnit.framework */,
@@ -364,7 +357,6 @@
 		08B66F6A198DFBDC00376683 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				08CC5E2219DEB7E10049AAD5 /* UIAlertView-Blocks */,
 				08DE16CF19D3B6A500315BE4 /* SWTableViewCell */,
 			);
 			name = Libraries;
@@ -389,23 +381,6 @@
 			);
 			name = xylophone;
 			path = Sounds/xylophone;
-			sourceTree = "<group>";
-		};
-		08CC5E2219DEB7E10049AAD5 /* UIAlertView-Blocks */ = {
-			isa = PBXGroup;
-			children = (
-				08CC5E2319DEB7E10049AAD5 /* LICENSE */,
-				08CC5E2419DEB7E10049AAD5 /* README.md */,
-				08CC5E2519DEB7E10049AAD5 /* RIButtonItem.h */,
-				08CC5E2619DEB7E10049AAD5 /* RIButtonItem.m */,
-				08CC5E2719DEB7E10049AAD5 /* UIActionSheet+Blocks.h */,
-				08CC5E2819DEB7E10049AAD5 /* UIActionSheet+Blocks.m */,
-				08CC5E2919DEB7E10049AAD5 /* UIAlertView+Blocks.h */,
-				08CC5E2A19DEB7E10049AAD5 /* UIAlertView+Blocks.m */,
-				08CC5E2B19DEB7E10049AAD5 /* UIAlertView-Blocks.podspec */,
-			);
-			name = "UIAlertView-Blocks";
-			path = "../_Libraries/UIAlertView-Blocks";
 			sourceTree = "<group>";
 		};
 		08DE16CF19D3B6A500315BE4 /* SWTableViewCell */ = {
@@ -518,13 +493,11 @@
 				08DE171C19D7A92200315BE4 /* pause.png in Resources */,
 				08883AEF1956CC6A00F7EB68 /* Images.xcassets in Resources */,
 				08B66F8B198E031100376683 /* xylophone.D4.wav in Resources */,
-				08CC5E3119DEB7E10049AAD5 /* UIAlertView-Blocks.podspec in Resources */,
 				08883AE71956CC6A00F7EB68 /* Main.storyboard in Resources */,
 				08DE172019D7B3AB00315BE4 /* mb.bump.on.png in Resources */,
 				08DE171E19D7A92200315BE4 /* stop.png in Resources */,
 				08B66F89198E031100376683 /* xylophone.C4.wav in Resources */,
 				08DA5C3A19DA500B00966772 /* sp-setofont.ttf in Resources */,
-				08CC5E2C19DEB7E10049AAD5 /* LICENSE in Resources */,
 				08B66F8D198E031100376683 /* xylophone.E4.wav in Resources */,
 				08B66F8A198E031100376683 /* xylophone.C4s.wav in Resources */,
 				08883ADE1956CC6A00F7EB68 /* InfoPlist.strings in Resources */,
@@ -552,7 +525,6 @@
 				08DE16DE19D3B6BC00315BE4 /* SWCellScrollView.m in Sources */,
 				08A769E11972CA1900143638 /* CMBNoteData.m in Sources */,
 				08DE16DF19D3B6BC00315BE4 /* SWLongPressGestureRecognizer.m in Sources */,
-				08CC5E2D19DEB7E10049AAD5 /* README.md in Sources */,
 				086BA16F19D2BA1B00991574 /* CMBSongHeaderData.m in Sources */,
 				086BA16019D0401000991574 /* CMBSongConfigViewController.m in Sources */,
 				08A769D71972992900143638 /* CMBMusicBoxTableViewCell.m in Sources */,
@@ -563,12 +535,9 @@
 				08DE16DD19D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				08DE16E019D3B6BC00315BE4 /* SWTableViewCell.m in Sources */,
 				08883B1C1956D40600F7EB68 /* NSString+CMBTools.m in Sources */,
-				08CC5E3019DEB7E10049AAD5 /* UIAlertView+Blocks.m in Sources */,
-				08CC5E2F19DEB7E10049AAD5 /* UIActionSheet+Blocks.m in Sources */,
 				08883AE01956CC6A00F7EB68 /* main.m in Sources */,
 				08883AE41956CC6A00F7EB68 /* CMBAppDelegate.m in Sources */,
 				08CC5E2119DEADAF0049AAD5 /* UIColor+CMBTools.m in Sources */,
-				08CC5E2E19DEB7E10049AAD5 /* RIButtonItem.m in Sources */,
 				08CC5DB519DC240A0049AAD5 /* CMBMusicBoxTableView.m in Sources */,
 				08883B111956CFEF00F7EB68 /* CMBMusicBoxViewController.m in Sources */,
 				08DE16E219D3B6BC00315BE4 /* SWUtilityButtonView.m in Sources */,
@@ -707,8 +676,23 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hidetaka Matsumoto (RHWDK7JP52)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CraftedMusicBox/CraftedMusicBox-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Libraries/BlocksKit/include",
+				);
 				INFOPLIST_FILE = "CraftedMusicBox/CraftedMusicBox-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/BlocksKit-aleqhgccmctiqafscpnlasocrwqr/Build/Intermediates/ArchiveIntermediates/BlocksKit",
+					iOS/IntermediateBuildFilesPath/UninstalledProducts,
+					"$(PROJECT_DIR)/Libraries/BlocksKit",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "553fb2e0-ec16-4c6c-8f9d-9f4f10e3c2e7";
 				WRAPPER_EXTENSION = app;
@@ -722,8 +706,23 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CraftedMusicBox/CraftedMusicBox-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Libraries/BlocksKit/include",
+				);
 				INFOPLIST_FILE = "CraftedMusicBox/CraftedMusicBox-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/BlocksKit-aleqhgccmctiqafscpnlasocrwqr/Build/Intermediates/ArchiveIntermediates/BlocksKit",
+					iOS/IntermediateBuildFilesPath/UninstalledProducts,
+					"$(PROJECT_DIR)/Libraries/BlocksKit",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "553fb2e0-ec16-4c6c-8f9d-9f4f10e3c2e7";
 				WRAPPER_EXTENSION = app;

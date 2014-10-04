@@ -8,7 +8,6 @@
 
 #import "CMBSongConfigViewController.h"
 #import "CMBUtility.h"
-#import "UIAlertView+Blocks.h"
 
 @interface CMBSongConfigViewController ()
 

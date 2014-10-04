@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BlocksKit/BlocksKit.h>
+#import <BlocksKit/BlocksKit+UIKit.h>
 
 @interface CMBBaseViewController : UIViewController
 
@@ -18,5 +20,10 @@
                            message:(NSString *)message
                           handler1:(void (^)(UIAlertAction *action))handler1
                           handler2:(void (^)(void))handler2;
+- (void)showActionSheetWithTitle:(NSString *)title
+                         message:(NSString *)message
+                        buttons1:(NSArray *)buttons1
+                        buttons2:(NSArray *)buttons2;
+
 
 @end
