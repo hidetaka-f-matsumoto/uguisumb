@@ -53,6 +53,9 @@
     else {
         UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:title message:message];
         [alertView bk_addButtonWithTitle:@"OK" handler:handler2];
+        alertView.bk_willShowBlock = ^(UIAlertView *alertView) {
+            [self willPresentAlertView:alertView];
+        };
         [alertView show];
     }
 }
@@ -86,6 +89,9 @@
         UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:title message:message];
         [alertView bk_addButtonWithTitle:@"Cancel" handler:nil];
         [alertView bk_addButtonWithTitle:@"OK" handler:handler2];
+        alertView.bk_willShowBlock = ^(UIAlertView *alertView) {
+            [self willPresentAlertView:alertView];
+        };
         [alertView show];
     }
 }
@@ -127,9 +133,14 @@
         [actionSheet bk_setCancelButtonWithTitle:@"Cancel" handler:nil];
         // アクションシート表示
         [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+        actionSheet.bk_willShowBlock = ^(UIActionSheet *actionSheet) {
+            [self willPresentActionSheet:actionSheet];
+        };
         [actionSheet showInView:self.view];
     }
 }
+
+#pragma mark - UIAlertViewDelegate like
 
 - (void)willPresentAlertView:(UIAlertView *)alertView
 {
@@ -140,6 +151,23 @@
     UILabel *body = [alertView valueForKey:@"_bodyTextLabel"];
     body.font = [UIFont fontWithName:@"SetoFont-SP" size:17];
     [body setTextColor:[UIColor whiteColor]];
+}
+
+#pragma mark - UIActionSheetDelegate like
+
+- (void)willPresentActionSheet:(UIActionSheet *)actionSheet
+{
+    for (UIView *v in actionSheet.subviews) {
+        if ([v isKindOfClass:[UILabel class]]) {
+            UILabel *l = (UILabel *)v;
+            l.font = [UIFont fontWithName:@"SetoFont-SP" size:17.f];
+        }
+        if ([v isKindOfClass:[UIButton class]]) {
+            UIButton *b = (UIButton *)v;
+            b.titleLabel.font = [UIFont fontWithName:@"SetoFont-SP" size:19.f];
+            [b setTitleColor:[CMBUtility tintColor] forState:UIControlStateNormal];
+        }
+    }
 }
 
 @end

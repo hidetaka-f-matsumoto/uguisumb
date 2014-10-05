@@ -664,23 +664,6 @@
     }
 }
 
-#pragma mark - UIActionSheetDelegate
-
-- (void)willPresentActionSheet:(UIActionSheet *)actionSheet
-{
-    for (UIView *v in actionSheet.subviews) {
-        if ([v isKindOfClass:[UILabel class]]) {
-            UILabel *l = (UILabel *)v;
-            l.font = [UIFont fontWithName:@"SetoFont-SP" size:17.f];
-        }
-        if ([v isKindOfClass:[UIButton class]]) {
-            UIButton *b = (UIButton *)v;
-            b.titleLabel.font = [UIFont fontWithName:@"SetoFont-SP" size:19.f];
-            [b setTitleColor:[CMBUtility tintColor] forState:UIControlStateNormal];
-        }
-    }
-}
-
 #pragma mark - CMBMusicBoxTableViewCellDelegate
 
 /**
