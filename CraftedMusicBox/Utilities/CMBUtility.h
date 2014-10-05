@@ -11,6 +11,15 @@
 #import "CMBSequenceOneData.h"
 #import "CMBSongHeaderData.h"
 
+@protocol CMBURLSchemeDelegate <NSObject>
+
+@required
+- (void)musicBoxDidOpenWithError:(NSError *)error;
+- (void)musicBoxDidOpenWithSequences:(NSMutableDictionary *)sequences
+                              header:(CMBSongHeaderData *)header;
+
+@end
+
 @interface CMBUtility : NSObject
 
 + (CMBUtility *)sharedInstance;
@@ -35,5 +44,6 @@
                        header:(CMBSongHeaderData *)header
                      fileName:(NSString *)fileName;
 - (BOOL)deleteSongWithFileName:(NSString *)fileName;
+- (void)openURL:(NSURL *)url;
 
 @end

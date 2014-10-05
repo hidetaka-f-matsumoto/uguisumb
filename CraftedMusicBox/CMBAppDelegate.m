@@ -7,6 +7,7 @@
 //
 
 #import "CMBAppDelegate.h"
+#import "CMBUtility.h"
 
 @implementation CMBAppDelegate
 
@@ -43,4 +44,14 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    BOOL isOpenable = NO;
+    if ([[url scheme] isEqualToString:@"craftedmb"]) {
+        [[CMBUtility sharedInstance] openURL:url];
+        isOpenable = YES;
+    }
+    return isOpenable;
+}
 @end

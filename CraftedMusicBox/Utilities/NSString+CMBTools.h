@@ -17,7 +17,7 @@
                           pretty:(BOOL)isPretty;
 + (NSString *)songJsonWithSequences:(NSDictionary *)sequences
                              header:(CMBSongHeaderData *)header;
-- (void)sequences:(NSMutableDictionary **)sequences
+- (BOOL)sequences:(NSMutableDictionary **)sequences
            header:(CMBSongHeaderData **)header;
 - (NSInteger)countWithChar:(NSString *)target;
 - (NSInteger)countWithString:(NSString *)target;

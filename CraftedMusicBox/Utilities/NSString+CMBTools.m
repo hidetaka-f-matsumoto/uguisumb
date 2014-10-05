@@ -61,7 +61,7 @@
     return [NSString jsonWithDictionary:songDic pretty:NO];
 }
 
-- (void)sequences:(NSMutableDictionary **)sequences
+- (BOOL)sequences:(NSMutableDictionary **)sequences
            header:(CMBSongHeaderData **)header;
 {
     NSError *error;
@@ -70,7 +70,7 @@
                                     options:NSJSONReadingMutableContainers
                                       error:&error];
     if (error) {
-        return;
+        return NO;
     }
     // ヘッダ作成
     *header = [[CMBSongHeaderData alloc] initWithInfo:songDic[@"header"]];
@@ -98,6 +98,7 @@
         }
         [*sequences setObject:sequence forKey:time];
     }
+    return YES;
 }
 
 - (NSNumber *)getNumberValue

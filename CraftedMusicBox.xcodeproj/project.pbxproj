@@ -51,6 +51,7 @@
 		08CC5E2119DEADAF0049AAD5 /* UIColor+CMBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5E2019DEADAF0049AAD5 /* UIColor+CMBTools.m */; };
 		08CC5E6019DFC70C0049AAD5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CC5E5F19DFC70C0049AAD5 /* MessageUI.framework */; };
 		08CC5E6619DFD4140049AAD5 /* libBlocksKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CC5E6519DFD4140049AAD5 /* libBlocksKit.a */; };
+		08CC5E6C19E14FF90049AAD5 /* NSURL+CMBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5E6B19E14FF90049AAD5 /* NSURL+CMBTools.m */; };
 		08DA5C3A19DA500B00966772 /* sp-setofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C3919DA4AD400966772 /* sp-setofont.ttf */; };
 		08DE16DD19D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16D219D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m */; };
 		08DE16DE19D3B6BC00315BE4 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE16D419D3B6BC00315BE4 /* SWCellScrollView.m */; };
@@ -142,6 +143,8 @@
 		08CC5E2019DEADAF0049AAD5 /* UIColor+CMBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CMBTools.m"; path = "Utilities/UIColor+CMBTools.m"; sourceTree = "<group>"; };
 		08CC5E5F19DFC70C0049AAD5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		08CC5E6519DFD4140049AAD5 /* libBlocksKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBlocksKit.a; path = Libraries/BlocksKit/libBlocksKit.a; sourceTree = "<group>"; };
+		08CC5E6A19E14FF90049AAD5 /* NSURL+CMBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+CMBTools.h"; path = "Utilities/NSURL+CMBTools.h"; sourceTree = "<group>"; };
+		08CC5E6B19E14FF90049AAD5 /* NSURL+CMBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+CMBTools.m"; path = "Utilities/NSURL+CMBTools.m"; sourceTree = "<group>"; };
 		08DA5C3919DA4AD400966772 /* sp-setofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sp-setofont.ttf"; sourceTree = "<group>"; };
 		08DE16D119D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
 		08DE16D219D3B6BC00315BE4 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
@@ -321,6 +324,8 @@
 				08A769DD1972C93000143638 /* CMBUtility.m */,
 				08CC5E1F19DEADAF0049AAD5 /* UIColor+CMBTools.h */,
 				08CC5E2019DEADAF0049AAD5 /* UIColor+CMBTools.m */,
+				08CC5E6A19E14FF90049AAD5 /* NSURL+CMBTools.h */,
+				08CC5E6B19E14FF90049AAD5 /* NSURL+CMBTools.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -540,6 +545,7 @@
 				08CC5E2119DEADAF0049AAD5 /* UIColor+CMBTools.m in Sources */,
 				08CC5DB519DC240A0049AAD5 /* CMBMusicBoxTableView.m in Sources */,
 				08883B111956CFEF00F7EB68 /* CMBMusicBoxViewController.m in Sources */,
+				08CC5E6C19E14FF90049AAD5 /* NSURL+CMBTools.m in Sources */,
 				08DE16E219D3B6BC00315BE4 /* SWUtilityButtonView.m in Sources */,
 				086BA16319D0FA4E00991574 /* CMBSongManageViewController.m in Sources */,
 				086BA16919D10C4B00991574 /* CMBBaseModalViewController.m in Sources */,

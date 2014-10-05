@@ -23,4 +23,15 @@ static NSInteger const CMBOctaveRange = CMBOctaveMax - CMBOctaveMin + 1;
 static NSInteger const CMBScaleNum = 11;
 static NSInteger const CMBSequenceTimeMax = 1000;
 
+// エラードメイン
+#define CMBErrorDomain @"hidetaka.f.matsumoto.CMBError"
+// エラーコード
+typedef enum {
+    CMBErrorCodeNone = 0,
+    CMBErrorCodeDBAccess,
+    CMBErrorCodeFileAccess,
+    CMBErrorCodeNetwork,
+    CMBErrorCodeSongParse,
+} CMBErrorCode;
+
 #endif

@@ -9,7 +9,6 @@
 
 #import "CMBMusicBoxViewController.h"
 #import "CMBMusicBoxTableViewCell.h"
-#import "CMBUtility.h"
 #import "UIColor+CMBTools.h"
 
 @interface CMBMusicBoxViewController ()
@@ -759,6 +758,26 @@
 
 - (void)songDidLoadWithSequence:(NSMutableDictionary *)sequences
                          header:(CMBSongHeaderData *)header
+{
+    // データ更新
+    _sequences = sequences;
+    _header = header;
+    // 表示更新
+    [self updateViewsWithResetScroll:YES];
+}
+
+#pragma mark - CMBURLSchemeDelegate
+
+- (void)musicBoxDidOpenWithError:(NSError *)error
+{
+    [self showAlertDialogWithTitle:error.userInfo[@"title"]
+                           message:error.userInfo[@"message"]
+                          handler1:nil
+                          handler2:nil];
+}
+
+- (void)musicBoxDidOpenWithSequences:(NSMutableDictionary *)sequences
+                              header:(CMBSongHeaderData *)header
 {
     // データ更新
     _sequences = sequences;

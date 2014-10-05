@@ -10,6 +10,8 @@
 #import "NSString+CMBTools.h"
 #import "NSMutableDictionary+CMBTools.h"
 #import "UIColor+CMBTools.h"
+#import "NSURL+CMBTools.h"
+#import "CMBMusicBoxViewController.h"
 
 @implementation CMBUtility
 
@@ -208,9 +210,9 @@ static CMBUtility *_instance = nil;
     if (error) {
         return NO;
     }
-    [songJson sequences:sequences
-                 header:header];
-    if (!sequences || !header) {
+    BOOL isParseOK = [songJson sequences:sequences
+                                  header:header];
+    if (!isParseOK) {
         return NO;
     }
     return YES;
@@ -259,6 +261,46 @@ static CMBUtility *_instance = nil;
         return NO;
     }
     return YES;
+}
+
+- (void)openURL:(NSURL *)url
+{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    if (!window) {
+        window = [[UIApplication sharedApplication].windows objectAtIndex:0];
+    }
+    CMBMusicBoxViewController *mbVC = (CMBMusicBoxViewController *)window.rootViewController;
+
+    NSString *controller = [url host];
+    NSString *action = [url lastPathComponent];
+    NSDictionary *params = [url queryDictionary];
+    // オルゴール画面
+    if ([controller isEqualToString:@"mb"]) {
+        // song読み込み
+        if ([action isEqualToString:@"load"]) {
+            // song文字列をパース
+            NSString *songStr = params[@"song"];
+            NSMutableDictionary *sequences = [NSMutableDictionary dictionary];
+            CMBSongHeaderData *header = [[CMBSongHeaderData alloc] init];
+            BOOL isParseOK = [songStr sequences:&sequences
+                                         header:&header];
+            if (!isParseOK) {
+                // パースエラー
+                NSDictionary *errorInfo =
+                [NSDictionary dictionaryWithObjectsAndKeys:
+                 @"title", @"Open",
+                 @"message", @"Fail to load the song.",
+                 nil];
+                [mbVC musicBoxDidOpenWithError:[NSError errorWithDomain:CMBErrorDomain
+                                                                   code:CMBErrorCodeSongParse
+                                                               userInfo:errorInfo]];
+                return;
+            }
+            // オルゴール画面でロードする
+            [mbVC musicBoxDidOpenWithSequences:sequences
+                                        header:header];
+        }
+    }
 }
 
 @end
