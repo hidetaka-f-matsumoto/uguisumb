@@ -92,6 +92,7 @@
     [super viewDidLoad];
 
     _scrollView.delegate = self;
+    _scrollView.scrollsToTop = NO;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.scrollsToTop = YES;
@@ -258,7 +259,7 @@
     // ポーズボタンに変更
     [_playButton setImage:[UIImage imageNamed:@"pause.png"]];
     // タイマー開始 (自動スクロール)
-    if (!_timer) {
+    if (!_timer || !_timer.isValid) {
         _timer = [NSTimer scheduledTimerWithTimeInterval:CMBTimeDivAutoScroll
                                                   target:self
                                                 selector:@selector(scrollAuto:)
@@ -300,8 +301,6 @@
         // 再生ボタンに変更
         [_playButton setImage:[UIImage imageNamed:@"play.png"]];
     }
-    // タイマー破棄
-    _timer = nil;
     // 上までスクロールする
     [_tableView setContentOffset:CGPointMake(0.0f, 0.0f) animated:animation];
     // ヘッダViewを表示
@@ -445,7 +444,7 @@
 - (void)scrollAuto:(NSTimer*)timer
 {
     CGPoint offset = _tableView.contentOffset;
-    offset.y = offset.y + (CMBMusicBoxTableViewCellHeight * _header.speed.floatValue * 4 * CMBTimeDivAutoScroll / 60.0f);
+    offset.y += (CMBMusicBoxTableViewCellHeight * _header.speed.floatValue * 4 * CMBTimeDivAutoScroll / 60.0f);
     // 曲中
     if (offset.y < _tableView.contentSize.height) {
         _tableView.contentOffset = offset;
@@ -494,7 +493,7 @@
             numberOfRows = 1;
             break;
         case 1:
-            numberOfRows = 100;
+            numberOfRows = CMBSequenceTimeMax;
             break;
         case 2:
             numberOfRows = 1;
@@ -581,13 +580,36 @@
 
 - (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
 {
-    _isStopping = YES;
-    return YES;
+    BOOL isScrollable;
+    // オルゴールテーブルの場合
+    if (scrollView == _tableView) {
+        // 再生中なら停止
+        if (_isPlaying) {
+            isScrollable = NO;
+            _isStopping = YES;
+            [self stopWithAnimation:YES];
+        }
+        // 再生中でなければ上までスクロール
+        else {
+            isScrollable = YES;
+        }
+    }
+    // ページング用スクロールの場合
+    else if (scrollView == _scrollView) {
+        isScrollable = NO;
+    }
+    return isScrollable;
 }
 
 - (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView
 {
-    _isStopping = NO;
+    // オルゴールテーブルの場合
+    if (scrollView == _tableView) {
+        _isStopping = NO;
+    }
+    // ページング用スクロールの場合
+    else if (scrollView == _scrollView) {
+    }
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView*)scrollView

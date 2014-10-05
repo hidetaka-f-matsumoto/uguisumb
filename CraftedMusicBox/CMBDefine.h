@@ -21,5 +21,6 @@ static NSInteger const CMBOctaveMax = 5;
 static NSInteger const CMBOctaveBase = 4;
 static NSInteger const CMBOctaveRange = CMBOctaveMax - CMBOctaveMin + 1;
 static NSInteger const CMBScaleNum = 11;
+static NSInteger const CMBSequenceTimeMax = 1000;
 
 #endif
