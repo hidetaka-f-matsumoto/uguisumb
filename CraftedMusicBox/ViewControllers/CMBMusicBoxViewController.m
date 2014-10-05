@@ -219,7 +219,7 @@
         _tableView.contentOffset = CGPointMake(0, 0);
     }
     // タイトル更新
-    _titleLabel.text = _header.name;
+    _titleLabel.text = (_header.name && 0 < _header.name.length) ? _header.name : @"no title";
     // オクターブ表示更新
     _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
     // テーブルビュー更新
@@ -747,12 +747,7 @@
 
 - (void)songDidSaveWithName:(NSString *)name
 {
-    NSString *title = @"Save song";
-    NSString *message = [NSString stringWithFormat:@"Complete to save the song as %@.", name];
-    [self showAlertDialogWithTitle:title
-                           message:message
-                          handler1:nil
-                          handler2:nil];
+    // nothing to do.
 }
 
 #pragma mark - CMBSongManageDelegate
