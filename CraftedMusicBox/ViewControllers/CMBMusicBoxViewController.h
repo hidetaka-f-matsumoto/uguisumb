@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <BlocksKit/BlocksKit+MessageUI.h>
 #import "CMBBaseViewController.h"
 #import "CMBNoteData.h"
 #import "CMBSequenceOneData.h"
@@ -39,6 +40,7 @@ static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200.f;
 
 - (IBAction)playButtonDidTap:(id)sender;
 - (IBAction)stopButtonDidTap:(id)sender;
+- (IBAction)shareButtonDidTap:(id)sender;
 - (IBAction)menueButtonDidTap:(id)sender;
 
 @end

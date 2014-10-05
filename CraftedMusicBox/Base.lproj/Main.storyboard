@@ -465,6 +465,12 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Gbp-j7-9ku"/>
+                                    <barButtonItem style="plain" systemItem="action" id="edA-yp-sCJ">
+                                        <connections>
+                                            <action selector="shareButtonDidTap:" destination="OGI-JR-xGh" id="kuf-Fw-q1s"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Xfz-r3-juG"/>
                                     <barButtonItem title="Menue" style="plain" id="43b-Ox-G0z">
                                         <connections>
                                             <action selector="menueButtonDidTap:" destination="OGI-JR-xGh" id="y2B-qa-lXl"/>

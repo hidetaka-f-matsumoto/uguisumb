@@ -10,6 +10,7 @@
 #import "CMBMusicBoxViewController.h"
 #import "CMBMusicBoxTableViewCell.h"
 #import "UIColor+CMBTools.h"
+#import "NSString+CMBTools.h"
 
 @interface CMBMusicBoxViewController ()
 {
@@ -343,6 +344,40 @@
 }
 
 /**
+ * 共有ボタン
+ */
+- (IBAction)shareButtonDidTap:(id)sender
+{
+    [self showActionSheetWithTitle:@"Share"
+                           message:nil
+                          buttons1:@[
+                                     @{@"title": @"LINE",
+                                       @"handler": ^(UIAlertAction *action)
+                                       {
+        [self sendLINE];
+    }},
+                                     @{@"title": @"Mail",
+                                       @"handler": ^(UIAlertAction *action)
+                                       {
+        [self sendMail];
+    }}
+                                     ]
+                          buttons2:@[
+                                     @{@"title": @"LINE",
+                                       @"handler": ^(void)
+                                       {
+        [self sendLINE];
+    }},
+                                     @{@"title": @"Mail",
+                                       @"handler": ^(void)
+                                       {
+        [self sendMail];
+    }}
+                                     ]
+     ];
+}
+
+/**
  * メニューボタン
  */
 - (IBAction)menueButtonDidTap:(id)sender
@@ -384,18 +419,6 @@
     }}
                                      ]
      ];
-    
-    
-    /*
-    UIActionSheet *sheet =[[UIActionSheet alloc]
-                           initWithTitle:@"Menue"
-                           delegate:self
-                           cancelButtonTitle:@"Cancel"
-                           destructiveButtonTitle:nil
-                           otherButtonTitles:@"New song", @"Config song", @"Manage songs", nil];
-    [sheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
-    [sheet showInView:self.view];
-     */
 }
 
 /**
@@ -784,6 +807,72 @@
     _header = header;
     // 表示更新
     [self updateViewsWithResetScroll:YES];
+}
+
+#pragma mark - Mail
+
+/**
+ * メールで送信
+ */
+- (void)sendMail
+{
+    // Song-jsonに変換
+    NSString *songJson = [NSString songJsonWithSequences:_sequences
+                                                  header:_header];
+    // URLスキームを作成
+    NSString *url = [@"craftedmb://mb/load?song=" stringByAppendingString:songJson];
+    // 本文を作成
+    NSString *message = [@"https://itunes.apple.com/jp/app/todo:fix/todo:fix?mt=8\n\n" stringByAppendingString:url];
+    // メール送信画面を表示
+    MFMailComposeViewController *mailPicker = [MFMailComposeViewController new];
+    [mailPicker setSubject:@"This is my crafted music box."];
+    [mailPicker setMessageBody:message isHTML:NO];
+    mailPicker.bk_completionBlock = ^(MFMailComposeViewController *controller, MFMailComposeResult result, NSError *error) {
+        switch (result) {
+            case MFMailComposeResultCancelled: // キャンセル
+                break;
+            case MFMailComposeResultSaved: // 下書き保存
+                break;
+            case MFMailComposeResultSent: // 送信成功
+                break;
+            case MFMailComposeResultFailed:// 送信失敗
+                [self showAlertDialogWithTitle:@"Mail"
+                                       message:@"Fail to send a mail."
+                                      handler1:nil
+                                      handler2:nil];
+                break;
+            default:
+                break;
+        }
+        [self dismissViewControllerAnimated:YES completion:nil];
+    };
+    [self presentViewController:mailPicker animated:TRUE completion:nil];
+}
+
+#pragma mark - LINE
+
+/**
+ * LINEで送信
+ */
+- (void)sendLINE
+{
+    // Song-jsonに変換
+    NSString *songJson = [NSString songJsonWithSequences:_sequences
+                                                  header:_header];
+    // URLスキームを作成
+    NSString *message = [@"craftedmb://mb/load?song=" stringByAppendingString:songJson];
+    // エンコード
+    // todo: base64
+    message =
+    (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
+                                                                 (CFStringRef)message,
+                                                                 NULL,
+                                                                 (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                                 kCFStringEncodingUTF8);
+    // LINE URLを作成
+    NSString *lineUrl = [@"http://line.me/R/msg/text/?" stringByAppendingString:message];
+    // 投稿
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:lineUrl]];
 }
 
 #pragma mark - Debug.

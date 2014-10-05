@@ -288,8 +288,8 @@ static CMBUtility *_instance = nil;
                 // パースエラー
                 NSDictionary *errorInfo =
                 [NSDictionary dictionaryWithObjectsAndKeys:
-                 @"title", @"Open",
-                 @"message", @"Fail to load the song.",
+                 @"Open URL", @"title",
+                 @"Fail to load the song.", @"message",
                  nil];
                 [mbVC musicBoxDidOpenWithError:[NSError errorWithDomain:CMBErrorDomain
                                                                    code:CMBErrorCodeSongParse
