@@ -26,6 +26,12 @@
     _speedStepper.minimumValue = CMBSpeedMin;
     _speedStepper.maximumValue = CMBSpeedMax;
     _speedStepper.stepValue = 1;
+    
+    // 通知を登録
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(musicBoxDidOpen:)
+                                                 name:CMBCmdURLSchemeOpenMusicBox
+                                               object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -152,6 +158,14 @@
 {
     _speedLabel.text = [NSString stringWithFormat:@"%zd", (NSInteger)_speedSlider.value];
     _speedStepper.value = _speedSlider.value;
+}
+
+#pragma mark - CMBCmdURLSchemeOpenMusicBox
+
+- (void)musicBoxDidOpen:(NSNotification *)notif
+{
+    // 閉じる
+    [self closeButtonDidTap:nil];
 }
 
 @end

@@ -265,12 +265,6 @@ static CMBUtility *_instance = nil;
 
 - (void)openURL:(NSURL *)url
 {
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    if (!window) {
-        window = [[UIApplication sharedApplication].windows objectAtIndex:0];
-    }
-    CMBMusicBoxViewController *mbVC = (CMBMusicBoxViewController *)window.rootViewController;
-
     NSString *controller = [url host];
     NSString *action = [url lastPathComponent];
     NSDictionary *params = [url queryDictionary];
@@ -286,21 +280,24 @@ static CMBUtility *_instance = nil;
             CMBSongHeaderData *header = [[CMBSongHeaderData alloc] init];
             BOOL isParseOK = [songJson sequences:&sequences
                                          header:&header];
-            if (!isParseOK) {
-                // パースエラー
-                NSDictionary *errorInfo =
-                [NSDictionary dictionaryWithObjectsAndKeys:
-                 @"Open URL", @"title",
-                 @"Fail to load the song.", @"message",
-                 nil];
-                [mbVC musicBoxDidOpenWithError:[NSError errorWithDomain:CMBErrorDomain
-                                                                   code:CMBErrorCodeSongParse
-                                                               userInfo:errorInfo]];
-                return;
+            // user情報
+            NSMutableDictionary *info = [NSMutableDictionary dictionary];
+            // パース成功
+            if (isParseOK) {
+                [info setObject:sequences forKey:@"sequences"];
+                [info setObject:header forKey:@"header"];
             }
-            // オルゴール画面でロードする
-            [mbVC musicBoxDidOpenWithSequences:sequences
-                                        header:header];
+            // パース失敗
+            else {
+                [info setObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                                 @"Open URL", @"title",
+                                 @"Fail to load the song.", @"message",
+                                 nil]
+                         forKey:@"error"];
+            }
+            [[NSNotificationCenter defaultCenter] postNotificationName:CMBCmdURLSchemeOpenMusicBox
+                                                                object:nil
+                                                              userInfo:info];
         }
     }
 }

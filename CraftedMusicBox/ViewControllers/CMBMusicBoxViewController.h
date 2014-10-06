@@ -23,7 +23,7 @@ static CGFloat const CMBTimeDivAutoScroll = 0.01f; // [s]
 static CGFloat const CMBMusicBoxTableViewHeadCellHeight = 200.f;
 static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200.f;
 
-@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, CMBMusicBoxTableViewCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate, CMBURLSchemeDelegate>
+@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, CMBMusicBoxTableViewCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate>
 {
     NSMutableDictionary *_dataSource;
 }

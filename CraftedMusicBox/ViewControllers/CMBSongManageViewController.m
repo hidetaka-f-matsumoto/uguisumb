@@ -26,6 +26,12 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _songInfos = [[CMBUtility sharedInstance] getSongInfos];
+    
+    // 通知を登録
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(musicBoxDidOpen:)
+                                                 name:CMBCmdURLSchemeOpenMusicBox
+                                               object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -183,6 +189,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [_songInfos removeObjectAtIndex:indexPath.row];
     [self.tableView deleteRowsAtIndexPaths:@[indexPath]
                           withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+#pragma mark - CMBCmdURLSchemeOpenMusicBox
+
+- (void)musicBoxDidOpen:(NSNotification *)notif
+{
+    // 閉じる
+    [self closeButtonDidTap:nil];
 }
 
 @end

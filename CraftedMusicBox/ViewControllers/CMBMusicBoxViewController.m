@@ -103,6 +103,12 @@
     [self _initFirst];
     [self _init];
     [self loadSounds];
+    
+    // 通知を登録
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(musicBoxDidOpen:)
+                                                 name:CMBCmdURLSchemeOpenMusicBox
+                                               object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -789,22 +795,20 @@
     [self updateViewsWithResetScroll:YES];
 }
 
-#pragma mark - CMBURLSchemeDelegate
+#pragma mark - CMBCmdURLSchemeOpenMusicBox
 
-- (void)musicBoxDidOpenWithError:(NSError *)error
+- (void)musicBoxDidOpen:(NSNotification *)notif
 {
-    [self showAlertDialogWithTitle:error.userInfo[@"title"]
-                           message:error.userInfo[@"message"]
-                          handler1:nil
-                          handler2:nil];
-}
-
-- (void)musicBoxDidOpenWithSequences:(NSMutableDictionary *)sequences
-                              header:(CMBSongHeaderData *)header
-{
+    NSDictionary *error = notif.userInfo[@"error"];
+    if (error) {
+        [self showAlertDialogWithTitle:error[@"title"]
+                               message:error[@"message"]
+                              handler1:nil
+                              handler2:nil];
+    }
     // データ更新
-    _sequences = sequences;
-    _header = header;
+    _sequences = notif.userInfo[@"sequences"];
+    _header = notif.userInfo[@"header"];
     // 表示更新
     [self updateViewsWithResetScroll:YES];
 }

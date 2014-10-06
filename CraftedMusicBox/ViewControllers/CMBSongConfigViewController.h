@@ -20,7 +20,7 @@
 /**
  * Song設定
  */
-@interface CMBSongConfigViewController : CMBBaseModalViewController <UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
+@interface CMBSongConfigViewController : CMBBaseModalViewController <UITextFieldDelegate>
 
 @property (nonatomic, assign) id<CMBSongConfigDelegate> delegate;
 @property (atomic, assign) NSMutableDictionary *sequences;

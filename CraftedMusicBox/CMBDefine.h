@@ -11,6 +11,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * song
+ */
 static CGFloat const CMBSpeedDefault = 50.0f;
 static CGFloat const CMBSpeedMin = 1.0f;
 static CGFloat const CMBSpeedMax = 100.0f;
@@ -23,9 +26,15 @@ static NSInteger const CMBOctaveRange = CMBOctaveMax - CMBOctaveMin + 1;
 static NSInteger const CMBScaleNum = 11;
 static NSInteger const CMBSequenceTimeMax = 1000;
 
-// エラードメイン
+/**
+ * command
+ */
+static NSString * const CMBCmdURLSchemeOpenMusicBox = @"CMBCmdURLSchemeOpenMusicBox";
+
+/**
+ * error
+ */
 #define CMBErrorDomain @"hidetaka.f.matsumoto.CMBError"
-// エラーコード
 typedef enum {
     CMBErrorCodeNone = 0,
     CMBErrorCodeDBAccess,
