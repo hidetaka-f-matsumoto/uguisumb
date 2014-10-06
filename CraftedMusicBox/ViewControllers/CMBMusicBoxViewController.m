@@ -819,8 +819,10 @@
     // Song-jsonに変換
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
+    // エンコード
+    NSString *songEncoded = songJson.encodedSongStr;
     // URLスキームを作成
-    NSString *url = [@"craftedmb://mb/load?song=" stringByAppendingString:songJson];
+    NSString *url = [@"craftedmb://mb/load?song=" stringByAppendingString:songEncoded];
     // 本文を作成
     NSString *message = [@"https://itunes.apple.com/jp/app/todo:fix/todo:fix?mt=8\n\n" stringByAppendingString:url];
     // メール送信画面を表示
@@ -859,16 +861,10 @@
     // Song-jsonに変換
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
-    // URLスキームを作成
-    NSString *message = [@"craftedmb://mb/load?song=" stringByAppendingString:songJson];
     // エンコード
-    // todo: base64
-    message =
-    (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
-                                                                 (CFStringRef)message,
-                                                                 NULL,
-                                                                 (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                 kCFStringEncodingUTF8);
+    NSString *songEncoded = songJson.encodedSongStr;
+    // URLスキームを作成
+    NSString *message = [@"craftedmb://mb/load?song=" stringByAppendingString:songEncoded];
     // LINE URLを作成
     NSString *lineUrl = [@"http://line.me/R/msg/text/?" stringByAppendingString:message];
     // 投稿

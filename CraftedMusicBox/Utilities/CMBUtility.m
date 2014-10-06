@@ -278,11 +278,13 @@ static CMBUtility *_instance = nil;
     if ([controller isEqualToString:@"mb"]) {
         // song読み込み
         if ([action isEqualToString:@"load"]) {
+            // デコード
+            NSString *songEncoded = params[@"song"];
+            NSString *songJson = [NSString songJsonWithEncodedSongStr:songEncoded];
             // song文字列をパース
-            NSString *songStr = params[@"song"];
             NSMutableDictionary *sequences = [NSMutableDictionary dictionary];
             CMBSongHeaderData *header = [[CMBSongHeaderData alloc] init];
-            BOOL isParseOK = [songStr sequences:&sequences
+            BOOL isParseOK = [songJson sequences:&sequences
                                          header:&header];
             if (!isParseOK) {
                 // パースエラー

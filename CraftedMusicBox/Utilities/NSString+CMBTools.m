@@ -136,4 +136,47 @@
     return match.numberOfRanges;
 }
 
+- (NSString *)urlEncode
+{
+    //encoding
+    NSString *escapedUrlString =
+    (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
+                                                        NULL,
+                                                        (CFStringRef)self,
+                                                        NULL,
+                                                        (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                        kCFStringEncodingUTF8
+                                                        ));
+    return escapedUrlString;
+}
+
+- (NSString *)urlDecode
+{
+    //decoding
+    NSString *decodedUrlString =
+    (NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(
+                                                                        NULL,
+                                                                        (CFStringRef)self,
+                                                                        CFSTR(""),
+                                                                        kCFStringEncodingUTF8
+                                                                        ));
+    return decodedUrlString;
+}
+
++ (NSString *)songJsonWithEncodedSongStr:(NSString *)encodedStr
+{
+    // Base64デコード
+    NSData *songData = [[NSData alloc] initWithBase64EncodedString:encodedStr options:kNilOptions];
+    NSString *songJson = [[NSString alloc] initWithData:songData encoding:NSUTF8StringEncoding];
+    return songJson;
+}
+
+- (NSString *)getEncodedSongStr
+{
+    // Base64エンコード
+    NSData *songData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *songStr = [songData base64EncodedStringWithOptions:kNilOptions];
+    return songStr;
+}
+
 @end
