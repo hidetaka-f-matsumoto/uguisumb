@@ -45,38 +45,6 @@
     _header = [[CMBSongHeaderData alloc] init];
 }
 
-- (void)loadSounds
-{
-    _sounds = [NSMutableDictionary dictionary];
-    NSURL *url;
-    NSBundle *mb = [NSBundle mainBundle];
-    SystemSoundID sound;
-    
-    for (NSInteger i=CMBOctaveMin; i<=CMBOctaveMax; i++) {
-        NSMutableDictionary *soundsInOctave = [NSMutableDictionary dictionary];
-        for (NSString *scaleKey in CMBScales) {
-            // TODO: 読み込みを体系化
-        }
-        url = [NSURL fileURLWithPath:[mb pathForResource:@"xylophone.C4" ofType:@"wav"]];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &sound);
-        [soundsInOctave setObject:[NSNumber numberWithLong:sound] forKey:CMBScales[0]];
-        url = [NSURL fileURLWithPath:[mb pathForResource:@"xylophone.C4s" ofType:@"wav"]];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &sound);
-        [soundsInOctave setObject:[NSNumber numberWithLong:sound] forKey:CMBScales[1]];
-        url = [NSURL fileURLWithPath:[mb pathForResource:@"xylophone.D4" ofType:@"wav"]];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &sound);
-        [soundsInOctave setObject:[NSNumber numberWithLong:sound] forKey:CMBScales[2]];
-        url = [NSURL fileURLWithPath:[mb pathForResource:@"xylophone.D4s" ofType:@"wav"]];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &sound);
-        [soundsInOctave setObject:[NSNumber numberWithLong:sound] forKey:CMBScales[3]];
-        url = [NSURL fileURLWithPath:[mb pathForResource:@"xylophone.E4" ofType:@"wav"]];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &sound);
-        [soundsInOctave setObject:[NSNumber numberWithLong:sound] forKey:CMBScales[4]];
-
-        _sounds[[NSNumber numberWithInteger:i]] = soundsInOctave;
-    }
-}
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -102,7 +70,6 @@
     
     [self _initFirst];
     [self _init];
-    [self loadSounds];
     
     // 通知を登録
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -127,6 +94,14 @@
     
     _headViewOriginalFrame = _headView.frame;
     _isFirstViewDidAppear = NO;
+    
+    // SoundManagerをチェック
+    if (![CMBSoundManager sharedInstance].isAvailable) {
+        [self showAlertDialogWithTitle:@"Sound"
+                               message:@"Fail to load sound resources"
+                              handler1:nil
+                              handler2:nil];
+    }
 }
 
 - (void)viewDidLayoutSubviews
@@ -244,10 +219,8 @@
         return;
     }
     // 鳴らす
-    SystemSoundID sound = [_sounds[octave][scale] unsignedIntValue];
-    if (sound) {
-        AudioServicesPlaySystemSound(sound);
-    }
+    CMBSoundManager *soundMan = [CMBSoundManager sharedInstance];
+    [soundMan playWithInstrument:CMBSoundXylophone scale:scale octave:octave];
 }
 
 /**
@@ -396,12 +369,12 @@
     {
         [self songNewButtonDidTap];
     }},
-                                     @{@"title": @"Config song",
+                                     @{@"title": @"Config/Save song",
                                        @"handler": ^(UIAlertAction *action)
     {
         [self songConfigButtonDidTap];
     }},
-                                     @{@"title": @"Manage songs",
+                                     @{@"title": @"Manage my songs",
                                        @"handler": ^(UIAlertAction *action)
     {
         [self songManageButtonDidTap];
@@ -413,12 +386,12 @@
     {
         [self songNewButtonDidTap];
     }},
-                                     @{@"title": @"Config song",
+                                     @{@"title": @"Config/Save song",
                                        @"handler": ^(void)
     {
         [self songConfigButtonDidTap];
     }},
-                                     @{@"title": @"Manage songs",
+                                     @{@"title": @"Manage my songs",
                                        @"handler": ^(void)
     {
         [self songManageButtonDidTap];

@@ -20,7 +20,7 @@ static CMBUtility *_instance = nil;
 - (id)init
 {
     self = [super init];
-    if (!self) {
+    if (self) {
     }
     return self;
 }

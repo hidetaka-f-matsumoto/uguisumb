@@ -18,6 +18,7 @@
 #import "CMBSongManageViewController.h"
 #import "CMBMusicBoxTableView.h"
 #import "CMBUtility.h"
+#import "CMBSoundManager.h"
 
 static CGFloat const CMBTimeDivAutoScroll = 0.01f; // [s]
 static CGFloat const CMBMusicBoxTableViewHeadCellHeight = 200.f;
@@ -27,8 +28,6 @@ static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200.f;
 {
     NSMutableDictionary *_dataSource;
 }
-
-@property (strong, nonatomic) NSMutableDictionary *sounds;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet CMBMusicBoxTableView *tableView;

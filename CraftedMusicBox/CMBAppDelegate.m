@@ -8,12 +8,15 @@
 
 #import "CMBAppDelegate.h"
 #import "CMBUtility.h"
+#import "CMBSoundManager.h"
 
 @implementation CMBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    // SoundManagerを生成しておく
+    [CMBSoundManager sharedInstance];
     return YES;
 }
 							
