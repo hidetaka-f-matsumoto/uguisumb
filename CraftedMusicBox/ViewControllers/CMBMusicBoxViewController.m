@@ -9,6 +9,7 @@
 
 #import "CMBMusicBoxViewController.h"
 #import "CMBMusicBoxTableViewCell.h"
+#import "CMBMusicBoxTableViewHeadCell.h"
 #import "UIColor+CMBTools.h"
 #import "NSString+CMBTools.h"
 
@@ -220,7 +221,7 @@
     }
     // 鳴らす
     CMBSoundManager *soundMan = [CMBSoundManager sharedInstance];
-    [soundMan playWithInstrument:CMBSoundXylophone scale:scale octave:octave];
+    [soundMan playWithInstrument:CMBSoundMusicbox scale:scale octave:octave];
 }
 
 /**
@@ -511,8 +512,12 @@
     UITableViewCell *cell = nil;
     switch (indexPath.section) {
         case 0:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewHeadCell"];
+        {
+            CMBMusicBoxTableViewHeadCell *mbhCell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewHeadCell"];
+            mbhCell.layoutSize = [self sizeOfMusicBoxHeadCell];
+            cell = mbhCell;
             break;
+        }
         case 1:
         {
             CMBMusicBoxTableViewCell *mbCell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewCell"];
@@ -688,6 +693,14 @@
 }
 
 #pragma mark - CMBMusicBoxTableViewCellDelegate
+
+/**
+ * セルのサイズを返す
+ */
+- (CGSize)sizeOfMusicBoxHeadCell
+{
+    return CGSizeMake(_tableView.frame.size.width, CMBMusicBoxTableViewHeadCellHeight);
+}
 
 /**
  * セルのサイズを返す

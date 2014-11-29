@@ -24,12 +24,11 @@
 @interface CMBMusicBoxOctaveView : UIView
 
 @property (nonatomic, assign) id<CMBMusicBoxOctaveViewDelegate> delegate;
-
-@property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *noteButtons;
 @property (nonatomic, strong) NSNumber *octave;
 @property (nonatomic, readonly, getter = getOnNoteInfos) NSArray *onNoteInfos;
-
 @property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
+
+@property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *noteButtons;
 
 - (IBAction)noteButtonDidTap:(id)sender;
 
