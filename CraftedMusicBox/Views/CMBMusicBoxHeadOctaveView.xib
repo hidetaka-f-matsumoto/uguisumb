@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -19,82 +18,70 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.l.png" translatesAutoresizingMaskIntoConstraints="NO" id="LSC-K8-WBr">
-                    <rect key="frame" x="8" y="108" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="bXT-s6-ybb"/>
-                        <constraint firstAttribute="height" constant="50" id="sVu-3n-5wr"/>
-                    </constraints>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.png" translatesAutoresizingMaskIntoConstraints="NO" id="pCn-5e-pCv">
-                    <rect key="frame" x="8" y="142" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="5M6-QT-uJb"/>
-                        <constraint firstAttribute="width" constant="50" id="nn3-6F-aTM"/>
-                    </constraints>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.r.png" translatesAutoresizingMaskIntoConstraints="NO" id="lzL-68-hoO">
-                    <rect key="frame" x="542" y="108" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="3Jk-px-xiz"/>
-                        <constraint firstAttribute="height" constant="50" id="Wjn-vy-eqf"/>
-                    </constraints>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.png" translatesAutoresizingMaskIntoConstraints="NO" id="UwN-bd-zgR">
-                    <rect key="frame" x="542" y="142" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="TMr-kQ-Gab"/>
-                        <constraint firstAttribute="width" constant="50" id="rer-sL-6NE"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Down" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUP-Yg-zm8">
-                    <rect key="frame" x="8" y="94" width="50" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUP-Yg-zm8">
+                    <rect key="frame" x="8" y="115" width="100" height="44"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="Chm-T8-xoD"/>
+                        <constraint firstAttribute="width" constant="100" id="dnV-Wx-sfV"/>
                         <constraint firstAttribute="height" constant="24" id="n4p-HC-WZf"/>
+                        <constraint firstAttribute="height" constant="44" id="zvd-Jc-3hm"/>
                     </constraints>
+                    <string key="text">&lt;&lt;&lt; Swipe
+octave down</string>
                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                    <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Chm-T8-xoD"/>
+                            <exclude reference="n4p-HC-WZf"/>
+                        </mask>
+                    </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d6-QU-QLH">
                     <rect key="frame" x="240" y="142" width="120" height="50"/>
                     <string key="text">Tap bellow,
 music box on.</string>
                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                    <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-hP-cdP">
-                    <rect key="frame" x="542" y="94" width="50" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-hP-cdP">
+                    <rect key="frame" x="492" y="115" width="100" height="44"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="100" id="IcH-oh-Odt"/>
                         <constraint firstAttribute="width" constant="50" id="JUY-pA-JeV"/>
                         <constraint firstAttribute="height" constant="24" id="Pgq-Cc-gBM"/>
+                        <constraint firstAttribute="height" constant="44" id="ZZl-hd-9aU"/>
                     </constraints>
+                    <string key="text">Swipe &gt;&gt;&gt;
+octave up</string>
                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                    <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="JUY-pA-JeV"/>
+                            <exclude reference="Pgq-Cc-gBM"/>
+                        </mask>
+                    </variation>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
                 <constraint firstAttribute="bottomMargin" secondItem="LUP-Yg-zm8" secondAttribute="bottom" constant="34" id="4FZ-EB-EYV"/>
-                <constraint firstAttribute="bottomMargin" secondItem="lzL-68-hoO" secondAttribute="bottom" constant="34" id="4GA-Bk-rHg"/>
-                <constraint firstItem="pCn-5e-pCv" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="AzP-by-fnw"/>
-                <constraint firstAttribute="bottomMargin" secondItem="LSC-K8-WBr" secondAttribute="bottom" constant="34" id="CLw-cQ-ZDe"/>
                 <constraint firstItem="9d6-QU-QLH" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="IYH-Ia-be9"/>
                 <constraint firstAttribute="centerX" secondItem="9d6-QU-QLH" secondAttribute="centerX" id="JQ2-Wn-sfy"/>
-                <constraint firstItem="LSC-K8-WBr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="NwC-Vm-Uqz"/>
                 <constraint firstItem="LUP-Yg-zm8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="58" id="WJe-ds-WH5"/>
-                <constraint firstItem="UwN-bd-zgR" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="X0G-nk-vGD"/>
+                <constraint firstItem="xgB-hP-cdP" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="dPT-Zh-pQF"/>
+                <constraint firstAttribute="bottomMargin" secondItem="xgB-hP-cdP" secondAttribute="bottom" constant="33" id="dg0-Wv-5c8"/>
+                <constraint firstItem="LUP-Yg-zm8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="gty-j2-lJa"/>
                 <constraint firstItem="LUP-Yg-zm8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="hok-ag-vfa"/>
                 <constraint firstItem="xgB-hP-cdP" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="kpJ-Uo-rIT"/>
-                <constraint firstItem="lzL-68-hoO" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="m7L-Ec-ajW"/>
+                <constraint firstAttribute="bottomMargin" secondItem="LUP-Yg-zm8" secondAttribute="bottom" constant="33" id="lTy-gr-mNt"/>
                 <constraint firstAttribute="bottomMargin" secondItem="xgB-hP-cdP" secondAttribute="bottom" constant="74" id="pYs-5t-Dho"/>
                 <constraint firstAttribute="trailingMargin" secondItem="xgB-hP-cdP" secondAttribute="trailing" constant="58" id="qh5-Q9-WPB"/>
                 <constraint firstAttribute="bottomMargin" secondItem="LUP-Yg-zm8" secondAttribute="bottom" constant="74" id="qpp-1o-Loo"/>
-                <constraint firstItem="pCn-5e-pCv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="tGV-uP-76J"/>
-                <constraint firstItem="UwN-bd-zgR" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="tq7-c6-1rQ"/>
                 <constraint firstAttribute="bottomMargin" secondItem="xgB-hP-cdP" secondAttribute="bottom" constant="34" id="xRx-eN-Shs"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -104,23 +91,19 @@ music box on.</string>
                 <mask key="constraints">
                     <exclude reference="4FZ-EB-EYV"/>
                     <exclude reference="WJe-ds-WH5"/>
+                    <exclude reference="hok-ag-vfa"/>
+                    <exclude reference="qpp-1o-Loo"/>
+                    <exclude reference="kpJ-Uo-rIT"/>
+                    <exclude reference="pYs-5t-Dho"/>
                     <exclude reference="qh5-Q9-WPB"/>
                     <exclude reference="xRx-eN-Shs"/>
                 </mask>
             </variation>
             <connections>
-                <outlet property="octDownArrowImage" destination="LSC-K8-WBr" id="dMh-LL-01E"/>
-                <outlet property="octDownFingerImage" destination="pCn-5e-pCv" id="Z2N-yT-INw"/>
                 <outlet property="octDownLabel" destination="LUP-Yg-zm8" id="GTD-bt-wJT"/>
-                <outlet property="octUpArrowImage" destination="lzL-68-hoO" id="o6F-bj-aLY"/>
-                <outlet property="octUpFingerImage" destination="UwN-bd-zgR" id="Hu2-Rf-FT7"/>
                 <outlet property="octUpLabel" destination="xgB-hP-cdP" id="Qr2-ip-CkZ"/>
             </connections>
+            <point key="canvasLocation" x="139" y="171"/>
         </view>
     </objects>
-    <resources>
-        <image name="arrow.l.png" width="203" height="200"/>
-        <image name="arrow.r.png" width="203" height="200"/>
-        <image name="hand.png" width="203" height="200"/>
-    </resources>
 </document>

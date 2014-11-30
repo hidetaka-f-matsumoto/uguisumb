@@ -10,7 +10,8 @@
 
 @interface UIColor (CMBTools)
 
-- (UIColor*)blendWithColor:(UIColor*)color2
+- (UIColor *)blendWithColor:(UIColor*)color2
                      alpha:(CGFloat)alpha2;
+- (UIColor *)changeAlpha:(CGFloat)alpha;
 
 @end

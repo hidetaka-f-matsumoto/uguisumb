@@ -65,7 +65,7 @@
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IC7-gS-MAh" id="WI0-ID-h8r">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
-                                                <color key="backgroundColor" red="1" green="0.0" blue="0.27843138579999999" alpha="0.14999999999999999" colorSpace="deviceRGB"/>
+                                                <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                             </tableViewCell>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicBoxTableViewCell" id="eat-gf-db6" customClass="CMBMusicBoxTableViewCell">
                                                 <rect key="frame" x="0.0" y="22" width="960" height="44"/>
@@ -93,7 +93,7 @@
                                                         <constraint firstItem="KIe-Ac-EW5" firstAttribute="leading" secondItem="hMI-1x-yPo" secondAttribute="leadingMargin" id="vcf-Op-iCS"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
-                                                <color key="backgroundColor" red="1" green="0.0" blue="0.27843138579999999" alpha="0.14999999999999999" colorSpace="deviceRGB"/>
+                                                <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                             </tableViewCell>
                                         </prototypes>
                                         <sections/>
@@ -126,7 +126,7 @@
                                             <constraint firstAttribute="width" constant="20" id="whs-zg-8ig"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-a7-4su">
@@ -136,7 +136,7 @@
                                             <constraint firstAttribute="height" constant="26" id="dvh-cU-HD2"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCE-Ru-H5S">
@@ -146,7 +146,7 @@
                                             <constraint firstAttribute="width" constant="20" id="eyO-X4-1fY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="D#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6un-Vg-Onf">
@@ -156,7 +156,7 @@
                                             <constraint firstAttribute="width" constant="20" id="wQb-De-Sx8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGA-bt-6SB">
@@ -166,7 +166,7 @@
                                             <constraint firstAttribute="width" constant="20" id="WVG-4y-hhO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPb-qa-SWj">
@@ -176,7 +176,7 @@
                                             <constraint firstAttribute="height" constant="26" id="SYD-PL-0ef"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="F#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSJ-rO-l0D">
@@ -186,7 +186,7 @@
                                             <constraint firstAttribute="height" constant="26" id="tk7-R6-OzU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX1-x2-jVn">
@@ -196,7 +196,7 @@
                                             <constraint firstAttribute="width" constant="20" id="e9U-2i-UmU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="G#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMu-ns-MIO">
@@ -206,7 +206,7 @@
                                             <constraint firstAttribute="width" constant="20" id="rG8-S9-lj2"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8B-se-TdV">
@@ -216,7 +216,7 @@
                                             <constraint firstAttribute="height" constant="26" id="NBF-xg-Yg5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYE-0l-Uex">
@@ -226,7 +226,7 @@
                                             <constraint firstAttribute="height" constant="26" id="HAT-PG-Thx"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="372" y="62" width="20" height="26"/>
@@ -242,7 +242,7 @@
                                             <constraint firstAttribute="width" constant="20" id="ogz-qX-C7Y"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWy-y0-np0">
@@ -325,23 +325,23 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge2-C6-zQF">
                                         <rect key="frame" x="572" y="44" width="20" height="21"/>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="song title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGT-ur-QoD">
                                         <rect key="frame" x="8" y="28" width="584" height="24"/>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138575553894" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Octave" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPq-6m-SqI">
                                         <rect key="frame" x="485" y="44" width="79" height="21"/>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.98587214946746826" green="0.70099684909140547" blue="0.83065862979931993" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.45098039215686275" green="0.63529411764705879" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="9sk-mn-4Ku" secondAttribute="bottom" id="0hH-gC-7my"/>
@@ -441,13 +441,14 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIN-k4-Uqe">
                                 <rect key="frame" x="0.0" y="200" width="600" height="10"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.3921568627" blue="0.27450980390000002" alpha="0.5" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="lUl-HT-MxW"/>
                                 </constraints>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZmP-5A-KYj">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.49803921568627452" green="0.39215686274509803" blue="0.27450980392156865" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="8xr-29-IUh"/>
                                 </constraints>
@@ -566,7 +567,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDa-ea-333">
                                                     <rect key="frame" x="8" y="13" width="584" height="21"/>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -622,19 +623,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvv-i9-5PE">
                                 <rect key="frame" x="16" y="72" width="56" height="21"/>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                <color key="textColor" red="0.98587214946746826" green="0.30782565710745596" blue="0.59978766584444076" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Speed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw8-Dg-In0">
                                 <rect key="frame" x="16" y="139" width="65" height="21"/>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                <color key="textColor" red="0.98587214950000002" green="0.30782565709999998" blue="0.59978766579999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Division:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-PQ-DvD">
                                 <rect key="frame" x="16" y="214" width="77" height="21"/>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                <color key="textColor" red="0.98587214950000002" green="0.30782565709999998" blue="0.59978766579999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ih3-UP-yhx">
@@ -645,7 +646,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Loi-4t-azG">
                                 <rect key="frame" x="16" y="518" width="568" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.27843138579999999" alpha="0.14999999999999999" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
                                 <state key="normal" title="Save"/>
                                 <userDefinedRuntimeAttributes>
@@ -660,7 +661,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xO-NP-Jtg">
                                 <rect key="frame" x="16" y="480" width="568" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.27843138579999999" alpha="0.14999999999999999" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
                                 <state key="normal" title="Apply">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -707,7 +708,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="120" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apQ-aw-88J">
                                 <rect key="frame" x="89" y="139" width="64" height="21"/>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-lZ-Lhc">
@@ -718,7 +719,7 @@
                             </stepper>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="tintColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="03z-wv-o1e"/>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="0Li-MD-XpV"/>
@@ -834,5 +835,5 @@
         <image name="play.png" width="40" height="40"/>
         <image name="stop.png" width="40" height="40"/>
     </resources>
-    <color key="tintColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+    <color key="tintColor" red="0.18823529411764706" green="0.29803921568627451" blue="0.10980392156862745" alpha="1" colorSpace="deviceRGB"/>
 </document>

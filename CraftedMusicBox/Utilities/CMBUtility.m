@@ -71,19 +71,19 @@ static CMBUtility *_instance = nil;
 {
     UIColor *color = [UIApplication sharedApplication].keyWindow.tintColor;
     if (!color) {
-        color = [UIColor colorWithRed:1.f green:0.f blue:0.278431f alpha:1.f];
+        color = [UIColor colorWithRed:0.18823529411765f green:0.29803921568627f blue:0.10980392156863f alpha:1.f];
     }
     return color;
 }
 
 + (UIColor *)tintColorAlpha50
 {
-    return [UIColor colorWithRed:1.f green:0.f blue:0.278431f alpha:0.5f];
+    return [[CMBUtility tintColor] changeAlpha:0.5f];
 }
 
 + (UIColor *)tintColorAlpha25
 {
-    return [UIColor colorWithRed:1.f green:0.f blue:0.278431f alpha:0.25f];
+    return [[CMBUtility tintColor] changeAlpha:0.25f];
 }
 
 + (UIColor *)whiteColorAlpha25
@@ -91,24 +91,24 @@ static CMBUtility *_instance = nil;
     return [UIColor colorWithRed:1.f green:1.f blue:1.f alpha:0.25f];
 }
 
-+ (UIColor *)yellowColorAlpha25
++ (UIColor *)brownColor
 {
-    return [UIColor colorWithRed:1.f green:1.f blue:0.5f alpha:0.25f];
+    return [UIColor colorWithRed:0.49803921568627f green:0.3921568627451f blue:0.27450980392157f alpha:1.f];
 }
 
-+ (UIColor *)redColorAlpha25
++ (UIColor *)lightBrownColor
 {
-    return [UIColor colorWithRed:1.f green:0.f blue:0.f alpha:0.25f];
+    return [UIColor colorWithRed:0.79607843137255f green:0.59607843137255f blue:0.33333333333333f alpha:1.f];
 }
 
-+ (UIColor *)greenColorAlpha25
++ (UIColor *)greenColor
 {
-    return [UIColor colorWithRed:0.f green:1.f blue:0.f alpha:0.25f];
+    return [UIColor colorWithRed:0.45098039215686f green:0.63529411764706f blue:0.17254901960784f alpha:1.f];
 }
 
-+ (UIColor *)blueColorAlpha25
++ (UIColor *)lightGreenColor
 {
-    return [UIColor colorWithRed:0.f green:0.f blue:1.f alpha:0.25f];
+    return [UIColor colorWithRed:0.8f green:0.91764705882353f blue:0.49803921568627f alpha:1.f];
 }
 
 /**

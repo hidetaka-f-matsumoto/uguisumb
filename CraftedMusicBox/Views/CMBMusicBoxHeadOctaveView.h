@@ -16,11 +16,7 @@
 @property (nonatomic, strong) NSNumber *octave;
 @property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
 
-@property (nonatomic, weak) IBOutlet UIImageView *octDownArrowImage;
-@property (nonatomic, weak) IBOutlet UIImageView *octDownFingerImage;
 @property (nonatomic, weak) IBOutlet UILabel *octDownLabel;
-@property (nonatomic, weak) IBOutlet UIImageView *octUpArrowImage;
-@property (nonatomic, weak) IBOutlet UIImageView *octUpFingerImage;
 @property (nonatomic, weak) IBOutlet UILabel *octUpLabel;
 
 - (void)updateWithOctave:(NSInteger)octave;

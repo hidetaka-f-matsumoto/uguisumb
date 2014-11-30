@@ -35,14 +35,10 @@
 {
     switch (octave) {
         case CMBOctaveMin:
-            _octDownArrowImage.image = nil;
-            _octDownFingerImage.image = nil;
             _octDownLabel.text = nil;
             break;
             
         case CMBOctaveMax:
-            _octUpArrowImage.image = nil;
-            _octUpFingerImage.image = nil;
             _octUpLabel.text = nil;
             break;
             

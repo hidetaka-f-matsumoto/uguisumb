@@ -19,11 +19,10 @@
 + (UIColor *)tintColor;
 + (UIColor *)tintColorAlpha50;
 + (UIColor *)tintColorAlpha25;
-+ (UIColor *)whiteColorAlpha25;
-+ (UIColor *)yellowColorAlpha25;
-+ (UIColor *)redColorAlpha25;
-+ (UIColor *)greenColorAlpha25;
-+ (UIColor *)blueColorAlpha25;
++ (UIColor *)brownColor;
++ (UIColor *)lightBrownColor;
++ (UIColor *)greenColor;
++ (UIColor *)lightGreenColor;
 
 - (NSString *)getSongDirPath;
 - (NSString *)getSongPathWithFileName:(NSString *)fileName;

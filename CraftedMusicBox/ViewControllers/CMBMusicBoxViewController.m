@@ -545,16 +545,16 @@
     UIColor *d1Color;
     UIColor *d2Color;
     if (0 == row / _header.division1.integerValue % 2) {
-        d1Color = [CMBUtility whiteColorAlpha25];
+        d1Color = [UIColor whiteColor];
     } else {
-        d1Color = [CMBUtility tintColorAlpha25];
+        d1Color = [CMBUtility greenColor];
     }
     if (0 == row / _header.division1.integerValue / _header.division2.integerValue % 2) {
-        d2Color = [CMBUtility whiteColorAlpha25];
+        d2Color = [UIColor whiteColor];
     } else {
-        d2Color = [CMBUtility yellowColorAlpha25];
+        d2Color = [CMBUtility lightBrownColor];
     }
-    return [d1Color blendWithColor:d2Color alpha:0.5f];
+    return [[d1Color blendWithColor:d2Color alpha:0.5f] changeAlpha:0.25f];
 }
 
 - (CGFloat)     tableView:(UITableView *)tableView

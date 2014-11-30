@@ -106,9 +106,6 @@
 		08CC5E8F19E2D19A0049AAD5 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5E8719E2D19A0049AAD5 /* SWTableViewCell.m */; };
 		08CC5E9019E2D19A0049AAD5 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5E8919E2D19A0049AAD5 /* SWUtilityButtonTapGestureRecognizer.m */; };
 		08CC5E9119E2D19A0049AAD5 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5E8B19E2D19A0049AAD5 /* SWUtilityButtonView.m */; };
-		08CC5E9419E3AEEC0049AAD5 /* arrow.l.png in Resources */ = {isa = PBXBuildFile; fileRef = 08CC5E9219E3AEEC0049AAD5 /* arrow.l.png */; };
-		08CC5E9519E3AEEC0049AAD5 /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 08CC5E9319E3AEEC0049AAD5 /* hand.png */; };
-		08CC5E9719E3B0470049AAD5 /* arrow.r.png in Resources */ = {isa = PBXBuildFile; fileRef = 08CC5E9619E3B0470049AAD5 /* arrow.r.png */; };
 		08DA5C3A19DA500B00966772 /* sp-setofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08DA5C3919DA4AD400966772 /* sp-setofont.ttf */; };
 		08DE171C19D7A92200315BE4 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 08DE171919D7A92200315BE4 /* pause.png */; };
 		08DE171D19D7A92200315BE4 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 08DE171A19D7A92200315BE4 /* play.png */; };
@@ -259,9 +256,6 @@
 		08CC5E8919E2D19A0049AAD5 /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
 		08CC5E8A19E2D19A0049AAD5 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
 		08CC5E8B19E2D19A0049AAD5 /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
-		08CC5E9219E3AEEC0049AAD5 /* arrow.l.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.l.png; sourceTree = "<group>"; };
-		08CC5E9319E3AEEC0049AAD5 /* hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand.png; sourceTree = "<group>"; };
-		08CC5E9619E3B0470049AAD5 /* arrow.r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.r.png; sourceTree = "<group>"; };
 		08DA5C3919DA4AD400966772 /* sp-setofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sp-setofont.ttf"; sourceTree = "<group>"; };
 		08DE171919D7A92200315BE4 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		08DE171A19D7A92200315BE4 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -305,9 +299,6 @@
 				08DE171919D7A92200315BE4 /* pause.png */,
 				08DE171A19D7A92200315BE4 /* play.png */,
 				08DE171B19D7A92200315BE4 /* stop.png */,
-				08CC5E9219E3AEEC0049AAD5 /* arrow.l.png */,
-				08CC5E9619E3B0470049AAD5 /* arrow.r.png */,
-				08CC5E9319E3AEEC0049AAD5 /* hand.png */,
 				08DE171F19D7B3AB00315BE4 /* mb.bump.on.png */,
 			);
 			path = Images;
@@ -664,7 +655,6 @@
 				08DE171D19D7A92200315BE4 /* play.png in Resources */,
 				0873D5701A25E73600A7D6FA /* musicbox.G5.wav in Resources */,
 				0873D5511A25E73600A7D6FA /* musicbox.A5.wav in Resources */,
-				08CC5E9419E3AEEC0049AAD5 /* arrow.l.png in Resources */,
 				08C696511984260C0096BC20 /* CMBMusicBoxOctaveView.xib in Resources */,
 				0873D5661A25E73600A7D6FA /* musicbox.F3.wav in Resources */,
 				0873D5561A25E73600A7D6FA /* musicbox.B5s.wav in Resources */,
@@ -683,12 +673,10 @@
 				0873D5681A25E73600A7D6FA /* musicbox.F4.wav in Resources */,
 				0873D54F1A25E73600A7D6FA /* musicbox.A4.wav in Resources */,
 				0873D5591A25E73600A7D6FA /* musicbox.C4.wav in Resources */,
-				08CC5E9719E3B0470049AAD5 /* arrow.r.png in Resources */,
 				08CC5E7219E2BC540049AAD5 /* xylophone.F4s.wav in Resources */,
 				0873D56A1A25E73600A7D6FA /* musicbox.F5.wav in Resources */,
 				08DE171E19D7A92200315BE4 /* stop.png in Resources */,
 				08CC5E7919E2BC5C0049AAD5 /* xylophone.A4s.wav in Resources */,
-				08CC5E9519E3AEEC0049AAD5 /* hand.png in Resources */,
 				08B66F89198E031100376683 /* xylophone.C4.wav in Resources */,
 				0873D5651A25E73600A7D6FA /* musicbox.E5.wav in Resources */,
 				08DA5C3A19DA500B00966772 /* sp-setofont.ttf in Resources */,

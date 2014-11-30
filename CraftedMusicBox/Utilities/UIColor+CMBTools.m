@@ -10,7 +10,7 @@
 
 @implementation UIColor (CMBTools)
 
-- (UIColor*)blendWithColor:(UIColor*)color2
+- (UIColor *)blendWithColor:(UIColor*)color2
                      alpha:(CGFloat)alpha2
 {
     alpha2 = MIN( 1.0, MAX( 0.0, alpha2 ) );
@@ -23,6 +23,13 @@
     CGFloat blue    = b1 * beta + b2 * alpha2;
     CGFloat alpha   = a1 * beta + a2 * alpha2;
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+}
+
+- (UIColor *)changeAlpha:(CGFloat)alpha
+{
+    CGFloat r, g, b, a;
+    [self getRed:&r green:&g blue:&b alpha:&a];
+    return [UIColor colorWithRed:r green:g blue:b alpha:alpha];
 }
 
 @end
