@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUP-Yg-zm8">
-                    <rect key="frame" x="8" y="115" width="100" height="44"/>
+                    <rect key="frame" x="8" y="104" width="100" height="44"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="Chm-T8-xoD"/>
                         <constraint firstAttribute="width" constant="100" id="dnV-Wx-sfV"/>
@@ -47,7 +47,7 @@ music box on.</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-hP-cdP">
-                    <rect key="frame" x="492" y="115" width="100" height="44"/>
+                    <rect key="frame" x="492" y="104" width="100" height="44"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="IcH-oh-Odt"/>
                         <constraint firstAttribute="width" constant="50" id="JUY-pA-JeV"/>
@@ -74,11 +74,11 @@ octave up</string>
                 <constraint firstAttribute="centerX" secondItem="9d6-QU-QLH" secondAttribute="centerX" id="JQ2-Wn-sfy"/>
                 <constraint firstItem="LUP-Yg-zm8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="58" id="WJe-ds-WH5"/>
                 <constraint firstItem="xgB-hP-cdP" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="dPT-Zh-pQF"/>
-                <constraint firstAttribute="bottomMargin" secondItem="xgB-hP-cdP" secondAttribute="bottom" constant="33" id="dg0-Wv-5c8"/>
+                <constraint firstAttribute="bottomMargin" secondItem="xgB-hP-cdP" secondAttribute="bottom" constant="44" id="dg0-Wv-5c8"/>
                 <constraint firstItem="LUP-Yg-zm8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="gty-j2-lJa"/>
                 <constraint firstItem="LUP-Yg-zm8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="hok-ag-vfa"/>
                 <constraint firstItem="xgB-hP-cdP" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="kpJ-Uo-rIT"/>
-                <constraint firstAttribute="bottomMargin" secondItem="LUP-Yg-zm8" secondAttribute="bottom" constant="33" id="lTy-gr-mNt"/>
+                <constraint firstAttribute="bottomMargin" secondItem="LUP-Yg-zm8" secondAttribute="bottom" constant="44" id="lTy-gr-mNt"/>
                 <constraint firstAttribute="bottomMargin" secondItem="xgB-hP-cdP" secondAttribute="bottom" constant="74" id="pYs-5t-Dho"/>
                 <constraint firstAttribute="trailingMargin" secondItem="xgB-hP-cdP" secondAttribute="trailing" constant="58" id="qh5-Q9-WPB"/>
                 <constraint firstAttribute="bottomMargin" secondItem="LUP-Yg-zm8" secondAttribute="bottom" constant="74" id="qpp-1o-Loo"/>

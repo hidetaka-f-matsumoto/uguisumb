@@ -75,25 +75,48 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return _songInfos.count;
+    NSInteger numberOfRows = 0;
+    switch (section) {
+        case 0:
+            numberOfRows = 1;
+            break;
+        case 1:
+            numberOfRows = _songInfos.count;
+            break;
+        default:
+            break;
+    }
+    return numberOfRows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellIdentifier = @"SongManageTableViewCell";
-    CMBSongManageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    [cell setupWithSongInfo:_songInfos[indexPath.row]];
-    // SWTableViewCell
-    cell.rightUtilityButtons = [self rightButtons];
-    cell.delegate = self;
+    UITableViewCell *cell = nil;
+    switch (indexPath.section) {
+        case 0:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"SongManageTableViewHeadCell"];
+            break;
+        case 1:
+        {
+            CMBSongManageTableViewCell *smCell = [tableView dequeueReusableCellWithIdentifier:@"SongManageTableViewCell"];
+            [smCell setupWithSongInfo:_songInfos[indexPath.row]];
+            // SWTableViewCell
+            smCell.rightUtilityButtons = [self rightButtons];
+            smCell.delegate = self;
+            cell = smCell;
+            break;
+        }
+        default:
+            break;
+    }
     
     return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 #pragma mark - UITableViewDelegate

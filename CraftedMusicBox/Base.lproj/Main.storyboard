@@ -32,6 +32,7 @@
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -59,15 +60,14 @@
                                             <constraint firstAttribute="width" constant="960" id="bLh-3s-15X"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicBoxTableViewHeadCell" rowHeight="200" id="IC7-gS-MAh" customClass="CMBMusicBoxTableViewHeadCell">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewHeadCell" rowHeight="200" id="IC7-gS-MAh" customClass="CMBMusicBoxTableViewHeadCell">
                                                 <rect key="frame" x="0.0" y="0.0" width="960" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IC7-gS-MAh" id="WI0-ID-h8r">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
-                                                <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                             </tableViewCell>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicBoxTableViewCell" id="eat-gf-db6" customClass="CMBMusicBoxTableViewCell">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewCell" id="eat-gf-db6" customClass="CMBMusicBoxTableViewCell">
                                                 <rect key="frame" x="0.0" y="22" width="960" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eat-gf-db6" id="jCb-TV-DH6">
@@ -75,7 +75,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicBoxTableViewFootCell" rowHeight="200" id="T1G-b4-tJP">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewFootCell" rowHeight="200" id="T1G-b4-tJP">
                                                 <rect key="frame" x="0.0" y="0.0" width="960" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T1G-b4-tJP" id="hMI-1x-yPo">
@@ -439,28 +439,43 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIN-k4-Uqe">
-                                <rect key="frame" x="0.0" y="100" width="600" height="100"/>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIN-k4-Uqe">
+                                <rect key="frame" x="0.0" y="110" width="600" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="branch" translatesAutoresizingMaskIntoConstraints="NO" id="GtV-vh-Bqb">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="branch" translatesAutoresizingMaskIntoConstraints="NO" id="GtV-vh-Bqb">
+                                        <rect key="frame" x="0.0" y="55" width="600" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GtV-vh-Bqb" secondAttribute="height" multiplier="600:37" id="Drl-41-M6I"/>
+                                            <constraint firstAttribute="width" secondItem="GtV-vh-Bqb" secondAttribute="height" multiplier="150:13" id="f59-yD-dXb"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="f59-yD-dXb"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uguisu" translatesAutoresizingMaskIntoConstraints="NO" id="Akk-FW-dNV">
-                                        <rect key="frame" x="500" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="517" y="46" width="75" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="Mh7-Or-IUj"/>
-                                            <constraint firstAttribute="height" constant="100" id="Qyf-Vh-bgw"/>
+                                            <constraint firstAttribute="width" constant="75" id="Mh7-Or-IUj"/>
+                                            <constraint firstAttribute="height" constant="50" id="Qyf-Vh-bgw"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="GtV-vh-Bqb" firstAttribute="leading" secondItem="nIN-k4-Uqe" secondAttribute="leading" id="Azx-9O-uHn"/>
-                                    <constraint firstAttribute="bottom" secondItem="Akk-FW-dNV" secondAttribute="bottom" id="JUJ-aJ-GJE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Akk-FW-dNV" secondAttribute="trailing" constant="8" id="HIV-39-EDN"/>
+                                    <constraint firstAttribute="bottom" secondItem="Akk-FW-dNV" secondAttribute="bottom" constant="4" id="JUJ-aJ-GJE"/>
                                     <constraint firstAttribute="trailing" secondItem="GtV-vh-Bqb" secondAttribute="trailing" id="OJV-4y-0X2"/>
-                                    <constraint firstAttribute="trailing" secondItem="Akk-FW-dNV" secondAttribute="trailing" id="Prb-aI-xCI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Akk-FW-dNV" secondAttribute="trailing" constant="8" id="Prb-aI-xCI"/>
                                     <constraint firstAttribute="bottom" secondItem="GtV-vh-Bqb" secondAttribute="bottom" id="SlE-1A-fNJ"/>
                                     <constraint firstAttribute="height" constant="100" id="lUl-HT-MxW"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Prb-aI-xCI"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZmP-5A-KYj">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
@@ -502,7 +517,7 @@
                             <constraint firstAttribute="trailing" secondItem="nIN-k4-Uqe" secondAttribute="trailing" id="6be-ye-JTM"/>
                             <constraint firstAttribute="trailing" secondItem="dPC-Sn-I1o" secondAttribute="trailing" id="7WL-vG-k86"/>
                             <constraint firstItem="dPC-Sn-I1o" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="E4p-mv-lrP"/>
-                            <constraint firstItem="nIN-k4-Uqe" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" constant="100" id="F7d-gG-Q9v"/>
+                            <constraint firstItem="nIN-k4-Uqe" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" constant="110" id="F7d-gG-Q9v"/>
                             <constraint firstItem="aSg-uY-Uve" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="Iun-zj-61l"/>
                             <constraint firstItem="aSg-uY-Uve" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" id="Kxh-Qt-sI2"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ZmP-5A-KYj" secondAttribute="bottom" constant="-1" id="MV2-g7-SDR"/>
@@ -574,13 +589,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongManageTableViewCell" id="d6z-ek-A9k" customClass="CMBSongManageTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongManageTableViewHeadCell" id="d6z-ek-A9k" userLabel="TableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d6z-ek-A9k" id="hWb-Kt-Wts">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDa-ea-333">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="&lt;&lt;&lt; Swipe to open menue." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDa-ea-333">
                                                     <rect key="frame" x="8" y="13" width="584" height="21"/>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                                     <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
@@ -594,8 +609,30 @@
                                                 <constraint firstItem="JDa-ea-333" firstAttribute="trailing" secondItem="hWb-Kt-Wts" secondAttribute="trailingMargin" id="uHB-kE-0QU"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongManageTableViewCell" id="HrJ-Up-7f4" customClass="CMBSongManageTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HrJ-Up-7f4" id="xCL-Sw-Mer">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PX-iC-rE5">
+                                                    <rect key="frame" x="8" y="13" width="584" height="21"/>
+                                                    <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4PX-iC-rE5" firstAttribute="top" secondItem="xCL-Sw-Mer" secondAttribute="topMargin" constant="5" id="8dg-9h-S0j"/>
+                                                <constraint firstItem="4PX-iC-rE5" firstAttribute="leading" secondItem="xCL-Sw-Mer" secondAttribute="leadingMargin" id="WNF-6i-SIF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4PX-iC-rE5" secondAttribute="bottom" constant="2" id="gwQ-fk-54J"/>
+                                                <constraint firstItem="4PX-iC-rE5" firstAttribute="trailing" secondItem="xCL-Sw-Mer" secondAttribute="trailingMargin" id="rCa-th-VNt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="nameLabel" destination="JDa-ea-333" id="Aeg-Mf-Iiu"/>
+                                            <outlet property="nameLabel" destination="4PX-iC-rE5" id="FsL-gD-sco"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -656,7 +693,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ih3-UP-yhx">
                                 <rect key="frame" x="16" y="101" width="568" height="30"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
@@ -848,10 +885,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="branch" width="320" height="48"/>
+        <image name="branch" width="320" height="20"/>
         <image name="play.png" width="40" height="40"/>
         <image name="stop.png" width="40" height="40"/>
-        <image name="uguisu" width="100" height="100"/>
+        <image name="uguisu" width="75" height="50"/>
     </resources>
     <color key="tintColor" red="0.18823529411764706" green="0.29803921568627451" blue="0.10980392156862745" alpha="1" colorSpace="deviceRGB"/>
 </document>
