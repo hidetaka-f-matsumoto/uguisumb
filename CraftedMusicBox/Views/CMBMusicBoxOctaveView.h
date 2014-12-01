@@ -26,7 +26,7 @@
 @property (nonatomic, assign) id<CMBMusicBoxOctaveViewDelegate> delegate;
 @property (nonatomic, strong) NSNumber *octave;
 @property (nonatomic, readonly, getter = getOnNoteInfos) NSArray *onNoteInfos;
-@property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
+//@property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
 
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *noteButtons;
 

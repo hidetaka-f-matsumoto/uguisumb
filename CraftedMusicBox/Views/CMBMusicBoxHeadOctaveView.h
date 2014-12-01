@@ -14,7 +14,7 @@
 @interface CMBMusicBoxHeadOctaveView : UIView
 
 @property (nonatomic, strong) NSNumber *octave;
-@property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
+//@property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
 
 @property (nonatomic, weak) IBOutlet UILabel *octDownLabel;
 @property (nonatomic, weak) IBOutlet UILabel *octUpLabel;

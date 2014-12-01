@@ -513,14 +513,14 @@
     switch (indexPath.section) {
         case 0:
         {
-            CMBMusicBoxTableViewHeadCell *mbhCell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewHeadCell"];
+            CMBMusicBoxTableViewHeadCell *mbhCell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewHeadCell" forIndexPath:indexPath];
             mbhCell.layoutSize = [self sizeOfMusicBoxHeadCell];
             cell = mbhCell;
             break;
         }
         case 1:
         {
-            CMBMusicBoxTableViewCell *mbCell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewCell"];
+            CMBMusicBoxTableViewCell *mbCell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewCell" forIndexPath:indexPath];
             mbCell.delegate = self;
             mbCell.parentTableView = _tableView;
             mbCell.tineView = _tineView;
@@ -531,7 +531,7 @@
             break;
         }
         case 2:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewFootCell"];
+            cell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewFootCell" forIndexPath:indexPath];
             break;
         default:
             break;

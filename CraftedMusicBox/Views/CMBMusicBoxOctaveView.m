@@ -45,6 +45,7 @@
 }
 */
 
+/*
 - (void)setLayoutSize:(CGSize)layoutSize
 {
     // 設定
@@ -57,6 +58,7 @@
 {
     return _layoutSize;
 }
+*/
 
 - (NSArray *)getOnNoteInfos
 {

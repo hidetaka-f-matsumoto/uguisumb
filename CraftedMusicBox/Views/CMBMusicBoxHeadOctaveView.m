@@ -18,6 +18,7 @@
 }
 */
 
+/*
 - (void)setLayoutSize:(CGSize)layoutSize
 {
     // 設定
@@ -30,6 +31,7 @@
 {
     return _layoutSize;
 }
+*/
 
 - (void)updateWithOctave:(NSInteger)octave
 {

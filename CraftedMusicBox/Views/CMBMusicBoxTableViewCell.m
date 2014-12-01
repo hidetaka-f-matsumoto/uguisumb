@@ -54,22 +54,33 @@
 
 - (void)setLayoutSize:(CGSize)layoutSize
 {
+    // サイズが変わらない場合は何もしない
+    if (_layoutSize.height == layoutSize.height && _layoutSize.width == layoutSize.width &&
+        self.frame.size.height == layoutSize.height && self.frame.size.width == layoutSize.width) {
+        return;
+    }
     // 設定
     _layoutSize = layoutSize;
-    for (NSInteger i=0; i<CMBOctaveRange; i++) {
-        CMBMusicBoxOctaveView *octaveView = _octaveViews[i];
-        CGSize size = CGSizeMake(layoutSize.width / (CGFloat)CMBOctaveRange, layoutSize.height);
-        CGRect frame = CGRectMake(size.width * i, 0.f, size.width, size.height);
-        octaveView.frame = frame;
-        octaveView.layoutSize = size;
-    }
-    // intrinsicContentSizeが変わったことをAuto Layoutに知らせる
-    [self invalidateIntrinsicContentSize];
+    // 再描画 (setNeedsLayoutの方がパフォーマンスが良いので採用)
+//    [self invalidateIntrinsicContentSize];
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
 }
 
 - (CGSize)intrinsicContentSize
 {
     return _layoutSize;
+}
+
+- (void)layoutSubviews
+{
+    for (NSInteger i=0; i<CMBOctaveRange; i++) {
+        // layoutSize内に、CMBOctaveRange分のviewを並べる
+        CMBMusicBoxOctaveView *octaveView = _octaveViews[i];
+        CGSize size = CGSizeMake(self.frame.size.width / (CGFloat)CMBOctaveRange, self.frame.size.height);
+        CGRect frame = CGRectMake(size.width * i, 0.f, size.width, size.height);
+        octaveView.frame = frame;
+    }
 }
 
 - (void)process
