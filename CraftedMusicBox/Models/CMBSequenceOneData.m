@@ -61,7 +61,7 @@
 - (BOOL)isContainNoteData:(CMBNoteData *)noteData
 {
     for (CMBNoteData *nd in _notes) {
-        if (noteData.scale == nd.scale && noteData.octave == nd.octave) {
+        if ([nd isEqualToNote:noteData]) {
             return YES;
         }
     }
@@ -78,13 +78,13 @@
 
 - (void)removeNoteData:(CMBNoteData *)noteData
 {
-    CMBNoteData *target;
+    NSMutableArray *targets = [NSMutableArray array];
     for (CMBNoteData *nd in _notes) {
-        if (noteData.scale == nd.scale && noteData.octave == nd.octave) {
-            target = nd;
+        if ([nd isEqualToNote:noteData]) {
+            [targets addObject:nd];
         }
     }
-    if (target) {
+    for (CMBNoteData *target in targets) {
         [_notes removeObject:target];
     }
 }

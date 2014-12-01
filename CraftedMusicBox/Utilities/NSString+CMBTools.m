@@ -38,7 +38,7 @@
     NSMutableDictionary *seqDic = [NSMutableDictionary dictionary];
     for (NSNumber *time in sequences) {
         CMBSequenceOneData *seqOneData = sequences[time];
-        if (!seqOneData) {
+        if (!seqOneData || !seqOneData.notes || 0 >= seqOneData.notes.count) {
             continue;
         }
         NSString *timeStr = time.stringValue;

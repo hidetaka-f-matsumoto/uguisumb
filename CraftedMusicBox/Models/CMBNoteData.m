@@ -70,4 +70,10 @@
     return [NSString stringWithFormat:@"%@%@", _scale, octaveStr];
 }
 
+- (BOOL)isEqualToNote:(CMBNoteData *)noteData
+{
+    return [_scale isEqualToString:noteData.scale]
+        && [_octave isEqualToNumber:noteData.octave];
+}
+
 @end

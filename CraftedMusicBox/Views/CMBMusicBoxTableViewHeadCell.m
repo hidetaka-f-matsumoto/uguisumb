@@ -65,6 +65,8 @@
 
 - (void)layoutSubviews
 {
+    [super layoutSubviews];
+    
     for (NSInteger i=0; i<CMBOctaveRange; i++) {
         // layoutSize内に、CMBOctaveRange分のviewを並べる
         CMBMusicBoxHeadOctaveView *octaveView = _octaveViews[i];
