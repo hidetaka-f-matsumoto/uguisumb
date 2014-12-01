@@ -22,8 +22,8 @@
 {
     for (UIButton *noteButton in _noteButtons) {
         noteButton.selected = NO;
-        // 処理に時間がかかるのでやってはいけない
-        // [noteButton.imageView setContentMode:UIViewContentModeScaleAspectFit];
+        // 処理に時間がかかるのでやってはいけない...と思ったらそうでもなかった。あれ？
+        [noteButton.imageView setContentMode:UIViewContentModeScaleAspectFit];
     }
 }
 
