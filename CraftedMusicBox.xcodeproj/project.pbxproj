@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
 		0803C8C81A2D53A900FE8357 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8C61A2D53A900FE8357 /* LaunchScreen.xib */; };
+		0803C8CD1A2D992300FE8357 /* CMBMusicBoxHeadOctaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8C91A2D992300FE8357 /* CMBMusicBoxHeadOctaveView.xib */; };
+		0803C8CE1A2D992300FE8357 /* CMBMusicBoxOctaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8CB1A2D992300FE8357 /* CMBMusicBoxOctaveView.xib */; };
+		0803C8D11A2D996300FE8357 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8CF1A2D996300FE8357 /* InfoPlist.strings */; };
 		086BA16019D0401000991574 /* CMBSongConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA15F19D0401000991574 /* CMBSongConfigViewController.m */; };
 		086BA16319D0FA4E00991574 /* CMBSongManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16219D0FA4E00991574 /* CMBSongManageViewController.m */; };
 		086BA16619D0FDA400991574 /* CMBSongManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16519D0FDA400991574 /* CMBSongManageTableViewCell.m */; };
@@ -52,12 +55,10 @@
 		0873D56F1A25E73600A7D6FA /* musicbox.G4s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0873D54A1A25E73600A7D6FA /* musicbox.G4s.wav */; };
 		0873D5701A25E73600A7D6FA /* musicbox.G5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0873D54B1A25E73600A7D6FA /* musicbox.G5.wav */; };
 		0873D5711A25E73600A7D6FA /* musicbox.G5s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0873D54C1A25E73600A7D6FA /* musicbox.G5s.wav */; };
-		0873D5731A25ED8000A7D6FA /* CMBMusicBoxHeadOctaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0873D5721A25ED8000A7D6FA /* CMBMusicBoxHeadOctaveView.xib */; };
 		0873D5761A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0873D5751A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m */; };
 		08883AD41956CC6A00F7EB68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD31956CC6A00F7EB68 /* Foundation.framework */; };
 		08883AD61956CC6A00F7EB68 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD51956CC6A00F7EB68 /* CoreGraphics.framework */; };
 		08883AD81956CC6A00F7EB68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD71956CC6A00F7EB68 /* UIKit.framework */; };
-		08883ADE1956CC6A00F7EB68 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08883ADC1956CC6A00F7EB68 /* InfoPlist.strings */; };
 		08883AE01956CC6A00F7EB68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883ADF1956CC6A00F7EB68 /* main.m */; };
 		08883AE41956CC6A00F7EB68 /* CMBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883AE31956CC6A00F7EB68 /* CMBAppDelegate.m */; };
 		08883AE71956CC6A00F7EB68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08883AE51956CC6A00F7EB68 /* Main.storyboard */; };
@@ -86,7 +87,6 @@
 		08B66F8C198E031100376683 /* xylophone.D4s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08B66F87198E031100376683 /* xylophone.D4s.wav */; };
 		08B66F8D198E031100376683 /* xylophone.E4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08B66F88198E031100376683 /* xylophone.E4.wav */; };
 		08C2816E199D112C0037F6D0 /* MusicInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08C2816D199D112C0037F6D0 /* MusicInfo.plist */; };
-		08C696511984260C0096BC20 /* CMBMusicBoxOctaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08C696501984260C0096BC20 /* CMBMusicBoxOctaveView.xib */; };
 		08C696541984264E0096BC20 /* CMBMusicBoxOctaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C696531984264E0096BC20 /* CMBMusicBoxOctaveView.m */; };
 		08CC5DB519DC240A0049AAD5 /* CMBMusicBoxTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5DB419DC240A0049AAD5 /* CMBMusicBoxTableView.m */; };
 		08CC5E2119DEADAF0049AAD5 /* UIColor+CMBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5E2019DEADAF0049AAD5 /* UIColor+CMBTools.m */; };
@@ -128,6 +128,9 @@
 		0802C0851A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewHeadCell.h; path = Views/CMBMusicBoxTableViewHeadCell.h; sourceTree = "<group>"; };
 		0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxTableViewHeadCell.m; path = Views/CMBMusicBoxTableViewHeadCell.m; sourceTree = "<group>"; };
 		0803C8C71A2D53A900FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		0803C8CA1A2D992300FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CMBMusicBoxHeadOctaveView.xib; sourceTree = "<group>"; };
+		0803C8CC1A2D992300FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CMBMusicBoxOctaveView.xib; sourceTree = "<group>"; };
+		0803C8D01A2D996300FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		086BA15E19D0401000991574 /* CMBSongConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBSongConfigViewController.h; path = ViewControllers/CMBSongConfigViewController.h; sourceTree = "<group>"; };
 		086BA15F19D0401000991574 /* CMBSongConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBSongConfigViewController.m; path = ViewControllers/CMBSongConfigViewController.m; sourceTree = "<group>"; };
 		086BA16119D0FA4E00991574 /* CMBSongManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBSongManageViewController.h; path = ViewControllers/CMBSongManageViewController.h; sourceTree = "<group>"; };
@@ -177,7 +180,6 @@
 		0873D54A1A25E73600A7D6FA /* musicbox.G4s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = musicbox.G4s.wav; sourceTree = "<group>"; };
 		0873D54B1A25E73600A7D6FA /* musicbox.G5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = musicbox.G5.wav; sourceTree = "<group>"; };
 		0873D54C1A25E73600A7D6FA /* musicbox.G5s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = musicbox.G5s.wav; sourceTree = "<group>"; };
-		0873D5721A25ED8000A7D6FA /* CMBMusicBoxHeadOctaveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMBMusicBoxHeadOctaveView.xib; path = Views/CMBMusicBoxHeadOctaveView.xib; sourceTree = "<group>"; };
 		0873D5741A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxHeadOctaveView.h; path = Views/CMBMusicBoxHeadOctaveView.h; sourceTree = "<group>"; };
 		0873D5751A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxHeadOctaveView.m; path = Views/CMBMusicBoxHeadOctaveView.m; sourceTree = "<group>"; };
 		08883AD01956CC6A00F7EB68 /* CraftedMusicBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CraftedMusicBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,7 +187,6 @@
 		08883AD51956CC6A00F7EB68 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		08883AD71956CC6A00F7EB68 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		08883ADB1956CC6A00F7EB68 /* CraftedMusicBox-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CraftedMusicBox-Info.plist"; sourceTree = "<group>"; };
-		08883ADD1956CC6A00F7EB68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08883ADF1956CC6A00F7EB68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08883AE11956CC6A00F7EB68 /* CraftedMusicBox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CraftedMusicBox-Prefix.pch"; sourceTree = "<group>"; };
 		08883AE21956CC6A00F7EB68 /* CMBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBAppDelegate.h; sourceTree = "<group>"; };
@@ -226,7 +227,6 @@
 		08B66F88198E031100376683 /* xylophone.E4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = xylophone.E4.wav; sourceTree = "<group>"; };
 		08C2816C199A82820037F6D0 /* CMBDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBDefine.h; sourceTree = "<group>"; };
 		08C2816D199D112C0037F6D0 /* MusicInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MusicInfo.plist; sourceTree = "<group>"; };
-		08C696501984260C0096BC20 /* CMBMusicBoxOctaveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMBMusicBoxOctaveView.xib; path = Views/CMBMusicBoxOctaveView.xib; sourceTree = "<group>"; };
 		08C696521984264E0096BC20 /* CMBMusicBoxOctaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxOctaveView.h; path = Views/CMBMusicBoxOctaveView.h; sourceTree = "<group>"; };
 		08C696531984264E0096BC20 /* CMBMusicBoxOctaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxOctaveView.m; path = Views/CMBMusicBoxOctaveView.m; sourceTree = "<group>"; };
 		08CC5DB319DC240A0049AAD5 /* CMBMusicBoxTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableView.h; path = Views/CMBMusicBoxTableView.h; sourceTree = "<group>"; };
@@ -412,7 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				08883ADB1956CC6A00F7EB68 /* CraftedMusicBox-Info.plist */,
-				08883ADC1956CC6A00F7EB68 /* InfoPlist.strings */,
+				0803C8CF1A2D996300FE8357 /* InfoPlist.strings */,
 				08883ADF1956CC6A00F7EB68 /* main.m */,
 				08883AE11956CC6A00F7EB68 /* CraftedMusicBox-Prefix.pch */,
 				08C2816C199A82820037F6D0 /* CMBDefine.h */,
@@ -484,16 +484,16 @@
 			children = (
 				08CC5DB319DC240A0049AAD5 /* CMBMusicBoxTableView.h */,
 				08CC5DB419DC240A0049AAD5 /* CMBMusicBoxTableView.m */,
+				0803C8CB1A2D992300FE8357 /* CMBMusicBoxOctaveView.xib */,
 				08A769D51972992900143638 /* CMBMusicBoxTableViewCell.h */,
 				08A769D61972992900143638 /* CMBMusicBoxTableViewCell.m */,
-				08C696501984260C0096BC20 /* CMBMusicBoxOctaveView.xib */,
 				08C696521984264E0096BC20 /* CMBMusicBoxOctaveView.h */,
 				08C696531984264E0096BC20 /* CMBMusicBoxOctaveView.m */,
 				086BA16419D0FDA400991574 /* CMBSongManageTableViewCell.h */,
 				086BA16519D0FDA400991574 /* CMBSongManageTableViewCell.m */,
+				0803C8C91A2D992300FE8357 /* CMBMusicBoxHeadOctaveView.xib */,
 				0802C0851A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.h */,
 				0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */,
-				0873D5721A25ED8000A7D6FA /* CMBMusicBoxHeadOctaveView.xib */,
 				0873D5741A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.h */,
 				0873D5751A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m */,
 			);
@@ -658,13 +658,13 @@
 				08DE171D19D7A92200315BE4 /* play.png in Resources */,
 				0873D5701A25E73600A7D6FA /* musicbox.G5.wav in Resources */,
 				0873D5511A25E73600A7D6FA /* musicbox.A5.wav in Resources */,
-				08C696511984260C0096BC20 /* CMBMusicBoxOctaveView.xib in Resources */,
 				0873D5661A25E73600A7D6FA /* musicbox.F3.wav in Resources */,
 				0873D5561A25E73600A7D6FA /* musicbox.B5s.wav in Resources */,
 				08DE171C19D7A92200315BE4 /* pause.png in Resources */,
 				08883AEF1956CC6A00F7EB68 /* Images.xcassets in Resources */,
 				0873D54D1A25E73600A7D6FA /* musicbox.A3.wav in Resources */,
 				08CC5E7A19E2BC5C0049AAD5 /* xylophone.B4.wav in Resources */,
+				0803C8CD1A2D992300FE8357 /* CMBMusicBoxHeadOctaveView.xib in Resources */,
 				08CC5E7419E2BC540049AAD5 /* xylophone.G4s.wav in Resources */,
 				0873D56D1A25E73600A7D6FA /* musicbox.G3s.wav in Resources */,
 				08B66F8B198E031100376683 /* xylophone.D4.wav in Resources */,
@@ -672,11 +672,11 @@
 				08883AE71956CC6A00F7EB68 /* Main.storyboard in Resources */,
 				08DE172019D7B3AB00315BE4 /* mb.bump.on.png in Resources */,
 				08CC5E7319E2BC540049AAD5 /* xylophone.G4.wav in Resources */,
-				0873D5731A25ED8000A7D6FA /* CMBMusicBoxHeadOctaveView.xib in Resources */,
 				0873D5681A25E73600A7D6FA /* musicbox.F4.wav in Resources */,
 				0873D54F1A25E73600A7D6FA /* musicbox.A4.wav in Resources */,
 				0873D5591A25E73600A7D6FA /* musicbox.C4.wav in Resources */,
 				08CC5E7219E2BC540049AAD5 /* xylophone.F4s.wav in Resources */,
+				0803C8D11A2D996300FE8357 /* InfoPlist.strings in Resources */,
 				0873D56A1A25E73600A7D6FA /* musicbox.F5.wav in Resources */,
 				08DE171E19D7A92200315BE4 /* stop.png in Resources */,
 				08CC5E7919E2BC5C0049AAD5 /* xylophone.A4s.wav in Resources */,
@@ -700,7 +700,6 @@
 				0803C8C81A2D53A900FE8357 /* LaunchScreen.xib in Resources */,
 				0873D5581A25E73600A7D6FA /* musicbox.C3s.wav in Resources */,
 				0873D5521A25E73600A7D6FA /* musicbox.A5s.wav in Resources */,
-				08883ADE1956CC6A00F7EB68 /* InfoPlist.strings in Resources */,
 				0873D5641A25E73600A7D6FA /* musicbox.E4.wav in Resources */,
 				08CC5E7819E2BC5C0049AAD5 /* xylophone.A4.wav in Resources */,
 				0873D55A1A25E73600A7D6FA /* musicbox.C4s.wav in Resources */,
@@ -713,6 +712,7 @@
 				0873D5631A25E73600A7D6FA /* musicbox.E3.wav in Resources */,
 				0873D55D1A25E73600A7D6FA /* musicbox.D3.wav in Resources */,
 				0873D5621A25E73600A7D6FA /* musicbox.D5s.wav in Resources */,
+				0803C8CE1A2D992300FE8357 /* CMBMusicBoxOctaveView.xib in Resources */,
 				0873D5691A25E73600A7D6FA /* musicbox.F4s.wav in Resources */,
 				0873D5501A25E73600A7D6FA /* musicbox.A4s.wav in Resources */,
 				0873D55F1A25E73600A7D6FA /* musicbox.D4.wav in Resources */,
@@ -794,10 +794,26 @@
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
-		08883ADC1956CC6A00F7EB68 /* InfoPlist.strings */ = {
+		0803C8C91A2D992300FE8357 /* CMBMusicBoxHeadOctaveView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				08883ADD1956CC6A00F7EB68 /* en */,
+				0803C8CA1A2D992300FE8357 /* Base */,
+			);
+			name = CMBMusicBoxHeadOctaveView.xib;
+			sourceTree = "<group>";
+		};
+		0803C8CB1A2D992300FE8357 /* CMBMusicBoxOctaveView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0803C8CC1A2D992300FE8357 /* Base */,
+			);
+			name = CMBMusicBoxOctaveView.xib;
+			sourceTree = "<group>";
+		};
+		0803C8CF1A2D996300FE8357 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0803C8D01A2D996300FE8357 /* Base */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

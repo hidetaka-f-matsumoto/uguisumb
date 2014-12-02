@@ -79,8 +79,8 @@
                                                                fileName:_nameText.text];
     if (!isSuccess) {
         // 失敗
-        NSString *title = @"Save song";
-        NSString *message = [NSString stringWithFormat:@"Fail to save %@.", _nameText.text];
+        NSString *title = NSLocalizedString(@"Save song", @"Save song.");
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Fail to save %@.", @"The message when you failed to save the song with name %@."), _nameText.text];
         // 通知ダイアログ
         [self showAlertDialogWithTitle:title
                                message:message
@@ -106,8 +106,11 @@
 - (IBAction)saveButtonDidTap:(id)sender
 {
     // 確認ダイアログ
-    NSString *title = @"Save song";
-    NSString *message = [NSString stringWithFormat:@"You wanna save %@?", _nameText.text];
+    NSString *title = NSLocalizedString(@"Save song", @"Save song");
+    NSString *message = [NSString stringWithFormat:
+                         NSLocalizedString(@"You wanna save %@?",
+                                           @"The message to confirm you want to save the song with name %@."),
+                         _nameText.text];
     [self showConfirmDialogWithTitle:title
                              message:message
                             handler1:^(UIAlertAction *action) {

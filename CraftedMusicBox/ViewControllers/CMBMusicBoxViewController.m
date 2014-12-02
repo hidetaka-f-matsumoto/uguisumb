@@ -811,7 +811,7 @@
     NSString *message = [@"https://itunes.apple.com/jp/app/todo:fix/todo:fix?mt=8\n\n" stringByAppendingString:url];
     // メール送信画面を表示
     MFMailComposeViewController *mailPicker = [MFMailComposeViewController new];
-    [mailPicker setSubject:@"This is my crafted music box."];
+    [mailPicker setSubject:NSLocalizedString(@"This is my music box.", @"The subject of the mail to send the song.")];
     [mailPicker setMessageBody:message isHTML:NO];
     mailPicker.bk_completionBlock = ^(MFMailComposeViewController *controller, MFMailComposeResult result, NSError *error) {
         switch (result) {
@@ -822,8 +822,8 @@
             case MFMailComposeResultSent: // 送信成功
                 break;
             case MFMailComposeResultFailed:// 送信失敗
-                [self showAlertDialogWithTitle:@"Mail"
-                                       message:@"Fail to send a mail."
+                [self showAlertDialogWithTitle:NSLocalizedString(@"Mail", @"Mail")
+                                       message:NSLocalizedString(@"Failed to send the mail.", @"The message when you failed to send the mail.")
                                       handler1:nil
                                       handler2:nil];
                 break;

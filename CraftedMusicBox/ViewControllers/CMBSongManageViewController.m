@@ -62,10 +62,10 @@
     NSMutableArray *rightUtilityButtons = [NSMutableArray new];
     [rightUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:0.1f green:0.78f blue:0.1f alpha:1.0]
-                                                title:@"Load"];
+                                                title:NSLocalizedString(@"Load", @"Load")];
     [rightUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
-                                                title:@"Delete"];
+                                                title:NSLocalizedString(@"Delete", @"Delete")];
     
     return rightUtilityButtons;
 }
@@ -137,8 +137,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         case 0:
         {
             // Load button was pressed
-            NSString *title = @"Load song";
-            NSString *message = [NSString stringWithFormat:@"You wanna load %@?", songCell.info[@"name"]];
+            NSString *title = NSLocalizedString(@"Load song", @"Load song");
+            NSString *message = [NSString stringWithFormat:NSLocalizedString(@"You wanna load %@?", @"The message to confirm you want to load the song with name %@."), songCell.info[@"name"]];
             [self showConfirmDialogWithTitle:title
                                      message:message
                                     handler1:^(UIAlertAction *action) {
@@ -152,8 +152,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         case 1:
         {
             // Delete button was pressed
-            NSString *title = @"Delete song";
-            NSString *message = [NSString stringWithFormat:@"You wanna delete %@?", songCell.info[@"name"]];
+            NSString *title = NSLocalizedString(@"Delete song", @"Delete song");
+            NSString *message = [NSString stringWithFormat:NSLocalizedString(@"You wanna delete %@?", @"The message to confirm you want to delete the song with name %@."), songCell.info[@"name"]];
             [self showConfirmDialogWithTitle:title
                                      message:message
                                     handler1:^(UIAlertAction *action) {
@@ -179,8 +179,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                                                                fileName:songInfo[@"name"]];
     if (!isSuccess) {
         // 失敗
-        NSString *title = @"Load song";
-        NSString *message = [NSString stringWithFormat:@"Fail to load %@.", songInfo[@"name"]];
+        NSString *title = NSLocalizedString(@"Load song", @"Load song");
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Failed to load %@.", @"The message when you failed to load the song with name %@."), songInfo[@"name"]];
         [self showAlertDialogWithTitle:title
                                message:message
                               handler1:nil
@@ -200,8 +200,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     BOOL isSuccess = [[CMBUtility sharedInstance] deleteSongWithFileName:songInfo[@"name"]];
     if (!isSuccess) {
         // 失敗
-        NSString *title = @"Delete song";
-        NSString *message = [NSString stringWithFormat:@"Fail to delete %@.", songInfo[@"name"]];
+        NSString *title = NSLocalizedString(@"Delete song", @"Delete song");
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Failed to delete %@.", @"The message when failed to delete the song with name %@"), songInfo[@"name"]];
         [self showAlertDialogWithTitle:title
                                message:message
                               handler1:nil

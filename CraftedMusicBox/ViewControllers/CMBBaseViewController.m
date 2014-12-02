@@ -41,7 +41,7 @@
                                             message:message
                                      preferredStyle:UIAlertControllerStyleAlert];
         // OK処理
-        [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
+        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK")
                                                             style:UIAlertActionStyleDefault
                                                           handler:handler1]];
         // ダイアログを表示
@@ -52,7 +52,7 @@
     // UIAlertControllerが使えない場合
     else {
         UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:title message:message];
-        [alertView bk_addButtonWithTitle:@"OK" handler:handler2];
+        [alertView bk_addButtonWithTitle:NSLocalizedString(@"OK", @"OK") handler:handler2];
         alertView.bk_willShowBlock = ^(UIAlertView *alertView) {
             [self willPresentAlertView:alertView];
         };
@@ -72,11 +72,11 @@
                                             message:message
                                      preferredStyle:UIAlertControllerStyleAlert];
         // Cancel処理
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
+        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel")
                                                             style:UIAlertActionStyleDefault
                                                           handler:nil]];
         // OK処理
-        [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
+        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK")
                                                             style:UIAlertActionStyleDefault
                                                           handler:handler1]];
         // ダイアログを表示
@@ -87,8 +87,8 @@
     // UIAlertControllerが使えない場合
     else {
         UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:title message:message];
-        [alertView bk_addButtonWithTitle:@"Cancel" handler:nil];
-        [alertView bk_addButtonWithTitle:@"OK" handler:handler2];
+        [alertView bk_addButtonWithTitle:NSLocalizedString(@"Cancel", @"Cancel") handler:nil];
+        [alertView bk_addButtonWithTitle:NSLocalizedString(@"OK", @"OK") handler:handler2];
         alertView.bk_willShowBlock = ^(UIAlertView *alertView) {
             [self willPresentAlertView:alertView];
         };
@@ -114,7 +114,7 @@
                                                               handler:button[@"handler"]]];
         }
         // Cancel処理
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
+        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel")
                                                             style:UIAlertActionStyleDefault
                                                           handler:nil]];
         // アクションシート表示
@@ -130,7 +130,7 @@
             [actionSheet bk_addButtonWithTitle:button[@"title"] handler:button[@"handler"]];
         }
         // Cancel処理
-        [actionSheet bk_setCancelButtonWithTitle:@"Cancel" handler:nil];
+        [actionSheet bk_setCancelButtonWithTitle:NSLocalizedString(@"Cancel", @"Cancel") handler:nil];
         // アクションシート表示
         [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
         actionSheet.bk_willShowBlock = ^(UIActionSheet *actionSheet) {

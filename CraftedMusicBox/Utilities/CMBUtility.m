@@ -290,8 +290,8 @@ static CMBUtility *_instance = nil;
             // パース失敗
             else {
                 [info setObject:[NSDictionary dictionaryWithObjectsAndKeys:
-                                 @"Open URL", @"title",
-                                 @"Fail to load the song.", @"message",
+                                 NSLocalizedString(@"Open URL", @"Open URL."), @"title",
+                                 NSLocalizedString(@"Failed to load the song.", @"Error message when you failed to load the song from URL."), @"message",
                                  nil]
                          forKey:@"error"];
             }
