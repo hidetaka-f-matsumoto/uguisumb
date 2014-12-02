@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
+		0803C8C81A2D53A900FE8357 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8C61A2D53A900FE8357 /* LaunchScreen.xib */; };
 		086BA16019D0401000991574 /* CMBSongConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA15F19D0401000991574 /* CMBSongConfigViewController.m */; };
 		086BA16319D0FA4E00991574 /* CMBSongManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16219D0FA4E00991574 /* CMBSongManageViewController.m */; };
 		086BA16619D0FDA400991574 /* CMBSongManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16519D0FDA400991574 /* CMBSongManageTableViewCell.m */; };
@@ -126,6 +127,7 @@
 /* Begin PBXFileReference section */
 		0802C0851A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewHeadCell.h; path = Views/CMBMusicBoxTableViewHeadCell.h; sourceTree = "<group>"; };
 		0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxTableViewHeadCell.m; path = Views/CMBMusicBoxTableViewHeadCell.m; sourceTree = "<group>"; };
+		0803C8C71A2D53A900FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		086BA15E19D0401000991574 /* CMBSongConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBSongConfigViewController.h; path = ViewControllers/CMBSongConfigViewController.h; sourceTree = "<group>"; };
 		086BA15F19D0401000991574 /* CMBSongConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBSongConfigViewController.m; path = ViewControllers/CMBSongConfigViewController.m; sourceTree = "<group>"; };
 		086BA16119D0FA4E00991574 /* CMBSongManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBSongManageViewController.h; path = ViewControllers/CMBSongManageViewController.h; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				08883AE21956CC6A00F7EB68 /* CMBAppDelegate.h */,
 				08883AE31956CC6A00F7EB68 /* CMBAppDelegate.m */,
 				08883AE51956CC6A00F7EB68 /* Main.storyboard */,
+				0803C8C61A2D53A900FE8357 /* LaunchScreen.xib */,
 				08883AEE1956CC6A00F7EB68 /* Images.xcassets */,
 				080616FF1957286E00C46771 /* Images */,
 				08B66F82198E004300376683 /* Sounds */,
@@ -694,6 +697,7 @@
 				0873D56C1A25E73600A7D6FA /* musicbox.G3.wav in Resources */,
 				0873D55E1A25E73600A7D6FA /* musicbox.D3s.wav in Resources */,
 				0873D5531A25E73600A7D6FA /* musicbox.B3.wav in Resources */,
+				0803C8C81A2D53A900FE8357 /* LaunchScreen.xib in Resources */,
 				0873D5581A25E73600A7D6FA /* musicbox.C3s.wav in Resources */,
 				0873D5521A25E73600A7D6FA /* musicbox.A5s.wav in Resources */,
 				08883ADE1956CC6A00F7EB68 /* InfoPlist.strings in Resources */,
@@ -782,6 +786,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0803C8C61A2D53A900FE8357 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0803C8C71A2D53A900FE8357 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
 		08883ADC1956CC6A00F7EB68 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
