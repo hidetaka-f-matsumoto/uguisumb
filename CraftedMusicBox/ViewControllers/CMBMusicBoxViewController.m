@@ -147,29 +147,29 @@
                                                             relatedBy:NSLayoutRelationEqual
                                                                toItem:_scrollView
                                                             attribute:NSLayoutAttributeLeading
-                                                           multiplier:1.0f
-                                                             constant:0]];
+                                                           multiplier:1.f
+                                                             constant:0.f]];
     [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:_tableView
                                                             attribute:NSLayoutAttributeTrailing
                                                             relatedBy:NSLayoutRelationEqual
                                                                toItem:_scrollView
                                                             attribute:NSLayoutAttributeTrailing
-                                                           multiplier:1.0f
-                                                             constant:0]];
+                                                           multiplier:1.f
+                                                             constant:0.f]];
     [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:_tableView
                                                             attribute:NSLayoutAttributeTop
                                                             relatedBy:NSLayoutRelationEqual
                                                                toItem:_scrollView
                                                             attribute:NSLayoutAttributeTop
-                                                           multiplier:1.0f
-                                                             constant:0]];
+                                                           multiplier:1.f
+                                                             constant:0.f]];
     [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:_tableView
                                                             attribute:NSLayoutAttributeBottom
                                                             relatedBy:NSLayoutRelationEqual
                                                                toItem:_scrollView
                                                             attribute:NSLayoutAttributeBottom
-                                                           multiplier:1.0f
-                                                             constant:0]];
+                                                           multiplier:1.f
+                                                             constant:0.f]];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue
@@ -589,16 +589,10 @@
     BOOL isScrollable;
     // オルゴールテーブルの場合
     if (scrollView == _tableView) {
-        // 再生中なら停止
-        if (_isPlaying) {
-            isScrollable = NO;
-            _isStopping = YES;
-            [self stopWithAnimation:YES];
-        }
-        // 再生中でなければ上までスクロール
-        else {
-            isScrollable = YES;
-        }
+        // 停止
+        [self stopWithAnimation:YES];
+        // 標準スクロールはしない
+        isScrollable = NO;
     }
     // ページング用スクロールの場合
     else if (scrollView == _scrollView) {

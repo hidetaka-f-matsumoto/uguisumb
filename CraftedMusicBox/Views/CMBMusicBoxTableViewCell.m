@@ -88,16 +88,24 @@
 - (void)process
 {
 //    NSLog(@"process y=%f", self.frame.origin.y - _parentTableView.contentOffset.y);
+    // オルゴール歯の位置
     CGFloat tineY = _tineView.frame.origin.y + _tineView.frame.size.height - 20.0f; // StatusBar分
+    // 現在位置
     CGFloat curY = self.frame.origin.y - _parentTableView.contentOffset.y;
-    if (tineY >= curY && tineY < _preY) {
-        NSLog(@"process tineY=%f, curY=%f, preY=%f", tineY, curY, _preY);
-        NSMutableArray *noteInfos = [NSMutableArray array];
-        for (CMBMusicBoxOctaveView *octaveView in _octaveViews) {
-            [noteInfos addObjectsFromArray:octaveView.onNoteInfos];
+    // 画面内かチェック (余裕を見ておく)
+    if (20.f <= curY && _parentTableView.frame.size.height - 20.f > curY) {
+        // オルゴール歯を通過したかチェック
+        if (tineY >= curY && tineY < _preY) {
+            // ピックされた事を通知
+//            NSLog(@"process tineY=%f, curY=%f, preY=%f", tineY, curY, _preY);
+            NSMutableArray *noteInfos = [NSMutableArray array];
+            for (CMBMusicBoxOctaveView *octaveView in _octaveViews) {
+                [noteInfos addObjectsFromArray:octaveView.onNoteInfos];
+            }
+            [_delegate notesDidPickWithInfos:noteInfos];
         }
-        [_delegate notesDidPickWithInfos:noteInfos];
     }
+    // 前回の位置を記録
     _preY = curY;
 }
 
