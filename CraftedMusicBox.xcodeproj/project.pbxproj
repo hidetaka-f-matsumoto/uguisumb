@@ -66,7 +66,6 @@
 		08883AF61956CC6A00F7EB68 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AF51956CC6A00F7EB68 /* XCTest.framework */; };
 		08883AF71956CC6A00F7EB68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD31956CC6A00F7EB68 /* Foundation.framework */; };
 		08883AF81956CC6A00F7EB68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD71956CC6A00F7EB68 /* UIKit.framework */; };
-		08883B001956CC6A00F7EB68 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08883AFE1956CC6A00F7EB68 /* InfoPlist.strings */; };
 		08883B021956CC6A00F7EB68 /* CraftedMusicBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883B011956CC6A00F7EB68 /* CraftedMusicBoxTests.m */; };
 		08883B111956CFEF00F7EB68 /* CMBMusicBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883B101956CFEF00F7EB68 /* CMBMusicBoxViewController.m */; };
 		08883B161956D03D00F7EB68 /* CMBTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883B131956D03D00F7EB68 /* CMBTabViewController.m */; };
@@ -196,7 +195,6 @@
 		08883AF41956CC6A00F7EB68 /* CraftedMusicBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CraftedMusicBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08883AF51956CC6A00F7EB68 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		08883AFD1956CC6A00F7EB68 /* CraftedMusicBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CraftedMusicBoxTests-Info.plist"; sourceTree = "<group>"; };
-		08883AFF1956CC6A00F7EB68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08883B011956CC6A00F7EB68 /* CraftedMusicBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CraftedMusicBoxTests.m; sourceTree = "<group>"; };
 		08883B0F1956CFEF00F7EB68 /* CMBMusicBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxViewController.h; path = ViewControllers/CMBMusicBoxViewController.h; sourceTree = "<group>"; };
 		08883B101956CFEF00F7EB68 /* CMBMusicBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxViewController.m; path = ViewControllers/CMBMusicBoxViewController.m; sourceTree = "<group>"; };
@@ -436,7 +434,6 @@
 			isa = PBXGroup;
 			children = (
 				08883AFD1956CC6A00F7EB68 /* CraftedMusicBoxTests-Info.plist */,
-				08883AFE1956CC6A00F7EB68 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -636,7 +633,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 08883AC71956CC6A00F7EB68;
@@ -723,7 +719,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08883B001956CC6A00F7EB68 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,14 +819,6 @@
 				08883AE61956CC6A00F7EB68 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		08883AFE1956CC6A00F7EB68 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08883AFF1956CC6A00F7EB68 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

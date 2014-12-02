@@ -79,7 +79,7 @@
                                                                fileName:_nameText.text];
     if (!isSuccess) {
         // 失敗
-        NSString *title = NSLocalizedString(@"Save song", @"Save song.");
+        NSString *title = NSLocalizedString(@"Save song", @"Save song");
         NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Fail to save %@.", @"The message when you failed to save the song with name %@."), _nameText.text];
         // 通知ダイアログ
         [self showAlertDialogWithTitle:title
