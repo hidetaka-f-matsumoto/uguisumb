@@ -28,8 +28,17 @@
 /* (No Commment) */
 "Load song" = "曲を開く";
 
+/* Share */
+"Share" = "シェア";
+
+/* Menue */
+"Menue" = "メニュー";
+
 /* (No Commment) */
 "Mail" = "メール";
+
+/* (No Commment) */
+"LINE" = "LINE";
 
 /* (No Commment) */
 "OK" = "OK";

@@ -28,8 +28,17 @@
 /* Load song */
 "Load song" = "Load song";
 
+/* Share */
+"Share" = "Share";
+
+/* Menue */
+"Menue" = "Menue";
+
 /* Mail */
 "Mail" = "Mail";
+
+/* LINE */
+"LINE" = "LINE";
 
 /* OK */
 "OK" = "OK";

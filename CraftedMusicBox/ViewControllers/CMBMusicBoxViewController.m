@@ -237,7 +237,7 @@
     // ヘッダViewを非表示
     [self hideHeadView];
     // ポーズボタンに変更
-    [_playButton setImage:[UIImage imageNamed:@"pause.png"]];
+    [_playButton setImage:[UIImage imageNamed:@"pause"]];
     // タイマー開始 (自動スクロール)
     if (!_timer || !_timer.isValid) {
         _timer = [NSTimer scheduledTimerWithTimeInterval:CMBTimeDivAutoScroll
@@ -257,7 +257,7 @@
     // タイマー停止
     [_timer invalidate];
     // 再生ボタンに変更
-    [_playButton setImage:[UIImage imageNamed:@"play.png"]];
+    [_playButton setImage:[UIImage imageNamed:@"play"]];
     // ヘッダViewを表示
     [self showHeadView];
     // スクロール許可
@@ -328,27 +328,27 @@
  */
 - (IBAction)shareButtonDidTap:(id)sender
 {
-    [self showActionSheetWithTitle:@"Share"
+    [self showActionSheetWithTitle:NSLocalizedString(@"Share", @"Share")
                            message:nil
                           buttons1:@[
-                                     @{@"title": @"LINE",
+                                     @{@"title": NSLocalizedString(@"LINE", @"LINE"),
                                        @"handler": ^(UIAlertAction *action)
                                        {
         [self sendLINE];
     }},
-                                     @{@"title": @"Mail",
+                                     @{@"title": NSLocalizedString(@"Mail", @"Mail"),
                                        @"handler": ^(UIAlertAction *action)
                                        {
         [self sendMail];
     }}
                                      ]
                           buttons2:@[
-                                     @{@"title": @"LINE",
+                                     @{@"title": NSLocalizedString(@"LINE", @"LINE"),
                                        @"handler": ^(void)
                                        {
         [self sendLINE];
     }},
-                                     @{@"title": @"Mail",
+                                     @{@"title": NSLocalizedString(@"Mail", @"Mail"),
                                        @"handler": ^(void)
                                        {
         [self sendMail];
@@ -362,7 +362,7 @@
  */
 - (IBAction)menueButtonDidTap:(id)sender
 {
-    [self showActionSheetWithTitle:@"Menue"
+    [self showActionSheetWithTitle:NSLocalizedString(@"Menue", @"Menue")
                            message:nil
                           buttons1:@[
                                      @{@"title": NSLocalizedString(@"New song", @"Create a new song."),

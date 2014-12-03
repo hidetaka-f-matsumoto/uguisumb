@@ -485,25 +485,25 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="dsB-Ih-KCw"/>
-                                    <barButtonItem image="stop.png" style="plain" id="tPI-bR-fBF">
+                                    <barButtonItem image="stop" style="plain" id="tPI-bR-fBF">
                                         <connections>
                                             <action selector="stopButtonDidTap:" destination="OGI-JR-xGh" id="grL-Zi-lqy"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mQ5-aA-D2y"/>
-                                    <barButtonItem image="play.png" style="plain" id="zHS-0g-qN3">
+                                    <barButtonItem image="play" style="plain" id="zHS-0g-qN3">
                                         <connections>
                                             <action selector="playButtonDidTap:" destination="OGI-JR-xGh" id="rhQ-eF-rQo"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Gbp-j7-9ku"/>
-                                    <barButtonItem style="plain" systemItem="action" id="edA-yp-sCJ">
+                                    <barButtonItem image="share" style="plain" id="edA-yp-sCJ">
                                         <connections>
                                             <action selector="shareButtonDidTap:" destination="OGI-JR-xGh" id="kuf-Fw-q1s"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Xfz-r3-juG"/>
-                                    <barButtonItem title="Menue" style="plain" id="43b-Ox-G0z">
+                                    <barButtonItem image="menue" style="plain" id="43b-Ox-G0z">
                                         <connections>
                                             <action selector="menueButtonDidTap:" destination="OGI-JR-xGh" id="y2B-qa-lXl"/>
                                         </connections>
@@ -886,8 +886,10 @@
     </scenes>
     <resources>
         <image name="branch" width="320" height="20"/>
-        <image name="play.png" width="40" height="40"/>
-        <image name="stop.png" width="40" height="40"/>
+        <image name="menue" width="40" height="40"/>
+        <image name="play" width="40" height="40"/>
+        <image name="share" width="40" height="40"/>
+        <image name="stop" width="40" height="40"/>
         <image name="uguisu" width="75" height="50"/>
     </resources>
     <color key="tintColor" red="0.18823529411764706" green="0.29803921568627451" blue="0.10980392156862745" alpha="1" colorSpace="deviceRGB"/>
