@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="sp-setofont.ttf">
@@ -18,10 +18,10 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="LUP-Yg-zm8">
-                    <rect key="frame" x="8" y="104" width="100" height="44"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="LUP-Yg-zm8">
+                    <rect key="frame" x="8" y="104" width="120" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="dnV-Wx-sfV"/>
+                        <constraint firstAttribute="width" constant="120" id="dnV-Wx-sfV"/>
                         <constraint firstAttribute="height" constant="44" id="zvd-Jc-3hm"/>
                     </constraints>
                     <string key="text">&lt;&lt;&lt; Swipe
@@ -30,10 +30,10 @@ octave down</string>
                     <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-hP-cdP">
-                    <rect key="frame" x="492" y="104" width="100" height="44"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-hP-cdP">
+                    <rect key="frame" x="472" y="104" width="120" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="IcH-oh-Odt"/>
+                        <constraint firstAttribute="width" constant="120" id="IcH-oh-Odt"/>
                         <constraint firstAttribute="height" constant="44" id="ZZl-hd-9aU"/>
                     </constraints>
                     <string key="text">Swipe &gt;&gt;&gt;

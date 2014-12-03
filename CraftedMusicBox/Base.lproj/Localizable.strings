@@ -62,3 +62,6 @@
 /* Manage my songs. */
 "Manage my songs" = "Manage my songs";
 
+/* Song title is none. */
+"No title" = "New song";
+

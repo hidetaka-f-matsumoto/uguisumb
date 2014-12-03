@@ -202,7 +202,7 @@
         _tableView.contentOffset = CGPointMake(0, 0);
     }
     // タイトル更新
-    _titleLabel.text = (_header.name && 0 < _header.name.length) ? _header.name : @"no title";
+    _titleLabel.text = (_header.name && 0 < _header.name.length) ? _header.name : NSLocalizedString(@"No title", @"Song title is none.");
     // オクターブ表示更新
     _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
     // テーブルビュー更新

@@ -61,3 +61,5 @@
 /* Manage my songs. */
 "Manage my songs" = "曲を管理";
 
+/* Song title is none. */
+"No title" = "新しい曲";

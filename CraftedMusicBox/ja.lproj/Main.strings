@@ -5,7 +5,7 @@
 "4PX-iC-rE5.text" = "Label";
 
 /* Class = "IBUIButton"; normalTitle = "Apply"; ObjectID = "4xO-NP-Jtg"; */
-"4xO-NP-Jtg.normalTitle" = "適用";
+"4xO-NP-Jtg.normalTitle" = "設定する";
 
 /* Class = "IBUILabel"; text = "C"; ObjectID = "6is-ct-Zwb"; */
 "6is-ct-Zwb.text" = "C";
@@ -17,7 +17,7 @@
 "Ge2-C6-zQF.text" = "4";
 
 /* Class = "IBUILabel"; text = "Division:"; ObjectID = "IcS-PQ-DvD"; */
-"IcS-PQ-DvD.text" = "分割:";
+"IcS-PQ-DvD.text" = "ガイド:";
 
 /* Class = "IBUINavigationItem"; title = "Song Config"; ObjectID = "IkL-fO-Kbl"; */
 "IkL-fO-Kbl.title" = "曲の設定";
