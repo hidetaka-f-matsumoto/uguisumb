@@ -527,11 +527,13 @@
                             <constraint firstAttribute="bottom" secondItem="dPC-Sn-I1o" secondAttribute="bottom" id="fnM-eG-qKK"/>
                             <constraint firstItem="ZmP-5A-KYj" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="hnT-Sh-Hat"/>
                             <constraint firstItem="nIN-k4-Uqe" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="jRg-Lg-m66"/>
+                            <constraint firstItem="aSg-uY-Uve" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" id="teQ-l4-zms"/>
                             <constraint firstItem="nIN-k4-Uqe" firstAttribute="top" secondItem="aSg-uY-Uve" secondAttribute="bottom" constant="200" id="uxp-Ql-bGU"/>
                             <constraint firstAttribute="centerY" secondItem="nIN-k4-Uqe" secondAttribute="centerY" id="zhk-gK-e4K"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Kxh-Qt-sI2"/>
                                 <exclude reference="uxp-Ql-bGU"/>
                                 <exclude reference="zhk-gK-e4K"/>
                             </mask>
@@ -543,6 +545,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="headView" destination="aSg-uY-Uve" id="XcF-nD-iIH"/>
+                        <outlet property="headViewTopConstraint" destination="teQ-l4-zms" id="jCx-Q7-4L5"/>
                         <outlet property="octaveLabel" destination="Ge2-C6-zQF" id="hYl-3o-XhN"/>
                         <outlet property="playButton" destination="zHS-0g-qN3" id="cHY-iE-9Mx"/>
                         <outlet property="scrollView" destination="dPC-Sn-I1o" id="yVg-2A-uyo"/>

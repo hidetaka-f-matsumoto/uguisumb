@@ -21,7 +21,7 @@
     BOOL _isFirstViewWillAppear;
     BOOL _isFirstViewDidAppear;
     CGPoint _scrollPointBegin;
-    CGRect _headViewOriginalFrame;
+    CGFloat _headViewTopConstraintConstantOriginal;
     NSMutableDictionary *_sequences; // Dictionary<NSNumber *, CMBSequenceOneData *>
     CMBSongHeaderData *_header;
 }
@@ -93,7 +93,7 @@
     // 表示更新
     [self updateViewsWithResetScroll:_isFirstViewDidAppear];
     
-    _headViewOriginalFrame = _headView.frame;
+    _headViewTopConstraintConstantOriginal = _headViewTopConstraint.constant;
     _isFirstViewDidAppear = NO;
     
     // SoundManagerをチェック
@@ -459,22 +459,29 @@
 
 - (void)showHeadView
 {
+    // Ensures that all pending layout operations have been completed
+    [self.view layoutIfNeeded];
+    // 制約を元に戻す
+    _headViewTopConstraint.constant = _headViewTopConstraintConstantOriginal;
     [UIView animateWithDuration:0.2f
                      animations:^(void)
      {
-         _headView.frame = _headViewOriginalFrame;
+         // Forces the layout of the subtree animation block and then captures all of the frame changes
+         [self.view layoutIfNeeded];
      }];
 }
 
 - (void)hideHeadView
 {
+    // Ensures that all pending layout operations have been completed
+    [self.view layoutIfNeeded];
+    // 画面外に出るよう Auto Layout の制約を設定
+    _headViewTopConstraint.constant = -1.f * _headView.frame.size.height;
     [UIView animateWithDuration:0.4f
                      animations:^(void)
      {
-         _headView.frame = CGRectMake(0,
-                                      -1 * _headView.frame.size.height,
-                                      _headView.frame.size.width,
-                                      _headView.frame.size.height);
+         // Forces the layout of the subtree animation block and then captures all of the frame changes
+         [self.view layoutIfNeeded];
      }];
 }
 

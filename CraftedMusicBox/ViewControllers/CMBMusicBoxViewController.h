@@ -36,6 +36,8 @@ static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200.f;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *octaveLabel;
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *headViewTopConstraint;
+
 - (IBAction)playButtonDidTap:(id)sender;
 - (IBAction)stopButtonDidTap:(id)sender;
 - (IBAction)shareButtonDidTap:(id)sender;
