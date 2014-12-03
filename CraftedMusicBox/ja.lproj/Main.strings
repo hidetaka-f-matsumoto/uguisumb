@@ -32,7 +32,7 @@
 "KIe-Ac-EW5.text" = "end";
 
 /* Class = "IBUINavigationItem"; title = "Song Manage"; ObjectID = "KYI-ep-6f1"; */
-"KYI-ep-6f1.title" = "Song Manage";
+"KYI-ep-6f1.title" = "曲の管理";
 
 /* Class = "IBUIButton"; normalTitle = "Save"; ObjectID = "Loi-4t-azG"; */
 "Loi-4t-azG.normalTitle" = "保存する";

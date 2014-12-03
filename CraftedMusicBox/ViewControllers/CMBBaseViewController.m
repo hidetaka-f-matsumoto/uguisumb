@@ -19,8 +19,16 @@
 {
     [super viewDidLoad];
     
-    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"SetoFont-SP" size:19.0]} forState:UIControlStateNormal];
-    [[UIBarButtonItem appearance] setTintColor:[CMBUtility tintColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     @{
+       NSFontAttributeName : [UIFont fontWithName:@"SetoFont-SP" size:19.f],
+       NSForegroundColorAttributeName : [CMBUtility tintColor],
+      }];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:
+     @{
+       NSFontAttributeName : [UIFont fontWithName:@"SetoFont-SP" size:19.f],
+       NSForegroundColorAttributeName : [CMBUtility tintColor],
+       } forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
