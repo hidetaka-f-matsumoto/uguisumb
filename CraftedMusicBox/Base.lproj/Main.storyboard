@@ -497,7 +497,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Gbp-j7-9ku"/>
-                                    <barButtonItem image="share" style="plain" id="edA-yp-sCJ">
+                                    <barButtonItem image="action" style="plain" id="edA-yp-sCJ">
                                         <connections>
                                             <action selector="shareButtonDidTap:" destination="OGI-JR-xGh" id="kuf-Fw-q1s"/>
                                         </connections>
@@ -888,10 +888,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="action" width="40" height="40"/>
         <image name="branch" width="320" height="20"/>
         <image name="menue" width="40" height="40"/>
         <image name="play" width="40" height="40"/>
-        <image name="share" width="40" height="40"/>
         <image name="stop" width="40" height="40"/>
         <image name="uguisu" width="75" height="50"/>
     </resources>
