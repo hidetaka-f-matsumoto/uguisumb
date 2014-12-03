@@ -18,7 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     _nameText.delegate = self;
     _speedSlider.minimumValue = CMBSpeedMin;
     _speedSlider.maximumValue = CMBSpeedMax;

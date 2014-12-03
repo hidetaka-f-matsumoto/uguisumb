@@ -1,0 +1,54 @@
+/* (No Commment) */
+"Cancel" = "キャンセル";
+
+/* (No Commment) */
+"Delete" = "消す";
+
+/* (No Commment) */
+"Delete song" = "曲を消す";
+
+/* (No Commment) */
+"Fail to save %@." = "%@ を保存するのに失敗したケキョ...";
+
+/* (No Commment) */
+"Failed to delete %@." = "%@ を消すのに失敗したケキョ...";
+
+/* (No Commment) */
+"Failed to load %@." = "%@ を開くのに失敗したケキョ...";
+
+/* (No Commment) */
+"Failed to load the song." = "曲を開くのに失敗したケキョ...";
+
+/* (No Commment) */
+"Failed to send the mail." = "メールを送るのに失敗したケキョ...";
+
+/* (No Commment) */
+"Load" = "開く";
+
+/* (No Commment) */
+"Load song" = "曲を開く";
+
+/* (No Commment) */
+"Mail" = "メール";
+
+/* (No Commment) */
+"OK" = "OK";
+
+/* (No Commment) */
+"Open URL" = "URLを開く";
+
+/* (No Commment) */
+"Save song" = "曲の保存";
+
+/* (No Commment) */
+"This is my music box." = "オルゴールだケキョ";
+
+/* (No Commment) */
+"You wanna delete %@?" = "%@ を消すケキョ？";
+
+/* (No Commment) */
+"You wanna load %@?" = "%@ を開くケキョ？";
+
+/* (No Commment) */
+"You wanna save %@?" = "%@ を保存するケキョ？";
+

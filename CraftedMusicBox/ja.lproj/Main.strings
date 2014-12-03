@@ -1,0 +1,135 @@
+/* Class = "IBUIBarButtonItem"; title = "Menue"; ObjectID = "43b-Ox-G0z"; */
+"43b-Ox-G0z.title" = "メニュー";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "4PX-iC-rE5"; */
+"4PX-iC-rE5.text" = "Label";
+
+/* Class = "IBUIButton"; normalTitle = "Apply"; ObjectID = "4xO-NP-Jtg"; */
+"4xO-NP-Jtg.normalTitle" = "適用";
+
+/* Class = "IBUILabel"; text = "C"; ObjectID = "6is-ct-Zwb"; */
+"6is-ct-Zwb.text" = "C";
+
+/* Class = "IBUILabel"; text = "D#"; ObjectID = "6un-Vg-Onf"; */
+"6un-Vg-Onf.text" = "D#";
+
+/* Class = "IBUILabel"; text = "4"; ObjectID = "Ge2-C6-zQF"; */
+"Ge2-C6-zQF.text" = "4";
+
+/* Class = "IBUILabel"; text = "Division:"; ObjectID = "IcS-PQ-DvD"; */
+"IcS-PQ-DvD.text" = "分割:";
+
+/* Class = "IBUINavigationItem"; title = "Song Config"; ObjectID = "IkL-fO-Kbl"; */
+"IkL-fO-Kbl.title" = "曲の設定";
+
+/* Class = "IBUILabel"; text = "<<< Swipe to open menue."; ObjectID = "JDa-ea-333"; */
+"JDa-ea-333.text" = "<<< スワイプしてメニューを開く";
+
+/* Class = "IBUILabel"; text = "F#"; ObjectID = "JSJ-rO-l0D"; */
+"JSJ-rO-l0D.text" = "F#";
+
+/* Class = "IBUILabel"; text = "end"; ObjectID = "KIe-Ac-EW5"; */
+"KIe-Ac-EW5.text" = "end";
+
+/* Class = "IBUINavigationItem"; title = "Song Manage"; ObjectID = "KYI-ep-6f1"; */
+"KYI-ep-6f1.title" = "Song Manage";
+
+/* Class = "IBUIButton"; normalTitle = "Save"; ObjectID = "Loi-4t-azG"; */
+"Loi-4t-azG.normalTitle" = "保存する";
+
+/* Class = "IBUILabel"; text = "E"; ObjectID = "PGA-bt-6SB"; */
+"PGA-bt-6SB.text" = "E";
+
+/* Class = "IBUILabel"; text = "A"; ObjectID = "QXc-zu-bBA"; */
+"QXc-zu-bBA.text" = "A";
+
+/* Class = "IBUIBarButtonItem"; title = "Close"; ObjectID = "QoO-fZ-Euk"; */
+"QoO-fZ-Euk.title" = "閉じる";
+
+/* Class = "IBUILabel"; text = "song title"; ObjectID = "TGT-ur-QoD"; */
+"TGT-ur-QoD.text" = "曲名";
+
+/* Class = "IBUILabel"; text = "A#"; ObjectID = "V8B-se-TdV"; */
+"V8B-se-TdV.text" = "A#";
+
+/* Class = "IBUISegmentedControl"; We1-Ap-gzE.segmentTitles[0] = "2"; ObjectID = "We1-Ap-gzE"; */
+"We1-Ap-gzE.segmentTitles[0]" = "2";
+
+/* Class = "IBUISegmentedControl"; We1-Ap-gzE.segmentTitles[1] = "3"; ObjectID = "We1-Ap-gzE"; */
+"We1-Ap-gzE.segmentTitles[1]" = "3";
+
+/* Class = "IBUISegmentedControl"; We1-Ap-gzE.segmentTitles[2] = "4"; ObjectID = "We1-Ap-gzE"; */
+"We1-Ap-gzE.segmentTitles[2]" = "4";
+
+/* Class = "IBUISegmentedControl"; We1-Ap-gzE.segmentTitles[3] = "5"; ObjectID = "We1-Ap-gzE"; */
+"We1-Ap-gzE.segmentTitles[3]" = "5";
+
+/* Class = "IBUISegmentedControl"; We1-Ap-gzE.segmentTitles[4] = "6"; ObjectID = "We1-Ap-gzE"; */
+"We1-Ap-gzE.segmentTitles[4]" = "6";
+
+/* Class = "IBUISegmentedControl"; We1-Ap-gzE.segmentTitles[5] = "7"; ObjectID = "We1-Ap-gzE"; */
+"We1-Ap-gzE.segmentTitles[5]" = "7";
+
+/* Class = "IBUISegmentedControl"; We1-Ap-gzE.segmentTitles[6] = "8"; ObjectID = "We1-Ap-gzE"; */
+"We1-Ap-gzE.segmentTitles[6]" = "8";
+
+/* Class = "IBUISegmentedControl"; We1-Ap-gzE.segmentTitles[7] = "11"; ObjectID = "We1-Ap-gzE"; */
+"We1-Ap-gzE.segmentTitles[7]" = "11";
+
+/* Class = "IBUILabel"; text = "120"; ObjectID = "apQ-aw-88J"; */
+"apQ-aw-88J.text" = "120";
+
+/* Class = "IBUISegmentedControl"; bF1-Hh-rgh.segmentTitles[0] = "2"; ObjectID = "bF1-Hh-rgh"; */
+"bF1-Hh-rgh.segmentTitles[0]" = "2";
+
+/* Class = "IBUISegmentedControl"; bF1-Hh-rgh.segmentTitles[1] = "3"; ObjectID = "bF1-Hh-rgh"; */
+"bF1-Hh-rgh.segmentTitles[1]" = "3";
+
+/* Class = "IBUISegmentedControl"; bF1-Hh-rgh.segmentTitles[2] = "4"; ObjectID = "bF1-Hh-rgh"; */
+"bF1-Hh-rgh.segmentTitles[2]" = "4";
+
+/* Class = "IBUISegmentedControl"; bF1-Hh-rgh.segmentTitles[3] = "5"; ObjectID = "bF1-Hh-rgh"; */
+"bF1-Hh-rgh.segmentTitles[3]" = "5";
+
+/* Class = "IBUISegmentedControl"; bF1-Hh-rgh.segmentTitles[4] = "6"; ObjectID = "bF1-Hh-rgh"; */
+"bF1-Hh-rgh.segmentTitles[4]" = "6";
+
+/* Class = "IBUISegmentedControl"; bF1-Hh-rgh.segmentTitles[5] = "7"; ObjectID = "bF1-Hh-rgh"; */
+"bF1-Hh-rgh.segmentTitles[5]" = "7";
+
+/* Class = "IBUISegmentedControl"; bF1-Hh-rgh.segmentTitles[6] = "8"; ObjectID = "bF1-Hh-rgh"; */
+"bF1-Hh-rgh.segmentTitles[6]" = "8";
+
+/* Class = "IBUISegmentedControl"; bF1-Hh-rgh.segmentTitles[7] = "11"; ObjectID = "bF1-Hh-rgh"; */
+"bF1-Hh-rgh.segmentTitles[7]" = "11";
+
+/* Class = "IBUILabel"; text = "Speed:"; ObjectID = "bw8-Dg-In0"; */
+"bw8-Dg-In0.text" = "スピード:";
+
+/* Class = "IBUILabel"; text = "C#"; ObjectID = "fcC-a7-4su"; */
+"fcC-a7-4su.text" = "C#";
+
+/* Class = "IBUILabel"; text = "G#"; ObjectID = "hMu-ns-MIO"; */
+"hMu-ns-MIO.text" = "G#";
+
+/* Class = "IBUILabel"; text = "G"; ObjectID = "hX1-x2-jVn"; */
+"hX1-x2-jVn.text" = "G";
+
+/* Class = "IBUILabel"; text = "Octave"; ObjectID = "jPq-6m-SqI"; */
+"jPq-6m-SqI.text" = "オクターブ";
+
+/* Class = "IBUILabel"; text = "D"; ObjectID = "kCE-Ru-H5S"; */
+"kCE-Ru-H5S.text" = "D";
+
+/* Class = "IBUILabel"; text = "Title:"; ObjectID = "mvv-i9-5PE"; */
+"mvv-i9-5PE.text" = "タイトル:";
+
+/* Class = "IBUIBarButtonItem"; title = "Close"; ObjectID = "nHJ-Fw-rsH"; */
+"nHJ-Fw-rsH.title" = "閉じる";
+
+/* Class = "IBUILabel"; text = "F"; ObjectID = "pPb-qa-SWj"; */
+"pPb-qa-SWj.text" = "F";
+
+/* Class = "IBUILabel"; text = "B"; ObjectID = "tYE-0l-Uex"; */
+"tYE-0l-Uex.text" = "B";
+
