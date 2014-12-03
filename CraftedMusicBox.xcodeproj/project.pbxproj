@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
-		0803C8C81A2D53A900FE8357 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8C61A2D53A900FE8357 /* LaunchScreen.xib */; };
-		0803C8CD1A2D992300FE8357 /* CMBMusicBoxHeadOctaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8C91A2D992300FE8357 /* CMBMusicBoxHeadOctaveView.xib */; };
-		0803C8CE1A2D992300FE8357 /* CMBMusicBoxOctaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8CB1A2D992300FE8357 /* CMBMusicBoxOctaveView.xib */; };
-		0803C8D11A2D996300FE8357 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8CF1A2D996300FE8357 /* InfoPlist.strings */; };
-		0803C8E31A2DB77200FE8357 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8E51A2DB77200FE8357 /* Localizable.strings */; };
 		0803C8E81A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8EA1A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings */; };
+		08289E1F1A2EACD800927D51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8CF1A2D996300FE8357 /* InfoPlist.strings */; };
+		08289E201A2EACE200927D51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8E51A2DB77200FE8357 /* Localizable.strings */; };
+		08289E211A2EAD0100927D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08883AE51956CC6A00F7EB68 /* Main.storyboard */; };
+		08289E221A2EAD0F00927D51 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8C61A2D53A900FE8357 /* LaunchScreen.xib */; };
+		08289E231A2EAD1400927D51 /* CMBMusicBoxHeadOctaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8C91A2D992300FE8357 /* CMBMusicBoxHeadOctaveView.xib */; };
+		08289E241A2EAD1800927D51 /* CMBMusicBoxOctaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8CB1A2D992300FE8357 /* CMBMusicBoxOctaveView.xib */; };
 		086BA16019D0401000991574 /* CMBSongConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA15F19D0401000991574 /* CMBSongConfigViewController.m */; };
 		086BA16319D0FA4E00991574 /* CMBSongManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16219D0FA4E00991574 /* CMBSongManageViewController.m */; };
 		086BA16619D0FDA400991574 /* CMBSongManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16519D0FDA400991574 /* CMBSongManageTableViewCell.m */; };
@@ -63,7 +64,6 @@
 		08883AD81956CC6A00F7EB68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD71956CC6A00F7EB68 /* UIKit.framework */; };
 		08883AE01956CC6A00F7EB68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883ADF1956CC6A00F7EB68 /* main.m */; };
 		08883AE41956CC6A00F7EB68 /* CMBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08883AE31956CC6A00F7EB68 /* CMBAppDelegate.m */; };
-		08883AE71956CC6A00F7EB68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08883AE51956CC6A00F7EB68 /* Main.storyboard */; };
 		08883AEF1956CC6A00F7EB68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08883AEE1956CC6A00F7EB68 /* Images.xcassets */; };
 		08883AF61956CC6A00F7EB68 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AF51956CC6A00F7EB68 /* XCTest.framework */; };
 		08883AF71956CC6A00F7EB68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD31956CC6A00F7EB68 /* Foundation.framework */; };
@@ -132,14 +132,20 @@
 		0803C8CA1A2D992300FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CMBMusicBoxHeadOctaveView.xib; sourceTree = "<group>"; };
 		0803C8CC1A2D992300FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CMBMusicBoxOctaveView.xib; sourceTree = "<group>"; };
 		0803C8D01A2D996300FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0803C8DC1A2D9D0900FE8357 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/CMBMusicBoxOctaveView.strings; sourceTree = "<group>"; };
-		0803C8DD1A2D9D0900FE8357 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/CMBMusicBoxHeadOctaveView.strings; sourceTree = "<group>"; };
-		0803C8DE1A2D9D0900FE8357 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		0803C8DF1A2D9D0900FE8357 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		0803C8E01A2D9D0900FE8357 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0803C8E91A2DB77300FE8357 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = "ja.lproj/CraftedMusicBoxTests-InfoPlist.strings"; sourceTree = "<group>"; };
 		0803C8EB1A2DBCB900FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0803C8ED1A2DBCE600FE8357 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		08289E261A2EB02500927D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		08289E281A2EB07200927D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CMBMusicBoxHeadOctaveView.strings; sourceTree = "<group>"; };
+		08289E2A1A2EB07D00927D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CMBMusicBoxOctaveView.strings; sourceTree = "<group>"; };
+		08289E2B1A2EB07F00927D51 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/CMBMusicBoxOctaveView.strings; sourceTree = "<group>"; };
+		08289E2D1A2EB08B00927D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		08289E2E1A2EB08D00927D51 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		08289E2F1A2EB09600927D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08289E301A2EB0A600927D51 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08289E311A2EB0B400927D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		08289E321A2EB0B700927D51 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		08289E331A2EB0DA00927D51 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/CMBMusicBoxHeadOctaveView.strings; sourceTree = "<group>"; };
+		08289E341A2EB0F100927D51 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		086BA15E19D0401000991574 /* CMBSongConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBSongConfigViewController.h; path = ViewControllers/CMBSongConfigViewController.h; sourceTree = "<group>"; };
 		086BA15F19D0401000991574 /* CMBSongConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBSongConfigViewController.m; path = ViewControllers/CMBSongConfigViewController.m; sourceTree = "<group>"; };
 		086BA16119D0FA4E00991574 /* CMBSongManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBSongManageViewController.h; path = ViewControllers/CMBSongManageViewController.h; sourceTree = "<group>"; };
@@ -667,7 +673,6 @@
 			files = (
 				08DE171D19D7A92200315BE4 /* play.png in Resources */,
 				0873D5701A25E73600A7D6FA /* musicbox.G5.wav in Resources */,
-				0803C8CD1A2D992300FE8357 /* CMBMusicBoxHeadOctaveView.xib in Resources */,
 				0873D5511A25E73600A7D6FA /* musicbox.A5.wav in Resources */,
 				0873D5661A25E73600A7D6FA /* musicbox.F3.wav in Resources */,
 				0873D5561A25E73600A7D6FA /* musicbox.B5s.wav in Resources */,
@@ -676,17 +681,17 @@
 				0873D54D1A25E73600A7D6FA /* musicbox.A3.wav in Resources */,
 				08CC5E7A19E2BC5C0049AAD5 /* xylophone.B4.wav in Resources */,
 				08CC5E7419E2BC540049AAD5 /* xylophone.G4s.wav in Resources */,
+				08289E1F1A2EACD800927D51 /* InfoPlist.strings in Resources */,
 				0873D56D1A25E73600A7D6FA /* musicbox.G3s.wav in Resources */,
 				08B66F8B198E031100376683 /* xylophone.D4.wav in Resources */,
 				0873D5541A25E73600A7D6FA /* musicbox.B4.wav in Resources */,
-				08883AE71956CC6A00F7EB68 /* Main.storyboard in Resources */,
 				08DE172019D7B3AB00315BE4 /* mb.bump.on.png in Resources */,
 				08CC5E7319E2BC540049AAD5 /* xylophone.G4.wav in Resources */,
 				0873D5681A25E73600A7D6FA /* musicbox.F4.wav in Resources */,
+				08289E241A2EAD1800927D51 /* CMBMusicBoxOctaveView.xib in Resources */,
 				0873D54F1A25E73600A7D6FA /* musicbox.A4.wav in Resources */,
 				0873D5591A25E73600A7D6FA /* musicbox.C4.wav in Resources */,
 				08CC5E7219E2BC540049AAD5 /* xylophone.F4s.wav in Resources */,
-				0803C8D11A2D996300FE8357 /* InfoPlist.strings in Resources */,
 				0873D56A1A25E73600A7D6FA /* musicbox.F5.wav in Resources */,
 				08DE171E19D7A92200315BE4 /* stop.png in Resources */,
 				08CC5E7919E2BC5C0049AAD5 /* xylophone.A4s.wav in Resources */,
@@ -699,6 +704,7 @@
 				08CC5E7119E2BC540049AAD5 /* xylophone.F4.wav in Resources */,
 				0873D56E1A25E73600A7D6FA /* musicbox.G4.wav in Resources */,
 				08B66F8D198E031100376683 /* xylophone.E4.wav in Resources */,
+				08289E231A2EAD1400927D51 /* CMBMusicBoxHeadOctaveView.xib in Resources */,
 				0873D5571A25E73600A7D6FA /* musicbox.C3.wav in Resources */,
 				0873D56B1A25E73600A7D6FA /* musicbox.F5s.wav in Resources */,
 				0873D55B1A25E73600A7D6FA /* musicbox.C5.wav in Resources */,
@@ -707,12 +713,11 @@
 				0873D56C1A25E73600A7D6FA /* musicbox.G3.wav in Resources */,
 				0873D55E1A25E73600A7D6FA /* musicbox.D3s.wav in Resources */,
 				0873D5531A25E73600A7D6FA /* musicbox.B3.wav in Resources */,
-				0803C8C81A2D53A900FE8357 /* LaunchScreen.xib in Resources */,
+				08289E221A2EAD0F00927D51 /* LaunchScreen.xib in Resources */,
 				0873D5581A25E73600A7D6FA /* musicbox.C3s.wav in Resources */,
 				0873D5521A25E73600A7D6FA /* musicbox.A5s.wav in Resources */,
 				0873D5641A25E73600A7D6FA /* musicbox.E4.wav in Resources */,
 				08CC5E7819E2BC5C0049AAD5 /* xylophone.A4.wav in Resources */,
-				0803C8E31A2DB77200FE8357 /* Localizable.strings in Resources */,
 				0873D55A1A25E73600A7D6FA /* musicbox.C4s.wav in Resources */,
 				0873D55C1A25E73600A7D6FA /* musicbox.C5s.wav in Resources */,
 				0873D54E1A25E73600A7D6FA /* musicbox.A3s.wav in Resources */,
@@ -720,10 +725,11 @@
 				08B66F8C198E031100376683 /* xylophone.D4s.wav in Resources */,
 				08C2816E199D112C0037F6D0 /* MusicInfo.plist in Resources */,
 				0873D5711A25E73600A7D6FA /* musicbox.G5s.wav in Resources */,
+				08289E201A2EACE200927D51 /* Localizable.strings in Resources */,
 				0873D5631A25E73600A7D6FA /* musicbox.E3.wav in Resources */,
+				08289E211A2EAD0100927D51 /* Main.storyboard in Resources */,
 				0873D55D1A25E73600A7D6FA /* musicbox.D3.wav in Resources */,
 				0873D5621A25E73600A7D6FA /* musicbox.D5s.wav in Resources */,
-				0803C8CE1A2D992300FE8357 /* CMBMusicBoxOctaveView.xib in Resources */,
 				0873D5691A25E73600A7D6FA /* musicbox.F4s.wav in Resources */,
 				0873D5501A25E73600A7D6FA /* musicbox.A4s.wav in Resources */,
 				0873D55F1A25E73600A7D6FA /* musicbox.D4.wav in Resources */,
@@ -801,7 +807,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				0803C8C71A2D53A900FE8357 /* Base */,
-				0803C8DF1A2D9D0900FE8357 /* ja */,
+				08289E2D1A2EB08B00927D51 /* en */,
+				08289E2E1A2EB08D00927D51 /* ja */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -810,7 +817,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				0803C8CA1A2D992300FE8357 /* Base */,
-				0803C8DD1A2D9D0900FE8357 /* ja */,
+				08289E281A2EB07200927D51 /* en */,
+				08289E331A2EB0DA00927D51 /* ja */,
 			);
 			name = CMBMusicBoxHeadOctaveView.xib;
 			sourceTree = "<group>";
@@ -819,7 +827,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				0803C8CC1A2D992300FE8357 /* Base */,
-				0803C8DC1A2D9D0900FE8357 /* ja */,
+				08289E2A1A2EB07D00927D51 /* en */,
+				08289E2B1A2EB07F00927D51 /* ja */,
 			);
 			name = CMBMusicBoxOctaveView.xib;
 			sourceTree = "<group>";
@@ -828,7 +837,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				0803C8D01A2D996300FE8357 /* Base */,
-				0803C8E01A2D9D0900FE8357 /* ja */,
+				08289E2F1A2EB09600927D51 /* en */,
+				08289E301A2EB0A600927D51 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -837,7 +847,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				0803C8EB1A2DBCB900FE8357 /* Base */,
-				0803C8ED1A2DBCE600FE8357 /* ja */,
+				08289E311A2EB0B400927D51 /* en */,
+				08289E321A2EB0B700927D51 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -854,7 +865,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				08883AE61956CC6A00F7EB68 /* Base */,
-				0803C8DE1A2D9D0900FE8357 /* ja */,
+				08289E261A2EB02500927D51 /* en */,
+				08289E341A2EB0F100927D51 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -365,34 +365,34 @@
     [self showActionSheetWithTitle:@"Menue"
                            message:nil
                           buttons1:@[
-                                     @{@"title": @"New song",
+                                     @{@"title": NSLocalizedString(@"New song", @"Create a new song."),
                                        @"handler": ^(UIAlertAction *action)
     {
         [self songNewButtonDidTap];
     }},
-                                     @{@"title": @"Config/Save song",
+                                     @{@"title": NSLocalizedString(@"Config/Save song", @"Configurate/Save the song."),
                                        @"handler": ^(UIAlertAction *action)
     {
         [self songConfigButtonDidTap];
     }},
-                                     @{@"title": @"Manage my songs",
+                                     @{@"title": NSLocalizedString(@"Manage my songs", @"Manage my songs."),
                                        @"handler": ^(UIAlertAction *action)
     {
         [self songManageButtonDidTap];
     }}
                                      ]
                           buttons2:@[
-                                     @{@"title": @"New song",
+                                     @{@"title": NSLocalizedString(@"New song", @"Create a new song."),
                                        @"handler": ^(void)
     {
         [self songNewButtonDidTap];
     }},
-                                     @{@"title": @"Config/Save song",
+                                     @{@"title": NSLocalizedString(@"Config/Save song", @"Configure/Save the song."),
                                        @"handler": ^(void)
     {
         [self songConfigButtonDidTap];
     }},
-                                     @{@"title": @"Manage my songs",
+                                     @{@"title": NSLocalizedString(@"Manage my songs", @"Manage my songs."),
                                        @"handler": ^(void)
     {
         [self songManageButtonDidTap];

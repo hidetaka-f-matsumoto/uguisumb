@@ -1,0 +1,9 @@
+
+/* Class = "IBUILabel"; text = "Tap bellow,\nmusic box on."; ObjectID = "9d6-QU-QLH"; */
+"9d6-QU-QLH.text" = "Tap bellow,\nmusic box on.";
+
+/* Class = "IBUILabel"; text = "<<< Swipe\noctave down"; ObjectID = "LUP-Yg-zm8"; */
+"LUP-Yg-zm8.text" = "<<< Swipe\noctave down";
+
+/* Class = "IBUILabel"; text = "Swipe >>>\noctave up"; ObjectID = "xgB-hP-cdP"; */
+"xgB-hP-cdP.text" = "Swipe >>>\noctave up";

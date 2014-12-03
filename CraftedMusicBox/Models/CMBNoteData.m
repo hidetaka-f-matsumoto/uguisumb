@@ -64,7 +64,7 @@
     NSInteger octaveCnt = _octave.integerValue - CMBOctaveBase;
     NSString *octaveSuffix = octaveCnt > 0 ? CMBOctaveUpSuffix : CMBOctaveDownSuffix;
     NSMutableString *octaveStr = [NSMutableString string];
-    for (NSInteger i=0; i<abs(octaveCnt); i++) {
+    for (NSInteger i=0; i<abs((int)octaveCnt); i++) {
         [octaveStr appendString:octaveSuffix];
     }
     return [NSString stringWithFormat:@"%@%@", _scale, octaveStr];

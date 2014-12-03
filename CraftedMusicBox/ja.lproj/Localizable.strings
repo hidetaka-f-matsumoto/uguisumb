@@ -52,3 +52,12 @@
 /* (No Commment) */
 "You wanna save %@?" = "%@ を保存するケキョ？";
 
+/* Create a new song. */
+"New song" = "新しく作曲";
+
+/* Configurate/Save the song. */
+"Config/Save song" = "曲を設定/保存";
+
+/* Manage my songs. */
+"Manage my songs" = "曲を管理";
+
