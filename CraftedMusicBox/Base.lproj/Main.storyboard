@@ -32,7 +32,6 @@
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -700,38 +699,6 @@
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Loi-4t-azG">
-                                <rect key="frame" x="16" y="518" width="568" height="30"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                <state key="normal" title="Save"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="saveButtonDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="bwA-O2-Lc4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xO-NP-Jtg">
-                                <rect key="frame" x="16" y="480" width="568" height="30"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                <state key="normal" title="Apply">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="applyButtonDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="5tS-gL-qiE"/>
-                                </connections>
-                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0x5-ul-Bf8">
                                 <rect key="frame" x="14" y="176" width="572" height="31"/>
                             </slider>
@@ -773,6 +740,26 @@
                                     <action selector="speedStepperDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="qKK-ZG-nCE"/>
                                 </connections>
                             </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xO-NP-Jtg">
+                                <rect key="frame" x="16" y="550" width="568" height="30"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qCt-SJ-jb8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                <state key="normal" title="Apply">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="applyButtonDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="5tS-gL-qiE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
@@ -781,7 +768,7 @@
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="0Li-MD-XpV"/>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="top" secondItem="apQ-aw-88J" secondAttribute="bottom" constant="8" id="3Mt-No-Zsg"/>
                             <constraint firstItem="mvv-i9-5PE" firstAttribute="top" secondItem="Xhi-Gf-Npa" secondAttribute="bottom" constant="8" id="7ZF-Ci-4mD"/>
-                            <constraint firstItem="Loi-4t-azG" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="DVI-O6-jug"/>
+                            <constraint firstItem="4xO-NP-Jtg" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leading" constant="16" id="7ao-5I-ANU"/>
                             <constraint firstItem="We1-Ap-gzE" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="Et1-lw-akn"/>
                             <constraint firstAttribute="centerY" secondItem="IcS-PQ-DvD" secondAttribute="centerY" id="FQ4-h1-XUn"/>
                             <constraint firstItem="k3U-lZ-Lhc" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="G4h-P2-dfo"/>
@@ -790,7 +777,7 @@
                             <constraint firstItem="bw8-Dg-In0" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="JUi-DV-T7C"/>
                             <constraint firstItem="bF1-Hh-rgh" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="MHn-Wh-iQ4"/>
                             <constraint firstItem="apQ-aw-88J" firstAttribute="leading" secondItem="bw8-Dg-In0" secondAttribute="trailing" constant="8" id="Mci-E4-rVq"/>
-                            <constraint firstItem="Loi-4t-azG" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="PC7-1A-MTH"/>
+                            <constraint firstItem="C76-f1-BiQ" firstAttribute="top" secondItem="4xO-NP-Jtg" secondAttribute="bottom" constant="20" id="P86-6H-OzV"/>
                             <constraint firstItem="k3U-lZ-Lhc" firstAttribute="top" secondItem="ih3-UP-yhx" secondAttribute="bottom" constant="8" id="QEJ-OO-LMC"/>
                             <constraint firstItem="k3U-lZ-Lhc" firstAttribute="top" secondItem="ih3-UP-yhx" secondAttribute="bottom" constant="33" id="RdF-84-PYt"/>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="top" secondItem="k3U-lZ-Lhc" secondAttribute="bottom" constant="8" id="Sds-ZG-rnD"/>
@@ -807,8 +794,7 @@
                             <constraint firstItem="4xO-NP-Jtg" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="ioq-PR-f9G"/>
                             <constraint firstItem="mvv-i9-5PE" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="iuP-oL-5CL"/>
                             <constraint firstItem="We1-Ap-gzE" firstAttribute="top" secondItem="bF1-Hh-rgh" secondAttribute="bottom" constant="8" id="jf5-Ho-LMP"/>
-                            <constraint firstItem="C76-f1-BiQ" firstAttribute="top" secondItem="Loi-4t-azG" secondAttribute="bottom" constant="20" id="mVt-jW-Tbi"/>
-                            <constraint firstItem="Loi-4t-azG" firstAttribute="top" secondItem="4xO-NP-Jtg" secondAttribute="bottom" constant="8" id="nuX-lf-uLA"/>
+                            <constraint firstAttribute="trailing" secondItem="4xO-NP-Jtg" secondAttribute="trailing" constant="16" id="nrJ-X1-gMZ"/>
                             <constraint firstItem="mvv-i9-5PE" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="vQP-5P-UdL"/>
                             <constraint firstItem="4xO-NP-Jtg" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="xoZ-pk-Pm6"/>
                             <constraint firstItem="IcS-PQ-DvD" firstAttribute="top" secondItem="0x5-ul-Bf8" secondAttribute="bottom" constant="8" id="y5R-ET-zXF"/>
@@ -828,6 +814,8 @@
                                 <exclude reference="QEJ-OO-LMC"/>
                                 <exclude reference="RdF-84-PYt"/>
                                 <exclude reference="ZTT-L4-v0m"/>
+                                <exclude reference="ioq-PR-f9G"/>
+                                <exclude reference="xoZ-pk-Pm6"/>
                             </mask>
                         </variation>
                     </view>
@@ -842,7 +830,6 @@
                         <outlet property="division1Control" destination="bF1-Hh-rgh" id="JgH-Xf-kfS"/>
                         <outlet property="division2Control" destination="We1-Ap-gzE" id="3Xc-pN-Nwe"/>
                         <outlet property="nameText" destination="ih3-UP-yhx" id="swY-5k-WpR"/>
-                        <outlet property="saveButton" destination="Loi-4t-azG" id="dfL-X5-HlS"/>
                         <outlet property="speedLabel" destination="apQ-aw-88J" id="UAo-s9-iRz"/>
                         <outlet property="speedSlider" destination="0x5-ul-Bf8" id="UQW-4q-65Y"/>
                         <outlet property="speedStepper" destination="k3U-lZ-Lhc" id="zXt-Or-uFT"/>

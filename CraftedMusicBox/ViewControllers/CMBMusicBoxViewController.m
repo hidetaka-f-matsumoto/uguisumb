@@ -180,7 +180,6 @@
         UINavigationController *nc = segue.destinationViewController;
         CMBSongConfigViewController *vc = (CMBSongConfigViewController *)nc.topViewController;
         vc.delegate = self;
-        vc.sequences = _sequences;
         vc.header = _header;
     }
     // 楽譜選択
@@ -367,10 +366,15 @@
                           buttons1:@[
                                      @{@"title": NSLocalizedString(@"New song", @"Create a new song."),
                                        @"handler": ^(UIAlertAction *action)
-    {
+                                       {
         [self songNewButtonDidTap];
     }},
-                                     @{@"title": NSLocalizedString(@"Config/Save song", @"Configurate/Save the song."),
+                                     @{@"title": NSLocalizedString(@"Save song", @"Save the song."),
+                                       @"handler": ^(UIAlertAction *action)
+                                       {
+        [self songSaveButtonDidTap];
+    }},
+                                     @{@"title": NSLocalizedString(@"Config song", @"Configurate the song."),
                                        @"handler": ^(UIAlertAction *action)
     {
         [self songConfigButtonDidTap];
@@ -384,10 +388,15 @@
                           buttons2:@[
                                      @{@"title": NSLocalizedString(@"New song", @"Create a new song."),
                                        @"handler": ^(void)
-    {
+                                       {
         [self songNewButtonDidTap];
     }},
-                                     @{@"title": NSLocalizedString(@"Config/Save song", @"Configure/Save the song."),
+                                     @{@"title": NSLocalizedString(@"Save song", @"Save the song."),
+                                       @"handler": ^(void)
+                                       {
+        [self songSaveButtonDidTap];
+    }},
+                                     @{@"title": NSLocalizedString(@"Config song", @"Configure the song."),
                                        @"handler": ^(void)
     {
         [self songConfigButtonDidTap];
@@ -410,10 +419,37 @@
         // 一時停止
         [self pause];
     }
-    // パラメータ初期化
-    [self _init];
-    // 表示更新
-    [self updateViewsWithResetScroll:YES];
+    // 確認ダイアログ
+    NSString *title = NSLocalizedString(@"New song", @"New song");
+    NSString *message = [NSString stringWithFormat:
+                         NSLocalizedString(@"You wanna create a new song?", @"The message to confirm you want to create a new song.")];
+    [self showConfirmDialogWithTitle:title
+                             message:message
+                            handler1:^(UIAlertAction *action) {
+                                [self newSong];
+                            }
+                            handler2:^(void) {
+                                [self newSong];
+                            }];
+}
+
+/**
+ * Song保存ボタン
+ */
+- (void)songSaveButtonDidTap
+{
+    // 確認ダイアログ
+    NSString *title = NSLocalizedString(@"Save song", @"Save song");
+    NSString *message = [NSString stringWithFormat:
+                         NSLocalizedString(@"You wanna save %@?", @"The message to confirm you want to save the song with name %@."), _header.name];
+    [self showConfirmDialogWithTitle:title
+                             message:message
+                            handler1:^(UIAlertAction *action) {
+                                [self saveSong];
+                            }
+                            handler2:^(void) {
+                                [self saveSong];
+                            }];
 }
 
 /**
@@ -798,6 +834,40 @@
     _header = notif.userInfo[@"header"];
     // 表示更新
     [self updateViewsWithResetScroll:YES];
+}
+
+#pragma mark - Save
+
+/**
+ * 新規作成
+ */
+- (void)newSong
+{
+    // パラメータ初期化
+    [self _init];
+    // 表示更新
+    [self updateViewsWithResetScroll:YES];
+}
+
+/**
+ * 保存
+ */
+- (void)saveSong
+{
+    // 保存実行
+    BOOL isSuccess = [[CMBUtility sharedInstance] saveSongWithSequences:_sequences
+                                                                 header:_header
+                                                               fileName:_header.name];
+    if (!isSuccess) {
+        // 失敗
+        NSString *title = NSLocalizedString(@"Save song", @"Save song");
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Fail to save %@.", @"The message when you failed to save the song with name %@."), _header.name];
+        // 通知ダイアログ
+        [self showAlertDialogWithTitle:title
+                               message:message
+                              handler1:nil
+                              handler2:nil];
+    }
 }
 
 #pragma mark - Mail

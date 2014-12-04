@@ -23,7 +23,6 @@
 @interface CMBSongConfigViewController : CMBBaseModalViewController <UITextFieldDelegate>
 
 @property (nonatomic, assign) id<CMBSongConfigDelegate> delegate;
-@property (atomic, assign) NSMutableDictionary *sequences;
 @property (atomic, assign) CMBSongHeaderData *header;
 
 @property (nonatomic, weak) IBOutlet UITextField *nameText;
@@ -32,10 +31,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *speedLabel;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *division1Control;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *division2Control;
-@property (nonatomic, weak) IBOutlet UIButton *saveButton;
 
 - (IBAction)speedStepperDidTap:(id)sender;
 - (IBAction)applyButtonDidTap:(id)sender;
-- (IBAction)saveButtonDidTap:(id)sender;
 
 @end

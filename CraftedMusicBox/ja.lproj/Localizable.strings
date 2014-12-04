@@ -47,9 +47,6 @@
 "Open URL" = "URLを開く";
 
 /* (No Commment) */
-"Save song" = "曲の保存";
-
-/* (No Commment) */
 "This is my music box." = "オルゴールだケキョ";
 
 /* (No Commment) */
@@ -61,14 +58,20 @@
 /* (No Commment) */
 "You wanna save %@?" = "%@ を保存するケキョ？";
 
+/* The message to confirm you want to create a new song. */
+"You wanna create a new song?" = "新しく曲を作るケキョ？";
+
 /* Create a new song. */
 "New song" = "新しく作曲";
 
-/* Configurate/Save the song. */
-"Config/Save song" = "曲を設定/保存";
+/* Save the song. */
+"Save song" = "保存";
+
+/* Configurate the song. */
+"Config song" = "設定";
 
 /* Manage my songs. */
-"Manage my songs" = "曲を管理";
+"Manage my songs" = "ボクの曲たち";
 
 /* Song title is none. */
 "No title" = "新しい曲";

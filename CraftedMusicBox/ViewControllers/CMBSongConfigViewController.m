@@ -70,55 +70,12 @@
     _header.division2 = CMBDivisions[_division2Control.selectedSegmentIndex];
 }
 
-- (void)saveSong
-{
-    [self applyConfig];
-    // 保存実行
-    BOOL isSuccess = [[CMBUtility sharedInstance] saveSongWithSequences:_sequences
-                                                                 header:_header
-                                                               fileName:_nameText.text];
-    if (!isSuccess) {
-        // 失敗
-        NSString *title = NSLocalizedString(@"Save song", @"Save song");
-        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Fail to save %@.", @"The message when you failed to save the song with name %@."), _nameText.text];
-        // 通知ダイアログ
-        [self showAlertDialogWithTitle:title
-                               message:message
-                              handler1:nil
-                              handler2:nil];
-    }
-    // 閉じる
-    [self dismissViewControllerAnimated:YES
-                             completion:^(void)
-     {
-         [_delegate songDidSaveWithName:_nameText.text];
-     }];
-}
-
 - (IBAction)applyButtonDidTap:(id)sender
 {
     [self applyConfig];
     // 閉じる
     [self dismissViewControllerAnimated:YES
                              completion:nil];
-}
-
-- (IBAction)saveButtonDidTap:(id)sender
-{
-    // 確認ダイアログ
-    NSString *title = NSLocalizedString(@"Save song", @"Save song");
-    NSString *message = [NSString stringWithFormat:
-                         NSLocalizedString(@"You wanna save %@?",
-                                           @"The message to confirm you want to save the song with name %@."),
-                         _nameText.text];
-    [self showConfirmDialogWithTitle:title
-                             message:message
-                            handler1:^(UIAlertAction *action) {
-                                [self saveSong];
-                            }
-                            handler2:^(void) {
-                                [self saveSong];
-                            }];
 }
 
 - (IBAction)speedStepperDidTap:(id)sender

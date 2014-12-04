@@ -46,10 +46,6 @@
 /* Open URL. */
 "Open URL" = "Open URL";
 
-/* Save song
- Save song. */
-"Save song" = "Save song";
-
 /* The subject of the mail to send the song. */
 "This is my music box." = "This is my music box.";
 
@@ -62,14 +58,20 @@
 /* The message to confirm you want to save the song with name %@. */
 "You wanna save %@?" = "You wanna save %@?";
 
-/* Create a new song. */
-"New song" = "New song";
+/* The message to confirm you want to create a new song. */
+"You wanna create a new song?" = "You wanna create a new song?";
 
-/* Configurate/Save the song. */
-"Config/Save song" = "Config/Save song";
+/* Create a new song. */
+"New song" = "New";
+
+/* Save the song. */
+"Save song" = "Save";
+
+/* Configurate the song. */
+"Config song" = "Config";
 
 /* Manage my songs. */
-"Manage my songs" = "Manage my songs";
+"Manage my songs" = "My songs";
 
 /* Song title is none. */
 "No title" = "New song";
