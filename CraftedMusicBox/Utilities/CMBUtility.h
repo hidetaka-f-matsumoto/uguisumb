@@ -34,6 +34,7 @@
                        header:(CMBSongHeaderData *)header
                      fileName:(NSString *)fileName;
 - (BOOL)deleteSongWithFileName:(NSString *)fileName;
+- (BOOL)isExistSongWithFileName:(NSString *)fileName;
 - (void)openURL:(NSURL *)url;
 
 @end

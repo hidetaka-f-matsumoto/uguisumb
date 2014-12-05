@@ -8,19 +8,19 @@
 "Delete song" = "曲を消す";
 
 /* (No Commment) */
-"Fail to save %@." = "%@ を保存するのに失敗したケキョ...";
+"Fail to save %@." = "%@ を保存するのに失敗しました...";
 
 /* (No Commment) */
-"Failed to delete %@." = "%@ を消すのに失敗したケキョ...";
+"Failed to delete %@." = "%@ を消すのに失敗しました...";
 
 /* (No Commment) */
-"Failed to load %@." = "%@ を開くのに失敗したケキョ...";
+"Failed to load %@." = "%@ を開くのに失敗しました...";
 
 /* (No Commment) */
-"Failed to load the song." = "曲を開くのに失敗したケキョ...";
+"Failed to load the song." = "曲を開くのに失敗しました...";
 
 /* (No Commment) */
-"Failed to send the mail." = "メールを送るのに失敗したケキョ...";
+"Failed to send the mail." = "メールを送るのに失敗しました...";
 
 /* (No Commment) */
 "Load" = "開く";
@@ -47,19 +47,22 @@
 "Open URL" = "URLを開く";
 
 /* (No Commment) */
-"This is my music box." = "オルゴールだケキョ";
+"This is my music box." = "オルゴール";
 
 /* (No Commment) */
-"You wanna delete %@?" = "%@ を消すケキョ？";
+"You wanna delete %@?" = "本当に %@ を消しますか？";
 
 /* (No Commment) */
-"You wanna load %@?" = "%@ を開くケキョ？";
+"You wanna load %@?" = "%@ を開きますか？";
 
 /* (No Commment) */
-"You wanna save %@?" = "%@ を保存するケキョ？";
+"You wanna save %@?" = "%@ を保存しますか？";
+
+/* The message to confirm you want to overwrite save the song with name %@. */
+"%@ is already exist. You wanna overwrite?" = "%@ は存在します。本当にを上書き保存しますか？";
 
 /* The message to confirm you want to create a new song. */
-"You wanna create a new song?" = "新しく曲を作るケキョ？";
+"You wanna create a new song?" = "新しく曲を作りますか？（今開いている曲は保存されません）";
 
 /* Create a new song. */
 "New song" = "新しく作曲";
@@ -71,7 +74,7 @@
 "Config song" = "設定";
 
 /* Manage my songs. */
-"Manage my songs" = "ボクの曲たち";
+"Manage my songs" = "作った曲たち";
 
 /* Song title is none. */
 "No title" = "新しい曲";

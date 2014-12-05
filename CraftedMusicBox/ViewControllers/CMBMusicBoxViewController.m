@@ -438,10 +438,12 @@
  */
 - (void)songSaveButtonDidTap
 {
+    BOOL isExist = [[CMBUtility sharedInstance] isExistSongWithFileName:_header.name];
     // 確認ダイアログ
     NSString *title = NSLocalizedString(@"Save song", @"Save song");
-    NSString *message = [NSString stringWithFormat:
-                         NSLocalizedString(@"You wanna save %@?", @"The message to confirm you want to save the song with name %@."), _header.name];
+    NSString *message = isExist ?
+    [NSString stringWithFormat:NSLocalizedString(@"%@ is already exist. You wanna overwrite?", @"The message to confirm you want to overwrite save the song with name %@."), _header.name] :
+    [NSString stringWithFormat:NSLocalizedString(@"You wanna save %@?", @"The message to confirm you want to save the song with name %@."), _header.name];
     [self showConfirmDialogWithTitle:title
                              message:message
                             handler1:^(UIAlertAction *action) {

@@ -263,6 +263,18 @@ static CMBUtility *_instance = nil;
     return YES;
 }
 
+- (BOOL)isExistSongWithFileName:(NSString *)fileName
+{
+    // Songファイルパス
+    NSString *path = [self getSongPathWithFileName:fileName];
+    if (!path) {
+        return NO;
+    }
+    // ファイルの存在チェック
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    return [fileManager fileExistsAtPath:path];
+}
+
 - (void)openURL:(NSURL *)url
 {
     NSString *controller = [url host];
