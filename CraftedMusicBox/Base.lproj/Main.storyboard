@@ -419,7 +419,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uguisu" translatesAutoresizingMaskIntoConstraints="NO" id="Akk-FW-dNV">
-                                        <rect key="frame" x="517" y="46" width="75" height="50"/>
+                                        <rect key="frame" x="517" y="47" width="75" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="Mh7-Or-IUj"/>
                                             <constraint firstAttribute="height" constant="50" id="Qyf-Vh-bgw"/>
@@ -429,7 +429,7 @@
                                 <constraints>
                                     <constraint firstItem="GtV-vh-Bqb" firstAttribute="leading" secondItem="nIN-k4-Uqe" secondAttribute="leading" id="Azx-9O-uHn"/>
                                     <constraint firstAttribute="trailing" secondItem="Akk-FW-dNV" secondAttribute="trailing" constant="8" id="HIV-39-EDN"/>
-                                    <constraint firstAttribute="bottom" secondItem="Akk-FW-dNV" secondAttribute="bottom" constant="4" id="JUJ-aJ-GJE"/>
+                                    <constraint firstAttribute="bottom" secondItem="Akk-FW-dNV" secondAttribute="bottom" constant="3" id="JUJ-aJ-GJE"/>
                                     <constraint firstAttribute="trailing" secondItem="GtV-vh-Bqb" secondAttribute="trailing" id="OJV-4y-0X2"/>
                                     <constraint firstAttribute="bottom" secondItem="GtV-vh-Bqb" secondAttribute="bottom" id="SlE-1A-fNJ"/>
                                     <constraint firstAttribute="height" constant="100" id="lUl-HT-MxW"/>
@@ -817,7 +817,7 @@
     </scenes>
     <resources>
         <image name="action" width="40" height="40"/>
-        <image name="branch" width="960" height="60"/>
+        <image name="branch" width="320" height="20"/>
         <image name="menue" width="40" height="40"/>
         <image name="play" width="40" height="40"/>
         <image name="stop" width="40" height="40"/>
