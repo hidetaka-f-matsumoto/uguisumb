@@ -416,13 +416,7 @@
                                         <rect key="frame" x="0.0" y="55" width="600" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="GtV-vh-Bqb" secondAttribute="height" multiplier="600:37" id="Drl-41-M6I"/>
-                                            <constraint firstAttribute="width" secondItem="GtV-vh-Bqb" secondAttribute="height" multiplier="150:13" id="f59-yD-dXb"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="f59-yD-dXb"/>
-                                            </mask>
-                                        </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uguisu" translatesAutoresizingMaskIntoConstraints="NO" id="Akk-FW-dNV">
                                         <rect key="frame" x="517" y="46" width="75" height="50"/>
@@ -437,15 +431,9 @@
                                     <constraint firstAttribute="trailing" secondItem="Akk-FW-dNV" secondAttribute="trailing" constant="8" id="HIV-39-EDN"/>
                                     <constraint firstAttribute="bottom" secondItem="Akk-FW-dNV" secondAttribute="bottom" constant="4" id="JUJ-aJ-GJE"/>
                                     <constraint firstAttribute="trailing" secondItem="GtV-vh-Bqb" secondAttribute="trailing" id="OJV-4y-0X2"/>
-                                    <constraint firstAttribute="trailing" secondItem="Akk-FW-dNV" secondAttribute="trailing" constant="8" id="Prb-aI-xCI"/>
                                     <constraint firstAttribute="bottom" secondItem="GtV-vh-Bqb" secondAttribute="bottom" id="SlE-1A-fNJ"/>
                                     <constraint firstAttribute="height" constant="100" id="lUl-HT-MxW"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Prb-aI-xCI"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZmP-5A-KYj">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
@@ -829,7 +817,7 @@
     </scenes>
     <resources>
         <image name="action" width="40" height="40"/>
-        <image name="branch" width="320" height="20"/>
+        <image name="branch" width="960" height="60"/>
         <image name="menue" width="40" height="40"/>
         <image name="play" width="40" height="40"/>
         <image name="stop" width="40" height="40"/>
