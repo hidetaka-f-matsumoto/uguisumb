@@ -479,9 +479,9 @@
 			children = (
 				08CC5DB319DC240A0049AAD5 /* CMBMusicBoxTableView.h */,
 				08CC5DB419DC240A0049AAD5 /* CMBMusicBoxTableView.m */,
-				0803C8CB1A2D992300FE8357 /* CMBMusicBoxOctaveView.xib */,
 				08A769D51972992900143638 /* CMBMusicBoxTableViewCell.h */,
 				08A769D61972992900143638 /* CMBMusicBoxTableViewCell.m */,
+				0803C8CB1A2D992300FE8357 /* CMBMusicBoxOctaveView.xib */,
 				08C696521984264E0096BC20 /* CMBMusicBoxOctaveView.h */,
 				08C696531984264E0096BC20 /* CMBMusicBoxOctaveView.m */,
 				086BA16419D0FDA400991574 /* CMBSongManageTableViewCell.h */,

@@ -20,7 +20,13 @@
 
 - (void)_initViews
 {
+    CGFloat buttonWidth = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? CMBMusicBoxNoteButtonWidth_iPhone : CMBMusicBoxNoteButtonWidth_iPad;
+    for (NSLayoutConstraint *constraint in _noteButtonWidthConstraints) {
+        // 幅を調整
+        constraint.constant = buttonWidth;
+    }
     for (UIButton *noteButton in _noteButtons) {
+        // 選択OFF
         noteButton.selected = NO;
         // 処理に時間がかかるのでやってはいけない...と思ったらそうでもなかった。あれ？
         [noteButton.imageView setContentMode:UIViewContentModeScaleAspectFit];

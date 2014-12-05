@@ -10,6 +10,9 @@
 
 @class CMBSequenceOneData;
 
+static CGFloat const CMBMusicBoxNoteButtonWidth_iPhone  = 24.f;
+static CGFloat const CMBMusicBoxNoteButtonWidth_iPad    = 44.f;
+
 @protocol CMBMusicBoxOctaveViewDelegate <NSObject>
 
 @required
@@ -29,6 +32,7 @@
 //@property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
 
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *noteButtons;
+@property (nonatomic, strong) IBOutletCollection(NSLayoutConstraint) NSArray *noteButtonWidthConstraints;
 
 - (IBAction)noteButtonDidTap:(id)sender;
 
