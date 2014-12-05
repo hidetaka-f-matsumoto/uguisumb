@@ -113,6 +113,9 @@ static CMBUtility *_instance = nil;
 
 + (NSString *)scaleWithIndex:(NSInteger)index
 {
+    if (0 > index || CMBScales.count <= index) {
+        return nil;
+    }
     NSString *a= CMBScales[index];
     return a;
 }

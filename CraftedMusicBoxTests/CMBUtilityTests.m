@@ -34,7 +34,7 @@
 
 - (void)testNoteDataWithABCString
 {
-    NSString *testAbc = @"^C,,3/4_D'";
+    NSString *testAbc = @"_C^^^C,,3/4___^_D'";
     NSArray *partss = [CMBUtility noteInfosWithABCString:testAbc];
     NSLog(@"[TEST] abc-string to note-infos %@ -> %@", testAbc, partss);
     for (NSDictionary *parts in partss) {

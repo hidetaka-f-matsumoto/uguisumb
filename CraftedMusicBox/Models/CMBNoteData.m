@@ -27,8 +27,14 @@
             sharp += [parts[CMBNoteInfoKeyChange] countWithChar:CMBSharpPrefix];
             sharp -= [parts[CMBNoteInfoKeyChange] countWithChar:CMBFlatPrefix];
             NSInteger scale = [CMBUtility indexWithScale:parts[CMBNoteInfoKeyScale]] + sharp;
+            NSInteger octave = scale / (NSInteger)CMBScales.count;
+            scale %= (NSInteger)CMBScales.count;
+            if (0 > scale) {
+                octave--;
+                scale += (NSInteger)CMBScales.count;
+            }
+            octave += CMBOctaveBase + [parts[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveUpSuffix] - [parts[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveDownSuffix];
             _scale = [CMBUtility scaleWithIndex:scale];
-            NSInteger octave = CMBOctaveBase + [parts[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveUpSuffix] - [parts[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveDownSuffix];
             _octave = [NSNumber numberWithInteger:octave];
         }
     }
