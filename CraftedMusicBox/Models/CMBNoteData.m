@@ -26,7 +26,8 @@
             NSInteger sharp = 0;
             sharp += [parts[CMBNoteInfoKeyChange] countWithChar:CMBSharpPrefix];
             sharp -= [parts[CMBNoteInfoKeyChange] countWithChar:CMBFlatPrefix];
-            _scale = parts[CMBNoteInfoKeyScale];
+            NSInteger scale = [CMBUtility indexWithScale:parts[CMBNoteInfoKeyScale]] + sharp;
+            _scale = [CMBUtility scaleWithIndex:scale];
             NSInteger octave = CMBOctaveBase + [parts[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveUpSuffix] - [parts[CMBNoteInfoKeyOctave] countWithChar:CMBOctaveDownSuffix];
             _octave = [NSNumber numberWithInteger:octave];
         }

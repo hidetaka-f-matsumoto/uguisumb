@@ -8,6 +8,7 @@
 
 #import "CMBMusicBoxOctaveView.h"
 #import "CMBSequenceOneData.h"
+#import "CMBUtility.h"
 
 @implementation CMBMusicBoxOctaveView
 
@@ -81,7 +82,7 @@
 - (NSDictionary *)noteInfoWithButtonIndex:(NSInteger)index
 {
     return @{
-             CMBNoteInfoKeyScale : [CMBMusicBoxOctaveView scaleWithIndex:index],
+             CMBNoteInfoKeyScale : [CMBUtility scaleWithIndex:index],
              CMBNoteInfoKeyOctave : _octave
              };
 }
@@ -113,22 +114,8 @@
         if (!note || note.octave != _octave) {
             continue;
         }
-        [_noteButtons[[CMBMusicBoxOctaveView indexWithScale:note.scale]] setSelected:YES];
+        [_noteButtons[[CMBUtility indexWithScale:note.scale]] setSelected:YES];
     }
-}
-
-+ (NSString *)scaleWithIndex:(NSInteger)index
-{
-    NSString *a= CMBScales[index];
-    return a;
-}
-
-+ (NSInteger)indexWithScale:(NSString *)scale
-{
-    if (!scale) {
-        return -1;
-    }
-    return [CMBScales indexOfObject:scale];
 }
 
 @end

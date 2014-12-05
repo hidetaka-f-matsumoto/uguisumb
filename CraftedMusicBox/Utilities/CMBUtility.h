@@ -24,6 +24,9 @@
 + (UIColor *)greenColor;
 + (UIColor *)lightGreenColor;
 
++ (NSString *)scaleWithIndex:(NSInteger)index;
++ (NSInteger)indexWithScale:(NSString *)scale;
+
 - (NSString *)getSongDirPath;
 - (NSString *)getSongPathWithFileName:(NSString *)fileName;
 - (NSMutableArray *)getSongInfos;

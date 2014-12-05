@@ -111,6 +111,20 @@ static CMBUtility *_instance = nil;
     return [UIColor colorWithRed:0.8f green:0.91764705882353f blue:0.49803921568627f alpha:1.f];
 }
 
++ (NSString *)scaleWithIndex:(NSInteger)index
+{
+    NSString *a= CMBScales[index];
+    return a;
+}
+
++ (NSInteger)indexWithScale:(NSString *)scale
+{
+    if (!scale) {
+        return -1;
+    }
+    return [CMBScales indexOfObject:scale];
+}
+
 /**
  * Songディレクトリパス取得
  */

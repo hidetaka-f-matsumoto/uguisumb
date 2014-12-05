@@ -39,7 +39,4 @@ static CGFloat const CMBMusicBoxNoteButtonWidth_iPad    = 44.f;
 - (void)updateWithSequenceOneData:(CMBSequenceOneData *)soData
                             color:(UIColor *)color;
 
-+ (NSString *)scaleWithIndex:(NSInteger)index;
-+ (NSInteger)indexWithScale:(NSString *)scale;
-
 @end

@@ -327,6 +327,11 @@
  */
 - (IBAction)shareButtonDidTap:(id)sender
 {
+    // 再生中の場合は一時停止
+    if (_isPlaying) {
+        [self pause];
+    }
+    // メニューを表示
     [self showActionSheetWithTitle:NSLocalizedString(@"Share", @"Share")
                            message:nil
                           buttons1:@[
@@ -361,6 +366,11 @@
  */
 - (IBAction)menueButtonDidTap:(id)sender
 {
+    // 再生中の場合は一時停止
+    if (_isPlaying) {
+        [self pause];
+    }
+    // メニューを表示
     [self showActionSheetWithTitle:NSLocalizedString(@"Menue", @"Menue")
                            message:nil
                           buttons1:@[
@@ -415,10 +425,6 @@
  */
 - (void)songNewButtonDidTap
 {
-    if (_isPlaying) {
-        // 一時停止
-        [self pause];
-    }
     // 確認ダイアログ
     NSString *title = NSLocalizedString(@"New song", @"New song");
     NSString *message = [NSString stringWithFormat:
@@ -459,9 +465,7 @@
  */
 - (void)songConfigButtonDidTap
 {
-    if (_isPlaying) {
-        [self pause];
-    }
+    // 設定画面へ
     [self performSegueWithIdentifier:@"SongConfig"
                               sender:self];
 }
@@ -471,9 +475,7 @@
  */
 - (void)songManageButtonDidTap
 {
-    if (_isPlaying) {
-        [self pause];
-    }
+    // 管理画面へ
     [self performSegueWithIdentifier:@"SongManage"
                               sender:self];
 }
