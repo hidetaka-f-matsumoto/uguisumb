@@ -59,6 +59,13 @@
 		0873D5701A25E73600A7D6FA /* musicbox.G5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0873D54B1A25E73600A7D6FA /* musicbox.G5.wav */; };
 		0873D5711A25E73600A7D6FA /* musicbox.G5s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0873D54C1A25E73600A7D6FA /* musicbox.G5s.wav */; };
 		0873D5761A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0873D5751A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m */; };
+		0883B7241A32972100276868 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B7221A32972100276868 /* libGoogleAdMobAds.a */; };
+		0883B7251A32972100276868 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0883B7231A32972100276868 /* README.txt */; };
+		0883B7271A32979000276868 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B7261A32979000276868 /* AdSupport.framework */; };
+		0883B7291A3297B000276868 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B7281A3297AF00276868 /* EventKit.framework */; };
+		0883B72B1A3297B500276868 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B72A1A3297B500276868 /* EventKitUI.framework */; };
+		0883B72D1A3297BF00276868 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B72C1A3297BF00276868 /* StoreKit.framework */; };
+		0883B72F1A3297C800276868 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B72E1A3297C800276868 /* SystemConfiguration.framework */; };
 		08883AD41956CC6A00F7EB68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD31956CC6A00F7EB68 /* Foundation.framework */; };
 		08883AD61956CC6A00F7EB68 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD51956CC6A00F7EB68 /* CoreGraphics.framework */; };
 		08883AD81956CC6A00F7EB68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD71956CC6A00F7EB68 /* UIKit.framework */; };
@@ -193,6 +200,25 @@
 		0873D54C1A25E73600A7D6FA /* musicbox.G5s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = musicbox.G5s.wav; sourceTree = "<group>"; };
 		0873D5741A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxHeadOctaveView.h; path = Views/CMBMusicBoxHeadOctaveView.h; sourceTree = "<group>"; };
 		0873D5751A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxHeadOctaveView.m; path = Views/CMBMusicBoxHeadOctaveView.m; sourceTree = "<group>"; };
+		0883B7161A32972100276868 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdMobExtras.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADAdMobExtras.h"; sourceTree = "<group>"; };
+		0883B7171A32972100276868 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdNetworkExtras.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADAdNetworkExtras.h"; sourceTree = "<group>"; };
+		0883B7181A32972100276868 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdSize.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADAdSize.h"; sourceTree = "<group>"; };
+		0883B7191A32972100276868 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerView.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADBannerView.h"; sourceTree = "<group>"; };
+		0883B71A1A32972100276868 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerViewDelegate.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADBannerViewDelegate.h"; sourceTree = "<group>"; };
+		0883B71B1A32972100276868 /* GADInAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInAppPurchase.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADInAppPurchase.h"; sourceTree = "<group>"; };
+		0883B71C1A32972100276868 /* GADInAppPurchaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInAppPurchaseDelegate.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADInAppPurchaseDelegate.h"; sourceTree = "<group>"; };
+		0883B71D1A32972100276868 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInterstitial.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADInterstitial.h"; sourceTree = "<group>"; };
+		0883B71E1A32972100276868 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInterstitialDelegate.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADInterstitialDelegate.h"; sourceTree = "<group>"; };
+		0883B71F1A32972100276868 /* GADModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADModules.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADModules.h"; sourceTree = "<group>"; };
+		0883B7201A32972100276868 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADRequest.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADRequest.h"; sourceTree = "<group>"; };
+		0883B7211A32972100276868 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADRequestError.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADRequestError.h"; sourceTree = "<group>"; };
+		0883B7221A32972100276868 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/libGoogleAdMobAds.a"; sourceTree = "<group>"; };
+		0883B7231A32972100276868 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/README.txt"; sourceTree = "<group>"; };
+		0883B7261A32979000276868 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		0883B7281A3297AF00276868 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		0883B72A1A3297B500276868 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		0883B72C1A3297BF00276868 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0883B72E1A3297C800276868 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		08883AD01956CC6A00F7EB68 /* CraftedMusicBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CraftedMusicBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08883AD31956CC6A00F7EB68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08883AD51956CC6A00F7EB68 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -277,14 +303,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				08CC5E6619DFD4140049AAD5 /* libBlocksKit.a in Frameworks */,
+				0883B72F1A3297C800276868 /* SystemConfiguration.framework in Frameworks */,
+				0883B72D1A3297BF00276868 /* StoreKit.framework in Frameworks */,
+				0883B72B1A3297B500276868 /* EventKitUI.framework in Frameworks */,
+				0883B7291A3297B000276868 /* EventKit.framework in Frameworks */,
+				0883B7271A32979000276868 /* AdSupport.framework in Frameworks */,
 				08CC5E6019DFC70C0049AAD5 /* MessageUI.framework in Frameworks */,
+				08883AD61956CC6A00F7EB68 /* CoreGraphics.framework in Frameworks */,
 				08B66F81198DFCC500376683 /* CoreAudio.framework in Frameworks */,
 				08B66F7F198DFCBD00376683 /* AVFoundation.framework in Frameworks */,
 				08B66F7B198DFCAD00376683 /* AudioToolbox.framework in Frameworks */,
 				08B66F79198DFCA200376683 /* Accelerate.framework in Frameworks */,
-				08883AD61956CC6A00F7EB68 /* CoreGraphics.framework in Frameworks */,
 				08883AD81956CC6A00F7EB68 /* UIKit.framework in Frameworks */,
 				08883AD41956CC6A00F7EB68 /* Foundation.framework in Frameworks */,
+				0883B7241A32972100276868 /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +378,27 @@
 			path = Sounds/musicbox;
 			sourceTree = "<group>";
 		};
+		0883B7151A3296B100276868 /* GoogleMobileAdsSdkiOS */ = {
+			isa = PBXGroup;
+			children = (
+				0883B7161A32972100276868 /* GADAdMobExtras.h */,
+				0883B7171A32972100276868 /* GADAdNetworkExtras.h */,
+				0883B7181A32972100276868 /* GADAdSize.h */,
+				0883B7191A32972100276868 /* GADBannerView.h */,
+				0883B71A1A32972100276868 /* GADBannerViewDelegate.h */,
+				0883B71B1A32972100276868 /* GADInAppPurchase.h */,
+				0883B71C1A32972100276868 /* GADInAppPurchaseDelegate.h */,
+				0883B71D1A32972100276868 /* GADInterstitial.h */,
+				0883B71E1A32972100276868 /* GADInterstitialDelegate.h */,
+				0883B71F1A32972100276868 /* GADModules.h */,
+				0883B7201A32972100276868 /* GADRequest.h */,
+				0883B7211A32972100276868 /* GADRequestError.h */,
+				0883B7221A32972100276868 /* libGoogleAdMobAds.a */,
+				0883B7231A32972100276868 /* README.txt */,
+			);
+			name = GoogleMobileAdsSdkiOS;
+			sourceTree = "<group>";
+		};
 		08883AC71956CC6A00F7EB68 = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +422,11 @@
 		08883AD21956CC6A00F7EB68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0883B72E1A3297C800276868 /* SystemConfiguration.framework */,
+				0883B72C1A3297BF00276868 /* StoreKit.framework */,
+				0883B72A1A3297B500276868 /* EventKitUI.framework */,
+				0883B7281A3297AF00276868 /* EventKit.framework */,
+				0883B7261A32979000276868 /* AdSupport.framework */,
 				08CC5E6519DFD4140049AAD5 /* libBlocksKit.a */,
 				08CC5E5F19DFC70C0049AAD5 /* MessageUI.framework */,
 				08B66F80198DFCC500376683 /* CoreAudio.framework */,
@@ -511,6 +569,7 @@
 		08B66F6A198DFBDC00376683 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				0883B7151A3296B100276868 /* GoogleMobileAdsSdkiOS */,
 				08CC5E7E19E2D19A0049AAD5 /* SWTableViewCell */,
 			);
 			name = Libraries;
@@ -684,6 +743,7 @@
 				0873D5571A25E73600A7D6FA /* musicbox.C3.wav in Resources */,
 				0873D56B1A25E73600A7D6FA /* musicbox.F5s.wav in Resources */,
 				0873D55B1A25E73600A7D6FA /* musicbox.C5.wav in Resources */,
+				0883B7251A32972100276868 /* README.txt in Resources */,
 				0873D56F1A25E73600A7D6FA /* musicbox.G4s.wav in Resources */,
 				08B66F8A198E031100376683 /* xylophone.C4s.wav in Resources */,
 				0873D56C1A25E73600A7D6FA /* musicbox.G3.wav in Resources */,
@@ -942,6 +1002,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/BlocksKit-aleqhgccmctiqafscpnlasocrwqr/Build/Intermediates/ArchiveIntermediates/BlocksKit",
 					iOS/IntermediateBuildFilesPath/UninstalledProducts,
 					"$(PROJECT_DIR)/Libraries/BlocksKit",
+					"$(PROJECT_DIR)/Libraries/GoogleMobileAdsSdkiOS-6.12.2",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -973,6 +1034,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/BlocksKit-aleqhgccmctiqafscpnlasocrwqr/Build/Intermediates/ArchiveIntermediates/BlocksKit",
 					iOS/IntermediateBuildFilesPath/UninstalledProducts,
 					"$(PROJECT_DIR)/Libraries/BlocksKit",
+					"$(PROJECT_DIR)/Libraries/GoogleMobileAdsSdkiOS-6.12.2",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",

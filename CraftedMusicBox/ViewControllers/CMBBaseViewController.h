@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <BlocksKit/BlocksKit.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
+#import "GADBannerView.h"
 
 @interface CMBBaseViewController : UIViewController
+{
+    GADBannerView *_bannerView;
+}
 
 - (void)showAlertDialogWithTitle:(NSString *)title
                          message:(NSString *)message

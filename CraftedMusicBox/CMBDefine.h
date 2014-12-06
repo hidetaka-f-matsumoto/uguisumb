@@ -12,6 +12,11 @@
 #import <Foundation/Foundation.h>
 
 /**
+ * Ad
+ */
+static NSString * const MY_BANNER_UNIT_ID = @"ca-app-pub-5633935352729199/5879342265";
+
+/**
  * Song
  */
 static CGFloat const CMBSpeedDefault = 50.0f;
