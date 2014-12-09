@@ -273,20 +273,27 @@
 {
     // 停止フラグon
     _isStopping = YES;
-    
     if (_isPlaying) {
         // タイマー停止
         [_timer invalidate];
         // 再生ボタンに変更
         [_playButton setImage:[UIImage imageNamed:@"play.png"]];
     }
-    // 上までスクロールする
-    [_tableView setContentOffset:CGPointMake(0.0f, 0.0f) animated:animation];
-    // ヘッダViewを表示
-    [self showHeadView];
-    // スクロール許可
-    [_scrollView setScrollEnabled:YES];
-    [_tableView setScrollEnabled:YES];
+    // 下にスクロールしている場合
+    if (0.f < _tableView.contentOffset.y) {
+        // 上までスクロールする
+        [_tableView setContentOffset:CGPointMake(0.0f, 0.0f) animated:animation];
+        // ヘッダViewを表示
+        [self showHeadView];
+        // スクロール許可
+        [_scrollView setScrollEnabled:YES];
+        [_tableView setScrollEnabled:YES];
+    }
+    // 既に上までスクロールしている場合
+    else {
+        // 停止フラグoff
+        _isStopping = NO;
+    }
     // 再生フラグoff
     _isPlaying = NO;
 }

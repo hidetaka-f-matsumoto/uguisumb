@@ -10,6 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "CMBNoteData.h"
 
+#define AUDIO_PLAYER    1
+
 @interface CMBSoundManager : NSObject
 
 @property (nonatomic, readonly) NSMutableDictionary *sounds;

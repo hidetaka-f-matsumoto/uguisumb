@@ -30,7 +30,6 @@ static CMBSoundManager *_instance = nil;
         _sounds = [NSMutableDictionary dictionary];
         NSURL *url;
         NSBundle *mb = [NSBundle mainBundle];
-        SystemSoundID sound;
         // 楽器ごとにループ
         for (NSString *inst in CMBSoundResources) {
             _sounds[inst] = [NSMutableDictionary dictionary];
@@ -41,13 +40,22 @@ static CMBSoundManager *_instance = nil;
                 for (NSInteger scl=0; scl<CMBScales.count; scl++) {
                     // リソースを登録
                     NSString *resName = CMBSoundResources[inst][[NSNumber numberWithInteger:oct]][scl];
-                    NSString *resPath = [mb pathForResource:resName ofType:@"wav"];
+                    NSString *resPath = [mb pathForResource:resName ofType:@"caf"];
                     if (!resPath) {
                         continue;
                     }
                     url = [NSURL fileURLWithPath:resPath];
+#if AUDIO_PLAYER
+                    AVAudioPlayer *sound= [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+                    soundsInOct[CMBScales[scl]] = sound;
+                    // 再生準備。バッファに読み込んでおく
+                    [sound prepareToPlay];
+                    sound.volume = 0.5f;
+#else // AUDIO_PLAYER
+                    SystemSoundID sound;
                     AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &sound);
                     soundsInOct[CMBScales[scl]] = [NSNumber numberWithLong:sound];
+#endif // AUDIO_PLAYER
                 }
                 _sounds[inst][[NSNumber numberWithInteger:oct]] = soundsInOct;
             }
@@ -86,11 +94,26 @@ static CMBSoundManager *_instance = nil;
     if (!_isAvailable) {
         return;
     }
-    // 鳴らす
+    // 再生
+#if AUDIO_PLAYER
+    AVAudioPlayer *sound = _sounds[instrument][octave][scale];
+    if (sound) {
+        // サブスレッドで非同期に実行 (カクつき対策)
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+        dispatch_async(queue, ^() {
+            if ([sound isPlaying]) {
+                [sound stop];
+                sound.currentTime = 0;
+            }
+            [sound play];
+        });
+    }
+#else // AUDIO_PLAYER
     SystemSoundID sound = [_sounds[instrument][octave][scale] unsignedIntValue];
     if (sound) {
         AudioServicesPlaySystemSound(sound);
     }
+#endif // AUDIO_PLAYER
 }
 
 @end
