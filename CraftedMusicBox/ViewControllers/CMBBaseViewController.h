@@ -10,11 +10,16 @@
 #import <BlocksKit/BlocksKit.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import "GADBannerView.h"
+#import "CMBUtility.h"
+#import "CMBAlertController.h"
 
-@interface CMBBaseViewController : UIViewController
+@interface CMBBaseViewController : UIViewController <GADBannerViewDelegate>
 {
     GADBannerView *_bannerView;
 }
+
+@property (nonatomic, weak) IBOutlet UIView *bannerFrameView;
+@property (nonatomic, strong) IBOutlet NSLayoutConstraint *bannerFrameHeightConstraint;
 
 - (void)showAlertDialogWithTitle:(NSString *)title
                          message:(NSString *)message

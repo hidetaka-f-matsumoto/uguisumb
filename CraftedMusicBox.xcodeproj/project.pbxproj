@@ -59,6 +59,7 @@
 		0873D5701A25E73600A7D6FA /* musicbox.G5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0873D54B1A25E73600A7D6FA /* musicbox.G5.wav */; };
 		0873D5711A25E73600A7D6FA /* musicbox.G5s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0873D54C1A25E73600A7D6FA /* musicbox.G5s.wav */; };
 		0873D5761A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0873D5751A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m */; };
+		087D29171A36A14C00BCA9F5 /* CMBAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 087D29161A36A14C00BCA9F5 /* CMBAlertController.m */; };
 		0883B7241A32972100276868 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B7221A32972100276868 /* libGoogleAdMobAds.a */; };
 		0883B7251A32972100276868 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0883B7231A32972100276868 /* README.txt */; };
 		0883B7271A32979000276868 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B7261A32979000276868 /* AdSupport.framework */; };
@@ -200,6 +201,8 @@
 		0873D54C1A25E73600A7D6FA /* musicbox.G5s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = musicbox.G5s.wav; sourceTree = "<group>"; };
 		0873D5741A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxHeadOctaveView.h; path = Views/CMBMusicBoxHeadOctaveView.h; sourceTree = "<group>"; };
 		0873D5751A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxHeadOctaveView.m; path = Views/CMBMusicBoxHeadOctaveView.m; sourceTree = "<group>"; };
+		087D29151A36A14C00BCA9F5 /* CMBAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBAlertController.h; path = ViewControllers/CMBAlertController.h; sourceTree = "<group>"; };
+		087D29161A36A14C00BCA9F5 /* CMBAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBAlertController.m; path = ViewControllers/CMBAlertController.m; sourceTree = "<group>"; };
 		0883B7161A32972100276868 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdMobExtras.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADAdMobExtras.h"; sourceTree = "<group>"; };
 		0883B7171A32972100276868 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdNetworkExtras.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADAdNetworkExtras.h"; sourceTree = "<group>"; };
 		0883B7181A32972100276868 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdSize.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADAdSize.h"; sourceTree = "<group>"; };
@@ -509,6 +512,8 @@
 				086BA15F19D0401000991574 /* CMBSongConfigViewController.m */,
 				086BA16119D0FA4E00991574 /* CMBSongManageViewController.h */,
 				086BA16219D0FA4E00991574 /* CMBSongManageViewController.m */,
+				087D29151A36A14C00BCA9F5 /* CMBAlertController.h */,
+				087D29161A36A14C00BCA9F5 /* CMBAlertController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -812,6 +817,7 @@
 				08883B161956D03D00F7EB68 /* CMBTabViewController.m in Sources */,
 				08A769DB1972A82D00143638 /* CMBSequenceOneData.m in Sources */,
 				08CC5E9119E2D19A0049AAD5 /* SWUtilityButtonView.m in Sources */,
+				087D29171A36A14C00BCA9F5 /* CMBAlertController.m in Sources */,
 				08CC5E8F19E2D19A0049AAD5 /* SWTableViewCell.m in Sources */,
 				08883B171956D03D00F7EB68 /* CMBBaseViewController.m in Sources */,
 				08CC5E7D19E2C98D0049AAD5 /* CMBSoundManager.m in Sources */,
@@ -1009,7 +1015,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "553fb2e0-ec16-4c6c-8f9d-9f4f10e3c2e7";
+				PROVISIONING_PROFILE = "e53163c2-36bb-40e4-8cf6-19408e6b92c5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1041,7 +1047,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "553fb2e0-ec16-4c6c-8f9d-9f4f10e3c2e7";
+				PROVISIONING_PROFILE = "e53163c2-36bb-40e4-8cf6-19408e6b92c5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
