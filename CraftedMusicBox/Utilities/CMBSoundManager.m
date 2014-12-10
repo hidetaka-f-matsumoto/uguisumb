@@ -60,7 +60,7 @@ static CMBSoundManager *_instance = nil;
                     soundsInOct[CMBScales[scl]] = sound;
                     // 再生準備。バッファに読み込んでおく
                     [sound prepareToPlay];
-                    sound.volume = 0.5f;
+                    sound.volume = 0.7f;
 #else // AUDIO_PLAYER
                     SystemSoundID sound;
                     AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &sound);
@@ -118,7 +118,7 @@ static CMBSoundManager *_instance = nil;
     // 再生
 #if 1 == AU_SAMPLER
     UInt32 note = [[self class] midiScaleWithScale:scale octave:octave];
-    [_sampler startPlayingNote:note withVelocity:1.f];
+    [_sampler startPlayingNote:note withVelocity:0.7f];
 #elif 1 == AUDIO_PLAYER
     AVAudioPlayer *sound = _sounds[instrument][octave][scale];
     if (sound) {
