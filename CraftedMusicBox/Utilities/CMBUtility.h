@@ -23,6 +23,13 @@
 + (UIColor *)lightBrownColor;
 + (UIColor *)greenColor;
 + (UIColor *)lightGreenColor;
++ (UIColor *)redColor;
++ (UIColor *)orangeColor;
++ (UIColor *)yellowColor;
++ (UIColor *)whiteColor;
+
++ (UIFont *)fontForButton;
++ (UIFont *)fontForLabel;
 
 + (NSString *)scaleWithIndex:(NSInteger)index;
 + (NSInteger)indexWithScale:(NSString *)scale;

@@ -60,12 +60,22 @@
 - (NSArray *)rightButtons
 {
     NSMutableArray *rightUtilityButtons = [NSMutableArray new];
-    [rightUtilityButtons sw_addUtilityButtonWithColor:
-     [UIColor colorWithRed:0.1f green:0.78f blue:0.1f alpha:1.0]
-                                                title:NSLocalizedString(@"Load", @"Load")];
-    [rightUtilityButtons sw_addUtilityButtonWithColor:
-     [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
-                                                title:NSLocalizedString(@"Delete", @"Delete")];
+    NSAttributedString *loadStr =
+    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Load", @"Load")
+                                    attributes:@{
+                                                 NSFontAttributeName : [CMBUtility fontForButton],
+                                                 NSForegroundColorAttributeName : [CMBUtility whiteColor],
+                                                 }];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility greenColor]
+                                      attributedTitle:loadStr];
+    NSAttributedString *deleteStr =
+    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Delete", @"Delete")
+                                    attributes:@{
+                                                 NSFontAttributeName : [CMBUtility fontForButton],
+                                                 NSForegroundColorAttributeName : [CMBUtility whiteColor],
+                                                 }];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility redColor]
+                                      attributedTitle:deleteStr];
     
     return rightUtilityButtons;
 }

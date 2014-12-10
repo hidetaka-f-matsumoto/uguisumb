@@ -22,6 +22,9 @@
 /* The message when you failed to send the mail. */
 "Failed to send the mail." = "Failed to send the mail.";
 
+/* The message when you failed to load sound resources. */
+"Fail to load sound resources." = "Fail to load sound resources.";
+
 /* Load */
 "Load" = "Load";
 
@@ -39,6 +42,9 @@
 
 /* LINE */
 "LINE" = "LINE";
+
+/* Sound */
+"Sound" = "Sound";
 
 /* OK */
 "OK" = "OK";

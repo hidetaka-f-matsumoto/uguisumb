@@ -98,8 +98,8 @@
     
     // SoundManagerをチェック
     if (![CMBSoundManager sharedInstance].isAvailable) {
-        [self showAlertDialogWithTitle:@"Sound"
-                               message:@"Fail to load sound resources"
+        [self showAlertDialogWithTitle:NSLocalizedString(@"Sound", @"Sound")
+                               message:NSLocalizedString(@"Fail to load sound resources.", @"The message when you failed to load sound resources.")
                               handler1:nil
                               handler2:nil];
     }

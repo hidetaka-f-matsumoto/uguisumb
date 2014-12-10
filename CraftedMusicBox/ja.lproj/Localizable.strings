@@ -8,19 +8,22 @@
 "Delete song" = "曲を消す";
 
 /* (No Commment) */
-"Fail to save %@." = "%@ を保存するのに失敗しました...";
+"Fail to save %@." = "%@ を保存するのに失敗しました。";
 
 /* (No Commment) */
-"Failed to delete %@." = "%@ を消すのに失敗しました...";
+"Failed to delete %@." = "%@ を消すのに失敗しました。";
 
 /* (No Commment) */
-"Failed to load %@." = "%@ を開くのに失敗しました...";
+"Failed to load %@." = "%@ を開くのに失敗しました。";
 
 /* (No Commment) */
-"Failed to load the song." = "曲を開くのに失敗しました...";
+"Failed to load the song." = "曲を開くのに失敗しました。";
 
 /* (No Commment) */
-"Failed to send the mail." = "メールを送るのに失敗しました...";
+"Failed to send the mail." = "メールを送るのに失敗しました。";
+
+/* The message when you failed to load sound resources. */
+"Fail to load sound resources." = "サウンドの読み込みに失敗しました。";
 
 /* (No Commment) */
 "Load" = "開く";
@@ -39,6 +42,9 @@
 
 /* (No Commment) */
 "LINE" = "LINE";
+
+/* Sound */
+"Sound" = "サウンド";
 
 /* (No Commment) */
 "OK" = "OK";

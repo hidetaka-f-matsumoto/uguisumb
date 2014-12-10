@@ -111,6 +111,36 @@ static CMBUtility *_instance = nil;
     return [UIColor colorWithRed:0.8f green:0.91764705882353f blue:0.49803921568627f alpha:1.f];
 }
 
++ (UIColor *)redColor
+{
+    return [UIColor colorWithRed:0.5922f green:0.f blue:0.0275f alpha:1.0f];
+}
+
++ (UIColor *)orangeColor
+{
+    return [UIColor colorWithRed:1.f green:0.4784f blue:0.0588f alpha:1.0f];
+}
+
++ (UIColor *)yellowColor
+{
+    return [UIColor colorWithRed:1.f green:0.8902f blue:0.f alpha:1.0f];
+}
+
++ (UIColor *)whiteColor
+{
+    return [UIColor whiteColor];
+}
+
++ (UIFont *)fontForButton
+{
+    return [UIFont fontWithName:@"SetoFont-SP" size:19.f];
+}
+
++ (UIFont *)fontForLabel
+{
+    return [UIFont fontWithName:@"SetoFont-SP" size:17.f];
+}
+
 + (NSString *)scaleWithIndex:(NSInteger)index
 {
     if (0 > index || CMBScales.count <= index) {
