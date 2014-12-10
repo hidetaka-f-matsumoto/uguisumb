@@ -151,6 +151,7 @@ logTheError:
 }
 
 - (OSStatus)loadSynthFromPresetURL:(NSURL *)presetURL {
+    /*
 	CFDataRef propertyResourceData = 0;
 	Boolean   status;
 	SInt32    errorCode = 0;
@@ -196,24 +197,23 @@ logTheError:
 	}
      
     CFRelease(propertyResourceData);
+     */
     
-    /*
     OSStatus result = noErr;
-    NSData* data = [NSData dataWithContentsOfURL:presetURL];
-    id propertyList = [NSPropertyListSerialization propertyListWithData:data options:NSPropertyListImmutable format:NULL error:NULL];
+    NSData* propertyResourceData = [NSData dataWithContentsOfURL:presetURL];
+    CFPropertyListRef presetPropertyList = (__bridge CFPropertyListRef)[NSPropertyListSerialization propertyListWithData:propertyResourceData options:NSPropertyListImmutable format:NULL error:NULL];
     
     // Set the class info property for the Sampler unit using the property list as the value.
-    if (propertyList) {
+    if (presetPropertyList) {
         result = AudioUnitSetProperty(
                                       self.samplerUnit,
                                       kAudioUnitProperty_ClassInfo,
                                       kAudioUnitScope_Global,
                                       0,
-                                      (__bridge CFPropertyListRef)propertyList,
+                                      &presetPropertyList,
                                       sizeof(CFPropertyListRef)
                                       );
     }
-     */
 
 	return result;
 }

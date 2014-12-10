@@ -24,7 +24,10 @@ static CMBSoundManager *_instance = nil;
 - (void)_init
 {
     @try {
-        /*
+#if 1 == AU_SAMPLER
+        NSURL *presetURL = [[NSBundle mainBundle] URLForResource:@"MusicBox" withExtension:@"aupreset"];
+        _sampler = [[EPSSampler alloc] initWithPresetURL:presetURL];
+#else // 1 == AU_SAMPLER
         const NSDictionary *CMBSoundResources = @{
                                                   CMBSoundMusicbox : @{
                                                           @3 : CMBSoundResMusicboxOct3,
@@ -55,24 +58,22 @@ static CMBSoundManager *_instance = nil;
                         continue;
                     }
                     url = [NSURL fileURLWithPath:resPath];
-#if AUDIO_PLAYER
+#if 1 == AUDIO_PLAYER
                     AVAudioPlayer *sound= [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
                     soundsInOct[CMBScales[scl]] = sound;
                     // 再生準備。バッファに読み込んでおく
                     [sound prepareToPlay];
                     sound.volume = 0.7f;
-#else // AUDIO_PLAYER
+#elif 1 == SYSTEM_SOUND
                     SystemSoundID sound;
                     AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &sound);
                     soundsInOct[CMBScales[scl]] = [NSNumber numberWithLong:sound];
-#endif // AUDIO_PLAYER
+#endif
                 }
                 _sounds[inst][[NSNumber numberWithInteger:oct]] = soundsInOct;
             }
         }
-         */
-        NSURL *presetURL = [[NSBundle mainBundle] URLForResource:@"MusicBox" withExtension:@"aupreset"];
-        _sampler = [[EPSSampler alloc] initWithPresetURL:presetURL];
+#endif
         _isAvailable = YES;
     }
     @catch (NSException *ex) {
