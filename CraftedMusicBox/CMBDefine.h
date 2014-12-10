@@ -52,13 +52,13 @@ typedef enum {
  * Sound resource
  */
 static NSString * const CMBSoundMusicbox = @"CMBSoundMusicbox";
-#define CMBSoundResMusicboxOct3 @[@"musicbox.C3", @"musicbox.C3s", @"musicbox.D3", @"musicbox.D3s", @"musicbox.E3", @"musicbox.F3", @"musicbox.F3s", @"musicbox.G3", @"musicbox.G3s", @"musicbox.A3", @"musicbox.A3s", @"musicbox.B3"]
-#define CMBSoundResMusicboxOct4 @[@"musicbox.C4", @"musicbox.C4s", @"musicbox.D4", @"musicbox.D4s", @"musicbox.E4", @"musicbox.F4", @"musicbox.F4s", @"musicbox.G4", @"musicbox.G4s", @"musicbox.A4", @"musicbox.A4s", @"musicbox.B4"]
-#define CMBSoundResMusicboxOct5 @[@"musicbox.C5", @"musicbox.C5s", @"musicbox.D5", @"musicbox.D5s", @"musicbox.E5", @"musicbox.F5", @"musicbox.F5s", @"musicbox.G5", @"musicbox.G5s", @"musicbox.A5", @"musicbox.A5s", @"musicbox.B5"]
+#define CMBSoundResMusicboxOct3 @[@"C3", @"C#3", @"D3", @"D#3", @"E3", @"F3", @"F#3", @"G3", @"G#3", @"A3", @"A#3", @"B3"]
+#define CMBSoundResMusicboxOct4 @[@"C4", @"C#4", @"D4", @"D#4", @"E4", @"F4", @"F#4", @"G4", @"G#4", @"A4", @"A#4", @"B4"]
+#define CMBSoundResMusicboxOct5 @[@"C5", @"C#5", @"D5", @"D#5", @"E5", @"F5", @"F#5", @"G5", @"G#5", @"A5", @"A#5", @"B5"]
 
 static NSString * const CMBSoundXylophone = @"CMBSoundXylophone";
-#define CMBSoundResXylophoneOct3 @[@"xylophone.C3", @"xylophone.C3s", @"xylophone.D3", @"xylophone.D3s", @"xylophone.E3", @"xylophone.F3", @"xylophone.F3s", @"xylophone.G3", @"xylophone.G3s", @"xylophone.A3", @"xylophone.A3s", @"xylophone.B3"]
-#define CMBSoundResXylophoneOct4 @[@"xylophone.C4", @"xylophone.C4s", @"xylophone.D4", @"xylophone.D4s", @"xylophone.E4", @"xylophone.F4", @"xylophone.F4s", @"xylophone.G4", @"xylophone.G4s", @"xylophone.A4", @"xylophone.A4s", @"xylophone.B4"]
-#define CMBSoundResXylophoneOct5 @[@"xylophone.C5", @"xylophone.C5s", @"xylophone.D5", @"xylophone.D5s", @"xylophone.E5", @"xylophone.F5", @"xylophone.F5s", @"xylophone.G5", @"xylophone.G5s", @"xylophone.A5", @"xylophone.A5s", @"xylophone.B5"]
+#define CMBSoundResXylophoneOct3 @[@"C3", @"C#3", @"D3", @"D#3", @"E3", @"F3", @"F#3", @"G3", @"G#3", @"A3", @"A#3", @"B3"]
+#define CMBSoundResXylophoneOct4 @[@"C4", @"C#4", @"D4", @"D#4", @"E4", @"F4", @"F#4", @"G4", @"G#4", @"A4", @"A#4", @"B4"]
+#define CMBSoundResXylophoneOct5 @[@"C5", @"C#5", @"D5", @"D#5", @"E5", @"F5", @"F#5", @"G5", @"G#5", @"A5", @"A#5", @"B5"]
 
 #endif

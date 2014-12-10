@@ -23,43 +23,11 @@
 		086BA16F19D2BA1B00991574 /* CMBSongHeaderData.m in Sources */ = {isa = PBXBuildFile; fileRef = 086BA16E19D2BA1B00991574 /* CMBSongHeaderData.m */; };
 		0873D5761A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0873D5751A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m */; };
 		087D29171A36A14C00BCA9F5 /* CMBAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 087D29161A36A14C00BCA9F5 /* CMBAlertController.m */; };
-		087D293D1A36D9A100BCA9F5 /* musicbox.A3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29181A36D81B00BCA9F5 /* musicbox.A3.caf */; };
-		087D293E1A36D9A100BCA9F5 /* musicbox.A3s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29191A36D81B00BCA9F5 /* musicbox.A3s.caf */; };
-		087D293F1A36D9A100BCA9F5 /* musicbox.A4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D291A1A36D81B00BCA9F5 /* musicbox.A4.caf */; };
-		087D29401A36D9A100BCA9F5 /* musicbox.A4s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D291B1A36D81B00BCA9F5 /* musicbox.A4s.caf */; };
-		087D29411A36D9A100BCA9F5 /* musicbox.A5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D291C1A36D81B00BCA9F5 /* musicbox.A5.caf */; };
-		087D29421A36D9A100BCA9F5 /* musicbox.A5s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D291D1A36D81B00BCA9F5 /* musicbox.A5s.caf */; };
-		087D29431A36D9A100BCA9F5 /* musicbox.B3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D291E1A36D81B00BCA9F5 /* musicbox.B3.caf */; };
-		087D29441A36D9A100BCA9F5 /* musicbox.B4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D291F1A36D81B00BCA9F5 /* musicbox.B4.caf */; };
-		087D29451A36D9A100BCA9F5 /* musicbox.B5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29201A36D81B00BCA9F5 /* musicbox.B5.caf */; };
-		087D29461A36D9A100BCA9F5 /* musicbox.B5s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29211A36D81B00BCA9F5 /* musicbox.B5s.caf */; };
-		087D29471A36D9A100BCA9F5 /* musicbox.C3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29221A36D81B00BCA9F5 /* musicbox.C3.caf */; };
-		087D29481A36D9A100BCA9F5 /* musicbox.C3s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29231A36D81B00BCA9F5 /* musicbox.C3s.caf */; };
-		087D29491A36D9A100BCA9F5 /* musicbox.C4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29241A36D81B00BCA9F5 /* musicbox.C4.caf */; };
-		087D294A1A36D9A100BCA9F5 /* musicbox.C4s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29251A36D81B00BCA9F5 /* musicbox.C4s.caf */; };
-		087D294B1A36D9A100BCA9F5 /* musicbox.C5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29261A36D81B00BCA9F5 /* musicbox.C5.caf */; };
-		087D294C1A36D9A100BCA9F5 /* musicbox.C5s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29271A36D81B00BCA9F5 /* musicbox.C5s.caf */; };
-		087D294D1A36D9A100BCA9F5 /* musicbox.D3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29281A36D81B00BCA9F5 /* musicbox.D3.caf */; };
-		087D294E1A36D9A100BCA9F5 /* musicbox.D3s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29291A36D81B00BCA9F5 /* musicbox.D3s.caf */; };
-		087D294F1A36D9A100BCA9F5 /* musicbox.D4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D292A1A36D81B00BCA9F5 /* musicbox.D4.caf */; };
-		087D29501A36D9A100BCA9F5 /* musicbox.D4s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D292B1A36D81B00BCA9F5 /* musicbox.D4s.caf */; };
-		087D29511A36D9A100BCA9F5 /* musicbox.D5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D292C1A36D81B00BCA9F5 /* musicbox.D5.caf */; };
-		087D29521A36D9A100BCA9F5 /* musicbox.D5s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D292D1A36D81B00BCA9F5 /* musicbox.D5s.caf */; };
-		087D29531A36D9A100BCA9F5 /* musicbox.E3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D292E1A36D81B00BCA9F5 /* musicbox.E3.caf */; };
-		087D29541A36D9A100BCA9F5 /* musicbox.E4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D292F1A36D81B00BCA9F5 /* musicbox.E4.caf */; };
-		087D29551A36D9A100BCA9F5 /* musicbox.E5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29301A36D81B00BCA9F5 /* musicbox.E5.caf */; };
-		087D29561A36D9A100BCA9F5 /* musicbox.F3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29311A36D81B00BCA9F5 /* musicbox.F3.caf */; };
-		087D29571A36D9A100BCA9F5 /* musicbox.F3s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29321A36D81B00BCA9F5 /* musicbox.F3s.caf */; };
-		087D29581A36D9A100BCA9F5 /* musicbox.F4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29331A36D81B00BCA9F5 /* musicbox.F4.caf */; };
-		087D29591A36D9A100BCA9F5 /* musicbox.F4s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29341A36D81B00BCA9F5 /* musicbox.F4s.caf */; };
-		087D295A1A36D9A100BCA9F5 /* musicbox.F5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29351A36D81B00BCA9F5 /* musicbox.F5.caf */; };
-		087D295B1A36D9A100BCA9F5 /* musicbox.F5s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29361A36D81B00BCA9F5 /* musicbox.F5s.caf */; };
-		087D295C1A36D9A100BCA9F5 /* musicbox.G3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29371A36D81B00BCA9F5 /* musicbox.G3.caf */; };
-		087D295D1A36D9A100BCA9F5 /* musicbox.G3s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29381A36D81B00BCA9F5 /* musicbox.G3s.caf */; };
-		087D295E1A36D9A100BCA9F5 /* musicbox.G4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D29391A36D81B00BCA9F5 /* musicbox.G4.caf */; };
-		087D295F1A36D9A100BCA9F5 /* musicbox.G4s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D293A1A36D81B00BCA9F5 /* musicbox.G4s.caf */; };
-		087D29601A36D9A100BCA9F5 /* musicbox.G5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D293B1A36D81B00BCA9F5 /* musicbox.G5.caf */; };
-		087D29611A36D9A100BCA9F5 /* musicbox.G5s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 087D293C1A36D81B00BCA9F5 /* musicbox.G5s.caf */; };
+		087D29AF1A37CF3300BCA9F5 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 087D29AE1A37CF3300BCA9F5 /* Sounds */; };
+		087D29B51A37FADC00BCA9F5 /* EPSSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = 087D29B21A37FADC00BCA9F5 /* EPSSampler.m */; };
+		087D29B61A37FADC00BCA9F5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 087D29B31A37FADC00BCA9F5 /* LICENSE */; };
+		087D29B71A37FADC00BCA9F5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 087D29B41A37FADC00BCA9F5 /* README.md */; };
+		087D29BC1A3802A400BCA9F5 /* MusicBox.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 087D29BB1A3802A400BCA9F5 /* MusicBox.aupreset */; };
 		0883B7241A32972100276868 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B7221A32972100276868 /* libGoogleAdMobAds.a */; };
 		0883B7251A32972100276868 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0883B7231A32972100276868 /* README.txt */; };
 		0883B7271A32979000276868 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B7261A32979000276868 /* AdSupport.framework */; };
@@ -154,43 +122,12 @@
 		0873D5751A25EDDD00A7D6FA /* CMBMusicBoxHeadOctaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxHeadOctaveView.m; path = Views/CMBMusicBoxHeadOctaveView.m; sourceTree = "<group>"; };
 		087D29151A36A14C00BCA9F5 /* CMBAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBAlertController.h; path = ViewControllers/CMBAlertController.h; sourceTree = "<group>"; };
 		087D29161A36A14C00BCA9F5 /* CMBAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBAlertController.m; path = ViewControllers/CMBAlertController.m; sourceTree = "<group>"; };
-		087D29181A36D81B00BCA9F5 /* musicbox.A3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.A3.caf; sourceTree = "<group>"; };
-		087D29191A36D81B00BCA9F5 /* musicbox.A3s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.A3s.caf; sourceTree = "<group>"; };
-		087D291A1A36D81B00BCA9F5 /* musicbox.A4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.A4.caf; sourceTree = "<group>"; };
-		087D291B1A36D81B00BCA9F5 /* musicbox.A4s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.A4s.caf; sourceTree = "<group>"; };
-		087D291C1A36D81B00BCA9F5 /* musicbox.A5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.A5.caf; sourceTree = "<group>"; };
-		087D291D1A36D81B00BCA9F5 /* musicbox.A5s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.A5s.caf; sourceTree = "<group>"; };
-		087D291E1A36D81B00BCA9F5 /* musicbox.B3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.B3.caf; sourceTree = "<group>"; };
-		087D291F1A36D81B00BCA9F5 /* musicbox.B4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.B4.caf; sourceTree = "<group>"; };
-		087D29201A36D81B00BCA9F5 /* musicbox.B5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.B5.caf; sourceTree = "<group>"; };
-		087D29211A36D81B00BCA9F5 /* musicbox.B5s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.B5s.caf; sourceTree = "<group>"; };
-		087D29221A36D81B00BCA9F5 /* musicbox.C3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.C3.caf; sourceTree = "<group>"; };
-		087D29231A36D81B00BCA9F5 /* musicbox.C3s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.C3s.caf; sourceTree = "<group>"; };
-		087D29241A36D81B00BCA9F5 /* musicbox.C4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.C4.caf; sourceTree = "<group>"; };
-		087D29251A36D81B00BCA9F5 /* musicbox.C4s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.C4s.caf; sourceTree = "<group>"; };
-		087D29261A36D81B00BCA9F5 /* musicbox.C5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.C5.caf; sourceTree = "<group>"; };
-		087D29271A36D81B00BCA9F5 /* musicbox.C5s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.C5s.caf; sourceTree = "<group>"; };
-		087D29281A36D81B00BCA9F5 /* musicbox.D3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.D3.caf; sourceTree = "<group>"; };
-		087D29291A36D81B00BCA9F5 /* musicbox.D3s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.D3s.caf; sourceTree = "<group>"; };
-		087D292A1A36D81B00BCA9F5 /* musicbox.D4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.D4.caf; sourceTree = "<group>"; };
-		087D292B1A36D81B00BCA9F5 /* musicbox.D4s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.D4s.caf; sourceTree = "<group>"; };
-		087D292C1A36D81B00BCA9F5 /* musicbox.D5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.D5.caf; sourceTree = "<group>"; };
-		087D292D1A36D81B00BCA9F5 /* musicbox.D5s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.D5s.caf; sourceTree = "<group>"; };
-		087D292E1A36D81B00BCA9F5 /* musicbox.E3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.E3.caf; sourceTree = "<group>"; };
-		087D292F1A36D81B00BCA9F5 /* musicbox.E4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.E4.caf; sourceTree = "<group>"; };
-		087D29301A36D81B00BCA9F5 /* musicbox.E5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.E5.caf; sourceTree = "<group>"; };
-		087D29311A36D81B00BCA9F5 /* musicbox.F3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.F3.caf; sourceTree = "<group>"; };
-		087D29321A36D81B00BCA9F5 /* musicbox.F3s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.F3s.caf; sourceTree = "<group>"; };
-		087D29331A36D81B00BCA9F5 /* musicbox.F4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.F4.caf; sourceTree = "<group>"; };
-		087D29341A36D81B00BCA9F5 /* musicbox.F4s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.F4s.caf; sourceTree = "<group>"; };
-		087D29351A36D81B00BCA9F5 /* musicbox.F5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.F5.caf; sourceTree = "<group>"; };
-		087D29361A36D81B00BCA9F5 /* musicbox.F5s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.F5s.caf; sourceTree = "<group>"; };
-		087D29371A36D81B00BCA9F5 /* musicbox.G3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.G3.caf; sourceTree = "<group>"; };
-		087D29381A36D81B00BCA9F5 /* musicbox.G3s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.G3s.caf; sourceTree = "<group>"; };
-		087D29391A36D81B00BCA9F5 /* musicbox.G4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.G4.caf; sourceTree = "<group>"; };
-		087D293A1A36D81B00BCA9F5 /* musicbox.G4s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.G4s.caf; sourceTree = "<group>"; };
-		087D293B1A36D81B00BCA9F5 /* musicbox.G5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.G5.caf; sourceTree = "<group>"; };
-		087D293C1A36D81B00BCA9F5 /* musicbox.G5s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = musicbox.G5s.caf; sourceTree = "<group>"; };
+		087D29AE1A37CF3300BCA9F5 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		087D29B11A37FADC00BCA9F5 /* EPSSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSSampler.h; sourceTree = "<group>"; };
+		087D29B21A37FADC00BCA9F5 /* EPSSampler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSSampler.m; sourceTree = "<group>"; };
+		087D29B31A37FADC00BCA9F5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		087D29B41A37FADC00BCA9F5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		087D29BB1A3802A400BCA9F5 /* MusicBox.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MusicBox.aupreset; sourceTree = "<group>"; };
 		0883B7161A32972100276868 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdMobExtras.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADAdMobExtras.h"; sourceTree = "<group>"; };
 		0883B7171A32972100276868 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdNetworkExtras.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADAdNetworkExtras.h"; sourceTree = "<group>"; };
 		0883B7181A32972100276868 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADAdSize.h; path = "Libraries/GoogleMobileAdsSdkiOS-6.12.2/GADAdSize.h"; sourceTree = "<group>"; };
@@ -290,8 +227,8 @@
 				08CC5E6019DFC70C0049AAD5 /* MessageUI.framework in Frameworks */,
 				08883AD61956CC6A00F7EB68 /* CoreGraphics.framework in Frameworks */,
 				08B66F81198DFCC500376683 /* CoreAudio.framework in Frameworks */,
-				08B66F7F198DFCBD00376683 /* AVFoundation.framework in Frameworks */,
 				08B66F7B198DFCAD00376683 /* AudioToolbox.framework in Frameworks */,
+				08B66F7F198DFCBD00376683 /* AVFoundation.framework in Frameworks */,
 				08B66F79198DFCA200376683 /* Accelerate.framework in Frameworks */,
 				08883AD81956CC6A00F7EB68 /* UIKit.framework in Frameworks */,
 				08883AD41956CC6A00F7EB68 /* Foundation.framework in Frameworks */,
@@ -312,49 +249,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0873D5271A25E73600A7D6FA /* musicbox */ = {
+		087D29B01A37FADC00BCA9F5 /* EPSSampler */ = {
 			isa = PBXGroup;
 			children = (
-				087D29181A36D81B00BCA9F5 /* musicbox.A3.caf */,
-				087D29191A36D81B00BCA9F5 /* musicbox.A3s.caf */,
-				087D291A1A36D81B00BCA9F5 /* musicbox.A4.caf */,
-				087D291B1A36D81B00BCA9F5 /* musicbox.A4s.caf */,
-				087D291C1A36D81B00BCA9F5 /* musicbox.A5.caf */,
-				087D291D1A36D81B00BCA9F5 /* musicbox.A5s.caf */,
-				087D291E1A36D81B00BCA9F5 /* musicbox.B3.caf */,
-				087D291F1A36D81B00BCA9F5 /* musicbox.B4.caf */,
-				087D29201A36D81B00BCA9F5 /* musicbox.B5.caf */,
-				087D29211A36D81B00BCA9F5 /* musicbox.B5s.caf */,
-				087D29221A36D81B00BCA9F5 /* musicbox.C3.caf */,
-				087D29231A36D81B00BCA9F5 /* musicbox.C3s.caf */,
-				087D29241A36D81B00BCA9F5 /* musicbox.C4.caf */,
-				087D29251A36D81B00BCA9F5 /* musicbox.C4s.caf */,
-				087D29261A36D81B00BCA9F5 /* musicbox.C5.caf */,
-				087D29271A36D81B00BCA9F5 /* musicbox.C5s.caf */,
-				087D29281A36D81B00BCA9F5 /* musicbox.D3.caf */,
-				087D29291A36D81B00BCA9F5 /* musicbox.D3s.caf */,
-				087D292A1A36D81B00BCA9F5 /* musicbox.D4.caf */,
-				087D292B1A36D81B00BCA9F5 /* musicbox.D4s.caf */,
-				087D292C1A36D81B00BCA9F5 /* musicbox.D5.caf */,
-				087D292D1A36D81B00BCA9F5 /* musicbox.D5s.caf */,
-				087D292E1A36D81B00BCA9F5 /* musicbox.E3.caf */,
-				087D292F1A36D81B00BCA9F5 /* musicbox.E4.caf */,
-				087D29301A36D81B00BCA9F5 /* musicbox.E5.caf */,
-				087D29311A36D81B00BCA9F5 /* musicbox.F3.caf */,
-				087D29321A36D81B00BCA9F5 /* musicbox.F3s.caf */,
-				087D29331A36D81B00BCA9F5 /* musicbox.F4.caf */,
-				087D29341A36D81B00BCA9F5 /* musicbox.F4s.caf */,
-				087D29351A36D81B00BCA9F5 /* musicbox.F5.caf */,
-				087D29361A36D81B00BCA9F5 /* musicbox.F5s.caf */,
-				087D29371A36D81B00BCA9F5 /* musicbox.G3.caf */,
-				087D29381A36D81B00BCA9F5 /* musicbox.G3s.caf */,
-				087D29391A36D81B00BCA9F5 /* musicbox.G4.caf */,
-				087D293A1A36D81B00BCA9F5 /* musicbox.G4s.caf */,
-				087D293B1A36D81B00BCA9F5 /* musicbox.G5.caf */,
-				087D293C1A36D81B00BCA9F5 /* musicbox.G5s.caf */,
+				087D29B11A37FADC00BCA9F5 /* EPSSampler.h */,
+				087D29B21A37FADC00BCA9F5 /* EPSSampler.m */,
+				087D29B31A37FADC00BCA9F5 /* LICENSE */,
+				087D29B41A37FADC00BCA9F5 /* README.md */,
 			);
-			name = musicbox;
-			path = Sounds/musicbox;
+			name = EPSSampler;
+			path = Libraries/EPSSampler;
+			sourceTree = "<group>";
+		};
+		087D29BA1A3802A400BCA9F5 /* SoundPresets */ = {
+			isa = PBXGroup;
+			children = (
+				087D29BB1A3802A400BCA9F5 /* MusicBox.aupreset */,
+			);
+			path = SoundPresets;
 			sourceTree = "<group>";
 		};
 		0883B7151A3296B100276868 /* GoogleMobileAdsSdkiOS */ = {
@@ -433,7 +345,8 @@
 				08883AE51956CC6A00F7EB68 /* Main.storyboard */,
 				0803C8C61A2D53A900FE8357 /* LaunchScreen.xib */,
 				08883AEE1956CC6A00F7EB68 /* Images.xcassets */,
-				08B66F82198E004300376683 /* Sounds */,
+				087D29BA1A3802A400BCA9F5 /* SoundPresets */,
+				087D29AE1A37CF3300BCA9F5 /* Sounds */,
 				08883ADA1956CC6A00F7EB68 /* Supporting Files */,
 			);
 			path = CraftedMusicBox;
@@ -550,18 +463,11 @@
 		08B66F6A198DFBDC00376683 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				087D29B01A37FADC00BCA9F5 /* EPSSampler */,
 				0883B7151A3296B100276868 /* GoogleMobileAdsSdkiOS */,
 				08CC5E7E19E2D19A0049AAD5 /* SWTableViewCell */,
 			);
 			name = Libraries;
-			sourceTree = "<group>";
-		};
-		08B66F82198E004300376683 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				0873D5271A25E73600A7D6FA /* musicbox */,
-			);
-			name = Sounds;
 			sourceTree = "<group>";
 		};
 		08CC5E7E19E2D19A0049AAD5 /* SWTableViewCell */ = {
@@ -670,53 +576,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				087D29571A36D9A100BCA9F5 /* musicbox.F3s.caf in Resources */,
 				08883AEF1956CC6A00F7EB68 /* Images.xcassets in Resources */,
-				087D295A1A36D9A100BCA9F5 /* musicbox.F5.caf in Resources */,
 				08289E1F1A2EACD800927D51 /* InfoPlist.strings in Resources */,
-				087D294F1A36D9A100BCA9F5 /* musicbox.D4.caf in Resources */,
-				087D29461A36D9A100BCA9F5 /* musicbox.B5s.caf in Resources */,
 				08289E241A2EAD1800927D51 /* CMBMusicBoxOctaveView.xib in Resources */,
-				087D29601A36D9A100BCA9F5 /* musicbox.G5.caf in Resources */,
-				087D293E1A36D9A100BCA9F5 /* musicbox.A3s.caf in Resources */,
-				087D29541A36D9A100BCA9F5 /* musicbox.E4.caf in Resources */,
+				087D29BC1A3802A400BCA9F5 /* MusicBox.aupreset in Resources */,
 				08DA5C3A19DA500B00966772 /* sp-setofont.ttf in Resources */,
-				087D295E1A36D9A100BCA9F5 /* musicbox.G4.caf in Resources */,
-				087D295F1A36D9A100BCA9F5 /* musicbox.G4s.caf in Resources */,
+				087D29AF1A37CF3300BCA9F5 /* Sounds in Resources */,
 				08289E231A2EAD1400927D51 /* CMBMusicBoxHeadOctaveView.xib in Resources */,
-				087D29551A36D9A100BCA9F5 /* musicbox.E5.caf in Resources */,
-				087D294D1A36D9A100BCA9F5 /* musicbox.D3.caf in Resources */,
-				087D295D1A36D9A100BCA9F5 /* musicbox.G3s.caf in Resources */,
-				087D295C1A36D9A100BCA9F5 /* musicbox.G3.caf in Resources */,
+				087D29B61A37FADC00BCA9F5 /* LICENSE in Resources */,
 				0883B7251A32972100276868 /* README.txt in Resources */,
-				087D29531A36D9A100BCA9F5 /* musicbox.E3.caf in Resources */,
-				087D294B1A36D9A100BCA9F5 /* musicbox.C5.caf in Resources */,
-				087D29441A36D9A100BCA9F5 /* musicbox.B4.caf in Resources */,
-				087D29611A36D9A100BCA9F5 /* musicbox.G5s.caf in Resources */,
-				087D29521A36D9A100BCA9F5 /* musicbox.D5s.caf in Resources */,
-				087D29561A36D9A100BCA9F5 /* musicbox.F3.caf in Resources */,
-				087D29591A36D9A100BCA9F5 /* musicbox.F4s.caf in Resources */,
-				087D29411A36D9A100BCA9F5 /* musicbox.A5.caf in Resources */,
-				087D29471A36D9A100BCA9F5 /* musicbox.C3.caf in Resources */,
-				087D29431A36D9A100BCA9F5 /* musicbox.B3.caf in Resources */,
-				087D29451A36D9A100BCA9F5 /* musicbox.B5.caf in Resources */,
 				08289E221A2EAD0F00927D51 /* LaunchScreen.xib in Resources */,
-				087D29491A36D9A100BCA9F5 /* musicbox.C4.caf in Resources */,
-				087D29421A36D9A100BCA9F5 /* musicbox.A5s.caf in Resources */,
-				087D29401A36D9A100BCA9F5 /* musicbox.A4s.caf in Resources */,
 				08C2816E199D112C0037F6D0 /* MusicInfo.plist in Resources */,
-				087D294A1A36D9A100BCA9F5 /* musicbox.C4s.caf in Resources */,
-				087D295B1A36D9A100BCA9F5 /* musicbox.F5s.caf in Resources */,
 				08289E201A2EACE200927D51 /* Localizable.strings in Resources */,
-				087D294E1A36D9A100BCA9F5 /* musicbox.D3s.caf in Resources */,
-				087D293F1A36D9A100BCA9F5 /* musicbox.A4.caf in Resources */,
-				087D29581A36D9A100BCA9F5 /* musicbox.F4.caf in Resources */,
-				087D29511A36D9A100BCA9F5 /* musicbox.D5.caf in Resources */,
 				08289E211A2EAD0100927D51 /* Main.storyboard in Resources */,
-				087D294C1A36D9A100BCA9F5 /* musicbox.C5s.caf in Resources */,
-				087D29501A36D9A100BCA9F5 /* musicbox.D4s.caf in Resources */,
-				087D293D1A36D9A100BCA9F5 /* musicbox.A3.caf in Resources */,
-				087D29481A36D9A100BCA9F5 /* musicbox.C3s.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,6 +620,7 @@
 				08883B1C1956D40600F7EB68 /* NSString+CMBTools.m in Sources */,
 				0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */,
 				08883AE01956CC6A00F7EB68 /* main.m in Sources */,
+				087D29B51A37FADC00BCA9F5 /* EPSSampler.m in Sources */,
 				08883AE41956CC6A00F7EB68 /* CMBAppDelegate.m in Sources */,
 				08CC5E2119DEADAF0049AAD5 /* UIColor+CMBTools.m in Sources */,
 				08CC5DB519DC240A0049AAD5 /* CMBMusicBoxTableView.m in Sources */,
@@ -756,6 +629,7 @@
 				08CC5E8C19E2D19A0049AAD5 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				08CC5E6C19E14FF90049AAD5 /* NSURL+CMBTools.m in Sources */,
 				086BA16319D0FA4E00991574 /* CMBSongManageViewController.m in Sources */,
+				087D29B71A37FADC00BCA9F5 /* README.md in Sources */,
 				086BA16919D10C4B00991574 /* CMBBaseModalViewController.m in Sources */,
 				08883B161956D03D00F7EB68 /* CMBTabViewController.m in Sources */,
 				08A769DB1972A82D00143638 /* CMBSequenceOneData.m in Sources */,

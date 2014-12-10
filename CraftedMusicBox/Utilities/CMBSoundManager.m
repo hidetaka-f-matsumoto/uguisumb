@@ -7,6 +7,15 @@
 //
 
 #import "CMBSoundManager.h"
+#import "EPSSampler.h"
+#import "CMBUtility.h"
+
+@interface CMBSoundManager ()
+{
+    EPSSampler *_sampler;
+}
+
+@end
 
 @implementation CMBSoundManager
 
@@ -15,6 +24,7 @@ static CMBSoundManager *_instance = nil;
 - (void)_init
 {
     @try {
+        /*
         const NSDictionary *CMBSoundResources = @{
                                                   CMBSoundMusicbox : @{
                                                           @3 : CMBSoundResMusicboxOct3,
@@ -60,6 +70,9 @@ static CMBSoundManager *_instance = nil;
                 _sounds[inst][[NSNumber numberWithInteger:oct]] = soundsInOct;
             }
         }
+         */
+        NSURL *presetURL = [[NSBundle mainBundle] URLForResource:@"MusicBox" withExtension:@"aupreset"];
+        _sampler = [[EPSSampler alloc] initWithPresetURL:presetURL];
         _isAvailable = YES;
     }
     @catch (NSException *ex) {
@@ -84,6 +97,14 @@ static CMBSoundManager *_instance = nil;
     return _instance;
 }
 
++ (UInt32)midiScaleWithScale:(NSString *)scale
+                      octave:(NSNumber *)octave
+{
+    NSInteger scaleIdx = [CMBUtility indexWithScale:scale];
+    NSInteger octaveDiff = octave.integerValue - CMBOctaveBase;
+    return MIDINoteNumber_C4 + scaleIdx + 12 * octaveDiff;
+}
+
 /**
  * 1音再生
  */
@@ -95,7 +116,10 @@ static CMBSoundManager *_instance = nil;
         return;
     }
     // 再生
-#if AUDIO_PLAYER
+#if 1 == AU_SAMPLER
+    UInt32 note = [[self class] midiScaleWithScale:scale octave:octave];
+    [_sampler startPlayingNote:note withVelocity:1.f];
+#elif 1 == AUDIO_PLAYER
     AVAudioPlayer *sound = _sounds[instrument][octave][scale];
     if (sound) {
         // サブスレッドで非同期に実行 (カクつき対策)
@@ -108,12 +132,12 @@ static CMBSoundManager *_instance = nil;
             [sound play];
         });
     }
-#else // AUDIO_PLAYER
+#elif 1 == SYSTEM_SOUND
     SystemSoundID sound = [_sounds[instrument][octave][scale] unsignedIntValue];
     if (sound) {
         AudioServicesPlaySystemSound(sound);
     }
-#endif // AUDIO_PLAYER
+#endif
 }
 
 @end

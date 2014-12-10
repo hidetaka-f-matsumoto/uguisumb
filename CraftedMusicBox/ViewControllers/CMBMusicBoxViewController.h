@@ -20,7 +20,7 @@
 #import "CMBUtility.h"
 #import "CMBSoundManager.h"
 
-static CGFloat const CMBTimeDivAutoScroll = 0.03f; // [s]
+static CGFloat const CMBTimeDivAutoScroll = 0.02f; // [s]
 static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200.f;
 
 @interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, CMBMusicBoxTableViewCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate>
