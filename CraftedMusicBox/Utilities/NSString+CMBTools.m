@@ -139,27 +139,29 @@
 - (NSString *)urlEncode
 {
     //encoding
-    NSString *escapedUrlString =
-    (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
-                                                        NULL,
-                                                        (CFStringRef)self,
-                                                        NULL,
-                                                        (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                        kCFStringEncodingUTF8
-                                                        ));
+//    NSString *escapedUrlString =
+//    (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
+//                                                        NULL,
+//                                                        (CFStringRef)self,
+//                                                        NULL,
+//                                                        (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+//                                                        kCFStringEncodingUTF8
+//                                                        ));
+    NSString* escapedUrlString = [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet alphanumericCharacterSet]];
     return escapedUrlString;
 }
 
 - (NSString *)urlDecode
 {
     //decoding
-    NSString *decodedUrlString =
-    (NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(
-                                                                        NULL,
-                                                                        (CFStringRef)self,
-                                                                        CFSTR(""),
-                                                                        kCFStringEncodingUTF8
-                                                                        ));
+//    NSString *decodedUrlString =
+//    (NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(
+//                                                                        NULL,
+//                                                                        (CFStringRef)self,
+//                                                                        CFSTR(""),
+//                                                                        kCFStringEncodingUTF8
+//                                                                        ));
+    NSString* decodedUrlString = [self stringByRemovingPercentEncoding];
     return decodedUrlString;
 }
 
