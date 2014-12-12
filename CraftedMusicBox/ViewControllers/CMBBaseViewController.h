@@ -10,6 +10,7 @@
 #import <BlocksKit/BlocksKit.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import "GADBannerView.h"
+#import "SVProgressHUD.h"
 #import "CMBUtility.h"
 #import "CMBAlertController.h"
 
