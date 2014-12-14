@@ -8,33 +8,37 @@
 
 #import <UIKit/UIKit.h>
 #import "CMBSequenceOneData.h"
-#import "CMBMusicBoxOctaveView.h"
 
-static CGFloat const CMBMusicBoxTableViewCellHeight = 44.f;
+static CGFloat const CMBMusicBoxTableViewCellHeight     = 44.f;
+static CGFloat const CMBMusicBoxNoteButtonWidth_iPhone  = 24.f;
+static CGFloat const CMBMusicBoxNoteButtonWidth_iPad    = 44.f;
 
 @protocol CMBMusicBoxTableViewCellDelegate <NSObject>
 
 @required
-/** 1オクターブのサイズを返す */
-- (CGSize)sizeOfOctave;
 /** 音符がタップされた */
-- (void)noteDidTapWithInfo:(NSMutableDictionary *)info;
+- (void)musicboxDidTapWithInfo:(NSDictionary *)info;
 /** 音符が弾かれた */
-- (void)notesDidPickWithInfos:(NSArray *)infos;
+- (void)musicboxDidPickWithSequence:(CMBSequenceOneData *)sequence;
+/** 現在のオクターブ */
+- (NSInteger)currentOctave;
 
 @end
 
 /**
  * 1シーケンスのCell
  */
-@interface CMBMusicBoxTableViewCell : UITableViewCell <CMBMusicBoxOctaveViewDelegate>
+@interface CMBMusicBoxTableViewCell : UITableViewCell
 
 @property (nonatomic, assign) id<CMBMusicBoxTableViewCellDelegate> delegate;
 @property (nonatomic, assign) UITableView *parentTableView;
 @property (nonatomic, assign) UIView *tineView;
-@property (nonatomic, strong) NSMutableArray *octaveViews;
+@property (nonatomic, assign, readonly) CMBSequenceOneData *sequenceOneData;
 
-@property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
+@property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *noteButtons;
+@property (nonatomic, strong) IBOutletCollection(NSLayoutConstraint) NSArray *noteButtonWidthConstraints;
+
+- (IBAction)noteButtonDidTap:(id)sender;
 
 - (void)process;
 - (void)updateWithSequenceOne:(CMBSequenceOneData *)soData

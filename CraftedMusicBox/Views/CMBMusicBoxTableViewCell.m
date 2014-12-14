@@ -7,6 +7,7 @@
 //
 
 #import "CMBMusicBoxTableViewCell.h"
+#import "CMBUtility.h"
 
 @interface CMBMusicBoxTableViewCell ()
 {
@@ -19,16 +20,27 @@
 
 - (void)_init
 {
-    _octaveViews = [NSMutableArray array];
-    for (NSInteger i=0; i<CMBOctaveRange; i++) {
-        NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"CMBMusicBoxOctaveView" owner:self options:nil];
-        CMBMusicBoxOctaveView *octaveView = nibs[0];
-        octaveView.delegate = self;
-        octaveView.octave = [NSNumber numberWithInteger:(CMBOctaveMin + i)];
-        [self.contentView addSubview:octaveView];
-        [_octaveViews addObject:octaveView];
-    }
     _preY = 0.0f;
+    _sequenceOneData = nil;
+    _delegate = nil;
+    _parentTableView = nil;
+    _tineView = nil;
+    [self _initViews];
+}
+
+- (void)_initViews
+{
+    CGFloat buttonWidth = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? CMBMusicBoxNoteButtonWidth_iPhone : CMBMusicBoxNoteButtonWidth_iPad;
+    for (NSLayoutConstraint *constraint in _noteButtonWidthConstraints) {
+        // 幅を調整
+        constraint.constant = buttonWidth;
+    }
+    for (UIButton *noteButton in _noteButtons) {
+        // 選択OFF
+        noteButton.selected = NO;
+        // 処理に時間がかかるのでやってはいけない...と思ったらそうでもなかった。あれ？
+        [noteButton.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    }
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -52,39 +64,6 @@
     // Configure the view for the selected state
 }
 
-- (void)setLayoutSize:(CGSize)layoutSize
-{
-    // サイズが変わらない場合は何もしない
-    if (_layoutSize.height == layoutSize.height && _layoutSize.width == layoutSize.width &&
-        self.frame.size.height == layoutSize.height && self.frame.size.width == layoutSize.width) {
-        return;
-    }
-    // 設定
-    _layoutSize = layoutSize;
-    // 再描画 (setNeedsLayoutの方がパフォーマンスが良いので採用)
-//    [self invalidateIntrinsicContentSize];
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
-}
-
-- (CGSize)intrinsicContentSize
-{
-    return _layoutSize;
-}
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    
-    for (NSInteger i=0; i<CMBOctaveRange; i++) {
-        // layoutSize内に、CMBOctaveRange分のviewを並べる
-        CMBMusicBoxOctaveView *octaveView = _octaveViews[i];
-        CGSize size = CGSizeMake(self.frame.size.width / (CGFloat)CMBOctaveRange, self.frame.size.height);
-        CGRect frame = CGRectMake(size.width * i, 0.f, size.width, size.height);
-        octaveView.frame = frame;
-    }
-}
-
 - (void)process
 {
 //    NSLog(@"process y=%f", self.frame.origin.y - _parentTableView.contentOffset.y);
@@ -96,13 +75,12 @@
     if (20.f <= curY && _parentTableView.frame.size.height - 20.f > curY) {
         // オルゴール歯を通過したかチェック
         if (tineY >= curY && tineY < _preY) {
-            // ピックされた事を通知
 //            NSLog(@"process tineY=%f, curY=%f, preY=%f", tineY, curY, _preY);
-            NSMutableArray *noteInfos = [NSMutableArray array];
-            for (CMBMusicBoxOctaveView *octaveView in _octaveViews) {
-                [noteInfos addObjectsFromArray:octaveView.onNoteInfos];
+            // 音符があるかチェック
+            if (_sequenceOneData && _sequenceOneData.notes && 0 < _sequenceOneData.notes.count) {
+                // ピックされた事を通知
+                [_delegate musicboxDidPickWithSequence:_sequenceOneData];
             }
-            [_delegate notesDidPickWithInfos:noteInfos];
         }
     }
     // 前回の位置を記録
@@ -112,28 +90,44 @@
 - (void)updateWithSequenceOne:(CMBSequenceOneData *)soData
                         color:(UIColor *)color
 {
-    for (CMBMusicBoxOctaveView *octaveView in _octaveViews) {
-        if (!octaveView) {
+    [self _initViews];
+    _sequenceOneData = soData;
+    self.backgroundColor = color;
+    NSInteger currentOctave = [_delegate currentOctave];
+    for (CMBNoteData *note in _sequenceOneData.notes) {
+        if (!note || note.octave.integerValue != currentOctave) {
             continue;
         }
-        [octaveView updateWithSequenceOneData:soData
-                                        color:color];
+        [_noteButtons[[CMBUtility indexWithScale:note.scale]] setSelected:YES];
     }
 }
 
-#pragma mark CMBMusicBoxOctaveViewDelegate
-
-/**
- * 音符がタップされた
- */
-- (void)noteDidTapWithInfo:(NSMutableDictionary *)info
+- (NSDictionary *)noteInfoWithButtonIndex:(NSInteger)index
 {
-    if (info) {
-        // indexPathを付加
-        [info setObject:[self.parentTableView indexPathForCell:self]
-                 forKey:@"indexPath"];
-    }
-    [_delegate noteDidTapWithInfo:info];
+    return @{
+             CMBNoteInfoKeyScale : [CMBUtility scaleWithIndex:index],
+             CMBNoteInfoKeyOctave : [NSNumber numberWithInteger:[_delegate currentOctave]]
+             };
+}
+
+#pragma mark - IBAction.
+
+- (IBAction)noteButtonDidTap:(id)sender
+{
+    // ボタン選択状態を反転
+    UIButton *noteButton = (UIButton *)sender;
+    noteButton.selected = !noteButton.selected;
+    // 通知情報を作成
+    NSMutableDictionary *info = [NSMutableDictionary dictionary];
+    // 音符
+    NSInteger index = [_noteButtons indexOfObject:noteButton];
+    [info addEntriesFromDictionary:[NSMutableDictionary dictionaryWithDictionary:[self noteInfoWithButtonIndex:index]]];
+    // on/off
+    [info setObject:[NSNumber numberWithBool:noteButton.selected] forKey:@"isTapOn"];
+    // indexPath
+    [info setObject:[self.parentTableView indexPathForCell:self] forKey:@"indexPath"];
+    // 通知
+    [_delegate musicboxDidTapWithInfo:info];
 }
 
 @end

@@ -60,14 +60,9 @@
 {
     [super viewDidLoad];
 
-    _scrollView.delegate = self;
-    _scrollView.scrollsToTop = NO;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.scrollsToTop = YES;
-
-    // UIScrollView中のコンテンツを調整
-    [self adjustScrollViewContents];
     
     [self _initFirst];
     [self _init];
@@ -105,12 +100,6 @@
     }
 }
 
-- (void)viewDidLayoutSubviews
-{
-    _tableView.layoutSize = CGSizeMake(_scrollView.frame.size.width * 3.f,
-                                       _scrollView.frame.size.height);
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -127,50 +116,6 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-/**
- * UIScrollView中のコンテンツを調整
- *  AutoLayoutが効かないらしい
- *  http://blogios.stack3.net/archives/2094
- */
-- (void)adjustScrollViewContents
-{
-    // 一旦subViewから外す
-    [_tableView removeFromSuperview];
-    // AutoResizingMaskを切る
-    _tableView.translatesAutoresizingMaskIntoConstraints = NO;
-    // subViewに入れる
-    [_scrollView addSubview:_tableView];
-    // 制約を設定
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:_tableView
-                                                            attribute:NSLayoutAttributeLeading
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:_scrollView
-                                                            attribute:NSLayoutAttributeLeading
-                                                           multiplier:1.f
-                                                             constant:0.f]];
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:_tableView
-                                                            attribute:NSLayoutAttributeTrailing
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:_scrollView
-                                                            attribute:NSLayoutAttributeTrailing
-                                                           multiplier:1.f
-                                                             constant:0.f]];
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:_tableView
-                                                            attribute:NSLayoutAttributeTop
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:_scrollView
-                                                            attribute:NSLayoutAttributeTop
-                                                           multiplier:1.f
-                                                             constant:0.f]];
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:_tableView
-                                                            attribute:NSLayoutAttributeBottom
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:_scrollView
-                                                            attribute:NSLayoutAttributeBottom
-                                                           multiplier:1.f
-                                                             constant:0.f]];
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue
                  sender:(id)sender
@@ -197,7 +142,6 @@
 {
     if (resetScroll) {
         // スクロール初期位置
-        _scrollView.contentOffset = CGPointMake(_scrollView.frame.size.width, 0);
         _tableView.contentOffset = CGPointMake(0, 0);
     }
     // タイトル更新
@@ -231,7 +175,6 @@
     // フラグon
     _isPlaying = YES;
     // スクロール禁止
-    [_scrollView setScrollEnabled:NO];
     [_tableView setScrollEnabled:NO];
     // ヘッダViewを非表示
     [self hideHeadView];
@@ -260,7 +203,6 @@
     // ヘッダViewを表示
     [self showHeadView];
     // スクロール許可
-    [_scrollView setScrollEnabled:YES];
     [_tableView setScrollEnabled:YES];
     // フラグoff
     _isPlaying = NO;
@@ -286,7 +228,6 @@
         // ヘッダViewを表示
         [self showHeadView];
         // スクロール許可
-        [_scrollView setScrollEnabled:YES];
         [_tableView setScrollEnabled:YES];
     }
     // 既に上までスクロールしている場合
@@ -534,8 +475,7 @@
 
 - (NSInteger)getCurrentOctave
 {
-    NSInteger page = _scrollView.contentOffset.x / (NSInteger)_scrollView.frame.size.width;
-    return CMBOctaveMin + page;
+    return CMBOctaveMin; // TODO: fix
 }
 
 #pragma mark - UITableViewDataSource
@@ -580,7 +520,6 @@
             mbCell.tineView = _tineView;
             [mbCell updateWithSequenceOne:_sequences[[NSNumber numberWithInteger:indexPath.row]]
                                     color:[self cellColorWithRow:indexPath.row]];
-            mbCell.layoutSize = [self sizeOfMusicBoxCell];
             cell = mbCell;
             break;
         }
@@ -640,95 +579,48 @@
 
 - (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
 {
-    BOOL isScrollable;
-    // オルゴールテーブルの場合
-    if (scrollView == _tableView) {
-        // 停止
-        [self stopWithAnimation:YES];
-        // 標準スクロールはしない
-        isScrollable = NO;
-    }
-    // ページング用スクロールの場合
-    else if (scrollView == _scrollView) {
-        isScrollable = NO;
-    }
-    return isScrollable;
+    // 停止
+    [self stopWithAnimation:YES];
+    // 標準スクロールはしない
+    return NO;
 }
 
 - (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView
 {
-    // オルゴールテーブルの場合
-    if (scrollView == _tableView) {
-        _isStopping = NO;
-    }
-    // ページング用スクロールの場合
-    else if (scrollView == _scrollView) {
-    }
+    _isStopping = NO;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView*)scrollView
 {
-    // オルゴールテーブルの場合
-    if (scrollView == _tableView) {
-        // スクロール開始位置を記録
-        _scrollPointBegin = [scrollView contentOffset];
-        // ヘッダViewを非表示
-        [self hideHeadView];
-    }
-    // ページング用スクロールの場合
-    else if (scrollView == _scrollView) {
-        // 縦スクロール禁止
-        CGPoint offset = scrollView.contentOffset;
-        offset.y = 0.0f;
-        scrollView.contentOffset = offset;
-    }
+    // スクロール開始位置を記録
+    _scrollPointBegin = [scrollView contentOffset];
+    // ヘッダViewを非表示
+    [self hideHeadView];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
                   willDecelerate:(BOOL)decelerate
 {
-    // オルゴールテーブルの場合
-    if (scrollView == _tableView) {
-        if (!decelerate) {
-            // ヘッダViewを表示
-            [self showHeadView];
-        }
-    }
-    // ページング用スクロールの場合
-    else if (scrollView == _scrollView) {
-        // オクターブ表示更新
-        _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
+    if (!decelerate) {
+        // ヘッダViewを表示
+        [self showHeadView];
     }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    // オルゴールテーブルの場合
-    if (scrollView == _tableView) {
-        // ヘッダViewを表示
-        [self showHeadView];
-    }
-    // ページング用スクロールの場合
-    else if (scrollView == _scrollView) {
-        // オクターブ表示更新
-        _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
-    }
+    // ヘッダViewを表示
+    [self showHeadView];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView*)scrollView
 {
-    // オルゴールテーブルの場合
-    if (scrollView == _tableView) {
-        for (UITableViewCell *cell in [_tableView visibleCells]) {
-            if (![cell isKindOfClass:[CMBMusicBoxTableViewCell class]]) {
-                continue;
-            }
-            CMBMusicBoxTableViewCell *mbCell = (CMBMusicBoxTableViewCell *)cell;
-            [mbCell process];
+    for (UITableViewCell *cell in [_tableView visibleCells]) {
+        if (![cell isKindOfClass:[CMBMusicBoxTableViewCell class]]) {
+            continue;
         }
-    }
-    // ページング用スクロールの場合
-    else if (scrollView == _scrollView) {
+        CMBMusicBoxTableViewCell *mbCell = (CMBMusicBoxTableViewCell *)cell;
+        [mbCell process];
     }
 }
 
@@ -743,33 +635,9 @@
 #pragma mark - CMBMusicBoxTableViewCellDelegate
 
 /**
- * セルのサイズを返す
- */
-- (CGSize)sizeOfMusicBoxHeadCell
-{
-    return CGSizeMake(_tableView.frame.size.width, CMBMusicBoxTableViewHeadCellHeight);
-}
-
-/**
- * セルのサイズを返す
- */
-- (CGSize)sizeOfMusicBoxCell
-{
-    return CGSizeMake(_tableView.frame.size.width, CMBMusicBoxTableViewCellHeight);
-}
-
-/**
- * 1オクターブのサイズを返す
- */
-- (CGSize)sizeOfOctave
-{
-    return CGSizeMake(_scrollView.frame.size.width, CMBMusicBoxTableViewCellHeight);
-}
-
-/**
  * 音符がタップされた
  */
-- (void)noteDidTapWithInfo:(NSMutableDictionary *)info
+- (void)musicboxDidTapWithInfo:(NSDictionary *)info
 {
     if (!info) {
         return;
@@ -802,12 +670,28 @@
 /**
  * 音符が弾かれた
  */
-- (void)notesDidPickWithInfos:(NSArray *)infos
+- (void)musicboxDidPickWithSequence:(CMBSequenceOneData *)sequence
 {
-    for (NSDictionary *info in infos) {
-        [self playWithScale:info[CMBNoteInfoKeyScale]
-                     octave:info[CMBNoteInfoKeyOctave]];
+    for (CMBNoteData *note in sequence.notes) {
+        [self playWithScale:note.scale
+                     octave:note.octave];
     }
+}
+
+/**
+ * 現在のオクターブ
+ */
+- (NSInteger)currentOctave
+{
+    return CMBOctaveBase; // TODO: fix
+}
+
+/**
+ * セルのサイズを返す
+ */
+- (CGSize)sizeOfMusicBoxHeadCell
+{
+    return CGSizeMake(_tableView.frame.size.width, CMBMusicBoxTableViewHeadCellHeight);
 }
 
 #pragma mark - CMBSongSaveDelegate
