@@ -58,6 +58,11 @@
     return self;
 }
 
+- (BOOL)isNotes
+{
+    return _notes && 0 < _notes.count;
+}
+
 - (BOOL)isContainNoteData:(CMBNoteData *)noteData
 {
     for (CMBNoteData *nd in _notes) {

@@ -32,6 +32,9 @@
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -50,13 +53,65 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bKy-8R-19x" customClass="CMBMusicBoxTableView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewHeadCell" rowHeight="200" id="IC7-gS-MAh" customClass="CMBMusicBoxTableViewHeadCell">
                                         <rect key="frame" x="0.0" y="0.0" width="960" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IC7-gS-MAh" id="WI0-ID-h8r">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="XdX-Al-I3p">
+                                                    <rect key="frame" x="8" y="104" width="120" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="XwJ-SJ-u18"/>
+                                                        <constraint firstAttribute="height" constant="44" id="clZ-EK-QYy"/>
+                                                    </constraints>
+                                                    <string key="text">&lt;&lt;&lt; Swipe
+octave down</string>
+                                                    <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="87A-Md-34a" userLabel="Swipe >>> octave up">
+                                                    <rect key="frame" x="472" y="104" width="120" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="5Cx-FK-CIh"/>
+                                                        <constraint firstAttribute="height" constant="44" id="i6m-LW-5P5"/>
+                                                    </constraints>
+                                                    <string key="text">Swipe &gt;&gt;&gt;
+octave up</string>
+                                                    <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-e8-u6Q">
+                                                    <rect key="frame" x="240" y="148" width="120" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="Ugz-uo-MPy"/>
+                                                        <constraint firstAttribute="height" constant="44" id="d44-eM-aAa"/>
+                                                    </constraints>
+                                                    <string key="text">Tap bellow,
+music box on.</string>
+                                                    <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="87A-Md-34a" secondAttribute="trailing" constant="8" id="2eC-js-cJZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="gr1-e8-u6Q" secondAttribute="bottom" constant="7" id="Kvv-Vr-GBD"/>
+                                                <constraint firstItem="XdX-Al-I3p" firstAttribute="leading" secondItem="WI0-ID-h8r" secondAttribute="leading" constant="8" id="NC5-Vl-7B5"/>
+                                                <constraint firstAttribute="centerX" secondItem="gr1-e8-u6Q" secondAttribute="centerX" id="Nq4-7g-i3J"/>
+                                                <constraint firstAttribute="bottom" secondItem="87A-Md-34a" secondAttribute="bottom" constant="51" id="TCb-KL-J2f"/>
+                                                <constraint firstAttribute="bottom" secondItem="XdX-Al-I3p" secondAttribute="bottom" constant="51" id="YCs-cH-g3X"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <outlet property="octDownLabel" destination="XdX-Al-I3p" id="gE6-6u-gnp"/>
+                                            <outlet property="octUpLabel" destination="87A-Md-34a" id="LGb-pQ-86R"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewCell" id="eat-gf-db6" customClass="CMBMusicBoxTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="960" height="44"/>
@@ -67,221 +122,245 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbx-Gh-5um">
                                                     <rect key="frame" x="4" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="VU1-3g-gQN"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
-                                                    <state key="highlighted" image="bean"/>
+                                                    <connections>
+                                                        <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="OwM-5l-qqP"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqy-G6-pwu">
                                                     <rect key="frame" x="56" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="pW9-KA-Xp1"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
-                                                    <state key="highlighted" image="bean"/>
+                                                    <connections>
+                                                        <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="BYD-yA-oVv"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3M-MI-GQp">
                                                     <rect key="frame" x="107" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="jGP-gg-QS4"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
-                                                    <state key="highlighted" image="bean"/>
+                                                    <connections>
+                                                        <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="Sww-u8-ZaB"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-03-hUD">
                                                     <rect key="frame" x="159" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="dN2-bL-q3M"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
-                                                    <state key="highlighted" image="bean"/>
+                                                    <connections>
+                                                        <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="MQU-3H-9MH"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fW9-kO-2Be">
                                                     <rect key="frame" x="211" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="VFz-f4-77T"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
-                                                    <state key="highlighted" image="bean"/>
+                                                    <connections>
+                                                        <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="Zno-0z-0kg"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZh-3k-ogb">
                                                     <rect key="frame" x="262" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="iuk-io-SXi"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
-                                                    <state key="highlighted" image="bean"/>
+                                                    <connections>
+                                                        <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="7a7-Xu-hUv"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-f5-Mp0">
                                                     <rect key="frame" x="314" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="IbY-CT-eso"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
-                                                    <state key="highlighted" image="bean"/>
+                                                    <connections>
+                                                        <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="v3z-dk-S9J"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWa-f9-03L">
                                                     <rect key="frame" x="365" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="y4J-fS-LNc"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
-                                                    <state key="highlighted" image="bean"/>
+                                                    <connections>
+                                                        <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="dNs-16-Uq6"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDi-Hc-wUn">
                                                     <rect key="frame" x="417" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="44U-BS-DNi"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
-                                                    <state key="highlighted" image="bean"/>
+                                                    <connections>
+                                                        <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="SDv-Cl-cxA"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulF-6M-s2H">
                                                     <rect key="frame" x="469" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="Juc-pO-EAM"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
-                                                    <state key="highlighted" image="bean"/>
+                                                    <connections>
+                                                        <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="ij9-bY-yNZ"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gq7-xi-gh4">
                                                     <rect key="frame" x="520" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="Fgj-HW-7Sb"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
-                                                    <state key="highlighted" image="bean"/>
+                                                    <connections>
+                                                        <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="KGw-b5-Ac7"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iA4-sq-vXB">
                                                     <rect key="frame" x="572" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="vH0-3b-4Ay"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
-                                                    <state key="highlighted" image="bean"/>
+                                                    <connections>
+                                                        <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="PKl-Bg-HJk"/>
+                                                    </connections>
                                                 </button>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zg2-P3-VP7">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zg2-P3-VP7">
                                                     <rect key="frame" x="28" y="11" width="28" height="22"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="Gf6-FV-QSl"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmD-UZ-0LW">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmD-UZ-0LW">
                                                     <rect key="frame" x="80" y="11" width="27" height="22"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="KoC-mV-V3c"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBz-gc-W8a">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBz-gc-W8a">
                                                     <rect key="frame" x="131" y="11" width="28" height="22"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="KFG-hx-fKR"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-90-hsW">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-90-hsW">
                                                     <rect key="frame" x="183" y="11" width="28" height="22"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="4Yk-3G-Kk9"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8FJ-ww-qfW">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8FJ-ww-qfW">
                                                     <rect key="frame" x="235" y="11" width="27" height="22"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="rFO-7K-JUj"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mus-VN-LVa">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mus-VN-LVa">
                                                     <rect key="frame" x="286" y="11" width="28" height="22"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="83Y-lL-Qb0"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-bn-YCD">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-bn-YCD">
                                                     <rect key="frame" x="338" y="11" width="27" height="22"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="5U9-dX-wQp"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PU0-ak-hFq">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PU0-ak-hFq">
                                                     <rect key="frame" x="389" y="11" width="28" height="22"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="oxM-2v-hEw"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFk-Z9-nRW">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFk-Z9-nRW">
                                                     <rect key="frame" x="441" y="11" width="28" height="22"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="RFI-TW-jE2"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-3V-B6S">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-3V-B6S">
                                                     <rect key="frame" x="493" y="11" width="27" height="22"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="5cv-aH-zXH"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whT-8x-05c">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whT-8x-05c">
                                                     <rect key="frame" x="544" y="11" width="28" height="22"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="0.2784313725" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="lFG-6U-TZz"/>
                                                     </constraints>
@@ -359,6 +438,32 @@
                                                 <constraint firstAttribute="bottom" secondItem="ZY4-f5-Mp0" secondAttribute="bottom" id="zMi-Wc-xIA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outletCollection property="noteButtons" destination="Pbx-Gh-5um" id="x77-y5-lKy"/>
+                                            <outletCollection property="noteButtons" destination="Xqy-G6-pwu" id="hJ7-yC-ivq"/>
+                                            <outletCollection property="noteButtons" destination="c3M-MI-GQp" id="Dii-An-JbD"/>
+                                            <outletCollection property="noteButtons" destination="WZo-03-hUD" id="hUP-E4-xKn"/>
+                                            <outletCollection property="noteButtons" destination="fW9-kO-2Be" id="DZw-TL-9RV"/>
+                                            <outletCollection property="noteButtons" destination="sZh-3k-ogb" id="yFa-TN-liQ"/>
+                                            <outletCollection property="noteButtons" destination="ZY4-f5-Mp0" id="ozV-Ee-yjE"/>
+                                            <outletCollection property="noteButtons" destination="UWa-f9-03L" id="V98-qt-bkk"/>
+                                            <outletCollection property="noteButtons" destination="ZDi-Hc-wUn" id="2X2-ep-ueb"/>
+                                            <outletCollection property="noteButtons" destination="ulF-6M-s2H" id="cqg-lt-RXw"/>
+                                            <outletCollection property="noteButtons" destination="gq7-xi-gh4" id="dk8-kA-4jX"/>
+                                            <outletCollection property="noteButtons" destination="iA4-sq-vXB" id="Poc-sA-Y5d"/>
+                                            <outletCollection property="noteButtonWidthConstraints" destination="VU1-3g-gQN" id="VTB-VE-4Qd"/>
+                                            <outletCollection property="noteButtonWidthConstraints" destination="pW9-KA-Xp1" id="fAM-SW-qeW"/>
+                                            <outletCollection property="noteButtonWidthConstraints" destination="jGP-gg-QS4" id="Jm1-TU-u8Z"/>
+                                            <outletCollection property="noteButtonWidthConstraints" destination="dN2-bL-q3M" id="tm1-Ga-VU8"/>
+                                            <outletCollection property="noteButtonWidthConstraints" destination="VFz-f4-77T" id="eKe-tn-eLm"/>
+                                            <outletCollection property="noteButtonWidthConstraints" destination="iuk-io-SXi" id="LhC-rt-1LM"/>
+                                            <outletCollection property="noteButtonWidthConstraints" destination="IbY-CT-eso" id="oO4-HF-nEq"/>
+                                            <outletCollection property="noteButtonWidthConstraints" destination="y4J-fS-LNc" id="bhr-sm-AWB"/>
+                                            <outletCollection property="noteButtonWidthConstraints" destination="44U-BS-DNi" id="sqr-YM-Ze6"/>
+                                            <outletCollection property="noteButtonWidthConstraints" destination="Juc-pO-EAM" id="Mdp-Hh-hbs"/>
+                                            <outletCollection property="noteButtonWidthConstraints" destination="Fgj-HW-7Sb" id="OAS-ko-Lyr"/>
+                                            <outletCollection property="noteButtonWidthConstraints" destination="vH0-3b-4Ay" id="wEJ-eA-5bv"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewFootCell" rowHeight="200" id="T1G-b4-tJP">
                                         <rect key="frame" x="0.0" y="0.0" width="960" height="44"/>
@@ -386,6 +491,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="HcB-PH-m1Q" appends="YES" id="Sed-6r-Clf"/>
+                                    <outletCollection property="gestureRecognizers" destination="Zrx-Fg-6XY" appends="YES" id="7lN-mJ-dQN"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSg-uY-Uve" userLabel="Head View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="88"/>
@@ -594,10 +703,10 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge2-C6-zQF">
-                                        <rect key="frame" x="576" y="44" width="20" height="21"/>
+                                        <rect key="frame" x="566" y="44" width="30" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Fbd-jk-LwL"/>
-                                            <constraint firstAttribute="width" constant="20" id="R5K-OX-JGf"/>
+                                            <constraint firstAttribute="width" constant="30" id="R5K-OX-JGf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -613,9 +722,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Octave" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPq-6m-SqI">
-                                        <rect key="frame" x="488" y="44" width="80" height="21"/>
+                                        <rect key="frame" x="438" y="44" width="120" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="ZdW-8y-SlC"/>
+                                            <constraint firstAttribute="width" constant="120" id="ZdW-8y-SlC"/>
                                             <constraint firstAttribute="height" constant="21" id="eei-hl-OoJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
@@ -719,7 +828,7 @@
                                     <constraint firstAttribute="height" constant="100" id="lUl-HT-MxW"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDv-No-cAb" userLabel="Banner Frame View">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kDv-No-cAb" userLabel="Banner Frame View">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="bcB-Yg-2xa"/>
@@ -799,6 +908,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8be-Yi-Aj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="HcB-PH-m1Q">
+                    <connections>
+                        <action selector="tableViewDidSwipeLeft:" destination="OGI-JR-xGh" id="NXJ-V5-X8l"/>
+                        <outlet property="delegate" destination="OGI-JR-xGh" id="bHY-Ms-g8J"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Zrx-Fg-6XY">
+                    <connections>
+                        <action selector="tableViewDidSwipeRight:" destination="OGI-JR-xGh" id="Jpa-aP-NU2"/>
+                        <outlet property="delegate" destination="OGI-JR-xGh" id="cRW-65-0kb"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="818" y="1026"/>
         </scene>
@@ -882,7 +1003,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvU-8P-UY9" userLabel="Banner Frame View">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tvU-8P-UY9" userLabel="Banner Frame View">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="Twa-8V-pGN"/>
@@ -1041,7 +1162,7 @@
                                     <action selector="applyButtonDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="5tS-gL-qiE"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4t2-qD-bMV" userLabel="Banner Frame View">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4t2-qD-bMV" userLabel="Banner Frame View">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="I02-vf-5R2"/>

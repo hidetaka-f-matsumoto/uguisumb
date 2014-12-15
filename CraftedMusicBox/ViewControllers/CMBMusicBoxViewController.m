@@ -8,8 +8,6 @@
 //
 
 #import "CMBMusicBoxViewController.h"
-#import "CMBMusicBoxTableViewCell.h"
-#import "CMBMusicBoxTableViewHeadCell.h"
 #import "UIColor+CMBTools.h"
 #import "NSString+CMBTools.h"
 
@@ -44,6 +42,7 @@
     _scrollPointBegin = CGPointZero;
     _sequences = [NSMutableDictionary dictionary];
     _header = [[CMBSongHeaderData alloc] init];
+    _currentOctave = CMBOctaveBase;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -106,16 +105,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue
                  sender:(id)sender
@@ -246,6 +236,8 @@
 {
     return _isStopping;
 }
+
+#pragma mark - Action
 
 /**
  * 再生ボタン
@@ -429,6 +421,32 @@
 }
 
 /**
+ * スワイプハンドラ (左)
+ */
+- (IBAction)tableViewDidSwipeLeft:(id)sender
+{
+    if (CMBOctaveMax > _currentOctave) {
+        _currentOctave++;
+        // 表示更新
+        [self updateViewsWithResetScroll:NO];
+    }
+}
+
+/**
+ * スワイプハンドラ (右)
+ */
+- (IBAction)tableViewDidSwipeRight:(id)sender
+{
+    if (CMBOctaveMin < _currentOctave) {
+        _currentOctave--;
+        // 表示更新
+        [self updateViewsWithResetScroll:NO];
+    }
+}
+
+#pragma mark - Control Views
+
+/**
  * 自動スクロール
  */
 - (void)scrollAuto:(NSTimer*)timer
@@ -473,11 +491,6 @@
      }];
 }
 
-- (NSInteger)getCurrentOctave
-{
-    return CMBOctaveMin; // TODO: fix
-}
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -506,20 +519,14 @@
     UITableViewCell *cell = nil;
     switch (indexPath.section) {
         case 0:
-        {
-            CMBMusicBoxTableViewHeadCell *mbhCell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewHeadCell" forIndexPath:indexPath];
-            mbhCell.layoutSize = [self sizeOfMusicBoxHeadCell];
-            cell = mbhCell;
+            cell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewHeadCell" forIndexPath:indexPath];
             break;
-        }
         case 1:
         {
             CMBMusicBoxTableViewCell *mbCell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewCell" forIndexPath:indexPath];
             mbCell.delegate = self;
             mbCell.parentTableView = _tableView;
             mbCell.tineView = _tineView;
-            [mbCell updateWithSequenceOne:_sequences[[NSNumber numberWithInteger:indexPath.row]]
-                                    color:[self cellColorWithRow:indexPath.row]];
             cell = mbCell;
             break;
         }
@@ -531,23 +538,6 @@
     }
     
     return cell;
-}
-
-- (UIColor *)cellColorWithRow:(NSInteger)row
-{
-    UIColor *d1Color;
-    UIColor *d2Color;
-    if (0 == row / _header.division1.integerValue % 2) {
-        d1Color = [UIColor whiteColor];
-    } else {
-        d1Color = [CMBUtility greenColor];
-    }
-    if (0 == row / _header.division1.integerValue / _header.division2.integerValue % 2) {
-        d2Color = [UIColor whiteColor];
-    } else {
-        d2Color = [CMBUtility lightBrownColor];
-    }
-    return [[d1Color blendWithColor:d2Color alpha:0.5f] changeAlpha:0.25f];
 }
 
 - (CGFloat)     tableView:(UITableView *)tableView
@@ -681,17 +671,37 @@
 /**
  * 現在のオクターブ
  */
-- (NSInteger)currentOctave
+- (NSInteger)getCurrentOctave
 {
-    return CMBOctaveBase; // TODO: fix
+    return _currentOctave;
 }
 
 /**
- * セルのサイズを返す
+ * セルの背景色
  */
-- (CGSize)sizeOfMusicBoxHeadCell
+- (UIColor *)musicboxCellColorWithIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(_tableView.frame.size.width, CMBMusicBoxTableViewHeadCellHeight);
+    UIColor *d1Color;
+    UIColor *d2Color;
+    if (0 == indexPath.row / _header.division1.integerValue % 2) {
+        d1Color = [UIColor whiteColor];
+    } else {
+        d1Color = [CMBUtility greenColor];
+    }
+    if (0 == indexPath.row / _header.division1.integerValue / _header.division2.integerValue % 2) {
+        d2Color = [UIColor whiteColor];
+    } else {
+        d2Color = [CMBUtility lightBrownColor];
+    }
+    return [[d1Color blendWithColor:d2Color alpha:0.5f] changeAlpha:0.25f];
+}
+
+/**
+ * セルのシーケンス
+ */
+- (CMBSequenceOneData *)musicboxCellSequenceOneWithIndexPath:(NSIndexPath *)indexPath
+{
+    return _sequences[[NSNumber numberWithInteger:indexPath.row]];
 }
 
 #pragma mark - CMBSongSaveDelegate

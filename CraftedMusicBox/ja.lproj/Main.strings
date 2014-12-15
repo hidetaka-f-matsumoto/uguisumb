@@ -23,7 +23,7 @@
 "IkL-fO-Kbl.title" = "曲の設定";
 
 /* Class = "IBUILabel"; text = "<<< Swipe to open menue."; ObjectID = "JDa-ea-333"; */
-"JDa-ea-333.text" = "<<< スワイプしてメニューを開く";
+"JDa-ea-333.text" = "← スワイプしてメニューを開く";
 
 /* Class = "IBUILabel"; text = "F#"; ObjectID = "JSJ-rO-l0D"; */
 "JSJ-rO-l0D.text" = "F#";
@@ -133,3 +133,11 @@
 /* Class = "IBUILabel"; text = "B"; ObjectID = "tYE-0l-Uex"; */
 "tYE-0l-Uex.text" = "B";
 
+/* Class = "IBUILabel"; text = "Tap bellow,\nmusic box on."; ObjectID = "gr1-e8-u6Q"; */
+"gr1-e8-u6Q.text" = "↓ タップ\nオルゴールOn";
+
+/* Class = "IBUILabel"; text = "<<< Swipe\noctave down"; ObjectID = "XdX-Al-I3p"; */
+"XdX-Al-I3p.text" = "← スワイプ\nオクターブ下へ";
+
+/* Class = "IBUILabel"; text = "Swipe >>>\noctave up"; ObjectID = "87A-Md-34a"; */
+"87A-Md-34a.text" = "スワイプ →\nオクターブ上へ";

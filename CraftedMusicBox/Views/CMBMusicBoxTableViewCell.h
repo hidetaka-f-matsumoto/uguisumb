@@ -21,7 +21,11 @@ static CGFloat const CMBMusicBoxNoteButtonWidth_iPad    = 44.f;
 /** 音符が弾かれた */
 - (void)musicboxDidPickWithSequence:(CMBSequenceOneData *)sequence;
 /** 現在のオクターブ */
-- (NSInteger)currentOctave;
+- (NSInteger)getCurrentOctave;
+/** セルの背景色 */
+- (UIColor *)musicboxCellColorWithIndexPath:(NSIndexPath *)indexPath;
+/** セルのシーケンス */
+- (CMBSequenceOneData *)musicboxCellSequenceOneWithIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
@@ -41,7 +45,6 @@ static CGFloat const CMBMusicBoxNoteButtonWidth_iPad    = 44.f;
 - (IBAction)noteButtonDidTap:(id)sender;
 
 - (void)process;
-- (void)updateWithSequenceOne:(CMBSequenceOneData *)soData
-                        color:(UIColor *)color;
+- (void)update;
 
 @end

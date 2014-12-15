@@ -7,14 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CMBMusicBoxHeadOctaveView.h"
 
 static CGFloat const CMBMusicBoxTableViewHeadCellHeight = 200.f;
 
+@protocol CMBMusicBoxTableViewHeadCellDelegate <NSObject>
+
+@required
+/** 現在のオクターブ */
+- (NSInteger)getCurrentOctave;
+
+@end
+
 @interface CMBMusicBoxTableViewHeadCell : UITableViewCell
 
-@property (nonatomic, strong) NSMutableArray *octaveViews;
+@property (nonatomic, assign) id<CMBMusicBoxTableViewHeadCellDelegate> delegate;
 
-@property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
+@property (nonatomic, weak) IBOutlet UILabel *octDownLabel;
+@property (nonatomic, weak) IBOutlet UILabel *octUpLabel;
+
+- (void)update;
 
 @end

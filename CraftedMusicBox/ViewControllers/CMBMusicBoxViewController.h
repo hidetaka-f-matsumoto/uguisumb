@@ -14,6 +14,7 @@
 #import "CMBSequenceOneData.h"
 #import "CMBSongHeaderData.h"
 #import "CMBMusicBoxTableViewCell.h"
+#import "CMBMusicBoxTableViewHeadCell.h"
 #import "CMBSongConfigViewController.h"
 #import "CMBSongManageViewController.h"
 #import "CMBMusicBoxTableView.h"
@@ -23,12 +24,13 @@
 static CGFloat const CMBTimeDivAutoScroll = 0.02f; // [s]
 static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200.f;
 
-@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, CMBMusicBoxTableViewCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate>
+@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, CMBMusicBoxTableViewCellDelegate, CMBMusicBoxTableViewHeadCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate>
 {
     NSMutableDictionary *_dataSource;
 }
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, getter=getCurrentOctave) NSInteger currentOctave;
+
 @property (weak, nonatomic) IBOutlet CMBMusicBoxTableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *tineView;
 @property (weak, nonatomic) IBOutlet UIView *headView;
@@ -42,5 +44,7 @@ static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200.f;
 - (IBAction)stopButtonDidTap:(id)sender;
 - (IBAction)shareButtonDidTap:(id)sender;
 - (IBAction)menueButtonDidTap:(id)sender;
+- (IBAction)tableViewDidSwipeLeft:(id)sender;
+- (IBAction)tableViewDidSwipeRight:(id)sender;
 
 @end

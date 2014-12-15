@@ -133,3 +133,12 @@
 
 /* Class = "IBUILabel"; text = "B"; ObjectID = "tYE-0l-Uex"; */
 "tYE-0l-Uex.text" = "B";
+
+/* Class = "IBUILabel"; text = "Tap bellow,\nmusic box on."; ObjectID = "gr1-e8-u6Q"; */
+"gr1-e8-u6Q.text" = "Tap bellow,\nmusic box on.";
+
+/* Class = "IBUILabel"; text = "<<< Swipe\noctave down"; ObjectID = "XdX-Al-I3p"; */
+"XdX-Al-I3p.text" = "<<< Swipe\noctave down";
+
+/* Class = "IBUILabel"; text = "Swipe >>>\noctave up"; ObjectID = "87A-Md-34a"; */
+"87A-Md-34a.text" = "Swipe >>>\noctave up";

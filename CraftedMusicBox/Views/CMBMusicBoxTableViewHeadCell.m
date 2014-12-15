@@ -12,14 +12,7 @@
 
 - (void)_init
 {
-    _octaveViews = [NSMutableArray array];
-    for (NSInteger i=0; i<CMBOctaveRange; i++) {
-        NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"CMBMusicBoxHeadOctaveView" owner:self options:nil];
-        CMBMusicBoxHeadOctaveView *octaveView = nibs[0];
-        [octaveView updateWithOctave:(CMBOctaveMin + i)];
-        [self.contentView addSubview:octaveView];
-        [_octaveViews addObject:octaveView];
-    }
+    _delegate = nil;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -43,36 +36,26 @@
     // Configure the view for the selected state
 }
 
-- (void)setLayoutSize:(CGSize)layoutSize
-{
-    // サイズが変わらない場合は何もしない
-    if (_layoutSize.height == layoutSize.height && _layoutSize.width == layoutSize.width &&
-        self.frame.size.height == layoutSize.height && self.frame.size.width == layoutSize.width) {
-        return;
-    }
-    // 設定
-    _layoutSize = layoutSize;
-    // 再描画 (setNeedsLayoutの方がパフォーマンスが良いので採用)
-    //    [self invalidateIntrinsicContentSize];
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
-}
-
-- (CGSize)intrinsicContentSize
-{
-    return _layoutSize;
-}
-
 - (void)layoutSubviews
 {
     [super layoutSubviews];
     
-    for (NSInteger i=0; i<CMBOctaveRange; i++) {
-        // layoutSize内に、CMBOctaveRange分のviewを並べる
-        CMBMusicBoxHeadOctaveView *octaveView = _octaveViews[i];
-        CGSize size = CGSizeMake(self.frame.size.width / (CGFloat)CMBOctaveRange, self.frame.size.height);
-        CGRect frame = CGRectMake(size.width * i, 0.f, size.width, size.height);
-        octaveView.frame = frame;
+    [self update];
+}
+
+- (void)update
+{
+    switch ([_delegate getCurrentOctave]) {
+        case CMBOctaveMin:
+            _octDownLabel.text = nil;
+            break;
+            
+        case CMBOctaveMax:
+            _octUpLabel.text = nil;
+            break;
+            
+        default:
+            break;
     }
 }
 

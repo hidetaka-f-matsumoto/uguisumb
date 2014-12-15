@@ -64,6 +64,13 @@
     // Configure the view for the selected state
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    [self update];
+}
+
 - (void)process
 {
 //    NSLog(@"process y=%f", self.frame.origin.y - _parentTableView.contentOffset.y);
@@ -77,7 +84,7 @@
         if (tineY >= curY && tineY < _preY) {
 //            NSLog(@"process tineY=%f, curY=%f, preY=%f", tineY, curY, _preY);
             // 音符があるかチェック
-            if (_sequenceOneData && _sequenceOneData.notes && 0 < _sequenceOneData.notes.count) {
+            if ([_sequenceOneData isNotes]) {
                 // ピックされた事を通知
                 [_delegate musicboxDidPickWithSequence:_sequenceOneData];
             }
@@ -87,14 +94,14 @@
     _preY = curY;
 }
 
-- (void)updateWithSequenceOne:(CMBSequenceOneData *)soData
-                        color:(UIColor *)color
+- (void)update
 {
     [self _initViews];
-    _sequenceOneData = soData;
-    self.backgroundColor = color;
-    NSInteger currentOctave = [_delegate currentOctave];
-    for (CMBNoteData *note in _sequenceOneData.notes) {
+    NSIndexPath *indexPath = [_parentTableView indexPathForCell:self];
+    self.backgroundColor = [_delegate musicboxCellColorWithIndexPath:indexPath];
+    CMBSequenceOneData *soData = [_delegate musicboxCellSequenceOneWithIndexPath:indexPath];
+    NSInteger currentOctave = [_delegate getCurrentOctave];
+    for (CMBNoteData *note in soData.notes) {
         if (!note || note.octave.integerValue != currentOctave) {
             continue;
         }
@@ -106,7 +113,7 @@
 {
     return @{
              CMBNoteInfoKeyScale : [CMBUtility scaleWithIndex:index],
-             CMBNoteInfoKeyOctave : [NSNumber numberWithInteger:[_delegate currentOctave]]
+             CMBNoteInfoKeyOctave : [NSNumber numberWithInteger:[_delegate getCurrentOctave]]
              };
 }
 
