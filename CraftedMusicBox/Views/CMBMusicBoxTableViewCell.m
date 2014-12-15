@@ -66,9 +66,16 @@
 
 - (void)layoutSubviews
 {
+//    static NSInteger count = 1;
+//    NSDate *startDate = [NSDate date];
+
     [super layoutSubviews];
     
     [self update];
+    
+//    NSDate *endDate = [NSDate date];
+//    NSTimeInterval interval = [endDate timeIntervalSinceDate:startDate];
+//    NSLog(@"処理時間 %.5f秒 %zd %@", interval, count++, self);
 }
 
 - (void)process
