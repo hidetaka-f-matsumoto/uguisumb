@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CMBSequenceOneData.h"
 
-static CGFloat const CMBMusicBoxTableViewCellHeight     = 44.f;
-static CGFloat const CMBMusicBoxNoteButtonWidth_iPhone  = 24.f;
-static CGFloat const CMBMusicBoxNoteButtonWidth_iPad    = 44.f;
+static CGFloat const CMBMusicBoxTableViewCellHeightForLoad  = 22.f;
+static CGFloat const CMBMusicBoxTableViewCellHeight         = 44.f;
+static CGFloat const CMBMusicBoxNoteButtonWidth_iPhone      = 24.f;
+static CGFloat const CMBMusicBoxNoteButtonWidth_iPad        = 44.f;
 
 @protocol CMBMusicBoxTableViewCellDelegate <NSObject>
 

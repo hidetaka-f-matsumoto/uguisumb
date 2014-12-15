@@ -18,6 +18,7 @@
     BOOL _isStopping;
     BOOL _isFirstViewWillAppear;
     BOOL _isFirstViewDidAppear;
+    BOOL _isCellPrepared;
     CGPoint _scrollPointBegin;
     CGFloat _headViewTopConstraintConstantOriginal;
     NSMutableDictionary *_sequences; // Dictionary<NSNumber *, CMBSequenceOneData *>
@@ -32,6 +33,7 @@
 {
     _isFirstViewWillAppear = YES;
     _isFirstViewDidAppear = YES;
+    _isCellPrepared = NO;
 }
 
 - (void)_init
@@ -84,12 +86,19 @@
 {
     [super viewDidAppear:animated];
 
+    // プログレス表示
+    [SVProgressHUD show];
     // 表示更新
     [self updateViewsWithResetScroll:_isFirstViewDidAppear];
-    
     _headViewTopConstraintConstantOriginal = _headViewTopConstraint.constant;
-    _isFirstViewDidAppear = NO;
-    
+    // セル準備中の場合は、準備完了にして再更新
+    if (!_isCellPrepared) {
+        _isCellPrepared = YES;
+        // 表示更新
+        [self updateViewsWithResetScroll:NO];
+    }
+    // プログレス表示を消す
+    [SVProgressHUD dismiss];
     // SoundManagerをチェック
     if (![CMBSoundManager sharedInstance].isAvailable) {
         [self showAlertDialogWithTitle:NSLocalizedString(@"Sound", @"Sound")
@@ -97,6 +106,7 @@
                               handler1:nil
                               handler2:nil];
     }
+    _isFirstViewDidAppear = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -549,7 +559,14 @@
             height = CMBMusicBoxTableViewHeadCellHeight;
             break;
         case 1:
-            height = CMBMusicBoxTableViewCellHeight;
+            // セル準備OKの場合
+            if (_isCellPrepared) {
+                height = CMBMusicBoxTableViewCellHeight;
+            }
+            // セル準備中の場合
+            else {
+                height = CMBMusicBoxTableViewCellHeightForLoad;
+            }
             break;
         case 2:
             height = CMBMusicBoxTableViewFootCellHeight;
