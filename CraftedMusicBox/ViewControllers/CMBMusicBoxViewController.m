@@ -139,6 +139,31 @@
  * 表示更新
  */
 - (void)updateViewsWithResetScroll:(BOOL)resetScroll
+                         animation:(BOOL)animation
+                        completion:(void (^)(BOOL finished))completion
+{
+    [UIView animateWithDuration:0.25f delay:0.f options:UIViewAnimationOptionCurveEaseOut animations:^(void) {
+        // エフェクト
+        _curtainView.backgroundColor = [CMBUtility whiteColor];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.25f delay:0.f options:UIViewAnimationOptionCurveEaseIn animations:^(void) {
+            // 表示更新
+            [self updateViewsWithResetScroll:resetScroll];
+            // エフェクト
+            _curtainView.backgroundColor = [UIColor clearColor];
+        } completion:^(BOOL finished) {
+            // 後処理
+            if (completion) {
+                completion(finished);
+            }
+        }];
+    }];
+}
+
+/**
+ * 表示更新
+ */
+- (void)updateViewsWithResetScroll:(BOOL)resetScroll
 {
     if (resetScroll) {
         // スクロール初期位置
@@ -438,7 +463,19 @@
     if (CMBOctaveMax > _currentOctave) {
         _currentOctave++;
         // 表示更新
-        [self updateViewsWithResetScroll:NO];
+        [self updateViewsWithResetScroll:NO animation:YES completion:^(BOOL finished) {
+            // zoom in-out
+            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+            // アニメーションのオプションを設定
+            animation.duration = 0.25f;
+            animation.repeatCount = 1;
+            animation.autoreverses = YES;
+            // 拡大・縮小倍率を設定
+            animation.fromValue = [NSNumber numberWithFloat:1.f];
+            animation.toValue = [NSNumber numberWithFloat:3.f];
+            // アニメーションを追加
+            [_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
+        }];
     }
 }
 
@@ -450,7 +487,19 @@
     if (CMBOctaveMin < _currentOctave) {
         _currentOctave--;
         // 表示更新
-        [self updateViewsWithResetScroll:NO];
+        [self updateViewsWithResetScroll:NO animation:YES completion:^(BOOL finished) {
+            // zoom in-out
+            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+            // アニメーションのオプションを設定
+            animation.duration = 0.25f;
+            animation.repeatCount = 1;
+            animation.autoreverses = YES;
+            // 拡大・縮小倍率を設定
+            animation.fromValue = [NSNumber numberWithFloat:1.f];
+            animation.toValue = [NSNumber numberWithFloat:3.f];
+            // アニメーションを追加
+            [_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
+        }];
     }
 }
 

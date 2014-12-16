@@ -32,6 +32,7 @@ static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200.f;
 @property (nonatomic, getter=getCurrentOctave) NSInteger currentOctave;
 
 @property (weak, nonatomic) IBOutlet CMBMusicBoxTableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *curtainView;
 @property (weak, nonatomic) IBOutlet UIView *tineView;
 @property (weak, nonatomic) IBOutlet UIView *headView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *playButton;
