@@ -25,6 +25,9 @@
 /* The message when you failed to load sound resources. */
 "Fail to load sound resources." = "Fail to load sound resources.";
 
+/* The message when you should choose the name of this song before save. */
+"Choose the title of this song before save." = "Choose the title of this song before save.";
+
 /* Load */
 "Load" = "Load";
 

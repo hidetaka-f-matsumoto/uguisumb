@@ -25,6 +25,9 @@
 /* The message when you failed to load sound resources. */
 "Fail to load sound resources." = "サウンドの読み込みに失敗しました。";
 
+/* The message when you should choose the name of this song before save. */
+"Choose the title of this song before save." = "曲のタイトルを決めてください。";
+
 /* (No Commment) */
 "Load" = "開く";
 

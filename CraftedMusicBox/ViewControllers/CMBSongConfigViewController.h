@@ -13,7 +13,7 @@
 @protocol CMBSongConfigDelegate <NSObject>
 
 @required
-- (void)songDidSaveWithName:(NSString *)name;
+- (void)songDidConfigureWithSave:(BOOL)save;
 
 @end
 
@@ -34,5 +34,6 @@
 
 - (IBAction)speedStepperDidTap:(id)sender;
 - (IBAction)applyButtonDidTap:(id)sender;
+- (IBAction)applyAndSaveButtonDidTap:(id)sender;
 
 @end

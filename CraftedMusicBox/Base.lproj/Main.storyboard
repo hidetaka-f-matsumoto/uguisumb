@@ -35,6 +35,7 @@
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1191,6 +1192,27 @@ music box on.</string>
                                 <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-s5-Bsi">
+                                <rect key="frame" x="16" y="504" width="568" height="40"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="AxK-Do-mLr"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="dVL-vL-sMh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                <state key="normal" title="Apply &amp; Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="applyAndSaveButtonDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="UN6-js-MPs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
@@ -1204,8 +1226,10 @@ music box on.</string>
                             <constraint firstItem="We1-Ap-gzE" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="Et1-lw-akn"/>
                             <constraint firstAttribute="centerY" secondItem="IcS-PQ-DvD" secondAttribute="centerY" id="FQ4-h1-XUn"/>
                             <constraint firstItem="k3U-lZ-Lhc" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="G4h-P2-dfo"/>
+                            <constraint firstItem="4xO-NP-Jtg" firstAttribute="top" secondItem="oVd-s5-Bsi" secondAttribute="bottom" constant="8" id="GWC-pG-TTN"/>
                             <constraint firstItem="4t2-qD-bMV" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leading" id="HgJ-dh-SOi"/>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="HlS-tC-6fe"/>
+                            <constraint firstAttribute="trailing" secondItem="oVd-s5-Bsi" secondAttribute="trailing" constant="16" id="HzE-Yi-V0t"/>
                             <constraint firstItem="We1-Ap-gzE" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="IBv-lw-sxr"/>
                             <constraint firstItem="bw8-Dg-In0" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="JUi-DV-T7C"/>
                             <constraint firstItem="4t2-qD-bMV" firstAttribute="top" secondItem="4xO-NP-Jtg" secondAttribute="bottom" constant="8" id="KSI-FJ-rxG"/>
@@ -1229,6 +1253,7 @@ music box on.</string>
                             <constraint firstItem="mvv-i9-5PE" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="iuP-oL-5CL"/>
                             <constraint firstItem="We1-Ap-gzE" firstAttribute="top" secondItem="bF1-Hh-rgh" secondAttribute="bottom" constant="8" id="jf5-Ho-LMP"/>
                             <constraint firstAttribute="trailing" secondItem="4xO-NP-Jtg" secondAttribute="trailing" constant="16" id="nrJ-X1-gMZ"/>
+                            <constraint firstItem="oVd-s5-Bsi" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leading" constant="16" id="qOO-dc-2NU"/>
                             <constraint firstItem="mvv-i9-5PE" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="vQP-5P-UdL"/>
                             <constraint firstItem="C76-f1-BiQ" firstAttribute="top" secondItem="4t2-qD-bMV" secondAttribute="bottom" id="vYf-5y-hf9"/>
                             <constraint firstItem="4xO-NP-Jtg" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="xoZ-pk-Pm6"/>

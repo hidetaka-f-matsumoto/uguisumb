@@ -8,6 +8,9 @@
 /* Class = "IBUIButton"; normalTitle = "Apply"; ObjectID = "4xO-NP-Jtg"; */
 "4xO-NP-Jtg.normalTitle" = "Apply";
 
+/* Class = "IBUIButton"; normalTitle = "Apply & Save"; ObjectID = "oVd-s5-Bsi"; */
+"oVd-s5-Bsi.normalTitle" = "Apply & Save";
+
 /* Class = "IBUILabel"; text = "C"; ObjectID = "6is-ct-Zwb"; */
 "6is-ct-Zwb.text" = "C";
 

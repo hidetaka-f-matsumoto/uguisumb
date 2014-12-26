@@ -16,6 +16,7 @@
 @required
 - (void)songDidLoadWithSequence:(NSMutableDictionary *)sequences
                          header:(CMBSongHeaderData *)header;
+- (void)songDidDeleteWithFileName:(NSString *)fileName;
 
 @end
 

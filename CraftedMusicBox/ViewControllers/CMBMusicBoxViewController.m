@@ -428,20 +428,39 @@
  */
 - (void)songSaveButtonDidTap
 {
-    BOOL isExist = [[CMBUtility sharedInstance] isExistSongWithFileName:_header.name];
-    // 確認ダイアログ
-    NSString *title = NSLocalizedString(@"Save song", @"Save song");
-    NSString *message = isExist ?
-    [NSString stringWithFormat:NSLocalizedString(@"%@ is already exist. You wanna overwrite?", @"The message to confirm you want to overwrite save the song with name %@."), _header.name] :
-    [NSString stringWithFormat:NSLocalizedString(@"You wanna save %@?", @"The message to confirm you want to save the song with name %@."), _header.name];
-    [self showConfirmDialogWithTitle:title
-                             message:message
-                            handler1:^(UIAlertAction *action) {
-                                [self saveSong];
-                            }
-                            handler2:^(void) {
-                                [self saveSong];
-                            }];
+    // 名前が無い場合
+    if (!_header.name || 0 == _header.name.length) {
+        // 設定画面へ
+        NSString *title = NSLocalizedString(@"Save song", @"Save song");
+        NSString *message = NSLocalizedString(@"Choose the title of this song before save.", @"The message when you should choose the name of this song before save.");
+        [self showAlertDialogWithTitle:title
+                               message:message
+                              handler1:^(UIAlertAction *action) {
+                                  [self performSegueWithIdentifier:@"SongConfig"
+                                                            sender:self];
+                              }
+                              handler2:^(void) {
+                                  [self performSegueWithIdentifier:@"SongConfig"
+                                                            sender:self];
+                              }];
+    }
+    // 名前がある場合
+    else {
+        BOOL isExist = [[CMBUtility sharedInstance] isExistSongWithFileName:_header.name];
+        // 確認ダイアログ
+        NSString *title = NSLocalizedString(@"Save song", @"Save song");
+        NSString *message = isExist ?
+        [NSString stringWithFormat:NSLocalizedString(@"%@ is already exist. You wanna overwrite?", @"The message to confirm you want to overwrite save the song with name %@."), _header.name] :
+        [NSString stringWithFormat:NSLocalizedString(@"You wanna save %@?", @"The message to confirm you want to save the song with name %@."), _header.name];
+        [self showConfirmDialogWithTitle:title
+                                 message:message
+                                handler1:^(UIAlertAction *action) {
+                                    [self saveSong];
+                                }
+                                handler2:^(void) {
+                                    [self saveSong];
+                                }];
+    }
 }
 
 /**
@@ -785,11 +804,13 @@
     return _sequences[[NSNumber numberWithInteger:indexPath.row]];
 }
 
-#pragma mark - CMBSongSaveDelegate
+#pragma mark - CMBSongConfigDelegate
 
-- (void)songDidSaveWithName:(NSString *)name
+- (void)songDidConfigureWithSave:(BOOL)save
 {
-    // nothing to do.
+    if (save) {
+        [self songSaveButtonDidTap];
+    }
 }
 
 #pragma mark - CMBSongManageDelegate
@@ -802,6 +823,13 @@
     _header = header;
     // 表示更新
     [self updateViewsWithResetScroll:YES];
+}
+
+- (void)songDidDeleteWithFileName:(NSString *)fileName
+{
+    if ([_header.name isEqualToString:fileName]) {
+        [self newSong];
+    }
 }
 
 #pragma mark - CMBCmdURLSchemeOpenMusicBox

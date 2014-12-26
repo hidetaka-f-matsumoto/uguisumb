@@ -222,6 +222,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [_songInfos removeObjectAtIndex:indexPath.row];
     [self.tableView deleteRowsAtIndexPaths:@[indexPath]
                           withRowAnimation:UITableViewRowAnimationAutomatic];
+    // デリゲートに通知
+    [_delegate songDidDeleteWithFileName:songInfo[@"name"]];
 }
 
 #pragma mark - CMBCmdURLSchemeOpenMusicBox

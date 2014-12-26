@@ -231,6 +231,10 @@ static CMBUtility *_instance = nil;
         }
         NSString *name = [file stringByDeletingPathExtension];
         NSString *path = [dir stringByAppendingString:file];
+        // ファイル名無しの場合をケア
+        if ([name isEqualToString:@".song"]) {
+            name = @"";
+        }
         NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:
                               name, @"name",
                               path, @"path",

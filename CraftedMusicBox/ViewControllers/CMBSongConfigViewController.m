@@ -72,10 +72,26 @@
 
 - (IBAction)applyButtonDidTap:(id)sender
 {
+    // 適用
     [self applyConfig];
     // 閉じる
     [self dismissViewControllerAnimated:YES
-                             completion:nil];
+                             completion:^(void) {
+                                 // デリゲートに通知
+                                 [_delegate songDidConfigureWithSave:NO];
+                             }];
+}
+
+- (IBAction)applyAndSaveButtonDidTap:(id)sender
+{
+    // 適用
+    [self applyConfig];
+    // 閉じる
+    [self dismissViewControllerAnimated:YES
+                             completion:^(void) {
+                                 // デリゲートに通知
+                                 [_delegate songDidConfigureWithSave:YES];
+                             }];
 }
 
 - (IBAction)speedStepperDidTap:(id)sender

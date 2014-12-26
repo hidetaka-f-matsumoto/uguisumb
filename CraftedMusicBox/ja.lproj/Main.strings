@@ -5,7 +5,10 @@
 "4PX-iC-rE5.text" = "Label";
 
 /* Class = "IBUIButton"; normalTitle = "Apply"; ObjectID = "4xO-NP-Jtg"; */
-"4xO-NP-Jtg.normalTitle" = "設定する";
+"4xO-NP-Jtg.normalTitle" = "適用する";
+
+/* Class = "IBUIButton"; normalTitle = "Apply & Save"; ObjectID = "oVd-s5-Bsi"; */
+"oVd-s5-Bsi.normalTitle" = "適用して保存";
 
 /* Class = "IBUILabel"; text = "C"; ObjectID = "6is-ct-Zwb"; */
 "6is-ct-Zwb.text" = "C";
