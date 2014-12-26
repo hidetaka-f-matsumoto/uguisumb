@@ -246,7 +246,7 @@
 
 - (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error
 {
-//    NSLog(@"adView:didFailToReceiveAdWithError:%@", [error localizedDescription]);
+    DPRINT(@"adView:didFailToReceiveAdWithError:%@", [error localizedDescription]);
 }
 
 @end

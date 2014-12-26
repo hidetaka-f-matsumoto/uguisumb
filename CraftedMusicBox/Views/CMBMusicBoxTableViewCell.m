@@ -21,7 +21,6 @@
 - (void)_init
 {
     _preY = 0.0f;
-    _sequenceOneData = nil;
     _delegate = nil;
     _parentTableView = nil;
     _tineView = nil;
@@ -66,16 +65,20 @@
 
 - (void)layoutSubviews
 {
-//    static NSInteger count = 1;
-//    NSDate *startDate = [NSDate date];
+#ifdef DEBUG
+    static NSInteger count = 1;
+    NSDate *startDate = [NSDate date];
+#endif // DEBUG
 
     [super layoutSubviews];
     
     [self update];
     
-//    NSDate *endDate = [NSDate date];
-//    NSTimeInterval interval = [endDate timeIntervalSinceDate:startDate];
-//    NSLog(@"処理時間 %.5f秒 %zd %@", interval, count++, self);
+#ifdef DEBUG
+    NSDate *endDate = [NSDate date];
+    NSTimeInterval interval = [endDate timeIntervalSinceDate:startDate];
+    DPRINT(@"処理時間 %.5f秒 %zd %@", interval, count++, self);
+#endif // DEBUG
 }
 
 - (void)process
@@ -89,12 +92,10 @@
     if (20.f <= curY && _parentTableView.frame.size.height - 20.f > curY) {
         // オルゴール歯を通過したかチェック
         if (tineY >= curY && tineY < _preY) {
-//            NSLog(@"process tineY=%f, curY=%f, preY=%f", tineY, curY, _preY);
-            // 音符があるかチェック
-            if ([_sequenceOneData isNotes]) {
-                // ピックされた事を通知
-                [_delegate musicboxDidPickWithSequence:_sequenceOneData];
-            }
+            NSLog(@"process tineY=%f, curY=%f, preY=%f", tineY, curY, _preY);
+            // ピックされた事を通知
+            NSIndexPath *indexPath = [_parentTableView indexPathForCell:self];
+            [_delegate musicboxDidPickWithIndexPath:indexPath];
         }
     }
     // 前回の位置を記録

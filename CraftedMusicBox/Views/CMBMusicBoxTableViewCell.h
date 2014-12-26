@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CMBSequenceOneData.h"
 
-static CGFloat const CMBMusicBoxTableViewCellHeightForLoad  = 22.f;
+static CGFloat const CMBMusicBoxTableViewCellHeightForLoad  = 11.f;
 static CGFloat const CMBMusicBoxTableViewCellHeight         = 44.f;
 static CGFloat const CMBMusicBoxNoteButtonWidth_iPhone      = 24.f;
 static CGFloat const CMBMusicBoxNoteButtonWidth_iPad        = 44.f;
@@ -17,10 +17,10 @@ static CGFloat const CMBMusicBoxNoteButtonWidth_iPad        = 44.f;
 @protocol CMBMusicBoxTableViewCellDelegate <NSObject>
 
 @required
-/** 音符がタップされた */
+/** タップされた */
 - (void)musicboxDidTapWithInfo:(NSDictionary *)info;
-/** 音符が弾かれた */
-- (void)musicboxDidPickWithSequence:(CMBSequenceOneData *)sequence;
+/** 弾かれた */
+- (void)musicboxDidPickWithIndexPath:(NSIndexPath *)indexPath;
 /** 現在のオクターブ */
 - (NSInteger)getCurrentOctave;
 /** セルの背景色 */
@@ -38,7 +38,6 @@ static CGFloat const CMBMusicBoxNoteButtonWidth_iPad        = 44.f;
 @property (nonatomic, assign) id<CMBMusicBoxTableViewCellDelegate> delegate;
 @property (nonatomic, assign) UITableView *parentTableView;
 @property (nonatomic, assign) UIView *tineView;
-@property (nonatomic, assign, readonly) CMBSequenceOneData *sequenceOneData;
 
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *noteButtons;
 @property (nonatomic, strong) IBOutletCollection(NSLayoutConstraint) NSArray *noteButtonWidthConstraints;

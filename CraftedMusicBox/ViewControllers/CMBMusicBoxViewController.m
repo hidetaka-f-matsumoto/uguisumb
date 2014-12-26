@@ -31,9 +31,20 @@
 
 - (void)_initFirst
 {
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.scrollsToTop = YES;
+    
     _isFirstViewWillAppear = YES;
     _isFirstViewDidAppear = YES;
     _isCellPrepared = NO;
+    // 初期状態はカーテンあり
+    _curtainView.backgroundColor = [CMBUtility whiteColor];
+    // 通知を登録
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(musicBoxDidOpen:)
+                                                 name:CMBCmdURLSchemeOpenMusicBox
+                                               object:nil];
 }
 
 - (void)_init
@@ -61,18 +72,8 @@
 {
     [super viewDidLoad];
 
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.scrollsToTop = YES;
-    
     [self _initFirst];
     [self _init];
-    
-    // 通知を登録
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(musicBoxDidOpen:)
-                                                 name:CMBCmdURLSchemeOpenMusicBox
-                                               object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -86,8 +87,6 @@
 {
     [super viewDidAppear:animated];
 
-    // プログレス表示
-    [SVProgressHUD show];
     // 表示更新
     [self updateViewsWithResetScroll:_isFirstViewDidAppear];
     _headViewTopConstraintConstantOriginal = _headViewTopConstraint.constant;
@@ -95,10 +94,8 @@
     if (!_isCellPrepared) {
         _isCellPrepared = YES;
         // 表示更新
-        [self updateViewsWithResetScroll:NO];
+        [self updateViewsWithResetScroll:NO animation:YES completion:nil];
     }
-    // プログレス表示を消す
-    [SVProgressHUD dismiss];
     // SoundManagerをチェック
     if (![CMBSoundManager sharedInstance].isAvailable) {
         [self showAlertDialogWithTitle:NSLocalizedString(@"Sound", @"Sound")
@@ -142,22 +139,34 @@
                          animation:(BOOL)animation
                         completion:(void (^)(BOOL finished))completion
 {
-    [UIView animateWithDuration:0.25f delay:0.f options:UIViewAnimationOptionCurveEaseOut animations:^(void) {
-        // エフェクト
-        _curtainView.backgroundColor = [CMBUtility whiteColor];
-    } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.25f delay:0.f options:UIViewAnimationOptionCurveEaseIn animations:^(void) {
-            // 表示更新
-            [self updateViewsWithResetScroll:resetScroll];
+    // アニメーションあり
+    if (animation) {
+        [UIView animateWithDuration:0.25f delay:0.f options:UIViewAnimationOptionCurveEaseOut animations:^(void) {
             // エフェクト
-            _curtainView.backgroundColor = [UIColor clearColor];
+            _curtainView.backgroundColor = [CMBUtility whiteColor];
         } completion:^(BOOL finished) {
-            // 後処理
-            if (completion) {
-                completion(finished);
-            }
+            [UIView animateWithDuration:0.25f delay:0.f options:UIViewAnimationOptionCurveEaseIn animations:^(void) {
+                // 表示更新
+                [self updateViewsWithResetScroll:resetScroll];
+                // エフェクト
+                _curtainView.backgroundColor = [UIColor clearColor];
+            } completion:^(BOOL finished) {
+                // 後処理
+                if (completion) {
+                    completion(finished);
+                }
+            }];
         }];
-    }];
+    }
+    // アニメーションなし
+    else {
+        // 表示更新
+        [self updateViewsWithResetScroll:resetScroll];
+        // 後処理
+        if (completion) {
+            completion(YES);
+        }
+    }
 }
 
 /**
@@ -724,11 +733,17 @@
 }
 
 /**
- * 音符が弾かれた
+ * 弾かれた
  */
-- (void)musicboxDidPickWithSequence:(CMBSequenceOneData *)sequence
+- (void)musicboxDidPickWithIndexPath:(NSIndexPath *)indexPath
 {
-    for (CMBNoteData *note in sequence.notes) {
+    CMBSequenceOneData *soData = [self musicboxCellSequenceOneWithIndexPath:indexPath];
+    // 音符があるかチェック
+    if (!soData || ![soData isNotes]) {
+        return;
+    }
+    // 音符を鳴らす
+    for (CMBNoteData *note in soData.notes) {
         [self playWithScale:note.scale
                      octave:note.octave];
     }
