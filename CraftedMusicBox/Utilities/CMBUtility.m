@@ -332,9 +332,9 @@ static CMBUtility *_instance = nil;
     NSString *action = [url lastPathComponent];
     NSDictionary *params = [url queryDictionary];
     // オルゴール画面
-    if ([controller isEqualToString:@"mb"]) {
+    if ([controller isEqualToString:CMBURLControllerMusicBox]) {
         // song読み込み
-        if ([action isEqualToString:@"load"]) {
+        if ([action isEqualToString:CMBURLActionLoadSong]) {
             // デコード
             NSString *songEncoded = params[@"song"];
             NSString *songJson = [NSString songJsonWithEncodedSongStr:songEncoded];

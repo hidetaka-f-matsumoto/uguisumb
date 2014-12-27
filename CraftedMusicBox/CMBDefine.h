@@ -17,6 +17,15 @@
 static NSString * const MY_BANNER_UNIT_ID = @"ca-app-pub-5633935352729199/5879342265";
 
 /**
+ * URL
+ */
+static NSString * const CMBURLScheme = @"uguisumb";
+static NSString * const CMBURLControllerMusicBox = @"mb";
+static NSString * const CMBURLActionLoadSong = @"load";
+static NSString * const CMBURLParamVersion = @"ver";
+static NSString * const CMBURLParamSong = @"song";
+
+/**
  * Song
  */
 static CGFloat const CMBSpeedDefault = 50.0f;

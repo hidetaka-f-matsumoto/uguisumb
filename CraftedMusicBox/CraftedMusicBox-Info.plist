@@ -29,7 +29,7 @@
 			<string>hidetaka.f.matsumoto.$(PRODUCT_NAME:rfc1034identifier)</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>craftedmb</string>
+				<string>uguisumb</string>
 			</array>
 		</dict>
 	</array>

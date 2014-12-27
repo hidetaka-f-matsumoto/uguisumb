@@ -897,7 +897,7 @@
     // エンコード
     NSString *songEncoded = songJson.encodedSongStr;
     // URLスキームを作成
-    NSString *url = [@"craftedmb://mb/load?song=" stringByAppendingString:songEncoded];
+    NSString *url = [NSString stringWithFormat:@"%@://%@/%@?%@=%@", CMBURLScheme, CMBURLControllerMusicBox, CMBURLActionLoadSong, CMBURLParamSong, songEncoded];
     // 本文を作成
     NSString *message = [@"https://itunes.apple.com/jp/app/todo:fix/todo:fix?mt=8\n\n" stringByAppendingString:url];
     // メール送信画面を表示
@@ -939,7 +939,7 @@
     // エンコード
     NSString *songEncoded = songJson.encodedSongStr;
     // URLスキームを作成
-    NSString *message = [@"craftedmb://mb/load?song=" stringByAppendingString:songEncoded];
+    NSString *message = [NSString stringWithFormat:@"%@://%@/%@?%@=%@", CMBURLScheme, CMBURLControllerMusicBox, CMBURLActionLoadSong, CMBURLParamSong, songEncoded];
     // LINE URLを作成
     NSString *lineUrl = [@"http://line.me/R/msg/text/?" stringByAppendingString:message];
     // 投稿

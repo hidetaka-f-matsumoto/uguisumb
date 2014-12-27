@@ -55,7 +55,7 @@
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     BOOL isOpenable = NO;
-    if ([[url scheme] isEqualToString:@"craftedmb"]) {
+    if ([[url scheme] isEqualToString:CMBURLScheme]) {
         [[CMBUtility sharedInstance] openURL:url];
         isOpenable = YES;
     }
