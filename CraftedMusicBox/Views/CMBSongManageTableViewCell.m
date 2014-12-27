@@ -16,8 +16,11 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    // 選択の場合
+    if (selected) {
+        // メニューを開く
+        [self showRightUtilityButtonsAnimated:YES];
+    }
 }
 
 - (void)setupWithSongInfo:(NSDictionary *)info

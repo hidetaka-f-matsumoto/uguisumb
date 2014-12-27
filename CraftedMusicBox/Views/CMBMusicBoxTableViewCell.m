@@ -106,7 +106,7 @@
 {
     [self _initViews];
     NSIndexPath *indexPath = [_parentTableView indexPathForCell:self];
-    self.backgroundColor = [_delegate musicboxCellColorWithIndexPath:indexPath];
+    self.contentView.backgroundColor = [_delegate musicboxCellColorWithIndexPath:indexPath];
     CMBSequenceOneData *soData = [_delegate musicboxCellSequenceOneWithIndexPath:indexPath];
     NSInteger currentOctave = [_delegate getCurrentOctave];
     for (CMBNoteData *note in soData.notes) {

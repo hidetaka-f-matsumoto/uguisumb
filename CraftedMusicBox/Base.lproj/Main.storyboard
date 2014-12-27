@@ -99,6 +99,7 @@ music box on.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="87A-Md-34a" secondAttribute="trailing" constant="8" id="2eC-js-cJZ"/>
                                                 <constraint firstAttribute="bottom" secondItem="gr1-e8-u6Q" secondAttribute="bottom" constant="7" id="Kvv-Vr-GBD"/>
@@ -108,7 +109,6 @@ music box on.</string>
                                                 <constraint firstAttribute="bottom" secondItem="XdX-Al-I3p" secondAttribute="bottom" constant="51" id="YCs-cH-g3X"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
                                             <outlet property="octDownLabel" destination="XdX-Al-I3p" id="gE6-6u-gnp"/>
                                             <outlet property="octUpLabel" destination="87A-Md-34a" id="LGb-pQ-86R"/>
@@ -367,6 +367,7 @@ music box on.</string>
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="ulF-6M-s2H" firstAttribute="leading" secondItem="yFk-Z9-nRW" secondAttribute="trailing" id="0a2-2e-6bu"/>
                                                 <constraint firstItem="NUa-90-hsW" firstAttribute="leading" secondItem="WZo-03-hUD" secondAttribute="trailing" id="0nM-ib-oFd"/>
@@ -483,12 +484,12 @@ music box on.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
                                                 <constraint firstItem="KIe-Ac-EW5" firstAttribute="bottom" secondItem="hMI-1x-yPo" secondAttribute="bottomMargin" id="COD-jC-X1c"/>
                                                 <constraint firstItem="KIe-Ac-EW5" firstAttribute="leading" secondItem="hMI-1x-yPo" secondAttribute="leadingMargin" id="vcf-Op-iCS"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -982,6 +983,7 @@ music box on.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
                                                 <constraint firstItem="JDa-ea-333" firstAttribute="leading" secondItem="hWb-Kt-Wts" secondAttribute="leadingMargin" id="00e-gO-GCK"/>
                                                 <constraint firstItem="JDa-ea-333" firstAttribute="top" secondItem="hWb-Kt-Wts" secondAttribute="topMargin" constant="5" id="H6U-h5-Q2s"/>
@@ -989,7 +991,6 @@ music box on.</string>
                                                 <constraint firstItem="JDa-ea-333" firstAttribute="trailing" secondItem="hWb-Kt-Wts" secondAttribute="trailingMargin" id="uHB-kE-0QU"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongManageTableViewCell" id="HrJ-Up-7f4" customClass="CMBSongManageTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1004,6 +1005,7 @@ music box on.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="4PX-iC-rE5" firstAttribute="top" secondItem="xCL-Sw-Mer" secondAttribute="topMargin" constant="5" id="8dg-9h-S0j"/>
                                                 <constraint firstItem="4PX-iC-rE5" firstAttribute="leading" secondItem="xCL-Sw-Mer" secondAttribute="leadingMargin" id="WNF-6i-SIF"/>
