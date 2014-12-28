@@ -15,6 +15,7 @@
 #import "CMBSongHeaderData.h"
 #import "CMBMusicBoxTableViewCell.h"
 #import "CMBMusicBoxTableViewHeadCell.h"
+#import "CMBMusicBoxTableViewFootCell.h"
 #import "CMBSongConfigViewController.h"
 #import "CMBSongManageViewController.h"
 #import "CMBMusicBoxTableView.h"
@@ -22,9 +23,8 @@
 #import "CMBSoundManager.h"
 
 static CGFloat const CMBTimeDivAutoScroll = 0.02f; // [s]
-static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200.f;
 
-@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, CMBMusicBoxTableViewCellDelegate, CMBMusicBoxTableViewHeadCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate>
+@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, CMBMusicBoxTableViewCellDelegate, CMBMusicBoxTableViewHeadCellDelegate, CMBMusicBoxTableViewFootCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate>
 {
     NSMutableDictionary *_dataSource;
 }

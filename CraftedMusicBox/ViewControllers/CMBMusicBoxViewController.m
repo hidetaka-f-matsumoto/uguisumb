@@ -88,13 +88,19 @@
     [super viewDidAppear:animated];
 
     // 表示更新
-    [self updateViewsWithResetScroll:_isFirstViewDidAppear];
+    [self updateViewsWithResetScroll:_isFirstViewDidAppear animation:NO completion:nil];
     _headViewTopConstraintConstantOriginal = _headViewTopConstraint.constant;
     // セル準備中の場合は、準備完了にして再更新
     if (!_isCellPrepared) {
         _isCellPrepared = YES;
         // 表示更新
-        [self updateViewsWithResetScroll:NO animation:YES completion:nil];
+        [self updateViewsWithResetScroll:NO animation:NO completion:nil];
+        // カーテンを隠す
+        [UIView animateWithDuration:0.5f
+                              delay:0.f
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^(void) {_curtainView.backgroundColor = [UIColor clearColor];}
+                         completion:nil];
     }
     // SoundManagerをチェック
     if (![CMBSoundManager sharedInstance].isAvailable) {
@@ -134,45 +140,12 @@
 
 /**
  * 表示更新
+ *  animation = NO の場合は reloadData を使う (体感でパフォーマンスが良い)
+ *  viewDidAppear の段階で animation = YES にするとパフォーマンスが悪いので注意
  */
 - (void)updateViewsWithResetScroll:(BOOL)resetScroll
                          animation:(BOOL)animation
                         completion:(void (^)(BOOL finished))completion
-{
-    // アニメーションあり
-    if (animation) {
-        [UIView animateWithDuration:0.25f delay:0.f options:UIViewAnimationOptionCurveEaseOut animations:^(void) {
-            // エフェクト
-            _curtainView.backgroundColor = [CMBUtility whiteColor];
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.25f delay:0.f options:UIViewAnimationOptionCurveEaseIn animations:^(void) {
-                // 表示更新
-                [self updateViewsWithResetScroll:resetScroll];
-                // エフェクト
-                _curtainView.backgroundColor = [UIColor clearColor];
-            } completion:^(BOOL finished) {
-                // 後処理
-                if (completion) {
-                    completion(finished);
-                }
-            }];
-        }];
-    }
-    // アニメーションなし
-    else {
-        // 表示更新
-        [self updateViewsWithResetScroll:resetScroll];
-        // 後処理
-        if (completion) {
-            completion(YES);
-        }
-    }
-}
-
-/**
- * 表示更新
- */
-- (void)updateViewsWithResetScroll:(BOOL)resetScroll
 {
     if (resetScroll) {
         // スクロール初期位置
@@ -183,7 +156,15 @@
     // オクターブ表示更新
     _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
     // テーブルビュー更新
-    [_tableView reloadData];
+    if (animation) {
+        [_tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+    } else {
+        [_tableView reloadData];
+    }
+    // 後処理
+    if (completion) {
+        completion(YES);
+    }
 }
 
 /**
@@ -541,12 +522,12 @@
     CGPoint offset = _tableView.contentOffset;
     offset.y += (CMBMusicBoxTableViewCellHeight * _header.speed.floatValue * 4 * CMBTimeDivAutoScroll / 60.0f);
     // 曲中
-    if (offset.y < _tableView.contentSize.height) {
+    if (offset.y < (_tableView.contentSize.height - _tableView.bounds.size.height)) {
         _tableView.contentOffset = offset;
     }
     // 曲終わり
     else {
-        [self playButtonDidTap:nil];
+        [self pause];
     }
 }
 
@@ -589,7 +570,7 @@
             numberOfRows = 1;
             break;
         case 1:
-            numberOfRows = CMBSequenceTimeMax;
+            numberOfRows = _header.length.integerValue;
             break;
         case 2:
             numberOfRows = 1;
@@ -618,8 +599,12 @@
             break;
         }
         case 2:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewFootCell" forIndexPath:indexPath];
+        {
+            CMBMusicBoxTableViewFootCell *mbfCell = [tableView dequeueReusableCellWithIdentifier:@"MusicBoxTableViewFootCell" forIndexPath:indexPath];
+            mbfCell.delegate = self;
+            cell = mbfCell;
             break;
+        }
         default:
             break;
     }
@@ -804,6 +789,23 @@
     return _sequences[[NSNumber numberWithInteger:indexPath.row]];
 }
 
+#pragma mark - CMBMusicBoxTableViewCellFootDelegate
+
+- (void)musicBoxDidRequestAddTime
+{
+    // 再生中の場合は一時停止
+    if (_isPlaying) {
+        [self pause];
+    }
+    // 小区切り分ぴったりになるよう追加
+    NSInteger div1 = _header.division1.integerValue;
+    NSInteger newLen = _header.length.integerValue + div1;
+    newLen -= newLen % div1;
+    _header.length = [NSNumber numberWithInteger:newLen];
+    // 表示更新
+    [_tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 #pragma mark - CMBSongConfigDelegate
 
 - (void)songDidConfigureWithSave:(BOOL)save
@@ -818,11 +820,16 @@
 - (void)songDidLoadWithSequence:(NSMutableDictionary *)sequences
                          header:(CMBSongHeaderData *)header
 {
+    // 読み込み中を表示
+    [SVProgressHUD show];
     // データ更新
     _sequences = sequences;
     _header = header;
     // 表示更新
-    [self updateViewsWithResetScroll:YES];
+    [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
+        // 読み込み中を非表示
+        [SVProgressHUD dismiss];
+    }];
 }
 
 - (void)songDidDeleteWithFileName:(NSString *)fileName
@@ -842,12 +849,18 @@
                                message:error[@"message"]
                               handler1:nil
                               handler2:nil];
+        return;
     }
+    // 読み込み中を表示
+    [SVProgressHUD show];
     // データ更新
     _sequences = notif.userInfo[@"sequences"];
     _header = notif.userInfo[@"header"];
     // 表示更新
-    [self updateViewsWithResetScroll:YES];
+    [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
+        // 読み込み中を非表示
+        [SVProgressHUD dismiss];
+    }];
 }
 
 #pragma mark - Save
@@ -857,10 +870,15 @@
  */
 - (void)newSong
 {
+    // 読み込み中を表示
+    [SVProgressHUD show];
     // パラメータ初期化
     [self _init];
     // 表示更新
-    [self updateViewsWithResetScroll:YES];
+    [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
+        // 読み込み中を非表示
+        [SVProgressHUD dismiss];
+    }];
 }
 
 /**

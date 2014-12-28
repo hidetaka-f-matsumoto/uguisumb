@@ -31,8 +31,8 @@
 /* Class = "IBUILabel"; text = "F#"; ObjectID = "JSJ-rO-l0D"; */
 "JSJ-rO-l0D.text" = "F#";
 
-/* Class = "IBUILabel"; text = "end"; ObjectID = "KIe-Ac-EW5"; */
-"KIe-Ac-EW5.text" = "end";
+/* Class = "IBUILabel"; text = "Thanks. Please enjoy playing!"; ObjectID = "KIe-Ac-EW5"; */
+"KIe-Ac-EW5.text" = "サンキュー. 楽しんでくださいね!";
 
 /* Class = "IBUINavigationItem"; title = "Song Manage"; ObjectID = "KYI-ep-6f1"; */
 "KYI-ep-6f1.title" = "曲の管理";

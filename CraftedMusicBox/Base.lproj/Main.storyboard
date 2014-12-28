@@ -36,6 +36,7 @@
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -467,28 +468,67 @@ music box on.</string>
                                             <outletCollection property="noteButtonWidthConstraints" destination="vH0-3b-4Ay" id="wEJ-eA-5bv"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewFootCell" rowHeight="200" id="T1G-b4-tJP">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewFootCell" rowHeight="200" id="T1G-b4-tJP" customClass="CMBMusicBoxTableViewFootCell">
                                         <rect key="frame" x="0.0" y="0.0" width="960" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T1G-b4-tJP" id="hMI-1x-yPo">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="end" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-Ac-EW5">
-                                                    <rect key="frame" x="8" y="170" width="29" height="21"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dp-JX-jUo">
+                                                    <rect key="frame" x="280" y="8" width="40" height="40"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="CPD-ry-Kxo"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Jvf-Ls-6FF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                    <state key="normal" title="+"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="timeAddButtonDidTap:" destination="T1G-b4-tJP" eventType="touchUpInside" id="VNW-fv-xsT"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks. Please enjoy playing!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-Ac-EW5">
+                                                    <rect key="frame" x="8" y="56" width="584" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="29" id="0kd-sG-pN7"/>
+                                                        <constraint firstAttribute="height" constant="32" id="OeU-R9-jay"/>
                                                         <constraint firstAttribute="height" constant="21" id="Pla-8k-XZf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="0kd-sG-pN7"/>
+                                                            <exclude reference="Pla-8k-XZf"/>
+                                                        </mask>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="KIe-Ac-EW5" secondAttribute="trailing" constant="8" id="3lh-yy-J1p"/>
+                                                <constraint firstItem="4Dp-JX-jUo" firstAttribute="top" secondItem="hMI-1x-yPo" secondAttribute="top" constant="8" id="CEU-sT-Q3R"/>
                                                 <constraint firstItem="KIe-Ac-EW5" firstAttribute="bottom" secondItem="hMI-1x-yPo" secondAttribute="bottomMargin" id="COD-jC-X1c"/>
+                                                <constraint firstItem="KIe-Ac-EW5" firstAttribute="leading" secondItem="hMI-1x-yPo" secondAttribute="leading" constant="8" id="Jem-yT-HcA"/>
+                                                <constraint firstAttribute="bottom" secondItem="KIe-Ac-EW5" secondAttribute="bottom" constant="8" id="cIJ-Gi-oRL"/>
+                                                <constraint firstAttribute="centerX" secondItem="4Dp-JX-jUo" secondAttribute="centerX" id="nRt-PZ-4rW"/>
+                                                <constraint firstItem="KIe-Ac-EW5" firstAttribute="top" secondItem="4Dp-JX-jUo" secondAttribute="bottom" constant="8" id="pgn-0K-ewq"/>
                                                 <constraint firstItem="KIe-Ac-EW5" firstAttribute="leading" secondItem="hMI-1x-yPo" secondAttribute="leadingMargin" id="vcf-Op-iCS"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="COD-jC-X1c"/>
+                                                    <exclude reference="cIJ-Gi-oRL"/>
+                                                    <exclude reference="vcf-Op-iCS"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -936,7 +976,7 @@ music box on.</string>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="818" y="1026"/>
+            <point key="canvasLocation" x="586" y="1026"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bgf-5n-cDM">
@@ -1170,7 +1210,7 @@ music box on.</string>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
+                                        <integer key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -1207,7 +1247,7 @@ music box on.</string>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
+                                        <integer key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>

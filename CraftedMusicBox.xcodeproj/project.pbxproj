@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
 		0803C8E81A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8EA1A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings */; };
+		0821D7F91A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0821D7F81A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m */; };
 		08289E1F1A2EACD800927D51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8CF1A2D996300FE8357 /* InfoPlist.strings */; };
 		08289E201A2EACE200927D51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8E51A2DB77200FE8357 /* Localizable.strings */; };
 		08289E211A2EAD0100927D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08883AE51956CC6A00F7EB68 /* Main.storyboard */; };
@@ -91,6 +92,8 @@
 		0803C8D01A2D996300FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0803C8E91A2DB77300FE8357 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = "ja.lproj/CraftedMusicBoxTests-InfoPlist.strings"; sourceTree = "<group>"; };
 		0803C8EB1A2DBCB900FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0821D7F71A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewFootCell.h; path = Views/CMBMusicBoxTableViewFootCell.h; sourceTree = "<group>"; };
+		0821D7F81A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxTableViewFootCell.m; path = Views/CMBMusicBoxTableViewFootCell.m; sourceTree = "<group>"; };
 		08289E261A2EB02500927D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		08289E2D1A2EB08B00927D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		08289E2E1A2EB08D00927D51 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -444,6 +447,8 @@
 				08A769D61972992900143638 /* CMBMusicBoxTableViewCell.m */,
 				0802C0851A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.h */,
 				0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */,
+				0821D7F71A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.h */,
+				0821D7F81A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m */,
 				086BA16419D0FDA400991574 /* CMBSongManageTableViewCell.h */,
 				086BA16519D0FDA400991574 /* CMBSongManageTableViewCell.m */,
 			);
@@ -619,6 +624,7 @@
 				08CC5E9019E2D19A0049AAD5 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				086BA16C19D19F5700991574 /* NSMutableDictionary+CMBTools.m in Sources */,
 				08A769DE1972C93000143638 /* CMBUtility.m in Sources */,
+				0821D7F91A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m in Sources */,
 				08883B1C1956D40600F7EB68 /* NSString+CMBTools.m in Sources */,
 				0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */,
 				08883AE01956CC6A00F7EB68 /* main.m in Sources */,
