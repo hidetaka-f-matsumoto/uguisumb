@@ -358,7 +358,7 @@ static CMBUtility *_instance = nil;
                                  nil]
                          forKey:@"error"];
             }
-            [[NSNotificationCenter defaultCenter] postNotificationName:CMBCmdURLSchemeOpenMusicBox
+            [[NSNotificationCenter defaultCenter] postNotificationName:CMBNotifyURLOpenMusicBox
                                                                 object:nil
                                                               userInfo:info];
         }

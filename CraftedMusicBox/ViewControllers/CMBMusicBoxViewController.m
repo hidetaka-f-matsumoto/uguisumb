@@ -41,10 +41,10 @@
     // 初期状態はカーテンあり
     _curtainView.backgroundColor = [CMBUtility whiteColor];
     // 通知を登録
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(musicBoxDidOpen:)
-                                                 name:CMBCmdURLSchemeOpenMusicBox
-                                               object:nil];
+    NSNotificationCenter *notifCenter = [NSNotificationCenter defaultCenter];
+    [notifCenter addObserver:self selector:@selector(musicBoxDidOpen:) name:CMBNotifyURLOpenMusicBox object:nil];
+    [notifCenter addObserver:self selector:@selector(pause) name:CMBNotifyAppDidEnterBackground object:nil];
+    [notifCenter addObserver:self selector:@selector(pause) name:CMBNotifyAppWillTerminate object:nil];
 }
 
 - (void)_init
@@ -110,6 +110,12 @@
                               handler2:nil];
     }
     _isFirstViewDidAppear = NO;
+}
+
+- (void)dealloc
+{
+    // 通知の登録解除
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -187,6 +193,10 @@
  */
 - (void)play
 {
+    // 再生中の場合は何もしない
+    if (_isPlaying) {
+        return;
+    }
     // フラグon
     _isPlaying = YES;
     // スクロール禁止
@@ -211,6 +221,10 @@
  */
 - (void)pause
 {
+    // 再生中でない場合は何もしない
+    if (!_isPlaying) {
+        return;
+    }
     // タイマー停止
     [_timer invalidate];
     // 再生ボタンに変更
@@ -293,9 +307,7 @@
 - (IBAction)shareButtonDidTap:(id)sender
 {
     // 再生中の場合は一時停止
-    if (_isPlaying) {
-        [self pause];
-    }
+    [self pause];
     // メニューを表示
     [self showActionSheetWithTitle:NSLocalizedString(@"Share", @"Share")
                            message:nil
@@ -332,9 +344,7 @@
 - (IBAction)menueButtonDidTap:(id)sender
 {
     // 再生中の場合は一時停止
-    if (_isPlaying) {
-        [self pause];
-    }
+    [self pause];
     // メニューを表示
     [self showActionSheetWithTitle:NSLocalizedString(@"Menue", @"Menue")
                            message:nil
@@ -824,9 +834,7 @@
 - (void)musicBoxDidRequestAddTime
 {
     // 再生中の場合は一時停止
-    if (_isPlaying) {
-        [self pause];
-    }
+    [self pause];
     // 小区切り分ぴったりになるよう追加
     NSInteger div1 = _header.division1.integerValue;
     NSInteger newLen = ((_header.length.integerValue + div1) / (NSInteger)div1) * div1;
@@ -836,9 +844,7 @@
 - (void)musicBoxDidRequestRemoveTime
 {
     // 再生中の場合は一時停止
-    if (_isPlaying) {
-        [self pause];
-    }
+    [self pause];
     // 小区切り分ぴったりになるよう削除
     NSInteger div1 = _header.division1.integerValue;
     NSInteger newLen = ((_header.length.integerValue - 1) / (NSInteger)div1) * div1;
@@ -899,7 +905,7 @@
     }
 }
 
-#pragma mark - CMBCmdURLSchemeOpenMusicBox
+#pragma mark - CMBNotifyURLOpenMusicBox
 
 - (void)musicBoxDidOpen:(NSNotification *)notif
 {

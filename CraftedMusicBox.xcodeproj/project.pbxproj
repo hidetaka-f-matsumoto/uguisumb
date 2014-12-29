@@ -29,7 +29,6 @@
 		0883B7271A32979000276868 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B7261A32979000276868 /* AdSupport.framework */; };
 		0883B7291A3297B000276868 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B7281A3297AF00276868 /* EventKit.framework */; };
 		0883B72B1A3297B500276868 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B72A1A3297B500276868 /* EventKitUI.framework */; };
-		0883B72D1A3297BF00276868 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B72C1A3297BF00276868 /* StoreKit.framework */; };
 		0883B72F1A3297C800276868 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0883B72E1A3297C800276868 /* SystemConfiguration.framework */; };
 		08883AD41956CC6A00F7EB68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD31956CC6A00F7EB68 /* Foundation.framework */; };
 		08883AD61956CC6A00F7EB68 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08883AD51956CC6A00F7EB68 /* CoreGraphics.framework */; };
@@ -137,7 +136,6 @@
 		0883B7261A32979000276868 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		0883B7281A3297AF00276868 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		0883B72A1A3297B500276868 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
-		0883B72C1A3297BF00276868 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0883B72E1A3297C800276868 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		08883AD01956CC6A00F7EB68 /* CraftedMusicBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CraftedMusicBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08883AD31956CC6A00F7EB68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -218,7 +216,6 @@
 			files = (
 				08CC5E6619DFD4140049AAD5 /* libBlocksKit.a in Frameworks */,
 				0883B72F1A3297C800276868 /* SystemConfiguration.framework in Frameworks */,
-				0883B72D1A3297BF00276868 /* StoreKit.framework in Frameworks */,
 				0883B72B1A3297B500276868 /* EventKitUI.framework in Frameworks */,
 				0883B7291A3297B000276868 /* EventKit.framework in Frameworks */,
 				0883B7271A32979000276868 /* AdSupport.framework in Frameworks */,
@@ -304,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				0883B72E1A3297C800276868 /* SystemConfiguration.framework */,
-				0883B72C1A3297BF00276868 /* StoreKit.framework */,
 				0883B72A1A3297B500276868 /* EventKitUI.framework */,
 				0883B7281A3297AF00276868 /* EventKit.framework */,
 				0883B7261A32979000276868 /* AdSupport.framework */,
@@ -557,6 +553,11 @@
 				TargetAttributes = {
 					08883ACF1956CC6A00F7EB68 = {
 						DevelopmentTeam = 7JDKPK4524;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					08883AF31956CC6A00F7EB68 = {
 						TestTargetID = 08883ACF1956CC6A00F7EB68;
@@ -802,8 +803,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hidetaka Matsumoto (RHWDK7JP52)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hidetaka Matsumoto (RHWDK7JP52)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CraftedMusicBox/CraftedMusicBox-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -835,8 +836,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hidetaka Matsumoto (7JDKPK4524)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hidetaka Matsumoto (7JDKPK4524)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CraftedMusicBox/CraftedMusicBox-Prefix.pch";
 				HEADER_SEARCH_PATHS = (

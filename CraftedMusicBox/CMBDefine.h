@@ -41,9 +41,11 @@ static NSInteger const CMBScaleNum = 11;
 static NSInteger const CMBSequenceTimeDefault = CMBDivisionDefault * 10;
 
 /**
- * Command
+ * Notification
  */
-static NSString * const CMBCmdURLSchemeOpenMusicBox = @"CMBCmdURLSchemeOpenMusicBox";
+static NSString * const CMBNotifyAppDidEnterBackground = @"CMBNotifyAppDidEnterBackground";
+static NSString * const CMBNotifyAppWillTerminate = @"CMBNotifyAppWillTerminate";
+static NSString * const CMBNotifyURLOpenMusicBox = @"CMBNotifyURLOpenMusicBox";
 
 /**
  * Error

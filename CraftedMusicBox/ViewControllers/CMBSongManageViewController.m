@@ -30,7 +30,7 @@
     // 通知を登録
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(musicBoxDidOpen:)
-                                                 name:CMBCmdURLSchemeOpenMusicBox
+                                                 name:CMBNotifyURLOpenMusicBox
                                                object:nil];
 }
 
@@ -39,6 +39,12 @@
     [super viewWillAppear:animated];
     
     [_tableView reloadData];
+}
+
+- (void)dealloc
+{
+    // 通知の登録解除
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -226,7 +232,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [_delegate songDidDeleteWithFileName:songInfo[@"name"]];
 }
 
-#pragma mark - CMBCmdURLSchemeOpenMusicBox
+#pragma mark - CMBNotifyURLOpenMusicBox
 
 - (void)musicBoxDidOpen:(NSNotification *)notif
 {

@@ -30,7 +30,7 @@
     // 通知を登録
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(musicBoxDidOpen:)
-                                                 name:CMBCmdURLSchemeOpenMusicBox
+                                                 name:CMBNotifyURLOpenMusicBox
                                                object:nil];
 }
 
@@ -44,6 +44,12 @@
     _speedStepper.value = _header.speed.floatValue;
     [_division1Control setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division1]];
     [_division2Control setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division2]];
+}
+
+- (void)dealloc
+{
+    // 通知の登録解除
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -136,7 +142,7 @@
     _speedStepper.value = _speedSlider.value;
 }
 
-#pragma mark - CMBCmdURLSchemeOpenMusicBox
+#pragma mark - CMBNotifyURLOpenMusicBox
 
 - (void)musicBoxDidOpen:(NSNotification *)notif
 {
