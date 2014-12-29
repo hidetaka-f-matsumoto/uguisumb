@@ -30,7 +30,7 @@ static NSString * const CMBURLParamSong = @"song";
  */
 static CGFloat const CMBSpeedDefault = 50.0f;
 static CGFloat const CMBSpeedMin = 1.0f;
-static CGFloat const CMBSpeedMax = 100.0f;
+static CGFloat const CMBSpeedMax = 200.0f;
 static NSInteger const CMBDivisionDefault = 4;
 #define CMBDivisions @[@2, @3, @4, @5, @6, @7, @8, @11]
 static NSInteger const CMBOctaveMin = 3;
