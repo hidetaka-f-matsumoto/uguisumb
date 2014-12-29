@@ -661,7 +661,7 @@
             }
             break;
         case 2:
-            height = CMBMusicBoxTableViewFootCellHeight;
+            height = _tableView.bounds.size.height - _headView.bounds.size.height;
             break;
         default:
             break;

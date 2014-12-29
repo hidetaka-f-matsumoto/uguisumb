@@ -574,7 +574,7 @@ music box on.</string>
                                     <outletCollection property="gestureRecognizers" destination="Zrx-Fg-6XY" appends="YES" id="7lN-mJ-dQN"/>
                                 </connections>
                             </tableView>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-fm-F29" userLabel="Curtain View">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-fm-F29" userLabel="Curtain View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -957,10 +957,12 @@ music box on.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cfw-fm-F29" secondAttribute="bottom" id="05t-r5-ikn"/>
                             <constraint firstItem="ZmP-5A-KYj" firstAttribute="top" secondItem="kDv-No-cAb" secondAttribute="bottom" id="1RJ-YP-Yyx"/>
                             <constraint firstItem="kDv-No-cAb" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="3MP-gH-GxZ"/>
                             <constraint firstItem="bKy-8R-19x" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" id="5uj-15-bfL"/>
                             <constraint firstAttribute="trailing" secondItem="nIN-k4-Uqe" secondAttribute="trailing" id="6be-ye-JTM"/>
+                            <constraint firstAttribute="trailing" secondItem="cfw-fm-F29" secondAttribute="trailing" id="8Pd-Rs-oCS"/>
                             <constraint firstAttribute="trailing" secondItem="kDv-No-cAb" secondAttribute="trailing" id="CQy-sA-nWy"/>
                             <constraint firstItem="nIN-k4-Uqe" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" constant="110" id="F7d-gG-Q9v"/>
                             <constraint firstAttribute="bottom" secondItem="ZmP-5A-KYj" secondAttribute="bottom" id="GFP-k6-5vx"/>
@@ -970,9 +972,11 @@ music box on.</string>
                             <constraint firstItem="ZmP-5A-KYj" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="hnT-Sh-Hat"/>
                             <constraint firstItem="nIN-k4-Uqe" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="jRg-Lg-m66"/>
                             <constraint firstItem="bKy-8R-19x" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="nY9-VV-jVB"/>
+                            <constraint firstItem="cfw-fm-F29" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" id="qcb-0G-pEv"/>
                             <constraint firstAttribute="bottom" secondItem="bKy-8R-19x" secondAttribute="bottom" id="sKK-iz-0CW"/>
                             <constraint firstItem="aSg-uY-Uve" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" id="teQ-l4-zms"/>
                             <constraint firstAttribute="trailing" secondItem="bKy-8R-19x" secondAttribute="trailing" id="uXC-ey-q6R"/>
+                            <constraint firstItem="cfw-fm-F29" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="zO3-qM-Pue"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
