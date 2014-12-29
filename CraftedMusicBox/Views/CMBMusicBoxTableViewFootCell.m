@@ -15,4 +15,9 @@
     [_delegate musicBoxDidRequestAddTime];
 }
 
+- (IBAction)timeRemoveButtonDidTap:(id)sender
+{
+    [_delegate musicBoxDidRequestRemoveTime];
+}
+
 @end

@@ -37,6 +37,7 @@
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -474,25 +475,6 @@ music box on.</string>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T1G-b4-tJP" id="hMI-1x-yPo">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dp-JX-jUo">
-                                                    <rect key="frame" x="280" y="8" width="40" height="40"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="CPD-ry-Kxo"/>
-                                                        <constraint firstAttribute="height" constant="40" id="Jvf-Ls-6FF"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                                    <state key="normal" title="+"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="10"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="timeAddButtonDidTap:" destination="T1G-b4-tJP" eventType="touchUpInside" id="VNW-fv-xsT"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks. Please enjoy playing!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-Ac-EW5">
                                                     <rect key="frame" x="8" y="56" width="584" height="32"/>
                                                     <constraints>
@@ -510,14 +492,66 @@ music box on.</string>
                                                         </mask>
                                                     </variation>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dp-JX-jUo">
+                                                    <rect key="frame" x="242" y="8" width="40" height="40"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="CPD-ry-Kxo"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Jvf-Ls-6FF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                    <state key="normal" title="+"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="timeAddButtonDidTap:" destination="T1G-b4-tJP" eventType="touchUpInside" id="VNW-fv-xsT"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXd-8x-h3b">
+                                                    <rect key="frame" x="290" y="8" width="20" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="YVJ-xf-MHY"/>
+                                                        <constraint firstAttribute="height" constant="40" id="b4i-G8-mf4"/>
+                                                    </constraints>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Np7-iv-523">
+                                                    <rect key="frame" x="318" y="8" width="40" height="40"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="ZLW-6g-whX"/>
+                                                        <constraint firstAttribute="width" constant="40" id="paN-zs-4KK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                    <state key="normal" title="-"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="timeRemoveButtonDidTap:" destination="T1G-b4-tJP" eventType="touchUpInside" id="9Ck-dM-9Yk"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="KIe-Ac-EW5" secondAttribute="trailing" constant="8" id="3lh-yy-J1p"/>
+                                                <constraint firstItem="KIe-Ac-EW5" firstAttribute="top" secondItem="JXd-8x-h3b" secondAttribute="bottom" constant="8" id="4ae-qa-OAv"/>
+                                                <constraint firstItem="Np7-iv-523" firstAttribute="leading" secondItem="JXd-8x-h3b" secondAttribute="trailing" constant="8" id="64h-JE-xPF"/>
+                                                <constraint firstAttribute="centerX" secondItem="JXd-8x-h3b" secondAttribute="centerX" id="BjL-38-CSI"/>
                                                 <constraint firstItem="4Dp-JX-jUo" firstAttribute="top" secondItem="hMI-1x-yPo" secondAttribute="top" constant="8" id="CEU-sT-Q3R"/>
                                                 <constraint firstItem="KIe-Ac-EW5" firstAttribute="bottom" secondItem="hMI-1x-yPo" secondAttribute="bottomMargin" id="COD-jC-X1c"/>
                                                 <constraint firstItem="KIe-Ac-EW5" firstAttribute="leading" secondItem="hMI-1x-yPo" secondAttribute="leading" constant="8" id="Jem-yT-HcA"/>
+                                                <constraint firstItem="Np7-iv-523" firstAttribute="top" secondItem="hMI-1x-yPo" secondAttribute="top" constant="8" id="bP7-hM-afx"/>
+                                                <constraint firstItem="JXd-8x-h3b" firstAttribute="top" secondItem="hMI-1x-yPo" secondAttribute="top" constant="8" id="bnJ-Ce-cnV"/>
                                                 <constraint firstAttribute="bottom" secondItem="KIe-Ac-EW5" secondAttribute="bottom" constant="8" id="cIJ-Gi-oRL"/>
+                                                <constraint firstItem="JXd-8x-h3b" firstAttribute="leading" secondItem="4Dp-JX-jUo" secondAttribute="trailing" constant="8" id="mZM-Mj-hNN"/>
                                                 <constraint firstAttribute="centerX" secondItem="4Dp-JX-jUo" secondAttribute="centerX" id="nRt-PZ-4rW"/>
                                                 <constraint firstItem="KIe-Ac-EW5" firstAttribute="top" secondItem="4Dp-JX-jUo" secondAttribute="bottom" constant="8" id="pgn-0K-ewq"/>
                                                 <constraint firstItem="KIe-Ac-EW5" firstAttribute="leading" secondItem="hMI-1x-yPo" secondAttribute="leadingMargin" id="vcf-Op-iCS"/>
@@ -526,7 +560,9 @@ music box on.</string>
                                                 <mask key="constraints">
                                                     <exclude reference="COD-jC-X1c"/>
                                                     <exclude reference="cIJ-Gi-oRL"/>
+                                                    <exclude reference="pgn-0K-ewq"/>
                                                     <exclude reference="vcf-Op-iCS"/>
+                                                    <exclude reference="nRt-PZ-4rW"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -538,7 +574,7 @@ music box on.</string>
                                     <outletCollection property="gestureRecognizers" destination="Zrx-Fg-6XY" appends="YES" id="7lN-mJ-dQN"/>
                                 </connections>
                             </tableView>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-fm-F29" userLabel="Curtain View">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-fm-F29" userLabel="Curtain View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -928,11 +964,7 @@ music box on.</string>
                             <constraint firstAttribute="trailing" secondItem="kDv-No-cAb" secondAttribute="trailing" id="CQy-sA-nWy"/>
                             <constraint firstItem="nIN-k4-Uqe" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" constant="110" id="F7d-gG-Q9v"/>
                             <constraint firstAttribute="bottom" secondItem="ZmP-5A-KYj" secondAttribute="bottom" id="GFP-k6-5vx"/>
-                            <constraint firstItem="cfw-fm-F29" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="GhA-bf-DtB"/>
                             <constraint firstItem="aSg-uY-Uve" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="Iun-zj-61l"/>
-                            <constraint firstAttribute="bottom" secondItem="cfw-fm-F29" secondAttribute="bottom" id="NF4-Qt-gJB"/>
-                            <constraint firstAttribute="trailing" secondItem="cfw-fm-F29" secondAttribute="trailing" id="Sco-qW-Nlb"/>
-                            <constraint firstItem="cfw-fm-F29" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" id="azZ-Bg-BuS"/>
                             <constraint firstAttribute="trailing" secondItem="ZmP-5A-KYj" secondAttribute="trailing" id="bk3-Fp-WzJ"/>
                             <constraint firstAttribute="trailing" secondItem="aSg-uY-Uve" secondAttribute="trailing" id="dtc-rz-jce"/>
                             <constraint firstItem="ZmP-5A-KYj" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="hnT-Sh-Hat"/>

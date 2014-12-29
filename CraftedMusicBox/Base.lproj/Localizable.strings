@@ -62,16 +62,16 @@
 "You wanna delete %@?" = "Are you sure you want to delete %@?";
 
 /* The message to confirm you want to load the song with name %@. */
-"You wanna load %@?" = "You want to load %@?";
+"You wanna load %@?" = "Are you sure you want to load %@?";
 
 /* The message to confirm you want to save the song with name %@. */
-"You wanna save %@?" = "You want to save %@?";
+"You wanna save %@?" = "Are you sure you want to save %@?";
 
 /* The message to confirm you want to overwrite save the song with name %@. */
 "%@ is already exist. You wanna overwrite?" = "%@ is already exist. Are you sure you want to overwrite?";
 
 /* The message to confirm you want to create a new song. */
-"You wanna create a new song?" = "You want to create a new song? (The current song is not saved.)";
+"You wanna create a new song?" = "Are you sure you want to create a new song? (The current song is not saved.)";
 
 /* Create a new song. */
 "New song" = "New";
@@ -88,3 +88,8 @@
 /* Song title is none. */
 "No title" = "New song";
 
+/* Remove time */
+"Remove time" = "Remove time";
+
+/* The message to confirm you want to remove times where is some notes. */
+"You wanna remove times where is some notes?" = "Are you sure you want to remove times, but there is some notes?";

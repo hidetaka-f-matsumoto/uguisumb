@@ -15,6 +15,8 @@ static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200.f;
 @required
 /** タイム追加リクエスト */
 - (void)musicBoxDidRequestAddTime;
+/** タイム削除リクエスト */
+- (void)musicBoxDidRequestRemoveTime;
 
 @end
 
@@ -23,5 +25,6 @@ static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200.f;
 @property (nonatomic, assign) id<CMBMusicBoxTableViewFootCellDelegate> delegate;
 
 - (IBAction)timeAddButtonDidTap:(id)sender;
+- (IBAction)timeRemoveButtonDidTap:(id)sender;
 
 @end

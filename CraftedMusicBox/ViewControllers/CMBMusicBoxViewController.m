@@ -559,6 +559,36 @@
      }];
 }
 
+#pragma mark - Etcs
+
+/**
+ * From - To の範囲に音符があるか
+ */
+- (BOOL)isNotesFrom:(NSInteger)from to:(NSInteger)to
+{
+    BOOL isNotes = NO;
+    for (NSInteger i=from-1; i<=to-1; i++) {
+        CMBSequenceOneData * soData = _sequences[[NSNumber numberWithInteger:i]];
+        isNotes |= soData && [soData isNotes];
+    }
+    return isNotes;
+}
+
+/**
+ * song length 変更
+ */
+- (void)changeLength:(NSInteger)length
+{
+    // 無くなる範囲のシーケンスを消去
+    for (NSInteger i=length; i<=_header.length.integerValue-1; i++) {
+        [_sequences removeObjectForKey:[NSNumber numberWithInteger:i]];
+    }
+    // length更新
+    _header.length = [NSNumber numberWithInteger:length];
+    // 表示更新
+    [_tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -799,11 +829,41 @@
     }
     // 小区切り分ぴったりになるよう追加
     NSInteger div1 = _header.division1.integerValue;
-    NSInteger newLen = _header.length.integerValue + div1;
-    newLen -= newLen % div1;
-    _header.length = [NSNumber numberWithInteger:newLen];
-    // 表示更新
-    [_tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+    NSInteger newLen = ((_header.length.integerValue + div1) / (NSInteger)div1) * div1;
+    [self changeLength:newLen];
+}
+
+- (void)musicBoxDidRequestRemoveTime
+{
+    // 再生中の場合は一時停止
+    if (_isPlaying) {
+        [self pause];
+    }
+    // 小区切り分ぴったりになるよう削除
+    NSInteger div1 = _header.division1.integerValue;
+    NSInteger newLen = ((_header.length.integerValue - 1) / (NSInteger)div1) * div1;
+    if (0 > newLen) {
+        newLen = 0;
+    }
+    // 削除範囲に音符がある場合
+    if ([self isNotesFrom:(newLen + 1) to:_header.length.integerValue]) {
+        // 確認ダイアログ
+        NSString *title = NSLocalizedString(@"Remove time", @"Remove time");
+        NSString *message = [NSString stringWithFormat:
+                             NSLocalizedString(@"You wanna remove times where is some notes?", @"The message to confirm you want to remove times where is some notes.")];
+        [self showConfirmDialogWithTitle:title
+                                 message:message
+                                handler1:^(UIAlertAction *action) {
+                                    [self changeLength:newLen];
+                                }
+                                handler2:^(void) {
+                                    [self changeLength:newLen];
+                                }];
+    }
+    // 削除範囲に音符が無い場合
+    else {
+        [self changeLength:newLen];
+    }
 }
 
 #pragma mark - CMBSongConfigDelegate
