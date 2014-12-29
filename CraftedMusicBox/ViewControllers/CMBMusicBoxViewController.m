@@ -976,8 +976,8 @@
     NSString *songEncoded = songJson.encodedSongStr;
     // URLスキームを作成
     NSString *url = [NSString stringWithFormat:@"%@://%@/%@?%@=%@", CMBURLScheme, CMBURLControllerMusicBox, CMBURLActionLoadSong, CMBURLParamSong, songEncoded];
-    // 本文を作成
-    NSString *message = [@"https://itunes.apple.com/jp/app/todo:fix/todo:fix?mt=8\n\n" stringByAppendingString:url];
+    // 本文を作成 todo:fix
+    NSString *message = [@"https://itunes.apple.com/jp/app/uguisuorugoru/id954184377\n\n" stringByAppendingString:url];
     // メール送信画面を表示
     MFMailComposeViewController *mailPicker = [MFMailComposeViewController new];
     [mailPicker setSubject:NSLocalizedString(@"This is my music box.", @"The subject of the mail to send the song.")];
