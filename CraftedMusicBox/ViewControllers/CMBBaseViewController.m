@@ -209,6 +209,7 @@
                             // Test devices.
                             @"889ab485761f8e9717be4f74ba63cb7c",
                             @"32f668caae5f51e25a624cbad59ea2fb",
+                            @"005cec916bbc6b059364291493a25819",
                             ];
 #endif // DEBUG
     [_bannerView loadRequest:request];
