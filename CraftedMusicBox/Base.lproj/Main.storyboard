@@ -972,12 +972,18 @@ music box on.</string>
                             <constraint firstItem="ZmP-5A-KYj" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="hnT-Sh-Hat"/>
                             <constraint firstItem="nIN-k4-Uqe" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="jRg-Lg-m66"/>
                             <constraint firstItem="bKy-8R-19x" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="nY9-VV-jVB"/>
+                            <constraint firstAttribute="centerX" secondItem="kDv-No-cAb" secondAttribute="centerX" id="qUq-qA-KfA"/>
                             <constraint firstItem="cfw-fm-F29" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" id="qcb-0G-pEv"/>
                             <constraint firstAttribute="bottom" secondItem="bKy-8R-19x" secondAttribute="bottom" id="sKK-iz-0CW"/>
                             <constraint firstItem="aSg-uY-Uve" firstAttribute="top" secondItem="liS-On-GVe" secondAttribute="top" id="teQ-l4-zms"/>
                             <constraint firstAttribute="trailing" secondItem="bKy-8R-19x" secondAttribute="trailing" id="uXC-ey-q6R"/>
                             <constraint firstItem="cfw-fm-F29" firstAttribute="leading" secondItem="liS-On-GVe" secondAttribute="leading" id="zO3-qM-Pue"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qUq-qA-KfA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hd1-Ln-0DV"/>

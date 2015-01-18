@@ -222,6 +222,14 @@
                                   attribute:NSLayoutAttributeTop
                                  multiplier:1.f
                                    constant:0.f]];
+    [_bannerFrameView addConstraint:
+     [NSLayoutConstraint constraintWithItem:_bannerView
+                                  attribute:NSLayoutAttributeCenterX
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:_bannerFrameView
+                                  attribute:NSLayoutAttributeCenterX
+                                 multiplier:1.f
+                                   constant:0.f]];
 }
 
 - (void)hideAd
