@@ -1017,17 +1017,74 @@
  */
 - (void)sendLINE
 {
+    // 通信中表示on
+    [SVProgressHUD show];
     // Song-jsonに変換
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
-    // エンコード
-    NSString *songEncoded = songJson.encodedSongStr;
-    // URLスキームを作成
-    NSString *message = [NSString stringWithFormat:@"%@://%@/%@?%@=%@", CMBURLScheme, CMBURLControllerMusicBox, CMBURLActionLoadSong, CMBURLParamSong, songEncoded];
-    // LINE URLを作成
-    NSString *lineUrl = [@"http://line.me/R/msg/text/?" stringByAppendingString:message];
-    // 投稿
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:lineUrl]];
+    // 通信
+    [self apiSongRegisterWithSong:songJson title:_header.name completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+        // 通信エラーの場合
+        if (error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 通信中表示off
+                [SVProgressHUD dismiss];
+                // エラー表示
+                [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
+                                       message:NSLocalizedString(@"Fail to share the song.", @"The message when you failed to share the song.")
+                                      handler1:nil
+                                      handler2:nil];
+            });
+            return;
+        }
+        // レスポンスをパース
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        DPRINT(@"%@", dict);
+        // サーバエラーの場合
+        if (200 != [dict[@"result"][@"status"] integerValue]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 通信中表示off
+                [SVProgressHUD dismiss];
+                // エラー表示
+                [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
+                                       message:dict[@"status"][@"message"]
+                                      handler1:nil
+                                      handler2:nil];
+            });
+            return;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // 通信中表示off
+            [SVProgressHUD dismiss];
+            // song URL
+            NSString *songUrl = dict[@"songinfo"][@"url"];
+            // LINE URLを作成
+            NSString *lineUrl = [@"http://line.me/R/msg/text/?" stringByAppendingString:songUrl];
+            // 投稿
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:lineUrl]];
+        });
+    }];
+}
+
+#pragma mark - Networking
+
+- (void)apiSongRegisterWithSong:(NSString *)song
+                          title:(NSString *)title
+                     completion:(void (^)(NSData *data, NSURLResponse *response, NSError *error))handler
+{
+    // リクエスト作成
+    NSString *url = [NSString stringWithFormat:@"%@%@", CMBSvApiURL, CMBSvActionSongReg];
+    NSString *query = [NSString stringWithFormat:@"%@=%@&%@=%@", CMBSvQuerySong, song.encodedSongStr, CMBSvQuerySongTitle, title.urlEncode];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    request.HTTPMethod = @"POST";
+    request.HTTPBody = [query dataUsingEncoding:NSUTF8StringEncoding];
+    // セッション作成
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+    // タスク作成
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:handler];
+    // タスク開始
+    [task resume];
 }
 
 #pragma mark - Debug.

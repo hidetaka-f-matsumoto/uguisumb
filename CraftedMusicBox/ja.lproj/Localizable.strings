@@ -49,6 +49,9 @@
 /* Sound */
 "Sound" = "サウンド";
 
+/* Server */
+"Server" = "サーバ";
+
 /* (No Commment) */
 "OK" = "OK";
 
@@ -93,3 +96,6 @@
 
 /* The message to confirm you want to remove times where is some notes. */
 "You wanna remove times where is some notes?" = "削除範囲に音符があります。本当にタイムを削除しますか？";
+
+/* The message when you failed to share the song. */
+"Fail to share the song." = "曲のシェアに失敗しました。";
