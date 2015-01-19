@@ -975,39 +975,73 @@
  */
 - (void)sendMail
 {
+    // 通信中表示on
+    [SVProgressHUD show];
     // Song-jsonに変換
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
-    // エンコード
-    NSString *songEncoded = songJson.encodedSongStr;
-    // URLスキームを作成
-    NSString *url = [NSString stringWithFormat:@"%@://%@/%@?%@=%@", CMBURLScheme, CMBURLControllerMusicBox, CMBURLActionLoadSong, CMBURLParamSong, songEncoded];
-    // 本文を作成 todo:fix
-    NSString *message = [@"https://itunes.apple.com/jp/app/uguisuorugoru/id954184377\n\n" stringByAppendingString:url];
-    // メール送信画面を表示
-    MFMailComposeViewController *mailPicker = [MFMailComposeViewController new];
-    [mailPicker setSubject:NSLocalizedString(@"This is my music box.", @"The subject of the mail to send the song.")];
-    [mailPicker setMessageBody:message isHTML:NO];
-    mailPicker.bk_completionBlock = ^(MFMailComposeViewController *controller, MFMailComposeResult result, NSError *error) {
-        switch (result) {
-            case MFMailComposeResultCancelled: // キャンセル
-                break;
-            case MFMailComposeResultSaved: // 下書き保存
-                break;
-            case MFMailComposeResultSent: // 送信成功
-                break;
-            case MFMailComposeResultFailed:// 送信失敗
-                [self showAlertDialogWithTitle:NSLocalizedString(@"Mail", @"Mail")
-                                       message:NSLocalizedString(@"Failed to send the mail.", @"The message when you failed to send the mail.")
+    // 通信
+    [self apiSongRegisterWithSong:songJson title:_header.name completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+        // 通信エラーの場合
+        if (error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 通信中表示off
+                [SVProgressHUD dismiss];
+                // エラー表示
+                [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
+                                       message:NSLocalizedString(@"Fail to share the song.", @"The message when you failed to share the song.")
                                       handler1:nil
                                       handler2:nil];
-                break;
-            default:
-                break;
+            });
+            return;
         }
-        [self dismissViewControllerAnimated:YES completion:nil];
-    };
-    [self presentViewController:mailPicker animated:TRUE completion:nil];
+        // レスポンスをパース
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        DPRINT(@"%@", dict);
+        // サーバエラーの場合
+        if (200 != [dict[@"result"][@"status"] integerValue]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 通信中表示off
+                [SVProgressHUD dismiss];
+                // エラー表示
+                [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
+                                       message:dict[@"status"][@"message"]
+                                      handler1:nil
+                                      handler2:nil];
+            });
+            return;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // 通信中表示off
+            [SVProgressHUD dismiss];
+            // song URL
+            NSString *songUrl = dict[@"songinfo"][@"url"];
+            // メール送信画面を表示
+            MFMailComposeViewController *mailPicker = [MFMailComposeViewController new];
+            [mailPicker setSubject:NSLocalizedString(@"This is my music box.", @"The subject of the mail to send the song.")];
+            [mailPicker setMessageBody:songUrl isHTML:NO];
+            mailPicker.bk_completionBlock = ^(MFMailComposeViewController *controller, MFMailComposeResult result, NSError *error) {
+                switch (result) {
+                    case MFMailComposeResultCancelled: // キャンセル
+                        break;
+                    case MFMailComposeResultSaved: // 下書き保存
+                        break;
+                    case MFMailComposeResultSent: // 送信成功
+                        break;
+                    case MFMailComposeResultFailed:// 送信失敗
+                        [self showAlertDialogWithTitle:NSLocalizedString(@"Mail", @"Mail")
+                                               message:NSLocalizedString(@"Failed to send the mail.", @"The message when you failed to send the mail.")
+                                              handler1:nil
+                                              handler2:nil];
+                        break;
+                    default:
+                        break;
+                }
+                [self dismissViewControllerAnimated:YES completion:nil];
+            };
+            [self presentViewController:mailPicker animated:TRUE completion:nil];
+        });
+    }];
 }
 
 #pragma mark - LINE
