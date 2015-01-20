@@ -65,7 +65,7 @@
 "Open URL" = "Open URL";
 
 /* The message when you send the song. */
-"This is my music box." = "This is my music box.";
+"This is my music box." = "I made my music box.";
 
 /* The message to confirm you want to delete the song with name %@. */
 "You wanna delete %@?" = "Are you sure you want to delete %@?";

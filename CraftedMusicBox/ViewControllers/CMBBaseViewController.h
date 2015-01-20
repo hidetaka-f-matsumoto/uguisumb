@@ -22,6 +22,8 @@
 @property (nonatomic, weak) IBOutlet UIView *bannerFrameView;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *bannerFrameHeightConstraint;
 
+- (void)beginLoadingView;
+- (void)endLoadingView;
 - (void)showAlertDialogWithTitle:(NSString *)title
                          message:(NSString *)message
                         handler1:(void (^)(UIAlertAction *action))handler1

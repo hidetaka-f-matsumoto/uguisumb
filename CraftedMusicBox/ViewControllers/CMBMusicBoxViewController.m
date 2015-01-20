@@ -312,6 +312,11 @@
     [self showActionSheetWithTitle:NSLocalizedString(@"Share", @"Share")
                            message:nil
                           buttons1:@[
+                                     @{@"title": NSLocalizedString(@"Facebook", @"Facebook"),
+                                       @"handler": ^(UIAlertAction *action)
+                                       {
+        [self sendFacebook];
+    }},
                                      @{@"title": NSLocalizedString(@"Twitter", @"Twitter"),
                                        @"handler": ^(UIAlertAction *action)
                                        {
@@ -329,6 +334,11 @@
     }}
                                      ]
                           buttons2:@[
+                                     @{@"title": NSLocalizedString(@"Facebook", @"Facebook"),
+                                       @"handler": ^(void)
+                                       {
+        [self sendFacebook];
+    }},
                                      @{@"title": NSLocalizedString(@"Twitter", @"Twitter"),
                                        @"handler": ^(void)
                                        {
@@ -897,14 +907,14 @@
                          header:(CMBSongHeaderData *)header
 {
     // 読み込み中を表示
-    [SVProgressHUD show];
+    [self beginLoadingView];
     // データ更新
     _sequences = sequences;
     _header = header;
     // 表示更新
     [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
         // 読み込み中を非表示
-        [SVProgressHUD dismiss];
+        [self endLoadingView];
     }];
 }
 
@@ -928,14 +938,14 @@
         return;
     }
     // 読み込み中を表示
-    [SVProgressHUD show];
+    [self beginLoadingView];
     // データ更新
     _sequences = notif.userInfo[@"sequences"];
     _header = notif.userInfo[@"header"];
     // 表示更新
     [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
         // 読み込み中を非表示
-        [SVProgressHUD dismiss];
+        [self endLoadingView];
     }];
 }
 
@@ -947,13 +957,13 @@
 - (void)newSong
 {
     // 読み込み中を表示
-    [SVProgressHUD show];
+    [self beginLoadingView];
     // パラメータ初期化
     [self _init];
     // 表示更新
     [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
         // 読み込み中を非表示
-        [SVProgressHUD dismiss];
+        [self endLoadingView];
     }];
 }
 
@@ -986,7 +996,7 @@
 - (void)sendMail
 {
     // 通信中表示on
-    [SVProgressHUD show];
+    [self beginLoadingView];
     // Song-jsonに変換
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
@@ -996,7 +1006,7 @@
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [SVProgressHUD dismiss];
+                [self endLoadingView];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Fail to share the song.", @"The message when you failed to share the song.")
@@ -1012,7 +1022,7 @@
         if (200 != [dict[@"result"][@"status"] integerValue]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [SVProgressHUD dismiss];
+                [self endLoadingView];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:dict[@"result"][@"message"]
@@ -1023,7 +1033,7 @@
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             // 通信中表示off
-            [SVProgressHUD dismiss];
+            [self endLoadingView];
             // song URL
             NSString *songUrl = dict[@"songinfo"][@"url"];
             // メール送信画面を表示
@@ -1062,7 +1072,7 @@
 - (void)sendLINE
 {
     // 通信中表示on
-    [SVProgressHUD show];
+    [self beginLoadingView];
     // Song-jsonに変換
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
@@ -1072,7 +1082,7 @@
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [SVProgressHUD dismiss];
+                [self endLoadingView];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Fail to share the song.", @"The message when you failed to share the song.")
@@ -1088,7 +1098,7 @@
         if (200 != [dict[@"result"][@"status"] integerValue]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [SVProgressHUD dismiss];
+                [self endLoadingView];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:dict[@"result"][@"message"]
@@ -1099,7 +1109,7 @@
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             // 通信中表示off
-            [SVProgressHUD dismiss];
+            [self endLoadingView];
             // song URL
             NSString *songUrl = dict[@"songinfo"][@"url"];
             // LINE URLを作成
@@ -1118,7 +1128,7 @@
 - (void)sendTwitter
 {
     // 通信中表示on
-    [SVProgressHUD show];
+    [self beginLoadingView];
     // Song-jsonに変換
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
@@ -1128,7 +1138,7 @@
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [SVProgressHUD dismiss];
+                [self endLoadingView];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Fail to share the song.", @"The message when you failed to share the song.")
@@ -1144,7 +1154,7 @@
         if (200 != [dict[@"result"][@"status"] integerValue]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [SVProgressHUD dismiss];
+                [self endLoadingView];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:dict[@"result"][@"message"]
@@ -1155,12 +1165,70 @@
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             // 通信中表示off
-            [SVProgressHUD dismiss];
+            [self endLoadingView];
             // song URL
             NSString *songUrl = dict[@"songinfo"][@"url"];
-            NSString *message = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"This is my music box.", @"The message when you send the song."), CMBTwitterHash];
+            NSString *message = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"This is my music box.", @"The message when you send the song."), CMBHashTag];
             // 投稿
             SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+            [vc setInitialText:message];
+            [vc addURL:[NSURL URLWithString:songUrl]];
+            [self presentViewController:vc animated:YES completion:nil];
+        });
+    }];
+}
+
+#pragma mark - Twitter
+
+/**
+ * Facebookで送信
+ */
+- (void)sendFacebook
+{
+    // 通信中表示on
+    [self beginLoadingView];
+    // Song-jsonに変換
+    NSString *songJson = [NSString songJsonWithSequences:_sequences
+                                                  header:_header];
+    // 通信
+    [self apiSongRegisterWithSong:songJson title:_header.name completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+        // 通信エラーの場合
+        if (error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 通信中表示off
+                [self endLoadingView];
+                // エラー表示
+                [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
+                                       message:NSLocalizedString(@"Fail to share the song.", @"The message when you failed to share the song.")
+                                      handler1:nil
+                                      handler2:nil];
+            });
+            return;
+        }
+        // レスポンスをパース
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        DPRINT(@"%@", dict);
+        // サーバエラーの場合
+        if (200 != [dict[@"result"][@"status"] integerValue]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 通信中表示off
+                [self endLoadingView];
+                // エラー表示
+                [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
+                                       message:dict[@"result"][@"message"]
+                                      handler1:nil
+                                      handler2:nil];
+            });
+            return;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // 通信中表示off
+            [self endLoadingView];
+            // song URL
+            NSString *songUrl = dict[@"songinfo"][@"url"];
+            NSString *message = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"This is my music box.", @"The message when you send the song."), CMBHashTag];
+            // 投稿
+            SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
             [vc setInitialText:message];
             [vc addURL:[NSURL URLWithString:songUrl]];
             [self presentViewController:vc animated:YES completion:nil];

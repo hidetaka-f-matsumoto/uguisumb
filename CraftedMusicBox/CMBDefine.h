@@ -39,7 +39,7 @@ static NSString * const CMBSvQuerySongTitle = @"title";
 /**
  * SNS
  */
-static NSString * const CMBTwitterHash = @"#UguisuMB";
+static NSString * const CMBHashTag = @"#UguisuMB";
 
 /**
  * Song
