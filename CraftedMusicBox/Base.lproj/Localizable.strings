@@ -46,6 +46,12 @@
 /* LINE */
 "LINE" = "LINE";
 
+/* Twitter */
+"Twitter" = "Twitter";
+
+/* Facebook */
+"Facebook" = "Facebook";
+
 /* Sound */
 "Sound" = "Sound";
 
@@ -58,7 +64,7 @@
 /* Open URL. */
 "Open URL" = "Open URL";
 
-/* The subject of the mail to send the song. */
+/* The message when you send the song. */
 "This is my music box." = "This is my music box.";
 
 /* The message to confirm you want to delete the song with name %@. */

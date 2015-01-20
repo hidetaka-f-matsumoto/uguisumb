@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041476571A6DDC2B00BDD872 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041476561A6DDC2B00BDD872 /* Social.framework */; };
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
 		0803C8E81A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8EA1A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings */; };
 		0821D7F91A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0821D7F81A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m */; };
@@ -85,6 +86,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041476561A6DDC2B00BDD872 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0802C0851A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewHeadCell.h; path = Views/CMBMusicBoxTableViewHeadCell.h; sourceTree = "<group>"; };
 		0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxTableViewHeadCell.m; path = Views/CMBMusicBoxTableViewHeadCell.m; sourceTree = "<group>"; };
 		0803C8C71A2D53A900FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041476571A6DDC2B00BDD872 /* Social.framework in Frameworks */,
 				08CC5E6619DFD4140049AAD5 /* libBlocksKit.a in Frameworks */,
 				0883B72F1A3297C800276868 /* SystemConfiguration.framework in Frameworks */,
 				0883B72B1A3297B500276868 /* EventKitUI.framework in Frameworks */,
@@ -300,6 +303,7 @@
 		08883AD21956CC6A00F7EB68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				041476561A6DDC2B00BDD872 /* Social.framework */,
 				0883B72E1A3297C800276868 /* SystemConfiguration.framework */,
 				0883B72A1A3297B500276868 /* EventKitUI.framework */,
 				0883B7281A3297AF00276868 /* EventKit.framework */,

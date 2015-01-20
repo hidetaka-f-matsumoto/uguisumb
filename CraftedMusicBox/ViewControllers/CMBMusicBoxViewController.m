@@ -312,6 +312,11 @@
     [self showActionSheetWithTitle:NSLocalizedString(@"Share", @"Share")
                            message:nil
                           buttons1:@[
+                                     @{@"title": NSLocalizedString(@"Twitter", @"Twitter"),
+                                       @"handler": ^(UIAlertAction *action)
+                                       {
+        [self sendTwitter];
+    }},
                                      @{@"title": NSLocalizedString(@"LINE", @"LINE"),
                                        @"handler": ^(UIAlertAction *action)
                                        {
@@ -324,6 +329,11 @@
     }}
                                      ]
                           buttons2:@[
+                                     @{@"title": NSLocalizedString(@"Twitter", @"Twitter"),
+                                       @"handler": ^(void)
+                                       {
+        [self sendTwitter];
+    }},
                                      @{@"title": NSLocalizedString(@"LINE", @"LINE"),
                                        @"handler": ^(void)
                                        {
@@ -1005,7 +1015,7 @@
                 [SVProgressHUD dismiss];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
-                                       message:dict[@"status"][@"message"]
+                                       message:dict[@"result"][@"message"]
                                       handler1:nil
                                       handler2:nil];
             });
@@ -1018,7 +1028,7 @@
             NSString *songUrl = dict[@"songinfo"][@"url"];
             // メール送信画面を表示
             MFMailComposeViewController *mailPicker = [MFMailComposeViewController new];
-            [mailPicker setSubject:NSLocalizedString(@"This is my music box.", @"The subject of the mail to send the song.")];
+            [mailPicker setSubject:NSLocalizedString(@"This is my music box.", @"The message when you send the song.")];
             [mailPicker setMessageBody:songUrl isHTML:NO];
             mailPicker.bk_completionBlock = ^(MFMailComposeViewController *controller, MFMailComposeResult result, NSError *error) {
                 switch (result) {
@@ -1081,7 +1091,7 @@
                 [SVProgressHUD dismiss];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
-                                       message:dict[@"status"][@"message"]
+                                       message:dict[@"result"][@"message"]
                                       handler1:nil
                                       handler2:nil];
             });
@@ -1096,6 +1106,64 @@
             NSString *lineUrl = [@"http://line.me/R/msg/text/?" stringByAppendingString:songUrl];
             // 投稿
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:lineUrl]];
+        });
+    }];
+}
+
+#pragma mark - Twitter
+
+/**
+ * Twitterで送信
+ */
+- (void)sendTwitter
+{
+    // 通信中表示on
+    [SVProgressHUD show];
+    // Song-jsonに変換
+    NSString *songJson = [NSString songJsonWithSequences:_sequences
+                                                  header:_header];
+    // 通信
+    [self apiSongRegisterWithSong:songJson title:_header.name completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+        // 通信エラーの場合
+        if (error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 通信中表示off
+                [SVProgressHUD dismiss];
+                // エラー表示
+                [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
+                                       message:NSLocalizedString(@"Fail to share the song.", @"The message when you failed to share the song.")
+                                      handler1:nil
+                                      handler2:nil];
+            });
+            return;
+        }
+        // レスポンスをパース
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        DPRINT(@"%@", dict);
+        // サーバエラーの場合
+        if (200 != [dict[@"result"][@"status"] integerValue]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 通信中表示off
+                [SVProgressHUD dismiss];
+                // エラー表示
+                [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
+                                       message:dict[@"result"][@"message"]
+                                      handler1:nil
+                                      handler2:nil];
+            });
+            return;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // 通信中表示off
+            [SVProgressHUD dismiss];
+            // song URL
+            NSString *songUrl = dict[@"songinfo"][@"url"];
+            NSString *message = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"This is my music box.", @"The message when you send the song."), CMBTwitterHash];
+            // 投稿
+            SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+            [vc setInitialText:message];
+            [vc addURL:[NSURL URLWithString:songUrl]];
+            [self presentViewController:vc animated:YES completion:nil];
         });
     }];
 }

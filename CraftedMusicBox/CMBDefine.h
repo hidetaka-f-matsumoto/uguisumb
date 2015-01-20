@@ -37,6 +37,11 @@ static NSString * const CMBSvQuerySongKey = @"key";
 static NSString * const CMBSvQuerySongTitle = @"title";
 
 /**
+ * SNS
+ */
+static NSString * const CMBTwitterHash = @"#UguisuMB";
+
+/**
  * Song
  */
 static CGFloat const CMBSpeedDefault = 50.0f;
