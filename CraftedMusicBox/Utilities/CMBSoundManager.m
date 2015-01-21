@@ -103,7 +103,7 @@ static CMBSoundManager *_instance = nil;
 {
     NSInteger scaleIdx = [CMBUtility indexWithScale:scale];
     NSInteger octaveDiff = octave.integerValue - CMBOctaveBase;
-    return MIDINoteNumber_C4 + scaleIdx + 12 * octaveDiff;
+    return (UInt32)(MIDINoteNumber_C4 + scaleIdx + 12 * octaveDiff);
 }
 
 /**

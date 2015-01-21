@@ -44,6 +44,14 @@ typedef enum {
     IMOBILESDKADS_ERROR_SHOW_TIMEOUT        // 広告表示処理タイムアウト
 } ImobileSdkAdsFailResult;
 
+#pragma mark - 広告表示準備完了時の広告の種類(アプリ側への通知内容)
+typedef enum {
+    IMOBILESDKADS_FILTER_MODE_UNKONWN,      // フィルターモードの情報が取得できていない
+    IMOBILESDKADS_FILTER_MODE_YES,          // フィルターモード
+    IMOBILESDKADS_FILTER_MODE_NO            // 非フィルターモード
+} ImobileSdkAdsFilterMode;
+
+
 #pragma mark -ImobileSdkAds(SDK本体)
 @interface ImobileSdkAds : NSObject
 
@@ -123,6 +131,9 @@ typedef enum {
 // Xcode5(iOS7 SDK)でのビルドに対応するかを設定
 + (void)setLegacyIosSdkMode:(BOOL)isLegacyMode;
 
+// フィルターモードを取得します
++ (ImobileSdkAdsFilterMode)getFilterModeBySpotId:(NSString *)spotId;
+
 // オフスクリーンウインドウのウインドウレベルを設定します
 + (void)setOffscreenWindowLevel:(UIWindowLevel)windowLevel __deprecated;
 
@@ -146,29 +157,33 @@ typedef enum {
 // SDKのメッセージを受け取るデリゲート(アプリ単位)
 @protocol IMobileSdkAdsDelegate <NSObject>
 
-//広告の表示が準備完了した際に呼ばれます
+// 広告の表示が準備完了した際に呼ばれます
 @optional
 - (void)imobileSdkAdsSpot:(NSString *)spotId didReadyWithValue:(ImobileSdkAdsReadyResult)value;
 
-//広告の取得を失敗した際に呼ばれます
+// 広告の取得を失敗した際に呼ばれます
 @optional
 - (void)imobileSdkAdsSpot:(NSString *)spotId didFailWithValue:(ImobileSdkAdsFailResult)value;
 
-//広告の表示要求があった際に、準備が完了していない場合に呼ばれます
+// 広告の表示要求があった際に、準備が完了していない場合に呼ばれます
 @optional
 - (void)imobileSdkAdsSpotIsNotReady:(NSString *)spotId;
 
-//広告クリックした際に呼ばれます
+// 広告クリックした際に呼ばれます
 @optional
 - (void)imobileSdkAdsSpotDidClick:(NSString *)spotId;
 
-//広告を閉じた際に呼ばれます(広告の表示がスキップされた場合も呼ばれます)
+// 広告を閉じた際に呼ばれます(広告の表示がスキップされた場合も呼ばれます)
 @optional
 - (void)imobileSdkAdsSpotDidClose:(NSString *)spotId;
 
-//広告の表示が完了した際に呼ばれます
+// 広告の表示が完了した際に呼ばれます
 @optional
 - (void)imobileSdkAdsSpotDidShow:(NSString *)spotId;
+
+// フィルターモードの情報が取得完了した際に呼ばれます
+@optional
+- (void)imobileSdkAdsSpotDidGetFilterMode:(NSString *)spotId;
 
 @end
 

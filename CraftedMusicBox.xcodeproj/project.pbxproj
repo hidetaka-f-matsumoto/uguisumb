@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042AB2D01A6F2F310050BC92 /* ImobileSdkAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2CA1A6F2F310050BC92 /* ImobileSdkAds.framework */; };
+		042AB2D11A6F2F310050BC92 /* libAdapterIMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2CB1A6F2F310050BC92 /* libAdapterIMobile.a */; };
+		042AB2D21A6F2F310050BC92 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 042AB2CC1A6F2F310050BC92 /* README.txt */; };
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
 		0803C8E81A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8EA1A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings */; };
 		0821D7F91A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0821D7F81A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m */; };
@@ -64,9 +67,6 @@
 		08BE1ECF1A69FD9600F69579 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08BE1ECD1A69FD9600F69579 /* README.txt */; };
 		08BE1ED11A6A046E00F69579 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08BE1ED01A6A046E00F69579 /* Security.framework */; };
 		08BE1ED31A6A047C00F69579 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08BE1ED21A6A047C00F69579 /* ImageIO.framework */; };
-		08BE1EF81A6B46D800F69579 /* ImobileSdkAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08BE1ED61A6B46D700F69579 /* ImobileSdkAds.framework */; };
-		08BE1EF91A6B46D800F69579 /* libAdapterIMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08BE1ED71A6B46D700F69579 /* libAdapterIMobile.a */; };
-		08BE1EFA1A6B46D800F69579 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08BE1ED81A6B46D700F69579 /* README.txt */; };
 		08C2816E199D112C0037F6D0 /* MusicInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08C2816D199D112C0037F6D0 /* MusicInfo.plist */; };
 		08CC5DB519DC240A0049AAD5 /* CMBMusicBoxTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5DB419DC240A0049AAD5 /* CMBMusicBoxTableView.m */; };
 		08CC5E2119DEADAF0049AAD5 /* UIColor+CMBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC5E2019DEADAF0049AAD5 /* UIColor+CMBTools.m */; };
@@ -94,6 +94,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042AB2CA1A6F2F310050BC92 /* ImobileSdkAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImobileSdkAds.framework; sourceTree = "<group>"; };
+		042AB2CB1A6F2F310050BC92 /* libAdapterIMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterIMobile.a; sourceTree = "<group>"; };
+		042AB2CC1A6F2F310050BC92 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		042AB2CE1A6F2F310050BC92 /* ImobileSdkAds-Adapter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImobileSdkAds-Adapter-Bridging-Header.h"; sourceTree = "<group>"; };
+		042AB2CF1A6F2F310050BC92 /* ImobileSdkAds-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImobileSdkAds-Bridging-Header.h"; sourceTree = "<group>"; };
 		0802C0851A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewHeadCell.h; path = Views/CMBMusicBoxTableViewHeadCell.h; sourceTree = "<group>"; };
 		0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxTableViewHeadCell.m; path = Views/CMBMusicBoxTableViewHeadCell.m; sourceTree = "<group>"; };
 		0803C8C71A2D53A900FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -219,11 +224,6 @@
 		08BE1ECD1A69FD9600F69579 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		08BE1ED01A6A046E00F69579 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		08BE1ED21A6A047C00F69579 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		08BE1ED61A6B46D700F69579 /* ImobileSdkAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImobileSdkAds.framework; sourceTree = "<group>"; };
-		08BE1ED71A6B46D700F69579 /* libAdapterIMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterIMobile.a; sourceTree = "<group>"; };
-		08BE1ED81A6B46D700F69579 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		08BE1EF61A6B46D800F69579 /* ImobileSdkAds-Adapter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImobileSdkAds-Adapter-Bridging-Header.h"; sourceTree = "<group>"; };
-		08BE1EF71A6B46D800F69579 /* ImobileSdkAds-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImobileSdkAds-Bridging-Header.h"; sourceTree = "<group>"; };
 		08C2816C199A82820037F6D0 /* CMBDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBDefine.h; sourceTree = "<group>"; };
 		08C2816D199D112C0037F6D0 /* MusicInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MusicInfo.plist; sourceTree = "<group>"; };
 		08CC5DB319DC240A0049AAD5 /* CMBMusicBoxTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableView.h; path = Views/CMBMusicBoxTableView.h; sourceTree = "<group>"; };
@@ -256,7 +256,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08BE1EF81A6B46D800F69579 /* ImobileSdkAds.framework in Frameworks */,
+				042AB2D01A6F2F310050BC92 /* ImobileSdkAds.framework in Frameworks */,
 				08BE1ED31A6A047C00F69579 /* ImageIO.framework in Frameworks */,
 				08BE1ED11A6A046E00F69579 /* Security.framework in Frameworks */,
 				08CC5E6619DFD4140049AAD5 /* libBlocksKit.a in Frameworks */,
@@ -275,7 +275,7 @@
 				08B66F79198DFCA200376683 /* Accelerate.framework in Frameworks */,
 				08883AD81956CC6A00F7EB68 /* UIKit.framework in Frameworks */,
 				08883AD41956CC6A00F7EB68 /* Foundation.framework in Frameworks */,
-				08BE1EF91A6B46D800F69579 /* libAdapterIMobile.a in Frameworks */,
+				042AB2D11A6F2F310050BC92 /* libAdapterIMobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +292,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042AB2C81A6F2F310050BC92 /* imobile_for_SP_app_iOS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				042AB2C91A6F2F310050BC92 /* lib */,
+				042AB2CC1A6F2F310050BC92 /* README.txt */,
+				042AB2CD1A6F2F310050BC92 /* Swift */,
+			);
+			name = imobile_for_SP_app_iOS_SDK;
+			path = Libraries/imobile_for_SP_app_iOS_SDK;
+			sourceTree = "<group>";
+		};
+		042AB2C91A6F2F310050BC92 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				042AB2CA1A6F2F310050BC92 /* ImobileSdkAds.framework */,
+				042AB2CB1A6F2F310050BC92 /* libAdapterIMobile.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		042AB2CD1A6F2F310050BC92 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				042AB2CE1A6F2F310050BC92 /* ImobileSdkAds-Adapter-Bridging-Header.h */,
+				042AB2CF1A6F2F310050BC92 /* ImobileSdkAds-Bridging-Header.h */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		087D29B01A37FADC00BCA9F5 /* EPSSampler */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,8 +526,8 @@
 			isa = PBXGroup;
 			children = (
 				08BE1EAC1A69FD9600F69579 /* GoogleMobileAdsSdkiOS */,
-				08BE1ED41A6B46D700F69579 /* imobile_for_SP_app_iOS_SDK */,
 				08BE1E981A69FD5C00F69579 /* NendSDK_iOS */,
+				042AB2C81A6F2F310050BC92 /* imobile_for_SP_app_iOS_SDK */,
 				08A52E641A39C51C008F86C2 /* SVProgressHUD */,
 				087D29B01A37FADC00BCA9F5 /* EPSSampler */,
 				08CC5E7E19E2D19A0049AAD5 /* SWTableViewCell */,
@@ -616,35 +645,6 @@
 				08BE1EBF1A69FD9600F69579 /* GADSearchRequest.h */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		08BE1ED41A6B46D700F69579 /* imobile_for_SP_app_iOS_SDK */ = {
-			isa = PBXGroup;
-			children = (
-				08BE1ED51A6B46D700F69579 /* lib */,
-				08BE1ED81A6B46D700F69579 /* README.txt */,
-				08BE1EF51A6B46D800F69579 /* Swift */,
-			);
-			name = imobile_for_SP_app_iOS_SDK;
-			path = Libraries/imobile_for_SP_app_iOS_SDK;
-			sourceTree = "<group>";
-		};
-		08BE1ED51A6B46D700F69579 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				08BE1ED61A6B46D700F69579 /* ImobileSdkAds.framework */,
-				08BE1ED71A6B46D700F69579 /* libAdapterIMobile.a */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		08BE1EF51A6B46D800F69579 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				08BE1EF61A6B46D800F69579 /* ImobileSdkAds-Adapter-Bridging-Header.h */,
-				08BE1EF71A6B46D800F69579 /* ImobileSdkAds-Bridging-Header.h */,
-			);
-			path = Swift;
 			sourceTree = "<group>";
 		};
 		08CC5E7E19E2D19A0049AAD5 /* SWTableViewCell */ = {
@@ -765,7 +765,7 @@
 				08289E1F1A2EACD800927D51 /* InfoPlist.strings in Resources */,
 				08A52E2E1A381232008F86C2 /* MusicBox.aupreset in Resources */,
 				08BE1EAA1A69FD5D00F69579 /* NADView_readme.txt in Resources */,
-				08BE1EFA1A6B46D800F69579 /* README.txt in Resources */,
+				042AB2D21A6F2F310050BC92 /* README.txt in Resources */,
 				08BE1ECF1A69FD9600F69579 /* README.txt in Resources */,
 				08DA5C3A19DA500B00966772 /* sp-setofont.ttf in Resources */,
 				087D29B61A37FADC00BCA9F5 /* LICENSE in Resources */,
