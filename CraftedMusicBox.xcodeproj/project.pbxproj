@@ -10,6 +10,7 @@
 		042AB2D01A6F2F310050BC92 /* ImobileSdkAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2CA1A6F2F310050BC92 /* ImobileSdkAds.framework */; };
 		042AB2D11A6F2F310050BC92 /* libAdapterIMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2CB1A6F2F310050BC92 /* libAdapterIMobile.a */; };
 		042AB2D21A6F2F310050BC92 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 042AB2CC1A6F2F310050BC92 /* README.txt */; };
+		042AB2D41A6F30EC0050BC92 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2D31A6F30EC0050BC92 /* Social.framework */; };
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
 		0803C8E81A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8EA1A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings */; };
 		0821D7F91A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0821D7F81A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m */; };
@@ -99,6 +100,7 @@
 		042AB2CC1A6F2F310050BC92 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		042AB2CE1A6F2F310050BC92 /* ImobileSdkAds-Adapter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImobileSdkAds-Adapter-Bridging-Header.h"; sourceTree = "<group>"; };
 		042AB2CF1A6F2F310050BC92 /* ImobileSdkAds-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImobileSdkAds-Bridging-Header.h"; sourceTree = "<group>"; };
+		042AB2D31A6F30EC0050BC92 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0802C0851A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewHeadCell.h; path = Views/CMBMusicBoxTableViewHeadCell.h; sourceTree = "<group>"; };
 		0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxTableViewHeadCell.m; path = Views/CMBMusicBoxTableViewHeadCell.m; sourceTree = "<group>"; };
 		0803C8C71A2D53A900FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042AB2D41A6F30EC0050BC92 /* Social.framework in Frameworks */,
 				042AB2D01A6F2F310050BC92 /* ImobileSdkAds.framework in Frameworks */,
 				08BE1ED31A6A047C00F69579 /* ImageIO.framework in Frameworks */,
 				08BE1ED11A6A046E00F69579 /* Security.framework in Frameworks */,
@@ -356,6 +359,7 @@
 		08883AD21956CC6A00F7EB68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				042AB2D31A6F30EC0050BC92 /* Social.framework */,
 				08BE1ED21A6A047C00F69579 /* ImageIO.framework */,
 				08BE1ED01A6A046E00F69579 /* Security.framework */,
 				0883B72E1A3297C800276868 /* SystemConfiguration.framework */,

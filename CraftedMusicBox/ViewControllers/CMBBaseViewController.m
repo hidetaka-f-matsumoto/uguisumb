@@ -40,6 +40,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)beginLoadingView
+{
+    [SVProgressHUD show];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+}
+
+- (void)endLoadingView
+{
+    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+    [SVProgressHUD dismiss];
+}
+
 - (void)showAlertDialogWithTitle:(NSString *)title
                          message:(NSString *)message
                         handler1:(void (^)(UIAlertAction *action))handler1

@@ -46,8 +46,17 @@
 /* LINE */
 "LINE" = "LINE";
 
+/* Twitter */
+"Twitter" = "Twitter";
+
+/* Facebook */
+"Facebook" = "Facebook";
+
 /* Sound */
 "Sound" = "Sound";
+
+/* Server */
+"Server" = "Server";
 
 /* OK */
 "OK" = "OK";
@@ -55,8 +64,8 @@
 /* Open URL. */
 "Open URL" = "Open URL";
 
-/* The subject of the mail to send the song. */
-"This is my music box." = "This is my music box.";
+/* The message when you send the song. */
+"This is my music box." = "I made my music box.";
 
 /* The message to confirm you want to delete the song with name %@. */
 "You wanna delete %@?" = "Are you sure you want to delete %@?";
@@ -93,3 +102,6 @@
 
 /* The message to confirm you want to remove times where is some notes. */
 "You wanna remove times where is some notes?" = "Are you sure you want to remove times, but there is some notes?";
+
+/* The message when you failed to share the song. */
+"Fail to share the song." = "Fail to share the song.";

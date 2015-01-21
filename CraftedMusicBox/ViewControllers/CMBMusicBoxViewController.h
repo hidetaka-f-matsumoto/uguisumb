@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <BlocksKit/BlocksKit+MessageUI.h>
+#import <Social/Social.h>
 #import "CMBBaseViewController.h"
 #import "CMBNoteData.h"
 #import "CMBSequenceOneData.h"

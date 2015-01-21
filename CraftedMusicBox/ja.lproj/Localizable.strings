@@ -46,8 +46,17 @@
 /* (No Commment) */
 "LINE" = "LINE";
 
+/* Twitter */
+"Twitter" = "Twitter";
+
+/* Facebook */
+"Facebook" = "Facebook";
+
 /* Sound */
 "Sound" = "サウンド";
+
+/* Server */
+"Server" = "サーバ";
 
 /* (No Commment) */
 "OK" = "OK";
@@ -56,7 +65,7 @@
 "Open URL" = "URLを開く";
 
 /* (No Commment) */
-"This is my music box." = "オルゴール";
+"This is my music box." = "オルゴール作りました。";
 
 /* (No Commment) */
 "You wanna delete %@?" = "本当に %@ を消しますか？";
@@ -93,3 +102,6 @@
 
 /* The message to confirm you want to remove times where is some notes. */
 "You wanna remove times where is some notes?" = "削除範囲に音符があります。本当にタイムを削除しますか？";
+
+/* The message when you failed to share the song. */
+"Fail to share the song." = "曲のシェアに失敗しました。";
