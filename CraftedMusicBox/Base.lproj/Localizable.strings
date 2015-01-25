@@ -111,3 +111,6 @@
 
 /* The message when network is offline. */
 "Network is offline." = "Failed to connect to the Internet.";
+
+/* The message to confirm you want to load the song from URL. */
+"You wanna load the song from URL?" = "Are you sure you want to load %@? (The current song is not saved.)";

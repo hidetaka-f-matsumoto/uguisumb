@@ -946,16 +946,21 @@
                               handler2:nil];
         return;
     }
-    // 読み込み中を表示
-    [self beginLoadingView];
-    // データ更新
-    _sequences = notif.userInfo[@"sequences"];
-    _header = notif.userInfo[@"header"];
-    // 表示更新
-    [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
-        // 読み込み中を非表示
-        [self endLoadingView];
-    }];
+    // 確認ダイアログを出してsong読み込み
+    NSMutableDictionary *sequence = notif.userInfo[@"sequences"];
+    CMBSongHeaderData *header = notif.userInfo[@"header"];
+    NSString *title = NSLocalizedString(@"Open URL", @"Open URL");
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"You wanna load the song from URL?", @"The message to confirm you want to load the song from URL."), header.name];
+    [self showConfirmDialogWithTitle:title
+                             message:message
+                            handler1:^(UIAlertAction *action) {
+                                [self songDidLoadWithSequence:sequence
+                                                       header:header];
+                            }
+                            handler2:^(void) {
+                                [self songDidLoadWithSequence:sequence
+                                                       header:header];
+                            }];
 }
 
 #pragma mark - Save
