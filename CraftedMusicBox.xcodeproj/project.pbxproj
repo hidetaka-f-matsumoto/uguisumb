@@ -13,6 +13,7 @@
 		042AB2D41A6F30EC0050BC92 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2D31A6F30EC0050BC92 /* Social.framework */; };
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
 		0803C8E81A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8EA1A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings */; };
+		0820BC1B1A7481CA00E405B3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0820BC1A1A7481CA00E405B3 /* Reachability.m */; };
 		0821D7F91A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0821D7F81A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m */; };
 		08289E1F1A2EACD800927D51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8CF1A2D996300FE8357 /* InfoPlist.strings */; };
 		08289E201A2EACE200927D51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8E51A2DB77200FE8357 /* Localizable.strings */; };
@@ -107,6 +108,8 @@
 		0803C8D01A2D996300FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0803C8E91A2DB77300FE8357 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = "ja.lproj/CraftedMusicBoxTests-InfoPlist.strings"; sourceTree = "<group>"; };
 		0803C8EB1A2DBCB900FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0820BC191A7481CA00E405B3 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0820BC1A1A7481CA00E405B3 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		0821D7F71A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewFootCell.h; path = Views/CMBMusicBoxTableViewFootCell.h; sourceTree = "<group>"; };
 		0821D7F81A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxTableViewFootCell.m; path = Views/CMBMusicBoxTableViewFootCell.m; sourceTree = "<group>"; };
 		08289E261A2EB02500927D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -324,6 +327,16 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
+		0820BC181A7481CA00E405B3 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				0820BC191A7481CA00E405B3 /* Reachability.h */,
+				0820BC1A1A7481CA00E405B3 /* Reachability.m */,
+			);
+			name = Reachability;
+			path = Libraries/Reachability;
+			sourceTree = "<group>";
+		};
 		087D29B01A37FADC00BCA9F5 /* EPSSampler */ = {
 			isa = PBXGroup;
 			children = (
@@ -529,6 +542,7 @@
 		08B66F6A198DFBDC00376683 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				0820BC181A7481CA00E405B3 /* Reachability */,
 				08BE1EAC1A69FD9600F69579 /* GoogleMobileAdsSdkiOS */,
 				08BE1E981A69FD5C00F69579 /* NendSDK_iOS */,
 				042AB2C81A6F2F310050BC92 /* imobile_for_SP_app_iOS_SDK */,
@@ -814,6 +828,7 @@
 				087D29B51A37FADC00BCA9F5 /* EPSSampler.m in Sources */,
 				08883AE41956CC6A00F7EB68 /* CMBAppDelegate.m in Sources */,
 				08CC5E2119DEADAF0049AAD5 /* UIColor+CMBTools.m in Sources */,
+				0820BC1B1A7481CA00E405B3 /* Reachability.m in Sources */,
 				08CC5DB519DC240A0049AAD5 /* CMBMusicBoxTableView.m in Sources */,
 				08CC5E8D19E2D19A0049AAD5 /* SWCellScrollView.m in Sources */,
 				08883B111956CFEF00F7EB68 /* CMBMusicBoxViewController.m in Sources */,

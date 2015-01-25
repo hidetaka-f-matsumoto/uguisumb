@@ -272,4 +272,24 @@
     DPRINT(@"adView:didFailToReceiveAdWithError:%@", [error localizedDescription]);
 }
 
+#pragma mark - Network
+
+- (NetworkStatus)checkNetworkStatus
+{
+    Reachability *reachability = [Reachability reachabilityWithHostName:@"google.com"];
+    NetworkStatus status = [reachability currentReachabilityStatus];
+    switch (status) {
+        case NotReachable:
+        {
+            NSString *title = NSLocalizedString(@"Network", @"Network");
+            NSString *message = NSLocalizedString(@"Network is offline.", @"The message when network is offline.");
+            [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
+            break;
+        }
+        default:
+            break;
+    }
+    return status;
+}
+
 @end

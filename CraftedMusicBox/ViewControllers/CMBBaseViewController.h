@@ -13,6 +13,7 @@
 #import "SVProgressHUD.h"
 #import "CMBUtility.h"
 #import "CMBAlertController.h"
+#import "Reachability.h"
 
 @interface CMBBaseViewController : UIViewController <GADBannerViewDelegate>
 {
@@ -36,6 +37,6 @@
                          message:(NSString *)message
                         buttons1:(NSArray *)buttons1
                         buttons2:(NSArray *)buttons2;
-
+- (NetworkStatus)checkNetworkStatus;
 
 @end

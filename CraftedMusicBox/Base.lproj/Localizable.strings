@@ -8,7 +8,7 @@
 "Delete song" = "Delete song";
 
 /* The message when you failed to save the song with name %@. */
-"Fail to save %@." = "Fail to save %@.";
+"Failed to save %@." = "Failed to save %@.";
 
 /* The message when failed to delete the song with name %@ */
 "Failed to delete %@." = "Failed to delete %@.";
@@ -23,7 +23,7 @@
 "Failed to send the mail." = "Failed to send the mail.";
 
 /* The message when you failed to load sound resources. */
-"Fail to load sound resources." = "Fail to load sound resources.";
+"Failed to load sound resources." = "Failed to load sound resources.";
 
 /* The message when you should choose the name of this song before save. */
 "Choose the title of this song before save." = "Choose the title of this song before save.";
@@ -104,4 +104,10 @@
 "You wanna remove times where is some notes?" = "Are you sure you want to remove times, but there is some notes?";
 
 /* The message when you failed to share the song. */
-"Fail to share the song." = "Fail to share the song.";
+"Failed to share the song." = "Failed to share the song.";
+
+/* Network */
+"Network" = "Network";
+
+/* The message when network is offline. */
+"Network is offline." = "Failed to connect to the Internet.";

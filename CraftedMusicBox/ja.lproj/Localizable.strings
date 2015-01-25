@@ -8,7 +8,7 @@
 "Delete song" = "曲を消す";
 
 /* (No Commment) */
-"Fail to save %@." = "%@ を保存するのに失敗しました。";
+"Failed to save %@." = "%@ を保存するのに失敗しました。";
 
 /* (No Commment) */
 "Failed to delete %@." = "%@ を消すのに失敗しました。";
@@ -23,7 +23,7 @@
 "Failed to send the mail." = "メールを送るのに失敗しました。";
 
 /* The message when you failed to load sound resources. */
-"Fail to load sound resources." = "サウンドの読み込みに失敗しました。";
+"Failed to load sound resources." = "サウンドの読み込みに失敗しました。";
 
 /* The message when you should choose the name of this song before save. */
 "Choose the title of this song before save." = "曲のタイトルを決めてください。";
@@ -104,4 +104,10 @@
 "You wanna remove times where is some notes?" = "削除範囲に音符があります。本当にタイムを削除しますか？";
 
 /* The message when you failed to share the song. */
-"Fail to share the song." = "曲のシェアに失敗しました。";
+"Failed to share the song." = "曲のシェアに失敗しました。";
+
+/* Network */
+"Network" = "ネットワーク";
+
+/* The message when network is offline. */
+"Network is offline." = "インターネットに接続できません。";

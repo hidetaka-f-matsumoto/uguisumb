@@ -105,7 +105,7 @@
     // SoundManagerをチェック
     if (![CMBSoundManager sharedInstance].isAvailable) {
         [self showAlertDialogWithTitle:NSLocalizedString(@"Sound", @"Sound")
-                               message:NSLocalizedString(@"Fail to load sound resources.", @"The message when you failed to load sound resources.")
+                               message:NSLocalizedString(@"Failed to load sound resources.", @"The message when you failed to load sound resources.")
                               handler1:nil
                               handler2:nil];
     }
@@ -979,7 +979,7 @@
     if (!isSuccess) {
         // 失敗
         NSString *title = NSLocalizedString(@"Save song", @"Save song");
-        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Fail to save %@.", @"The message when you failed to save the song with name %@."), _header.name];
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Failed to save %@.", @"The message when you failed to save the song with name %@."), _header.name];
         // 通知ダイアログ
         [self showAlertDialogWithTitle:title
                                message:message
@@ -995,6 +995,10 @@
  */
 - (void)sendMail
 {
+    // ネットワーク状態チェック
+    if (NotReachable == [self checkNetworkStatus]) {
+        return;
+    }
     // 通信中表示on
     [self beginLoadingView];
     // Song-jsonに変換
@@ -1009,7 +1013,7 @@
                 [self endLoadingView];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
-                                       message:NSLocalizedString(@"Fail to share the song.", @"The message when you failed to share the song.")
+                                       message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
                                       handler1:nil
                                       handler2:nil];
             });
@@ -1071,6 +1075,10 @@
  */
 - (void)sendLINE
 {
+    // ネットワーク状態チェック
+    if (NotReachable == [self checkNetworkStatus]) {
+        return;
+    }
     // 通信中表示on
     [self beginLoadingView];
     // Song-jsonに変換
@@ -1085,7 +1093,7 @@
                 [self endLoadingView];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
-                                       message:NSLocalizedString(@"Fail to share the song.", @"The message when you failed to share the song.")
+                                       message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
                                       handler1:nil
                                       handler2:nil];
             });
@@ -1127,6 +1135,10 @@
  */
 - (void)sendTwitter
 {
+    // ネットワーク状態チェック
+    if (NotReachable == [self checkNetworkStatus]) {
+        return;
+    }
     // 通信中表示on
     [self beginLoadingView];
     // Song-jsonに変換
@@ -1141,7 +1153,7 @@
                 [self endLoadingView];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
-                                       message:NSLocalizedString(@"Fail to share the song.", @"The message when you failed to share the song.")
+                                       message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
                                       handler1:nil
                                       handler2:nil];
             });
@@ -1185,6 +1197,10 @@
  */
 - (void)sendFacebook
 {
+    // ネットワーク状態チェック
+    if (NotReachable == [self checkNetworkStatus]) {
+        return;
+    }
     // 通信中表示on
     [self beginLoadingView];
     // Song-jsonに変換
@@ -1199,7 +1215,7 @@
                 [self endLoadingView];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
-                                       message:NSLocalizedString(@"Fail to share the song.", @"The message when you failed to share the song.")
+                                       message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
                                       handler1:nil
                                       handler2:nil];
             });
