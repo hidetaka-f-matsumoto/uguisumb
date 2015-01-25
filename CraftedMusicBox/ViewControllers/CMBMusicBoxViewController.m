@@ -144,35 +144,7 @@
     }
 }
 
-/**
- * 表示更新
- *  animation = NO の場合は reloadData を使う (体感でパフォーマンスが良い)
- *  viewDidAppear の段階で animation = YES にするとパフォーマンスが悪いので注意
- */
-- (void)updateViewsWithResetScroll:(BOOL)resetScroll
-                         animation:(BOOL)animation
-                        completion:(void (^)(BOOL finished))completion
-{
-    if (resetScroll) {
-        // スクロール初期位置
-        _tableView.contentOffset = CGPointMake(0, 0);
-    }
-    // タイトル更新
-    _titleLabel.text = (_header.name && 0 < _header.name.length) ? _header.name : NSLocalizedString(@"No title", @"Song title is none.");
-    // オクターブ表示更新
-    _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
-    // テーブルビュー更新
-    if (animation) {
-        [_tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [_tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
-    } else {
-        [_tableView reloadData];
-    }
-    // 後処理
-    if (completion) {
-        completion(YES);
-    }
-}
+#pragma mark - Control sounds
 
 /**
  * 1音再生
@@ -544,6 +516,38 @@
 }
 
 #pragma mark - Control Views
+
+/**
+ * 表示更新
+ *  animation = NO の場合は reloadData を使う (体感でパフォーマンスが良い)
+ *  viewDidAppear の段階で animation = YES にするとパフォーマンスが悪いので注意
+ */
+- (void)updateViewsWithResetScroll:(BOOL)resetScroll
+                         animation:(BOOL)animation
+                        completion:(void (^)(BOOL finished))completion
+{
+    if (resetScroll) {
+        // スクロール初期位置
+        _tableView.contentOffset = CGPointMake(0, 0);
+    }
+    // タイトル更新
+    _titleLabel.text = (_header.name && 0 < _header.name.length) ? _header.name : NSLocalizedString(@"No title", @"Song title is none.");
+    // オクターブ表示更新
+    _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
+    // テーブルビュー更新
+    if (animation) {
+        NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
+        [indexSet addIndex:0];
+        [indexSet addIndex:1];
+        [_tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+    } else {
+        [_tableView reloadData];
+    }
+    // 後処理
+    if (completion) {
+        completion(YES);
+    }
+}
 
 /**
  * 自動スクロール
