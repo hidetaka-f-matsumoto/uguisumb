@@ -46,5 +46,6 @@
 - (BOOL)deleteSongWithFileName:(NSString *)fileName;
 - (BOOL)isExistSongWithFileName:(NSString *)fileName;
 - (void)openURL:(NSURL *)url;
+- (BOOL)checkFirstRunCurrentVersion;
 
 @end

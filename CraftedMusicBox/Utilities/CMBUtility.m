@@ -365,4 +365,29 @@ static CMBUtility *_instance = nil;
     }
 }
 
+- (BOOL)checkFirstRunCurrentVersion
+{
+    NSString *path = nil;
+    @try {
+        // ホームディレクトリ直下にあるDocumentsフォルダを取得する
+        NSArray *pathes = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        path = [pathes[0] stringByAppendingPathComponent:@"run.txt"];
+    }
+    @catch (NSException *exception) {
+        return NO;
+    }
+    NSError *error;
+    // 最後に起動したバージョン
+    NSString *lastVer = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+    // 現在のバージョン
+    NSString *currentVer = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    // 初回起動か判定
+    BOOL isFirstRun = !lastVer || ![currentVer isEqualToString:lastVer];
+    if (isFirstRun) {
+        // 起動バージョンを更新
+        [currentVer writeToFile:path atomically:NO encoding:NSUTF8StringEncoding error:&error];
+    }
+    return isFirstRun;
+}
+
 @end

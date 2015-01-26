@@ -34,6 +34,18 @@
     [self showAd];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    // 初回起動の場合
+    if ([[CMBUtility sharedInstance] checkFirstRunCurrentVersion]) {
+        NSString *title = NSLocalizedString(@"What's New", @"What's New");
+        NSString *message = NSLocalizedString(@"New feature information ver.1.1.0.", @"New feature information.");
+        [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
