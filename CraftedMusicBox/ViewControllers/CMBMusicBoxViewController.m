@@ -938,29 +938,42 @@
 
 - (void)musicBoxDidOpen:(NSNotification *)notif
 {
-    NSDictionary *error = notif.userInfo[@"error"];
-    if (error) {
-        [self showAlertDialogWithTitle:error[@"title"]
-                               message:error[@"message"]
-                              handler1:nil
-                              handler2:nil];
-        return;
+    // 実行ブロック
+    void (^blkOpen)(void) = ^(void) {
+        // エラーチェック
+        NSDictionary *error = notif.userInfo[@"error"];
+        if (error) {
+            [self showAlertDialogWithTitle:error[@"title"]
+                                   message:error[@"message"]
+                                  handler1:nil
+                                  handler2:nil];
+            return;
+        }
+        // 確認ダイアログを出してsong読み込み
+        NSMutableDictionary *sequence = notif.userInfo[@"sequences"];
+        CMBSongHeaderData *header = notif.userInfo[@"header"];
+        NSString *title = NSLocalizedString(@"Open URL", @"Open URL");
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"You wanna load the song from URL?", @"The message to confirm you want to load the song from URL."), header.name];
+        [self showConfirmDialogWithTitle:title
+                                 message:message
+                                handler1:^(UIAlertAction *action) {
+                                    [self songDidLoadWithSequence:sequence
+                                                           header:header];
+                                }
+                                handler2:^(void) {
+                                    [self songDidLoadWithSequence:sequence
+                                                           header:header];
+                                }];
+    };
+
+    // 自身が最前面の場合
+    if ([self isTopMostViewController]) {
+        blkOpen();
     }
-    // 確認ダイアログを出してsong読み込み
-    NSMutableDictionary *sequence = notif.userInfo[@"sequences"];
-    CMBSongHeaderData *header = notif.userInfo[@"header"];
-    NSString *title = NSLocalizedString(@"Open URL", @"Open URL");
-    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"You wanna load the song from URL?", @"The message to confirm you want to load the song from URL."), header.name];
-    [self showConfirmDialogWithTitle:title
-                             message:message
-                            handler1:^(UIAlertAction *action) {
-                                [self songDidLoadWithSequence:sequence
-                                                       header:header];
-                            }
-                            handler2:^(void) {
-                                [self songDidLoadWithSequence:sequence
-                                                       header:header];
-                            }];
+    // 上に画面がある場合
+    else {
+        [self dismissViewControllerAnimated:NO completion:blkOpen];
+    }
 }
 
 #pragma mark - Save

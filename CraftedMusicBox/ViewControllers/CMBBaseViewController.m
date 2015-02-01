@@ -52,6 +52,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIViewController *)topMostController
+{
+    UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    while (topController.presentedViewController) {
+        topController = topController.presentedViewController;
+    }
+    return topController;
+}
+
+- (BOOL)isTopMostViewController
+{
+    return [self topMostController] == self;
+}
+
 - (void)beginLoadingView
 {
     [SVProgressHUD show];
@@ -91,6 +105,9 @@
         alertView.bk_willShowBlock = ^(UIAlertView *alertView) {
             [self willPresentAlertView:alertView];
         };
+        alertView.bk_didDismissBlock = ^(UIAlertView *alertView, NSInteger buttonIndex) {
+            [self alertView:alertView didDismissWithButtonIndex:buttonIndex];
+        };
         [alertView show];
     }
 }
@@ -126,6 +143,9 @@
         [alertView bk_addButtonWithTitle:NSLocalizedString(@"OK", @"OK") handler:handler2];
         alertView.bk_willShowBlock = ^(UIAlertView *alertView) {
             [self willPresentAlertView:alertView];
+        };
+        alertView.bk_didDismissBlock = ^(UIAlertView *alertView, NSInteger buttonIndex) {
+            [self alertView:alertView didDismissWithButtonIndex:buttonIndex];
         };
         [alertView show];
     }
@@ -177,6 +197,9 @@
         actionSheet.bk_willShowBlock = ^(UIActionSheet *actionSheet) {
             [self willPresentActionSheet:actionSheet];
         };
+        actionSheet.bk_didDismissBlock = ^(UIActionSheet *actionSheet, NSInteger buttonIndex) {
+            [self actionSheet:actionSheet didDismissWithButtonIndex:buttonIndex];
+        };
         [actionSheet showInView:self.view];
     }
 }
@@ -194,6 +217,10 @@
     [body setTextColor:[UIColor whiteColor]];
 }
 
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+}
+
 #pragma mark - UIActionSheetDelegate like
 
 - (void)willPresentActionSheet:(UIActionSheet *)actionSheet
@@ -209,6 +236,10 @@
             [b setTitleColor:[CMBUtility tintColor] forState:UIControlStateNormal];
         }
     }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
 }
 
 #pragma mark - Ad

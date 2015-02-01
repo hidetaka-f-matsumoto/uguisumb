@@ -23,6 +23,8 @@
 @property (nonatomic, weak) IBOutlet UIView *bannerFrameView;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *bannerFrameHeightConstraint;
 
+- (UIViewController *)topMostController;
+- (BOOL)isTopMostViewController;
 - (void)beginLoadingView;
 - (void)endLoadingView;
 - (void)showAlertDialogWithTitle:(NSString *)title
