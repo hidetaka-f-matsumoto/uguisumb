@@ -13,6 +13,7 @@
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
 		0803C8E81A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8EA1A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings */; };
 		0820BC1B1A7481CA00E405B3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0820BC1A1A7481CA00E405B3 /* Reachability.m */; };
+		0820BC1E1A7E1C2300E405B3 /* CMBHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0820BC1D1A7E1C2300E405B3 /* CMBHelpViewController.m */; };
 		0821D7F91A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0821D7F81A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m */; };
 		08289E1F1A2EACD800927D51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8CF1A2D996300FE8357 /* InfoPlist.strings */; };
 		08289E201A2EACE200927D51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8E51A2DB77200FE8357 /* Localizable.strings */; };
@@ -106,6 +107,8 @@
 		0803C8EB1A2DBCB900FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0820BC191A7481CA00E405B3 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		0820BC1A1A7481CA00E405B3 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		0820BC1C1A7E1C2300E405B3 /* CMBHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBHelpViewController.h; path = ViewControllers/CMBHelpViewController.h; sourceTree = "<group>"; };
+		0820BC1D1A7E1C2300E405B3 /* CMBHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBHelpViewController.m; path = ViewControllers/CMBHelpViewController.m; sourceTree = "<group>"; };
 		0821D7F71A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewFootCell.h; path = Views/CMBMusicBoxTableViewFootCell.h; sourceTree = "<group>"; };
 		0821D7F81A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxTableViewFootCell.m; path = Views/CMBMusicBoxTableViewFootCell.m; sourceTree = "<group>"; };
 		08289E261A2EB02500927D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -460,6 +463,8 @@
 				086BA16219D0FA4E00991574 /* CMBSongManageViewController.m */,
 				087D29151A36A14C00BCA9F5 /* CMBAlertController.h */,
 				087D29161A36A14C00BCA9F5 /* CMBAlertController.m */,
+				0820BC1C1A7E1C2300E405B3 /* CMBHelpViewController.h */,
+				0820BC1D1A7E1C2300E405B3 /* CMBHelpViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -831,6 +836,7 @@
 				086BA16319D0FA4E00991574 /* CMBSongManageViewController.m in Sources */,
 				086BA16919D10C4B00991574 /* CMBBaseModalViewController.m in Sources */,
 				08883B161956D03D00F7EB68 /* CMBTabViewController.m in Sources */,
+				0820BC1E1A7E1C2300E405B3 /* CMBHelpViewController.m in Sources */,
 				08A769DB1972A82D00143638 /* CMBSequenceOneData.m in Sources */,
 				08CC5E9119E2D19A0049AAD5 /* SWUtilityButtonView.m in Sources */,
 				087D29171A36A14C00BCA9F5 /* CMBAlertController.m in Sources */,

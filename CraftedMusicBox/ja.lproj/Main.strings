@@ -144,3 +144,6 @@
 
 /* Class = "IBUILabel"; text = "Swipe >>>\noctave up"; ObjectID = "87A-Md-34a"; */
 "87A-Md-34a.text" = "スワイプ →\nオクターブ上へ";
+
+/* Class = "IBUIBarButtonItem"; title = "Close"; ObjectID = "fCH-YX-0nD"; */
+"fCH-YX-0nD.title" = "閉じる";

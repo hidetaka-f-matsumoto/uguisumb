@@ -100,6 +100,9 @@
 /* Manage my songs. */
 "Manage my songs" = "My songs";
 
+/* Help */
+"Help" = "Help";
+
 /* Song title is none. */
 "No title" = "New song";
 

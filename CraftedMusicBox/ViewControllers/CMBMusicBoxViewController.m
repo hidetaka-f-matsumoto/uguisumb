@@ -361,7 +361,12 @@
                                        @"handler": ^(UIAlertAction *action)
     {
         [self songManageButtonDidTap];
-    }}
+    }},
+                                     @{@"title": NSLocalizedString(@"Help", @"Help"),
+                                       @"handler": ^(UIAlertAction *action)
+                                       {
+        [self helpButtonDidTap];
+    }},
                                      ]
                           buttons2:@[
                                      @{@"title": NSLocalizedString(@"New song", @"Create a new song."),
@@ -383,7 +388,12 @@
                                        @"handler": ^(void)
     {
         [self songManageButtonDidTap];
-    }}
+    }},
+                                     @{@"title": NSLocalizedString(@"Help", @"Help"),
+                                       @"handler": ^(void)
+                                       {
+        [self helpButtonDidTap];
+    }},
                                      ]
      ];
 }
@@ -464,6 +474,16 @@
 {
     // 管理画面へ
     [self performSegueWithIdentifier:@"SongManage"
+                              sender:self];
+}
+
+/**
+ * Helpボタン
+ */
+- (void)helpButtonDidTap
+{
+    // Help画面へ
+    [self performSegueWithIdentifier:@"Help"
                               sender:self];
 }
 
@@ -916,14 +936,14 @@
                          header:(CMBSongHeaderData *)header
 {
     // 読み込み中を表示
-    [self beginLoadingView];
+    [self loadingBeginWithNetwork:NO];
     // データ更新
     _sequences = sequences;
     _header = header;
     // 表示更新
     [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
         // 読み込み中を非表示
-        [self endLoadingView];
+        [self loadEndWithNetwork:NO];
     }];
 }
 
@@ -984,13 +1004,13 @@
 - (void)newSong
 {
     // 読み込み中を表示
-    [self beginLoadingView];
+    [self loadingBeginWithNetwork:NO];
     // パラメータ初期化
     [self _init];
     // 表示更新
     [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
         // 読み込み中を非表示
-        [self endLoadingView];
+        [self loadEndWithNetwork:NO];
     }];
 }
 
@@ -1027,7 +1047,7 @@
         return;
     }
     // 通信中表示on
-    [self beginLoadingView];
+    [self loadingBeginWithNetwork:YES];
     // Song-jsonに変換
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
@@ -1037,7 +1057,7 @@
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self endLoadingView];
+                [self loadEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
@@ -1053,7 +1073,7 @@
         if (200 != [dict[@"result"][@"status"] integerValue]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self endLoadingView];
+                [self loadEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:dict[@"result"][@"message"]
@@ -1064,7 +1084,7 @@
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             // 通信中表示off
-            [self endLoadingView];
+            [self loadEndWithNetwork:YES];
             // song URL
             NSString *songUrl = dict[@"songinfo"][@"url"];
             // メール送信画面を表示
@@ -1107,7 +1127,7 @@
         return;
     }
     // 通信中表示on
-    [self beginLoadingView];
+    [self loadingBeginWithNetwork:YES];
     // Song-jsonに変換
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
@@ -1117,7 +1137,7 @@
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self endLoadingView];
+                [self loadEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
@@ -1133,7 +1153,7 @@
         if (200 != [dict[@"result"][@"status"] integerValue]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self endLoadingView];
+                [self loadEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:dict[@"result"][@"message"]
@@ -1144,7 +1164,7 @@
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             // 通信中表示off
-            [self endLoadingView];
+            [self loadEndWithNetwork:YES];
             // song URL
             NSString *songUrl = dict[@"songinfo"][@"url"];
             // LINE URLを作成
@@ -1167,7 +1187,7 @@
         return;
     }
     // 通信中表示on
-    [self beginLoadingView];
+    [self loadingBeginWithNetwork:YES];
     // Song-jsonに変換
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
@@ -1177,7 +1197,7 @@
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self endLoadingView];
+                [self loadEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
@@ -1193,7 +1213,7 @@
         if (200 != [dict[@"result"][@"status"] integerValue]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self endLoadingView];
+                [self loadEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:dict[@"result"][@"message"]
@@ -1204,7 +1224,7 @@
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             // 通信中表示off
-            [self endLoadingView];
+            [self loadEndWithNetwork:YES];
             // song URL
             NSString *songUrl = dict[@"songinfo"][@"url"];
             NSString *message = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"This is my music box.", @"The message when you send the song."), CMBHashTag];
@@ -1229,7 +1249,7 @@
         return;
     }
     // 通信中表示on
-    [self beginLoadingView];
+    [self loadingBeginWithNetwork:YES];
     // Song-jsonに変換
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
@@ -1239,7 +1259,7 @@
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self endLoadingView];
+                [self loadEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
@@ -1255,7 +1275,7 @@
         if (200 != [dict[@"result"][@"status"] integerValue]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self endLoadingView];
+                [self loadEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:dict[@"result"][@"message"]
@@ -1266,7 +1286,7 @@
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             // 通信中表示off
-            [self endLoadingView];
+            [self loadEndWithNetwork:YES];
             // song URL
             NSString *songUrl = dict[@"songinfo"][@"url"];
             NSString *message = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"This is my music box.", @"The message when you send the song."), CMBHashTag];

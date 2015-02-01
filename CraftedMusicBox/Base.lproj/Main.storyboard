@@ -1008,6 +1008,7 @@ music box on.</string>
                         <outlet property="titleLabel" destination="TGT-ur-QoD" id="Bfk-bh-fNk"/>
                         <segue destination="kGK-1K-za0" kind="presentation" identifier="SongConfig" id="ViF-hj-1bm"/>
                         <segue destination="N8n-7A-X4L" kind="presentation" identifier="SongManage" id="5DY-Rs-aJ2"/>
+                        <segue destination="hXK-bD-TY0" kind="presentation" identifier="Help" id="9VC-46-JWV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8be-Yi-Aj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1147,6 +1148,95 @@ music box on.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mlk-sS-FC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2677" y="1065"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="j0G-lI-1EW">
+            <objects>
+                <viewController id="l7G-wT-FeG" customClass="CMBHelpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nXw-fn-4eX"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Gr-qm-bEe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5qD-R6-Ts6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o82-Eu-ilP">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JQM-ti-0HR"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="c4g-Wb-dcr"/>
+                                    <barButtonItem title=" &lt; " id="7py-6E-tgO">
+                                        <connections>
+                                            <action selector="backButtonDidTap:" destination="l7G-wT-FeG" id="bVB-zI-GXl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3ZL-Wj-pxT"/>
+                                    <barButtonItem title=" > " id="PUI-d7-Rsh">
+                                        <connections>
+                                            <action selector="forwardButtonDidTap:" destination="l7G-wT-FeG" id="3NJ-Df-SBL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3aY-NU-Dh6"/>
+                                    <barButtonItem systemItem="refresh" id="okg-Yl-Qa4">
+                                        <connections>
+                                            <action selector="reloadButtonDidTap:" destination="l7G-wT-FeG" id="gk6-F9-o8J"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tMU-rL-3G3"/>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yH2-h9-MCJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yH2-h9-MCJ" firstAttribute="top" secondItem="5qD-R6-Ts6" secondAttribute="top" id="9Rj-TD-nvl"/>
+                            <constraint firstAttribute="trailing" secondItem="o82-Eu-ilP" secondAttribute="trailing" id="DSZ-15-ena"/>
+                            <constraint firstItem="4Gr-qm-bEe" firstAttribute="top" secondItem="o82-Eu-ilP" secondAttribute="bottom" id="ITG-If-Qvc"/>
+                            <constraint firstAttribute="trailing" secondItem="yH2-h9-MCJ" secondAttribute="trailing" id="jNm-rV-wMS"/>
+                            <constraint firstItem="yH2-h9-MCJ" firstAttribute="leading" secondItem="5qD-R6-Ts6" secondAttribute="leading" id="o4c-oP-5sZ"/>
+                            <constraint firstItem="o82-Eu-ilP" firstAttribute="leading" secondItem="5qD-R6-Ts6" secondAttribute="leading" id="scB-JX-CiE"/>
+                            <constraint firstItem="o82-Eu-ilP" firstAttribute="top" secondItem="yH2-h9-MCJ" secondAttribute="bottom" id="tXP-ew-xAF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="38a-B3-lRQ">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="fCH-YX-0nD">
+                            <connections>
+                                <action selector="closeButtonDidTap:" destination="l7G-wT-FeG" id="hmH-Tl-0ZC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="7py-6E-tgO" id="UMu-lF-a3n"/>
+                        <outlet property="forwardButton" destination="PUI-d7-Rsh" id="Dg6-z0-aAS"/>
+                        <outlet property="refleshButton" destination="okg-Yl-Qa4" id="WW7-JB-rBd"/>
+                        <outlet property="webView" destination="yH2-h9-MCJ" id="RIo-GC-xRi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phP-GX-8jU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2677" y="1869"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r4c-gY-lg2">
+            <objects>
+                <navigationController id="hXK-bD-TY0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kuK-zQ-VY9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="l7G-wT-FeG" kind="relationship" relationship="rootViewController" id="V0A-SI-eUC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVv-X4-PBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="1813"/>
         </scene>
         <!--Song Config-->
         <scene sceneID="rxA-Cf-tkV">

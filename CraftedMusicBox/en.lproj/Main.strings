@@ -145,3 +145,6 @@
 
 /* Class = "IBUILabel"; text = "Swipe >>>\noctave up"; ObjectID = "87A-Md-34a"; */
 "87A-Md-34a.text" = "Swipe >>>\noctave up";
+
+/* Class = "IBUIBarButtonItem"; title = "Close"; ObjectID = "fCH-YX-0nD"; */
+"fCH-YX-0nD.title" = "Close";

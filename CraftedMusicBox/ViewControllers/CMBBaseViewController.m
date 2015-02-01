@@ -66,16 +66,22 @@
     return [self topMostController] == self;
 }
 
-- (void)beginLoadingView
+- (void)loadingBeginWithNetwork:(BOOL)network
 {
-    [SVProgressHUD show];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    [SVProgressHUD show];
+    if (network) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    }
 }
 
-- (void)endLoadingView
+- (void)loadEndWithNetwork:(BOOL)network
 {
-    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+    if (network) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    }
     [SVProgressHUD dismiss];
+    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
 }
 
 - (void)showAlertDialogWithTitle:(NSString *)title
