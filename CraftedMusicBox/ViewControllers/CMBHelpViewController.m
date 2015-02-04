@@ -7,6 +7,7 @@
 //
 
 #import "CMBHelpViewController.h"
+#import "CMBUtility.h"
 
 @interface CMBHelpViewController ()
 
@@ -20,9 +21,9 @@
     _webView.delegate = self;
     _webView.scalesPageToFit = NO;
     
-    NSURL* url = [NSURL URLWithString: @"http://google.com"];
-    NSURLRequest* myRequest = [NSURLRequest requestWithURL:url];
-    [_webView loadRequest:myRequest];
+    NSURL *url = [NSURL URLWithString:CMBSvSupportURL];
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    [_webView loadRequest:req];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,25 +42,20 @@
 */
 
 - (IBAction)backButtonDidTap:(id)sender {
-    if (_webView.canGoBack) {
-        [_webView goBack];
-    }
+    [_webView goBack];
 }
 
 - (IBAction)forwardButtonDidTap:(id)sender {
-    if (_webView.canGoForward) {
-        [_webView goForward];
-    }
+    [_webView goForward];
 }
 
-- (IBAction)reloadButtonDidTap:(id)sender {
+- (IBAction)refleshButtonDidTap:(id)sender {
     [_webView reload];
 }
 
 - (void)updateButtonsWithWebView:(UIWebView *)webView {
     _forwardButton.enabled = webView.canGoForward;
     _backButton.enabled = webView.canGoBack;
-    _refleshButton.style = webView.loading ? UIBarButtonSystemItemRefresh : UIBarButtonSystemItemStop;
 }
 
 # pragma mark - UIWebViewDelegate

@@ -12,12 +12,13 @@
 @interface CMBHelpViewController : CMBBaseModalViewController <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *forwardButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *refleshButton;
 
 - (IBAction)backButtonDidTap:(id)sender;
 - (IBAction)forwardButtonDidTap:(id)sender;
-- (IBAction)reloadButtonDidTap:(id)sender;
+- (IBAction)refleshButtonDidTap:(id)sender;
 
 @end

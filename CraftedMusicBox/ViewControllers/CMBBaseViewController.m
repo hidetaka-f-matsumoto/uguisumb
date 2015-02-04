@@ -28,7 +28,7 @@
      @{
        NSFontAttributeName : [UIFont fontWithName:@"SetoFont-SP" size:19.f],
        NSForegroundColorAttributeName : [CMBUtility tintColor],
-       } forState:UIControlStateNormal];
+       } forState:UIControlStateNormal];    
     
     // 広告を表示
     [self showAd];
