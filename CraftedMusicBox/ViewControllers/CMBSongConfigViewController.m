@@ -20,6 +20,7 @@
     [super viewDidLoad];
 
     _nameText.delegate = self;
+    _composerText.delegate = self;
     _speedSlider.minimumValue = CMBSpeedMin;
     _speedSlider.maximumValue = CMBSpeedMax;
     [_speedSlider addTarget:self action:@selector(tempoSliderDidChange:) forControlEvents:UIControlEventValueChanged];
@@ -33,6 +34,7 @@
     [super viewWillAppear:animated];
     
     _nameText.text = _header.name;
+    _composerText.text = _header.composer;
     _speedLabel.text = [NSString stringWithFormat:@"%zd", _header.speed.integerValue];
     _speedSlider.value = _header.speed.floatValue;
     _speedStepper.value = _header.speed.floatValue;
@@ -65,6 +67,7 @@
 - (void)applyConfig
 {
     _header.name = _nameText.text;
+    _header.composer = _composerText.text;
     _header.speed = [NSNumber numberWithInteger:(NSInteger)_speedSlider.value];
     _header.division1 = CMBDivisions[_division1Control.selectedSegmentIndex];
     _header.division2 = CMBDivisions[_division2Control.selectedSegmentIndex];

@@ -26,6 +26,7 @@
 @property (atomic, assign) CMBSongHeaderData *header;
 
 @property (nonatomic, weak) IBOutlet UITextField *nameText;
+@property (nonatomic, weak) IBOutlet UITextField *composerText;
 @property (nonatomic, weak) IBOutlet UISlider *speedSlider;
 @property (nonatomic, weak) IBOutlet UIStepper *speedStepper;
 @property (nonatomic, weak) IBOutlet UILabel *speedLabel;

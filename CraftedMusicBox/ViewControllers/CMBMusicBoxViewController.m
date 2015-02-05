@@ -884,6 +884,14 @@
 }
 
 /**
+ * 作曲者
+ */
+- (NSString *)getComposer
+{
+    return _header.composer;
+}
+
+/**
  * セルの背景色
  */
 - (UIColor *)musicboxCellColorWithIndexPath:(NSIndexPath *)indexPath

@@ -38,6 +38,9 @@
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -298,7 +301,7 @@ music box on.</string>
                                                         <constraint firstAttribute="height" constant="10" id="Gf6-FV-QSl"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmD-UZ-0LW">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YmD-UZ-0LW">
                                                     <rect key="frame" x="80" y="17" width="27" height="10"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -354,7 +357,7 @@ music box on.</string>
                                                         <constraint firstAttribute="height" constant="10" id="RFI-TW-jE2"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-3V-B6S">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-3V-B6S">
                                                     <rect key="frame" x="493" y="17" width="27" height="10"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -492,6 +495,23 @@ music box on.</string>
                                                         </mask>
                                                     </variation>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Composer" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bo-2E-9FG">
+                                                    <rect key="frame" x="8" y="88" width="584" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="83x-oN-guJ"/>
+                                                        <constraint firstAttribute="width" constant="29" id="jM3-NV-vzE"/>
+                                                        <constraint firstAttribute="height" constant="32" id="s4T-jk-wRk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="jM3-NV-vzE"/>
+                                                            <exclude reference="83x-oN-guJ"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dp-JX-jUo">
                                                     <rect key="frame" x="242" y="8" width="40" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -548,9 +568,12 @@ music box on.</string>
                                                 <constraint firstItem="4Dp-JX-jUo" firstAttribute="top" secondItem="hMI-1x-yPo" secondAttribute="top" constant="8" id="CEU-sT-Q3R"/>
                                                 <constraint firstItem="KIe-Ac-EW5" firstAttribute="bottom" secondItem="hMI-1x-yPo" secondAttribute="bottomMargin" id="COD-jC-X1c"/>
                                                 <constraint firstItem="KIe-Ac-EW5" firstAttribute="leading" secondItem="hMI-1x-yPo" secondAttribute="leading" constant="8" id="Jem-yT-HcA"/>
+                                                <constraint firstItem="0Bo-2E-9FG" firstAttribute="leading" secondItem="hMI-1x-yPo" secondAttribute="leading" constant="8" id="MD5-jp-WuT"/>
+                                                <constraint firstItem="0Bo-2E-9FG" firstAttribute="top" secondItem="KIe-Ac-EW5" secondAttribute="bottom" id="OHk-Yn-Qfm"/>
                                                 <constraint firstItem="Np7-iv-523" firstAttribute="top" secondItem="hMI-1x-yPo" secondAttribute="top" constant="8" id="bP7-hM-afx"/>
                                                 <constraint firstItem="JXd-8x-h3b" firstAttribute="top" secondItem="hMI-1x-yPo" secondAttribute="top" constant="8" id="bnJ-Ce-cnV"/>
                                                 <constraint firstAttribute="bottom" secondItem="KIe-Ac-EW5" secondAttribute="bottom" constant="8" id="cIJ-Gi-oRL"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Bo-2E-9FG" secondAttribute="trailing" constant="8" id="gFU-Zq-l6U"/>
                                                 <constraint firstItem="JXd-8x-h3b" firstAttribute="leading" secondItem="4Dp-JX-jUo" secondAttribute="trailing" constant="8" id="mZM-Mj-hNN"/>
                                                 <constraint firstAttribute="centerX" secondItem="4Dp-JX-jUo" secondAttribute="centerX" id="nRt-PZ-4rW"/>
                                                 <constraint firstItem="KIe-Ac-EW5" firstAttribute="top" secondItem="4Dp-JX-jUo" secondAttribute="bottom" constant="8" id="pgn-0K-ewq"/>
@@ -566,6 +589,9 @@ music box on.</string>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="composerLabel" destination="0Bo-2E-9FG" id="6NA-dR-V8n"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -714,7 +740,7 @@ music box on.</string>
                                             <constraint firstAttribute="height" constant="26" id="W5x-Sn-ysn"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiI-PF-7b4">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TiI-PF-7b4">
                                         <rect key="frame" x="493" y="62" width="27" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -770,7 +796,7 @@ music box on.</string>
                                             <constraint firstAttribute="height" constant="26" id="yGj-aR-EUl"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3SA-2v-on1">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3SA-2v-on1">
                                         <rect key="frame" x="80" y="62" width="27" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1262,21 +1288,11 @@ music box on.</string>
                                 <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw8-Dg-In0">
-                                <rect key="frame" x="16" y="139" width="80" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Composer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF5-vK-Njd">
+                                <rect key="frame" x="16" y="139" width="120" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="ubQ-6r-w9N"/>
-                                    <constraint firstAttribute="width" constant="80" id="unf-jL-TlL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guidance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-PQ-DvD">
-                                <rect key="frame" x="16" y="214" width="80" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="LoM-80-FhC"/>
-                                    <constraint firstAttribute="width" constant="80" id="oal-L6-FJ7"/>
+                                    <constraint firstAttribute="height" constant="21" id="dha-hz-ppQ"/>
+                                    <constraint firstAttribute="width" constant="120" id="gO2-Dm-XUk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                 <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1291,53 +1307,15 @@ music box on.</string>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0x5-ul-Bf8">
-                                <rect key="frame" x="14" y="176" width="572" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrO-2w-Ksk">
+                                <rect key="frame" x="16" y="168" width="568" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="7h8-oo-dF3"/>
+                                    <constraint firstAttribute="height" constant="30" id="nqu-6c-0ov"/>
                                 </constraints>
-                            </slider>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bF1-Hh-rgh">
-                                <rect key="frame" x="16" y="243" width="568" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="8rC-jC-XMn"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="2"/>
-                                    <segment title="3"/>
-                                    <segment title="4"/>
-                                    <segment title="5"/>
-                                    <segment title="6"/>
-                                    <segment title="7"/>
-                                    <segment title="8"/>
-                                    <segment title="11"/>
-                                </segments>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="We1-Ap-gzE">
-                                <rect key="frame" x="16" y="279" width="568" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="WzE-v6-Ug7"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="2"/>
-                                    <segment title="3"/>
-                                    <segment title="4"/>
-                                    <segment title="5"/>
-                                    <segment title="6"/>
-                                    <segment title="7"/>
-                                    <segment title="8"/>
-                                    <segment title="11"/>
-                                </segments>
-                            </segmentedControl>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-lZ-Lhc">
-                                <rect key="frame" x="490" y="139" width="94" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="OQs-PK-7bp"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="speedStepperDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="qKK-ZG-nCE"/>
-                                </connections>
-                            </stepper>
+                                <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xO-NP-Jtg">
                                 <rect key="frame" x="16" y="552" width="568" height="40"/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
@@ -1364,16 +1342,6 @@ music box on.</string>
                                     <constraint firstAttribute="height" id="I02-vf-5R2"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apQ-aw-88J">
-                                <rect key="frame" x="104" y="139" width="80" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="mZ5-MV-D2a"/>
-                                    <constraint firstAttribute="width" constant="80" id="x7f-jE-88X"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-s5-Bsi">
                                 <rect key="frame" x="16" y="504" width="568" height="40"/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
@@ -1395,6 +1363,83 @@ music box on.</string>
                                     <action selector="applyAndSaveButtonDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="UN6-js-MPs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw8-Dg-In0">
+                                <rect key="frame" x="16" y="206" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ubQ-6r-w9N"/>
+                                    <constraint firstAttribute="width" constant="80" id="unf-jL-TlL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guidance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-PQ-DvD">
+                                <rect key="frame" x="16" y="281" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="LoM-80-FhC"/>
+                                    <constraint firstAttribute="width" constant="80" id="oal-L6-FJ7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0x5-ul-Bf8">
+                                <rect key="frame" x="14" y="243" width="572" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7h8-oo-dF3"/>
+                                </constraints>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bF1-Hh-rgh">
+                                <rect key="frame" x="16" y="310" width="568" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="8rC-jC-XMn"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                    <segment title="6"/>
+                                    <segment title="7"/>
+                                    <segment title="8"/>
+                                    <segment title="11"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="We1-Ap-gzE">
+                                <rect key="frame" x="16" y="346" width="568" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="WzE-v6-Ug7"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                    <segment title="6"/>
+                                    <segment title="7"/>
+                                    <segment title="8"/>
+                                    <segment title="11"/>
+                                </segments>
+                            </segmentedControl>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-lZ-Lhc">
+                                <rect key="frame" x="490" y="206" width="94" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="OQs-PK-7bp"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="speedStepperDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="qKK-ZG-nCE"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apQ-aw-88J">
+                                <rect key="frame" x="104" y="206" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mZ5-MV-D2a"/>
+                                    <constraint firstAttribute="width" constant="80" id="x7f-jE-88X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
@@ -1403,12 +1448,14 @@ music box on.</string>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="0Li-MD-XpV"/>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="top" secondItem="apQ-aw-88J" secondAttribute="bottom" constant="8" id="3Mt-No-Zsg"/>
                             <constraint firstAttribute="trailing" secondItem="4t2-qD-bMV" secondAttribute="trailing" id="3Oa-1H-g4J"/>
+                            <constraint firstItem="hrO-2w-Ksk" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leading" constant="16" id="50g-Bm-9zm"/>
                             <constraint firstItem="mvv-i9-5PE" firstAttribute="top" secondItem="Xhi-Gf-Npa" secondAttribute="bottom" constant="8" id="7ZF-Ci-4mD"/>
                             <constraint firstItem="4xO-NP-Jtg" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leading" constant="16" id="7ao-5I-ANU"/>
                             <constraint firstItem="We1-Ap-gzE" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="Et1-lw-akn"/>
                             <constraint firstAttribute="centerY" secondItem="IcS-PQ-DvD" secondAttribute="centerY" id="FQ4-h1-XUn"/>
                             <constraint firstItem="k3U-lZ-Lhc" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="G4h-P2-dfo"/>
                             <constraint firstItem="4xO-NP-Jtg" firstAttribute="top" secondItem="oVd-s5-Bsi" secondAttribute="bottom" constant="8" id="GWC-pG-TTN"/>
+                            <constraint firstItem="tF5-vK-Njd" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leading" constant="16" id="H8p-JX-9tV"/>
                             <constraint firstItem="4t2-qD-bMV" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leading" id="HgJ-dh-SOi"/>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="HlS-tC-6fe"/>
                             <constraint firstAttribute="trailing" secondItem="oVd-s5-Bsi" secondAttribute="trailing" constant="16" id="HzE-Yi-V0t"/>
@@ -1423,13 +1470,17 @@ music box on.</string>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="top" secondItem="k3U-lZ-Lhc" secondAttribute="bottom" constant="8" id="Sds-ZG-rnD"/>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="top" secondItem="k3U-lZ-Lhc" secondAttribute="bottom" constant="8" id="TIB-4C-PhR"/>
                             <constraint firstItem="IcS-PQ-DvD" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="TdQ-cC-f7F"/>
+                            <constraint firstItem="tF5-vK-Njd" firstAttribute="top" secondItem="ih3-UP-yhx" secondAttribute="bottom" constant="8" id="Tx8-3n-5zC"/>
                             <constraint firstItem="apQ-aw-88J" firstAttribute="top" secondItem="ih3-UP-yhx" secondAttribute="bottom" constant="8" id="V7K-rJ-cbq"/>
                             <constraint firstItem="ih3-UP-yhx" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="Wvy-t9-1Qy"/>
+                            <constraint firstItem="hrO-2w-Ksk" firstAttribute="top" secondItem="tF5-vK-Njd" secondAttribute="bottom" constant="8" id="Y1v-sW-dN7"/>
+                            <constraint firstItem="tF5-vK-Njd" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leading" constant="16" id="Z9H-4P-BIP"/>
                             <constraint firstItem="k3U-lZ-Lhc" firstAttribute="leading" secondItem="0x5-ul-Bf8" secondAttribute="trailing" constant="8" id="ZTT-L4-v0m"/>
                             <constraint firstItem="bF1-Hh-rgh" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="bk6-XM-Szn"/>
                             <constraint firstItem="bF1-Hh-rgh" firstAttribute="top" secondItem="IcS-PQ-DvD" secondAttribute="bottom" constant="8" id="cYz-iW-9U2"/>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="evJ-7f-rhO"/>
                             <constraint firstItem="ih3-UP-yhx" firstAttribute="top" secondItem="mvv-i9-5PE" secondAttribute="bottom" constant="8" id="gHN-se-JOK"/>
+                            <constraint firstItem="bw8-Dg-In0" firstAttribute="top" secondItem="hrO-2w-Ksk" secondAttribute="bottom" constant="8" id="i1f-Ln-Wdd"/>
                             <constraint firstItem="apQ-aw-88J" firstAttribute="centerY" secondItem="bw8-Dg-In0" secondAttribute="centerY" id="idA-tI-P3Z"/>
                             <constraint firstItem="4xO-NP-Jtg" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="ioq-PR-f9G"/>
                             <constraint firstItem="mvv-i9-5PE" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="iuP-oL-5CL"/>
@@ -1438,6 +1489,7 @@ music box on.</string>
                             <constraint firstItem="oVd-s5-Bsi" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leading" constant="16" id="qOO-dc-2NU"/>
                             <constraint firstItem="mvv-i9-5PE" firstAttribute="trailing" secondItem="Kz0-zo-CKX" secondAttribute="trailingMargin" id="vQP-5P-UdL"/>
                             <constraint firstItem="C76-f1-BiQ" firstAttribute="top" secondItem="4t2-qD-bMV" secondAttribute="bottom" id="vYf-5y-hf9"/>
+                            <constraint firstAttribute="trailing" secondItem="hrO-2w-Ksk" secondAttribute="trailing" constant="16" id="wcH-4i-8sL"/>
                             <constraint firstItem="4xO-NP-Jtg" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leadingMargin" id="xoZ-pk-Pm6"/>
                             <constraint firstItem="IcS-PQ-DvD" firstAttribute="top" secondItem="0x5-ul-Bf8" secondAttribute="bottom" constant="8" id="y5R-ET-zXF"/>
                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="top" secondItem="bw8-Dg-In0" secondAttribute="bottom" constant="16" id="yQq-8b-LK4"/>
@@ -1447,6 +1499,8 @@ music box on.</string>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="vQP-5P-UdL"/>
+                                <exclude reference="Z9H-4P-BIP"/>
+                                <exclude reference="yy1-qd-szZ"/>
                                 <exclude reference="V7K-rJ-cbq"/>
                                 <exclude reference="0Li-MD-XpV"/>
                                 <exclude reference="3Mt-No-Zsg"/>
@@ -1472,6 +1526,7 @@ music box on.</string>
                     <connections>
                         <outlet property="bannerFrameHeightConstraint" destination="I02-vf-5R2" id="HQB-Zi-mhO"/>
                         <outlet property="bannerFrameView" destination="4t2-qD-bMV" id="fPv-Bt-Mzl"/>
+                        <outlet property="composerText" destination="hrO-2w-Ksk" id="jWk-2Z-0hh"/>
                         <outlet property="division1Control" destination="bF1-Hh-rgh" id="JgH-Xf-kfS"/>
                         <outlet property="division2Control" destination="We1-Ap-gzE" id="3Xc-pN-Nwe"/>
                         <outlet property="nameText" destination="ih3-UP-yhx" id="swY-5k-WpR"/>

@@ -17,12 +17,16 @@ static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200;
 - (void)musicBoxDidRequestAddTime;
 /** タイム削除リクエスト */
 - (void)musicBoxDidRequestRemoveTime;
+/** 作曲者 */
+- (NSString *)getComposer;
 
 @end
 
 @interface CMBMusicBoxTableViewFootCell : UITableViewCell
 
 @property (nonatomic, assign) id<CMBMusicBoxTableViewFootCellDelegate> delegate;
+
+@property (nonatomic, weak) IBOutlet UILabel *composerLabel;
 
 - (IBAction)timeAddButtonDidTap:(id)sender;
 - (IBAction)timeRemoveButtonDidTap:(id)sender;

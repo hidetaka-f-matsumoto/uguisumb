@@ -128,6 +128,9 @@
 /* Class = "IBUILabel"; text = "Title:"; ObjectID = "mvv-i9-5PE"; */
 "mvv-i9-5PE.text" = "Title:";
 
+/* Class = "IBUILabel"; text = "Composer:"; ObjectID = "tF5-vK-Njd"; */
+"tF5-vK-Njd.text" = "Composer:";
+
 /* Class = "IBUIBarButtonItem"; title = "Close"; ObjectID = "nHJ-Fw-rsH"; */
 "nHJ-Fw-rsH.title" = "Close";
 

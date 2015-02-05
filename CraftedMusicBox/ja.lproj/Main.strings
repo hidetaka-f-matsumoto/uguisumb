@@ -52,6 +52,9 @@
 /* Class = "IBUILabel"; text = "song title"; ObjectID = "TGT-ur-QoD"; */
 "TGT-ur-QoD.text" = "曲名";
 
+/* Class = "IBUILabel"; text = "Composer:"; ObjectID = "tF5-vK-Njd"; */
+"tF5-vK-Njd.text" = "作った人:";
+
 /* Class = "IBUILabel"; text = "A#"; ObjectID = "V8B-se-TdV"; */
 "V8B-se-TdV.text" = "A#";
 
