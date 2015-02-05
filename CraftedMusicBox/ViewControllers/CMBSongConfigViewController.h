@@ -25,6 +25,8 @@
 @property (nonatomic, assign) id<CMBSongConfigDelegate> delegate;
 @property (atomic, assign) CMBSongHeaderData *header;
 
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, weak) IBOutlet UIView *contentView;
 @property (nonatomic, weak) IBOutlet UITextField *nameText;
 @property (nonatomic, weak) IBOutlet UITextField *composerText;
 @property (nonatomic, weak) IBOutlet UISlider *speedSlider;

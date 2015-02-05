@@ -42,6 +42,14 @@
     [_division2Control setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division2]];
 }
 
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    [_scrollView setContentSize:_contentView.bounds.size];
+    [_scrollView flashScrollIndicators];
+}
+
 - (void)dealloc
 {
     // 通知の登録解除
