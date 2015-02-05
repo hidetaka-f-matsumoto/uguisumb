@@ -36,6 +36,7 @@ static NSString * const CMBSvActionSongLink = @"song.link.php";
 static NSString * const CMBSvQuerySong = @"song";
 static NSString * const CMBSvQuerySongKey = @"key";
 static NSString * const CMBSvQuerySongTitle = @"title";
+static NSString * const CMBSvQuerySongComposer = @"composer";
 
 /**
  * SNS

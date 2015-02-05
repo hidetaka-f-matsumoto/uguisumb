@@ -1097,7 +1097,7 @@
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
     // 通信
-    [self apiSongRegisterWithSong:songJson title:_header.name completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+    [self apiSongRegisterWithSong:songJson title:_header.name composer:_header.composer completion:^(NSData *data, NSURLResponse *response, NSError *error) {
         // 通信エラーの場合
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -1181,7 +1181,7 @@
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
     // 通信
-    [self apiSongRegisterWithSong:songJson title:_header.name completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+    [self apiSongRegisterWithSong:songJson title:_header.name composer:_header.composer completion:^(NSData *data, NSURLResponse *response, NSError *error) {
         // 通信エラーの場合
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -1245,7 +1245,7 @@
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
     // 通信
-    [self apiSongRegisterWithSong:songJson title:_header.name completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+    [self apiSongRegisterWithSong:songJson title:_header.name composer:_header.composer completion:^(NSData *data, NSURLResponse *response, NSError *error) {
         // 通信エラーの場合
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -1311,7 +1311,7 @@
     NSString *songJson = [NSString songJsonWithSequences:_sequences
                                                   header:_header];
     // 通信
-    [self apiSongRegisterWithSong:songJson title:_header.name completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+    [self apiSongRegisterWithSong:songJson title:_header.name composer:_header.composer completion:^(NSData *data, NSURLResponse *response, NSError *error) {
         // 通信エラーの場合
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -1360,11 +1360,12 @@
 
 - (void)apiSongRegisterWithSong:(NSString *)song
                           title:(NSString *)title
+                       composer:(NSString *)composer
                      completion:(void (^)(NSData *data, NSURLResponse *response, NSError *error))handler
 {
     // リクエスト作成
     NSString *url = [NSString stringWithFormat:@"%@%@", CMBSvApiURL, CMBSvActionSongReg];
-    NSString *query = [NSString stringWithFormat:@"%@=%@&%@=%@", CMBSvQuerySong, song.encodedSongStr, CMBSvQuerySongTitle, title.urlEncode];
+    NSString *query = [NSString stringWithFormat:@"%@=%@&%@=%@&%@=%@", CMBSvQuerySong, song.encodedSongStr, CMBSvQuerySongTitle, title.urlEncode, CMBSvQuerySongComposer, composer.urlEncode];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     request.HTTPMethod = @"POST";
     request.HTTPBody = [query dataUsingEncoding:NSUTF8StringEncoding];
