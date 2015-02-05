@@ -644,6 +644,32 @@
     [_tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+/**
+ * 曲チェック
+ */
+- (BOOL)checkSongValid
+{
+    if (!_sequences || !_header) {
+        NSString *title = NSLocalizedString(@"Song", @"Song");
+        NSString *message = NSLocalizedString(@"Song is invalid.", @"The message when song is invalid.");
+        [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
+        return NO;
+    }
+    else if (0 >= _sequences.count) {
+        NSString *title = NSLocalizedString(@"Song", @"Song");
+        NSString *message = NSLocalizedString(@"Song is empty.", @"The message when song is empty.");
+        [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
+        return NO;
+    }
+    else if (!_header.name || 0 >= _header.name.length) {
+        NSString *title = NSLocalizedString(@"Song", @"Song");
+        NSString *message = NSLocalizedString(@"Song title is empty.", @"The message when song title is empty.");
+        [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
+        return NO;
+    }
+    return YES;
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -809,19 +835,26 @@
     // シーケンスを更新
     NSIndexPath *indexPath = (NSIndexPath *)info[@"indexPath"];
     CMBSequenceOneData *seqOneData = _sequences[[NSNumber numberWithInteger:indexPath.row]];
-    // シーケンスデータが新規の場合
-    if (!seqOneData) {
-        seqOneData = [CMBSequenceOneData sequenceOneData];
-        [_sequences setObject:seqOneData forKey:[NSNumber numberWithInteger:indexPath.row]];
-    }
     CMBNoteData *noteData = [[CMBNoteData alloc] initWithInfo:info];
     // TapOnの場合: 追加
     if (isTapOn) {
+        // シーケンスデータが新規の場合
+        if (!seqOneData) {
+            seqOneData = [CMBSequenceOneData sequenceOneData];
+            [_sequences setObject:seqOneData forKey:[NSNumber numberWithInteger:indexPath.row]];
+        }
         [seqOneData addNoteData:noteData];
     }
     // TapOffの場合: 削除
     else {
-        [seqOneData removeNoteData:noteData];
+        // シーケンスデータがある場合
+        if (seqOneData) {
+            [seqOneData removeNoteData:noteData];
+            // 音符がなくなったら消しておく
+            if (!seqOneData.isNotes) {
+                [_sequences removeObjectForKey:[NSNumber numberWithInteger:indexPath.row]];
+            }
+        }
     }
 }
 
@@ -1042,6 +1075,10 @@
  */
 - (void)sendMail
 {
+    // 曲チェック
+    if (![self checkSongValid]) {
+        return;
+    }
     // ネットワーク状態チェック
     if (NotReachable == [self checkNetworkStatus]) {
         return;
@@ -1122,6 +1159,10 @@
  */
 - (void)sendLINE
 {
+    // 曲チェック
+    if (![self checkSongValid]) {
+        return;
+    }
     // ネットワーク状態チェック
     if (NotReachable == [self checkNetworkStatus]) {
         return;
@@ -1182,6 +1223,10 @@
  */
 - (void)sendTwitter
 {
+    // 曲チェック
+    if (![self checkSongValid]) {
+        return;
+    }
     // ネットワーク状態チェック
     if (NotReachable == [self checkNetworkStatus]) {
         return;
@@ -1244,6 +1289,10 @@
  */
 - (void)sendFacebook
 {
+    // 曲チェック
+    if (![self checkSongValid]) {
+        return;
+    }
     // ネットワーク状態チェック
     if (NotReachable == [self checkNetworkStatus]) {
         return;

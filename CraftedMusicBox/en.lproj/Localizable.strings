@@ -123,3 +123,15 @@
 
 /* The message to confirm you want to load the song from URL. */
 "You wanna load the song from URL?" = "Are you sure you want to load %@? (The current song is not saved.)";
+
+/* Song */
+"Song" = "Song";
+
+/* The message when song is invalid. */
+"Song is invalid." = "Song is invalid. (System Error)";
+
+/* The message when song is empty. */
+"Song is empty." = "Song is empty.";
+
+/* The message when song title is empty. */
+"Song title is empty." = "Song title is empty.";

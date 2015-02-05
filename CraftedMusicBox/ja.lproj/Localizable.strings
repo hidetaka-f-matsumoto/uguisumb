@@ -123,3 +123,15 @@
 
 /* The message to confirm you want to load the song from URL. */
 "You wanna load the song from URL?" = "%@ を開きますか？（今開いている曲は保存されません）";
+
+/* Song */
+"Song" = "曲";
+
+/* The message when song is invalid. */
+"Song is invalid." = "不正な曲です。(System Error)";
+
+/* The message when song is empty. */
+"Song is empty." = "曲が空です。";
+
+/* The message when song title is empty. */
+"Song title is empty." = "曲のタイトルが空です。";
