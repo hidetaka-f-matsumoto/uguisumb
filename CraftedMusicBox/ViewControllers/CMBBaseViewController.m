@@ -28,16 +28,60 @@
      @{
        NSFontAttributeName : [UIFont fontWithName:@"SetoFont-SP" size:19.f],
        NSForegroundColorAttributeName : [CMBUtility tintColor],
-       } forState:UIControlStateNormal];
+       } forState:UIControlStateNormal];    
     
     // 広告を表示
     [self showAd];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    // 初回起動の場合
+    if ([[CMBUtility sharedInstance] checkFirstRunCurrentVersion]) {
+        NSString *title = NSLocalizedString(@"What's New", @"What's New");
+        NSString *message = NSLocalizedString(@"New feature information ver.1.1.0.", @"New feature information.");
+        [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIViewController *)topMostController
+{
+    UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    while (topController.presentedViewController) {
+        topController = topController.presentedViewController;
+    }
+    return topController;
+}
+
+- (BOOL)isTopMostViewController
+{
+    return [self topMostController] == self;
+}
+
+- (void)loadingBeginWithNetwork:(BOOL)network
+{
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    [SVProgressHUD show];
+    if (network) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    }
+}
+
+- (void)loadEndWithNetwork:(BOOL)network
+{
+    if (network) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    }
+    [SVProgressHUD dismiss];
+    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
 }
 
 - (void)showAlertDialogWithTitle:(NSString *)title
@@ -66,6 +110,9 @@
         [alertView bk_addButtonWithTitle:NSLocalizedString(@"OK", @"OK") handler:handler2];
         alertView.bk_willShowBlock = ^(UIAlertView *alertView) {
             [self willPresentAlertView:alertView];
+        };
+        alertView.bk_didDismissBlock = ^(UIAlertView *alertView, NSInteger buttonIndex) {
+            [self alertView:alertView didDismissWithButtonIndex:buttonIndex];
         };
         [alertView show];
     }
@@ -102,6 +149,9 @@
         [alertView bk_addButtonWithTitle:NSLocalizedString(@"OK", @"OK") handler:handler2];
         alertView.bk_willShowBlock = ^(UIAlertView *alertView) {
             [self willPresentAlertView:alertView];
+        };
+        alertView.bk_didDismissBlock = ^(UIAlertView *alertView, NSInteger buttonIndex) {
+            [self alertView:alertView didDismissWithButtonIndex:buttonIndex];
         };
         [alertView show];
     }
@@ -153,6 +203,9 @@
         actionSheet.bk_willShowBlock = ^(UIActionSheet *actionSheet) {
             [self willPresentActionSheet:actionSheet];
         };
+        actionSheet.bk_didDismissBlock = ^(UIActionSheet *actionSheet, NSInteger buttonIndex) {
+            [self actionSheet:actionSheet didDismissWithButtonIndex:buttonIndex];
+        };
         [actionSheet showInView:self.view];
     }
 }
@@ -170,6 +223,10 @@
     [body setTextColor:[UIColor whiteColor]];
 }
 
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+}
+
 #pragma mark - UIActionSheetDelegate like
 
 - (void)willPresentActionSheet:(UIActionSheet *)actionSheet
@@ -185,6 +242,10 @@
             [b setTitleColor:[CMBUtility tintColor] forState:UIControlStateNormal];
         }
     }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
 }
 
 #pragma mark - Ad
@@ -222,6 +283,14 @@
                                   attribute:NSLayoutAttributeTop
                                  multiplier:1.f
                                    constant:0.f]];
+    [_bannerFrameView addConstraint:
+     [NSLayoutConstraint constraintWithItem:_bannerView
+                                  attribute:NSLayoutAttributeCenterX
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:_bannerFrameView
+                                  attribute:NSLayoutAttributeCenterX
+                                 multiplier:1.f
+                                   constant:0.f]];
 }
 
 - (void)hideAd
@@ -250,6 +319,26 @@
 - (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error
 {
     DPRINT(@"adView:didFailToReceiveAdWithError:%@", [error localizedDescription]);
+}
+
+#pragma mark - Network
+
+- (NetworkStatus)checkNetworkStatus
+{
+    Reachability *reachability = [Reachability reachabilityWithHostName:@"google.com"];
+    NetworkStatus status = [reachability currentReachabilityStatus];
+    switch (status) {
+        case NotReachable:
+        {
+            NSString *title = NSLocalizedString(@"Network", @"Network");
+            NSString *message = NSLocalizedString(@"Network is offline.", @"The message when network is offline.");
+            [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
+            break;
+        }
+        default:
+            break;
+    }
+    return status;
 }
 
 @end

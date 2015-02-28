@@ -1,3 +1,9 @@
+/* Update */
+"What's New" = "What's New";
+
+/* Update information. */
+"New feature information ver.1.1.0." = "・Facebook/Twitter/LINE/Mail で曲をシェアできるようになりました。\n・作曲者を編集できるようになりました。\n・ヘルプを見れるようになりました。";
+
 /* (No Commment) */
 "Cancel" = "キャンセル";
 
@@ -8,7 +14,7 @@
 "Delete song" = "曲を消す";
 
 /* (No Commment) */
-"Fail to save %@." = "%@ を保存するのに失敗しました。";
+"Failed to save %@." = "%@ を保存するのに失敗しました。";
 
 /* (No Commment) */
 "Failed to delete %@." = "%@ を消すのに失敗しました。";
@@ -23,7 +29,7 @@
 "Failed to send the mail." = "メールを送るのに失敗しました。";
 
 /* The message when you failed to load sound resources. */
-"Fail to load sound resources." = "サウンドの読み込みに失敗しました。";
+"Failed to load sound resources." = "サウンドの読み込みに失敗しました。";
 
 /* The message when you should choose the name of this song before save. */
 "Choose the title of this song before save." = "曲のタイトルを決めてください。";
@@ -46,8 +52,17 @@
 /* (No Commment) */
 "LINE" = "LINE";
 
+/* Twitter */
+"Twitter" = "Twitter";
+
+/* Facebook */
+"Facebook" = "Facebook";
+
 /* Sound */
 "Sound" = "サウンド";
+
+/* Server */
+"Server" = "サーバ";
 
 /* (No Commment) */
 "OK" = "OK";
@@ -56,7 +71,7 @@
 "Open URL" = "URLを開く";
 
 /* (No Commment) */
-"This is my music box." = "オルゴール";
+"This is my music box." = "オルゴール作りました。";
 
 /* (No Commment) */
 "You wanna delete %@?" = "本当に %@ を消しますか？";
@@ -85,6 +100,9 @@
 /* Manage my songs. */
 "Manage my songs" = "作った曲たち";
 
+/* Help */
+"Help" = "ヘルプ";
+
 /* Song title is none. */
 "No title" = "新しい曲";
 
@@ -93,3 +111,27 @@
 
 /* The message to confirm you want to remove times where is some notes. */
 "You wanna remove times where is some notes?" = "削除範囲に音符があります。本当にタイムを削除しますか？";
+
+/* The message when you failed to share the song. */
+"Failed to share the song." = "曲のシェアに失敗しました。";
+
+/* Network */
+"Network" = "ネットワーク";
+
+/* The message when network is offline. */
+"Network is offline." = "インターネットに接続できません。";
+
+/* The message to confirm you want to load the song from URL. */
+"You wanna load the song from URL?" = "%@ を開きますか？（今開いている曲は保存されません）";
+
+/* Song */
+"Song" = "曲";
+
+/* The message when song is invalid. */
+"Song is invalid." = "不正な曲です。(System Error)";
+
+/* The message when song is empty. */
+"Song is empty." = "曲が空です。";
+
+/* The message when song title is empty. */
+"Song title is empty." = "曲のタイトルが空です。";

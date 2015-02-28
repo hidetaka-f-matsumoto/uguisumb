@@ -1,3 +1,9 @@
+/* Update */
+"What's New" = "What's New";
+
+/* Update information. */
+"New feature information ver.1.1.0." = "- Song sharing on Facebook/Twitter/LINE/Mail is available.\n- Composer's name become editable.\n- Help is available.";
+
 /* Cancel */
 "Cancel" = "Cancel";
 
@@ -8,7 +14,7 @@
 "Delete song" = "Delete song";
 
 /* The message when you failed to save the song with name %@. */
-"Fail to save %@." = "Fail to save %@.";
+"Failed to save %@." = "Failed to save %@.";
 
 /* The message when failed to delete the song with name %@ */
 "Failed to delete %@." = "Failed to delete %@.";
@@ -23,7 +29,7 @@
 "Failed to send the mail." = "Failed to send the mail.";
 
 /* The message when you failed to load sound resources. */
-"Fail to load sound resources." = "Fail to load sound resources.";
+"Failed to load sound resources." = "Failed to load sound resources.";
 
 /* The message when you should choose the name of this song before save. */
 "Choose the title of this song before save." = "Choose the title of this song before save.";
@@ -46,8 +52,17 @@
 /* LINE */
 "LINE" = "LINE";
 
+/* Twitter */
+"Twitter" = "Twitter";
+
+/* Facebook */
+"Facebook" = "Facebook";
+
 /* Sound */
 "Sound" = "Sound";
+
+/* Server */
+"Server" = "Server";
 
 /* OK */
 "OK" = "OK";
@@ -55,8 +70,8 @@
 /* Open URL. */
 "Open URL" = "Open URL";
 
-/* The subject of the mail to send the song. */
-"This is my music box." = "This is my music box.";
+/* The message when you send the song. */
+"This is my music box." = "I made my music box.";
 
 /* The message to confirm you want to delete the song with name %@. */
 "You wanna delete %@?" = "Are you sure you want to delete %@?";
@@ -85,6 +100,9 @@
 /* Manage my songs. */
 "Manage my songs" = "My songs";
 
+/* Help */
+"Help" = "Help";
+
 /* Song title is none. */
 "No title" = "New song";
 
@@ -93,3 +111,27 @@
 
 /* The message to confirm you want to remove times where is some notes. */
 "You wanna remove times where is some notes?" = "Are you sure you want to remove times, but there is some notes?";
+
+/* The message when you failed to share the song. */
+"Failed to share the song." = "Failed to share the song.";
+
+/* Network */
+"Network" = "Network";
+
+/* The message when network is offline. */
+"Network is offline." = "Failed to connect to the Internet.";
+
+/* The message to confirm you want to load the song from URL. */
+"You wanna load the song from URL?" = "Are you sure you want to load %@? (The current song is not saved.)";
+
+/* Song */
+"Song" = "Song";
+
+/* The message when song is invalid. */
+"Song is invalid." = "Song is invalid. (System Error)";
+
+/* The message when song is empty. */
+"Song is empty." = "Song is empty.";
+
+/* The message when song title is empty. */
+"Song title is empty." = "Song title is empty.";

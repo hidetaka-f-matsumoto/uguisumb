@@ -11,6 +11,7 @@
 @interface CMBSongHeaderData : NSObject
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *composer;
 @property (nonatomic, strong) NSNumber *speed;
 @property (nonatomic, strong) NSNumber *division1;
 @property (nonatomic, strong) NSNumber *division2;

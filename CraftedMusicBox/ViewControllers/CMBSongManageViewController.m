@@ -26,12 +26,6 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _songInfos = [[CMBUtility sharedInstance] getSongInfos];
-    
-    // 通知を登録
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(musicBoxDidOpen:)
-                                                 name:CMBNotifyURLOpenMusicBox
-                                               object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -230,14 +224,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                           withRowAnimation:UITableViewRowAnimationAutomatic];
     // デリゲートに通知
     [_delegate songDidDeleteWithFileName:songInfo[@"name"]];
-}
-
-#pragma mark - CMBNotifyURLOpenMusicBox
-
-- (void)musicBoxDidOpen:(NSNotification *)notif
-{
-    // 閉じる
-    [self closeButtonDidTap:nil];
 }
 
 @end

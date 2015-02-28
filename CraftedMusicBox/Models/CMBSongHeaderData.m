@@ -21,6 +21,7 @@
     if (self) {
         NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
         _name = (info && info[@"name"]) ? info[@"name"] : @"";
+        _composer = (info && info[@"composer"]) ? info[@"composer"] : @"";
         _speed = (info && info[@"speed"]) ? info[@"speed"] : [NSNumber numberWithFloat:CMBSpeedDefault];
         _division1 = (info && info[@"division1"]) ? info[@"division1"] : [NSNumber numberWithInteger:CMBDivisionDefault];
         _division2 = (info && info[@"division2"]) ? info[@"division2"] : [NSNumber numberWithInteger:CMBDivisionDefault];
@@ -36,6 +37,7 @@
     return [NSDictionary dictionaryWithObjectsAndKeys:
             version, @"version", // set current app version.
             _name, @"name",
+            _composer, @"composer",
             _speed, @"speed",
             _division1, @"division1",
             _division2, @"division2",

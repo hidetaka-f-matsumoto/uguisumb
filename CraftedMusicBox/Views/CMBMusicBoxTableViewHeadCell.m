@@ -8,11 +8,20 @@
 
 #import "CMBMusicBoxTableViewHeadCell.h"
 
+@interface CMBMusicBoxTableViewHeadCell ()
+{
+    NSString *_octDownLabelText;
+    NSString *_octUpLabelText;
+}
+@end
+
 @implementation CMBMusicBoxTableViewHeadCell
 
 - (void)_init
 {
     _delegate = nil;
+    _octDownLabelText = _octDownLabel.text;
+    _octUpLabelText = _octUpLabel.text;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -48,13 +57,17 @@
     switch ([_delegate getCurrentOctave]) {
         case CMBOctaveMin:
             _octDownLabel.text = nil;
+            _octUpLabel.text = _octUpLabelText;
             break;
             
         case CMBOctaveMax:
+            _octDownLabel.text = _octDownLabelText;
             _octUpLabel.text = nil;
             break;
             
         default:
+            _octDownLabel.text = _octDownLabelText;
+            _octUpLabel.text = _octUpLabelText;
             break;
     }
 }

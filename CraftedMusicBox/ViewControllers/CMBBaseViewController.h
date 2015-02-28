@@ -13,6 +13,7 @@
 #import "SVProgressHUD.h"
 #import "CMBUtility.h"
 #import "CMBAlertController.h"
+#import "Reachability.h"
 
 @interface CMBBaseViewController : UIViewController <GADBannerViewDelegate>
 {
@@ -22,6 +23,10 @@
 @property (nonatomic, weak) IBOutlet UIView *bannerFrameView;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *bannerFrameHeightConstraint;
 
+- (UIViewController *)topMostController;
+- (BOOL)isTopMostViewController;
+- (void)loadingBeginWithNetwork:(BOOL)network;
+- (void)loadEndWithNetwork:(BOOL)network;
 - (void)showAlertDialogWithTitle:(NSString *)title
                          message:(NSString *)message
                         handler1:(void (^)(UIAlertAction *action))handler1
@@ -34,6 +39,6 @@
                          message:(NSString *)message
                         buttons1:(NSArray *)buttons1
                         buttons2:(NSArray *)buttons2;
-
+- (NetworkStatus)checkNetworkStatus;
 
 @end

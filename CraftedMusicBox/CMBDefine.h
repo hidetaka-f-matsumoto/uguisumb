@@ -17,13 +17,31 @@
 static NSString * const MY_BANNER_UNIT_ID = @"ca-app-pub-5633935352729199/5879342265";
 
 /**
- * URL
+ * URL Scheme
  */
 static NSString * const CMBURLScheme = @"uguisumb";
 static NSString * const CMBURLControllerMusicBox = @"mb";
 static NSString * const CMBURLActionLoadSong = @"load";
 static NSString * const CMBURLParamVersion = @"ver";
 static NSString * const CMBURLParamSong = @"song";
+
+/**
+ * Server
+ */
+static NSString * const CMBSvSupportURL = @"https://uguisumb.herokuapp.com/support/";
+static NSString * const CMBSvApiURL = @"https://uguisumb.herokuapp.com/api/";
+static NSString * const CMBSvViewURL = @"https://uguisumb.herokuapp.com/html/";
+static NSString * const CMBSvActionSongReg = @"song.register.php";
+static NSString * const CMBSvActionSongLink = @"song.link.php";
+static NSString * const CMBSvQuerySong = @"song";
+static NSString * const CMBSvQuerySongKey = @"key";
+static NSString * const CMBSvQuerySongTitle = @"title";
+static NSString * const CMBSvQuerySongComposer = @"composer";
+
+/**
+ * SNS
+ */
+static NSString * const CMBHashTag = @"#UguisuMB";
 
 /**
  * Song

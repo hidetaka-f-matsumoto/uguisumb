@@ -20,4 +20,16 @@
     [_delegate musicBoxDidRequestRemoveTime];
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    [self update];
+}
+
+- (void)update
+{
+    _composerLabel.text = [_delegate getComposer];
+}
+
 @end
