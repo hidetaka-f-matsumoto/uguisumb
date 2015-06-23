@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CMBSequenceOneData.h"
+#import "SWTableViewCell.h"
 
 static CGFloat const CMBMusicBoxTableViewCellHeightForLoad  = 11.f;
 static CGFloat const CMBMusicBoxTableViewCellHeight         = 44.f;
@@ -33,9 +34,9 @@ static CGFloat const CMBMusicBoxNoteButtonWidth_iPad        = 44.f;
 /**
  * 1シーケンスのCell
  */
-@interface CMBMusicBoxTableViewCell : UITableViewCell
+@interface CMBMusicBoxTableViewCell : SWTableViewCell
 
-@property (nonatomic, assign) id<CMBMusicBoxTableViewCellDelegate> delegate;
+@property (nonatomic, assign) id<CMBMusicBoxTableViewCellDelegate, SWTableViewCellDelegate> delegate;
 @property (nonatomic, assign) UITableView *parentTableView;
 @property (nonatomic, assign) UIView *tineView;
 

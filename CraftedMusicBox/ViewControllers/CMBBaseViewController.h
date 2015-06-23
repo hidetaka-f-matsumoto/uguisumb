@@ -26,7 +26,7 @@
 - (UIViewController *)topMostController;
 - (BOOL)isTopMostViewController;
 - (void)loadingBeginWithNetwork:(BOOL)network;
-- (void)loadEndWithNetwork:(BOOL)network;
+- (void)loadingEndWithNetwork:(BOOL)network;
 - (void)showAlertDialogWithTitle:(NSString *)title
                          message:(NSString *)message
                         handler1:(void (^)(UIAlertAction *action))handler1

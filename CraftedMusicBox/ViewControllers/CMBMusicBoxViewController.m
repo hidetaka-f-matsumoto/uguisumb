@@ -19,6 +19,7 @@
     BOOL _isFirstViewWillAppear;
     BOOL _isFirstViewDidAppear;
     BOOL _isCellPrepared;
+    BOOL _isOctaveChanging;
     CGPoint _scrollPointBegin;
     CGFloat _headViewTopConstraintConstantOriginal;
     NSMutableDictionary *_sequences; // Dictionary<NSNumber *, CMBSequenceOneData *>
@@ -38,6 +39,7 @@
     _isFirstViewWillAppear = YES;
     _isFirstViewDidAppear = YES;
     _isCellPrepared = NO;
+    _isOctaveChanging = NO;
     // 初期状態はカーテンあり
     _curtainView.backgroundColor = [CMBUtility whiteColor];
     // 通知を登録
@@ -488,52 +490,51 @@
 }
 
 /**
- * スワイプハンドラ (左)
+ * オクターブスイッチドラッグ
  */
-- (IBAction)tableViewDidSwipeLeft:(id)sender
+- (IBAction)octSwDidDrag:(id)sender
+{
+    UIPanGestureRecognizer *pan = (UIPanGestureRecognizer *)sender;
+    // ドラッグ終わり
+    if (UIGestureRecognizerStateEnded == pan.state) {
+        pan.view.transform = CGAffineTransformMakeRotation(0.f);
+    }
+    // ドラッグ中
+    else {
+        CGPoint point = [pan translationInView:self.view];
+        CGFloat amount = point.x + point.y;
+        CGFloat angle = M_PI * amount / 800.f; // とりあえず、いい感じに調整
+        CGPoint center = CGPointMake(-1 * _octaveSwitch.bounds.size.width, _octaveSwitch.bounds.size.height);
+        DPRINT(@"[OCT SW ROTATE] angle = %f, center = (%f, %f)", angle, center.x, center.y);
+        pan.view.transform = CGAffineTransformMakeRotationAt(angle, center);
+    }
+}
+
+CGAffineTransform CGAffineTransformMakeRotationAt(CGFloat angle, CGPoint pt) {
+    const CGFloat fx = pt.x, fy = pt.y, fcos = cos(angle), fsin = sin(angle);
+    return CGAffineTransformMake(fcos, fsin, -fsin, fcos, fx - fx * fcos + fy * fsin, fy - fx * fsin - fy * fcos);
+}
+
+/**
+ * オクターブ上げボタン
+ */
+- (IBAction)octUpButtonDidTap:(id)sender
 {
     if (CMBOctaveMax > _currentOctave) {
-        _currentOctave++;
-        // 表示更新
-        [self updateViewsWithResetScroll:NO animation:YES completion:^(BOOL finished) {
-            // zoom in-out
-            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-            // アニメーションのオプションを設定
-            animation.duration = 0.25f;
-            animation.repeatCount = 1;
-            animation.autoreverses = YES;
-            // 拡大・縮小倍率を設定
-            animation.fromValue = [NSNumber numberWithFloat:1.f];
-            animation.toValue = [NSNumber numberWithFloat:3.f];
-            // アニメーションを追加
-            [_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
-        }];
+        [self octaveUp];
     }
 }
 
 /**
- * スワイプハンドラ (右)
+ * オクターブ下げボタン
  */
-- (IBAction)tableViewDidSwipeRight:(id)sender
+- (IBAction)octDownButtonDidTap:(id)sender
 {
     if (CMBOctaveMin < _currentOctave) {
-        _currentOctave--;
-        // 表示更新
-        [self updateViewsWithResetScroll:NO animation:YES completion:^(BOOL finished) {
-            // zoom in-out
-            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-            // アニメーションのオプションを設定
-            animation.duration = 0.25f;
-            animation.repeatCount = 1;
-            animation.autoreverses = YES;
-            // 拡大・縮小倍率を設定
-            animation.fromValue = [NSNumber numberWithFloat:1.f];
-            animation.toValue = [NSNumber numberWithFloat:3.f];
-            // アニメーションを追加
-            [_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
-        }];
+        [self octaveDown];
     }
 }
+
 
 #pragma mark - Control Views
 
@@ -612,6 +613,60 @@
          // Forces the layout of the subtree animation block and then captures all of the frame changes
          [self.view layoutIfNeeded];
      }];
+}
+
+/**
+ * オクターブ上げ
+ */
+- (void)octaveUp {
+    if (_isOctaveChanging) {
+        return;
+    }
+    _isOctaveChanging = YES;
+    _currentOctave++;
+    // 表示更新
+    [self updateViewsWithResetScroll:NO animation:YES completion:^(BOOL finished) {
+        // zoom in-out
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        // アニメーションのオプションを設定
+        animation.duration = 0.25f;
+        animation.repeatCount = 1;
+        animation.autoreverses = YES;
+        // 拡大・縮小倍率を設定
+        animation.fromValue = [NSNumber numberWithFloat:1.f];
+        animation.toValue = [NSNumber numberWithFloat:3.f];
+        // アニメーションを追加
+        [_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
+        _isOctaveChanging = NO;
+    }];
+}
+
+/**
+ * オクターブ下げ
+ */
+- (void)octaveDown {
+    if (_isOctaveChanging) {
+        return;
+    }
+    _isOctaveChanging = YES;
+    _currentOctave--;
+    // 表示更新
+    [self updateViewsWithResetScroll:NO animation:YES completion:^(BOOL finished) {
+        // zoom in-out
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        // アニメーションのオプションを設定
+        animation.duration = 0.25f;
+        animation.repeatCount = 1;
+        animation.autoreverses = YES;
+        // 拡大・縮小倍率を設定
+        animation.fromValue = [NSNumber numberWithFloat:1.f];
+        animation.toValue = [NSNumber numberWithFloat:3.f];
+        // アニメーションを追加
+        [_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
+        // ローディング表示OFF
+        [self loadingEndWithNetwork:NO];
+        _isOctaveChanging = NO;
+    }];
 }
 
 #pragma mark - Etcs
@@ -710,6 +765,8 @@
             mbCell.delegate = self;
             mbCell.parentTableView = _tableView;
             mbCell.tineView = _tineView;
+            mbCell.rightUtilityButtons = [self rightButtons];
+            mbCell.leftUtilityButtons = [self leftButtons];
             cell = mbCell;
             break;
         }
@@ -757,6 +814,15 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 3;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if([indexPath row] == ((NSIndexPath*)[[tableView indexPathsForVisibleRows] lastObject]).row){
+        //end of loading
+        //for example [activityIndicator stopAnimating];
+        DPRINT(@"hogeeeeeee");
+    }
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -984,7 +1050,7 @@
     // 表示更新
     [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
         // 読み込み中を非表示
-        [self loadEndWithNetwork:NO];
+        [self loadingEndWithNetwork:NO];
     }];
 }
 
@@ -1051,7 +1117,7 @@
     // 表示更新
     [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
         // 読み込み中を非表示
-        [self loadEndWithNetwork:NO];
+        [self loadingEndWithNetwork:NO];
     }];
 }
 
@@ -1256,7 +1322,7 @@
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self loadEndWithNetwork:YES];
+                [self loadingEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
@@ -1272,7 +1338,7 @@
         if (error2) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self loadEndWithNetwork:YES];
+                [self loadingEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
@@ -1286,7 +1352,7 @@
         if (200 != [dict[@"result"][@"status"] integerValue]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self loadEndWithNetwork:YES];
+                [self loadingEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:dict[@"result"][@"message"]
@@ -1298,7 +1364,7 @@
         // 正常処理
         dispatch_async(dispatch_get_main_queue(), ^{
             // 通信中表示off
-            [self loadEndWithNetwork:YES];
+            [self loadingEndWithNetwork:YES];
             // ハンドラ
             handler(dict);
         });
@@ -1307,6 +1373,54 @@
     [self loadingBeginWithNetwork:YES];
     // タスク開始
     [task resume];
+}
+
+# pragma mark -
+
+- (NSArray *)rightButtons
+{
+    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
+    NSAttributedString *loadStr =
+    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Load", @"Load")
+                                    attributes:@{
+                                                 NSFontAttributeName : [CMBUtility fontForButton],
+                                                 NSForegroundColorAttributeName : [CMBUtility whiteColor],
+                                                 }];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility greenColor]
+                                      attributedTitle:loadStr];
+    NSAttributedString *deleteStr =
+    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Delete", @"Delete")
+                                    attributes:@{
+                                                 NSFontAttributeName : [CMBUtility fontForButton],
+                                                 NSForegroundColorAttributeName : [CMBUtility whiteColor],
+                                                 }];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility redColor]
+                                      attributedTitle:deleteStr];
+    
+    return rightUtilityButtons;
+}
+
+- (NSArray *)leftButtons
+{
+    NSMutableArray *leftUtilityButtons = [NSMutableArray new];
+    NSAttributedString *loadStr =
+    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Load", @"Load")
+                                    attributes:@{
+                                                 NSFontAttributeName : [CMBUtility fontForButton],
+                                                 NSForegroundColorAttributeName : [CMBUtility whiteColor],
+                                                 }];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility greenColor]
+                                      attributedTitle:loadStr];
+    NSAttributedString *deleteStr =
+    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Delete", @"Delete")
+                                    attributes:@{
+                                                 NSFontAttributeName : [CMBUtility fontForButton],
+                                                 NSForegroundColorAttributeName : [CMBUtility whiteColor],
+                                                 }];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility redColor]
+                                      attributedTitle:deleteStr];
+    
+    return leftUtilityButtons;
 }
 
 #pragma mark - Debug.
