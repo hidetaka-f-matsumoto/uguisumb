@@ -500,12 +500,12 @@
     CGFloat angle = M_PI * amount / 800.f; // とりあえず、いい感じに調整
     // ドラッグ終わり
     if (UIGestureRecognizerStateEnded == pan.state) {
-        // 20[deg]より大きかったら、オクターブ上げ
-        if (M_PI*20.f/180.f < angle) {
+        // 一定角度より大きかったら、オクターブ上げ
+        if (M_PI*10.f/180.f < angle) {
             [self octaveUp];
         }
-        // -20[deg]より小さかったら、オクターブ下げ
-        else if (-M_PI*20.f/180.f > angle) {
+        // 一定角度より小さかったら、オクターブ下げ
+        else if (-M_PI*10.f/180.f > angle) {
             [self octaveDown];
         }
         pan.view.transform = CGAffineTransformMakeRotation(0.f);
