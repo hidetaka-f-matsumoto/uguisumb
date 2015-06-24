@@ -495,46 +495,27 @@
 - (IBAction)octSwDidDrag:(id)sender
 {
     UIPanGestureRecognizer *pan = (UIPanGestureRecognizer *)sender;
+    CGPoint point = [pan translationInView:self.view];
+    CGFloat amount = point.x + point.y;
+    CGFloat angle = M_PI * amount / 800.f; // とりあえず、いい感じに調整
     // ドラッグ終わり
     if (UIGestureRecognizerStateEnded == pan.state) {
+        // 20[deg]より大きかったら、オクターブ上げ
+        if (M_PI*20.f/180.f < angle) {
+            [self octaveUp];
+        }
+        // -20[deg]より小さかったら、オクターブ下げ
+        else if (-M_PI*20.f/180.f > angle) {
+            [self octaveDown];
+        }
         pan.view.transform = CGAffineTransformMakeRotation(0.f);
     }
     // ドラッグ中
     else {
-        CGPoint point = [pan translationInView:self.view];
-        CGFloat amount = point.x + point.y;
-        CGFloat angle = M_PI * amount / 800.f; // とりあえず、いい感じに調整
         CGPoint center = CGPointMake(-1 * _octaveSwitch.bounds.size.width, _octaveSwitch.bounds.size.height);
-        DPRINT(@"[OCT SW ROTATE] angle = %f, center = (%f, %f)", angle, center.x, center.y);
         pan.view.transform = CGAffineTransformMakeRotationAt(angle, center);
     }
 }
-
-CGAffineTransform CGAffineTransformMakeRotationAt(CGFloat angle, CGPoint pt) {
-    const CGFloat fx = pt.x, fy = pt.y, fcos = cos(angle), fsin = sin(angle);
-    return CGAffineTransformMake(fcos, fsin, -fsin, fcos, fx - fx * fcos + fy * fsin, fy - fx * fsin - fy * fcos);
-}
-
-/**
- * オクターブ上げボタン
- */
-- (IBAction)octUpButtonDidTap:(id)sender
-{
-    if (CMBOctaveMax > _currentOctave) {
-        [self octaveUp];
-    }
-}
-
-/**
- * オクターブ下げボタン
- */
-- (IBAction)octDownButtonDidTap:(id)sender
-{
-    if (CMBOctaveMin < _currentOctave) {
-        [self octaveDown];
-    }
-}
-
 
 #pragma mark - Control Views
 
@@ -619,7 +600,7 @@ CGAffineTransform CGAffineTransformMakeRotationAt(CGFloat angle, CGPoint pt) {
  * オクターブ上げ
  */
 - (void)octaveUp {
-    if (_isOctaveChanging) {
+    if (CMBOctaveMax <= _currentOctave || _isOctaveChanging) {
         return;
     }
     _isOctaveChanging = YES;
@@ -645,7 +626,7 @@ CGAffineTransform CGAffineTransformMakeRotationAt(CGFloat angle, CGPoint pt) {
  * オクターブ下げ
  */
 - (void)octaveDown {
-    if (_isOctaveChanging) {
+    if (CMBOctaveMin >= _currentOctave || _isOctaveChanging) {
         return;
     }
     _isOctaveChanging = YES;
