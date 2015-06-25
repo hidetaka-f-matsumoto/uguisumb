@@ -658,8 +658,8 @@
 - (BOOL)isNotesFrom:(NSInteger)from to:(NSInteger)to
 {
     BOOL isNotes = NO;
-    for (NSInteger i=from-1; i<=to-1; i++) {
-        CMBSequenceOneData * soData = _sequences[[NSNumber numberWithInteger:i]];
+    for (NSInteger i=from; i<=to; i++) {
+        CMBSequenceOneData *soData = _sequences[[NSNumber numberWithInteger:i]];
         isNotes |= soData && [soData isNotes];
     }
     return isNotes;
@@ -671,13 +671,59 @@
 - (void)changeLength:(NSInteger)length
 {
     // 無くなる範囲のシーケンスを消去
-    for (NSInteger i=length; i<=_header.length.integerValue-1; i++) {
+    for (NSInteger i=length; i<_header.length.integerValue; i++) {
         [_sequences removeObjectForKey:[NSNumber numberWithInteger:i]];
     }
     // length更新
     _header.length = [NSNumber numberWithInteger:length];
     // 表示更新
     [_tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+/**
+ * 行挿入
+ */
+- (void)insertRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 追加行より後ろのデータをずらす
+    for (NSInteger i=_header.length.integerValue-1; i>=indexPath.row; i--) {
+        NSNumber *curr = [NSNumber numberWithInteger:i];
+        NSNumber *new = [NSNumber numberWithInteger:(i + 1)];
+        CMBSequenceOneData *soData = _sequences[curr];
+        if (!soData) {
+            continue;
+        }
+        [_sequences removeObjectForKey:curr];
+        _sequences[new] = soData;
+    }
+    // length更新
+    _header.length = [NSNumber numberWithInteger:(_header.length.integerValue + 1)];
+    // 描画更新
+    [_tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+/**
+ * 行削除
+ */
+- (void)deleteRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // シーケンスから削除
+    [_sequences removeObjectForKey:[NSNumber numberWithInteger:indexPath.row]];
+    // 追加行より後ろのデータをずらす
+    for (NSInteger i=indexPath.row; i<_header.length.integerValue; i++) {
+        NSNumber *curr = [NSNumber numberWithInteger:i];
+        NSNumber *new = [NSNumber numberWithInteger:(i - 1)];
+        CMBSequenceOneData *soData = _sequences[curr];
+        if (!soData) {
+            continue;
+        }
+        [_sequences removeObjectForKey:curr];
+        _sequences[new] = soData;
+    }
+    // length更新
+    _header.length = [NSNumber numberWithInteger:(_header.length.integerValue - 1)];
+    // 描画更新
+    [_tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 /**
@@ -747,7 +793,6 @@
             mbCell.parentTableView = _tableView;
             mbCell.tineView = _tineView;
             mbCell.rightUtilityButtons = [self rightButtons];
-            mbCell.leftUtilityButtons = [self leftButtons];
             cell = mbCell;
             break;
         }
@@ -989,7 +1034,7 @@
         newLen = 0;
     }
     // 削除範囲に音符がある場合
-    if ([self isNotesFrom:(newLen + 1) to:_header.length.integerValue]) {
+    if ([self isNotesFrom:newLen to:(_header.length.integerValue - 1)]) {
         // 確認ダイアログ
         NSString *title = NSLocalizedString(@"Remove time", @"Remove time");
         NSString *message = [NSString stringWithFormat:
@@ -1356,13 +1401,50 @@
     [task resume];
 }
 
-# pragma mark -
+# pragma mark - SWTableViewCellDelegate
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index
+{
+    CMBMusicBoxTableViewCell *mbCell = (CMBMusicBoxTableViewCell *)cell;
+    NSIndexPath *indexPath = [_tableView indexPathForCell:mbCell];
+    switch (index) {
+        case 0: // 挿入
+        {
+            [self insertRowAtIndexPath:indexPath];
+            break;
+        }
+        case 1: // 削除
+        {
+            BOOL isNotes = [self isNotesFrom:indexPath.row to:indexPath.row];
+            // 音符がある場合
+            if (isNotes) {
+                NSString *title = NSLocalizedString(@"Remove time", @"Remove time");
+                NSString *message = NSLocalizedString(@"You wanna remove times where is some notes?", @"The message to confirm you want to remove times where is some notes.");
+                [self showConfirmDialogWithTitle:title
+                                         message:message
+                                        handler1:^(UIAlertAction *action) {
+                                            [self deleteRowAtIndexPath:indexPath];
+                                        }
+                                        handler2:^(void) {
+                                            [self deleteRowAtIndexPath:indexPath];
+                                        }];
+            }
+            // 音符が無い場合
+            else {
+                [self deleteRowAtIndexPath:indexPath];
+            }
+            break;
+        }
+        default:
+            break;
+    }
+}
 
 - (NSArray *)rightButtons
 {
     NSMutableArray *rightUtilityButtons = [NSMutableArray new];
     NSAttributedString *loadStr =
-    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Load", @"Load")
+    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Insert", @"Insert")
                                     attributes:@{
                                                  NSFontAttributeName : [CMBUtility fontForButton],
                                                  NSForegroundColorAttributeName : [CMBUtility whiteColor],
@@ -1379,29 +1461,6 @@
                                       attributedTitle:deleteStr];
     
     return rightUtilityButtons;
-}
-
-- (NSArray *)leftButtons
-{
-    NSMutableArray *leftUtilityButtons = [NSMutableArray new];
-    NSAttributedString *loadStr =
-    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Load", @"Load")
-                                    attributes:@{
-                                                 NSFontAttributeName : [CMBUtility fontForButton],
-                                                 NSForegroundColorAttributeName : [CMBUtility whiteColor],
-                                                 }];
-    [leftUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility greenColor]
-                                      attributedTitle:loadStr];
-    NSAttributedString *deleteStr =
-    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Delete", @"Delete")
-                                    attributes:@{
-                                                 NSFontAttributeName : [CMBUtility fontForButton],
-                                                 NSForegroundColorAttributeName : [CMBUtility whiteColor],
-                                                 }];
-    [leftUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility redColor]
-                                      attributedTitle:deleteStr];
-    
-    return leftUtilityButtons;
 }
 
 #pragma mark - Debug.
