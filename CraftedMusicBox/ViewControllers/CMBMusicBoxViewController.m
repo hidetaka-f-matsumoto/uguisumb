@@ -58,16 +58,6 @@
     _sequences = [NSMutableDictionary dictionary];
     _header = [[CMBSongHeaderData alloc] init];
     _currentOctave = CMBOctaveBase;
-    
-    [self updateHeader];
-}
-
-- (void)updateHeader
-{
-    for (NSInteger i=0; i<_scaleLabels.count; i++) {
-        UILabel* label = _scaleLabels[i];
-        label.text = CMBScaleNames[@"iroha"][i];
-    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -542,8 +532,8 @@
         // スクロール初期位置
         _tableView.contentOffset = CGPointMake(0, 0);
     }
-    // タイトル更新
-    _titleLabel.text = (_header.name && 0 < _header.name.length) ? _header.name : NSLocalizedString(@"No title", @"Song title is none.");
+    // ヘッダビュー更新
+    [self updateHeadView];
     // オクターブ表示更新
     _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
     // テーブルビュー更新
@@ -558,6 +548,27 @@
     // 後処理
     if (completion) {
         completion(YES);
+    }
+}
+
+/**
+ * ヘッダ表示更新
+ */
+- (void)updateHeadView
+{
+    // タイトル更新
+    _titleLabel.text = (_header.name && 0 < _header.name.length) ? _header.name : NSLocalizedString(@"No title", @"Song title is none.");
+    // 音階表示更新
+    const NSString *scaleMode = _header.scaleMode;
+    NSArray *names = CMBScaleNames[scaleMode];
+    UIFont *font = [UIFont fontWithName:@"SetoFont-SP" size:19.f];
+    if ([scaleMode isEqualToString:@"doremi"] || [scaleMode isEqualToString:@"haniho"]) {
+        font = [UIFont fontWithName:@"SetoFont-SP" size:16.f];
+    }
+    for (NSInteger i=0; i<_scaleLabels.count; i++) {
+        UILabel *label = _scaleLabels[i];
+        label.font = font;
+        label.text = names[i];
     }
 }
 

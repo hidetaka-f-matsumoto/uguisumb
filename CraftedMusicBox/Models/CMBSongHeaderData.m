@@ -26,6 +26,7 @@
         _division1 = (info && info[@"division1"]) ? info[@"division1"] : [NSNumber numberWithInteger:CMBDivisionDefault];
         _division2 = (info && info[@"division2"]) ? info[@"division2"] : [NSNumber numberWithInteger:CMBDivisionDefault];
         _length = (info && info[@"length"]) ? info[@"length"] : [NSNumber numberWithInteger:CMBSequenceTimeDefault];
+        _scaleMode = (info && info[@"scale_mode"]) ? info[@"scale_mode"] : @"normal";
         _version = (info && info[@"version"]) ? info[@"version"] : version;
     }
     return self;
@@ -42,6 +43,7 @@
             _division1, @"division1",
             _division2, @"division2",
             _length, @"length",
+            _scaleMode, @"scale_mode",
             nil];
 }
 

@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSNumber *division1;
 @property (nonatomic, strong) NSNumber *division2;
 @property (nonatomic, strong) NSNumber *length;
+@property (nonatomic, strong) NSString *scaleMode;
 @property (nonatomic, strong) NSString *version;
 
 - (id)initWithInfo:(NSDictionary *)info;

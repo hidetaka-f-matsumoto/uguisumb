@@ -41,6 +41,7 @@
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
             <string>SetoFont-SP</string>
+            <string>SetoFont-SP</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -607,7 +608,9 @@ music box on.</string>
                                         <rect key="frame" x="4" y="46" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="aAT-0s-RBK"/>
-                                            <constraint firstAttribute="width" constant="24" id="whs-zg-8ig"/>
+                                            <constraint firstAttribute="width" constant="24" id="whs-zg-8ig">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -616,7 +619,9 @@ music box on.</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-a7-4su">
                                         <rect key="frame" x="55" y="46" width="24" height="26"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="TaZ-m2-Nek"/>
+                                            <constraint firstAttribute="width" constant="24" id="TaZ-m2-Nek">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                                            </constraint>
                                             <constraint firstAttribute="height" constant="26" id="dvh-cU-HD2"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
@@ -1321,7 +1326,7 @@ music box on.</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUt-rL-OHY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="496"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6MD-z9-sJb">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6MD-z9-sJb">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="330"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvv-i9-5PE">
@@ -1400,16 +1405,6 @@ music box on.</string>
                                                 <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-lZ-Lhc">
-                                                <rect key="frame" x="490" y="142" width="94" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="29" id="OQs-PK-7bp"/>
-                                                    <constraint firstAttribute="width" constant="94" id="fRs-mi-M16"/>
-                                                </constraints>
-                                                <connections>
-                                                    <action selector="speedStepperDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="qKK-ZG-nCE"/>
-                                                </connections>
-                                            </stepper>
                                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0x5-ul-Bf8">
                                                 <rect key="frame" x="14" y="179" width="572" height="31"/>
                                                 <constraints>
@@ -1485,14 +1480,83 @@ music box on.</string>
                                                     <rect key="frame" x="16" y="282" width="768" height="29"/>
                                                 </variation>
                                             </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale guide:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmI-zR-Uuw">
+                                                <rect key="frame" x="16" y="217" width="80" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="CtV-0S-ivi"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="J6D-4U-etG"/>
+                                                    <constraint firstAttribute="width" constant="80" id="MKi-cI-CtC">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="21" id="Mf8-Md-sgM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="CtV-0S-ivi"/>
+                                                        <exclude reference="J6D-4U-etG"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="318" width="120" height="21"/>
+                                                    <mask key="constraints">
+                                                        <exclude reference="CtV-0S-ivi"/>
+                                                        <exclude reference="J6D-4U-etG"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="q5c-JZ-D7v">
+                                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="260" id="I3o-Li-f1v"/>
+                                                    <constraint firstAttribute="height" constant="28" id="a4U-z9-heq"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="C D E"/>
+                                                    <segment title="Do Re Mi"/>
+                                                    <segment title="Ha Ni Ho"/>
+                                                </segments>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="I3o-Li-f1v"/>
+                                                        <exclude reference="a4U-z9-heq"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="347" width="260" height="29"/>
+                                                    <mask key="constraints">
+                                                        <include reference="I3o-Li-f1v"/>
+                                                        <include reference="a4U-z9-heq"/>
+                                                    </mask>
+                                                </variation>
+                                            </segmentedControl>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-lZ-Lhc">
+                                                <rect key="frame" x="490" y="142" width="94" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="29" id="OQs-PK-7bp"/>
+                                                    <constraint firstAttribute="width" constant="94" id="fRs-mi-M16"/>
+                                                </constraints>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="690" y="142" width="94" height="29"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="speedStepperDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="qKK-ZG-nCE"/>
+                                                </connections>
+                                            </stepper>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="k3U-lZ-Lhc" secondAttribute="trailing" constant="16" id="1r8-lc-yRn"/>
+                                            <constraint firstItem="q5c-JZ-D7v" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="5YH-tl-uPt"/>
+                                            <constraint firstItem="pmI-zR-Uuw" firstAttribute="top" secondItem="We1-Ap-gzE" secondAttribute="bottom" constant="8" id="7g8-Ah-c0x"/>
                                             <constraint firstItem="apQ-aw-88J" firstAttribute="centerY" secondItem="bw8-Dg-In0" secondAttribute="centerY" id="CY3-Hb-eHW"/>
                                             <constraint firstItem="IcS-PQ-DvD" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="D1N-it-RgO"/>
                                             <constraint firstItem="bF1-Hh-rgh" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="EHs-0b-fLz"/>
+                                            <constraint firstItem="pmI-zR-Uuw" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="Ezp-QB-7We"/>
                                             <constraint firstItem="tF5-vK-Njd" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="GO0-cS-eUk"/>
+                                            <constraint firstItem="q5c-JZ-D7v" firstAttribute="top" secondItem="pmI-zR-Uuw" secondAttribute="bottom" constant="8" id="Haq-jc-ucJ"/>
                                             <constraint firstItem="mvv-i9-5PE" firstAttribute="top" secondItem="6MD-z9-sJb" secondAttribute="top" constant="8" id="KEK-4W-zUP"/>
                                             <constraint firstItem="bw8-Dg-In0" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="O1K-0f-Vq6"/>
                                             <constraint firstItem="bw8-Dg-In0" firstAttribute="top" secondItem="hrO-2w-Ksk" secondAttribute="bottom" constant="8" id="OYE-b5-5Yf"/>
@@ -1503,24 +1567,31 @@ music box on.</string>
                                             <constraint firstItem="ih3-UP-yhx" firstAttribute="top" secondItem="mvv-i9-5PE" secondAttribute="bottom" constant="8" id="Yf2-1v-ZEh"/>
                                             <constraint firstAttribute="trailing" secondItem="bF1-Hh-rgh" secondAttribute="trailing" constant="16" id="a18-Xp-Jyj"/>
                                             <constraint firstItem="hrO-2w-Ksk" firstAttribute="top" secondItem="tF5-vK-Njd" secondAttribute="bottom" constant="8" id="cDf-u8-hxJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="We1-Ap-gzE" secondAttribute="bottom" constant="178" id="g3Z-lm-iMj"/>
                                             <constraint firstItem="mvv-i9-5PE" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="gcK-wg-lY0"/>
                                             <constraint firstItem="k3U-lZ-Lhc" firstAttribute="top" secondItem="hrO-2w-Ksk" secondAttribute="bottom" constant="8" id="hgd-9t-hgN"/>
                                             <constraint firstItem="tF5-vK-Njd" firstAttribute="top" secondItem="ih3-UP-yhx" secondAttribute="bottom" constant="8" id="lzd-ff-RdC"/>
                                             <constraint firstItem="bF1-Hh-rgh" firstAttribute="top" secondItem="IcS-PQ-DvD" secondAttribute="bottom" constant="8" id="q6C-td-JHf"/>
                                             <constraint firstAttribute="trailing" secondItem="We1-Ap-gzE" secondAttribute="trailing" constant="16" id="qbg-IF-UbT"/>
                                             <constraint firstItem="hrO-2w-Ksk" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="sK9-7o-74g"/>
-                                            <constraint firstAttribute="bottom" secondItem="We1-Ap-gzE" secondAttribute="bottom" constant="20" id="uFx-Al-BOc"/>
                                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="top" secondItem="k3U-lZ-Lhc" secondAttribute="bottom" constant="8" id="w6l-mq-6ec"/>
                                             <constraint firstAttribute="trailing" secondItem="hrO-2w-Ksk" secondAttribute="trailing" constant="16" id="x5P-t0-XTf"/>
                                             <constraint firstItem="We1-Ap-gzE" firstAttribute="top" secondItem="bF1-Hh-rgh" secondAttribute="bottom" constant="8" id="xRq-Qd-GUO"/>
                                             <constraint firstAttribute="trailing" secondItem="0x5-ul-Bf8" secondAttribute="trailing" constant="16" id="z2B-Th-DC3"/>
                                             <constraint firstItem="We1-Ap-gzE" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="z6i-YS-1nV"/>
+                                            <constraint firstAttribute="bottom" secondItem="q5c-JZ-D7v" secondAttribute="bottom" constant="20" id="zD8-h0-hHD"/>
                                             <constraint firstItem="IcS-PQ-DvD" firstAttribute="top" secondItem="0x5-ul-Bf8" secondAttribute="bottom" constant="8" id="zGz-qr-l7u"/>
                                         </constraints>
                                         <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="pmI-zR-Uuw"/>
+                                                <exclude reference="q5c-JZ-D7v"/>
+                                            </mask>
                                             <mask key="constraints">
-                                                <exclude reference="g3Z-lm-iMj"/>
+                                                <exclude reference="5YH-tl-uPt"/>
+                                                <exclude reference="Haq-jc-ucJ"/>
+                                                <exclude reference="zD8-h0-hHD"/>
+                                                <exclude reference="7g8-Ah-c0x"/>
+                                                <exclude reference="Ezp-QB-7We"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
@@ -1530,7 +1601,18 @@ music box on.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="330"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="800" height="330"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="800" height="395"/>
+                                            <mask key="subviews">
+                                                <include reference="pmI-zR-Uuw"/>
+                                                <include reference="q5c-JZ-D7v"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="5YH-tl-uPt"/>
+                                                <include reference="Haq-jc-ucJ"/>
+                                                <include reference="zD8-h0-hHD"/>
+                                                <include reference="7g8-Ah-c0x"/>
+                                                <include reference="Ezp-QB-7We"/>
+                                            </mask>
                                         </variation>
                                     </view>
                                 </subviews>
@@ -1664,7 +1746,7 @@ music box on.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwA-x7-gaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2677" y="352"/>
+            <point key="canvasLocation" x="2676.75" y="351.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SKe-Si-nRA">
