@@ -58,6 +58,16 @@
     _sequences = [NSMutableDictionary dictionary];
     _header = [[CMBSongHeaderData alloc] init];
     _currentOctave = CMBOctaveBase;
+    
+    [self updateHeader];
+}
+
+- (void)updateHeader
+{
+    for (NSInteger i=0; i<_scaleLabels.count; i++) {
+        UILabel* label = _scaleLabels[i];
+        label.text = CMBScaleNames[@"iroha"][i];
+    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

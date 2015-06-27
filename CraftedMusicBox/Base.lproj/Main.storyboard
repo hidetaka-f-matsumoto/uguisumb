@@ -301,7 +301,7 @@ music box on.</string>
                                                         <constraint firstAttribute="height" constant="10" id="Gf6-FV-QSl"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YmD-UZ-0LW">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmD-UZ-0LW">
                                                     <rect key="frame" x="80" y="17" width="27" height="10"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -357,7 +357,7 @@ music box on.</string>
                                                         <constraint firstAttribute="height" constant="10" id="RFI-TW-jE2"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-3V-B6S">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-3V-B6S">
                                                     <rect key="frame" x="493" y="17" width="27" height="10"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -613,7 +613,7 @@ music box on.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-a7-4su">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-a7-4su">
                                         <rect key="frame" x="55" y="46" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="TaZ-m2-Nek"/>
@@ -623,7 +623,7 @@ music box on.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCE-Ru-H5S">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCE-Ru-H5S">
                                         <rect key="frame" x="106" y="46" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="Yuu-Ey-5a8"/>
@@ -633,7 +633,7 @@ music box on.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6un-Vg-Onf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="D#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6un-Vg-Onf">
                                         <rect key="frame" x="158" y="46" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="dJM-zX-9ak"/>
@@ -643,7 +643,7 @@ music box on.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGA-bt-6SB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGA-bt-6SB">
                                         <rect key="frame" x="209" y="46" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="A1L-Ek-Oih"/>
@@ -653,7 +653,7 @@ music box on.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPb-qa-SWj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPb-qa-SWj">
                                         <rect key="frame" x="262" y="46" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="OwH-hB-mwH"/>
@@ -663,7 +663,7 @@ music box on.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="F#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSJ-rO-l0D">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSJ-rO-l0D">
                                         <rect key="frame" x="314" y="46" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="Bgl-KE-YYb"/>
@@ -715,11 +715,11 @@ music box on.</string>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="372" y="62" width="20" height="26"/>
                                         </variation>
-                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                        <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="372" y="62" width="20" height="26"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXc-zu-bBA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXc-zu-bBA">
                                         <rect key="frame" x="468" y="46" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="Yxs-Mo-47Z"/>
@@ -730,28 +730,28 @@ music box on.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWy-y0-np0">
-                                        <rect key="frame" x="544" y="46" width="27.5" height="26"/>
+                                        <rect key="frame" x="544" y="46" width="28" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="W5x-Sn-ysn"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiI-PF-7b4">
-                                        <rect key="frame" x="492" y="46" width="27.5" height="26"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TiI-PF-7b4">
+                                        <rect key="frame" x="492" y="46" width="28" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="GhR-na-nO2"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxy-Np-fBd">
-                                        <rect key="frame" x="441" y="46" width="27.5" height="26"/>
+                                        <rect key="frame" x="441" y="46" width="28" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="dj4-Uu-1xs"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ejv-sB-kdl">
-                                        <rect key="frame" x="389" y="46" width="27.5" height="26"/>
+                                        <rect key="frame" x="389" y="46" width="28" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="1dl-cA-gsP"/>
@@ -771,22 +771,22 @@ music box on.</string>
                                             <constraint firstAttribute="height" constant="26" id="dyQ-Hk-0rC"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88S-A8-Q3A">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88S-A8-Q3A">
                                         <rect key="frame" x="233" y="46" width="28" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="SfK-IY-t0A"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-9S-DeJ">
-                                        <rect key="frame" x="182" y="46" width="27.5" height="26"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-9S-DeJ">
+                                        <rect key="frame" x="182" y="46" width="28" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="UXl-bV-Gh2"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpY-ce-dbc">
-                                        <rect key="frame" x="130" y="46" width="27.5" height="26"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KpY-ce-dbc">
+                                        <rect key="frame" x="130" y="46" width="28" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="yGj-aR-EUl"/>
@@ -800,7 +800,7 @@ music box on.</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYk-wa-zDo">
-                                        <rect key="frame" x="28" y="46" width="27.5" height="26"/>
+                                        <rect key="frame" x="28" y="46" width="28" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="znp-zo-fod"/>
@@ -1066,6 +1066,18 @@ music box on.</string>
                         <outlet property="tableView" destination="bKy-8R-19x" id="Vhu-mS-RaV"/>
                         <outlet property="tineView" destination="nIN-k4-Uqe" id="T33-eb-2wS"/>
                         <outlet property="titleLabel" destination="TGT-ur-QoD" id="Bfk-bh-fNk"/>
+                        <outletCollection property="scaleLabels" destination="6is-ct-Zwb" id="Dff-kG-0vR"/>
+                        <outletCollection property="scaleLabels" destination="fcC-a7-4su" id="mpV-yW-UFf"/>
+                        <outletCollection property="scaleLabels" destination="kCE-Ru-H5S" id="pQJ-7p-oZf"/>
+                        <outletCollection property="scaleLabels" destination="6un-Vg-Onf" id="2S9-V0-9Ol"/>
+                        <outletCollection property="scaleLabels" destination="PGA-bt-6SB" id="Lvp-uL-MwT"/>
+                        <outletCollection property="scaleLabels" destination="pPb-qa-SWj" id="YKs-Ok-Yl1"/>
+                        <outletCollection property="scaleLabels" destination="JSJ-rO-l0D" id="vca-Ks-jTN"/>
+                        <outletCollection property="scaleLabels" destination="hX1-x2-jVn" id="0ba-9L-cfR"/>
+                        <outletCollection property="scaleLabels" destination="hMu-ns-MIO" id="kQz-KM-rfc"/>
+                        <outletCollection property="scaleLabels" destination="QXc-zu-bBA" id="aPk-tF-3IC"/>
+                        <outletCollection property="scaleLabels" destination="V8B-se-TdV" id="XcK-Eo-ueM"/>
+                        <outletCollection property="scaleLabels" destination="tYE-0l-Uex" id="znF-GN-G87"/>
                         <segue destination="kGK-1K-za0" kind="presentation" identifier="SongConfig" id="ViF-hj-1bm"/>
                         <segue destination="N8n-7A-X4L" kind="presentation" identifier="SongManage" id="5DY-Rs-aJ2"/>
                         <segue destination="hXK-bD-TY0" kind="presentation" identifier="Help" id="9VC-46-JWV"/>
@@ -1330,6 +1342,15 @@ music box on.</string>
                                                 <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="37" width="368" height="30"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="37" width="368" height="30"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="37" width="768" height="30"/>
+                                                </variation>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Composer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF5-vK-Njd">
                                                 <rect key="frame" x="16" y="75" width="120" height="21"/>
@@ -1349,6 +1370,15 @@ music box on.</string>
                                                 <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="104" width="368" height="30"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="104" width="368" height="30"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="104" width="768" height="30"/>
+                                                </variation>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Speed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw8-Dg-In0">
                                                 <rect key="frame" x="16" y="142" width="80" height="21"/>
@@ -1385,6 +1415,15 @@ music box on.</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="7h8-oo-dF3"/>
                                                 </constraints>
+                                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="14" y="179" width="372" height="31"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="14" y="179" width="372" height="31"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="14" y="179" width="772" height="31"/>
+                                                </variation>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Guidance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-PQ-DvD">
                                                 <rect key="frame" x="16" y="217" width="80" height="21"/>
@@ -1411,6 +1450,15 @@ music box on.</string>
                                                     <segment title="8"/>
                                                     <segment title="11"/>
                                                 </segments>
+                                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="246" width="368" height="29"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="246" width="368" height="29"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="246" width="768" height="29"/>
+                                                </variation>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="We1-Ap-gzE">
                                                 <rect key="frame" x="16" y="282" width="568" height="29"/>
@@ -1427,6 +1475,15 @@ music box on.</string>
                                                     <segment title="8"/>
                                                     <segment title="11"/>
                                                 </segments>
+                                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="282" width="368" height="29"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="282" width="368" height="29"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="16" y="282" width="768" height="29"/>
+                                                </variation>
                                             </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1466,6 +1523,15 @@ music box on.</string>
                                                 <exclude reference="g3Z-lm-iMj"/>
                                             </mask>
                                         </variation>
+                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="330"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="330"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="800" height="330"/>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1484,6 +1550,15 @@ music box on.</string>
                                         <exclude reference="pOy-sz-1HJ"/>
                                         <exclude reference="y0O-V7-wJo"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="296"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="696"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="696"/>
                                 </variation>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xO-NP-Jtg">
