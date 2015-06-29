@@ -25,6 +25,15 @@
 /* Class = "IBUILabel"; text = "Division:"; ObjectID = "qig-Io-RxP"; */
 "qig-Io-RxP.text" = "音階ガイド:";
 
+/* Class = "IBUISegmentedControl"; 9Pg-Dh-MTZ.segmentTitles[0] = "C D E"; ObjectID = "9Pg-Dh-MTZ"; */
+"9Pg-Dh-MTZ.segmentTitles[0]" = "C D E";
+
+/* Class = "IBUISegmentedControl"; 9Pg-Dh-MTZ.segmentTitles[1] = "Do Re Mi"; ObjectID = "9Pg-Dh-MTZ"; */
+"9Pg-Dh-MTZ.segmentTitles[1]" = "ド レ ミ";
+
+/* Class = "IBUISegmentedControl"; 9Pg-Dh-MTZ.segmentTitles[2] = "Ha Ni Ho"; ObjectID = "9Pg-Dh-MTZ"; */
+"9Pg-Dh-MTZ.segmentTitles[2]" = "ハ ニ ホ";
+
 /* Class = "IBUINavigationItem"; title = "Song Config"; ObjectID = "IkL-fO-Kbl"; */
 "IkL-fO-Kbl.title" = "曲の設定";
 
