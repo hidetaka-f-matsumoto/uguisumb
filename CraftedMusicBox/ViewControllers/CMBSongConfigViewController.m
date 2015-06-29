@@ -40,6 +40,7 @@
     _speedStepper.value = _header.speed.floatValue;
     [_division1Control setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division1]];
     [_division2Control setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division2]];
+    [_scaleControl setSelectedSegmentIndex:[CMBScaleNameKeys indexOfObject:_header.scaleMode]];
 }
 
 - (void)viewDidLayoutSubviews
@@ -79,6 +80,7 @@
     _header.speed = [NSNumber numberWithInteger:(NSInteger)_speedSlider.value];
     _header.division1 = CMBDivisions[_division1Control.selectedSegmentIndex];
     _header.division2 = CMBDivisions[_division2Control.selectedSegmentIndex];
+    _header.scaleMode = CMBScaleNameKeys[_scaleControl.selectedSegmentIndex];
 }
 
 - (IBAction)applyButtonDidTap:(id)sender

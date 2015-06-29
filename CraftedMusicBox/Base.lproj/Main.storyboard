@@ -1684,6 +1684,7 @@ music box on.</string>
                         <outlet property="division1Control" destination="bF1-Hh-rgh" id="JgH-Xf-kfS"/>
                         <outlet property="division2Control" destination="We1-Ap-gzE" id="3Xc-pN-Nwe"/>
                         <outlet property="nameText" destination="ih3-UP-yhx" id="swY-5k-WpR"/>
+                        <outlet property="scaleControl" destination="9Pg-Dh-MTZ" id="yco-lX-u8X"/>
                         <outlet property="scrollView" destination="AUt-rL-OHY" id="fjx-az-6RL"/>
                         <outlet property="speedLabel" destination="apQ-aw-88J" id="UAo-s9-iRz"/>
                         <outlet property="speedSlider" destination="0x5-ul-Bf8" id="UQW-4q-65Y"/>

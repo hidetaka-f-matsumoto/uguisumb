@@ -93,6 +93,7 @@ static NSString * const CMBSoundXylophone = @"CMBSoundXylophone";
 /**
  * Scale names
  */
+#define CMBScaleNameKeys @[@"normal", @"doremi", @"haniho"]
 #define CMBScaleNames @{ \
     @"normal": @[@"C", @"C#", @"D", @"D#", @"E", @"F", @"F#", @"G", @"G#", @"A", @"A#", @"B"], \
     @"doremi": @[@"ﾄﾞ", @"ﾄﾞ#", @"ﾚ", @"ﾚ#", @"ﾐ", @"ﾌｧ", @"ﾌｧ#", @"ｿ", @"ｿ#", @"ﾗ", @"ﾗ#", @"ｼ"], \
