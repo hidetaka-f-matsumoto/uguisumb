@@ -14,6 +14,7 @@
 		04480A6B1B3CD6BD003C3FAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04480A6A1B3CD6BD003C3FAD /* Images.xcassets */; };
 		04480A6E1B3CD6BD003C3FAD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04480A6C1B3CD6BD003C3FAD /* LaunchScreen.xib */; };
 		04480A7A1B3CD6BD003C3FAD /* SandBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04480A791B3CD6BD003C3FAD /* SandBoxTests.m */; };
+		046E9EB51B4613080016E607 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046E9EB41B4613080016E607 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		04480A731B3CD6BD003C3FAD /* SandBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SandBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04480A781B3CD6BD003C3FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04480A791B3CD6BD003C3FAD /* SandBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandBoxTests.m; sourceTree = "<group>"; };
+		046E9EB41B4613080016E607 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046E9EB51B4613080016E607 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		04480A511B3CD6BD003C3FAD = {
 			isa = PBXGroup;
 			children = (
+				046E9EB61B4613130016E607 /* Frameworks */,
 				04480A5C1B3CD6BD003C3FAD /* SandBox */,
 				04480A761B3CD6BD003C3FAD /* SandBoxTests */,
 				04480A5B1B3CD6BD003C3FAD /* Products */,
@@ -117,6 +121,14 @@
 				04480A781B3CD6BD003C3FAD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		046E9EB61B4613130016E607 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				046E9EB41B4613080016E607 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +426,7 @@
 				04480A7F1B3CD6BD003C3FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04480A801B3CD6BD003C3FAD /* Build configuration list for PBXNativeTarget "SandBoxTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +435,7 @@
 				04480A821B3CD6BD003C3FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

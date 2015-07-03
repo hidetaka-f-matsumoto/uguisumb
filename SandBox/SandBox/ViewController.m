@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
 
@@ -25,7 +26,8 @@
 }
 
 - (IBAction)animButtonDidTap:(id)sender {
-    [self animate];
+//    [self animate];
+    [self animateAlongPath];
 }
 
 - (void)animate
@@ -125,6 +127,47 @@
     [layer addAnimation:rotateXAnim forKey:@"rotate x"];
     
     return layer;
+}
+
+
+- (void)animateAlongPath {
+    CGPoint kStartPos = _uguisuView.center;
+    CGPoint kEndPos =  CGPointMake(kStartPos.x + 100.f, kStartPos.y);
+    
+    // CAKeyframeAnimationオブジェクトを生成
+    CAKeyframeAnimation *animation;
+    animation.delegate = self;
+    animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    animation.fillMode = kCAFillModeForwards;
+    animation.removedOnCompletion = NO;
+    animation.duration = 1.0;
+    
+    // 放物線のパスを生成
+    CGFloat jumpHeight = 80.0;
+    CGMutablePathRef curvedPath = CGPathCreateMutable();
+    CGPathMoveToPoint(curvedPath, NULL, kStartPos.x, kStartPos.y);
+    CGPathAddCurveToPoint(curvedPath, NULL,
+                          kStartPos.x + jumpHeight/2, kStartPos.y - jumpHeight,
+                          kEndPos.x - jumpHeight/2, kStartPos.y - jumpHeight,
+                          kEndPos.x, kEndPos.y);
+
+    // UIBezierPathで放物線のパスを生成
+    UIBezierPath *path =  [UIBezierPath bezierPathWithArcCenter:
+                           kStartPos radius:64.0f startAngle:0 endAngle:M_PI*4/3 clockwise:YES];
+    
+    // パスをCAKeyframeAnimationオブジェクトにセット
+    animation.path = curvedPath;
+//    animation.path = path.CGPath;
+    
+    // パスを解放
+    CGPathRelease(curvedPath);
+    
+    // レイヤーにアニメーションを追加
+    [_uguisuView.layer addAnimation:animation forKey:nil];
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    NSLog(@"完了");
 }
 
 @end

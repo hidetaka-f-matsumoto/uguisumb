@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIImageView *uguisuView;
+
 - (IBAction)animButtonDidTap:(id)sender;
 
 @end
