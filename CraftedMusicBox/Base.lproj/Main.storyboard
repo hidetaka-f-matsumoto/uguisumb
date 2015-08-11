@@ -1071,6 +1071,7 @@ music box on.</string>
                         <outlet property="tableView" destination="bKy-8R-19x" id="Vhu-mS-RaV"/>
                         <outlet property="tineView" destination="nIN-k4-Uqe" id="T33-eb-2wS"/>
                         <outlet property="titleLabel" destination="TGT-ur-QoD" id="Bfk-bh-fNk"/>
+                        <outlet property="uguisuView" destination="Akk-FW-dNV" id="5sx-zb-oN9"/>
                         <outletCollection property="scaleLabels" destination="6is-ct-Zwb" id="Dff-kG-0vR"/>
                         <outletCollection property="scaleLabels" destination="fcC-a7-4su" id="mpV-yW-UFf"/>
                         <outletCollection property="scaleLabels" destination="kCE-Ru-H5S" id="pQJ-7p-oZf"/>

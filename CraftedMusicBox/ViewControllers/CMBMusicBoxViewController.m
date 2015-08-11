@@ -10,6 +10,7 @@
 #import "CMBMusicBoxViewController.h"
 #import "UIColor+CMBTools.h"
 #import "NSString+CMBTools.h"
+#import "CMBAnimations.h"
 
 @interface CMBMusicBoxViewController ()
 {
@@ -161,6 +162,8 @@
     // 鳴らす
     CMBSoundManager *soundMan = [CMBSoundManager sharedInstance];
     [soundMan playWithInstrument:CMBSoundMusicbox scale:scale octave:octave];
+    // 鶯が鳴く
+    [self uguisuSing];
 }
 
 /**
@@ -669,6 +672,25 @@
         [self loadingEndWithNetwork:NO];
         _isOctaveChanging = NO;
     }];
+}
+
+#pragma mark - CAAnimation
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    CALayer *layer = [anim valueForKey:@"animationLayer"];
+    if (flag) {
+        DPRINT(@"アニメーション完了");
+        [layer removeFromSuperlayer];
+    }
+}
+
+/**
+ * 鶯が鳴く
+ */
+- (void)uguisuSing {
+    CGPoint kStartPos = CGPointMake(0.f, 0.f);
+    CALayer *noteLayer = [CMBAnimations noteAnimationLayerWithName:@"uguisuSing" startPos:kStartPos delegate:self];
+    [_uguisuView.layer addSublayer:noteLayer];
 }
 
 #pragma mark - Etcs

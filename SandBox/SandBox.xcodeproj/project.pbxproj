@@ -15,6 +15,7 @@
 		04480A6E1B3CD6BD003C3FAD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04480A6C1B3CD6BD003C3FAD /* LaunchScreen.xib */; };
 		04480A7A1B3CD6BD003C3FAD /* SandBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04480A791B3CD6BD003C3FAD /* SandBoxTests.m */; };
 		046E9EB51B4613080016E607 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046E9EB41B4613080016E607 /* QuartzCore.framework */; };
+		04FCD3F01B79FB0D006E71E1 /* CMBAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCD3EF1B79FB0D006E71E1 /* CMBAnimations.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		04480A781B3CD6BD003C3FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04480A791B3CD6BD003C3FAD /* SandBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandBoxTests.m; sourceTree = "<group>"; };
 		046E9EB41B4613080016E607 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		04FCD3EE1B79FB0D006E71E1 /* CMBAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBAnimations.h; path = ../../CraftedMusicBox/Utilities/CMBAnimations.h; sourceTree = "<group>"; };
+		04FCD3EF1B79FB0D006E71E1 /* CMBAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBAnimations.m; path = ../../CraftedMusicBox/Utilities/CMBAnimations.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				04480A671B3CD6BD003C3FAD /* Main.storyboard */,
 				04480A6A1B3CD6BD003C3FAD /* Images.xcassets */,
 				04480A6C1B3CD6BD003C3FAD /* LaunchScreen.xib */,
+				04FCD3EE1B79FB0D006E71E1 /* CMBAnimations.h */,
+				04FCD3EF1B79FB0D006E71E1 /* CMBAnimations.m */,
 				04480A5D1B3CD6BD003C3FAD /* Supporting Files */,
 			);
 			path = SandBox;
@@ -234,6 +239,7 @@
 				04480A661B3CD6BD003C3FAD /* ViewController.m in Sources */,
 				04480A631B3CD6BD003C3FAD /* AppDelegate.m in Sources */,
 				04480A601B3CD6BD003C3FAD /* main.m in Sources */,
+				04FCD3F01B79FB0D006E71E1 /* CMBAnimations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

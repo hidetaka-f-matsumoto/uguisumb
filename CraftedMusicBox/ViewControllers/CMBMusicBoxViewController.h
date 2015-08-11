@@ -47,6 +47,7 @@ static CGFloat const CMBTimeDivAutoScroll = 0.02f; // [s]
 @property (weak, nonatomic) IBOutlet UILabel *octaveLabel;
 @property (nonatomic) IBOutletCollection(UILabel) NSArray *scaleLabels;
 @property (weak, nonatomic) IBOutlet UIImageView *octaveSwitch;
+@property (weak, nonatomic) IBOutlet UIImageView *uguisuView;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *headViewTopConstraint;
 
