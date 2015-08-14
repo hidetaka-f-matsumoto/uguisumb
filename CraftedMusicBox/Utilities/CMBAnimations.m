@@ -20,9 +20,9 @@
                                delegate:(UIViewController *)delegate {
     CALayer *layer = [self noteLayer];
     
-    CGPoint kEndPos =  CGPointMake(kStartPos.x, kStartPos.y - 100.f);
-    CGPoint kCtrlPos1 = CGPointMake(kStartPos.x + 20.f, kStartPos.y - 20.f);
-    CGPoint kCtrlPos2 = CGPointMake(kEndPos.x - 20.f, kEndPos.y + 20.f);
+    CGPoint kEndPos =  CGPointMake(kStartPos.x - 40.f, kStartPos.y - 60.f);
+    CGPoint kCtrlPos1 = CGPointMake(kStartPos.x, kStartPos.y - 20.f);
+    CGPoint kCtrlPos2 = CGPointMake(kEndPos.x, kEndPos.y + 20.f);
     
     // 移動
     CAKeyframeAnimation *animMove = [CAKeyframeAnimation animationWithKeyPath:@"position"];

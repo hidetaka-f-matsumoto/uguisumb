@@ -162,8 +162,6 @@
     // 鳴らす
     CMBSoundManager *soundMan = [CMBSoundManager sharedInstance];
     [soundMan playWithInstrument:CMBSoundMusicbox scale:scale octave:octave];
-    // 鶯が鳴く
-    [self uguisuSing];
 }
 
 /**
@@ -688,7 +686,7 @@
  * 鶯が鳴く
  */
 - (void)uguisuSing {
-    CGPoint kStartPos = CGPointMake(0.f, 0.f);
+    CGPoint kStartPos = CGPointMake(_uguisuView.bounds.size.width / 2.f, 0.f);
     CALayer *noteLayer = [CMBAnimations noteAnimationLayerWithName:@"uguisuSing" startPos:kStartPos delegate:self];
     [_uguisuView.layer addSublayer:noteLayer];
 }
@@ -962,10 +960,12 @@
         return;
     }
     BOOL isTapOn = [info[@"isTapOn"] boolValue];
-    // 音を再生
     if (isTapOn) {
+        // 音を再生
         [self playWithScale:info[CMBNoteInfoKeyScale]
                      octave:info[CMBNoteInfoKeyOctave]];
+        // 鶯が鳴く
+        [self uguisuSing];
     }
     // シーケンスを更新
     NSIndexPath *indexPath = (NSIndexPath *)info[@"indexPath"];
@@ -1003,11 +1003,13 @@
     if (!soData || ![soData isNotes]) {
         return;
     }
-    // 音符を鳴らす
+    // 音を再生
     for (CMBNoteData *note in soData.notes) {
         [self playWithScale:note.scale
                      octave:note.octave];
     }
+    // 鶯が鳴く
+    [self uguisuSing];
 }
 
 /**
