@@ -79,7 +79,7 @@
     
     
     // 大きさを適当に変更
-    CGFloat scale = (arc4random_uniform(6)/50.f) + 0.5f;
+    CGFloat scale = (arc4random_uniform(6)/50.f) + 0.7f;
     
     CATransform3D transform = CATransform3DIdentity;
     transform = CATransform3DScale(transform, scale, scale, 1.0);
