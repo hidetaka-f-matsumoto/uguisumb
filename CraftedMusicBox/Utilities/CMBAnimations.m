@@ -64,7 +64,7 @@
 + (CALayer*)noteLayer
 {
     // 画像を用意
-    NSString *imageName = arc4random_uniform(2) == 0 ? @"note8" : @"note8-2";
+    NSString *imageName = CMBNoteImages[arc4random_uniform(3)];
     UIImage *image = [UIImage imageNamed:imageName];
     
     
@@ -79,7 +79,7 @@
     
     
     // 大きさを適当に変更
-    CGFloat scale = (arc4random_uniform(6)/20.0) + 1.f;
+    CGFloat scale = (arc4random_uniform(6)/50.f) + 0.5f;
     
     CATransform3D transform = CATransform3DIdentity;
     transform = CATransform3DScale(transform, scale, scale, 1.0);
@@ -88,9 +88,9 @@
     
     CABasicAnimation *rotateXAnim = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
     rotateXAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-    rotateXAnim.duration = arc4random_uniform(2); // 乱数を生成する自前関数
+    rotateXAnim.duration = arc4random_uniform(1); // 乱数を生成する自前関数
     rotateXAnim.fromValue = @0.0;
-    rotateXAnim.toValue = @(arc4random_uniform(2.7)); // 乱数を生成する自前関数
+    rotateXAnim.toValue = @(arc4random_uniform(27) / 20.f); // 乱数を生成する自前関数
     rotateXAnim.repeatCount = NSIntegerMax; // とにかく大きい数
     rotateXAnim.removedOnCompletion = NO;
     rotateXAnim.fillMode = kCAFillModeForwards;

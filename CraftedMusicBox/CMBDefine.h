@@ -91,6 +91,11 @@ static NSString * const CMBSoundXylophone = @"CMBSoundXylophone";
 #define CMBSoundResXylophoneOct5 @[@"C5", @"C#5", @"D5", @"D#5", @"E5", @"F5", @"F#5", @"G5", @"G#5", @"A5", @"A#5", @"B5"]
 
 /**
+ * Image resource
+ */
+#define CMBNoteImages @[@"note4", @"note8", @"note16-2"]
+
+/**
  * Scale names
  */
 #define CMBScaleNameKeys @[@"normal", @"doremi", @"haniho"]
