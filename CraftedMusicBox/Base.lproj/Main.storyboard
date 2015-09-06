@@ -956,8 +956,6 @@ music box on.</string>
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="8Nb-jn-7Yo" secondAttribute="trailing" id="2tu-WS-fyE"/>
-                                    <constraint firstItem="8Nb-jn-7Yo" firstAttribute="top" secondItem="Xe4-08-Y6K" secondAttribute="top" id="9Ek-zt-vPf"/>
                                     <constraint firstItem="8Nb-jn-7Yo" firstAttribute="leading" secondItem="Xe4-08-Y6K" secondAttribute="leading" id="Fcm-jj-vKY"/>
                                     <constraint firstAttribute="width" constant="120" id="Fxf-o7-FHK"/>
                                     <constraint firstAttribute="height" constant="120" id="I1l-SP-H0a"/>
@@ -965,22 +963,10 @@ music box on.</string>
                                     <constraint firstItem="jPq-6m-SqI" firstAttribute="leading" secondItem="Xe4-08-Y6K" secondAttribute="leading" constant="8" id="Oiw-hF-4zy"/>
                                     <constraint firstItem="8Nb-jn-7Yo" firstAttribute="top" secondItem="Xe4-08-Y6K" secondAttribute="top" id="QT9-pn-CTT"/>
                                     <constraint firstAttribute="centerY" secondItem="Ge2-C6-zQF" secondAttribute="centerY" id="Tdn-MT-GPh"/>
-                                    <constraint firstAttribute="bottom" secondItem="jPq-6m-SqI" secondAttribute="bottom" constant="57" id="Vlh-Kl-CG7"/>
                                     <constraint firstItem="jPq-6m-SqI" firstAttribute="top" secondItem="Xe4-08-Y6K" secondAttribute="top" constant="8" id="Wxo-m4-ssg"/>
-                                    <constraint firstItem="8Nb-jn-7Yo" firstAttribute="leading" secondItem="Xe4-08-Y6K" secondAttribute="leading" id="c4G-QA-S7m"/>
                                     <constraint firstAttribute="bottom" secondItem="8Nb-jn-7Yo" secondAttribute="bottom" id="ebA-Zz-ZLW"/>
-                                    <constraint firstAttribute="bottom" secondItem="8Nb-jn-7Yo" secondAttribute="bottom" id="gbG-dI-ZY3"/>
                                     <constraint firstAttribute="trailing" secondItem="8Nb-jn-7Yo" secondAttribute="trailing" id="zpb-HF-9Ff"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2tu-WS-fyE"/>
-                                        <exclude reference="9Ek-zt-vPf"/>
-                                        <exclude reference="c4G-QA-S7m"/>
-                                        <exclude reference="gbG-dI-ZY3"/>
-                                        <exclude reference="Vlh-Kl-CG7"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kDv-No-cAb" userLabel="Banner Frame View">
                                 <rect key="frame" x="0.0" y="556" width="0.0" height="0.0"/>
