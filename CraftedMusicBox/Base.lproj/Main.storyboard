@@ -596,6 +596,10 @@ music box on.</string>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2N2-fl-txq" appends="YES" id="rFS-WQ-CA1"/>
+                                    <outletCollection property="gestureRecognizers" destination="gXL-85-kim" appends="YES" id="oBN-4b-H42"/>
+                                </connections>
                             </tableView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-fm-F29" userLabel="Curtain View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
