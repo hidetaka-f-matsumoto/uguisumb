@@ -490,34 +490,6 @@
                               sender:self];
 }
 
-/**
- * オクターブスイッチドラッグ
- */
-- (IBAction)octSwDidDrag:(id)sender
-{
-    UIPanGestureRecognizer *pan = (UIPanGestureRecognizer *)sender;
-    CGPoint point = [pan translationInView:self.view];
-    CGFloat amount = point.x + point.y;
-    CGFloat angle = M_PI * amount / 800.f; // とりあえず、いい感じに調整
-    // ドラッグ終わり
-    if (UIGestureRecognizerStateEnded == pan.state) {
-        // 一定角度より大きかったら、オクターブ上げ
-        if (M_PI*10.f/180.f < angle) {
-            [self octaveUp];
-        }
-        // 一定角度より小さかったら、オクターブ下げ
-        else if (-M_PI*10.f/180.f > angle) {
-            [self octaveDown];
-        }
-        pan.view.transform = CGAffineTransformMakeRotation(0.f);
-    }
-    // ドラッグ中
-    else {
-        CGPoint center = CGPointMake(-1 * _octaveSwitch.bounds.size.width, _octaveSwitch.bounds.size.height);
-        pan.view.transform = CGAffineTransformMakeRotationAt(angle, center);
-    }
-}
-
 #pragma mark - Control Views
 
 /**
