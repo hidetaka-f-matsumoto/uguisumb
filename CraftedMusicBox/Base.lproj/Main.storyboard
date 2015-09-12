@@ -1083,6 +1083,18 @@ music box on.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8be-Yi-Aj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="2N2-fl-txq">
+                    <connections>
+                        <action selector="tableViewDidSwipeLeft:" destination="OGI-JR-xGh" id="ikZ-nz-Pfk"/>
+                        <outlet property="delegate" destination="OGI-JR-xGh" id="DSs-eg-yYM"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="gXL-85-kim">
+                    <connections>
+                        <action selector="tableViewDidSwipeRight:" destination="OGI-JR-xGh" id="QaL-Td-NyB"/>
+                        <outlet property="delegate" destination="OGI-JR-xGh" id="PpX-xc-E34"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="586" y="1026"/>
         </scene>

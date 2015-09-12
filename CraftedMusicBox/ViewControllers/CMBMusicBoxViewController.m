@@ -490,6 +490,22 @@
                               sender:self];
 }
 
+/**
+ * スワイプハンドラ (<<<)
+ */
+- (IBAction)tableViewDidSwipeLeft:(id)sender
+{
+    [self octaveUp];
+}
+
+/**
+ * スワイプハンドラ (>>>)
+ */
+- (IBAction)tableViewDidSwipeRight:(id)sender
+{
+    [self octaveDown];
+}
+
 #pragma mark - Control Views
 
 /**
