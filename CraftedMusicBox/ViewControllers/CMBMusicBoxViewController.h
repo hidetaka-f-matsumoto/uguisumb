@@ -27,8 +27,7 @@ static CGFloat const CMBTimeDivAutoScroll = 0.02f; // [s]
 
 @interface CMBMusicBoxViewController : CMBBaseViewController
 <
-    UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate,
-    UIGestureRecognizerDelegate, SWTableViewCellDelegate,
+    UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate,
     CMBMusicBoxTableViewCellDelegate, CMBMusicBoxTableViewHeadCellDelegate,
     CMBMusicBoxTableViewFootCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate
 >

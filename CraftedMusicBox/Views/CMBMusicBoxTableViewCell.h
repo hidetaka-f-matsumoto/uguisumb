@@ -34,9 +34,9 @@ static CGFloat const CMBMusicBoxNoteButtonWidth_iPad        = 44.f;
 /**
  * 1シーケンスのCell
  */
-@interface CMBMusicBoxTableViewCell : SWTableViewCell
+@interface CMBMusicBoxTableViewCell : UITableViewCell
 
-@property (nonatomic, assign) id<CMBMusicBoxTableViewCellDelegate, SWTableViewCellDelegate> delegate;
+@property (nonatomic, assign) id<CMBMusicBoxTableViewCellDelegate> delegate;
 @property (nonatomic, assign) UITableView *parentTableView;
 @property (nonatomic, assign) UIView *tineView;
 

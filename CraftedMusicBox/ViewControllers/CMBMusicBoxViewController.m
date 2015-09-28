@@ -421,7 +421,7 @@
                                      @{@"title": NSLocalizedString(@"Delete time", @"Delete the time."),
                                        @"handler": ^(UIAlertAction *action)
                                        {
-        [self deleteRowAtIndexPath:indexPath];
+        [self timeDeleteButtonDidTapWithIndexPath:indexPath];
     }},
                                      @{@"title": NSLocalizedString(@"Insert time below", @"Insert a time below."),
                                        @"handler": ^(UIAlertAction *action)
@@ -438,7 +438,7 @@
                                      @{@"title": NSLocalizedString(@"Delete time", @"Delete the time."),
                                        @"handler": ^(void)
                                        {
-        [self deleteRowAtIndexPath:indexPath];
+        [self timeDeleteButtonDidTapWithIndexPath:indexPath];
     }},
                                      @{@"title": NSLocalizedString(@"Insert time below", @"Insert a time below."),
                                        @"handler": ^(void)
@@ -447,6 +447,31 @@
     }},
                                      ]
      ];
+}
+
+/**
+ * タイム削除ボタン
+ */
+- (void)timeDeleteButtonDidTapWithIndexPath:(NSIndexPath *)indexPath
+{
+    BOOL isNotes = [self isNotesFrom:indexPath.row to:indexPath.row];
+    // 音符がある場合
+    if (isNotes) {
+        NSString *title = NSLocalizedString(@"Remove time", @"Remove time");
+        NSString *message = NSLocalizedString(@"You wanna remove times where is some notes?", @"The message to confirm you want to remove times where is some notes.");
+        [self showConfirmDialogWithTitle:title
+                                 message:message
+                                handler1:^(UIAlertAction *action) {
+                                    [self deleteRowAtIndexPath:indexPath];
+                                }
+                                handler2:^(void) {
+                                    [self deleteRowAtIndexPath:indexPath];
+                                }];
+    }
+    // 音符が無い場合
+    else {
+        [self deleteRowAtIndexPath:indexPath];
+    }
 }
 
 /**
@@ -886,7 +911,6 @@
             mbCell.delegate = self;
             mbCell.parentTableView = _tableView;
             mbCell.tineView = _tineView;
-            mbCell.rightUtilityButtons = [self rightButtons];
             cell = mbCell;
             break;
         }
@@ -1497,68 +1521,6 @@
     [self loadingBeginWithNetwork:YES];
     // タスク開始
     [task resume];
-}
-
-# pragma mark - SWTableViewCellDelegate
-
-- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index
-{
-    CMBMusicBoxTableViewCell *mbCell = (CMBMusicBoxTableViewCell *)cell;
-    NSIndexPath *indexPath = [_tableView indexPathForCell:mbCell];
-    switch (index) {
-        case 0: // 挿入
-        {
-            [self insertRowAtIndexPath:indexPath];
-            break;
-        }
-        case 1: // 削除
-        {
-            BOOL isNotes = [self isNotesFrom:indexPath.row to:indexPath.row];
-            // 音符がある場合
-            if (isNotes) {
-                NSString *title = NSLocalizedString(@"Remove time", @"Remove time");
-                NSString *message = NSLocalizedString(@"You wanna remove times where is some notes?", @"The message to confirm you want to remove times where is some notes.");
-                [self showConfirmDialogWithTitle:title
-                                         message:message
-                                        handler1:^(UIAlertAction *action) {
-                                            [self deleteRowAtIndexPath:indexPath];
-                                        }
-                                        handler2:^(void) {
-                                            [self deleteRowAtIndexPath:indexPath];
-                                        }];
-            }
-            // 音符が無い場合
-            else {
-                [self deleteRowAtIndexPath:indexPath];
-            }
-            break;
-        }
-        default:
-            break;
-    }
-}
-
-- (NSArray *)rightButtons
-{
-    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
-    NSAttributedString *loadStr =
-    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Insert", @"Insert")
-                                    attributes:@{
-                                                 NSFontAttributeName : [CMBUtility fontForButton],
-                                                 NSForegroundColorAttributeName : [CMBUtility whiteColor],
-                                                 }];
-    [rightUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility greenColor]
-                                      attributedTitle:loadStr];
-    NSAttributedString *deleteStr =
-    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Delete", @"Delete")
-                                    attributes:@{
-                                                 NSFontAttributeName : [CMBUtility fontForButton],
-                                                 NSForegroundColorAttributeName : [CMBUtility whiteColor],
-                                                 }];
-    [rightUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility redColor]
-                                      attributedTitle:deleteStr];
-    
-    return rightUtilityButtons;
 }
 
 #pragma mark - Debug.
