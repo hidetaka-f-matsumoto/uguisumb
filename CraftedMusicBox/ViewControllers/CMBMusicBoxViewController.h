@@ -56,5 +56,6 @@ static CGFloat const CMBTimeDivAutoScroll = 0.02f; // [s]
 - (IBAction)menueButtonDidTap:(id)sender;
 - (IBAction)tableViewDidSwipeLeft:(id)sender;
 - (IBAction)tableViewDidSwipeRight:(id)sender;
+- (IBAction)tableViewDidLongPress:(id)sender;
 
 @end

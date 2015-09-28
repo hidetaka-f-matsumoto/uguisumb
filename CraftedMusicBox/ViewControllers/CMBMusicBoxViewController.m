@@ -357,12 +357,12 @@
     }},
                                      @{@"title": NSLocalizedString(@"Config song", @"Configurate the song."),
                                        @"handler": ^(UIAlertAction *action)
-    {
+                                       {
         [self songConfigButtonDidTap];
     }},
                                      @{@"title": NSLocalizedString(@"Manage my songs", @"Manage my songs."),
                                        @"handler": ^(UIAlertAction *action)
-    {
+                                       {
         [self songManageButtonDidTap];
     }},
                                      @{@"title": NSLocalizedString(@"Help", @"Help"),
@@ -384,18 +384,66 @@
     }},
                                      @{@"title": NSLocalizedString(@"Config song", @"Configure the song."),
                                        @"handler": ^(void)
-    {
+                                       {
         [self songConfigButtonDidTap];
     }},
                                      @{@"title": NSLocalizedString(@"Manage my songs", @"Manage my songs."),
                                        @"handler": ^(void)
-    {
+                                       {
         [self songManageButtonDidTap];
     }},
                                      @{@"title": NSLocalizedString(@"Help", @"Help"),
                                        @"handler": ^(void)
                                        {
         [self helpButtonDidTap];
+    }},
+                                     ]
+     ];
+}
+
+/**
+ * 編集メニューボタン
+ */
+- (void)editButtonDidTapWithIndexPath:(NSIndexPath *)indexPath
+{
+    NSIndexPath *indexPathBelow = [NSIndexPath indexPathForRow:indexPath.row + 1 inSection:indexPath.section];
+    // 再生中の場合は一時停止
+    [self pause];
+    // メニューを表示
+    [self showActionSheetWithTitle:NSLocalizedString(@"Edit", @"Edit")
+                           message:nil
+                          buttons1:@[
+                                     @{@"title": NSLocalizedString(@"Insert time above", @"Insert a time above."),
+                                       @"handler": ^(UIAlertAction *action)
+                                       {
+        [self insertRowAtIndexPath:indexPath];
+    }},
+                                     @{@"title": NSLocalizedString(@"Delete time", @"Delete the time."),
+                                       @"handler": ^(UIAlertAction *action)
+                                       {
+        [self deleteRowAtIndexPath:indexPath];
+    }},
+                                     @{@"title": NSLocalizedString(@"Insert time below", @"Insert a time below."),
+                                       @"handler": ^(UIAlertAction *action)
+                                       {
+        [self insertRowAtIndexPath:indexPathBelow];
+    }},
+                                     ]
+                          buttons2:@[
+                                     @{@"title": NSLocalizedString(@"Insert time above", @"Insert a time above."),
+                                       @"handler": ^(void)
+                                       {
+        [self insertRowAtIndexPath:indexPath];
+    }},
+                                     @{@"title": NSLocalizedString(@"Delete time", @"Delete the time."),
+                                       @"handler": ^(void)
+                                       {
+        [self deleteRowAtIndexPath:indexPath];
+    }},
+                                     @{@"title": NSLocalizedString(@"Insert time below", @"Insert a time below."),
+                                       @"handler": ^(void)
+                                       {
+        [self insertRowAtIndexPath:indexPathBelow];
     }},
                                      ]
      ];
@@ -504,6 +552,23 @@
 - (IBAction)tableViewDidSwipeRight:(id)sender
 {
     [self octaveDown];
+}
+
+/**
+ * 長押しハンドラ
+ */
+- (IBAction)tableViewDidLongPress:(id)sender
+{
+    UILongPressGestureRecognizer* gestureRecognizer = (UILongPressGestureRecognizer *)sender;
+    CGPoint p = [gestureRecognizer locationInView:_tableView];
+    
+    NSIndexPath *indexPath = [_tableView indexPathForRowAtPoint:p];
+    if (!indexPath) {
+        return;
+    }
+    if (UIGestureRecognizerStateBegan == gestureRecognizer.state) {
+        [self editButtonDidTapWithIndexPath:indexPath];
+    }
 }
 
 #pragma mark - Control Views
