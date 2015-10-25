@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OGI-JR-xGh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OGI-JR-xGh">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -94,7 +94,7 @@ octave up</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-e8-u6Q">
-                                                    <rect key="frame" x="240" y="132" width="120" height="44"/>
+                                                    <rect key="frame" x="8" y="135.5" width="584" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="Ugz-uo-MPy"/>
                                                         <constraint firstAttribute="height" constant="44" id="d44-eM-aAa"/>
@@ -104,16 +104,23 @@ music box on.</string>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                                     <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Ugz-uo-MPy"/>
+                                                        </mask>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="87A-Md-34a" secondAttribute="trailing" constant="8" id="2eC-js-cJZ"/>
-                                                <constraint firstAttribute="bottom" secondItem="gr1-e8-u6Q" secondAttribute="bottom" constant="7" id="Kvv-Vr-GBD"/>
+                                                <constraint firstAttribute="bottom" secondItem="gr1-e8-u6Q" secondAttribute="bottom" constant="4" id="Kvv-Vr-GBD"/>
+                                                <constraint firstItem="gr1-e8-u6Q" firstAttribute="leading" secondItem="WI0-ID-h8r" secondAttribute="leading" constant="8" id="MNq-k1-kZ4"/>
                                                 <constraint firstItem="XdX-Al-I3p" firstAttribute="leading" secondItem="WI0-ID-h8r" secondAttribute="leading" constant="8" id="NC5-Vl-7B5"/>
                                                 <constraint firstAttribute="centerX" secondItem="gr1-e8-u6Q" secondAttribute="centerX" id="Nq4-7g-i3J"/>
                                                 <constraint firstAttribute="bottom" secondItem="87A-Md-34a" secondAttribute="bottom" constant="51" id="TCb-KL-J2f"/>
                                                 <constraint firstAttribute="bottom" secondItem="XdX-Al-I3p" secondAttribute="bottom" constant="51" id="YCs-cH-g3X"/>
+                                                <constraint firstAttribute="trailing" secondItem="gr1-e8-u6Q" secondAttribute="trailing" constant="8" id="cSB-9d-LbG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
