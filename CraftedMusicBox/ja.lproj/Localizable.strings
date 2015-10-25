@@ -135,3 +135,12 @@
 
 /* The message when song title is empty. */
 "Song title is empty." = "曲のタイトルが空です。";
+
+/* Insert a time above. */
+"Insert time above" = "タイムの挿入 (上)";
+
+/* Insert a time below. */
+"Insert time below" = "タイムの挿入 (下)";
+
+/* Delete the time. */
+"Delete time" = "タイムの削除";

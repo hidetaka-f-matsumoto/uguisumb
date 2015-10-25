@@ -135,3 +135,12 @@
 
 /* The message when song title is empty. */
 "Song title is empty." = "Song title is empty.";
+
+/* Insert a time above. */
+"Insert time above" = "Insert a time above";
+
+/* Insert a time below. */
+"Insert time below" = "Insert a time below";
+
+/* Delete the time. */
+"Delete time" = "Delete the time";

@@ -75,7 +75,7 @@
     }
 }
 
-- (void)loadEndWithNetwork:(BOOL)network
+- (void)loadingEndWithNetwork:(BOOL)network
 {
     if (network) {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
