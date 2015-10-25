@@ -10,6 +10,7 @@
 		042AB2D01A6F2F310050BC92 /* ImobileSdkAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2CA1A6F2F310050BC92 /* ImobileSdkAds.framework */; };
 		042AB2D11A6F2F310050BC92 /* libAdapterIMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2CB1A6F2F310050BC92 /* libAdapterIMobile.a */; };
 		042AB2D41A6F30EC0050BC92 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2D31A6F30EC0050BC92 /* Social.framework */; };
+		04FCD3ED1B79F639006E71E1 /* CMBAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCD3EC1B79F639006E71E1 /* CMBAnimations.m */; };
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
 		0803C8E81A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8EA1A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings */; };
 		0820BC1B1A7481CA00E405B3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0820BC1A1A7481CA00E405B3 /* Reachability.m */; };
@@ -99,6 +100,8 @@
 		042AB2CE1A6F2F310050BC92 /* ImobileSdkAds-Adapter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImobileSdkAds-Adapter-Bridging-Header.h"; sourceTree = "<group>"; };
 		042AB2CF1A6F2F310050BC92 /* ImobileSdkAds-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImobileSdkAds-Bridging-Header.h"; sourceTree = "<group>"; };
 		042AB2D31A6F30EC0050BC92 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		04FCD3EB1B79F639006E71E1 /* CMBAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBAnimations.h; path = Utilities/CMBAnimations.h; sourceTree = "<group>"; };
+		04FCD3EC1B79F639006E71E1 /* CMBAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBAnimations.m; path = Utilities/CMBAnimations.m; sourceTree = "<group>"; };
 		0802C0851A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewHeadCell.h; path = Views/CMBMusicBoxTableViewHeadCell.h; sourceTree = "<group>"; };
 		0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBMusicBoxTableViewHeadCell.m; path = Views/CMBMusicBoxTableViewHeadCell.m; sourceTree = "<group>"; };
 		0803C8C71A2D53A900FE8357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -484,6 +487,8 @@
 				08CC5E2019DEADAF0049AAD5 /* UIColor+CMBTools.m */,
 				08CC5E6A19E14FF90049AAD5 /* NSURL+CMBTools.h */,
 				08CC5E6B19E14FF90049AAD5 /* NSURL+CMBTools.m */,
+				04FCD3EB1B79F639006E71E1 /* CMBAnimations.h */,
+				04FCD3EC1B79F639006E71E1 /* CMBAnimations.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -832,6 +837,7 @@
 				08883B111956CFEF00F7EB68 /* CMBMusicBoxViewController.m in Sources */,
 				08CC5E8C19E2D19A0049AAD5 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				08A52E6B1A39C51C008F86C2 /* SVIndefiniteAnimatedView.m in Sources */,
+				04FCD3ED1B79F639006E71E1 /* CMBAnimations.m in Sources */,
 				08CC5E6C19E14FF90049AAD5 /* NSURL+CMBTools.m in Sources */,
 				086BA16319D0FA4E00991574 /* CMBSongManageViewController.m in Sources */,
 				086BA16919D10C4B00991574 /* CMBBaseModalViewController.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CMBSequenceOneData.h"
+#import "SWTableViewCell.h"
 
 static CGFloat const CMBMusicBoxTableViewCellHeightForLoad  = 11.f;
 static CGFloat const CMBMusicBoxTableViewCellHeight         = 44.f;

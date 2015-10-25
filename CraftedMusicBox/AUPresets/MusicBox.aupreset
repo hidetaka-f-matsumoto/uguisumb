@@ -877,77 +877,77 @@
 	<key>file-references</key>
 	<dict>
 		<key>Sample:268435457</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/C3.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/C3.caf</string>
 		<key>Sample:268435458</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/C#3.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/C%233.caf</string>
 		<key>Sample:268435459</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/D3.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/D3.caf</string>
 		<key>Sample:268435460</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/D#3.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/D%233.caf</string>
 		<key>Sample:268435461</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/E3.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/E3.caf</string>
 		<key>Sample:268435462</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/A#3.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/A%233.caf</string>
 		<key>Sample:268435463</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/A#4.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/A%234.caf</string>
 		<key>Sample:268435464</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/A#5.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/A%235.caf</string>
 		<key>Sample:268435465</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/A3.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/A3.caf</string>
 		<key>Sample:268435466</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/F3.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/F3.caf</string>
 		<key>Sample:268435467</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/F#3.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/F%233.caf</string>
 		<key>Sample:268435468</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/G3.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/G3.caf</string>
 		<key>Sample:268435469</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/G#3.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/G%233.caf</string>
 		<key>Sample:268435470</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/B3.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/B3.caf</string>
 		<key>Sample:268435471</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/C4.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/C4.caf</string>
 		<key>Sample:268435472</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/C#4.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/C%234.caf</string>
 		<key>Sample:268435473</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/D4.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/D4.caf</string>
 		<key>Sample:268435474</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/D#4.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/D%234.caf</string>
 		<key>Sample:268435475</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/E4.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/E4.caf</string>
 		<key>Sample:268435476</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/F4.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/F4.caf</string>
 		<key>Sample:268435477</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/F#4.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/F%234.caf</string>
 		<key>Sample:268435478</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/G4.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/G4.caf</string>
 		<key>Sample:268435479</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/A4.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/A4.caf</string>
 		<key>Sample:268435480</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/B4.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/B4.caf</string>
 		<key>Sample:268435481</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/G#4.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/G%234.caf</string>
 		<key>Sample:268435482</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/C5.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/C5.caf</string>
 		<key>Sample:268435483</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/G#5.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/G%235.caf</string>
 		<key>Sample:268435484</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/D5.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/D5.caf</string>
 		<key>Sample:268435485</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/D#5.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/D%235.caf</string>
 		<key>Sample:268435486</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/C#5.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/C%235.caf</string>
 		<key>Sample:268435487</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/E5.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/E5.caf</string>
 		<key>Sample:268435488</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/F5.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/F5.caf</string>
 		<key>Sample:268435489</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/F#5.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/F%235.caf</string>
 		<key>Sample:268435490</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/G5.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/G5.caf</string>
 		<key>Sample:268435491</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/A5.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/A5.caf</string>
 		<key>Sample:268435492</key>
-		<string>/Users/hide/Projects/CraftedMusicBox/CraftedMusicBox/Sounds//MusicBox/B5.caf</string>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/B5.caf</string>
 	</dict>
 	<key>fine tune</key>
 	<real>0</real>

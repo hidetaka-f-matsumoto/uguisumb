@@ -34,6 +34,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *speedLabel;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *division1Control;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *division2Control;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *scaleControl;
 
 - (IBAction)speedStepperDidTap:(id)sender;
 - (IBAction)applyButtonDidTap:(id)sender;

@@ -49,3 +49,11 @@
 - (BOOL)checkFirstRunCurrentVersion;
 
 @end
+
+/**
+ * pt 中心で angle[rad] 回転する
+ */
+static inline CGAffineTransform CGAffineTransformMakeRotationAt(CGFloat angle, CGPoint pt) {
+    const CGFloat fx = pt.x, fy = pt.y, fcos = cos(angle), fsin = sin(angle);
+    return CGAffineTransformMake(fcos, fsin, -fsin, fcos, fx - fx * fcos + fy * fsin, fy - fx * fsin - fy * fcos);
+}

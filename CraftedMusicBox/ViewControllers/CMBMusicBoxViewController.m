@@ -10,6 +10,7 @@
 #import "CMBMusicBoxViewController.h"
 #import "UIColor+CMBTools.h"
 #import "NSString+CMBTools.h"
+#import "CMBAnimations.h"
 
 @interface CMBMusicBoxViewController ()
 {
@@ -19,6 +20,7 @@
     BOOL _isFirstViewWillAppear;
     BOOL _isFirstViewDidAppear;
     BOOL _isCellPrepared;
+    BOOL _isOctaveChanging;
     CGPoint _scrollPointBegin;
     CGFloat _headViewTopConstraintConstantOriginal;
     NSMutableDictionary *_sequences; // Dictionary<NSNumber *, CMBSequenceOneData *>
@@ -38,6 +40,7 @@
     _isFirstViewWillAppear = YES;
     _isFirstViewDidAppear = YES;
     _isCellPrepared = NO;
+    _isOctaveChanging = NO;
     // 初期状態はカーテンあり
     _curtainView.backgroundColor = [CMBUtility whiteColor];
     // 通知を登録
@@ -354,12 +357,12 @@
     }},
                                      @{@"title": NSLocalizedString(@"Config song", @"Configurate the song."),
                                        @"handler": ^(UIAlertAction *action)
-    {
+                                       {
         [self songConfigButtonDidTap];
     }},
                                      @{@"title": NSLocalizedString(@"Manage my songs", @"Manage my songs."),
                                        @"handler": ^(UIAlertAction *action)
-    {
+                                       {
         [self songManageButtonDidTap];
     }},
                                      @{@"title": NSLocalizedString(@"Help", @"Help"),
@@ -381,12 +384,12 @@
     }},
                                      @{@"title": NSLocalizedString(@"Config song", @"Configure the song."),
                                        @"handler": ^(void)
-    {
+                                       {
         [self songConfigButtonDidTap];
     }},
                                      @{@"title": NSLocalizedString(@"Manage my songs", @"Manage my songs."),
                                        @"handler": ^(void)
-    {
+                                       {
         [self songManageButtonDidTap];
     }},
                                      @{@"title": NSLocalizedString(@"Help", @"Help"),
@@ -396,6 +399,79 @@
     }},
                                      ]
      ];
+}
+
+/**
+ * 編集メニューボタン
+ */
+- (void)editButtonDidTapWithIndexPath:(NSIndexPath *)indexPath
+{
+    NSIndexPath *indexPathBelow = [NSIndexPath indexPathForRow:indexPath.row + 1 inSection:indexPath.section];
+    // 再生中の場合は一時停止
+    [self pause];
+    // メニューを表示
+    [self showActionSheetWithTitle:NSLocalizedString(@"Edit", @"Edit")
+                           message:nil
+                          buttons1:@[
+                                     @{@"title": NSLocalizedString(@"Insert time above", @"Insert a time above."),
+                                       @"handler": ^(UIAlertAction *action)
+                                       {
+        [self insertRowAtIndexPath:indexPath];
+    }},
+                                     @{@"title": NSLocalizedString(@"Delete time", @"Delete the time."),
+                                       @"handler": ^(UIAlertAction *action)
+                                       {
+        [self timeDeleteButtonDidTapWithIndexPath:indexPath];
+    }},
+                                     @{@"title": NSLocalizedString(@"Insert time below", @"Insert a time below."),
+                                       @"handler": ^(UIAlertAction *action)
+                                       {
+        [self insertRowAtIndexPath:indexPathBelow];
+    }},
+                                     ]
+                          buttons2:@[
+                                     @{@"title": NSLocalizedString(@"Insert time above", @"Insert a time above."),
+                                       @"handler": ^(void)
+                                       {
+        [self insertRowAtIndexPath:indexPath];
+    }},
+                                     @{@"title": NSLocalizedString(@"Delete time", @"Delete the time."),
+                                       @"handler": ^(void)
+                                       {
+        [self timeDeleteButtonDidTapWithIndexPath:indexPath];
+    }},
+                                     @{@"title": NSLocalizedString(@"Insert time below", @"Insert a time below."),
+                                       @"handler": ^(void)
+                                       {
+        [self insertRowAtIndexPath:indexPathBelow];
+    }},
+                                     ]
+     ];
+}
+
+/**
+ * タイム削除ボタン
+ */
+- (void)timeDeleteButtonDidTapWithIndexPath:(NSIndexPath *)indexPath
+{
+    BOOL isNotes = [self isNotesFrom:indexPath.row to:indexPath.row];
+    // 音符がある場合
+    if (isNotes) {
+        NSString *title = NSLocalizedString(@"Remove time", @"Remove time");
+        NSString *message = NSLocalizedString(@"You wanna remove times where is some notes?", @"The message to confirm you want to remove times where is some notes.");
+        [self showConfirmDialogWithTitle:title
+                                 message:message
+                                handler1:^(UIAlertAction *action) {
+                                    [self deleteRowAtIndexPath:indexPath];
+                                }
+                                handler2:^(void) {
+                                    [self deleteRowAtIndexPath:indexPath];
+                                }];
+    }
+    // 音符が無い場合
+    else {
+        [self deleteRowAtIndexPath:indexPath];
+    }
 }
 
 /**
@@ -488,50 +564,35 @@
 }
 
 /**
- * スワイプハンドラ (左)
+ * スワイプハンドラ (<<<)
  */
 - (IBAction)tableViewDidSwipeLeft:(id)sender
 {
-    if (CMBOctaveMax > _currentOctave) {
-        _currentOctave++;
-        // 表示更新
-        [self updateViewsWithResetScroll:NO animation:YES completion:^(BOOL finished) {
-            // zoom in-out
-            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-            // アニメーションのオプションを設定
-            animation.duration = 0.25f;
-            animation.repeatCount = 1;
-            animation.autoreverses = YES;
-            // 拡大・縮小倍率を設定
-            animation.fromValue = [NSNumber numberWithFloat:1.f];
-            animation.toValue = [NSNumber numberWithFloat:3.f];
-            // アニメーションを追加
-            [_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
-        }];
-    }
+    [self octaveUp];
 }
 
 /**
- * スワイプハンドラ (右)
+ * スワイプハンドラ (>>>)
  */
 - (IBAction)tableViewDidSwipeRight:(id)sender
 {
-    if (CMBOctaveMin < _currentOctave) {
-        _currentOctave--;
-        // 表示更新
-        [self updateViewsWithResetScroll:NO animation:YES completion:^(BOOL finished) {
-            // zoom in-out
-            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-            // アニメーションのオプションを設定
-            animation.duration = 0.25f;
-            animation.repeatCount = 1;
-            animation.autoreverses = YES;
-            // 拡大・縮小倍率を設定
-            animation.fromValue = [NSNumber numberWithFloat:1.f];
-            animation.toValue = [NSNumber numberWithFloat:3.f];
-            // アニメーションを追加
-            [_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
-        }];
+    [self octaveDown];
+}
+
+/**
+ * 長押しハンドラ
+ */
+- (IBAction)tableViewDidLongPress:(id)sender
+{
+    UILongPressGestureRecognizer* gestureRecognizer = (UILongPressGestureRecognizer *)sender;
+    CGPoint p = [gestureRecognizer locationInView:_tableView];
+    
+    NSIndexPath *indexPath = [_tableView indexPathForRowAtPoint:p];
+    if (!indexPath) {
+        return;
+    }
+    if (UIGestureRecognizerStateBegan == gestureRecognizer.state) {
+        [self editButtonDidTapWithIndexPath:indexPath];
     }
 }
 
@@ -550,8 +611,8 @@
         // スクロール初期位置
         _tableView.contentOffset = CGPointMake(0, 0);
     }
-    // タイトル更新
-    _titleLabel.text = (_header.name && 0 < _header.name.length) ? _header.name : NSLocalizedString(@"No title", @"Song title is none.");
+    // ヘッダビュー更新
+    [self updateHeadView];
     // オクターブ表示更新
     _octaveLabel.text = [NSString stringWithFormat:@"%zd", [self getCurrentOctave]];
     // テーブルビュー更新
@@ -566,6 +627,27 @@
     // 後処理
     if (completion) {
         completion(YES);
+    }
+}
+
+/**
+ * ヘッダ表示更新
+ */
+- (void)updateHeadView
+{
+    // タイトル更新
+    _titleLabel.text = (_header.name && 0 < _header.name.length) ? _header.name : NSLocalizedString(@"No title", @"Song title is none.");
+    // 音階表示更新
+    const NSString *scaleMode = _header.scaleMode;
+    NSArray *names = CMBScaleNames[scaleMode];
+    UIFont *font = [UIFont fontWithName:@"SetoFont-SP" size:19.f];
+    if ([scaleMode isEqualToString:@"doremi"] || [scaleMode isEqualToString:@"haniho"]) {
+        font = [UIFont fontWithName:@"SetoFont-SP" size:16.f];
+    }
+    for (NSInteger i=0; i<_scaleLabels.count; i++) {
+        UILabel *label = _scaleLabels[i];
+        label.font = font;
+        label.text = names[i];
     }
 }
 
@@ -614,6 +696,79 @@
      }];
 }
 
+/**
+ * オクターブ上げ
+ */
+- (void)octaveUp {
+    if (CMBOctaveMax <= _currentOctave || _isOctaveChanging) {
+        return;
+    }
+    _isOctaveChanging = YES;
+    _currentOctave++;
+    // 表示更新
+    [self updateViewsWithResetScroll:NO animation:YES completion:^(BOOL finished) {
+        // zoom in-out
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        // アニメーションのオプションを設定
+        animation.duration = 0.25f;
+        animation.repeatCount = 1;
+        animation.autoreverses = YES;
+        // 拡大・縮小倍率を設定
+        animation.fromValue = [NSNumber numberWithFloat:1.f];
+        animation.toValue = [NSNumber numberWithFloat:3.f];
+        // アニメーションを追加
+        [_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
+        _isOctaveChanging = NO;
+    }];
+}
+
+/**
+ * オクターブ下げ
+ */
+- (void)octaveDown {
+    if (CMBOctaveMin >= _currentOctave || _isOctaveChanging) {
+        return;
+    }
+    _isOctaveChanging = YES;
+    _currentOctave--;
+    // 表示更新
+    [self updateViewsWithResetScroll:NO animation:YES completion:^(BOOL finished) {
+        // zoom in-out
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        // アニメーションのオプションを設定
+        animation.duration = 0.25f;
+        animation.repeatCount = 1;
+        animation.autoreverses = YES;
+        // 拡大・縮小倍率を設定
+        animation.fromValue = [NSNumber numberWithFloat:1.f];
+        animation.toValue = [NSNumber numberWithFloat:3.f];
+        // アニメーションを追加
+        [_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
+        // ローディング表示OFF
+        [self loadingEndWithNetwork:NO];
+        _isOctaveChanging = NO;
+    }];
+}
+
+#pragma mark - CAAnimation
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    CALayer *layer = [anim valueForKey:@"animationLayer"];
+    if (flag) {
+        DPRINT(@"アニメーション完了");
+        [layer removeFromSuperlayer];
+    }
+}
+
+/**
+ * 鶯が鳴く
+ */
+- (void)uguisuSing {
+    CGPoint kStartPos = CGPointMake(_uguisuView.bounds.size.width / 2.f, 0.f);
+    CALayer *noteLayer = [CMBAnimations noteAnimationLayerWithName:@"uguisuSing" startPos:kStartPos delegate:self];
+    [_uguisuView.layer addSublayer:noteLayer];
+}
+
 #pragma mark - Etcs
 
 /**
@@ -622,8 +777,8 @@
 - (BOOL)isNotesFrom:(NSInteger)from to:(NSInteger)to
 {
     BOOL isNotes = NO;
-    for (NSInteger i=from-1; i<=to-1; i++) {
-        CMBSequenceOneData * soData = _sequences[[NSNumber numberWithInteger:i]];
+    for (NSInteger i=from; i<=to; i++) {
+        CMBSequenceOneData *soData = _sequences[[NSNumber numberWithInteger:i]];
         isNotes |= soData && [soData isNotes];
     }
     return isNotes;
@@ -635,13 +790,59 @@
 - (void)changeLength:(NSInteger)length
 {
     // 無くなる範囲のシーケンスを消去
-    for (NSInteger i=length; i<=_header.length.integerValue-1; i++) {
+    for (NSInteger i=length; i<_header.length.integerValue; i++) {
         [_sequences removeObjectForKey:[NSNumber numberWithInteger:i]];
     }
     // length更新
     _header.length = [NSNumber numberWithInteger:length];
     // 表示更新
     [_tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+/**
+ * 行挿入
+ */
+- (void)insertRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 追加行より後ろのデータをずらす
+    for (NSInteger i=_header.length.integerValue-1; i>=indexPath.row; i--) {
+        NSNumber *curr = [NSNumber numberWithInteger:i];
+        NSNumber *new = [NSNumber numberWithInteger:(i + 1)];
+        CMBSequenceOneData *soData = _sequences[curr];
+        if (!soData) {
+            continue;
+        }
+        [_sequences removeObjectForKey:curr];
+        _sequences[new] = soData;
+    }
+    // length更新
+    _header.length = [NSNumber numberWithInteger:(_header.length.integerValue + 1)];
+    // 描画更新
+    [_tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+/**
+ * 行削除
+ */
+- (void)deleteRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // シーケンスから削除
+    [_sequences removeObjectForKey:[NSNumber numberWithInteger:indexPath.row]];
+    // 追加行より後ろのデータをずらす
+    for (NSInteger i=indexPath.row; i<_header.length.integerValue; i++) {
+        NSNumber *curr = [NSNumber numberWithInteger:i];
+        NSNumber *new = [NSNumber numberWithInteger:(i - 1)];
+        CMBSequenceOneData *soData = _sequences[curr];
+        if (!soData) {
+            continue;
+        }
+        [_sequences removeObjectForKey:curr];
+        _sequences[new] = soData;
+    }
+    // length更新
+    _header.length = [NSNumber numberWithInteger:(_header.length.integerValue - 1)];
+    // 描画更新
+    [_tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 /**
@@ -759,6 +960,15 @@
     return 3;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if([indexPath row] == ((NSIndexPath*)[[tableView indexPathsForVisibleRows] lastObject]).row){
+        //end of loading
+        //for example [activityIndicator stopAnimating];
+        DPRINT(@"hogeeeeeee");
+    }
+}
+
 #pragma mark - UIScrollViewDelegate
 
 - (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
@@ -827,10 +1037,12 @@
         return;
     }
     BOOL isTapOn = [info[@"isTapOn"] boolValue];
-    // 音を再生
     if (isTapOn) {
+        // 音を再生
         [self playWithScale:info[CMBNoteInfoKeyScale]
                      octave:info[CMBNoteInfoKeyOctave]];
+        // 鶯が鳴く
+        [self uguisuSing];
     }
     // シーケンスを更新
     NSIndexPath *indexPath = (NSIndexPath *)info[@"indexPath"];
@@ -868,11 +1080,13 @@
     if (!soData || ![soData isNotes]) {
         return;
     }
-    // 音符を鳴らす
+    // 音を再生
     for (CMBNoteData *note in soData.notes) {
         [self playWithScale:note.scale
                      octave:note.octave];
     }
+    // 鶯が鳴く
+    [self uguisuSing];
 }
 
 /**
@@ -942,7 +1156,7 @@
         newLen = 0;
     }
     // 削除範囲に音符がある場合
-    if ([self isNotesFrom:(newLen + 1) to:_header.length.integerValue]) {
+    if ([self isNotesFrom:newLen to:(_header.length.integerValue - 1)]) {
         // 確認ダイアログ
         NSString *title = NSLocalizedString(@"Remove time", @"Remove time");
         NSString *message = [NSString stringWithFormat:
@@ -984,7 +1198,7 @@
     // 表示更新
     [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
         // 読み込み中を非表示
-        [self loadEndWithNetwork:NO];
+        [self loadingEndWithNetwork:NO];
     }];
 }
 
@@ -1051,7 +1265,7 @@
     // 表示更新
     [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
         // 読み込み中を非表示
-        [self loadEndWithNetwork:NO];
+        [self loadingEndWithNetwork:NO];
     }];
 }
 
@@ -1256,7 +1470,7 @@
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self loadEndWithNetwork:YES];
+                [self loadingEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
@@ -1272,7 +1486,7 @@
         if (error2) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self loadEndWithNetwork:YES];
+                [self loadingEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
@@ -1286,7 +1500,7 @@
         if (200 != [dict[@"result"][@"status"] integerValue]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
-                [self loadEndWithNetwork:YES];
+                [self loadingEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:dict[@"result"][@"message"]
@@ -1298,7 +1512,7 @@
         // 正常処理
         dispatch_async(dispatch_get_main_queue(), ^{
             // 通信中表示off
-            [self loadEndWithNetwork:YES];
+            [self loadingEndWithNetwork:YES];
             // ハンドラ
             handler(dict);
         });

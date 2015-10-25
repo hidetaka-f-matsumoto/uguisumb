@@ -25,7 +25,12 @@
 
 static CGFloat const CMBTimeDivAutoScroll = 0.02f; // [s]
 
-@interface CMBMusicBoxViewController : CMBBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, CMBMusicBoxTableViewCellDelegate, CMBMusicBoxTableViewHeadCellDelegate, CMBMusicBoxTableViewFootCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate>
+@interface CMBMusicBoxViewController : CMBBaseViewController
+<
+    UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate,
+    CMBMusicBoxTableViewCellDelegate, CMBMusicBoxTableViewHeadCellDelegate,
+    CMBMusicBoxTableViewFootCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate
+>
 {
     NSMutableDictionary *_dataSource;
 }
@@ -39,6 +44,8 @@ static CGFloat const CMBTimeDivAutoScroll = 0.02f; // [s]
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *playButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *octaveLabel;
+@property (nonatomic) IBOutletCollection(UILabel) NSArray *scaleLabels;
+@property (weak, nonatomic) IBOutlet UIImageView *uguisuView;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *headViewTopConstraint;
 
@@ -48,5 +55,6 @@ static CGFloat const CMBTimeDivAutoScroll = 0.02f; // [s]
 - (IBAction)menueButtonDidTap:(id)sender;
 - (IBAction)tableViewDidSwipeLeft:(id)sender;
 - (IBAction)tableViewDidSwipeRight:(id)sender;
+- (IBAction)tableViewDidLongPress:(id)sender;
 
 @end
