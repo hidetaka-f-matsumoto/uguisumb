@@ -864,6 +864,198 @@
 						<key>waveform</key>
 						<integer>268435492</integer>
 					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>39</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>84</integer>
+						<key>min key</key>
+						<integer>84</integer>
+						<key>root key</key>
+						<integer>84</integer>
+						<key>waveform</key>
+						<real>268435493</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>40</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>85</integer>
+						<key>min key</key>
+						<integer>85</integer>
+						<key>root key</key>
+						<integer>85</integer>
+						<key>waveform</key>
+						<real>268435494</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>41</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>86</integer>
+						<key>min key</key>
+						<integer>86</integer>
+						<key>root key</key>
+						<integer>86</integer>
+						<key>waveform</key>
+						<real>268435495</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>42</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>87</integer>
+						<key>min key</key>
+						<integer>87</integer>
+						<key>root key</key>
+						<integer>87</integer>
+						<key>waveform</key>
+						<real>268435496</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>43</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>88</integer>
+						<key>min key</key>
+						<integer>88</integer>
+						<key>root key</key>
+						<integer>88</integer>
+						<key>waveform</key>
+						<real>268435497</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>44</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>89</integer>
+						<key>min key</key>
+						<integer>89</integer>
+						<key>root key</key>
+						<integer>89</integer>
+						<key>waveform</key>
+						<real>268435498</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>45</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>90</integer>
+						<key>min key</key>
+						<integer>90</integer>
+						<key>root key</key>
+						<integer>90</integer>
+						<key>waveform</key>
+						<real>268435499</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>46</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>91</integer>
+						<key>min key</key>
+						<integer>91</integer>
+						<key>root key</key>
+						<integer>91</integer>
+						<key>waveform</key>
+						<real>268435500</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>47</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>92</integer>
+						<key>min key</key>
+						<integer>92</integer>
+						<key>root key</key>
+						<integer>92</integer>
+						<key>waveform</key>
+						<real>268435501</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>48</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>93</integer>
+						<key>min key</key>
+						<integer>93</integer>
+						<key>root key</key>
+						<integer>93</integer>
+						<key>waveform</key>
+						<real>268435502</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>49</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>94</integer>
+						<key>min key</key>
+						<integer>94</integer>
+						<key>root key</key>
+						<integer>94</integer>
+						<key>waveform</key>
+						<real>268435503</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>50</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>95</integer>
+						<key>min key</key>
+						<integer>95</integer>
+						<key>root key</key>
+						<integer>95</integer>
+						<key>waveform</key>
+						<real>268435504</real>
+					</dict>
 				</array>
 			</dict>
 		</array>
@@ -948,6 +1140,30 @@
 		<string>file://localhost/Library/Audio/Sounds/musicbox/5A.caf</string>
 		<key>Sample:268435492</key>
 		<string>file://localhost/Library/Audio/Sounds/musicbox/5B.caf</string>
+		<key>Sample:268435493</key>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/6C.caf</string>
+		<key>Sample:268435494</key>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/6Cs.caf</string>
+		<key>Sample:268435495</key>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/6D.caf</string>
+		<key>Sample:268435496</key>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/6Ds.caf</string>
+		<key>Sample:268435497</key>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/6E.caf</string>
+		<key>Sample:268435498</key>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/6F.caf</string>
+		<key>Sample:268435499</key>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/6Fs.caf</string>
+		<key>Sample:268435500</key>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/6G.caf</string>
+		<key>Sample:268435501</key>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/6Gs.caf</string>
+		<key>Sample:268435502</key>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/6A.caf</string>
+		<key>Sample:268435503</key>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/6As.caf</string>
+		<key>Sample:268435504</key>
+		<string>file://localhost/Library/Audio/Sounds/musicbox/6B.caf</string>
 	</dict>
 	<key>fine tune</key>
 	<real>0</real>
