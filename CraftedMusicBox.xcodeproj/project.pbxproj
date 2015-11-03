@@ -478,7 +478,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CMB;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = hidetaka.f.matsumoto;
 				TargetAttributes = {
 					08883ACF1956CC6A00F7EB68 = {
@@ -713,6 +713,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -792,6 +793,7 @@
 					iOS/IntermediateBuildFilesPath/UninstalledProducts,
 				);
 				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = hidetaka.f.matsumoto.uguisumb.d;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "89a322f8-e7c2-42eb-8e13-c55fbf24eb78";
 				WRAPPER_EXTENSION = app;
@@ -823,6 +825,7 @@
 					iOS/IntermediateBuildFilesPath/UninstalledProducts,
 				);
 				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = hidetaka.f.matsumoto.uguisumb.d;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6c377b2d-847c-4e4b-8541-a8699d0c32a9";
 				WRAPPER_EXTENSION = app;
@@ -845,6 +848,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "CraftedMusicBoxTests/CraftedMusicBoxTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "hidetaka.f.matsumoto.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -863,6 +867,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CraftedMusicBox/CraftedMusicBox-Prefix.pch";
 				INFOPLIST_FILE = "CraftedMusicBoxTests/CraftedMusicBoxTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "hidetaka.f.matsumoto.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
