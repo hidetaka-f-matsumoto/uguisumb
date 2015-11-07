@@ -29,7 +29,12 @@
        NSFontAttributeName : [UIFont fontWithName:@"SetoFont-SP" size:19.f],
        NSForegroundColorAttributeName : [CMBUtility tintColor],
        } forState:UIControlStateNormal];    
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
     // 広告を表示
     [self showAd];
 }
@@ -252,6 +257,10 @@
 
 - (void)showAd
 {
+    // 表示領域が無い場合は何もしない
+    if (!_bannerFrameView) {
+        return;
+    }
     // 利用可能な広告サイズの定数値は GADAdSize.h で説明されている
     _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
     // AutoresizingMask を OFF
