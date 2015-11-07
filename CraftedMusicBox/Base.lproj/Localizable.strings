@@ -144,3 +144,17 @@
 
 /* Delete the time. */
 "Delete time" = "Delete the time";
+
+/* Scale names. */
+"do"    = "do";
+"do#"   = "do#";
+"re"    = "re";
+"re#"   = "re#";
+"mi"    = "mi";
+"fa"    = "fa";
+"fa#"   = "fa#";
+"so"    = "so";
+"so#"   = "so#";
+"la"    = "la";
+"la#"   = "la#";
+"ti"    = "ti";

@@ -101,7 +101,7 @@ static NSString * const CMBSoundXylophone = @"CMBSoundXylophone";
 #define CMBScaleNameKeys @[@"normal", @"doremi", @"haniho"]
 #define CMBScaleNames @{ \
     @"normal": @[@"C", @"C#", @"D", @"D#", @"E", @"F", @"F#", @"G", @"G#", @"A", @"A#", @"B"], \
-    @"doremi": @[@"ﾄﾞ", @"ﾄﾞ#", @"ﾚ", @"ﾚ#", @"ﾐ", @"ﾌｧ", @"ﾌｧ#", @"ｿ", @"ｿ#", @"ﾗ", @"ﾗ#", @"ｼ"], \
+    @"doremi": @[@"do", @"do#", @"re", @"re#", @"mi", @"fa", @"fa#", @"so", @"so#", @"la", @"la#", @"ti"], \
     @"haniho": @[@"ハ", @"嬰ﾊ", @"ニ", @"嬰ﾆ", @"ホ", @"ヘ", @"嬰ﾍ", @"ト", @"嬰ﾄ", @"イ", @"嬰ｲ", @"ロ"], \
 }
 

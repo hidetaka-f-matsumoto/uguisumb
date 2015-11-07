@@ -647,7 +647,7 @@
     for (NSInteger i=0; i<_scaleLabels.count; i++) {
         UILabel *label = _scaleLabels[i];
         label.font = font;
-        label.text = names[i];
+        label.text = NSLocalizedString(names[i], names[i]);
     }
 }
 
