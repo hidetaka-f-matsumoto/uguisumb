@@ -789,10 +789,7 @@
 				);
 				INFOPLIST_FILE = "CraftedMusicBox/CraftedMusicBox-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					iOS/IntermediateBuildFilesPath/UninstalledProducts,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = hidetaka.f.matsumoto.uguisumb.d;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -822,10 +819,7 @@
 				);
 				INFOPLIST_FILE = "CraftedMusicBox/CraftedMusicBox-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					iOS/IntermediateBuildFilesPath/UninstalledProducts,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = hidetaka.f.matsumoto.uguisumb.d;
 				PRODUCT_NAME = "$(TARGET_NAME)";
