@@ -558,9 +558,27 @@
  */
 - (void)helpButtonDidTap
 {
-    // Help画面へ
-    [self performSegueWithIdentifier:@"Help"
-                              sender:self];
+    // iOS9 より前
+    if (9.f >[[UIDevice currentDevice] systemVersion].floatValue) {
+        // Help画面へ
+        [self performSegueWithIdentifier:@"Help"
+                                  sender:self];
+    }
+    // iOS9 以降
+    else {
+        // ブラウザで表示 (iOS9 ATS で、hatenablog が開けないため)
+        NSString *title = NSLocalizedString(@"Open Safari", @"Open Safari");
+        NSString *message = [NSString stringWithFormat:
+                             NSLocalizedString(@"Are you sure to open a external app?", @"The message to confirm you want to open a external app.")];
+        [self showConfirmDialogWithTitle:title
+                                 message:message
+                                handler1:^(UIAlertAction *action) {
+                                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:CMBSvSupportURL]];
+                                }
+                                handler2:^(void) {
+                                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:CMBSvSupportURL]];
+                                }];
+    }
 }
 
 /**

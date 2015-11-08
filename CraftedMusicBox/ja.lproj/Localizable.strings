@@ -146,6 +146,12 @@
 /* Delete the time. */
 "Delete time" = "タイムの削除";
 
+/* Open Safari */
+"Open Safari" = "Safariを開く";
+
+/* The message to confirm you want to open a external app. */
+"Are you sure to open a external app?" = "外部アプリを起動します。曲を編集中の場合は、保存しておくことをお勧めします。このまま外部アプリを起動しますか？";
+
 /* Scale names. */
 "do"    = "ﾄﾞ";
 "do#"   = "ﾄﾞ#";

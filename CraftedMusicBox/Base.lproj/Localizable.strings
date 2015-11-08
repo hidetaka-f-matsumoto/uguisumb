@@ -146,6 +146,12 @@
 /* Delete the time. */
 "Delete time" = "Delete the time";
 
+/* Open Safari */
+"Open Safari" = "Open Safari";
+
+/* The message to confirm you want to open a external app. */
+"Are you sure to open a external app?" = "This action will open a external app. I recommend you to save your edit. Are you sure to open a external app?";
+
 /* Scale names. */
 "do"    = "do";
 "do#"   = "do#";
