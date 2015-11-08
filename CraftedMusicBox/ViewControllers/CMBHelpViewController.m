@@ -24,6 +24,8 @@
     NSURL *url = [NSURL URLWithString:CMBSvSupportURL];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:req];
+    // ロード中表示
+    [self loadingBeginWithNetwork:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,6 +72,8 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     // ボタン状態を更新
     [self updateButtonsWithWebView:webView];
+    // ロード中表示
+    [self loadingEndWithNetwork:NO];
 }
 
 @end
