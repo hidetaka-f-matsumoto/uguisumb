@@ -782,6 +782,10 @@
  * 鶯が鳴く
  */
 - (void)uguisuSing {
+    // 停止スクロール中は鳴かない
+    if (_isStopping) {
+        return;
+    }
     CGPoint kStartPos = CGPointMake(_uguisuView.bounds.size.width / 2.f, 0.f);
     CALayer *noteLayer = [CMBAnimations noteAnimationLayerWithName:@"uguisuSing" startPos:kStartPos delegate:self];
     [_uguisuView.layer addSublayer:noteLayer];
@@ -836,7 +840,8 @@
     // length更新
     _header.length = [NSNumber numberWithInteger:(_header.length.integerValue + 1)];
     // 描画更新
-    [_tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self updateViewsWithResetScroll:NO animation:YES completion:nil];
+//    [_tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic]; // セル色が変化しない
 }
 
 /**
@@ -860,7 +865,8 @@
     // length更新
     _header.length = [NSNumber numberWithInteger:(_header.length.integerValue - 1)];
     // 描画更新
-    [_tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self updateViewsWithResetScroll:NO animation:YES completion:nil];
+//    [_tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic]; // セル色が変化しない
 }
 
 /**
