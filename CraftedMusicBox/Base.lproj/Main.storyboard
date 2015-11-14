@@ -679,7 +679,7 @@ music box on.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6un-Vg-Onf">
-                                        <rect key="frame" x="157" y="62" width="24" height="26"/>
+                                        <rect key="frame" x="158" y="62" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="dJM-zX-9ak"/>
                                             <constraint firstAttribute="width" constant="24" id="wQb-De-Sx8"/>
@@ -689,7 +689,7 @@ music box on.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGA-bt-6SB">
-                                        <rect key="frame" x="209" y="62" width="24" height="26"/>
+                                        <rect key="frame" x="210" y="62" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="A1L-Ek-Oih"/>
                                             <constraint firstAttribute="width" constant="24" id="WVG-4y-hhO"/>
@@ -728,8 +728,8 @@ music box on.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMu-ns-MIO">
-                                        <rect key="frame" x="417" y="62" width="24" height="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="G#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMu-ns-MIO">
+                                        <rect key="frame" x="417.5" y="62" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="lQY-3d-AVY"/>
                                             <constraint firstAttribute="width" constant="24" id="rG8-S9-lj2"/>
@@ -809,8 +809,8 @@ music box on.</string>
                                             <constraint firstAttribute="height" constant="26" id="urz-23-4ct"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sk-mn-4Ku">
-                                        <rect key="frame" x="285" y="62" width="28" height="26"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sk-mn-4Ku">
+                                        <rect key="frame" x="285" y="62" width="28.5" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="dyQ-Hk-0rC"/>
@@ -973,6 +973,7 @@ music box on.</string>
                                         <rect key="frame" x="0.0" y="63" width="600" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="GtV-vh-Bqb" secondAttribute="height" multiplier="600:37" id="Drl-41-M6I"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="dwc-6a-PKh"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uguisu" translatesAutoresizingMaskIntoConstraints="NO" id="Akk-FW-dNV">
@@ -984,7 +985,7 @@ music box on.</string>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="GtV-vh-Bqb" firstAttribute="leading" secondItem="nIN-k4-Uqe" secondAttribute="leading" id="Azx-9O-uHn"/>
+                                    <constraint firstItem="GtV-vh-Bqb" firstAttribute="leading" secondItem="nIN-k4-Uqe" secondAttribute="leading" priority="750" id="Azx-9O-uHn"/>
                                     <constraint firstAttribute="trailing" secondItem="Akk-FW-dNV" secondAttribute="trailing" constant="8" id="HIV-39-EDN"/>
                                     <constraint firstAttribute="bottom" secondItem="Akk-FW-dNV" secondAttribute="bottom" constant="3" id="JUJ-aJ-GJE"/>
                                     <constraint firstAttribute="trailing" secondItem="GtV-vh-Bqb" secondAttribute="trailing" id="OJV-4y-0X2"/>
