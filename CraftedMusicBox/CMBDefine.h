@@ -28,7 +28,7 @@ static NSString * const CMBURLParamSong = @"song";
 /**
  * Server
  */
-static NSString * const CMBSvSupportURL = @"https://uguisumb.herokuapp.com/support/";
+static NSString * const CMBSvSupportURL = @"http://fisherman.hatenablog.com/entry/2015/02/05/001739";
 static NSString * const CMBSvApiURL = @"https://uguisumb.herokuapp.com/api/";
 static NSString * const CMBSvViewURL = @"https://uguisumb.herokuapp.com/html/";
 static NSString * const CMBSvActionSongReg = @"song.register.php";
