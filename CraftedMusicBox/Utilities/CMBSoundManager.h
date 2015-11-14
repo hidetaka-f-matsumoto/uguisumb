@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
-#import "CMBNoteData.h"
 
 #define AU_SAMPLER      1
 #define AUDIO_PLAYER    0
@@ -20,10 +19,13 @@ static UInt32 const MIDINoteNumber_C4 = 60;
 
 @property (nonatomic, readonly) NSMutableDictionary *sounds;
 @property (nonatomic, readonly) BOOL isAvailable;
+@property (nonatomic, readonly) NSMutableDictionary *eq;
 
 + (CMBSoundManager *)sharedInstance;
 + (UInt32)midiScaleWithScale:(NSString *)scale
                       octave:(NSNumber *)octave;
++ (CGFloat)eqWithScale:(NSString *)scale
+                octave:(NSNumber *)octave;
 - (void)playWithInstrument:(NSString *)instrument
                      scale:(NSString *)scale
                     octave:(NSNumber *)octave;

@@ -55,7 +55,7 @@ static NSInteger const CMBOctaveMin = 2;
 static NSInteger const CMBOctaveMax = 6;
 static NSInteger const CMBOctaveBase = 4;
 static NSInteger const CMBOctaveRange = CMBOctaveMax - CMBOctaveMin + 1;
-static NSInteger const CMBScaleNum = 11;
+static NSInteger const CMBScaleNum = 12;
 static NSInteger const CMBSequenceTimeDefault = CMBDivisionDefault * 10;
 
 /**

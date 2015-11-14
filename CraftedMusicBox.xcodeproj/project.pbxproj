@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040118731BF6D2F3008F2B6E /* CMBSoundManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040118721BF6D2F3008F2B6E /* CMBSoundManagerTests.m */; };
 		0409BA541BE8C27F0034FDBE /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0409BA531BE8C27F0034FDBE /* GoogleMobileAds.framework */; };
 		042AB2D41A6F30EC0050BC92 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2D31A6F30EC0050BC92 /* Social.framework */; };
 		04FCD3ED1B79F639006E71E1 /* CMBAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCD3EC1B79F639006E71E1 /* CMBAnimations.m */; };
@@ -79,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040118721BF6D2F3008F2B6E /* CMBSoundManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBSoundManagerTests.m; sourceTree = "<group>"; };
 		0409BA531BE8C27F0034FDBE /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.5.2/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		042AB2D31A6F30EC0050BC92 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		04FCD3EB1B79F639006E71E1 /* CMBAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBAnimations.h; path = Utilities/CMBAnimations.h; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 			children = (
 				08883B011956CC6A00F7EB68 /* CraftedMusicBoxTests.m */,
 				08A769E21972D30900143638 /* CMBUtilityTests.m */,
+				040118721BF6D2F3008F2B6E /* CMBSoundManagerTests.m */,
 				08883AFC1956CC6A00F7EB68 /* Supporting Files */,
 			);
 			path = CraftedMusicBoxTests;
@@ -628,6 +631,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040118731BF6D2F3008F2B6E /* CMBSoundManagerTests.m in Sources */,
 				08883B021956CC6A00F7EB68 /* CraftedMusicBoxTests.m in Sources */,
 				08A769E31972D30900143638 /* CMBUtilityTests.m in Sources */,
 			);

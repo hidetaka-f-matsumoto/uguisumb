@@ -9,6 +9,7 @@
 #import "CMBSoundManager.h"
 #import "EPSSampler.h"
 #import "CMBUtility.h"
+#import "CMBNoteData.h"
 
 @interface CMBSoundManager ()
 {
@@ -74,11 +75,36 @@ static CMBSoundManager *_instance = nil;
             }
         }
 #endif
+        [self _initEq];
         _isAvailable = YES;
     }
     @catch (NSException *ex) {
         _isAvailable = NO;
     }
+}
+
+- (void)_initEq
+{
+    _eq = [NSMutableDictionary dictionary];
+    CGFloat vol;
+    // オクターブでループ
+    for (NSInteger oct=CMBOctaveMin; oct<=CMBOctaveMax; oct++) {
+        NSInteger octHigh = oct - CMBOctaveBase - 1;
+        // スケールでループ
+        for (NSString *scl in CMBScales) {
+            NSInteger sclIdx = [CMBUtility indexWithScale:scl];
+            // 中低域
+            if (0 > octHigh) {
+                vol = 1.f;
+            }
+            // 高域。うるさいので抑え気味にする
+            else {
+                vol = 1.f - powf(sclIdx + octHigh * CMBScaleNum, 1.8f) * 0.001f;
+            }
+            _eq[[NSString stringWithFormat:@"%zd%@", oct, scl]] = [NSNumber numberWithFloat:vol];
+        }
+    }
+    DPRINT(@"init EQ: %@", _eq);
 }
 
 - (id)init
@@ -98,12 +124,26 @@ static CMBSoundManager *_instance = nil;
     return _instance;
 }
 
+/**
+ * MIDI note number
+ */
 + (UInt32)midiScaleWithScale:(NSString *)scale
                       octave:(NSNumber *)octave
 {
     NSInteger scaleIdx = [CMBUtility indexWithScale:scale];
     NSInteger octaveDiff = octave.integerValue - CMBOctaveBase;
     return (UInt32)(MIDINoteNumber_C4 + scaleIdx + 12 * octaveDiff);
+}
+
+/**
+ * EQ
+ */
++ (CGFloat)eqWithScale:(NSString *)scale
+                octave:(NSNumber *)octave
+{
+    NSDictionary *eq = [[self class] sharedInstance].eq;
+    NSNumber *volume = eq[[NSString stringWithFormat:@"%zd%@", octave.integerValue, scale]];
+    return volume.floatValue;
 }
 
 /**
@@ -116,10 +156,11 @@ static CMBSoundManager *_instance = nil;
     if (!_isAvailable) {
         return;
     }
+    CGFloat eq = [[self class] eqWithScale:scale octave:octave];
     // 再生
 #if 1 == AU_SAMPLER
     UInt32 note = [[self class] midiScaleWithScale:scale octave:octave];
-    [_sampler startPlayingNote:note withVelocity:0.7f];
+    [_sampler startPlayingNote:note withVelocity:(0.7f * eq)];
 #elif 1 == AUDIO_PLAYER
     AVAudioPlayer *sound = _sounds[instrument][octave][scale];
     if (sound) {
