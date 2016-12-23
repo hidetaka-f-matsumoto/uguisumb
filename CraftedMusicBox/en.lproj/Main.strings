@@ -21,7 +21,19 @@
 "Ge2-C6-zQF.text" = "4";
 
 /* Class = "IBUILabel"; text = "Division:"; ObjectID = "IcS-PQ-DvD"; */
-"IcS-PQ-DvD.text" = "Guidance:";
+"IcS-PQ-DvD.text" = "Time guide:";
+
+/* Class = "IBUILabel"; text = "Division:"; ObjectID = "qig-Io-RxP"; */
+"qig-Io-RxP.text" = "Scale guide:";
+
+/* Class = "IBUISegmentedControl"; 9Pg-Dh-MTZ.segmentTitles[0] = "C D E"; ObjectID = "9Pg-Dh-MTZ"; */
+"9Pg-Dh-MTZ.segmentTitles[0]" = "C D E";
+
+/* Class = "IBUISegmentedControl"; 9Pg-Dh-MTZ.segmentTitles[1] = "Do Re Mi"; ObjectID = "9Pg-Dh-MTZ"; */
+"9Pg-Dh-MTZ.segmentTitles[1]" = "Do Re Mi";
+
+/* Class = "IBUISegmentedControl"; 9Pg-Dh-MTZ.segmentTitles[2] = "Ha Ni Ho"; ObjectID = "9Pg-Dh-MTZ"; */
+"9Pg-Dh-MTZ.segmentTitles[2]" = "Ha Ni Ho";
 
 /* Class = "IBUINavigationItem"; title = "Song Config"; ObjectID = "IkL-fO-Kbl"; */
 "IkL-fO-Kbl.title" = "Song Config";
@@ -141,7 +153,7 @@
 "tYE-0l-Uex.text" = "B";
 
 /* Class = "IBUILabel"; text = "Tap bellow,\nmusic box on."; ObjectID = "gr1-e8-u6Q"; */
-"gr1-e8-u6Q.text" = "Tap bellow,\nmusic box on.";
+"gr1-e8-u6Q.text" = "Tap bellow, music box on.\nLong press, edit the time.";
 
 /* Class = "IBUILabel"; text = "<<< Swipe\noctave down"; ObjectID = "XdX-Al-I3p"; */
 "XdX-Al-I3p.text" = "<<< Swipe\noctave down";

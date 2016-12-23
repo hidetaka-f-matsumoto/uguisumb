@@ -1,8 +1,9 @@
 /* Update */
-"What's New" = "What's New";
+"What's New" = "What's New!";
 
 /* Update information. */
 "New feature information ver.1.1.0." = "・Facebook/Twitter/LINE/Mail で曲をシェアできるようになりました。\n・作曲者を編集できるようになりました。\n・ヘルプを見れるようになりました。";
+"New feature information ver.1.2.0." = "・音域が広くなりました。(2-6)\n・タイムの挿入/削除ができるようになりました。\n・音質を向上しました。\n・音階表示を追加しました。\n・うぐいすが歌います。(^_-)";
 
 /* (No Commment) */
 "Cancel" = "キャンセル";
@@ -135,3 +136,32 @@
 
 /* The message when song title is empty. */
 "Song title is empty." = "曲のタイトルが空です。";
+
+/* Insert a time above. */
+"Insert time above" = "タイムの挿入 (上)";
+
+/* Insert a time below. */
+"Insert time below" = "タイムの挿入 (下)";
+
+/* Delete the time. */
+"Delete time" = "タイムの削除";
+
+/* Open Safari */
+"Open Safari" = "Safariを開く";
+
+/* The message to confirm you want to open a external app. */
+"Are you sure to open a external app?" = "外部アプリを起動します。曲を編集中の場合は、保存しておくことをお勧めします。このまま外部アプリを起動しますか？";
+
+/* Scale names. */
+"do"    = "ﾄﾞ";
+"do#"   = "ﾄﾞ#";
+"re"    = "ﾚ";
+"re#"   = "ﾚ#";
+"mi"    = "ﾐ";
+"fa"    = "ﾌｧ";
+"fa#"   = "ﾌｧ#";
+"so"    = "ｿ";
+"so#"   = "ｿ#";
+"la"    = "ﾗ";
+"la#"   = "ﾗ#";
+"ti"    = "ｼ";

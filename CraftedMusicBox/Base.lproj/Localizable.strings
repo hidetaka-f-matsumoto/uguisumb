@@ -1,8 +1,9 @@
 /* Update */
-"What's New" = "What's New";
+"What's New" = "What's New!";
 
 /* Update information. */
 "New feature information ver.1.1.0." = "- Song sharing on Facebook/Twitter/LINE/Mail is available.\n- Composer's name become editable.\n- Help is available.";
+"New feature information ver.1.2.0." = "- Octave range become wide. (2-6)\n- Time insert/delete is enable.\n- Sound quality improvement.\n- Add some names of scale.\n- The bird sings. :)";
 
 /* Cancel */
 "Cancel" = "Cancel";
@@ -135,3 +136,32 @@
 
 /* The message when song title is empty. */
 "Song title is empty." = "Song title is empty.";
+
+/* Insert a time above. */
+"Insert time above" = "Insert a time above";
+
+/* Insert a time below. */
+"Insert time below" = "Insert a time below";
+
+/* Delete the time. */
+"Delete time" = "Delete the time";
+
+/* Open Safari */
+"Open Safari" = "Open Safari";
+
+/* The message to confirm you want to open a external app. */
+"Are you sure to open a external app?" = "This action will open a external app. I recommend you to save your edit. Are you sure to open a external app?";
+
+/* Scale names. */
+"do"    = "do";
+"do#"   = "do#";
+"re"    = "re";
+"re#"   = "re#";
+"mi"    = "mi";
+"fa"    = "fa";
+"fa#"   = "fa#";
+"so"    = "so";
+"so#"   = "so#";
+"la"    = "la";
+"la#"   = "la#";
+"ti"    = "ti";

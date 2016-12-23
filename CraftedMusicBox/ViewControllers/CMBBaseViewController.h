@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <BlocksKit/BlocksKit.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
-#import "GADBannerView.h"
+#import <GoogleMobileAds/GADBannerView.h>
 #import "SVProgressHUD.h"
 #import "CMBUtility.h"
 #import "CMBAlertController.h"
@@ -26,7 +26,7 @@
 - (UIViewController *)topMostController;
 - (BOOL)isTopMostViewController;
 - (void)loadingBeginWithNetwork:(BOOL)network;
-- (void)loadEndWithNetwork:(BOOL)network;
+- (void)loadingEndWithNetwork:(BOOL)network;
 - (void)showAlertDialogWithTitle:(NSString *)title
                          message:(NSString *)message
                         handler1:(void (^)(UIAlertAction *action))handler1

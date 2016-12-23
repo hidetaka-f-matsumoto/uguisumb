@@ -28,7 +28,7 @@ static NSString * const CMBURLParamSong = @"song";
 /**
  * Server
  */
-static NSString * const CMBSvSupportURL = @"https://uguisumb.herokuapp.com/support/";
+static NSString * const CMBSvSupportURL = @"http://fisherman.hatenablog.com/entry/2015/02/05/001739";
 static NSString * const CMBSvApiURL = @"https://uguisumb.herokuapp.com/api/";
 static NSString * const CMBSvViewURL = @"https://uguisumb.herokuapp.com/html/";
 static NSString * const CMBSvActionSongReg = @"song.register.php";
@@ -51,11 +51,11 @@ static CGFloat const CMBSpeedMin = 1.0f;
 static CGFloat const CMBSpeedMax = 200.0f;
 static NSInteger const CMBDivisionDefault = 4;
 #define CMBDivisions @[@2, @3, @4, @5, @6, @7, @8, @11]
-static NSInteger const CMBOctaveMin = 3;
-static NSInteger const CMBOctaveMax = 5;
+static NSInteger const CMBOctaveMin = 2;
+static NSInteger const CMBOctaveMax = 6;
 static NSInteger const CMBOctaveBase = 4;
 static NSInteger const CMBOctaveRange = CMBOctaveMax - CMBOctaveMin + 1;
-static NSInteger const CMBScaleNum = 11;
+static NSInteger const CMBScaleNum = 12;
 static NSInteger const CMBSequenceTimeDefault = CMBDivisionDefault * 10;
 
 /**
@@ -89,5 +89,20 @@ static NSString * const CMBSoundXylophone = @"CMBSoundXylophone";
 #define CMBSoundResXylophoneOct3 @[@"C3", @"C#3", @"D3", @"D#3", @"E3", @"F3", @"F#3", @"G3", @"G#3", @"A3", @"A#3", @"B3"]
 #define CMBSoundResXylophoneOct4 @[@"C4", @"C#4", @"D4", @"D#4", @"E4", @"F4", @"F#4", @"G4", @"G#4", @"A4", @"A#4", @"B4"]
 #define CMBSoundResXylophoneOct5 @[@"C5", @"C#5", @"D5", @"D#5", @"E5", @"F5", @"F#5", @"G5", @"G#5", @"A5", @"A#5", @"B5"]
+
+/**
+ * Image resource
+ */
+#define CMBNoteImages @[@"note4", @"note8", @"note16-2"]
+
+/**
+ * Scale names
+ */
+#define CMBScaleNameKeys @[@"normal", @"doremi", @"haniho"]
+#define CMBScaleNames @{ \
+    @"normal": @[@"C", @"C#", @"D", @"D#", @"E", @"F", @"F#", @"G", @"G#", @"A", @"A#", @"B"], \
+    @"doremi": @[@"do", @"do#", @"re", @"re#", @"mi", @"fa", @"fa#", @"so", @"so#", @"la", @"la#", @"ti"], \
+    @"haniho": @[@"ハ", @"嬰ﾊ", @"ニ", @"嬰ﾆ", @"ホ", @"ヘ", @"嬰ﾍ", @"ト", @"嬰ﾄ", @"イ", @"嬰ｲ", @"ロ"], \
+}
 
 #endif

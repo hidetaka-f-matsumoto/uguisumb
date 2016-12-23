@@ -21,7 +21,7 @@
 - (void)_init
 {
     _preY = 0.0f;
-    _delegate = nil;
+    self.delegate = nil;
     _parentTableView = nil;
     _tineView = nil;
     [self _initViews];
@@ -95,7 +95,7 @@
             NSLog(@"process tineY=%f, curY=%f, preY=%f", tineY, curY, _preY);
             // ピックされた事を通知
             NSIndexPath *indexPath = [_parentTableView indexPathForCell:self];
-            [_delegate musicboxDidPickWithIndexPath:indexPath];
+            [self.delegate musicboxDidPickWithIndexPath:indexPath];
         }
     }
     // 前回の位置を記録
@@ -106,9 +106,9 @@
 {
     [self _initViews];
     NSIndexPath *indexPath = [_parentTableView indexPathForCell:self];
-    self.contentView.backgroundColor = [_delegate musicboxCellColorWithIndexPath:indexPath];
-    CMBSequenceOneData *soData = [_delegate musicboxCellSequenceOneWithIndexPath:indexPath];
-    NSInteger currentOctave = [_delegate getCurrentOctave];
+    self.contentView.backgroundColor = [self.delegate musicboxCellColorWithIndexPath:indexPath];
+    CMBSequenceOneData *soData = [self.delegate musicboxCellSequenceOneWithIndexPath:indexPath];
+    NSInteger currentOctave = [self.delegate getCurrentOctave];
     for (CMBNoteData *note in soData.notes) {
         if (!note || note.octave.integerValue != currentOctave) {
             continue;
@@ -121,7 +121,7 @@
 {
     return @{
              CMBNoteInfoKeyScale : [CMBUtility scaleWithIndex:index],
-             CMBNoteInfoKeyOctave : [NSNumber numberWithInteger:[_delegate getCurrentOctave]]
+             CMBNoteInfoKeyOctave : [NSNumber numberWithInteger:[self.delegate getCurrentOctave]]
              };
 }
 
@@ -142,7 +142,7 @@
     // indexPath
     [info setObject:[self.parentTableView indexPathForCell:self] forKey:@"indexPath"];
     // 通知
-    [_delegate musicboxDidTapWithInfo:info];
+    [self.delegate musicboxDidTapWithInfo:info];
 }
 
 @end

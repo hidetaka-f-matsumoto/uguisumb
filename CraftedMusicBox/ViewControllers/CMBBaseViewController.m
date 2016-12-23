@@ -29,7 +29,12 @@
        NSFontAttributeName : [UIFont fontWithName:@"SetoFont-SP" size:19.f],
        NSForegroundColorAttributeName : [CMBUtility tintColor],
        } forState:UIControlStateNormal];    
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
     // 広告を表示
     [self showAd];
 }
@@ -41,7 +46,7 @@
     // 初回起動の場合
     if ([[CMBUtility sharedInstance] checkFirstRunCurrentVersion]) {
         NSString *title = NSLocalizedString(@"What's New", @"What's New");
-        NSString *message = NSLocalizedString(@"New feature information ver.1.1.0.", @"New feature information.");
+        NSString *message = NSLocalizedString(@"New feature information ver.1.2.0.", @"New feature information.");
         [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
     }
 }
@@ -75,7 +80,7 @@
     }
 }
 
-- (void)loadEndWithNetwork:(BOOL)network
+- (void)loadingEndWithNetwork:(BOOL)network
 {
     if (network) {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
@@ -252,6 +257,10 @@
 
 - (void)showAd
 {
+    // 表示領域が無い場合は何もしない
+    if (!_bannerFrameView) {
+        return;
+    }
     // 利用可能な広告サイズの定数値は GADAdSize.h で説明されている
     _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
     // AutoresizingMask を OFF
