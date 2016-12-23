@@ -53,6 +53,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     [self _init];
 }
 
@@ -105,7 +106,10 @@
 - (void)update
 {
     [self _initViews];
-    NSIndexPath *indexPath = [_parentTableView indexPathForCell:self];
+    // iOS 10 で indexPathForCell のタイミングが変わり、使えなくなった.
+    // http://stackoverflow.com/questions/40734537/uitableview-indexpathforcell-return-nil-in-ios10-with-xcode8-swift2-3
+    // NSIndexPath *indexPath = [_parentTableView indexPathForCell:self];
+    NSIndexPath *indexPath = [_parentTableView indexPathForRowAtPoint:self.center];
     self.contentView.backgroundColor = [self.delegate musicboxCellColorWithIndexPath:indexPath];
     CMBSequenceOneData *soData = [self.delegate musicboxCellSequenceOneWithIndexPath:indexPath];
     NSInteger currentOctave = [self.delegate getCurrentOctave];
