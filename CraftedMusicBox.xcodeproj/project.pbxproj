@@ -11,6 +11,7 @@
 		0409BA541BE8C27F0034FDBE /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0409BA531BE8C27F0034FDBE /* GoogleMobileAds.framework */; };
 		040A2354FD9D89CED7307646 /* libPods-CraftedMusicBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6C5188208BD2BBED8B5855 /* libPods-CraftedMusicBox.a */; };
 		042AB2D41A6F30EC0050BC92 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2D31A6F30EC0050BC92 /* Social.framework */; };
+		0477B0F41E0E44A500F72F4F /* Piano.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 0477B0F31E0E44A500F72F4F /* Piano.aupreset */; };
 		04FCD3ED1B79F639006E71E1 /* CMBAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCD3EC1B79F639006E71E1 /* CMBAnimations.m */; };
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
 		0803C8E81A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8EA1A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings */; };
@@ -84,6 +85,7 @@
 		040118721BF6D2F3008F2B6E /* CMBSoundManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBSoundManagerTests.m; sourceTree = "<group>"; };
 		0409BA531BE8C27F0034FDBE /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.5.2/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		042AB2D31A6F30EC0050BC92 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		0477B0F31E0E44A500F72F4F /* Piano.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Piano.aupreset; sourceTree = "<group>"; };
 		04FCD3EB1B79F639006E71E1 /* CMBAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBAnimations.h; path = Utilities/CMBAnimations.h; sourceTree = "<group>"; };
 		04FCD3EC1B79F639006E71E1 /* CMBAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBAnimations.m; path = Utilities/CMBAnimations.m; sourceTree = "<group>"; };
 		0802C0851A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewHeadCell.h; path = Views/CMBMusicBoxTableViewHeadCell.h; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				08A52E2D1A381232008F86C2 /* MusicBox.aupreset */,
+				0477B0F31E0E44A500F72F4F /* Piano.aupreset */,
 			);
 			path = AUPresets;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0477B0F41E0E44A500F72F4F /* Piano.aupreset in Resources */,
 				08883AEF1956CC6A00F7EB68 /* Images.xcassets in Resources */,
 				08289E1F1A2EACD800927D51 /* InfoPlist.strings in Resources */,
 				08A52E2E1A381232008F86C2 /* MusicBox.aupreset in Resources */,
