@@ -11,6 +11,8 @@
 		0409BA541BE8C27F0034FDBE /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0409BA531BE8C27F0034FDBE /* GoogleMobileAds.framework */; };
 		040A2354FD9D89CED7307646 /* libPods-CraftedMusicBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6C5188208BD2BBED8B5855 /* libPods-CraftedMusicBox.a */; };
 		042AB2D41A6F30EC0050BC92 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2D31A6F30EC0050BC92 /* Social.framework */; };
+		0477B0F91E0FF48600F72F4F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0477B0F81E0FF48600F72F4F /* GoogleService-Info.plist */; };
+		0477B0FA1E0FF48600F72F4F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0477B0F81E0FF48600F72F4F /* GoogleService-Info.plist */; };
 		04FCD3ED1B79F639006E71E1 /* CMBAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCD3EC1B79F639006E71E1 /* CMBAnimations.m */; };
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
 		0803C8E81A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8EA1A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings */; };
@@ -84,6 +86,7 @@
 		040118721BF6D2F3008F2B6E /* CMBSoundManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBSoundManagerTests.m; sourceTree = "<group>"; };
 		0409BA531BE8C27F0034FDBE /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.5.2/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		042AB2D31A6F30EC0050BC92 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		0477B0F81E0FF48600F72F4F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04FCD3EB1B79F639006E71E1 /* CMBAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBAnimations.h; path = Utilities/CMBAnimations.h; sourceTree = "<group>"; };
 		04FCD3EC1B79F639006E71E1 /* CMBAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBAnimations.m; path = Utilities/CMBAnimations.m; sourceTree = "<group>"; };
 		0802C0851A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewHeadCell.h; path = Views/CMBMusicBoxTableViewHeadCell.h; sourceTree = "<group>"; };
@@ -241,6 +244,7 @@
 		08883AC71956CC6A00F7EB68 = {
 			isa = PBXGroup;
 			children = (
+				0477B0F81E0FF48600F72F4F /* GoogleService-Info.plist */,
 				08883AD91956CC6A00F7EB68 /* CraftedMusicBox */,
 				08883AFB1956CC6A00F7EB68 /* CraftedMusicBoxTests */,
 				08B66F6A198DFBDC00376683 /* Libraries */,
@@ -542,6 +546,7 @@
 				08A52E2B1A38121A008F86C2 /* Sounds in Resources */,
 				08289E221A2EAD0F00927D51 /* LaunchScreen.xib in Resources */,
 				08C2816E199D112C0037F6D0 /* MusicInfo.plist in Resources */,
+				0477B0F91E0FF48600F72F4F /* GoogleService-Info.plist in Resources */,
 				08289E201A2EACE200927D51 /* Localizable.strings in Resources */,
 				08289E211A2EAD0100927D51 /* Main.storyboard in Resources */,
 			);
@@ -552,6 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0803C8E81A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings in Resources */,
+				0477B0FA1E0FF48600F72F4F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

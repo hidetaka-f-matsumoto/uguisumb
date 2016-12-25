@@ -11,6 +11,7 @@ target 'CraftedMusicBox' do
   pod 'Google-Mobile-Ads-SDK', '~> 7.0'
   pod 'Reachability', '~> 3.0'
   pod 'SWTableViewCell', '~> 0.3'
+  pod 'Firebase/Core'
 
   target 'CraftedMusicBoxTests' do
     inherit! :search_paths
