@@ -90,10 +90,11 @@ static NSString * const CMBSoundXylophone = @"Xylophone";
 #define CMBSoundResXylophoneOct4 @[@"C4", @"C#4", @"D4", @"D#4", @"E4", @"F4", @"F#4", @"G4", @"G#4", @"A4", @"A#4", @"B4"]
 #define CMBSoundResXylophoneOct5 @[@"C5", @"C#5", @"D5", @"D#5", @"E5", @"F5", @"F#5", @"G5", @"G#5", @"A5", @"A#5", @"B5"]
 
-static NSString * const CMBSoundPiano = @"Piano";
+static NSString * const CMBSoundVibraphone = @"Vibraphone";
+static NSString * const CMBSoundMarimba = @"Marimba";
 
 #define CMBSoundDefault CMBSoundMusicbox
-#define CMBInstruments @[CMBSoundMusicbox, CMBSoundPiano]
+#define CMBInstruments @[CMBSoundMusicbox, CMBSoundVibraphone, CMBSoundMarimba]
 
 /**
  * Image resource
