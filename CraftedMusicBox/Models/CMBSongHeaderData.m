@@ -27,6 +27,7 @@
         _division2 = (info && info[@"division2"]) ? info[@"division2"] : [NSNumber numberWithInteger:CMBDivisionDefault];
         _length = (info && info[@"length"]) ? info[@"length"] : [NSNumber numberWithInteger:CMBSequenceTimeDefault];
         _scaleMode = (info && info[@"scale_mode"]) ? info[@"scale_mode"] : @"normal";
+        _instrument = (info && info[@"instrument"]) ? info[@"instrument"] : CMBSoundDefault;
         _version = (info && info[@"version"]) ? info[@"version"] : version;
     }
     return self;
@@ -44,6 +45,7 @@
             _division2, @"division2",
             _length, @"length",
             _scaleMode, @"scale_mode",
+            _instrument, @"instrument",
             nil];
 }
 
