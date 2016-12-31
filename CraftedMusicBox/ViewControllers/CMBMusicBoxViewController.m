@@ -7,6 +7,7 @@
 //  Copyright (c) 2014年 hidetaka.f.matsumoto. All rights reserved.
 //
 
+@import FirebaseAnalytics;
 #import "CMBMusicBoxViewController.h"
 #import "UIColor+CMBTools.h"
 #import "NSString+CMBTools.h"
@@ -1353,6 +1354,8 @@
                 case MFMailComposeResultSaved: // 下書き保存
                     break;
                 case MFMailComposeResultSent: // 送信成功
+                    [FIRAnalytics logEventWithName:kFIREventShare
+                                        parameters:@{ @"media": @"mail" }];
                     break;
                 case MFMailComposeResultFailed:// 送信失敗
                     [self showAlertDialogWithTitle:NSLocalizedString(@"Mail", @"Mail")
@@ -1400,6 +1403,8 @@
         NSString *lineUrl = [@"http://line.me/R/msg/text/?" stringByAppendingString:message.urlEncode];
         // 投稿
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:lineUrl]];
+        [FIRAnalytics logEventWithName:kFIREventShare
+                            parameters:@{ @"media": @"line" }];
     }];
 }
 
@@ -1434,11 +1439,14 @@
         SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         [vc setInitialText:message];
         [vc addURL:[NSURL URLWithString:songUrl]];
-        [self presentViewController:vc animated:YES completion:nil];
+        [self presentViewController:vc animated:YES completion:^(void) {
+            [FIRAnalytics logEventWithName:kFIREventShare
+                                parameters:@{ @"media": @"twitter" }];
+        }];
     }];
 }
 
-#pragma mark - Twitter
+#pragma mark - Facebook
 
 /**
  * Facebookで送信
@@ -1469,7 +1477,10 @@
         SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         [vc setInitialText:message];
         [vc addURL:[NSURL URLWithString:songUrl]];
-        [self presentViewController:vc animated:YES completion:nil];
+        [self presentViewController:vc animated:YES completion:^(void) {
+            [FIRAnalytics logEventWithName:kFIREventShare
+                                parameters:@{ @"media": @"facebook" }];
+        }];
     }];
 }
 

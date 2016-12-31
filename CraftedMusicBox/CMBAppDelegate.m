@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 hidetaka.f.matsumoto. All rights reserved.
 //
 
+@import Firebase;
 #import "CMBAppDelegate.h"
 #import "CMBUtility.h"
 #import "CMBSoundManager.h"
@@ -15,6 +16,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [FIRApp configure];
     // SoundManagerを生成しておく
     [CMBSoundManager sharedInstance];
     return YES;
