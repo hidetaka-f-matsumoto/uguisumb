@@ -8,6 +8,7 @@
 
 #import "CMBSongConfigViewController.h"
 #import "CMBUtility.h"
+#import "CMBSoundManager.h"
 
 @interface CMBSongConfigViewController ()
 
@@ -41,6 +42,7 @@
     [_division1Control setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division1]];
     [_division2Control setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division2]];
     [_scaleControl setSelectedSegmentIndex:[CMBScaleNameKeys indexOfObject:_header.scaleMode]];
+    [_instrumentControl setSelectedSegmentIndex:[CMBInstruments indexOfObject:_header.instrument]];
 }
 
 - (void)viewDidLayoutSubviews
@@ -81,6 +83,8 @@
     _header.division1 = CMBDivisions[_division1Control.selectedSegmentIndex];
     _header.division2 = CMBDivisions[_division2Control.selectedSegmentIndex];
     _header.scaleMode = CMBScaleNameKeys[_scaleControl.selectedSegmentIndex];
+    _header.instrument = CMBInstruments[_instrumentControl.selectedSegmentIndex];
+    [CMBSoundManager sharedInstance].instrument = _header.instrument;
 }
 
 - (IBAction)applyButtonDidTap:(id)sender
