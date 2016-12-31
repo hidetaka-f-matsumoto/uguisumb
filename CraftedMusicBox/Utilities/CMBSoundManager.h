@@ -20,6 +20,7 @@ static UInt32 const MIDINoteNumber_C4 = 60;
 @property (nonatomic, readonly) NSMutableDictionary *sounds;
 @property (nonatomic, readonly) BOOL isAvailable;
 @property (nonatomic, readonly) NSMutableDictionary *eq;
+@property (nonatomic, setter=setInstrument:) NSString *instrument;
 
 + (CMBSoundManager *)sharedInstance;
 + (UInt32)midiScaleWithScale:(NSString *)scale

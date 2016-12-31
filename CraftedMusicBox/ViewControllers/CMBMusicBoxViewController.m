@@ -1219,6 +1219,8 @@
     // データ更新
     _sequences = sequences;
     _header = header;
+    // 音色変更
+    [CMBSoundManager sharedInstance].instrument = _header.instrument;
     // 表示更新
     [self updateViewsWithResetScroll:YES animation:YES completion:^(BOOL finished) {
         // 読み込み中を非表示
