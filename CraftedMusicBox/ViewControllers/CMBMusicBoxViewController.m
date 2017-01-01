@@ -60,6 +60,8 @@
     _sequences = [NSMutableDictionary dictionary];
     _header = [[CMBSongHeaderData alloc] init];
     _currentOctave = CMBOctaveBase;
+    // 音色変更
+    [CMBSoundManager sharedInstance].instrument = _header.instrument;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
