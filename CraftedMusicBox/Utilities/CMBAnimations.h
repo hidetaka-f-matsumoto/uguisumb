@@ -13,6 +13,6 @@
 
 + (CALayer *)noteAnimationLayerWithName:(NSString *)name
                                startPos:(CGPoint)kStartPos
-                               delegate:(UIViewController *)delegate;
+                               delegate:(UIViewController<CAAnimationDelegate> *)delegate;
 
 @end
