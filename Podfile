@@ -11,7 +11,7 @@ target 'CraftedMusicBox' do
   pod 'Google-Mobile-Ads-SDK', '~> 7.0'
   pod 'Reachability', '~> 3.0'
   pod 'SWTableViewCell', '~> 0.3'
-  pod 'Firebase/Core', '~> 3.4'
+  pod 'Firebase/Core', '~> 3.11'
   pod 'Firebase/Messaging', '~> 3.11'
 
   target 'CraftedMusicBoxTests' do
