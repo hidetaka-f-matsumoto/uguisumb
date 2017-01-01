@@ -91,6 +91,7 @@
 		0477B0F81E0FF48600F72F4F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04DFEF201E1768EC007483B3 /* Marimba.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Marimba.aupreset; sourceTree = "<group>"; };
 		04DFEF211E1768EC007483B3 /* Vibraphone.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Vibraphone.aupreset; sourceTree = "<group>"; };
+		04DFEF241E17DCAA007483B3 /* CraftedMusicBox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CraftedMusicBox.entitlements; sourceTree = "<group>"; };
 		04FCD3EB1B79F639006E71E1 /* CMBAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBAnimations.h; path = Utilities/CMBAnimations.h; sourceTree = "<group>"; };
 		04FCD3EC1B79F639006E71E1 /* CMBAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBAnimations.m; path = Utilities/CMBAnimations.m; sourceTree = "<group>"; };
 		0802C0851A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewHeadCell.h; path = Views/CMBMusicBoxTableViewHeadCell.h; sourceTree = "<group>"; };
@@ -297,6 +298,7 @@
 		08883AD91956CC6A00F7EB68 /* CraftedMusicBox */ = {
 			isa = PBXGroup;
 			children = (
+				04DFEF241E17DCAA007483B3 /* CraftedMusicBox.entitlements */,
 				08883B0E1956CF1600F7EB68 /* ViewControllers */,
 				08A769D21969096F00143638 /* Views */,
 				08A769D81972A7EF00143638 /* Models */,
@@ -511,6 +513,9 @@
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
 							};
 						};
 					};
@@ -849,6 +854,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = CraftedMusicBox/CraftedMusicBox.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7JDKPK4524;
@@ -881,6 +887,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = CraftedMusicBox/CraftedMusicBox.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hidetaka Matsumoto (7JDKPK4524)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7JDKPK4524;
