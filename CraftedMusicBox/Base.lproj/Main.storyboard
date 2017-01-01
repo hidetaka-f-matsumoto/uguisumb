@@ -1474,7 +1474,6 @@ music box on.</string>
                                                 </constraints>
                                                 <segments>
                                                     <segment title="Music Box"/>
-                                                    <segment title="Vibraphone"/>
                                                     <segment title="Marimba"/>
                                                 </segments>
                                             </segmentedControl>
@@ -1649,7 +1648,7 @@ music box on.</string>
         <scene sceneID="SKe-Si-nRA">
             <objects>
                 <navigationController id="kGK-1K-za0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kae-vF-Jey">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kae-vF-Jey">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
