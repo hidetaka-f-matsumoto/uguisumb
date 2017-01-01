@@ -17,7 +17,13 @@
 {
     // Override point for customization after application launch.
     [FIRApp configure];
-    // SoundManagerを生成しておく
+    // Push 通知
+    UIUserNotificationType allNotificationTypes = (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
+    UIUserNotificationSettings *settings =
+    [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    // SoundManager 初期化
     [CMBSoundManager sharedInstance];
     return YES;
 }
