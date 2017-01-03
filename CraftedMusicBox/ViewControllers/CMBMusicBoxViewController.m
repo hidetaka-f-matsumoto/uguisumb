@@ -112,8 +112,7 @@
     if (![CMBSoundManager sharedInstance].isAvailable) {
         [self showAlertDialogWithTitle:NSLocalizedString(@"Sound", @"Sound")
                                message:NSLocalizedString(@"Failed to load sound resources.", @"The message when you failed to load sound resources.")
-                              handler1:nil
-                              handler2:nil];
+                               handler:nil];
     }
     _isFirstViewDidAppear = NO;
 }
@@ -290,7 +289,7 @@
     // メニューを表示
     [self showActionSheetWithTitle:NSLocalizedString(@"Share", @"Share")
                            message:nil
-                          buttons1:@[
+                           buttons:@[
                                      @{@"title": NSLocalizedString(@"Facebook", @"Facebook"),
                                        @"handler": ^(UIAlertAction *action)
                                        {
@@ -308,28 +307,6 @@
     }},
                                      @{@"title": NSLocalizedString(@"Mail", @"Mail"),
                                        @"handler": ^(UIAlertAction *action)
-                                       {
-        [self sendMail];
-    }}
-                                     ]
-                          buttons2:@[
-                                     @{@"title": NSLocalizedString(@"Facebook", @"Facebook"),
-                                       @"handler": ^(void)
-                                       {
-        [self sendFacebook];
-    }},
-                                     @{@"title": NSLocalizedString(@"Twitter", @"Twitter"),
-                                       @"handler": ^(void)
-                                       {
-        [self sendTwitter];
-    }},
-                                     @{@"title": NSLocalizedString(@"LINE", @"LINE"),
-                                       @"handler": ^(void)
-                                       {
-        [self sendLINE];
-    }},
-                                     @{@"title": NSLocalizedString(@"Mail", @"Mail"),
-                                       @"handler": ^(void)
                                        {
         [self sendMail];
     }}
@@ -347,7 +324,7 @@
     // メニューを表示
     [self showActionSheetWithTitle:NSLocalizedString(@"Menue", @"Menue")
                            message:nil
-                          buttons1:@[
+                           buttons:@[
                                      @{@"title": NSLocalizedString(@"New song", @"Create a new song."),
                                        @"handler": ^(UIAlertAction *action)
                                        {
@@ -374,33 +351,6 @@
         [self helpButtonDidTap];
     }},
                                      ]
-                          buttons2:@[
-                                     @{@"title": NSLocalizedString(@"New song", @"Create a new song."),
-                                       @"handler": ^(void)
-                                       {
-        [self songNewButtonDidTap];
-    }},
-                                     @{@"title": NSLocalizedString(@"Save song", @"Save the song."),
-                                       @"handler": ^(void)
-                                       {
-        [self songSaveButtonDidTap];
-    }},
-                                     @{@"title": NSLocalizedString(@"Config song", @"Configure the song."),
-                                       @"handler": ^(void)
-                                       {
-        [self songConfigButtonDidTap];
-    }},
-                                     @{@"title": NSLocalizedString(@"Manage my songs", @"Manage my songs."),
-                                       @"handler": ^(void)
-                                       {
-        [self songManageButtonDidTap];
-    }},
-                                     @{@"title": NSLocalizedString(@"Help", @"Help"),
-                                       @"handler": ^(void)
-                                       {
-        [self helpButtonDidTap];
-    }},
-                                     ]
      ];
 }
 
@@ -415,7 +365,7 @@
     // メニューを表示
     [self showActionSheetWithTitle:NSLocalizedString(@"Edit", @"Edit")
                            message:nil
-                          buttons1:@[
+                           buttons:@[
                                      @{@"title": NSLocalizedString(@"Insert time above", @"Insert a time above."),
                                        @"handler": ^(UIAlertAction *action)
                                        {
@@ -428,23 +378,6 @@
     }},
                                      @{@"title": NSLocalizedString(@"Insert time below", @"Insert a time below."),
                                        @"handler": ^(UIAlertAction *action)
-                                       {
-        [self insertRowAtIndexPath:indexPathBelow];
-    }},
-                                     ]
-                          buttons2:@[
-                                     @{@"title": NSLocalizedString(@"Insert time above", @"Insert a time above."),
-                                       @"handler": ^(void)
-                                       {
-        [self insertRowAtIndexPath:indexPath];
-    }},
-                                     @{@"title": NSLocalizedString(@"Delete time", @"Delete the time."),
-                                       @"handler": ^(void)
-                                       {
-        [self timeDeleteButtonDidTapWithIndexPath:indexPath];
-    }},
-                                     @{@"title": NSLocalizedString(@"Insert time below", @"Insert a time below."),
-                                       @"handler": ^(void)
                                        {
         [self insertRowAtIndexPath:indexPathBelow];
     }},
@@ -464,12 +397,9 @@
         NSString *message = NSLocalizedString(@"You wanna remove times where is some notes?", @"The message to confirm you want to remove times where is some notes.");
         [self showConfirmDialogWithTitle:title
                                  message:message
-                                handler1:^(UIAlertAction *action) {
-                                    [self deleteRowAtIndexPath:indexPath];
-                                }
-                                handler2:^(void) {
-                                    [self deleteRowAtIndexPath:indexPath];
-                                }];
+                                 handler:^(UIAlertAction *action) {
+                                     [self deleteRowAtIndexPath:indexPath];
+                                 }];
     }
     // 音符が無い場合
     else {
@@ -488,12 +418,9 @@
                          NSLocalizedString(@"You wanna create a new song?", @"The message to confirm you want to create a new song.")];
     [self showConfirmDialogWithTitle:title
                              message:message
-                            handler1:^(UIAlertAction *action) {
-                                [self newSong];
-                            }
-                            handler2:^(void) {
-                                [self newSong];
-                            }];
+                             handler:^(UIAlertAction *action) {
+                                 [self newSong];
+                             }];
 }
 
 /**
@@ -508,14 +435,10 @@
         NSString *message = NSLocalizedString(@"Choose the title of this song before save.", @"The message when you should choose the name of this song before save.");
         [self showAlertDialogWithTitle:title
                                message:message
-                              handler1:^(UIAlertAction *action) {
-                                  [self performSegueWithIdentifier:@"SongConfig"
-                                                            sender:self];
-                              }
-                              handler2:^(void) {
-                                  [self performSegueWithIdentifier:@"SongConfig"
-                                                            sender:self];
-                              }];
+                               handler:^(UIAlertAction *action) {
+                                   [self performSegueWithIdentifier:@"SongConfig"
+                                                             sender:self];
+                               }];
     }
     // 名前がある場合
     else {
@@ -527,12 +450,9 @@
         [NSString stringWithFormat:NSLocalizedString(@"You wanna save %@?", @"The message to confirm you want to save the song with name %@."), _header.name];
         [self showConfirmDialogWithTitle:title
                                  message:message
-                                handler1:^(UIAlertAction *action) {
-                                    [self saveSong];
-                                }
-                                handler2:^(void) {
-                                    [self saveSong];
-                                }];
+                                 handler:^(UIAlertAction *action) {
+                                     [self saveSong];
+                                 }];
     }
 }
 
@@ -575,12 +495,9 @@
                              NSLocalizedString(@"Are you sure to open a external app?", @"The message to confirm you want to open a external app.")];
         [self showConfirmDialogWithTitle:title
                                  message:message
-                                handler1:^(UIAlertAction *action) {
-                                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:CMBSvSupportURL]];
-                                }
-                                handler2:^(void) {
-                                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:CMBSvSupportURL]];
-                                }];
+                                 handler:^(UIAlertAction *action) {
+                                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:CMBSvSupportURL]];
+                                 }];
     }
 }
 
@@ -880,19 +797,19 @@
     if (!_sequences || !_header) {
         NSString *title = NSLocalizedString(@"Song", @"Song");
         NSString *message = NSLocalizedString(@"Song is invalid.", @"The message when song is invalid.");
-        [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
+        [self showAlertDialogWithTitle:title message:message handler:nil];
         return NO;
     }
     else if (0 >= _sequences.count) {
         NSString *title = NSLocalizedString(@"Song", @"Song");
         NSString *message = NSLocalizedString(@"Song is empty.", @"The message when song is empty.");
-        [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
+        [self showAlertDialogWithTitle:title message:message handler:nil];
         return NO;
     }
     else if (!_header.name || 0 >= _header.name.length) {
         NSString *title = NSLocalizedString(@"Song", @"Song");
         NSString *message = NSLocalizedString(@"Song title is empty.", @"The message when song title is empty.");
-        [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
+        [self showAlertDialogWithTitle:title message:message handler:nil];
         return NO;
     }
     return YES;
@@ -1190,12 +1107,9 @@
                              NSLocalizedString(@"You wanna remove times where is some notes?", @"The message to confirm you want to remove times where is some notes.")];
         [self showConfirmDialogWithTitle:title
                                  message:message
-                                handler1:^(UIAlertAction *action) {
-                                    [self changeLength:newLen];
-                                }
-                                handler2:^(void) {
-                                    [self changeLength:newLen];
-                                }];
+                                 handler:^(UIAlertAction *action) {
+                                     [self changeLength:newLen];
+                                 }];
     }
     // 削除範囲に音符が無い場合
     else {
@@ -1249,8 +1163,7 @@
         if (error) {
             [self showAlertDialogWithTitle:error[@"title"]
                                    message:error[@"message"]
-                                  handler1:nil
-                                  handler2:nil];
+                                   handler:nil];
             return;
         }
         // 確認ダイアログを出してsong読み込み
@@ -1260,14 +1173,10 @@
         NSString *message = [NSString stringWithFormat:NSLocalizedString(@"You wanna load the song from URL?", @"The message to confirm you want to load the song from URL."), header.name];
         [self showConfirmDialogWithTitle:title
                                  message:message
-                                handler1:^(UIAlertAction *action) {
-                                    [self songDidLoadWithSequence:sequence
-                                                           header:header];
-                                }
-                                handler2:^(void) {
-                                    [self songDidLoadWithSequence:sequence
-                                                           header:header];
-                                }];
+                                 handler:^(UIAlertAction *action) {
+                                     [self songDidLoadWithSequence:sequence
+                                                            header:header];
+                                 }];
     };
 
     // 自身が最前面の場合
@@ -1314,8 +1223,7 @@
         // 通知ダイアログ
         [self showAlertDialogWithTitle:title
                                message:message
-                              handler1:nil
-                              handler2:nil];
+                               handler:nil];
     }
 }
 
@@ -1347,31 +1255,35 @@
         NSString *songUrl = dict[@"songinfo"][@"url"];
         // メール送信画面を表示
         MFMailComposeViewController *mailPicker = [MFMailComposeViewController new];
+        mailPicker.mailComposeDelegate = self;
         [mailPicker setSubject:NSLocalizedString(@"This is my music box.", @"The message when you send the song.")];
         [mailPicker setMessageBody:songUrl isHTML:NO];
-        mailPicker.bk_completionBlock = ^(MFMailComposeViewController *controller, MFMailComposeResult result, NSError *error) {
-            switch (result) {
-                case MFMailComposeResultCancelled: // キャンセル
-                    break;
-                case MFMailComposeResultSaved: // 下書き保存
-                    break;
-                case MFMailComposeResultSent: // 送信成功
-                    [FIRAnalytics logEventWithName:kFIREventShare
-                                        parameters:@{ @"media": @"mail" }];
-                    break;
-                case MFMailComposeResultFailed:// 送信失敗
-                    [self showAlertDialogWithTitle:NSLocalizedString(@"Mail", @"Mail")
-                                           message:NSLocalizedString(@"Failed to send the mail.", @"The message when you failed to send the mail.")
-                                          handler1:nil
-                                          handler2:nil];
-                    break;
-                default:
-                    break;
-            }
-            [self dismissViewControllerAnimated:YES completion:nil];
-        };
         [self presentViewController:mailPicker animated:TRUE completion:nil];
     }];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error
+{
+    switch (result) {
+            case MFMailComposeResultCancelled: // キャンセル
+            break;
+            case MFMailComposeResultSaved: // 下書き保存
+            break;
+            case MFMailComposeResultSent: // 送信成功
+            [FIRAnalytics logEventWithName:kFIREventShare
+                                parameters:@{ @"media": @"mail" }];
+            break;
+            case MFMailComposeResultFailed:// 送信失敗
+            [self showAlertDialogWithTitle:NSLocalizedString(@"Mail", @"Mail")
+                                   message:NSLocalizedString(@"Failed to send the mail.", @"The message when you failed to send the mail.")
+                                   handler:nil];
+            break;
+        default:
+            break;
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - LINE
@@ -1513,8 +1425,7 @@
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
-                                      handler1:nil
-                                      handler2:nil];
+                                       handler:nil];
             });
             return;
         }
@@ -1529,8 +1440,7 @@
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
-                                      handler1:nil
-                                      handler2:nil];
+                                       handler:nil];
             });
             return;
         }
@@ -1543,8 +1453,7 @@
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
                                        message:dict[@"result"][@"message"]
-                                      handler1:nil
-                                      handler2:nil];
+                                       handler:nil];
             });
             return;
         }

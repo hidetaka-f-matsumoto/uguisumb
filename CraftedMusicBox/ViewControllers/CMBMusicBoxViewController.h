@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-#import <BlocksKit/BlocksKit+MessageUI.h>
+#import <MessageUI/MessageUI.h>
 #import <Social/Social.h>
 #import "CMBBaseViewController.h"
 #import "CMBNoteData.h"
@@ -28,7 +28,7 @@ static CGFloat const CMBTimeDivAutoScroll = 0.02f; // [s]
 @interface CMBMusicBoxViewController : CMBBaseViewController
 <
     UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate,
-    UIGestureRecognizerDelegate, CAAnimationDelegate,
+    UIGestureRecognizerDelegate, CAAnimationDelegate, MFMailComposeViewControllerDelegate,
     CMBMusicBoxTableViewCellDelegate, CMBMusicBoxTableViewHeadCellDelegate,
     CMBMusicBoxTableViewFootCellDelegate, CMBSongConfigDelegate, CMBSongManageDelegate
 >

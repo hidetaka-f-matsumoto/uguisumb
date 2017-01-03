@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <BlocksKit/BlocksKit.h>
-#import <BlocksKit/BlocksKit+UIKit.h>
 #import <GoogleMobileAds/GADBannerView.h>
 #import "SVProgressHUD.h"
 #import "CMBUtility.h"
@@ -29,16 +27,13 @@
 - (void)loadingEndWithNetwork:(BOOL)network;
 - (void)showAlertDialogWithTitle:(NSString *)title
                          message:(NSString *)message
-                        handler1:(void (^)(UIAlertAction *action))handler1
-                        handler2:(void (^)(void))handler2;
+                         handler:(void (^)(UIAlertAction *action))handler;
 - (void)showConfirmDialogWithTitle:(NSString *)title
                            message:(NSString *)message
-                          handler1:(void (^)(UIAlertAction *action))handler1
-                          handler2:(void (^)(void))handler2;
+                           handler:(void (^)(UIAlertAction *action))handler;
 - (void)showActionSheetWithTitle:(NSString *)title
                          message:(NSString *)message
-                        buttons1:(NSArray *)buttons1
-                        buttons2:(NSArray *)buttons2;
+                         buttons:(NSArray *)buttons;
 - (NetworkStatus)checkNetworkStatus;
 
 @end

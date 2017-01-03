@@ -47,7 +47,7 @@
     if ([[CMBUtility sharedInstance] checkFirstRunCurrentVersion]) {
         NSString *title = NSLocalizedString(@"What's New", @"What's New");
         NSString *message = NSLocalizedString(@"New feature information ver.1.3.0.", @"New feature information.");
-        [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
+        [self showAlertDialogWithTitle:title message:message handler:nil];
     }
 }
 
@@ -91,128 +91,72 @@
 
 - (void)showAlertDialogWithTitle:(NSString *)title
                          message:(NSString *)message
-                        handler1:(void (^)(UIAlertAction *action))handler1
-                        handler2:(void (^)(void))handler2
+                         handler:(void (^)(UIAlertAction *action))handler
 {
-    // UIAlertControllerが使える場合
-    if (NSClassFromString(@"UIAlertController")) {
-        CMBAlertController *alertController =
-        [CMBAlertController alertControllerWithTitle:title
-                                            message:message
-                                     preferredStyle:UIAlertControllerStyleAlert];
-        // OK処理
-        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK")
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:handler1]];
-        // ダイアログを表示
-        [self presentViewController:alertController
-                           animated:YES
-                         completion:nil];
-    }
-    // UIAlertControllerが使えない場合
-    else {
-        UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:title message:message];
-        [alertView bk_addButtonWithTitle:NSLocalizedString(@"OK", @"OK") handler:handler2];
-        alertView.bk_willShowBlock = ^(UIAlertView *alertView) {
-            [self willPresentAlertView:alertView];
-        };
-        alertView.bk_didDismissBlock = ^(UIAlertView *alertView, NSInteger buttonIndex) {
-            [self alertView:alertView didDismissWithButtonIndex:buttonIndex];
-        };
-        [alertView show];
-    }
+    CMBAlertController *alertController =
+    [CMBAlertController alertControllerWithTitle:title
+                                         message:message
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    // OK処理
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK")
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:handler]];
+    // ダイアログを表示
+    [self presentViewController:alertController
+                       animated:YES
+                     completion:nil];
 }
 
 - (void)showConfirmDialogWithTitle:(NSString *)title
                            message:(NSString *)message
-                          handler1:(void (^)(UIAlertAction *action))handler1
-                          handler2:(void (^)(void))handler2
+                           handler:(void (^)(UIAlertAction *action))handler
 {
-    // UIAlertControllerが使える場合
-    if (NSClassFromString(@"UIAlertController")) {
-        CMBAlertController *alertController =
-        [CMBAlertController alertControllerWithTitle:title
-                                            message:message
-                                     preferredStyle:UIAlertControllerStyleAlert];
-        // Cancel処理
-        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel")
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:nil]];
-        // OK処理
-        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK")
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:handler1]];
-        // ダイアログを表示
-        [self presentViewController:alertController
-                           animated:YES
-                         completion:nil];
-    }
-    // UIAlertControllerが使えない場合
-    else {
-        UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:title message:message];
-        [alertView bk_addButtonWithTitle:NSLocalizedString(@"Cancel", @"Cancel") handler:nil];
-        [alertView bk_addButtonWithTitle:NSLocalizedString(@"OK", @"OK") handler:handler2];
-        alertView.bk_willShowBlock = ^(UIAlertView *alertView) {
-            [self willPresentAlertView:alertView];
-        };
-        alertView.bk_didDismissBlock = ^(UIAlertView *alertView, NSInteger buttonIndex) {
-            [self alertView:alertView didDismissWithButtonIndex:buttonIndex];
-        };
-        [alertView show];
-    }
+    CMBAlertController *alertController =
+    [CMBAlertController alertControllerWithTitle:title
+                                         message:message
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    // Cancel処理
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel")
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:nil]];
+    // OK処理
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK")
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:handler]];
+    // ダイアログを表示
+    [self presentViewController:alertController
+                       animated:YES
+                     completion:nil];
 }
 
 - (void)showActionSheetWithTitle:(NSString *)title
                          message:(NSString *)message
-                        buttons1:(NSArray *)buttons1
-                        buttons2:(NSArray *)buttons2
+                         buttons:(NSArray *)buttons
 {
-    // UIAlertControllerが使える場合
-    if (NSClassFromString(@"UIAlertController")) {
-        CMBAlertController *alertController =
-        [CMBAlertController alertControllerWithTitle:title
-                                            message:message
-                                     preferredStyle:UIAlertControllerStyleActionSheet];
-        // 各処理
-        for (NSDictionary *button in buttons1) {
-            [alertController addAction:[UIAlertAction actionWithTitle:button[@"title"]
-                                                                style:UIAlertActionStyleDefault
-                                                              handler:button[@"handler"]]];
-        }
-        // Cancel処理
-        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel")
+    CMBAlertController *alertController =
+    [CMBAlertController alertControllerWithTitle:title
+                                         message:message
+                                  preferredStyle:UIAlertControllerStyleActionSheet];
+    // 各処理
+    for (NSDictionary *button in buttons) {
+        [alertController addAction:[UIAlertAction actionWithTitle:button[@"title"]
                                                             style:UIAlertActionStyleDefault
-                                                          handler:nil]];
-        // iPad用の設定
-        if (alertController.popoverPresentationController) {
-            alertController.popoverPresentationController.sourceView = self.view;
-            alertController.popoverPresentationController.sourceRect = self.view.frame;
-            alertController.popoverPresentationController.permittedArrowDirections = 0;
-        }
-        // アクションシート表示
-        [self presentViewController:alertController
-                           animated:YES
-                         completion:nil];
+                                                          handler:button[@"handler"]]];
     }
-    // UIAlertControllerが使えない場合
-    else {
-        UIActionSheet *actionSheet = [UIActionSheet bk_actionSheetWithTitle:title];
-        // 各処理
-        for (NSDictionary *button in buttons2) {
-            [actionSheet bk_addButtonWithTitle:button[@"title"] handler:button[@"handler"]];
-        }
-        // Cancel処理
-        [actionSheet bk_setCancelButtonWithTitle:NSLocalizedString(@"Cancel", @"Cancel") handler:nil];
-        // アクションシート表示
-        [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
-        actionSheet.bk_willShowBlock = ^(UIActionSheet *actionSheet) {
-            [self willPresentActionSheet:actionSheet];
-        };
-        actionSheet.bk_didDismissBlock = ^(UIActionSheet *actionSheet, NSInteger buttonIndex) {
-            [self actionSheet:actionSheet didDismissWithButtonIndex:buttonIndex];
-        };
-        [actionSheet showInView:self.view];
+    // Cancel処理
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel")
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:nil]];
+    // iPad用の設定
+    if (alertController.popoverPresentationController) {
+        alertController.popoverPresentationController.sourceView = self.view;
+        alertController.popoverPresentationController.sourceRect = self.view.frame;
+        alertController.popoverPresentationController.permittedArrowDirections = 0;
     }
+    // アクションシート表示
+    [self presentViewController:alertController
+                       animated:YES
+                     completion:nil];
 }
 
 #pragma mark - UIAlertViewDelegate like
@@ -341,7 +285,7 @@
         {
             NSString *title = NSLocalizedString(@"Network", @"Network");
             NSString *message = NSLocalizedString(@"Network is offline.", @"The message when network is offline.");
-            [self showAlertDialogWithTitle:title message:message handler1:nil handler2:nil];
+            [self showAlertDialogWithTitle:title message:message handler:nil];
             break;
         }
         default:
