@@ -6,9 +6,8 @@ target 'CraftedMusicBox' do
   # use_frameworks!
 
   # Pods for CraftedMusicBox
-  pod 'BlocksKit', '~> 2.2'
   pod 'SVProgressHUD', '~> 1.1'
-  pod 'Google-Mobile-Ads-SDK', '~> 7.0'
+  pod 'Google-Mobile-Ads-SDK', '~> 7.16'
   pod 'Reachability', '~> 3.0'
   pod 'SWTableViewCell', '~> 0.3'
   pod 'Firebase/Core', '~> 3.11'
