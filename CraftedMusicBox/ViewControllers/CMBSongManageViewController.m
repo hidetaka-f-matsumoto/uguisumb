@@ -151,12 +151,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             NSString *message = [NSString stringWithFormat:NSLocalizedString(@"You wanna load %@?", @"The message to confirm you want to load the song with name %@."), songCell.info[@"name"]];
             [self showConfirmDialogWithTitle:title
                                      message:message
-                                    handler1:^(UIAlertAction *action) {
-                                        [self loadSongWithInfo:songCell.info];
-                                    }
-                                    handler2:^(void) {
-                                        [self loadSongWithInfo:songCell.info];
-                                    }];
+                                     handler:^(UIAlertAction *action) {
+                                         [self loadSongWithInfo:songCell.info];
+                                     }];
             break;
         }
         case 1:
@@ -166,12 +163,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             NSString *message = [NSString stringWithFormat:NSLocalizedString(@"You wanna delete %@?", @"The message to confirm you want to delete the song with name %@."), songCell.info[@"name"]];
             [self showConfirmDialogWithTitle:title
                                      message:message
-                                    handler1:^(UIAlertAction *action) {
-                                        [self deleteSongWithInfo:songCell.info indexPath:cellIndexPath];
-                                    }
-                                    handler2:^(void) {
-                                        [self deleteSongWithInfo:songCell.info indexPath:cellIndexPath];
-                                    }];
+                                     handler:^(UIAlertAction *action) {
+                                         [self deleteSongWithInfo:songCell.info indexPath:cellIndexPath];
+                                     }];
             break;
         }
         default:
@@ -193,8 +187,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Failed to load %@.", @"The message when you failed to load the song with name %@."), songInfo[@"name"]];
         [self showAlertDialogWithTitle:title
                                message:message
-                              handler1:nil
-                              handler2:nil];
+                               handler:nil];
         return;
     }
     // 画面を閉じてデリゲートに通知する
@@ -214,8 +207,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Failed to delete %@.", @"The message when failed to delete the song with name %@"), songInfo[@"name"]];
         [self showAlertDialogWithTitle:title
                                message:message
-                              handler1:nil
-                              handler2:nil];
+                               handler:nil];
         return;
     }
     // 表示更新

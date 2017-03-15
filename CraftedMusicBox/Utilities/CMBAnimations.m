@@ -17,7 +17,7 @@
  */
 + (CALayer *)noteAnimationLayerWithName:(NSString *)name
                                startPos:(CGPoint)kStartPos
-                               delegate:(UIViewController *)delegate {
+                               delegate:(UIViewController<CAAnimationDelegate> *)delegate {
     CALayer *layer = [self noteLayer];
     
     CGPoint kEndPos =  CGPointMake(kStartPos.x - 40.f, kStartPos.y - 60.f);

@@ -24,9 +24,12 @@ static CMBSoundManager *_instance = nil;
 
 - (void)_init
 {
+    if (!_instrument) {
+        _instrument = CMBSoundDefault;
+    }
     @try {
 #if 1 == AU_SAMPLER
-        NSURL *presetURL = [[NSBundle mainBundle] URLForResource:@"MusicBox" withExtension:@"aupreset"];
+        NSURL *presetURL = [[NSBundle mainBundle] URLForResource:_instrument withExtension:@"aupreset"];
         _sampler = [[EPSSampler alloc] initWithPresetURL:presetURL];
 #else // 1 == AU_SAMPLER
         const NSDictionary *CMBSoundResources = @{
@@ -122,6 +125,18 @@ static CMBSoundManager *_instance = nil;
         _instance = [CMBSoundManager new];
     }
     return _instance;
+}
+
+/**
+ * Instrument setter
+ */
+- (void)setInstrument:(NSString *)instrument
+{
+    if (_instrument == instrument) {
+        return;
+    }
+    _instrument = instrument;
+    [self _init];
 }
 
 /**

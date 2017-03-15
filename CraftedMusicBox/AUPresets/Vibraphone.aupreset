@@ -1,0 +1,1405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AU version</key>
+	<real>1</real>
+	<key>Instrument</key>
+	<dict>
+		<key>Layers</key>
+		<array>
+			<dict>
+				<key>Amplifier</key>
+				<dict>
+					<key>ID</key>
+					<integer>0</integer>
+					<key>enabled</key>
+					<true/>
+				</dict>
+				<key>Connections</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>816840704</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<false/>
+						<key>scale</key>
+						<real>12800</real>
+						<key>source</key>
+						<integer>300</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>1</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343225856</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>301</integer>
+						<key>transform</key>
+						<integer>2</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>2</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343225856</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>7</integer>
+						<key>transform</key>
+						<integer>2</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>3</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343225856</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>11</integer>
+						<key>transform</key>
+						<integer>2</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>4</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1344274432</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<false/>
+						<key>max value</key>
+						<real>0.5080000162124634</real>
+						<key>min value</key>
+						<real>-0.5080000162124634</real>
+						<key>source</key>
+						<integer>10</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>7</integer>
+						<key>control</key>
+						<integer>241</integer>
+						<key>destination</key>
+						<integer>816840704</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<false/>
+						<key>max value</key>
+						<real>12800</real>
+						<key>min value</key>
+						<real>-12800</real>
+						<key>source</key>
+						<integer>224</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>8</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>816840704</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<false/>
+						<key>max value</key>
+						<real>100</real>
+						<key>min value</key>
+						<real>-100</real>
+						<key>source</key>
+						<integer>242</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>6</integer>
+						<key>control</key>
+						<integer>1</integer>
+						<key>destination</key>
+						<integer>816840704</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<false/>
+						<key>max value</key>
+						<real>50</real>
+						<key>min value</key>
+						<real>-50</real>
+						<key>source</key>
+						<integer>268435456</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>5</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343225856</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>536870912</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+				</array>
+				<key>Envelopes</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>Stages</key>
+						<array>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>0</integer>
+								<key>time</key>
+								<real>0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>22</integer>
+								<key>stage</key>
+								<integer>1</integer>
+								<key>time</key>
+								<real>0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>2</integer>
+								<key>time</key>
+								<real>0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>3</integer>
+								<key>time</key>
+								<real>0</real>
+							</dict>
+							<dict>
+								<key>level</key>
+								<real>1</real>
+								<key>stage</key>
+								<integer>4</integer>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>5</integer>
+								<key>time</key>
+								<real>0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>6</integer>
+								<key>time</key>
+								<real>0.004999999888241291</real>
+							</dict>
+						</array>
+						<key>enabled</key>
+						<true/>
+					</dict>
+				</array>
+				<key>Filters</key>
+				<dict>
+					<key>ID</key>
+					<integer>0</integer>
+					<key>cutoff</key>
+					<real>20000</real>
+					<key>enabled</key>
+					<false/>
+					<key>resonance</key>
+					<real>0</real>
+					<key>type</key>
+					<integer>40</integer>
+				</dict>
+				<key>ID</key>
+				<integer>0</integer>
+				<key>LFOs</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>enabled</key>
+						<true/>
+					</dict>
+				</array>
+				<key>Oscillator</key>
+				<dict>
+					<key>ID</key>
+					<integer>0</integer>
+					<key>enabled</key>
+					<true/>
+				</dict>
+				<key>Zones</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>1</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>48</integer>
+						<key>min key</key>
+						<integer>48</integer>
+						<key>root key</key>
+						<integer>48</integer>
+						<key>waveform</key>
+						<integer>268435457</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>2</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>49</integer>
+						<key>min key</key>
+						<integer>49</integer>
+						<key>root key</key>
+						<integer>49</integer>
+						<key>waveform</key>
+						<integer>268435458</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>3</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>50</integer>
+						<key>min key</key>
+						<integer>50</integer>
+						<key>root key</key>
+						<integer>50</integer>
+						<key>waveform</key>
+						<integer>268435459</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>4</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>51</integer>
+						<key>min key</key>
+						<integer>51</integer>
+						<key>root key</key>
+						<integer>51</integer>
+						<key>waveform</key>
+						<integer>268435460</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>5</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>52</integer>
+						<key>min key</key>
+						<integer>52</integer>
+						<key>root key</key>
+						<integer>52</integer>
+						<key>waveform</key>
+						<integer>268435461</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>6</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>53</integer>
+						<key>min key</key>
+						<integer>53</integer>
+						<key>root key</key>
+						<integer>53</integer>
+						<key>waveform</key>
+						<integer>268435466</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>7</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>54</integer>
+						<key>min key</key>
+						<integer>54</integer>
+						<key>root key</key>
+						<integer>54</integer>
+						<key>waveform</key>
+						<integer>268435467</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>8</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>55</integer>
+						<key>min key</key>
+						<integer>55</integer>
+						<key>root key</key>
+						<integer>55</integer>
+						<key>waveform</key>
+						<integer>268435468</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>9</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>56</integer>
+						<key>min key</key>
+						<integer>56</integer>
+						<key>root key</key>
+						<integer>56</integer>
+						<key>waveform</key>
+						<integer>268435469</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>10</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>57</integer>
+						<key>min key</key>
+						<integer>57</integer>
+						<key>root key</key>
+						<integer>57</integer>
+						<key>waveform</key>
+						<integer>268435465</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>11</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>58</integer>
+						<key>min key</key>
+						<integer>58</integer>
+						<key>root key</key>
+						<integer>58</integer>
+						<key>waveform</key>
+						<integer>268435462</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>12</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>59</integer>
+						<key>min key</key>
+						<integer>59</integer>
+						<key>root key</key>
+						<integer>59</integer>
+						<key>waveform</key>
+						<integer>268435470</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>13</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>60</integer>
+						<key>min key</key>
+						<integer>60</integer>
+						<key>root key</key>
+						<integer>60</integer>
+						<key>waveform</key>
+						<integer>268435471</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>14</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>61</integer>
+						<key>min key</key>
+						<integer>61</integer>
+						<key>root key</key>
+						<integer>61</integer>
+						<key>waveform</key>
+						<integer>268435472</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>15</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>62</integer>
+						<key>min key</key>
+						<integer>62</integer>
+						<key>root key</key>
+						<integer>62</integer>
+						<key>waveform</key>
+						<integer>268435473</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>16</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>63</integer>
+						<key>min key</key>
+						<integer>63</integer>
+						<key>root key</key>
+						<integer>63</integer>
+						<key>waveform</key>
+						<integer>268435474</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>17</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>64</integer>
+						<key>min key</key>
+						<integer>64</integer>
+						<key>root key</key>
+						<integer>64</integer>
+						<key>waveform</key>
+						<integer>268435475</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>18</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>65</integer>
+						<key>min key</key>
+						<integer>65</integer>
+						<key>root key</key>
+						<integer>65</integer>
+						<key>waveform</key>
+						<integer>268435476</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>19</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>66</integer>
+						<key>min key</key>
+						<integer>66</integer>
+						<key>root key</key>
+						<integer>66</integer>
+						<key>waveform</key>
+						<integer>268435477</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>20</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>67</integer>
+						<key>min key</key>
+						<integer>67</integer>
+						<key>root key</key>
+						<integer>67</integer>
+						<key>waveform</key>
+						<integer>268435478</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>25</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>68</integer>
+						<key>min key</key>
+						<integer>68</integer>
+						<key>root key</key>
+						<integer>68</integer>
+						<key>waveform</key>
+						<integer>268435481</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>22</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>69</integer>
+						<key>min key</key>
+						<integer>69</integer>
+						<key>root key</key>
+						<integer>69</integer>
+						<key>waveform</key>
+						<integer>268435479</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>23</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>70</integer>
+						<key>min key</key>
+						<integer>70</integer>
+						<key>root key</key>
+						<integer>70</integer>
+						<key>waveform</key>
+						<integer>268435463</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>24</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>71</integer>
+						<key>min key</key>
+						<integer>71</integer>
+						<key>root key</key>
+						<integer>71</integer>
+						<key>waveform</key>
+						<integer>268435480</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>26</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>72</integer>
+						<key>min key</key>
+						<integer>72</integer>
+						<key>root key</key>
+						<integer>72</integer>
+						<key>waveform</key>
+						<integer>268435482</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>30</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>73</integer>
+						<key>min key</key>
+						<integer>73</integer>
+						<key>root key</key>
+						<integer>73</integer>
+						<key>waveform</key>
+						<integer>268435486</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>28</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>74</integer>
+						<key>min key</key>
+						<integer>74</integer>
+						<key>root key</key>
+						<integer>74</integer>
+						<key>waveform</key>
+						<integer>268435484</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>29</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>75</integer>
+						<key>min key</key>
+						<integer>75</integer>
+						<key>root key</key>
+						<integer>75</integer>
+						<key>waveform</key>
+						<integer>268435485</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>31</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>76</integer>
+						<key>min key</key>
+						<integer>76</integer>
+						<key>root key</key>
+						<integer>76</integer>
+						<key>waveform</key>
+						<integer>268435487</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>32</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>77</integer>
+						<key>min key</key>
+						<integer>77</integer>
+						<key>root key</key>
+						<integer>77</integer>
+						<key>waveform</key>
+						<integer>268435488</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>33</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>78</integer>
+						<key>min key</key>
+						<integer>78</integer>
+						<key>root key</key>
+						<integer>78</integer>
+						<key>waveform</key>
+						<integer>268435489</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>34</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>79</integer>
+						<key>min key</key>
+						<integer>79</integer>
+						<key>root key</key>
+						<integer>79</integer>
+						<key>waveform</key>
+						<integer>268435490</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>35</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>80</integer>
+						<key>min key</key>
+						<integer>80</integer>
+						<key>root key</key>
+						<integer>80</integer>
+						<key>waveform</key>
+						<integer>268435483</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>36</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>81</integer>
+						<key>min key</key>
+						<integer>81</integer>
+						<key>root key</key>
+						<integer>81</integer>
+						<key>waveform</key>
+						<integer>268435491</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>37</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>82</integer>
+						<key>min key</key>
+						<integer>82</integer>
+						<key>root key</key>
+						<integer>82</integer>
+						<key>waveform</key>
+						<integer>268435464</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>38</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>83</integer>
+						<key>min key</key>
+						<integer>83</integer>
+						<key>root key</key>
+						<integer>83</integer>
+						<key>waveform</key>
+						<integer>268435492</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>39</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>84</integer>
+						<key>min key</key>
+						<integer>84</integer>
+						<key>root key</key>
+						<integer>84</integer>
+						<key>waveform</key>
+						<real>268435493</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>40</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>85</integer>
+						<key>min key</key>
+						<integer>85</integer>
+						<key>root key</key>
+						<integer>85</integer>
+						<key>waveform</key>
+						<real>268435494</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>41</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>86</integer>
+						<key>min key</key>
+						<integer>86</integer>
+						<key>root key</key>
+						<integer>86</integer>
+						<key>waveform</key>
+						<real>268435495</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>42</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>87</integer>
+						<key>min key</key>
+						<integer>87</integer>
+						<key>root key</key>
+						<integer>87</integer>
+						<key>waveform</key>
+						<real>268435496</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>43</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>88</integer>
+						<key>min key</key>
+						<integer>88</integer>
+						<key>root key</key>
+						<integer>88</integer>
+						<key>waveform</key>
+						<real>268435497</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>44</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>89</integer>
+						<key>min key</key>
+						<integer>89</integer>
+						<key>root key</key>
+						<integer>89</integer>
+						<key>waveform</key>
+						<real>268435498</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>45</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>90</integer>
+						<key>min key</key>
+						<integer>90</integer>
+						<key>root key</key>
+						<integer>90</integer>
+						<key>waveform</key>
+						<real>268435499</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>46</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>91</integer>
+						<key>min key</key>
+						<integer>91</integer>
+						<key>root key</key>
+						<integer>91</integer>
+						<key>waveform</key>
+						<real>268435500</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>47</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>92</integer>
+						<key>min key</key>
+						<integer>92</integer>
+						<key>root key</key>
+						<integer>92</integer>
+						<key>waveform</key>
+						<real>268435501</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>48</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>93</integer>
+						<key>min key</key>
+						<integer>93</integer>
+						<key>root key</key>
+						<integer>93</integer>
+						<key>waveform</key>
+						<real>268435502</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>49</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>94</integer>
+						<key>min key</key>
+						<integer>94</integer>
+						<key>root key</key>
+						<integer>94</integer>
+						<key>waveform</key>
+						<real>268435503</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>50</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>95</integer>
+						<key>min key</key>
+						<integer>95</integer>
+						<key>root key</key>
+						<integer>95</integer>
+						<key>waveform</key>
+						<real>268435504</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>51</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>36</integer>
+						<key>min key</key>
+						<integer>36</integer>
+						<key>root key</key>
+						<integer>36</integer>
+						<key>waveform</key>
+						<real>268435445</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>52</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>37</integer>
+						<key>min key</key>
+						<integer>37</integer>
+						<key>root key</key>
+						<integer>37</integer>
+						<key>waveform</key>
+						<real>268435446</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>53</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>38</integer>
+						<key>min key</key>
+						<integer>38</integer>
+						<key>root key</key>
+						<integer>38</integer>
+						<key>waveform</key>
+						<real>268435447</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>54</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>39</integer>
+						<key>min key</key>
+						<integer>39</integer>
+						<key>root key</key>
+						<integer>39</integer>
+						<key>waveform</key>
+						<real>268435448</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>55</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>40</integer>
+						<key>min key</key>
+						<integer>40</integer>
+						<key>root key</key>
+						<integer>40</integer>
+						<key>waveform</key>
+						<real>268435449</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>56</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>41</integer>
+						<key>min key</key>
+						<integer>41</integer>
+						<key>root key</key>
+						<integer>41</integer>
+						<key>waveform</key>
+						<real>268435450</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>57</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>42</integer>
+						<key>min key</key>
+						<integer>42</integer>
+						<key>root key</key>
+						<integer>42</integer>
+						<key>waveform</key>
+						<real>268435451</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>58</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>43</integer>
+						<key>min key</key>
+						<integer>43</integer>
+						<key>root key</key>
+						<integer>43</integer>
+						<key>waveform</key>
+						<real>268435452</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>59</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>44</integer>
+						<key>min key</key>
+						<integer>44</integer>
+						<key>root key</key>
+						<integer>44</integer>
+						<key>waveform</key>
+						<real>268435453</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>60</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>45</integer>
+						<key>min key</key>
+						<integer>45</integer>
+						<key>root key</key>
+						<integer>45</integer>
+						<key>waveform</key>
+						<real>268435454</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>61</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>46</integer>
+						<key>min key</key>
+						<integer>46</integer>
+						<key>root key</key>
+						<integer>46</integer>
+						<key>waveform</key>
+						<real>268435455</real>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>62</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>47</integer>
+						<key>min key</key>
+						<integer>47</integer>
+						<key>root key</key>
+						<integer>47</integer>
+						<key>waveform</key>
+						<real>268435456</real>
+					</dict>
+				</array>
+			</dict>
+		</array>
+		<key>name</key>
+		<string>Vibraphone</string>
+	</dict>
+	<key>coarse tune</key>
+	<integer>0</integer>
+	<key>data</key>
+	<data>AAAAAAAAAAAAAAAEAAADhAAAAAAAAAOFAAAAAAAAA4YAAAAAAAADhwAAAAA=</data>
+	<key>file-references</key>
+	<dict>
+		<key>Sample:268435457</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/3C.caf</string>
+		<key>Sample:268435458</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/3Cs.caf</string>
+		<key>Sample:268435459</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/3D.caf</string>
+		<key>Sample:268435460</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/3Ds.caf</string>
+		<key>Sample:268435461</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/3E.caf</string>
+		<key>Sample:268435462</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/3As.caf</string>
+		<key>Sample:268435463</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/4As.caf</string>
+		<key>Sample:268435464</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/5As.caf</string>
+		<key>Sample:268435465</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/3A.caf</string>
+		<key>Sample:268435466</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/3F.caf</string>
+		<key>Sample:268435467</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/3Fs.caf</string>
+		<key>Sample:268435468</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/3G.caf</string>
+		<key>Sample:268435469</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/3Gs.caf</string>
+		<key>Sample:268435470</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/3B.caf</string>
+		<key>Sample:268435471</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/4C.caf</string>
+		<key>Sample:268435472</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/4Cs.caf</string>
+		<key>Sample:268435473</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/4D.caf</string>
+		<key>Sample:268435474</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/4Ds.caf</string>
+		<key>Sample:268435475</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/4E.caf</string>
+		<key>Sample:268435476</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/4F.caf</string>
+		<key>Sample:268435477</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/4Fs.caf</string>
+		<key>Sample:268435478</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/4G.caf</string>
+		<key>Sample:268435479</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/4A.caf</string>
+		<key>Sample:268435480</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/4B.caf</string>
+		<key>Sample:268435481</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/4Gs.caf</string>
+		<key>Sample:268435482</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/5C.caf</string>
+		<key>Sample:268435483</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/5Gs.caf</string>
+		<key>Sample:268435484</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/5D.caf</string>
+		<key>Sample:268435485</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/5Ds.caf</string>
+		<key>Sample:268435486</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/5Cs.caf</string>
+		<key>Sample:268435487</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/5E.caf</string>
+		<key>Sample:268435488</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/5F.caf</string>
+		<key>Sample:268435489</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/5Fs.caf</string>
+		<key>Sample:268435490</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/5G.caf</string>
+		<key>Sample:268435491</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/5A.caf</string>
+		<key>Sample:268435492</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/5B.caf</string>
+		<key>Sample:268435493</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/6C.caf</string>
+		<key>Sample:268435494</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/6Cs.caf</string>
+		<key>Sample:268435495</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/6D.caf</string>
+		<key>Sample:268435496</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/6Ds.caf</string>
+		<key>Sample:268435497</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/6E.caf</string>
+		<key>Sample:268435498</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/6F.caf</string>
+		<key>Sample:268435499</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/6Fs.caf</string>
+		<key>Sample:268435500</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/6G.caf</string>
+		<key>Sample:268435501</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/6Gs.caf</string>
+		<key>Sample:268435502</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/6A.caf</string>
+		<key>Sample:268435503</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/6As.caf</string>
+		<key>Sample:268435504</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/6B.caf</string>
+		<key>Sample:268435445</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/2C.caf</string>
+		<key>Sample:268435446</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/2Cs.caf</string>
+		<key>Sample:268435447</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/2D.caf</string>
+		<key>Sample:268435448</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/2Ds.caf</string>
+		<key>Sample:268435449</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/2E.caf</string>
+		<key>Sample:268435450</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/2F.caf</string>
+		<key>Sample:268435451</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/2Fs.caf</string>
+		<key>Sample:268435452</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/2G.caf</string>
+		<key>Sample:268435453</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/2Gs.caf</string>
+		<key>Sample:268435454</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/2A.caf</string>
+		<key>Sample:268435455</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/2As.caf</string>
+		<key>Sample:268435456</key>
+		<string>file://localhost/Library/Audio/Sounds/vibraphone/2B.caf</string>
+	</dict>
+	<key>fine tune</key>
+	<real>0</real>
+	<key>gain</key>
+	<real>0</real>
+	<key>manufacturer</key>
+	<integer>1634758764</integer>
+	<key>name</key>
+	<string>Vibraphone</string>
+	<key>output</key>
+	<integer>0</integer>
+	<key>pan</key>
+	<real>0</real>
+	<key>subtype</key>
+	<integer>1935764848</integer>
+	<key>type</key>
+	<integer>1635085685</integer>
+	<key>version</key>
+	<integer>0</integer>
+	<key>voice count</key>
+	<integer>64</integer>
+</dict>
+</plist>

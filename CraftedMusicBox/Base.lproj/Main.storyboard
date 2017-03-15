@@ -1,48 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OGI-JR-xGh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OGI-JR-xGh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="sp-setofont.ttf">
+        <array key="sp-setofont.ttf">
             <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-            <string>SetoFont-SP</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <scenes>
         <!--Music Box View Controller-->
@@ -54,19 +25,19 @@
                         <viewControllerLayoutGuide type="bottom" id="cFU-af-w2i"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="liS-On-GVe">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bKy-8R-19x" customClass="CMBMusicBoxTableView">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bKy-8R-19x" customClass="CMBMusicBoxTableView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewHeadCell" rowHeight="184" id="IC7-gS-MAh" customClass="CMBMusicBoxTableViewHeadCell">
                                         <rect key="frame" x="0.0" y="22" width="600" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IC7-gS-MAh" id="WI0-ID-h8r">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="183.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="183"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="XdX-Al-I3p">
@@ -78,7 +49,7 @@
                                                     <string key="text">&lt;&lt;&lt; Swipe
 octave down</string>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="87A-Md-34a" userLabel="Swipe &gt;&gt;&gt; octave up">
@@ -90,7 +61,7 @@ octave down</string>
                                                     <string key="text">Swipe &gt;&gt;&gt;
 octave up</string>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-e8-u6Q">
@@ -102,7 +73,7 @@ octave up</string>
                                                     <string key="text">Tap bellow,
 music box on.</string>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -111,7 +82,7 @@ music box on.</string>
                                                     </variation>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="backgroundColor" red="0.76032161712646484" green="0.91248804330825806" blue="0.42444834113121033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="87A-Md-34a" secondAttribute="trailing" constant="8" id="2eC-js-cJZ"/>
                                                 <constraint firstAttribute="bottom" secondItem="gr1-e8-u6Q" secondAttribute="bottom" constant="4" id="Kvv-Vr-GBD"/>
@@ -132,17 +103,17 @@ music box on.</string>
                                         <rect key="frame" x="0.0" y="206" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eat-gf-db6" id="jCb-TV-DH6">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbx-Gh-5um">
                                                     <rect key="frame" x="4" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="VU1-3g-gQN"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
                                                     <connections>
@@ -150,13 +121,13 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqy-G6-pwu">
-                                                    <rect key="frame" x="56" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="55.5" y="0.0" width="24" height="43"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="pW9-KA-Xp1"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
                                                     <connections>
@@ -164,13 +135,13 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3M-MI-GQp">
-                                                    <rect key="frame" x="107" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="107.5" y="0.0" width="24" height="43"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="jGP-gg-QS4"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
                                                     <connections>
@@ -179,12 +150,12 @@ music box on.</string>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-03-hUD">
                                                     <rect key="frame" x="159" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="dN2-bL-q3M"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
                                                     <connections>
@@ -192,13 +163,13 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fW9-kO-2Be">
-                                                    <rect key="frame" x="211" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="210.5" y="0.0" width="24" height="43"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="VFz-f4-77T"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
                                                     <connections>
@@ -207,12 +178,12 @@ music box on.</string>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZh-3k-ogb">
                                                     <rect key="frame" x="262" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="iuk-io-SXi"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
                                                     <connections>
@@ -221,12 +192,12 @@ music box on.</string>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-f5-Mp0">
                                                     <rect key="frame" x="314" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="IbY-CT-eso"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
                                                     <connections>
@@ -234,13 +205,13 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWa-f9-03L">
-                                                    <rect key="frame" x="365" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="365.5" y="0.0" width="24" height="43"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="y4J-fS-LNc"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
                                                     <connections>
@@ -249,12 +220,12 @@ music box on.</string>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDi-Hc-wUn">
                                                     <rect key="frame" x="417" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="44U-BS-DNi"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
                                                     <connections>
@@ -262,13 +233,13 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulF-6M-s2H">
-                                                    <rect key="frame" x="469" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="468.5" y="0.0" width="24" height="43"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="Juc-pO-EAM"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
                                                     <connections>
@@ -276,13 +247,13 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gq7-xi-gh4">
-                                                    <rect key="frame" x="520" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="520.5" y="0.0" width="24" height="43"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="Fgj-HW-7Sb"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
                                                     <connections>
@@ -291,12 +262,12 @@ music box on.</string>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iA4-sq-vXB">
                                                     <rect key="frame" x="572" y="0.0" width="24" height="43"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="vH0-3b-4Ay"/>
                                                     </constraints>
                                                     <state key="normal">
-                                                        <color key="titleColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <state key="selected" image="bean"/>
                                                     <connections>
@@ -304,84 +275,84 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zg2-P3-VP7">
-                                                    <rect key="frame" x="28" y="17" width="28" height="10"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="28" y="17" width="27.5" height="10"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="Gf6-FV-QSl"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YmD-UZ-0LW">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmD-UZ-0LW">
                                                     <rect key="frame" x="80" y="17" width="27" height="10"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="KoC-mV-V3c"/>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBz-gc-W8a">
-                                                    <rect key="frame" x="131" y="17" width="28" height="10"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="131.5" y="17" width="27.5" height="10"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="KFG-hx-fKR"/>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-90-hsW">
-                                                    <rect key="frame" x="183" y="17" width="28" height="10"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="183" y="17" width="27.5" height="10"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="4Yk-3G-Kk9"/>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8FJ-ww-qfW">
-                                                    <rect key="frame" x="235" y="17" width="27" height="10"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="234.5" y="17" width="27.5" height="10"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="rFO-7K-JUj"/>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mus-VN-LVa">
                                                     <rect key="frame" x="286" y="17" width="28" height="10"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="83Y-lL-Qb0"/>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-bn-YCD">
-                                                    <rect key="frame" x="338" y="17" width="27" height="10"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="338" y="17" width="27.5" height="10"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="5U9-dX-wQp"/>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PU0-ak-hFq">
-                                                    <rect key="frame" x="389" y="17" width="28" height="10"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="389.5" y="17" width="27.5" height="10"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="oxM-2v-hEw"/>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFk-Z9-nRW">
-                                                    <rect key="frame" x="441" y="17" width="28" height="10"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="441" y="17" width="27.5" height="10"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="RFI-TW-jE2"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-3V-B6S">
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-3V-B6S">
                                                     <rect key="frame" x="493" y="17" width="27" height="10"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="5cv-aH-zXH"/>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whT-8x-05c">
-                                                    <rect key="frame" x="544" y="17" width="28" height="10"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="544.5" y="17" width="27.5" height="10"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="lFG-6U-TZz"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="ulF-6M-s2H" firstAttribute="leading" secondItem="yFk-Z9-nRW" secondAttribute="trailing" id="0a2-2e-6bu"/>
                                                 <constraint firstItem="NUa-90-hsW" firstAttribute="leading" secondItem="WZo-03-hUD" secondAttribute="trailing" id="0nM-ib-oFd"/>
@@ -486,7 +457,7 @@ music box on.</string>
                                         <rect key="frame" x="0.0" y="250" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T1G-b4-tJP" id="hMI-1x-yPo">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks. Please enjoy playing!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-Ac-EW5">
@@ -497,7 +468,7 @@ music box on.</string>
                                                         <constraint firstAttribute="height" constant="21" id="Pla-8k-XZf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -514,7 +485,7 @@ music box on.</string>
                                                         <constraint firstAttribute="height" constant="32" id="s4T-jk-wRk"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -525,7 +496,7 @@ music box on.</string>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dp-JX-jUo">
                                                     <rect key="frame" x="242" y="8" width="40" height="40"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="CPD-ry-Kxo"/>
                                                         <constraint firstAttribute="height" constant="40" id="Jvf-Ls-6FF"/>
@@ -544,7 +515,7 @@ music box on.</string>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXd-8x-h3b">
                                                     <rect key="frame" x="290" y="8" width="20" height="40"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="YVJ-xf-MHY"/>
                                                         <constraint firstAttribute="height" constant="40" id="b4i-G8-mf4"/>
@@ -552,7 +523,7 @@ music box on.</string>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Np7-iv-523">
                                                     <rect key="frame" x="318" y="8" width="40" height="40"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="ZLW-6g-whX"/>
                                                         <constraint firstAttribute="width" constant="40" id="paN-zs-4KK"/>
@@ -570,7 +541,7 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="backgroundColor" red="0.76032161712646484" green="0.91248804330825806" blue="0.42444834113121033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="KIe-Ac-EW5" secondAttribute="trailing" constant="8" id="3lh-yy-J1p"/>
                                                 <constraint firstItem="KIe-Ac-EW5" firstAttribute="top" secondItem="JXd-8x-h3b" secondAttribute="bottom" constant="8" id="4ae-qa-OAv"/>
@@ -612,14 +583,14 @@ music box on.</string>
                                     <outletCollection property="gestureRecognizers" destination="h1y-U8-OyL" appends="YES" id="VDG-oK-eGV"/>
                                 </connections>
                             </tableView>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-fm-F29" userLabel="Curtain View">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-fm-F29" userLabel="Curtain View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSg-uY-Uve" userLabel="Head View">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSg-uY-Uve" userLabel="Head View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="88"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge2-C6-zQF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge2-C6-zQF">
                                         <rect key="frame" x="570" y="33" width="30" height="21"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -633,7 +604,7 @@ music box on.</string>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="ut0-gk-uli"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -653,10 +624,10 @@ music box on.</string>
                                             </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-a7-4su">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-a7-4su">
                                         <rect key="frame" x="55" y="62" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="TaZ-m2-Nek">
@@ -665,37 +636,37 @@ music box on.</string>
                                             <constraint firstAttribute="height" constant="26" id="dvh-cU-HD2"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCE-Ru-H5S">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCE-Ru-H5S">
                                         <rect key="frame" x="106" y="62" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="Yuu-Ey-5a8"/>
                                             <constraint firstAttribute="width" constant="24" id="eyO-X4-1fY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6un-Vg-Onf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="D#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6un-Vg-Onf">
                                         <rect key="frame" x="158" y="62" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="dJM-zX-9ak"/>
                                             <constraint firstAttribute="width" constant="24" id="wQb-De-Sx8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGA-bt-6SB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGA-bt-6SB">
                                         <rect key="frame" x="210" y="62" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="A1L-Ek-Oih"/>
                                             <constraint firstAttribute="width" constant="24" id="WVG-4y-hhO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPb-qa-SWj">
@@ -705,7 +676,7 @@ music box on.</string>
                                             <constraint firstAttribute="height" constant="26" id="SYD-PL-0ef"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="F#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSJ-rO-l0D">
@@ -715,17 +686,17 @@ music box on.</string>
                                             <constraint firstAttribute="height" constant="26" id="tk7-R6-OzU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX1-x2-jVn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX1-x2-jVn">
                                         <rect key="frame" x="365" y="62" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="LjB-S3-CvP"/>
                                             <constraint firstAttribute="width" constant="24" id="e9U-2i-UmU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="G#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMu-ns-MIO">
@@ -735,132 +706,126 @@ music box on.</string>
                                             <constraint firstAttribute="width" constant="24" id="rG8-S9-lj2"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8B-se-TdV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8B-se-TdV">
                                         <rect key="frame" x="520" y="62" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="HGq-L5-mth"/>
                                             <constraint firstAttribute="height" constant="26" id="NBF-xg-Yg5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYE-0l-Uex">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYE-0l-Uex">
                                         <rect key="frame" x="572" y="62" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="29h-xe-SSa"/>
                                             <constraint firstAttribute="height" constant="26" id="HAT-PG-Thx"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="372" y="62" width="20" height="26"/>
-                                        </variation>
-                                        <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="372" y="62" width="20" height="26"/>
-                                        </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXc-zu-bBA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXc-zu-bBA">
                                         <rect key="frame" x="469" y="62" width="24" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="Yxs-Mo-47Z"/>
                                             <constraint firstAttribute="width" constant="24" id="ogz-qX-C7Y"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWy-y0-np0">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWy-y0-np0">
                                         <rect key="frame" x="544" y="62" width="27.5" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="W5x-Sn-ysn"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiI-PF-7b4">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TiI-PF-7b4">
                                         <rect key="frame" x="493" y="62" width="27" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="GhR-na-nO2"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yxy-Np-fBd">
                                         <rect key="frame" x="442" y="46" width="26.5" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="dj4-Uu-1xs"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ejv-sB-kdl">
                                         <rect key="frame" x="389" y="46" width="27.5" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="1dl-cA-gsP"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZJ-Ct-iUY">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZJ-Ct-iUY">
                                         <rect key="frame" x="337" y="62" width="28" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="urz-23-4ct"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sk-mn-4Ku">
                                         <rect key="frame" x="285" y="62" width="28.5" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="dyQ-Hk-0rC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88S-A8-Q3A">
                                         <rect key="frame" x="233" y="46" width="28" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="SfK-IY-t0A"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-9S-DeJ">
                                         <rect key="frame" x="182" y="46" width="28" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="UXl-bV-Gh2"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KpY-ce-dbc">
                                         <rect key="frame" x="130" y="46" width="28" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="yGj-aR-EUl"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3SA-2v-on1">
                                         <rect key="frame" x="80" y="62" width="27" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="foD-vG-8sr"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYk-wa-zDo">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYk-wa-zDo">
                                         <rect key="frame" x="28" y="62" width="27.5" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="znp-zo-fod"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="song title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGT-ur-QoD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="song title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGT-ur-QoD">
                                         <rect key="frame" x="8" y="16" width="584" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="TPi-Bp-uvm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Octave" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPq-6m-SqI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Octave" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPq-6m-SqI">
                                         <rect key="frame" x="442" y="33" width="120" height="21"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -874,7 +839,7 @@ music box on.</string>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="jYP-8t-7yc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -886,8 +851,8 @@ music box on.</string>
                                         </variation>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.45098039215686275" green="0.63529411764705879" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="0.0" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.45098039215686275" green="0.63529411764705879" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.98587214946746826" green="0.0" blue="0.21807396411895752" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="9sk-mn-4Ku" secondAttribute="bottom" id="0hH-gC-7my"/>
                                     <constraint firstAttribute="bottom" secondItem="bZJ-Ct-iUY" secondAttribute="bottom" id="2Wc-gQ-gtD"/>
@@ -966,17 +931,17 @@ music box on.</string>
                                     </mask>
                                 </variation>
                             </view>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIN-k4-Uqe" userLabel="Tine View">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nIN-k4-Uqe" userLabel="Tine View">
                                 <rect key="frame" x="0.0" y="94" width="600" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="branch" translatesAutoresizingMaskIntoConstraints="NO" id="GtV-vh-Bqb">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="branch" translatesAutoresizingMaskIntoConstraints="NO" id="GtV-vh-Bqb">
                                         <rect key="frame" x="0.0" y="63" width="600" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="GtV-vh-Bqb" secondAttribute="height" multiplier="600:37" id="Drl-41-M6I"/>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="dwc-6a-PKh"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uguisu" translatesAutoresizingMaskIntoConstraints="NO" id="Akk-FW-dNV">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="uguisu" translatesAutoresizingMaskIntoConstraints="NO" id="Akk-FW-dNV">
                                         <rect key="frame" x="517" y="47" width="75" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="Mh7-Or-IUj"/>
@@ -995,14 +960,14 @@ music box on.</string>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kDv-No-cAb" userLabel="Banner Frame View">
                                 <rect key="frame" x="0.0" y="556" width="0.0" height="0.0"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="bcB-Yg-2xa"/>
                                 </constraints>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZmP-5A-KYj">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZmP-5A-KYj">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <color key="backgroundColor" red="0.49803921568627452" green="0.39215686274509803" blue="0.27450980392156865" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.42046752572059631" green="0.31915783882141113" blue="0.21259576082229614" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="8xr-29-IUh"/>
                                 </constraints>
@@ -1035,7 +1000,7 @@ music box on.</string>
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="cfw-fm-F29" secondAttribute="bottom" id="05t-r5-ikn"/>
                             <constraint firstItem="ZmP-5A-KYj" firstAttribute="top" secondItem="kDv-No-cAb" secondAttribute="bottom" id="1RJ-YP-Yyx"/>
@@ -1124,7 +1089,7 @@ music box on.</string>
         <scene sceneID="bgf-5n-cDM">
             <objects>
                 <navigationController id="N8n-7A-X4L" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sef-0E-Abj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Sef-0E-Abj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1145,28 +1110,28 @@ music box on.</string>
                         <viewControllerLayoutGuide type="bottom" id="wX0-tD-HS3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bBo-1m-yQq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fQM-uZ-Z0t">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fQM-uZ-Z0t">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongManageTableViewHeadCell" id="d6z-ek-A9k" userLabel="TableViewCell">
-                                        <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d6z-ek-A9k" id="hWb-Kt-Wts">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;&lt;&lt; Swipe to open menue." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDa-ea-333">
                                                     <rect key="frame" x="8" y="13" width="584" height="20"/>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="backgroundColor" red="0.76032161712646484" green="0.91248804330825806" blue="0.42444834113121033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="JDa-ea-333" firstAttribute="leading" secondItem="hWb-Kt-Wts" secondAttribute="leadingMargin" id="00e-gO-GCK"/>
                                                 <constraint firstItem="JDa-ea-333" firstAttribute="top" secondItem="hWb-Kt-Wts" secondAttribute="topMargin" constant="5" id="H6U-h5-Q2s"/>
@@ -1176,20 +1141,20 @@ music box on.</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongManageTableViewCell" id="HrJ-Up-7f4" customClass="CMBSongManageTableViewCell">
-                                        <rect key="frame" x="0.0" y="130" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="66" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HrJ-Up-7f4" id="xCL-Sw-Mer">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PX-iC-rE5">
                                                     <rect key="frame" x="8" y="13" width="584" height="20"/>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                    <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="4PX-iC-rE5" firstAttribute="top" secondItem="xCL-Sw-Mer" secondAttribute="topMargin" constant="5" id="8dg-9h-S0j"/>
                                                 <constraint firstItem="4PX-iC-rE5" firstAttribute="leading" secondItem="xCL-Sw-Mer" secondAttribute="leadingMargin" id="WNF-6i-SIF"/>
@@ -1204,13 +1169,13 @@ music box on.</string>
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tvU-8P-UY9" userLabel="Banner Frame View">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="Twa-8V-pGN"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wX0-tD-HS3" firstAttribute="top" secondItem="fQM-uZ-Z0t" secondAttribute="bottom" id="Oyu-hf-fft"/>
                             <constraint firstItem="tvU-8P-UY9" firstAttribute="leading" secondItem="bBo-1m-yQq" secondAttribute="leading" id="YzI-dz-hlh"/>
@@ -1253,16 +1218,16 @@ music box on.</string>
                         <viewControllerLayoutGuide type="bottom" id="4Gr-qm-bEe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5qD-R6-Ts6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yH2-h9-MCJ">
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yH2-h9-MCJ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o82-Eu-ilP">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o82-Eu-ilP">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <color key="backgroundColor" red="0.49803921569999998" green="0.3921568627" blue="0.27450980390000002" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.42046752572059631" green="0.31915783882141113" blue="0.21259576082229614" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="JQM-ti-0HR"/>
                                 </constraints>
@@ -1289,7 +1254,7 @@ music box on.</string>
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yH2-h9-MCJ" firstAttribute="top" secondItem="5qD-R6-Ts6" secondAttribute="top" id="9Rj-TD-nvl"/>
                             <constraint firstAttribute="trailing" secondItem="o82-Eu-ilP" secondAttribute="trailing" id="DSZ-15-ena"/>
@@ -1323,7 +1288,7 @@ music box on.</string>
         <scene sceneID="r4c-gY-lg2">
             <objects>
                 <navigationController id="hXK-bD-TY0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kuK-zQ-VY9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="kuK-zQ-VY9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1344,14 +1309,14 @@ music box on.</string>
                         <viewControllerLayoutGuide type="bottom" id="C76-f1-BiQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kz0-zo-CKX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUt-rL-OHY">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUt-rL-OHY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="496"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6MD-z9-sJb">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="395"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvv-i9-5PE">
                                                 <rect key="frame" x="16" y="8" width="80" height="21"/>
@@ -1360,26 +1325,17 @@ music box on.</string>
                                                     <constraint firstAttribute="height" constant="21" id="pWQ-jD-4FI"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ih3-UP-yhx">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ih3-UP-yhx">
                                                 <rect key="frame" x="16" y="37" width="568" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="l8M-cs-HXU"/>
                                                 </constraints>
-                                                <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                <color key="textColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
-                                                    <rect key="frame" x="16" y="37" width="368" height="30"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                                    <rect key="frame" x="16" y="37" width="368" height="30"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                                    <rect key="frame" x="16" y="37" width="768" height="30"/>
-                                                </variation>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Composer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF5-vK-Njd">
                                                 <rect key="frame" x="16" y="75" width="120" height="21"/>
@@ -1388,26 +1344,17 @@ music box on.</string>
                                                     <constraint firstAttribute="width" constant="120" id="gO2-Dm-XUk"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrO-2w-Ksk">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrO-2w-Ksk">
                                                 <rect key="frame" x="16" y="104" width="568" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="nqu-6c-0ov"/>
                                                 </constraints>
-                                                <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                <color key="textColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
-                                                    <rect key="frame" x="16" y="104" width="368" height="30"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                                    <rect key="frame" x="16" y="104" width="368" height="30"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                                    <rect key="frame" x="16" y="104" width="768" height="30"/>
-                                                </variation>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Speed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw8-Dg-In0">
                                                 <rect key="frame" x="16" y="142" width="80" height="21"/>
@@ -1416,7 +1363,7 @@ music box on.</string>
                                                     <constraint firstAttribute="width" constant="80" id="unf-jL-TlL"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="120" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apQ-aw-88J">
@@ -1426,23 +1373,14 @@ music box on.</string>
                                                     <constraint firstAttribute="width" constant="80" id="x7f-jE-88X"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                                <color key="textColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                                <color key="textColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0x5-ul-Bf8">
+                                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0x5-ul-Bf8">
                                                 <rect key="frame" x="14" y="179" width="572" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="7h8-oo-dF3"/>
                                                 </constraints>
-                                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
-                                                    <rect key="frame" x="14" y="179" width="372" height="31"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                                    <rect key="frame" x="14" y="179" width="372" height="31"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                                    <rect key="frame" x="14" y="179" width="772" height="31"/>
-                                                </variation>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Time guide:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-PQ-DvD">
                                                 <rect key="frame" x="16" y="217" width="120" height="21"/>
@@ -1451,10 +1389,10 @@ music box on.</string>
                                                     <constraint firstAttribute="width" constant="120" id="oal-L6-FJ7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bF1-Hh-rgh">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bF1-Hh-rgh">
                                                 <rect key="frame" x="16" y="246" width="568" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="8rC-jC-XMn"/>
@@ -1469,17 +1407,8 @@ music box on.</string>
                                                     <segment title="8"/>
                                                     <segment title="11"/>
                                                 </segments>
-                                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
-                                                    <rect key="frame" x="16" y="246" width="368" height="29"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                                    <rect key="frame" x="16" y="246" width="368" height="29"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                                    <rect key="frame" x="16" y="246" width="768" height="29"/>
-                                                </variation>
                                             </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="We1-Ap-gzE">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="We1-Ap-gzE">
                                                 <rect key="frame" x="16" y="282" width="568" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="WzE-v6-Ug7"/>
@@ -1494,25 +1423,13 @@ music box on.</string>
                                                     <segment title="8"/>
                                                     <segment title="11"/>
                                                 </segments>
-                                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
-                                                    <rect key="frame" x="16" y="282" width="368" height="29"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                                    <rect key="frame" x="16" y="282" width="368" height="29"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                                    <rect key="frame" x="16" y="282" width="768" height="29"/>
-                                                </variation>
                                             </segmentedControl>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-lZ-Lhc">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-lZ-Lhc">
                                                 <rect key="frame" x="490" y="142" width="94" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="OQs-PK-7bp"/>
                                                     <constraint firstAttribute="width" constant="94" id="fRs-mi-M16"/>
                                                 </constraints>
-                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                                    <rect key="frame" x="690" y="142" width="94" height="29"/>
-                                                </variation>
                                                 <connections>
                                                     <action selector="speedStepperDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="qKK-ZG-nCE"/>
                                                 </connections>
@@ -1536,14 +1453,36 @@ music box on.</string>
                                                     <constraint firstAttribute="width" constant="120" id="bDE-Gd-mCO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
-                                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Instrument" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmQ-tQ-Mam">
+                                                <rect key="frame" x="16" y="383" width="120" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="Hj3-Z2-bmn"/>
+                                                    <constraint firstAttribute="height" constant="21" id="dUB-Yd-RJo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
+                                                <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DS6-g0-ksP">
+                                                <rect key="frame" x="16" y="412" width="240" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="6yf-zL-Trt"/>
+                                                    <constraint firstAttribute="width" constant="240" id="dhm-9U-PHp"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="Music Box"/>
+                                                    <segment title="Marimba"/>
+                                                </segments>
+                                            </segmentedControl>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="qig-Io-RxP" firstAttribute="top" secondItem="We1-Ap-gzE" secondAttribute="bottom" constant="8" id="0c2-0c-B0S"/>
                                             <constraint firstAttribute="trailing" secondItem="k3U-lZ-Lhc" secondAttribute="trailing" constant="16" id="1r8-lc-yRn"/>
+                                            <constraint firstItem="DS6-g0-ksP" firstAttribute="top" secondItem="fmQ-tQ-Mam" secondAttribute="bottom" constant="8" id="2PY-Y4-2mI"/>
                                             <constraint firstItem="apQ-aw-88J" firstAttribute="centerY" secondItem="bw8-Dg-In0" secondAttribute="centerY" id="CY3-Hb-eHW"/>
                                             <constraint firstItem="IcS-PQ-DvD" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="D1N-it-RgO"/>
                                             <constraint firstItem="bF1-Hh-rgh" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="EHs-0b-fLz"/>
@@ -1551,18 +1490,21 @@ music box on.</string>
                                             <constraint firstItem="mvv-i9-5PE" firstAttribute="top" secondItem="6MD-z9-sJb" secondAttribute="top" constant="8" id="KEK-4W-zUP"/>
                                             <constraint firstItem="bw8-Dg-In0" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="O1K-0f-Vq6"/>
                                             <constraint firstItem="bw8-Dg-In0" firstAttribute="top" secondItem="hrO-2w-Ksk" secondAttribute="bottom" constant="8" id="OYE-b5-5Yf"/>
-                                            <constraint firstAttribute="bottom" secondItem="9Pg-Dh-MTZ" secondAttribute="bottom" constant="20" id="Ooz-OV-y1e"/>
                                             <constraint firstAttribute="trailing" secondItem="ih3-UP-yhx" secondAttribute="trailing" constant="16" id="PmT-bE-tdc"/>
+                                            <constraint firstAttribute="bottom" secondItem="DS6-g0-ksP" secondAttribute="bottom" constant="20" id="R6h-79-C56"/>
                                             <constraint firstItem="ih3-UP-yhx" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="Ruq-as-noa"/>
+                                            <constraint firstItem="fmQ-tQ-Mam" firstAttribute="top" secondItem="9Pg-Dh-MTZ" secondAttribute="bottom" constant="8" id="TbA-s1-bcn"/>
                                             <constraint firstItem="apQ-aw-88J" firstAttribute="leading" secondItem="bw8-Dg-In0" secondAttribute="trailing" constant="8" id="Vqi-Hn-imq"/>
                                             <constraint firstItem="qig-Io-RxP" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="W0i-TZ-bbe"/>
                                             <constraint firstItem="0x5-ul-Bf8" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="WNg-lu-qXw"/>
                                             <constraint firstItem="9Pg-Dh-MTZ" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="WiC-ET-pz4"/>
+                                            <constraint firstItem="fmQ-tQ-Mam" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="Wjv-XK-TFI"/>
                                             <constraint firstItem="ih3-UP-yhx" firstAttribute="top" secondItem="mvv-i9-5PE" secondAttribute="bottom" constant="8" id="Yf2-1v-ZEh"/>
                                             <constraint firstAttribute="trailing" secondItem="bF1-Hh-rgh" secondAttribute="trailing" constant="16" id="a18-Xp-Jyj"/>
                                             <constraint firstItem="hrO-2w-Ksk" firstAttribute="top" secondItem="tF5-vK-Njd" secondAttribute="bottom" constant="8" id="cDf-u8-hxJ"/>
                                             <constraint firstItem="mvv-i9-5PE" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="gcK-wg-lY0"/>
                                             <constraint firstItem="k3U-lZ-Lhc" firstAttribute="top" secondItem="hrO-2w-Ksk" secondAttribute="bottom" constant="8" id="hgd-9t-hgN"/>
+                                            <constraint firstItem="DS6-g0-ksP" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="iyP-dL-WD4"/>
                                             <constraint firstItem="tF5-vK-Njd" firstAttribute="top" secondItem="ih3-UP-yhx" secondAttribute="bottom" constant="8" id="lzd-ff-RdC"/>
                                             <constraint firstItem="9Pg-Dh-MTZ" firstAttribute="top" secondItem="qig-Io-RxP" secondAttribute="bottom" constant="8" id="m2y-aI-SBN"/>
                                             <constraint firstItem="bF1-Hh-rgh" firstAttribute="top" secondItem="IcS-PQ-DvD" secondAttribute="bottom" constant="8" id="q6C-td-JHf"/>
@@ -1575,18 +1517,9 @@ music box on.</string>
                                             <constraint firstItem="We1-Ap-gzE" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="z6i-YS-1nV"/>
                                             <constraint firstItem="IcS-PQ-DvD" firstAttribute="top" secondItem="0x5-ul-Bf8" secondAttribute="bottom" constant="8" id="zGz-qr-l7u"/>
                                         </constraints>
-                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="330"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="330"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="800" height="395"/>
-                                        </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="6MD-z9-sJb" secondAttribute="trailing" id="04L-YV-19C"/>
                                     <constraint firstItem="6MD-z9-sJb" firstAttribute="width" secondItem="AUt-rL-OHY" secondAttribute="width" id="Xu0-dj-kEq"/>
@@ -1603,25 +1536,16 @@ music box on.</string>
                                         <exclude reference="y0O-V7-wJo"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="296"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="696"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="800" height="696"/>
-                                </variation>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xO-NP-Jtg">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xO-NP-Jtg">
                                 <rect key="frame" x="16" y="552" width="568" height="40"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.76032161712646484" green="0.91248804330825806" blue="0.42444834113121033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="qCt-SJ-jb8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
                                 <state key="normal" title="Apply">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1633,16 +1557,16 @@ music box on.</string>
                                     <action selector="applyButtonDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="5tS-gL-qiE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-s5-Bsi">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-s5-Bsi">
                                 <rect key="frame" x="16" y="504" width="568" height="40"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.91764705879999997" blue="0.49803921569999998" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.76032161712646484" green="0.91248804330825806" blue="0.42444834113121033" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="AxK-Do-mLr"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="dVL-vL-sMh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
                                 <state key="normal" title="Apply &amp; Save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1655,14 +1579,14 @@ music box on.</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4t2-qD-bMV" userLabel="Banner Frame View">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="I02-vf-5R2"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="0.18823529410000001" green="0.29803921570000003" blue="0.10980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4xO-NP-Jtg" firstAttribute="leading" secondItem="Kz0-zo-CKX" secondAttribute="leading" constant="16" id="4W3-ir-2Qw"/>
                             <constraint firstItem="C76-f1-BiQ" firstAttribute="top" secondItem="AUt-rL-OHY" secondAttribute="bottom" id="7st-bI-itM"/>
@@ -1707,6 +1631,7 @@ music box on.</string>
                         <outlet property="contentView" destination="6MD-z9-sJb" id="EmI-HX-MnM"/>
                         <outlet property="division1Control" destination="bF1-Hh-rgh" id="JgH-Xf-kfS"/>
                         <outlet property="division2Control" destination="We1-Ap-gzE" id="3Xc-pN-Nwe"/>
+                        <outlet property="instrumentControl" destination="DS6-g0-ksP" id="ZjK-cH-TJM"/>
                         <outlet property="nameText" destination="ih3-UP-yhx" id="swY-5k-WpR"/>
                         <outlet property="scaleControl" destination="9Pg-Dh-MTZ" id="yco-lX-u8X"/>
                         <outlet property="scrollView" destination="AUt-rL-OHY" id="fjx-az-6RL"/>
@@ -1717,13 +1642,13 @@ music box on.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwA-x7-gaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2676" y="351"/>
+            <point key="canvasLocation" x="2676" y="350.37481259370315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SKe-Si-nRA">
             <objects>
                 <navigationController id="kGK-1K-za0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kae-vF-Jey">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kae-vF-Jey">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1746,7 +1671,7 @@ music box on.</string>
         <image name="play" width="40" height="40"/>
         <image name="reflesh" width="40" height="40"/>
         <image name="stop" width="40" height="40"/>
-        <image name="uguisu" width="75" height="50"/>
+        <image name="uguisu" width="65" height="43"/>
     </resources>
-    <color key="tintColor" red="0.18823529411764706" green="0.29803921568627451" blue="0.10980392156862745" alpha="1" colorSpace="deviceRGB"/>
+    <color key="tintColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

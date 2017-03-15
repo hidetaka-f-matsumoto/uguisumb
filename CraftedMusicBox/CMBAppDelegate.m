@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 hidetaka.f.matsumoto. All rights reserved.
 //
 
+@import Firebase;
 #import "CMBAppDelegate.h"
 #import "CMBUtility.h"
 #import "CMBSoundManager.h"
@@ -15,7 +16,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    // SoundManagerを生成しておく
+    [FIRApp configure];
+    // Push 通知
+    UIUserNotificationType allNotificationTypes = (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
+    UIUserNotificationSettings *settings =
+    [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    // SoundManager 初期化
     [CMBSoundManager sharedInstance];
     return YES;
 }
@@ -24,6 +32,8 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    // バッジを消す
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
