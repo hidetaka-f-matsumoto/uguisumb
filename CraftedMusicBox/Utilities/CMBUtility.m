@@ -158,6 +158,18 @@ static CMBUtility *_instance = nil;
     return [CMBScales indexOfObject:scale];
 }
 
++ (NSDictionary *)apiSongDataWithSequences:(NSMutableDictionary *)sequences
+                                    header:(CMBSongHeaderData *)header
+{
+    // Song-jsonに変換
+    NSString *songJson = [NSString songJsonWithSequences:sequences
+                                                  header:header];
+    // リクエストパラメータ
+    return @{@"song": @{@"title": header.name.urlEncode,
+                        @"composer": header.composer.urlEncode,
+                        @"json_enc": songJson.encodedSongStr}};
+}
+
 /**
  * Songディレクトリパス取得
  */

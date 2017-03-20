@@ -1242,17 +1242,13 @@
     if (NotReachable == [self checkNetworkStatus]) {
         return;
     }
-    // Song-jsonに変換
-    NSString *songJson = [NSString songJsonWithSequences:_sequences
-                                                  header:_header];
     // リクエストパラメータ
-    NSDictionary *params = @{CMBSvQuerySong: songJson.encodedSongStr,
-                             CMBSvQuerySongTitle: _header.name.urlEncode,
-                             CMBSvQuerySongComposer: _header.composer.urlEncode};
+    NSDictionary *params = [CMBUtility apiSongDataWithSequences:_sequences
+                                                         header:_header];
     // 通信
     [self apiSongRegisterWithParams:params completion:^(NSDictionary *dict) {
         // song URL
-        NSString *songUrl = dict[@"songinfo"][@"url"];
+        NSString *songUrl = dict[@"url"];
         // メール送信画面を表示
         MFMailComposeViewController *mailPicker = [MFMailComposeViewController new];
         mailPicker.mailComposeDelegate = self;
@@ -1301,17 +1297,13 @@
     if (NotReachable == [self checkNetworkStatus]) {
         return;
     }
-    // Song-jsonに変換
-    NSString *songJson = [NSString songJsonWithSequences:_sequences
-                                                  header:_header];
     // リクエストパラメータ
-    NSDictionary *params = @{CMBSvQuerySong: songJson.encodedSongStr,
-                             CMBSvQuerySongTitle: _header.name.urlEncode,
-                             CMBSvQuerySongComposer: _header.composer.urlEncode};
+    NSDictionary *params = [CMBUtility apiSongDataWithSequences:_sequences
+                                                         header:_header];
     // 通信
     [self apiSongRegisterWithParams:params completion:^(NSDictionary *dict) {
         // song URL
-        NSString *songUrl = dict[@"songinfo"][@"url"];
+        NSString *songUrl = dict[@"url"];
         NSString *message = [NSString stringWithFormat:@"%@\n%@", NSLocalizedString(@"This is my music box.", @"The message when you send the song."), songUrl];
         // LINE URLを作成
         NSString *lineUrl = [@"http://line.me/R/msg/text/?" stringByAppendingString:message.urlEncode];
@@ -1337,17 +1329,13 @@
     if (NotReachable == [self checkNetworkStatus]) {
         return;
     }
-    // Song-jsonに変換
-    NSString *songJson = [NSString songJsonWithSequences:_sequences
-                                                  header:_header];
     // リクエストパラメータ
-    NSDictionary *params = @{CMBSvQuerySong: songJson.encodedSongStr,
-                             CMBSvQuerySongTitle: _header.name.urlEncode,
-                             CMBSvQuerySongComposer: _header.composer.urlEncode};
+    NSDictionary *params = [CMBUtility apiSongDataWithSequences:_sequences
+                                                         header:_header];
     // 通信
     [self apiSongRegisterWithParams:params completion:^(NSDictionary *dict) {
         // song URL
-        NSString *songUrl = dict[@"songinfo"][@"url"];
+        NSString *songUrl = dict[@"url"];
         NSString *message = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"This is my music box.", @"The message when you send the song."), CMBHashTag];
         // 投稿
         SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
@@ -1375,17 +1363,13 @@
     if (NotReachable == [self checkNetworkStatus]) {
         return;
     }
-    // Song-jsonに変換
-    NSString *songJson = [NSString songJsonWithSequences:_sequences
-                                                  header:_header];
     // リクエストパラメータ
-    NSDictionary *params = @{CMBSvQuerySong: songJson.encodedSongStr,
-                             CMBSvQuerySongTitle: _header.name.urlEncode,
-                             CMBSvQuerySongComposer: _header.composer.urlEncode};
+    NSDictionary *params = [CMBUtility apiSongDataWithSequences:_sequences
+                                                         header:_header];
     // 通信
     [self apiSongRegisterWithParams:params completion:^(NSDictionary *dict) {
         // song URL
-        NSString *songUrl = dict[@"songinfo"][@"url"];
+        NSString *songUrl = dict[@"url"];
         NSString *message = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"This is my music box.", @"The message when you send the song."), CMBHashTag];
         // 投稿
         SLComposeViewController *vc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
@@ -1404,27 +1388,34 @@
                        completion:(void (^)(NSDictionary *response))handler
 {
     // リクエスト作成
-    NSString *url = [NSString stringWithFormat:@"%@%@", CMBSvApiURL, CMBSvActionSongReg];
+    NSString *url = [NSString stringWithFormat:@"%@%@", CMBSvURL, CMBSvApiSong];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
-    request.HTTPMethod = @"POST";
+    [request setHTTPMethod:@"POST"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
     NSError *error = nil;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:params options:kNilOptions error:nil];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:params options:kNilOptions error:&error];
     if (error) {
+        // エラー表示
+        [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
+                               message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
+                               handler:nil];
         return;
     }
+    [request setHTTPBody:data];
     // セッション作成
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
     // タスク作成
-    NSURLSessionDataTask *task = [session uploadTaskWithRequest:request fromData:data completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        // 通信エラー
-        if (error) {
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        // サーバエラー
+        if (error || ((NSHTTPURLResponse *)response).statusCode >= 400) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 通信中表示off
                 [self loadingEndWithNetwork:YES];
                 // エラー表示
                 [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
-                                       message:NSLocalizedString(@"Failed to share the song.", @"The message when you failed to share the song.")
+                                       message:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]
                                        handler:nil];
             });
             return;
@@ -1445,18 +1436,6 @@
             return;
         }
         DPRINT(@"%@", dict);
-        // サーバエラー
-        if (200 != [dict[@"result"][@"status"] integerValue]) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // 通信中表示off
-                [self loadingEndWithNetwork:YES];
-                // エラー表示
-                [self showAlertDialogWithTitle:NSLocalizedString(@"Server", @"Server")
-                                       message:dict[@"result"][@"message"]
-                                       handler:nil];
-            });
-            return;
-        }
         // 正常処理
         dispatch_async(dispatch_get_main_queue(), ^{
             // 通信中表示off

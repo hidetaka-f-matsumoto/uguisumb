@@ -34,6 +34,9 @@
 + (NSString *)scaleWithIndex:(NSInteger)index;
 + (NSInteger)indexWithScale:(NSString *)scale;
 
++ (NSDictionary *)apiSongDataWithSequences:(NSMutableDictionary *)sequences
+                                    header:(CMBSongHeaderData *)header;
+
 - (NSString *)getSongDirPath;
 - (NSString *)getSongPathWithFileName:(NSString *)fileName;
 - (NSMutableArray *)getSongInfos;
