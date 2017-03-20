@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OGI-JR-xGh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OGI-JR-xGh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1435,9 +1435,9 @@ music box on.</string>
                                                 </connections>
                                             </stepper>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9Pg-Dh-MTZ">
-                                                <rect key="frame" x="16" y="347" width="240" height="29"/>
+                                                <rect key="frame" x="16" y="347" width="280" height="29"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="240" id="ct9-yu-Ra5"/>
+                                                    <constraint firstAttribute="width" constant="280" id="ct9-yu-Ra5"/>
                                                     <constraint firstAttribute="height" constant="28" id="oTH-Xl-Bgq"/>
                                                 </constraints>
                                                 <segments>
@@ -1467,14 +1467,15 @@ music box on.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DS6-g0-ksP">
-                                                <rect key="frame" x="16" y="412" width="240" height="29"/>
+                                                <rect key="frame" x="16" y="412" width="280" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="6yf-zL-Trt"/>
-                                                    <constraint firstAttribute="width" constant="240" id="dhm-9U-PHp"/>
+                                                    <constraint firstAttribute="width" constant="280" id="dhm-9U-PHp"/>
                                                 </constraints>
                                                 <segments>
                                                     <segment title="Music Box"/>
                                                     <segment title="Marimba"/>
+                                                    <segment title="Vibraphone"/>
                                                 </segments>
                                             </segmentedControl>
                                         </subviews>

@@ -43,6 +43,9 @@
 /* Class = "IBUISegmentedControl"; DS6-g0-ksP.segmentTitles[1] = "Marimba"; ObjectID = "DS6-g0-ksP"; */
 "DS6-g0-ksP.segmentTitles[1]" = "マリンバ";
 
+/* Class = "IBUISegmentedControl"; DS6-g0-ksP.segmentTitles[2] = "Vibraphone"; ObjectID = "DS6-g0-ksP"; */
+"DS6-g0-ksP.segmentTitles[2]" = "ビブラフォン";
+
 /* Class = "IBUINavigationItem"; title = "Song Config"; ObjectID = "IkL-fO-Kbl"; */
 "IkL-fO-Kbl.title" = "曲の設定";
 
