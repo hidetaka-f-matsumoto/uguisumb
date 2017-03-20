@@ -1243,8 +1243,8 @@
         return;
     }
     // リクエストパラメータ
-    NSDictionary *params = [CMBUtility apiSongDataWithSequences:_sequences
-                                                         header:_header];
+    NSDictionary *params = @{@"song": [CMBUtility apiSongDataWithSequences:_sequences
+                                                                    header:_header]};
     // 通信
     [self apiSongRegisterWithParams:params completion:^(NSDictionary *dict) {
         // song URL
@@ -1298,8 +1298,8 @@
         return;
     }
     // リクエストパラメータ
-    NSDictionary *params = [CMBUtility apiSongDataWithSequences:_sequences
-                                                         header:_header];
+    NSDictionary *params = @{@"song": [CMBUtility apiSongDataWithSequences:_sequences
+                                                                    header:_header]};
     // 通信
     [self apiSongRegisterWithParams:params completion:^(NSDictionary *dict) {
         // song URL
@@ -1330,8 +1330,8 @@
         return;
     }
     // リクエストパラメータ
-    NSDictionary *params = [CMBUtility apiSongDataWithSequences:_sequences
-                                                         header:_header];
+    NSDictionary *params = @{@"song": [CMBUtility apiSongDataWithSequences:_sequences
+                                                                    header:_header]};
     // 通信
     [self apiSongRegisterWithParams:params completion:^(NSDictionary *dict) {
         // song URL
@@ -1364,8 +1364,8 @@
         return;
     }
     // リクエストパラメータ
-    NSDictionary *params = [CMBUtility apiSongDataWithSequences:_sequences
-                                                         header:_header];
+    NSDictionary *params = @{@"song": [CMBUtility apiSongDataWithSequences:_sequences
+                                                                    header:_header]};
     // 通信
     [self apiSongRegisterWithParams:params completion:^(NSDictionary *dict) {
         // song URL
