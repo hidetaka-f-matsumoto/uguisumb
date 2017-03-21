@@ -165,8 +165,8 @@ static CMBUtility *_instance = nil;
     NSString *songJson = [NSString songJsonWithSequences:sequences
                                                   header:header];
     // リクエストパラメータ
-    return @{@"title": header.name.urlEncode,
-             @"composer": header.composer.urlEncode,
+    return @{@"title": header.name,
+             @"composer": header.composer,
              @"json_enc": songJson.encodedSongStr};
 }
 
