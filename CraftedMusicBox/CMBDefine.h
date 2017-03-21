@@ -28,7 +28,6 @@ static NSString * const CMBURLParamSong = @"song";
 /**
  * Server
  */
-static NSString * const CMBSvSupportURL = @"http://fisherman.hatenablog.com/entry/2015/02/05/001739";
 #ifdef DEBUG
 static NSString * const CMBSvURL = @"https://uguisumb-dev.herokuapp.com";
 #else

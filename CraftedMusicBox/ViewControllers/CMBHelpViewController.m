@@ -21,7 +21,7 @@
     _webView.delegate = self;
     _webView.scalesPageToFit = NO;
     
-    NSURL *url = [NSURL URLWithString:CMBSvSupportURL];
+    NSURL *url = [NSURL URLWithString:CMBSvURL];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:req];
     // ロード中表示

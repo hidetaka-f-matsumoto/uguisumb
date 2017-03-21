@@ -496,7 +496,7 @@
         [self showConfirmDialogWithTitle:title
                                  message:message
                                  handler:^(UIAlertAction *action) {
-                                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:CMBSvSupportURL]];
+                                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:CMBSvURL]];
                                  }];
     }
 }
