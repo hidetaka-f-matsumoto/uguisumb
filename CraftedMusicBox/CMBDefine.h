@@ -92,7 +92,7 @@ static NSString * const CMBSoundVibraphone = @"Vibraphone";
 static NSString * const CMBSoundMarimba = @"Marimba";
 
 #define CMBSoundDefault CMBSoundMusicbox
-#define CMBInstruments @[CMBSoundMusicbox, CMBSoundMarimba]
+#define CMBInstruments @[CMBSoundMusicbox, CMBSoundMarimba, CMBSoundVibraphone]
 
 /**
  * Image resource
