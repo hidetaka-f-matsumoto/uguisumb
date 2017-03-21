@@ -65,7 +65,7 @@ octave up</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-e8-u6Q">
-                                                    <rect key="frame" x="8" y="135.5" width="584" height="44"/>
+                                                    <rect key="frame" x="8" y="136" width="584" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="Ugz-uo-MPy"/>
                                                         <constraint firstAttribute="height" constant="44" id="d44-eM-aAa"/>
@@ -121,7 +121,7 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqy-G6-pwu">
-                                                    <rect key="frame" x="55.5" y="0.0" width="24" height="43"/>
+                                                    <rect key="frame" x="56" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="pW9-KA-Xp1"/>
@@ -135,7 +135,7 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3M-MI-GQp">
-                                                    <rect key="frame" x="107.5" y="0.0" width="24" height="43"/>
+                                                    <rect key="frame" x="108" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="jGP-gg-QS4"/>
@@ -163,7 +163,7 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fW9-kO-2Be">
-                                                    <rect key="frame" x="210.5" y="0.0" width="24" height="43"/>
+                                                    <rect key="frame" x="211" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="VFz-f4-77T"/>
@@ -205,7 +205,7 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWa-f9-03L">
-                                                    <rect key="frame" x="365.5" y="0.0" width="24" height="43"/>
+                                                    <rect key="frame" x="366" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="y4J-fS-LNc"/>
@@ -233,7 +233,7 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulF-6M-s2H">
-                                                    <rect key="frame" x="468.5" y="0.0" width="24" height="43"/>
+                                                    <rect key="frame" x="469" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="Juc-pO-EAM"/>
@@ -247,7 +247,7 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gq7-xi-gh4">
-                                                    <rect key="frame" x="520.5" y="0.0" width="24" height="43"/>
+                                                    <rect key="frame" x="521" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="Fgj-HW-7Sb"/>
@@ -275,7 +275,7 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zg2-P3-VP7">
-                                                    <rect key="frame" x="28" y="17" width="27.5" height="10"/>
+                                                    <rect key="frame" x="28" y="17" width="28" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="Gf6-FV-QSl"/>
@@ -289,21 +289,21 @@ music box on.</string>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBz-gc-W8a">
-                                                    <rect key="frame" x="131.5" y="17" width="27.5" height="10"/>
+                                                    <rect key="frame" x="132" y="17" width="27" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="KFG-hx-fKR"/>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-90-hsW">
-                                                    <rect key="frame" x="183" y="17" width="27.5" height="10"/>
+                                                    <rect key="frame" x="183" y="17" width="28" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="4Yk-3G-Kk9"/>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8FJ-ww-qfW">
-                                                    <rect key="frame" x="234.5" y="17" width="27.5" height="10"/>
+                                                    <rect key="frame" x="235" y="17" width="27" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="rFO-7K-JUj"/>
@@ -317,21 +317,21 @@ music box on.</string>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-bn-YCD">
-                                                    <rect key="frame" x="338" y="17" width="27.5" height="10"/>
+                                                    <rect key="frame" x="338" y="17" width="28" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="5U9-dX-wQp"/>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PU0-ak-hFq">
-                                                    <rect key="frame" x="389.5" y="17" width="27.5" height="10"/>
+                                                    <rect key="frame" x="390" y="17" width="27" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="oxM-2v-hEw"/>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFk-Z9-nRW">
-                                                    <rect key="frame" x="441" y="17" width="27.5" height="10"/>
+                                                    <rect key="frame" x="441" y="17" width="28" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="RFI-TW-jE2"/>
@@ -345,7 +345,7 @@ music box on.</string>
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whT-8x-05c">
-                                                    <rect key="frame" x="544.5" y="17" width="27.5" height="10"/>
+                                                    <rect key="frame" x="545" y="17" width="27" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="lFG-6U-TZz"/>
@@ -1089,7 +1089,7 @@ music box on.</string>
         <scene sceneID="bgf-5n-cDM">
             <objects>
                 <navigationController id="N8n-7A-X4L" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Sef-0E-Abj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sef-0E-Abj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1288,7 +1288,7 @@ music box on.</string>
         <scene sceneID="r4c-gY-lg2">
             <objects>
                 <navigationController id="hXK-bD-TY0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="kuK-zQ-VY9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kuK-zQ-VY9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1434,10 +1434,9 @@ music box on.</string>
                                                     <action selector="speedStepperDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="qKK-ZG-nCE"/>
                                                 </connections>
                                             </stepper>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9Pg-Dh-MTZ">
-                                                <rect key="frame" x="16" y="347" width="280" height="29"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9Pg-Dh-MTZ">
+                                                <rect key="frame" x="16" y="347" width="568" height="29"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="280" id="ct9-yu-Ra5"/>
                                                     <constraint firstAttribute="height" constant="28" id="oTH-Xl-Bgq"/>
                                                 </constraints>
                                                 <segments>
@@ -1466,11 +1465,10 @@ music box on.</string>
                                                 <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DS6-g0-ksP">
-                                                <rect key="frame" x="16" y="412" width="280" height="29"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DS6-g0-ksP">
+                                                <rect key="frame" x="16" y="412" width="568" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="6yf-zL-Trt"/>
-                                                    <constraint firstAttribute="width" constant="280" id="dhm-9U-PHp"/>
                                                 </constraints>
                                                 <segments>
                                                     <segment title="Music Box"/>
@@ -1489,8 +1487,10 @@ music box on.</string>
                                             <constraint firstItem="bF1-Hh-rgh" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="EHs-0b-fLz"/>
                                             <constraint firstItem="tF5-vK-Njd" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="GO0-cS-eUk"/>
                                             <constraint firstItem="mvv-i9-5PE" firstAttribute="top" secondItem="6MD-z9-sJb" secondAttribute="top" constant="8" id="KEK-4W-zUP"/>
+                                            <constraint firstAttribute="trailing" secondItem="DS6-g0-ksP" secondAttribute="trailing" constant="16" id="M4S-CQ-WGi"/>
                                             <constraint firstItem="bw8-Dg-In0" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="O1K-0f-Vq6"/>
                                             <constraint firstItem="bw8-Dg-In0" firstAttribute="top" secondItem="hrO-2w-Ksk" secondAttribute="bottom" constant="8" id="OYE-b5-5Yf"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Pg-Dh-MTZ" secondAttribute="trailing" constant="16" id="OzS-7k-eCY"/>
                                             <constraint firstAttribute="trailing" secondItem="ih3-UP-yhx" secondAttribute="trailing" constant="16" id="PmT-bE-tdc"/>
                                             <constraint firstAttribute="bottom" secondItem="DS6-g0-ksP" secondAttribute="bottom" constant="20" id="R6h-79-C56"/>
                                             <constraint firstItem="ih3-UP-yhx" firstAttribute="leading" secondItem="6MD-z9-sJb" secondAttribute="leading" constant="16" id="Ruq-as-noa"/>
@@ -1649,7 +1649,7 @@ music box on.</string>
         <scene sceneID="SKe-Si-nRA">
             <objects>
                 <navigationController id="kGK-1K-za0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kae-vF-Jey">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kae-vF-Jey">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
