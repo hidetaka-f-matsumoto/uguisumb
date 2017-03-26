@@ -23,7 +23,7 @@
 #import "CMBUtility.h"
 #import "CMBSoundManager.h"
 
-static CGFloat const CMBTimeDivAutoScroll = 0.02f; // [s]
+static CGFloat const CMBTimeDivAutoScroll = 0.01f; // [s]
 
 @interface CMBMusicBoxViewController : CMBBaseViewController
 <
