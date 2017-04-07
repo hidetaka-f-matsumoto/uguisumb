@@ -33,6 +33,7 @@ static NSString * const CMBSvURL = @"https://uguisumb-dev.herokuapp.com";
 #else
 static NSString * const CMBSvURL = @"https://uguisumb.herokuapp.com";
 #endif
+static NSString * const CMBSvApiSecret = @"JDVjhLA8";
 static NSString * const CMBSvApiSong = @"/api/v2/songs";
 
 /**

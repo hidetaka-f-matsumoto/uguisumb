@@ -1393,6 +1393,7 @@
     [request setHTTPMethod:@"POST"];
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request addValue:CMBSvApiSecret forHTTPHeaderField:@"X-Uguisumb-Secret"];
     NSError *error = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:params options:kNilOptions error:&error];
     if (error) {
