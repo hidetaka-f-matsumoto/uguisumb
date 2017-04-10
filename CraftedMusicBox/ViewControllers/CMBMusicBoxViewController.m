@@ -11,6 +11,7 @@
 #import "CMBMusicBoxViewController.h"
 #import "UIColor+CMBTools.h"
 #import "NSString+CMBTools.h"
+#import "UIDevice+CMBTools.h"
 #import "CMBAnimations.h"
 
 @interface CMBMusicBoxViewController ()
@@ -482,7 +483,7 @@
 - (void)helpButtonDidTap
 {
     // iOS9 より前
-    if (9.f >[[UIDevice currentDevice] systemVersion].floatValue) {
+    if (9.f > [[UIDevice currentDevice] systemVersion].floatValue) {
         // Help画面へ
         [self performSegueWithIdentifier:@"Help"
                                   sender:self];
@@ -1393,8 +1394,13 @@
     [request setHTTPMethod:@"POST"];
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request addValue:@"gzip, deflate" forHTTPHeaderField:@"Accept-Encoding"];
+    [request addValue:[[NSLocale currentLocale] objectForKey:NSLocaleIdentifier] forHTTPHeaderField:@"Accept-Language"];
+    [request addValue:[NSString stringWithFormat:@"uguisumb/%@; iOS/%@; device/%@;",
+                       [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"],
+                       [[UIDevice currentDevice] systemVersion],
+                       [UIDevice modelName]] forHTTPHeaderField:@"User-Agent"];
     [request addValue:CMBSvApiSecret forHTTPHeaderField:@"X-Uguisumb-Secret"];
-    [request addValue:[[NSLocale currentLocale] objectForKey:NSLocaleIdentifier] forHTTPHeaderField:@"X-Uguisumb-Locale"];
     NSError *error = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:params options:kNilOptions error:&error];
     if (error) {
