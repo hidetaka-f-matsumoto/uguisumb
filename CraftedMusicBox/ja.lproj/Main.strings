@@ -134,7 +134,7 @@
 "bF1-Hh-rgh.segmentTitles[7]" = "11";
 
 /* Class = "IBUILabel"; text = "Speed:"; ObjectID = "bw8-Dg-In0"; */
-"bw8-Dg-In0.text" = "スピード:";
+"bw8-Dg-In0.text" = "速さ:";
 
 /* Class = "IBUILabel"; text = "C#"; ObjectID = "fcC-a7-4su"; */
 "fcC-a7-4su.text" = "C#";
