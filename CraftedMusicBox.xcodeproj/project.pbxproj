@@ -11,6 +11,7 @@
 		0409BA541BE8C27F0034FDBE /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0409BA531BE8C27F0034FDBE /* GoogleMobileAds.framework */; };
 		040A2354FD9D89CED7307646 /* libPods-CraftedMusicBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6C5188208BD2BBED8B5855 /* libPods-CraftedMusicBox.a */; };
 		042AB2D41A6F30EC0050BC92 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2D31A6F30EC0050BC92 /* Social.framework */; };
+		04531C331E9BBE36005CDA8A /* UIDevice+CMBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 04531C321E9BBE36005CDA8A /* UIDevice+CMBTools.m */; };
 		0477B0F91E0FF48600F72F4F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0477B0F81E0FF48600F72F4F /* GoogleService-Info.plist */; };
 		0477B0FA1E0FF48600F72F4F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0477B0F81E0FF48600F72F4F /* GoogleService-Info.plist */; };
 		04DFEF221E1768EC007483B3 /* Marimba.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 04DFEF201E1768EC007483B3 /* Marimba.aupreset */; };
@@ -88,6 +89,8 @@
 		040118721BF6D2F3008F2B6E /* CMBSoundManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBSoundManagerTests.m; sourceTree = "<group>"; };
 		0409BA531BE8C27F0034FDBE /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.5.2/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		042AB2D31A6F30EC0050BC92 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		04531C311E9BBE36005CDA8A /* UIDevice+CMBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+CMBTools.h"; path = "Utilities/UIDevice+CMBTools.h"; sourceTree = "<group>"; };
+		04531C321E9BBE36005CDA8A /* UIDevice+CMBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+CMBTools.m"; path = "Utilities/UIDevice+CMBTools.m"; sourceTree = "<group>"; };
 		0477B0F81E0FF48600F72F4F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04DFEF201E1768EC007483B3 /* Marimba.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Marimba.aupreset; sourceTree = "<group>"; };
 		04DFEF211E1768EC007483B3 /* Vibraphone.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Vibraphone.aupreset; sourceTree = "<group>"; };
@@ -390,6 +393,8 @@
 				08CC5E6B19E14FF90049AAD5 /* NSURL+CMBTools.m */,
 				04FCD3EB1B79F639006E71E1 /* CMBAnimations.h */,
 				04FCD3EC1B79F639006E71E1 /* CMBAnimations.m */,
+				04531C311E9BBE36005CDA8A /* UIDevice+CMBTools.h */,
+				04531C321E9BBE36005CDA8A /* UIDevice+CMBTools.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -681,6 +686,7 @@
 				08A769D71972992900143638 /* CMBMusicBoxTableViewCell.m in Sources */,
 				086BA16C19D19F5700991574 /* NSMutableDictionary+CMBTools.m in Sources */,
 				08A769DE1972C93000143638 /* CMBUtility.m in Sources */,
+				04531C331E9BBE36005CDA8A /* UIDevice+CMBTools.m in Sources */,
 				0821D7F91A4FA75E0040EF9F /* CMBMusicBoxTableViewFootCell.m in Sources */,
 				08883B1C1956D40600F7EB68 /* NSString+CMBTools.m in Sources */,
 				0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */,

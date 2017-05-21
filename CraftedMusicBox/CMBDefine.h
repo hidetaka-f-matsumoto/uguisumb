@@ -28,15 +28,13 @@ static NSString * const CMBURLParamSong = @"song";
 /**
  * Server
  */
-static NSString * const CMBSvSupportURL = @"http://fisherman.hatenablog.com/entry/2015/02/05/001739";
-static NSString * const CMBSvApiURL = @"https://uguisumb.herokuapp.com/api/";
-static NSString * const CMBSvViewURL = @"https://uguisumb.herokuapp.com/html/";
-static NSString * const CMBSvActionSongReg = @"song.register.php";
-static NSString * const CMBSvActionSongLink = @"song.link.php";
-static NSString * const CMBSvQuerySong = @"song";
-static NSString * const CMBSvQuerySongKey = @"key";
-static NSString * const CMBSvQuerySongTitle = @"title";
-static NSString * const CMBSvQuerySongComposer = @"composer";
+#ifdef DEBUG
+static NSString * const CMBSvURL = @"https://uguisumb-dev.herokuapp.com";
+#else
+static NSString * const CMBSvURL = @"https://uguisumb.herokuapp.com";
+#endif
+static NSString * const CMBSvApiSecret = @"JDVjhLA8";
+static NSString * const CMBSvApiSong = @"/api/v2/songs";
 
 /**
  * SNS
@@ -48,7 +46,7 @@ static NSString * const CMBHashTag = @"#UguisuMB";
  */
 static CGFloat const CMBSpeedDefault = 50.0f;
 static CGFloat const CMBSpeedMin = 1.0f;
-static CGFloat const CMBSpeedMax = 200.0f;
+static CGFloat const CMBSpeedMax = 320.0f;
 static NSInteger const CMBDivisionDefault = 4;
 #define CMBDivisions @[@2, @3, @4, @5, @6, @7, @8, @11]
 static NSInteger const CMBOctaveMin = 2;
@@ -94,7 +92,7 @@ static NSString * const CMBSoundVibraphone = @"Vibraphone";
 static NSString * const CMBSoundMarimba = @"Marimba";
 
 #define CMBSoundDefault CMBSoundMusicbox
-#define CMBInstruments @[CMBSoundMusicbox, CMBSoundMarimba]
+#define CMBInstruments @[CMBSoundMusicbox, CMBSoundMarimba, CMBSoundVibraphone]
 
 /**
  * Image resource
