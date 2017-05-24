@@ -11,5 +11,8 @@
 @interface CMBMusicBoxTableView : UITableView
 
 @property (nonatomic, setter=setLayoutSize:) CGSize layoutSize;
+@property (nonatomic, getter=getContentOffset, setter=setContentOffset:) CGPoint contentOffset;
+
+- (void)setContentOffset:(CGPoint)contentOffset animated:(BOOL)animated;
 
 @end
