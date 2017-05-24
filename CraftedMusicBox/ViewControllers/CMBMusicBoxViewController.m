@@ -694,7 +694,6 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     CALayer *layer = [anim valueForKey:@"animationLayer"];
     if (flag) {
-//        DPRINT(@"アニメーション完了");
         [layer removeFromSuperlayer];
     }
 }
