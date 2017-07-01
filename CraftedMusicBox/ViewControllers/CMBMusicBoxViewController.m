@@ -232,7 +232,7 @@
     // 下にスクロールしている場合
     if (0.f < _tableView.contentOffset.y) {
         // 上までスクロールする
-        [_tableView setContentOffset:CGPointMake(0.0f, 0.0f) animated:animation];
+        [_tableView setContentOffset:CGPointZero animated:animation];
         // ヘッダViewを表示
         [self showHeadView];
         // スクロール許可
@@ -548,7 +548,7 @@
 {
     if (resetScroll) {
         // スクロール初期位置
-        _tableView.contentOffset = CGPointMake(0, 0);
+        _tableView.contentOffset = CGPointZero;
     }
     // ヘッダビュー更新
     [self updateHeadView];
@@ -596,7 +596,7 @@
 - (void)scrollAuto:(NSTimer*)timer
 {
     CGPoint offset = _tableView.contentOffset;
-    offset.y += (CMBMusicBoxTableViewCellHeight * _header.speed.floatValue * 4 * CMBTimeDivAutoScroll / 60.0f);
+    offset.y += (CMBMusicBoxTableViewCellHeight * _header.speed.floatValue * 4.f * CMBTimeDivAutoScroll / 60.f);
     // 曲中
     if (offset.y < (_tableView.contentSize.height - _tableView.bounds.size.height)) {
         _tableView.contentOffset = offset;
@@ -694,7 +694,6 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     CALayer *layer = [anim valueForKey:@"animationLayer"];
     if (flag) {
-        DPRINT(@"アニメーション完了");
         [layer removeFromSuperlayer];
     }
 }
@@ -910,7 +909,6 @@
     if([indexPath row] == ((NSIndexPath*)[[tableView indexPathsForVisibleRows] lastObject]).row){
         //end of loading
         //for example [activityIndicator stopAnimating];
-        DPRINT(@"hogeeeeeee");
     }
 }
 
@@ -1443,7 +1441,7 @@
             });
             return;
         }
-        DPRINT(@"%@", dict);
+//        DPRINT(@"%@", dict);
         // 正常処理
         dispatch_async(dispatch_get_main_queue(), ^{
             // 通信中表示off

@@ -46,7 +46,7 @@
     // 初回起動の場合
     if ([[CMBUtility sharedInstance] checkFirstRunCurrentVersion]) {
         NSString *title = NSLocalizedString(@"What's New", @"What's New");
-        NSString *message = NSLocalizedString(@"New feature information ver.1.4.0.", @"New feature information.");
+        NSString *message = NSLocalizedString(@"New feature information ver.1.4.1.", @"New feature information.");
         [self showAlertDialogWithTitle:title message:message handler:nil];
     }
 }

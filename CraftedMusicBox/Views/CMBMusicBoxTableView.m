@@ -8,6 +8,12 @@
 
 #import "CMBMusicBoxTableView.h"
 
+@interface CMBMusicBoxTableView ()
+{
+    CGPoint _preciseContentOffset;
+}
+@end
+
 @implementation CMBMusicBoxTableView
 
 /*
@@ -24,6 +30,23 @@
     _layoutSize = layoutSize;
     // intrinsicContentSizeが変わったことをAuto Layoutに知らせる
     [self invalidateIntrinsicContentSize];
+}
+
+- (CGPoint)getContentOffset
+{
+    return _preciseContentOffset;
+}
+
+- (void)setContentOffset:(CGPoint)contentOffset
+{
+    _preciseContentOffset = contentOffset;
+    super.contentOffset = contentOffset;
+}
+
+- (void)setContentOffset:(CGPoint)contentOffset animated:(BOOL)animated
+{
+    _preciseContentOffset = contentOffset;
+    [super setContentOffset:contentOffset animated:animated];
 }
 
 - (CGSize)intrinsicContentSize
