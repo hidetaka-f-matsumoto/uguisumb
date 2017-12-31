@@ -159,44 +159,6 @@
                      completion:nil];
 }
 
-#pragma mark - UIAlertViewDelegate like
-
-- (void)willPresentAlertView:(UIAlertView *)alertView
-{
-    UILabel *title = [alertView valueForKey:@"_titleLabel"];
-    title.font = [UIFont fontWithName:@"SetoFont-SP" size:19];
-    [title setTextColor:[UIColor whiteColor]];
-     
-    UILabel *body = [alertView valueForKey:@"_bodyTextLabel"];
-    body.font = [UIFont fontWithName:@"SetoFont-SP" size:17];
-    [body setTextColor:[UIColor whiteColor]];
-}
-
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-}
-
-#pragma mark - UIActionSheetDelegate like
-
-- (void)willPresentActionSheet:(UIActionSheet *)actionSheet
-{
-    for (UIView *v in actionSheet.subviews) {
-        if ([v isKindOfClass:[UILabel class]]) {
-            UILabel *l = (UILabel *)v;
-            l.font = [UIFont fontWithName:@"SetoFont-SP" size:17.f];
-        }
-        if ([v isKindOfClass:[UIButton class]]) {
-            UIButton *b = (UIButton *)v;
-            b.titleLabel.font = [UIFont fontWithName:@"SetoFont-SP" size:19.f];
-            [b setTitleColor:[CMBUtility tintColor] forState:UIControlStateNormal];
-        }
-    }
-}
-
-- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-}
-
 #pragma mark - Ad
 
 - (void)showAd
