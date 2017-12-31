@@ -33,7 +33,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewHeadCell" rowHeight="184" id="IC7-gS-MAh" customClass="CMBMusicBoxTableViewHeadCell">
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewHeadCell" rowHeight="184" id="IC7-gS-MAh" customClass="CMBMusicBoxTableViewHeadCell">
                                         <rect key="frame" x="0.0" y="22" width="600" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IC7-gS-MAh" id="WI0-ID-h8r">
@@ -53,7 +53,7 @@ octave down</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="87A-Md-34a" userLabel="Swipe &gt;&gt;&gt; octave up">
-                                                    <rect key="frame" x="472" y="88" width="120" height="44"/>
+                                                    <rect key="frame" x="79" y="88" width="120" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="5Cx-FK-CIh"/>
                                                         <constraint firstAttribute="height" constant="44" id="i6m-LW-5P5"/>
@@ -65,7 +65,7 @@ octave up</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-e8-u6Q">
-                                                    <rect key="frame" x="8" y="136" width="584" height="44"/>
+                                                    <rect key="frame" x="8" y="136" width="191" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="Ugz-uo-MPy"/>
                                                         <constraint firstAttribute="height" constant="44" id="d44-eM-aAa"/>
@@ -99,14 +99,14 @@ music box on.</string>
                                             <outlet property="octUpLabel" destination="87A-Md-34a" id="LGb-pQ-86R"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewCell" id="eat-gf-db6" customClass="CMBMusicBoxTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewCell" id="eat-gf-db6" customClass="CMBMusicBoxTableViewCell">
                                         <rect key="frame" x="0.0" y="206" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eat-gf-db6" id="jCb-TV-DH6">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="eat-gf-db6" id="jCb-TV-DH6">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbx-Gh-5um">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbx-Gh-5um">
                                                     <rect key="frame" x="4" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -120,8 +120,8 @@ music box on.</string>
                                                         <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="OwM-5l-qqP"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqy-G6-pwu">
-                                                    <rect key="frame" x="55.666666666666657" y="0.0" width="24" height="43"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqy-G6-pwu">
+                                                    <rect key="frame" x="91.5" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="pW9-KA-Xp1"/>
@@ -134,8 +134,8 @@ music box on.</string>
                                                         <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="BYD-yA-oVv"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3M-MI-GQp">
-                                                    <rect key="frame" x="107.66666666666667" y="0.0" width="24.000000000000014" height="43"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3M-MI-GQp">
+                                                    <rect key="frame" x="178.5" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="jGP-gg-QS4"/>
@@ -148,8 +148,8 @@ music box on.</string>
                                                         <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="Sww-u8-ZaB"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-03-hUD">
-                                                    <rect key="frame" x="159" y="0.0" width="24" height="43"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-03-hUD">
+                                                    <rect key="frame" x="266" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="dN2-bL-q3M"/>
@@ -162,8 +162,8 @@ music box on.</string>
                                                         <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="MQU-3H-9MH"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fW9-kO-2Be">
-                                                    <rect key="frame" x="210.66666666666666" y="0.0" width="24" height="43"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fW9-kO-2Be">
+                                                    <rect key="frame" x="353.5" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="VFz-f4-77T"/>
@@ -176,8 +176,8 @@ music box on.</string>
                                                         <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="Zno-0z-0kg"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZh-3k-ogb">
-                                                    <rect key="frame" x="262" y="0.0" width="24" height="43"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZh-3k-ogb">
+                                                    <rect key="frame" x="441" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="iuk-io-SXi"/>
@@ -190,8 +190,8 @@ music box on.</string>
                                                         <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="7a7-Xu-hUv"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-f5-Mp0">
-                                                    <rect key="frame" x="314" y="0.0" width="24" height="43"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-f5-Mp0">
+                                                    <rect key="frame" x="528" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="IbY-CT-eso"/>
@@ -204,8 +204,8 @@ music box on.</string>
                                                         <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="v3z-dk-S9J"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWa-f9-03L">
-                                                    <rect key="frame" x="365.66666666666669" y="0.0" width="24" height="43"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWa-f9-03L">
+                                                    <rect key="frame" x="615.5" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="y4J-fS-LNc"/>
@@ -218,8 +218,8 @@ music box on.</string>
                                                         <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="dNs-16-Uq6"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDi-Hc-wUn">
-                                                    <rect key="frame" x="417" y="0.0" width="24" height="43"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDi-Hc-wUn">
+                                                    <rect key="frame" x="703" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="44U-BS-DNi"/>
@@ -232,8 +232,8 @@ music box on.</string>
                                                         <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="SDv-Cl-cxA"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulF-6M-s2H">
-                                                    <rect key="frame" x="468.66666666666669" y="0.0" width="24" height="43"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulF-6M-s2H">
+                                                    <rect key="frame" x="790.5" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="Juc-pO-EAM"/>
@@ -246,8 +246,8 @@ music box on.</string>
                                                         <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="ij9-bY-yNZ"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gq7-xi-gh4">
-                                                    <rect key="frame" x="520.66666666666663" y="0.0" width="24" height="43"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gq7-xi-gh4">
+                                                    <rect key="frame" x="877.5" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="Fgj-HW-7Sb"/>
@@ -260,8 +260,8 @@ music box on.</string>
                                                         <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="KGw-b5-Ac7"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iA4-sq-vXB">
-                                                    <rect key="frame" x="572" y="0.0" width="24" height="43"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iA4-sq-vXB">
+                                                    <rect key="frame" x="965" y="0.0" width="24" height="43"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="vH0-3b-4Ay"/>
@@ -274,78 +274,78 @@ music box on.</string>
                                                         <action selector="noteButtonDidTap:" destination="eat-gf-db6" eventType="touchUpInside" id="PKl-Bg-HJk"/>
                                                     </connections>
                                                 </button>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zg2-P3-VP7">
-                                                    <rect key="frame" x="28" y="17" width="27.666666666666671" height="10"/>
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zg2-P3-VP7">
+                                                    <rect key="frame" x="28" y="17" width="63.5" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="Gf6-FV-QSl"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmD-UZ-0LW">
-                                                    <rect key="frame" x="79.666666666666671" y="17" width="28" height="10"/>
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YmD-UZ-0LW">
+                                                    <rect key="frame" x="115.5" y="17" width="63" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="KoC-mV-V3c"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBz-gc-W8a">
-                                                    <rect key="frame" x="131.66666666666666" y="17" width="27.333333333333343" height="10"/>
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBz-gc-W8a">
+                                                    <rect key="frame" x="202.5" y="17" width="63.5" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="KFG-hx-fKR"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-90-hsW">
-                                                    <rect key="frame" x="183" y="17" width="27.666666666666657" height="10"/>
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-90-hsW">
+                                                    <rect key="frame" x="290" y="17" width="63.5" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="4Yk-3G-Kk9"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8FJ-ww-qfW">
-                                                    <rect key="frame" x="234.66666666666666" y="17" width="27.333333333333343" height="10"/>
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8FJ-ww-qfW">
+                                                    <rect key="frame" x="377.5" y="17" width="63.5" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="rFO-7K-JUj"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mus-VN-LVa">
-                                                    <rect key="frame" x="286" y="17" width="28" height="10"/>
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mus-VN-LVa">
+                                                    <rect key="frame" x="465" y="17" width="63" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="83Y-lL-Qb0"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-bn-YCD">
-                                                    <rect key="frame" x="338" y="17" width="27.666666666666686" height="10"/>
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-bn-YCD">
+                                                    <rect key="frame" x="552" y="17" width="63.5" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="5U9-dX-wQp"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PU0-ak-hFq">
-                                                    <rect key="frame" x="389.66666666666669" y="17" width="27.333333333333314" height="10"/>
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PU0-ak-hFq">
+                                                    <rect key="frame" x="639.5" y="17" width="63.5" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="oxM-2v-hEw"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFk-Z9-nRW">
-                                                    <rect key="frame" x="441" y="17" width="27.666666666666686" height="10"/>
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yFk-Z9-nRW">
+                                                    <rect key="frame" x="727" y="17" width="63.5" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="RFI-TW-jE2"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-3V-B6S">
-                                                    <rect key="frame" x="492.66666666666669" y="17" width="28.000000000000057" height="10"/>
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-3V-B6S">
+                                                    <rect key="frame" x="814.5" y="17" width="63" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="5cv-aH-zXH"/>
                                                     </constraints>
                                                 </view>
-                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whT-8x-05c">
-                                                    <rect key="frame" x="544.66666666666663" y="17" width="27.333333333333371" height="10"/>
+                                                <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whT-8x-05c">
+                                                    <rect key="frame" x="901.5" y="17" width="63.5" height="10"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="10" id="lFG-6U-TZz"/>
@@ -453,7 +453,7 @@ music box on.</string>
                                             <outletCollection property="noteButtonWidthConstraints" destination="vH0-3b-4Ay" id="wEJ-eA-5bv"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewFootCell" rowHeight="200" id="T1G-b4-tJP" customClass="CMBMusicBoxTableViewFootCell">
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MusicBoxTableViewFootCell" rowHeight="200" id="T1G-b4-tJP" customClass="CMBMusicBoxTableViewFootCell">
                                         <rect key="frame" x="0.0" y="250" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T1G-b4-tJP" id="hMI-1x-yPo">
@@ -461,7 +461,7 @@ music box on.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks. Please enjoy playing!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-Ac-EW5">
-                                                    <rect key="frame" x="8" y="56" width="584" height="32"/>
+                                                    <rect key="frame" x="8" y="56" width="191" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="29" id="0kd-sG-pN7"/>
                                                         <constraint firstAttribute="height" constant="32" id="OeU-R9-jay"/>
@@ -478,7 +478,7 @@ music box on.</string>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Composer" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bo-2E-9FG">
-                                                    <rect key="frame" x="8" y="88" width="584" height="32"/>
+                                                    <rect key="frame" x="8" y="88" width="191" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="83x-oN-guJ"/>
                                                         <constraint firstAttribute="width" constant="29" id="jM3-NV-vzE"/>
@@ -495,7 +495,7 @@ music box on.</string>
                                                     </variation>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dp-JX-jUo">
-                                                    <rect key="frame" x="242" y="8" width="40" height="40"/>
+                                                    <rect key="frame" x="45.666666666666629" y="8" width="40" height="40"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="CPD-ry-Kxo"/>
@@ -514,7 +514,7 @@ music box on.</string>
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXd-8x-h3b">
-                                                    <rect key="frame" x="290" y="8" width="20" height="40"/>
+                                                    <rect key="frame" x="93.666666666666686" y="8" width="20" height="40"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="YVJ-xf-MHY"/>
@@ -522,7 +522,7 @@ music box on.</string>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Np7-iv-523">
-                                                    <rect key="frame" x="318" y="8" width="40" height="40"/>
+                                                    <rect key="frame" x="121.66666666666669" y="8" width="40" height="40"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="ZLW-6g-whX"/>
@@ -587,8 +587,8 @@ music box on.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSg-uY-Uve" userLabel="Head View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="88"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSg-uY-Uve" userLabel="Head View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge2-C6-zQF">
                                         <rect key="frame" x="570" y="34" width="30" height="24"/>
@@ -615,209 +615,8 @@ music box on.</string>
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6is-ct-Zwb">
-                                        <rect key="frame" x="4" y="62" width="24" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="aAT-0s-RBK"/>
-                                            <constraint firstAttribute="width" constant="24" id="whs-zg-8ig">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="24"/>
-                                            </constraint>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-a7-4su">
-                                        <rect key="frame" x="55" y="62" width="24" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="TaZ-m2-Nek">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="24"/>
-                                            </constraint>
-                                            <constraint firstAttribute="height" constant="26" id="dvh-cU-HD2"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCE-Ru-H5S">
-                                        <rect key="frame" x="106" y="62" width="24" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="Yuu-Ey-5a8"/>
-                                            <constraint firstAttribute="width" constant="24" id="eyO-X4-1fY"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="D#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6un-Vg-Onf">
-                                        <rect key="frame" x="158" y="62" width="24" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="dJM-zX-9ak"/>
-                                            <constraint firstAttribute="width" constant="24" id="wQb-De-Sx8"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGA-bt-6SB">
-                                        <rect key="frame" x="210" y="62" width="24" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="A1L-Ek-Oih"/>
-                                            <constraint firstAttribute="width" constant="24" id="WVG-4y-hhO"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPb-qa-SWj">
-                                        <rect key="frame" x="263" y="62" width="24" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="OwH-hB-mwH"/>
-                                            <constraint firstAttribute="height" constant="26" id="SYD-PL-0ef"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="F#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSJ-rO-l0D">
-                                        <rect key="frame" x="315" y="62" width="24" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="Bgl-KE-YYb"/>
-                                            <constraint firstAttribute="height" constant="26" id="tk7-R6-OzU"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX1-x2-jVn">
-                                        <rect key="frame" x="365" y="62" width="24" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="LjB-S3-CvP"/>
-                                            <constraint firstAttribute="width" constant="24" id="e9U-2i-UmU"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="G#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMu-ns-MIO">
-                                        <rect key="frame" x="417.5" y="62" width="24" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="lQY-3d-AVY"/>
-                                            <constraint firstAttribute="width" constant="24" id="rG8-S9-lj2"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8B-se-TdV">
-                                        <rect key="frame" x="520" y="62" width="24" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="HGq-L5-mth"/>
-                                            <constraint firstAttribute="height" constant="26" id="NBF-xg-Yg5"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYE-0l-Uex">
-                                        <rect key="frame" x="572" y="62" width="24" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="29h-xe-SSa"/>
-                                            <constraint firstAttribute="height" constant="26" id="HAT-PG-Thx"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXc-zu-bBA">
-                                        <rect key="frame" x="469" y="62" width="24" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="Yxs-Mo-47Z"/>
-                                            <constraint firstAttribute="width" constant="24" id="ogz-qX-C7Y"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWy-y0-np0">
-                                        <rect key="frame" x="544" y="62" width="27.5" height="26"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="W5x-Sn-ysn"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TiI-PF-7b4">
-                                        <rect key="frame" x="493" y="62" width="27" height="26"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="GhR-na-nO2"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yxy-Np-fBd">
-                                        <rect key="frame" x="442" y="46" width="26.5" height="26"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="dj4-Uu-1xs"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ejv-sB-kdl">
-                                        <rect key="frame" x="389" y="46" width="27.5" height="26"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="1dl-cA-gsP"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZJ-Ct-iUY">
-                                        <rect key="frame" x="337" y="62" width="28" height="26"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="urz-23-4ct"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sk-mn-4Ku">
-                                        <rect key="frame" x="285" y="62" width="28.5" height="26"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="dyQ-Hk-0rC"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88S-A8-Q3A">
-                                        <rect key="frame" x="233" y="46" width="28" height="26"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="SfK-IY-t0A"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-9S-DeJ">
-                                        <rect key="frame" x="182" y="46" width="28" height="26"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="UXl-bV-Gh2"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KpY-ce-dbc">
-                                        <rect key="frame" x="130" y="46" width="28" height="26"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="yGj-aR-EUl"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3SA-2v-on1">
-                                        <rect key="frame" x="80" y="62" width="27" height="26"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="foD-vG-8sr"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYk-wa-zDo">
-                                        <rect key="frame" x="28" y="62" width="27.5" height="26"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="znp-zo-fod"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="song title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGT-ur-QoD">
-                                        <rect key="frame" x="7" y="34" width="563" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="song title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGT-ur-QoD">
+                                        <rect key="frame" x="8" y="41" width="337" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="TPi-Bp-uvm"/>
                                         </constraints>
@@ -825,80 +624,114 @@ music box on.</string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDc-li-uUb">
+                                        <rect key="frame" x="0.0" y="69" width="375" height="19"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6is-ct-Zwb">
+                                                <rect key="frame" x="0.0" y="0.0" width="31.666666666666668" height="19"/>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-a7-4su">
+                                                <rect key="frame" x="31.666666666666671" y="0.0" width="31" height="19"/>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCE-Ru-H5S">
+                                                <rect key="frame" x="62.666666666666664" y="0.0" width="31.333333333333336" height="19"/>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6un-Vg-Onf">
+                                                <rect key="frame" x="94" y="0.0" width="31.666666666666671" height="19"/>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGA-bt-6SB">
+                                                <rect key="frame" x="125.66666666666667" y="0.0" width="31.333333333333329" height="19"/>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPb-qa-SWj">
+                                                <rect key="frame" x="157" y="0.0" width="31.666666666666657" height="19"/>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSJ-rO-l0D">
+                                                <rect key="frame" x="188.66666666666666" y="0.0" width="31" height="19"/>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX1-x2-jVn">
+                                                <rect key="frame" x="219.66666666666666" y="0.0" width="31" height="19"/>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMu-ns-MIO">
+                                                <rect key="frame" x="250.66666666666663" y="0.0" width="31" height="19"/>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8B-se-TdV">
+                                                <rect key="frame" x="281.66666666666669" y="0.0" width="31" height="19"/>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYE-0l-Uex">
+                                                <rect key="frame" x="312.66666666666669" y="0.0" width="31" height="19"/>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXc-zu-bBA">
+                                                <rect key="frame" x="343.66666666666669" y="0.0" width="31.333333333333314" height="19"/>
+                                                <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="width" secondItem="pPb-qa-SWj" secondAttribute="width" id="4bh-yh-VWn"/>
+                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="width" secondItem="JSJ-rO-l0D" secondAttribute="width" id="4ww-N8-haO"/>
+                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="width" secondItem="hX1-x2-jVn" secondAttribute="width" id="6ve-yP-eE8"/>
+                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="width" secondItem="tYE-0l-Uex" secondAttribute="width" id="8Xc-73-NhH"/>
+                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="width" secondItem="kCE-Ru-H5S" secondAttribute="width" id="Dtt-FU-mYb"/>
+                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="width" secondItem="hMu-ns-MIO" secondAttribute="width" id="G6B-NS-v6C"/>
+                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="width" secondItem="QXc-zu-bBA" secondAttribute="width" id="dkE-wt-5sT"/>
+                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="width" secondItem="PGA-bt-6SB" secondAttribute="width" id="lmp-2d-jlA"/>
+                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="width" secondItem="fcC-a7-4su" secondAttribute="width" id="mA8-mE-FzF"/>
+                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="width" secondItem="V8B-se-TdV" secondAttribute="width" id="wjE-GC-IR9"/>
+                                            <constraint firstItem="6is-ct-Zwb" firstAttribute="width" secondItem="6un-Vg-Onf" secondAttribute="width" id="wxf-7k-5e8"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.45098039215686275" green="0.63529411764705879" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.98587214946746826" green="0.0" blue="0.21807396411895752" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="9sk-mn-4Ku" secondAttribute="bottom" id="0hH-gC-7my"/>
-                                    <constraint firstAttribute="bottom" secondItem="bZJ-Ct-iUY" secondAttribute="bottom" id="2Wc-gQ-gtD"/>
-                                    <constraint firstAttribute="bottom" secondItem="6is-ct-Zwb" secondAttribute="bottom" id="6Ho-Ky-Krk"/>
-                                    <constraint firstItem="bZJ-Ct-iUY" firstAttribute="leading" secondItem="JSJ-rO-l0D" secondAttribute="trailing" id="6id-Bh-WNo"/>
-                                    <constraint firstItem="iWy-y0-np0" firstAttribute="leading" secondItem="V8B-se-TdV" secondAttribute="trailing" id="6wC-iM-kJg"/>
-                                    <constraint firstAttribute="bottom" secondItem="3SA-2v-on1" secondAttribute="bottom" id="7qa-ob-eCA"/>
-                                    <constraint firstItem="TiI-PF-7b4" firstAttribute="leading" secondItem="QXc-zu-bBA" secondAttribute="trailing" id="7yN-8s-cGJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="hMu-ns-MIO" secondAttribute="bottom" id="AE9-mR-i2Z"/>
-                                    <constraint firstItem="VYk-wa-zDo" firstAttribute="width" secondItem="TiI-PF-7b4" secondAttribute="width" id="B5g-ka-7dn"/>
-                                    <constraint firstAttribute="bottom" secondItem="kCE-Ru-H5S" secondAttribute="bottom" id="BVb-Zo-8X0"/>
-                                    <constraint firstItem="JSJ-rO-l0D" firstAttribute="leading" secondItem="9sk-mn-4Ku" secondAttribute="trailing" id="Bna-GI-Hzr"/>
-                                    <constraint firstItem="kCE-Ru-H5S" firstAttribute="leading" secondItem="3SA-2v-on1" secondAttribute="trailing" id="DOT-8f-gnk"/>
-                                    <constraint firstAttribute="bottom" secondItem="VYk-wa-zDo" secondAttribute="bottom" id="DlO-lR-Ldc"/>
-                                    <constraint firstAttribute="bottom" secondItem="KpY-ce-dbc" secondAttribute="bottom" id="E8q-lU-8Ow"/>
-                                    <constraint firstItem="QXc-zu-bBA" firstAttribute="leading" secondItem="yxy-Np-fBd" secondAttribute="trailing" id="EVq-wn-XNa"/>
-                                    <constraint firstItem="bZJ-Ct-iUY" firstAttribute="width" secondItem="VYk-wa-zDo" secondAttribute="width" id="Eno-04-xvt"/>
-                                    <constraint firstAttribute="bottom" secondItem="hX1-x2-jVn" secondAttribute="bottom" id="FH9-cL-nlz"/>
-                                    <constraint firstItem="hMu-ns-MIO" firstAttribute="leading" secondItem="Ejv-sB-kdl" secondAttribute="trailing" id="Fb0-at-Djh"/>
-                                    <constraint firstAttribute="bottom" secondItem="iWy-y0-np0" secondAttribute="bottom" id="GI2-xQ-kTF"/>
-                                    <constraint firstItem="VYk-wa-zDo" firstAttribute="width" secondItem="Ejv-sB-kdl" secondAttribute="width" id="GLp-Kf-Ly0"/>
-                                    <constraint firstAttribute="bottom" secondItem="TiI-PF-7b4" secondAttribute="bottom" id="HKt-sE-HPc"/>
-                                    <constraint firstAttribute="bottom" secondItem="fcC-a7-4su" secondAttribute="bottom" id="K5d-EU-3J3"/>
+                                    <constraint firstAttribute="bottom" secondItem="kDc-li-uUb" secondAttribute="bottom" id="HsD-DX-epO"/>
                                     <constraint firstItem="Ge2-C6-zQF" firstAttribute="centerY" secondItem="TGT-ur-QoD" secondAttribute="centerY" id="Lbh-FQ-s9p"/>
-                                    <constraint firstAttribute="bottom" secondItem="PGA-bt-6SB" secondAttribute="bottom" id="Le1-vW-FgQ"/>
-                                    <constraint firstItem="hX1-x2-jVn" firstAttribute="leading" secondItem="bZJ-Ct-iUY" secondAttribute="trailing" id="LwF-tN-3Ii"/>
-                                    <constraint firstItem="3SA-2v-on1" firstAttribute="leading" secondItem="fcC-a7-4su" secondAttribute="trailing" id="M9t-la-cEn"/>
-                                    <constraint firstItem="VYk-wa-zDo" firstAttribute="width" secondItem="KpY-ce-dbc" secondAttribute="width" id="MDM-0C-nAX"/>
-                                    <constraint firstItem="6is-ct-Zwb" firstAttribute="top" secondItem="TGT-ur-QoD" secondAttribute="bottom" constant="4" id="NhW-ce-Rtl"/>
-                                    <constraint firstAttribute="bottom" secondItem="yxy-Np-fBd" secondAttribute="bottom" id="OPr-7s-9X4"/>
-                                    <constraint firstItem="PGA-bt-6SB" firstAttribute="leading" secondItem="4Mm-9S-DeJ" secondAttribute="trailing" id="QtW-dU-r78"/>
                                     <constraint firstAttribute="height" constant="88" id="So7-E4-XQE"/>
-                                    <constraint firstItem="VYk-wa-zDo" firstAttribute="width" secondItem="yxy-Np-fBd" secondAttribute="width" id="UDp-aE-KOI"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ejv-sB-kdl" secondAttribute="bottom" id="W0W-Bw-rHE"/>
-                                    <constraint firstItem="VYk-wa-zDo" firstAttribute="leading" secondItem="6is-ct-Zwb" secondAttribute="trailing" id="XPq-fr-OXd"/>
-                                    <constraint firstItem="9sk-mn-4Ku" firstAttribute="leading" secondItem="pPb-qa-SWj" secondAttribute="trailing" id="Y9E-0m-4Am"/>
-                                    <constraint firstAttribute="bottom" secondItem="6un-Vg-Onf" secondAttribute="bottom" id="YYy-qn-Xg7"/>
-                                    <constraint firstAttribute="bottom" secondItem="V8B-se-TdV" secondAttribute="bottom" id="crE-GD-xWX"/>
-                                    <constraint firstItem="9sk-mn-4Ku" firstAttribute="width" secondItem="VYk-wa-zDo" secondAttribute="width" id="dFz-Nd-d9x"/>
-                                    <constraint firstItem="4Mm-9S-DeJ" firstAttribute="leading" secondItem="6un-Vg-Onf" secondAttribute="trailing" id="dxf-2Q-l6l"/>
-                                    <constraint firstAttribute="bottom" secondItem="QXc-zu-bBA" secondAttribute="bottom" id="fuS-MW-MJ1"/>
-                                    <constraint firstItem="6un-Vg-Onf" firstAttribute="leading" secondItem="KpY-ce-dbc" secondAttribute="trailing" id="g9p-UK-KfR"/>
-                                    <constraint firstItem="88S-A8-Q3A" firstAttribute="width" secondItem="VYk-wa-zDo" secondAttribute="width" id="gNZ-cU-gy2"/>
+                                    <constraint firstItem="kDc-li-uUb" firstAttribute="top" secondItem="TGT-ur-QoD" secondAttribute="bottom" constant="4" id="cAl-Bw-LTW"/>
                                     <constraint firstItem="Ge2-C6-zQF" firstAttribute="leading" secondItem="TGT-ur-QoD" secondAttribute="trailing" id="h83-zq-xrS"/>
-                                    <constraint firstAttribute="bottom" secondItem="4Mm-9S-DeJ" secondAttribute="bottom" id="hNy-bQ-o3P"/>
-                                    <constraint firstAttribute="bottom" secondItem="tYE-0l-Uex" secondAttribute="bottom" id="hTF-b5-Rwj"/>
-                                    <constraint firstItem="pPb-qa-SWj" firstAttribute="leading" secondItem="88S-A8-Q3A" secondAttribute="trailing" id="hfg-aD-u4e"/>
-                                    <constraint firstItem="yxy-Np-fBd" firstAttribute="leading" secondItem="hMu-ns-MIO" secondAttribute="trailing" id="ibR-7a-aK7"/>
+                                    <constraint firstAttribute="trailing" secondItem="kDc-li-uUb" secondAttribute="trailing" id="i4q-xL-OiK"/>
                                     <constraint firstAttribute="trailing" secondItem="Ge2-C6-zQF" secondAttribute="trailing" id="k54-hb-jQd"/>
-                                    <constraint firstAttribute="bottom" secondItem="88S-A8-Q3A" secondAttribute="bottom" id="k6q-Ao-wwc"/>
-                                    <constraint firstItem="VYk-wa-zDo" firstAttribute="width" secondItem="4Mm-9S-DeJ" secondAttribute="width" id="kJD-4E-p6b"/>
-                                    <constraint firstItem="tYE-0l-Uex" firstAttribute="trailing" secondItem="aSg-uY-Uve" secondAttribute="trailing" constant="-4" id="ko3-xC-tTY"/>
                                     <constraint firstAttribute="trailing" secondItem="Ge2-C6-zQF" secondAttribute="trailing" id="lbI-Tm-4CB"/>
-                                    <constraint firstAttribute="bottom" secondItem="JSJ-rO-l0D" secondAttribute="bottom" id="luO-BG-2nA"/>
-                                    <constraint firstItem="fcC-a7-4su" firstAttribute="leading" secondItem="VYk-wa-zDo" secondAttribute="trailing" id="mQa-7C-uex"/>
-                                    <constraint firstItem="VYk-wa-zDo" firstAttribute="width" secondItem="3SA-2v-on1" secondAttribute="width" id="oev-Kp-ghV"/>
-                                    <constraint firstItem="6is-ct-Zwb" firstAttribute="leading" secondItem="aSg-uY-Uve" secondAttribute="leading" constant="4" id="pYh-Sf-l6P"/>
-                                    <constraint firstItem="tYE-0l-Uex" firstAttribute="top" secondItem="Ge2-C6-zQF" secondAttribute="bottom" constant="8" id="pdT-wq-Mn2"/>
-                                    <constraint firstItem="V8B-se-TdV" firstAttribute="leading" secondItem="TiI-PF-7b4" secondAttribute="trailing" id="sXv-hw-NEV"/>
-                                    <constraint firstItem="Ejv-sB-kdl" firstAttribute="leading" secondItem="hX1-x2-jVn" secondAttribute="trailing" id="thv-5L-HAV"/>
-                                    <constraint firstItem="tYE-0l-Uex" firstAttribute="leading" secondItem="iWy-y0-np0" secondAttribute="trailing" id="udp-lG-Erx"/>
-                                    <constraint firstItem="88S-A8-Q3A" firstAttribute="leading" secondItem="PGA-bt-6SB" secondAttribute="trailing" id="vAb-hH-Ppu"/>
-                                    <constraint firstItem="KpY-ce-dbc" firstAttribute="leading" secondItem="kCE-Ru-H5S" secondAttribute="trailing" id="wuH-ev-MY9"/>
-                                    <constraint firstItem="VYk-wa-zDo" firstAttribute="width" secondItem="iWy-y0-np0" secondAttribute="width" id="wzV-FH-Ek1"/>
-                                    <constraint firstAttribute="bottom" secondItem="pPb-qa-SWj" secondAttribute="bottom" id="y5c-1R-yge"/>
+                                    <constraint firstItem="kDc-li-uUb" firstAttribute="leading" secondItem="aSg-uY-Uve" secondAttribute="leading" id="wuk-Ry-c45"/>
                                     <constraint firstItem="TGT-ur-QoD" firstAttribute="leading" secondItem="aSg-uY-Uve" secondAttribute="leadingMargin" id="zgo-Si-qcK"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="lbI-Tm-4CB"/>
-                                        <exclude reference="pdT-wq-Mn2"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1026,9 +859,9 @@ music box on.</string>
                         <outletCollection property="scaleLabels" destination="JSJ-rO-l0D" id="vca-Ks-jTN"/>
                         <outletCollection property="scaleLabels" destination="hX1-x2-jVn" id="0ba-9L-cfR"/>
                         <outletCollection property="scaleLabels" destination="hMu-ns-MIO" id="kQz-KM-rfc"/>
-                        <outletCollection property="scaleLabels" destination="QXc-zu-bBA" id="aPk-tF-3IC"/>
                         <outletCollection property="scaleLabels" destination="V8B-se-TdV" id="XcK-Eo-ueM"/>
                         <outletCollection property="scaleLabels" destination="tYE-0l-Uex" id="znF-GN-G87"/>
+                        <outletCollection property="scaleLabels" destination="QXc-zu-bBA" id="aPk-tF-3IC"/>
                         <segue destination="kGK-1K-za0" kind="presentation" identifier="SongConfig" id="ViF-hj-1bm"/>
                         <segue destination="N8n-7A-X4L" kind="presentation" identifier="SongManage" id="5DY-Rs-aJ2"/>
                         <segue destination="hXK-bD-TY0" kind="presentation" identifier="Help" id="9VC-46-JWV"/>
@@ -1054,7 +887,7 @@ music box on.</string>
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="586" y="1026"/>
+            <point key="canvasLocation" x="584.79999999999995" y="1025.615763546798"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bgf-5n-cDM">
