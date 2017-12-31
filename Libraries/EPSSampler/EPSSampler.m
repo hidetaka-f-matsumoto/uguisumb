@@ -60,7 +60,7 @@ enum
 	UInt32 noteCommand = kMIDIMessage_NoteOn << 4 | 0;
 	
 	OSStatus result = noErr;
-	require_noerr(result = MusicDeviceMIDIEvent(self.samplerUnit, noteCommand, noteNum, onVelocity, 0), logTheError);
+	__Require_noErr(result = MusicDeviceMIDIEvent(self.samplerUnit, noteCommand, noteNum, onVelocity, 0), logTheError);
 	
 logTheError:
 	
@@ -77,7 +77,7 @@ logTheError:
 	
 	OSStatus result = noErr;
 	
-	require_noerr(result = MusicDeviceMIDIEvent(self.samplerUnit, noteCommand, noteNum, 0, 0), logTheError);
+	__Require_noErr(result = MusicDeviceMIDIEvent(self.samplerUnit, noteCommand, noteNum, 0, 0), logTheError);
 	
 logTheError:
 	
