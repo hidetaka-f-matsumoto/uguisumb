@@ -415,11 +415,11 @@ music box on.</string>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="nRt-PZ-4rW"/>
                                                     <exclude reference="COD-jC-X1c"/>
                                                     <exclude reference="cIJ-Gi-oRL"/>
                                                     <exclude reference="pgn-0K-ewq"/>
                                                     <exclude reference="vcf-Op-iCS"/>
+                                                    <exclude reference="nRt-PZ-4rW"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -971,7 +971,7 @@ music box on.</string>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvw-Vh-DMH">
                                 <rect key="frame" x="0.0" y="88" width="375" height="620"/>
                                 <connections>
-                                    <segue destination="rwu-PE-f1M" kind="embed" id="xQR-L6-wji"/>
+                                    <segue destination="rwu-PE-f1M" kind="embed" identifier="embededTableView" id="xQR-L6-wji"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xO-NP-Jtg">
@@ -1071,11 +1071,11 @@ music box on.</string>
             </objects>
             <point key="canvasLocation" x="1770" y="352.81690140845069"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Song Config Table View Controller-->
         <scene sceneID="wEH-Go-PMH">
             <objects>
-                <tableViewController id="rwu-PE-f1M" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1u9-Ds-Bok">
+                <tableViewController id="rwu-PE-f1M" customClass="CMBSongConfigTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1u9-Ds-Bok">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="620"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1086,13 +1086,13 @@ music box on.</string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ng1-8l-Cao" id="xuS-SX-Gsu">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvv-i9-5PE">
                                                     <rect key="frame" x="8" y="8" width="80" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="WMf-9J-1Um"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="WMf-9J-1Um"/>
                                                         <constraint firstAttribute="height" constant="21" id="pWQ-jD-4FI"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
@@ -1122,14 +1122,14 @@ music box on.</string>
                                         <rect key="frame" x="0.0" y="75" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jXw-4n-iul" id="Fye-pK-fKP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Composer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF5-vK-Njd">
                                                     <rect key="frame" x="8" y="8" width="120" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="dha-hz-ppQ"/>
-                                                        <constraint firstAttribute="width" constant="120" id="gO2-Dm-XUk"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="gO2-Dm-XUk"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                                     <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1158,7 +1158,7 @@ music box on.</string>
                                         <rect key="frame" x="0.0" y="150" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ap4-kh-rbH" id="HFg-wW-Nmg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw8-Dg-In0">
@@ -1166,7 +1166,7 @@ music box on.</string>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Adv-vp-xRu"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="RdN-um-Wq5"/>
-                                                        <constraint firstAttribute="width" constant="80" id="unf-jL-TlL"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="unf-jL-TlL"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                                     <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1177,7 +1177,7 @@ music box on.</string>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="AAh-OE-4ez"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="N9B-rb-o4V"/>
-                                                        <constraint firstAttribute="width" constant="80" id="x7f-jE-88X"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="x7f-jE-88X"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="19"/>
                                                     <color key="textColor" red="0.14454716444015503" green="0.23750604689121246" blue="0.08463045209646225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1190,7 +1190,7 @@ music box on.</string>
                                                         <constraint firstAttribute="width" constant="94" id="fRs-mi-M16"/>
                                                     </constraints>
                                                     <connections>
-                                                        <action selector="speedStepperDidTap:" destination="efm-bS-5i8" eventType="touchUpInside" id="qKK-ZG-nCE"/>
+                                                        <action selector="speedStepperDidTap:" destination="rwu-PE-f1M" eventType="touchUpInside" id="4fx-wq-HFP"/>
                                                     </connections>
                                                 </stepper>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0x5-ul-Bf8">
@@ -1217,14 +1217,14 @@ music box on.</string>
                                         <rect key="frame" x="0.0" y="235" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fQf-JX-eVk" id="wGX-Mq-vWk">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.66666666666667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time guide:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-PQ-DvD">
                                                     <rect key="frame" x="8" y="8" width="120" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="LoM-80-FhC"/>
-                                                        <constraint firstAttribute="width" constant="120" id="oal-L6-FJ7"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="oal-L6-FJ7"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                                     <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1279,14 +1279,14 @@ music box on.</string>
                                         <rect key="frame" x="0.0" y="355" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="76u-54-GHt" id="9RN-tP-VCg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale guide:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qig-Io-RxP">
                                                     <rect key="frame" x="8" y="8" width="120" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="5tR-LN-9SY"/>
-                                                        <constraint firstAttribute="width" constant="120" id="bDE-Gd-mCO"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="bDE-Gd-mCO"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
                                                     <color key="textColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1317,13 +1317,13 @@ music box on.</string>
                                         <rect key="frame" x="0.0" y="430" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z0C-pa-XQA" id="jOf-Dw-U2m">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instrument" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmQ-tQ-Mam">
                                                     <rect key="frame" x="8" y="8" width="120" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="120" id="Hj3-Z2-bmn"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Hj3-Z2-bmn"/>
                                                         <constraint firstAttribute="height" constant="21" id="dUB-Yd-RJo"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SetoFont-SP" family="SetoFont-SP" pointSize="17"/>
@@ -1359,6 +1359,17 @@ music box on.</string>
                             <outlet property="delegate" destination="rwu-PE-f1M" id="0jF-VO-VfU"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="composerText" destination="hrO-2w-Ksk" id="UEO-ZY-lzC"/>
+                        <outlet property="division1Control" destination="bF1-Hh-rgh" id="7YL-fE-ld9"/>
+                        <outlet property="division2Control" destination="We1-Ap-gzE" id="Fqr-ho-ae2"/>
+                        <outlet property="instrumentControl" destination="DS6-g0-ksP" id="ubJ-1Z-k2q"/>
+                        <outlet property="nameText" destination="ih3-UP-yhx" id="PKZ-bX-BQe"/>
+                        <outlet property="scaleControl" destination="9Pg-Dh-MTZ" id="FnT-XV-BUu"/>
+                        <outlet property="speedLabel" destination="apQ-aw-88J" id="5Lr-2a-c6t"/>
+                        <outlet property="speedSlider" destination="0x5-ul-Bf8" id="Ab0-Kd-T0u"/>
+                        <outlet property="speedStepper" destination="k3U-lZ-Lhc" id="Vwr-xT-JJn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8E-Fv-GmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

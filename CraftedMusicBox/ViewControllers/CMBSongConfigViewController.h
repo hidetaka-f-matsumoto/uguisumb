@@ -20,24 +20,11 @@
 /**
  * Song設定
  */
-@interface CMBSongConfigViewController : CMBBaseModalViewController <UITextFieldDelegate>
+@interface CMBSongConfigViewController : CMBBaseModalViewController
 
 @property (nonatomic, assign) id<CMBSongConfigDelegate> delegate;
 @property (atomic, assign) CMBSongHeaderData *header;
 
-@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
-@property (nonatomic, weak) IBOutlet UIView *contentView;
-@property (nonatomic, weak) IBOutlet UITextField *nameText;
-@property (nonatomic, weak) IBOutlet UITextField *composerText;
-@property (nonatomic, weak) IBOutlet UISlider *speedSlider;
-@property (nonatomic, weak) IBOutlet UIStepper *speedStepper;
-@property (nonatomic, weak) IBOutlet UILabel *speedLabel;
-@property (nonatomic, weak) IBOutlet UISegmentedControl *division1Control;
-@property (nonatomic, weak) IBOutlet UISegmentedControl *division2Control;
-@property (nonatomic, weak) IBOutlet UISegmentedControl *scaleControl;
-@property (nonatomic, weak) IBOutlet UISegmentedControl *instrumentControl;
-
-- (IBAction)speedStepperDidTap:(id)sender;
 - (IBAction)applyButtonDidTap:(id)sender;
 - (IBAction)applyAndSaveButtonDidTap:(id)sender;
 
