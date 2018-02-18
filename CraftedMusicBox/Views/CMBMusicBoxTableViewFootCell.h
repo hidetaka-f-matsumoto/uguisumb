@@ -15,8 +15,10 @@ static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200;
 @required
 /** タイム追加リクエスト */
 - (void)musicBoxDidRequestAddTime;
+- (void)musicBoxDidRequestAddTimeMore;
 /** タイム削除リクエスト */
 - (void)musicBoxDidRequestRemoveTime;
+- (void)musicBoxDidRequestRemoveTimeMore;
 /** 作曲者 */
 - (NSString *)getComposer;
 
@@ -30,5 +32,7 @@ static CGFloat const CMBMusicBoxTableViewFootCellHeight = 200;
 
 - (IBAction)timeAddButtonDidTap:(id)sender;
 - (IBAction)timeRemoveButtonDidTap:(id)sender;
+- (IBAction)timeAddMoreButtonDidTap:(id)sender;
+- (IBAction)timeRemoveMoreButtonDidTap:(id)sender;
 
 @end
