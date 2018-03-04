@@ -20,6 +20,16 @@
     [_delegate musicBoxDidRequestRemoveTime];
 }
 
+- (IBAction)timeAddMoreButtonDidTap:(id)sender
+{
+    [_delegate musicBoxDidRequestAddTimeMore];
+}
+
+- (IBAction)timeRemoveMoreButtonDidTap:(id)sender
+{
+    [_delegate musicBoxDidRequestRemoveTimeMore];
+}
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];

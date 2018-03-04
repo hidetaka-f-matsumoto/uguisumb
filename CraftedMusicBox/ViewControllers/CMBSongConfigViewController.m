@@ -9,9 +9,12 @@
 #import "CMBSongConfigViewController.h"
 #import "CMBUtility.h"
 #import "CMBSoundManager.h"
+#import "CMBSongConfigTableViewController.h"
 
 @interface CMBSongConfigViewController ()
-
+{
+    CMBSongConfigTableViewController* _tableViewController;
+}
 @end
 
 @implementation CMBSongConfigViewController
@@ -19,38 +22,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    _nameText.delegate = self;
-    _composerText.delegate = self;
-    _speedSlider.minimumValue = CMBSpeedMin;
-    _speedSlider.maximumValue = CMBSpeedMax;
-    [_speedSlider addTarget:self action:@selector(tempoSliderDidChange:) forControlEvents:UIControlEventValueChanged];
-    _speedStepper.minimumValue = CMBSpeedMin;
-    _speedStepper.maximumValue = CMBSpeedMax;
-    _speedStepper.stepValue = 1;    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    _nameText.text = _header.name;
-    _composerText.text = _header.composer;
-    _speedLabel.text = [NSString stringWithFormat:@"%zd", _header.speed.integerValue];
-    _speedSlider.value = _header.speed.floatValue;
-    _speedStepper.value = _header.speed.floatValue;
-    [_division1Control setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division1]];
-    [_division2Control setSelectedSegmentIndex:[CMBDivisions indexOfObject:_header.division2]];
-    [_scaleControl setSelectedSegmentIndex:[CMBScaleNameKeys indexOfObject:_header.scaleMode]];
-    [_instrumentControl setSelectedSegmentIndex:[CMBInstruments indexOfObject:_header.instrument]];
-}
 
-- (void)viewDidLayoutSubviews
-{
-    [super viewDidLayoutSubviews];
-    
-    [_scrollView setContentSize:_contentView.bounds.size];
-    [_scrollView flashScrollIndicators];
+    [_tableViewController resetWithHeader:_header];
 }
 
 - (void)dealloc
@@ -65,25 +43,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"embededTableView"]) {
+        _tableViewController = segue.destinationViewController;
+    }
 }
-*/
 
 - (void)applyConfig
 {
-    _header.name = _nameText.text;
-    _header.composer = _composerText.text;
-    _header.speed = [NSNumber numberWithInteger:(NSInteger)_speedSlider.value];
-    _header.division1 = CMBDivisions[_division1Control.selectedSegmentIndex];
-    _header.division2 = CMBDivisions[_division2Control.selectedSegmentIndex];
-    _header.scaleMode = CMBScaleNameKeys[_scaleControl.selectedSegmentIndex];
-    _header.instrument = CMBInstruments[_instrumentControl.selectedSegmentIndex];
+    [_tableViewController copyConfigToHeader:_header];
     [CMBSoundManager sharedInstance].instrument = _header.instrument;
 }
 
@@ -109,48 +82,6 @@
                                  // デリゲートに通知
                                  [_delegate songDidConfigureWithSave:YES];
                              }];
-}
-
-- (IBAction)speedStepperDidTap:(id)sender
-{
-    _speedLabel.text = [NSString stringWithFormat:@"%zd", (NSInteger)_speedStepper.value];
-    _speedSlider.value = _speedStepper.value;
-}
-
-#pragma mark - UITextViewDelegate
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
-    return YES;
-}
-
--(void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    
-}
-
--(BOOL)textFieldShouldEndEditing:(UITextField *)textField
-{
-    return YES;
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-    
-}
-
--(BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [self.view endEditing:YES];
-    return YES;
-}
-
-#pragma mark - UISlider
-
-- (void)tempoSliderDidChange:(id)sender
-{
-    _speedLabel.text = [NSString stringWithFormat:@"%zd", (NSInteger)_speedSlider.value];
-    _speedStepper.value = _speedSlider.value;
 }
 
 @end

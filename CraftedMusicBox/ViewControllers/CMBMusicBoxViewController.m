@@ -729,8 +729,24 @@
 /**
  * song length 変更
  */
-- (void)changeLength:(NSInteger)length
+- (void)changeLength:(NSInteger)length withConfirmation:(BOOL)confirmation
 {
+    if (0 > length) {
+        length = 0;
+    }
+    // 確認モードで、削除範囲に音符がある場合
+    if (confirmation && [self isNotesFrom:length to:(_header.length.integerValue - 1)]) {
+        // 確認ダイアログ
+        NSString *title = NSLocalizedString(@"Remove time", @"Remove time");
+        NSString *message = [NSString stringWithFormat:
+                             NSLocalizedString(@"You wanna remove times where is some notes?", @"The message to confirm you want to remove times where is some notes.")];
+        [self showConfirmDialogWithTitle:title
+                                 message:message
+                                 handler:^(UIAlertAction *action) {
+                                     [self changeLength:length withConfirmation:NO];
+                                 }];
+        return;
+    }
     // 無くなる範囲のシーケンスを消去
     for (NSInteger i=length; i<_header.length.integerValue; i++) {
         [_sequences removeObjectForKey:[NSNumber numberWithInteger:i]];
@@ -1085,7 +1101,18 @@
     // 小区切り分ぴったりになるよう追加
     NSInteger div1 = _header.division1.integerValue;
     NSInteger newLen = ((_header.length.integerValue + div1) / (NSInteger)div1) * div1;
-    [self changeLength:newLen];
+    [self changeLength:newLen withConfirmation:YES];
+}
+
+- (void)musicBoxDidRequestAddTimeMore
+{
+    // 再生中の場合は一時停止
+    [self pause];
+    // 小区切り分ぴったりになるよう追加
+    NSInteger div1 = _header.division1.integerValue,
+              div2 = _header.division2.integerValue;
+    NSInteger newLen = ((_header.length.integerValue + div1 * div2) / (NSInteger)div1) * div1;
+    [self changeLength:newLen withConfirmation:YES];
 }
 
 - (void)musicBoxDidRequestRemoveTime
@@ -1095,25 +1122,18 @@
     // 小区切り分ぴったりになるよう削除
     NSInteger div1 = _header.division1.integerValue;
     NSInteger newLen = ((_header.length.integerValue - 1) / (NSInteger)div1) * div1;
-    if (0 > newLen) {
-        newLen = 0;
-    }
-    // 削除範囲に音符がある場合
-    if ([self isNotesFrom:newLen to:(_header.length.integerValue - 1)]) {
-        // 確認ダイアログ
-        NSString *title = NSLocalizedString(@"Remove time", @"Remove time");
-        NSString *message = [NSString stringWithFormat:
-                             NSLocalizedString(@"You wanna remove times where is some notes?", @"The message to confirm you want to remove times where is some notes.")];
-        [self showConfirmDialogWithTitle:title
-                                 message:message
-                                 handler:^(UIAlertAction *action) {
-                                     [self changeLength:newLen];
-                                 }];
-    }
-    // 削除範囲に音符が無い場合
-    else {
-        [self changeLength:newLen];
-    }
+    [self changeLength:newLen withConfirmation:YES];
+}
+
+- (void)musicBoxDidRequestRemoveTimeMore
+{
+    // 再生中の場合は一時停止
+    [self pause];
+    // 小区切り分ぴったりになるよう削除
+    NSInteger div1 = _header.division1.integerValue,
+              div2 = _header.division2.integerValue;
+    NSInteger newLen = ((_header.length.integerValue - div1 * (div2 - 1) - 1) / (NSInteger)div1) * div1;
+    [self changeLength:newLen withConfirmation:YES];
 }
 
 #pragma mark - CMBSongConfigDelegate

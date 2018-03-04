@@ -12,8 +12,6 @@
 
 static CGFloat const CMBMusicBoxTableViewCellHeightForLoad  = 11.f;
 static CGFloat const CMBMusicBoxTableViewCellHeight         = 44.f;
-static CGFloat const CMBMusicBoxNoteButtonWidth_iPhone      = 24.f;
-static CGFloat const CMBMusicBoxNoteButtonWidth_iPad        = 44.f;
 
 @protocol CMBMusicBoxTableViewCellDelegate <NSObject>
 
@@ -41,7 +39,6 @@ static CGFloat const CMBMusicBoxNoteButtonWidth_iPad        = 44.f;
 @property (nonatomic, assign) UIView *tineView;
 
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *noteButtons;
-@property (nonatomic, strong) IBOutletCollection(NSLayoutConstraint) NSArray *noteButtonWidthConstraints;
 
 - (IBAction)noteButtonDidTap:(id)sender;
 

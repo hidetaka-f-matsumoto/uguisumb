@@ -11,6 +11,7 @@
 		0409BA541BE8C27F0034FDBE /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0409BA531BE8C27F0034FDBE /* GoogleMobileAds.framework */; };
 		040A2354FD9D89CED7307646 /* libPods-CraftedMusicBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6C5188208BD2BBED8B5855 /* libPods-CraftedMusicBox.a */; };
 		042AB2D41A6F30EC0050BC92 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042AB2D31A6F30EC0050BC92 /* Social.framework */; };
+		043C3E852018B2FE00F19F43 /* CMBSongConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C3E842018B2FE00F19F43 /* CMBSongConfigTableViewController.m */; };
 		04531C331E9BBE36005CDA8A /* UIDevice+CMBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 04531C321E9BBE36005CDA8A /* UIDevice+CMBTools.m */; };
 		0477B0F91E0FF48600F72F4F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0477B0F81E0FF48600F72F4F /* GoogleService-Info.plist */; };
 		0477B0FA1E0FF48600F72F4F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0477B0F81E0FF48600F72F4F /* GoogleService-Info.plist */; };
@@ -89,6 +90,8 @@
 		040118721BF6D2F3008F2B6E /* CMBSoundManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBSoundManagerTests.m; sourceTree = "<group>"; };
 		0409BA531BE8C27F0034FDBE /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.5.2/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		042AB2D31A6F30EC0050BC92 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		043C3E832018B2FE00F19F43 /* CMBSongConfigTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CMBSongConfigTableViewController.h; path = ViewControllers/CMBSongConfigTableViewController.h; sourceTree = "<group>"; };
+		043C3E842018B2FE00F19F43 /* CMBSongConfigTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CMBSongConfigTableViewController.m; path = ViewControllers/CMBSongConfigTableViewController.m; sourceTree = "<group>"; };
 		04531C311E9BBE36005CDA8A /* UIDevice+CMBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+CMBTools.h"; path = "Utilities/UIDevice+CMBTools.h"; sourceTree = "<group>"; };
 		04531C321E9BBE36005CDA8A /* UIDevice+CMBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+CMBTools.m"; path = "Utilities/UIDevice+CMBTools.m"; sourceTree = "<group>"; };
 		0477B0F81E0FF48600F72F4F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -366,6 +369,8 @@
 				08883B101956CFEF00F7EB68 /* CMBMusicBoxViewController.m */,
 				086BA15E19D0401000991574 /* CMBSongConfigViewController.h */,
 				086BA15F19D0401000991574 /* CMBSongConfigViewController.m */,
+				043C3E832018B2FE00F19F43 /* CMBSongConfigTableViewController.h */,
+				043C3E842018B2FE00F19F43 /* CMBSongConfigTableViewController.m */,
 				086BA16119D0FA4E00991574 /* CMBSongManageViewController.h */,
 				086BA16219D0FA4E00991574 /* CMBSongManageViewController.m */,
 				087D29151A36A14C00BCA9F5 /* CMBAlertController.h */,
@@ -711,6 +716,7 @@
 				086BA16919D10C4B00991574 /* CMBBaseModalViewController.m in Sources */,
 				08883B161956D03D00F7EB68 /* CMBTabViewController.m in Sources */,
 				0820BC1E1A7E1C2300E405B3 /* CMBHelpViewController.m in Sources */,
+				043C3E852018B2FE00F19F43 /* CMBSongConfigTableViewController.m in Sources */,
 				08A769DB1972A82D00143638 /* CMBSequenceOneData.m in Sources */,
 				087D29171A36A14C00BCA9F5 /* CMBAlertController.m in Sources */,
 				08883B171956D03D00F7EB68 /* CMBBaseViewController.m in Sources */,
@@ -835,7 +841,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -880,7 +886,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -906,7 +912,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "CraftedMusicBox/CraftedMusicBox-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = hidetaka.f.matsumoto.uguisumb;
@@ -936,7 +942,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "CraftedMusicBox/CraftedMusicBox-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = hidetaka.f.matsumoto.uguisumb;
