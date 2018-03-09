@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-static CGFloat const CMBMusicBoxTableViewHeadCellHeight = 184.f;
+static CGFloat const CMBMusicBoxTableViewHeadCellHeight = 154.f;
 
 @protocol CMBMusicBoxTableViewHeadCellDelegate <NSObject>
 
