@@ -2,11 +2,12 @@
 "What's New" = "What's New!";
 
 /* Update information. */
-"New feature information ver.1.1.0." = "- Song sharing on Facebook/Twitter/LINE/Mail is available.\n- Composer's name become editable.\n- Help is available.";
-"New feature information ver.1.2.0." = "- Octave range become wide. (2-6)\n- Time insert/delete is enable.\n- Sound quality improvement.\n- Add some names of scale.\n- The bird sings. :)";
-"New feature information ver.1.3.0." = "- Marimba is now available.";
-"New feature information ver.1.4.0." = "- Vibraphone is now available.\n- Speed range has expanded.\n- Playback become more accurate.";
-"New feature information ver.1.4.1." = "- Fixed incorrect speed during playback.";
+//"New feature information ver.1.1.0." = "- Song sharing on Facebook/Twitter/LINE/Mail is available.\n- Composer's name become editable.\n- Help is available.";
+//"New feature information ver.1.2.0." = "- Octave range become wide. (2-6)\n- Time insert/delete is enable.\n- Sound quality improvement.\n- Add some names of scale.\n- The bird sings. :)";
+//"New feature information ver.1.3.0." = "- Marimba is now available.";
+//"New feature information ver.1.4.0." = "- Vibraphone is now available.\n- Speed range has expanded.\n- Playback become more accurate.";
+//"New feature information ver.1.4.1." = "- Fixed incorrect speed during playback.";
+"New feature information" = "- Made it easy to use the addition and deletion of time.\n- Improve display performance.\n- Fixed minor bugs.";
 
 /* Cancel */
 "Cancel" = "Cancel";
