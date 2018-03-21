@@ -871,6 +871,9 @@
             mbCell.delegate = self;
             mbCell.parentTableView = _tableView;
             mbCell.tineView = _tineView;
+            if (@available(iOS 11.0, *)) {
+                mbCell.tineViewOffset = [self.view safeAreaInsets].top;
+            }
             cell = mbCell;
             break;
         }

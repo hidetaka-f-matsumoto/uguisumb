@@ -20,10 +20,11 @@
 
 - (void)_init
 {
-    _preY = 0.0f;
+    _preY = 0.f;
     self.delegate = nil;
     _parentTableView = nil;
     _tineView = nil;
+    _tineViewOffset = 20.f;
     [self _initViews];
 }
 
@@ -79,16 +80,15 @@
 
 - (void)process
 {
-//    NSLog(@"process y=%f", self.frame.origin.y - _parentTableView.contentOffset.y);
-    // オルゴール歯の位置
-    CGFloat tineY = _tineView.frame.origin.y + _tineView.frame.size.height - 20.0f; // StatusBar分
-    // 現在位置
-    CGFloat curY = self.frame.origin.y - _parentTableView.contentOffset.y;
+    // オルゴール歯の位置 (tine y + tine height - tine offset)
+    CGFloat tineY = _tineView.frame.origin.y + _tineView.frame.size.height - _tineViewOffset;
+    // 現在位置 (y + height/2 - table view offset)
+    CGFloat curY = self.frame.origin.y + self.frame.size.height / 2.f - _parentTableView.contentOffset.y;
     // 画面内かチェック (余裕を見ておく)
     if (20.f <= curY && _parentTableView.frame.size.height - 20.f > curY) {
         // オルゴール歯を通過したかチェック
         if (tineY >= curY && tineY < _preY) {
-            NSLog(@"process tineY=%f, curY=%f, preY=%f", tineY, curY, _preY);
+            DPRINT(@"process tineY=%f, curY=%f, preY=%f", tineY, curY, _preY);
             // ピックされた事を通知
             NSIndexPath *indexPath = [_parentTableView indexPathForCell:self];
             [self.delegate musicboxDidPickWithIndexPath:indexPath];

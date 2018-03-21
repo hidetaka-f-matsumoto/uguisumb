@@ -37,6 +37,7 @@ static CGFloat const CMBMusicBoxTableViewCellHeight         = 44.f;
 @property (nonatomic, assign) id<CMBMusicBoxTableViewCellDelegate> delegate;
 @property (nonatomic, assign) UITableView *parentTableView;
 @property (nonatomic, assign) UIView *tineView;
+@property (nonatomic) CGFloat tineViewOffset;
 
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *noteButtons;
 

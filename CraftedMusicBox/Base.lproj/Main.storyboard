@@ -608,17 +608,17 @@ music box on.</string>
                                 <color key="backgroundColor" red="0.45098039220000002" green="0.63529411759999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIN-k4-Uqe" userLabel="Tine View">
-                                <rect key="frame" x="0.0" y="94" width="375" height="104"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="114"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="branch" translatesAutoresizingMaskIntoConstraints="NO" id="GtV-vh-Bqb">
-                                        <rect key="frame" x="0.0" y="81" width="375" height="23"/>
+                                        <rect key="frame" x="0.0" y="91" width="375" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="GtV-vh-Bqb" secondAttribute="height" multiplier="600:37" id="Drl-41-M6I"/>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="dwc-6a-PKh"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uguisu" translatesAutoresizingMaskIntoConstraints="NO" id="Akk-FW-dNV">
-                                        <rect key="frame" x="292" y="51" width="75" height="50"/>
+                                        <rect key="frame" x="292" y="61" width="75" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="Mh7-Or-IUj"/>
                                             <constraint firstAttribute="height" constant="50" id="Qyf-Vh-bgw"/>
@@ -631,7 +631,7 @@ music box on.</string>
                                     <constraint firstAttribute="bottom" secondItem="Akk-FW-dNV" secondAttribute="bottom" constant="3" id="JUJ-aJ-GJE"/>
                                     <constraint firstAttribute="trailing" secondItem="GtV-vh-Bqb" secondAttribute="trailing" id="OJV-4y-0X2"/>
                                     <constraint firstAttribute="bottom" secondItem="GtV-vh-Bqb" secondAttribute="bottom" id="SlE-1A-fNJ"/>
-                                    <constraint firstAttribute="height" constant="104" id="lUl-HT-MxW"/>
+                                    <constraint firstAttribute="height" constant="114" id="lUl-HT-MxW"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDv-No-cAb" userLabel="Banner Frame View">
