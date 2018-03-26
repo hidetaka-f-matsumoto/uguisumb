@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CraftedMusicBox.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>85750AA4BC5A4584DFCFD029908FAADAE3331CB5</string>
+				<key>dateExpires</key>
+				<string>2019/03/17</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>7JDKPK4524.hidetaka.f.matsumoto.uguisumb</string>
+				<key>aps-environment</key>
+				<string>production</string>
+				<key>beta-reports-active</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>7JDKPK4524</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>CraftedMusicBox.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>11a0b8c6-b557-499b-9dde-f7b36e7ec2b6</string>
+				<key>name</key>
+				<string>iOS Team Store Provisioning Profile: hidetaka.f.matsumoto.uguisumb</string>
+			</dict>
+			<key>symbols</key>
+			<false/>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>7JDKPK4524</string>
+				<key>name</key>
+				<string>Hidetaka Matsumoto</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
