@@ -579,13 +579,8 @@
     // 音階表示更新
     const NSString *scaleMode = _header.scaleMode;
     NSArray *names = CMBScaleNames[scaleMode];
-    UIFont *font = [UIFont fontWithName:@"SetoFont-SP" size:19.f];
-    if ([scaleMode isEqualToString:@"doremi"] || [scaleMode isEqualToString:@"haniho"]) {
-        font = [UIFont fontWithName:@"SetoFont-SP" size:16.f];
-    }
     for (NSInteger i=0; i<_scaleLabels.count; i++) {
         UILabel *label = _scaleLabels[i];
-        label.font = font;
         label.text = NSLocalizedString(names[i], names[i]);
     }
 }

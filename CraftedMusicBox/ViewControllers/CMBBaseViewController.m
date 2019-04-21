@@ -14,23 +14,6 @@
 
 @implementation CMBBaseViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    // ナビゲーションバーの設定
-    [[UINavigationBar appearance] setTitleTextAttributes:
-     @{
-       NSFontAttributeName : [UIFont fontWithName:@"SetoFont-SP" size:19.f],
-       NSForegroundColorAttributeName : [CMBUtility tintColor],
-      }];
-    [[UIBarButtonItem appearance] setTitleTextAttributes:
-     @{
-       NSFontAttributeName : [UIFont fontWithName:@"SetoFont-SP" size:19.f],
-       NSForegroundColorAttributeName : [CMBUtility tintColor],
-       } forState:UIControlStateNormal];    
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

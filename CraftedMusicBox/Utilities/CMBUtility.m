@@ -131,16 +131,6 @@ static CMBUtility *_instance = nil;
     return [UIColor whiteColor];
 }
 
-+ (UIFont *)fontForButton
-{
-    return [UIFont fontWithName:@"SetoFont-SP" size:19.f];
-}
-
-+ (UIFont *)fontForLabel
-{
-    return [UIFont fontWithName:@"SetoFont-SP" size:17.f];
-}
-
 + (NSString *)scaleWithIndex:(NSInteger)index
 {
     if (0 > index || CMBScales.count <= index) {
