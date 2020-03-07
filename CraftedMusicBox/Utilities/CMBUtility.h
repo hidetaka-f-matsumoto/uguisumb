@@ -28,9 +28,6 @@
 + (UIColor *)yellowColor;
 + (UIColor *)whiteColor;
 
-+ (UIFont *)fontForButton;
-+ (UIFont *)fontForLabel;
-
 + (NSString *)scaleWithIndex:(NSInteger)index;
 + (NSInteger)indexWithScale:(NSString *)scale;
 

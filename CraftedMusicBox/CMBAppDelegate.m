@@ -17,6 +17,7 @@
 {
     // Override point for customization after application launch.
     [FIRApp configure];
+    [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
     // Push 通知
     UIUserNotificationType allNotificationTypes = (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
     UIUserNotificationSettings *settings =

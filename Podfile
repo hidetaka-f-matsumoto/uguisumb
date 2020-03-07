@@ -7,11 +7,11 @@ target 'CraftedMusicBox' do
 
   # Pods for CraftedMusicBox
   pod 'SVProgressHUD', '~> 2.2'
-  pod 'Google-Mobile-Ads-SDK', '~> 7.16'
   pod 'Reachability', '~> 3.0'
   pod 'SWTableViewCell', '~> 0.3'
-  pod 'Firebase/Core', '~> 4.9'
-  pod 'Firebase/Messaging', '~> 4.9'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/AdMob'
 
   target 'CraftedMusicBoxTests' do
     inherit! :search_paths
