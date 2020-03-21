@@ -524,6 +524,7 @@
 						};
 					};
 					08883AF31956CC6A00F7EB68 = {
+						DevelopmentTeam = 7JDKPK4524;
 						TestTargetID = 08883ACF1956CC6A00F7EB68;
 					};
 				};
@@ -533,6 +534,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				Base,
 				en,
 				ja,
@@ -770,8 +772,10 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: Hidetaka Matsumoto (RHWDK7JP52)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Hidetaka Matsumoto (RHWDK7JP52)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 7JDKPK4524;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -822,8 +826,10 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Hidetaka Matsumoto (7JDKPK4524)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Hidetaka Matsumoto (7JDKPK4524)";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 7JDKPK4524;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
