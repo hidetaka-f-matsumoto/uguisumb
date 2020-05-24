@@ -63,15 +63,17 @@
     NSAttributedString *loadStr =
     [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Load", @"Load")
                                     attributes:@{
-                                                 NSForegroundColorAttributeName : [CMBUtility whiteColor],
-                                                 }];
+                                        NSFontAttributeName : [CMBUtility fontForButton],
+                                        NSForegroundColorAttributeName : [CMBUtility whiteColor],
+                                    }];
     [rightUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility greenColor]
                                       attributedTitle:loadStr];
     NSAttributedString *deleteStr =
     [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Delete", @"Delete")
                                     attributes:@{
-                                                 NSForegroundColorAttributeName : [CMBUtility whiteColor],
-                                                 }];
+                                        NSFontAttributeName : [CMBUtility fontForButton],
+                                        NSForegroundColorAttributeName : [CMBUtility whiteColor],
+                                    }];
     [rightUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility redColor]
                                       attributedTitle:deleteStr];
     
