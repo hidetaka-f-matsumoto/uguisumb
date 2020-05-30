@@ -106,7 +106,7 @@
         [UIView animateWithDuration:0.5f
                               delay:0.f
                             options:UIViewAnimationOptionCurveEaseIn
-                         animations:^(void) {_curtainView.backgroundColor = [UIColor clearColor];}
+                         animations:^(void) {self->_curtainView.backgroundColor = [UIColor clearColor];}
                          completion:nil];
     }
     // SoundManagerをチェック
@@ -651,8 +651,8 @@
         animation.fromValue = [NSNumber numberWithFloat:1.f];
         animation.toValue = [NSNumber numberWithFloat:3.f];
         // アニメーションを追加
-        [_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
-        _isOctaveChanging = NO;
+        [self->_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
+        self->_isOctaveChanging = NO;
     }];
 }
 
@@ -677,10 +677,10 @@
         animation.fromValue = [NSNumber numberWithFloat:1.f];
         animation.toValue = [NSNumber numberWithFloat:3.f];
         // アニメーションを追加
-        [_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
+        [self->_octaveLabel.layer addAnimation:animation forKey:@"scale-layer"];
         // ローディング表示OFF
         [self loadingEndWithNetwork:NO];
-        _isOctaveChanging = NO;
+        self->_isOctaveChanging = NO;
     }];
 }
 

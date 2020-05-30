@@ -192,8 +192,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     }
     // 画面を閉じてデリゲートに通知する
     [self dismissViewControllerAnimated:YES completion:^(void) {
-        [_delegate songDidLoadWithSequence:sequences
-                                    header:header];
+        [self->_delegate songDidLoadWithSequence:sequences
+                                          header:header];
     }];
 }
 

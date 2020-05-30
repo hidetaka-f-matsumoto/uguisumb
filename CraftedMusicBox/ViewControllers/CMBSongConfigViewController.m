@@ -67,9 +67,9 @@
     // 閉じる
     [self dismissViewControllerAnimated:YES
                              completion:^(void) {
-                                 // デリゲートに通知
-                                 [_delegate songDidConfigureWithSave:NO];
-                             }];
+        // デリゲートに通知
+        [self->_delegate songDidConfigureWithSave:NO];
+    }];
 }
 
 - (IBAction)applyAndSaveButtonDidTap:(id)sender
@@ -79,9 +79,9 @@
     // 閉じる
     [self dismissViewControllerAnimated:YES
                              completion:^(void) {
-                                 // デリゲートに通知
-                                 [_delegate songDidConfigureWithSave:YES];
-                             }];
+        // デリゲートに通知
+        [self->_delegate songDidConfigureWithSave:YES];
+    }];
 }
 
 @end
