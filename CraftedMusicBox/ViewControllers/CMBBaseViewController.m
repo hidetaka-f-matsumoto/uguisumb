@@ -160,17 +160,17 @@
     _bannerView.rootViewController = self;
     _bannerView.delegate = self;
     [_bannerFrameView addSubview:_bannerView];
+#ifdef DEBUG
+    GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[
+        // Simulators.
+        // Test devices.
+        @"889ab485761f8e9717be4f74ba63cb7c",
+        @"32f668caae5f51e25a624cbad59ea2fb",
+        @"005cec916bbc6b059364291493a25819",
+    ];
+#endif // DEBUG
     // リクエストを行って広告を読み込む
     GADRequest *request = [GADRequest request];
-#ifdef DEBUG
-    request.testDevices = @[
-                            // Simulators.
-                            // Test devices.
-                            @"889ab485761f8e9717be4f74ba63cb7c",
-                            @"32f668caae5f51e25a624cbad59ea2fb",
-                            @"005cec916bbc6b059364291493a25819",
-                            ];
-#endif // DEBUG
     [_bannerView loadRequest:request];
     // Autolayout 制約を設定
     [_bannerFrameView addConstraint:
