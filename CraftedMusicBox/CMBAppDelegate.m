@@ -69,7 +69,7 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+  options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
 {
     BOOL isOpenable = NO;
     if ([[url scheme] isEqualToString:CMBURLScheme]) {
