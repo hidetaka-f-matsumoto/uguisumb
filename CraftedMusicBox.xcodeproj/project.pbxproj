@@ -483,6 +483,7 @@
 				08883ACD1956CC6A00F7EB68 /* Frameworks */,
 				08883ACE1956CC6A00F7EB68 /* Resources */,
 				691B9AC2822B238595988A03 /* [CP] Copy Pods Resources */,
+				043B0E4724832AAF00E16A46 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -593,6 +594,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		043B0E4724832AAF00E16A46 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
 		691B9AC2822B238595988A03 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -871,7 +889,7 @@
 				CODE_SIGN_ENTITLEMENTS = CraftedMusicBox/CraftedMusicBox.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.4.4.0;
+				CURRENT_PROJECT_VERSION = 1.4.4.2;
 				DEVELOPMENT_TEAM = 7JDKPK4524;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -903,7 +921,7 @@
 				CODE_SIGN_ENTITLEMENTS = CraftedMusicBox/CraftedMusicBox.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hidetaka Matsumoto (7JDKPK4524)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.4.4.0;
+				CURRENT_PROJECT_VERSION = 1.4.4.2;
 				DEVELOPMENT_TEAM = 7JDKPK4524;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";

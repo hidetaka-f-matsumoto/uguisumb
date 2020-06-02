@@ -1,7 +1,12 @@
 PODS:
+  - Crashlytics (3.14.0):
+    - Fabric (~> 1.10.2)
+  - Fabric (1.10.2)
   - Firebase/AdMob (6.18.0):
     - Firebase/CoreOnly
     - Google-Mobile-Ads-SDK (~> 7.50)
+  - Firebase/Analytics (6.18.0):
+    - Firebase/Core
   - Firebase/Core (6.18.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.3.0)
@@ -92,7 +97,10 @@ PODS:
   - SWTableViewCell (0.3.7)
 
 DEPENDENCIES:
+  - Crashlytics (~> 3.14.0)
+  - Fabric (~> 1.10.2)
   - Firebase/AdMob
+  - Firebase/Analytics
   - Firebase/Core
   - Firebase/Messaging
   - Reachability (~> 3.0)
@@ -101,6 +109,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Crashlytics
+    - Fabric
     - Firebase
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
@@ -123,6 +133,8 @@ SPEC REPOS:
     - SWTableViewCell
 
 SPEC CHECKSUMS:
+  Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
+  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   Firebase: 0490eca762a72e4f1582319539153897f1508dee
   FirebaseAnalytics: 058d71e714a1a6804d9e0f25e3bb18e377a51579
   FirebaseAnalyticsInterop: 3f86269c38ae41f47afeb43ebf32a001f58fcdae
@@ -144,6 +156,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
 
-PODFILE CHECKSUM: 3b8ed313bb83d173f2bd42306bca6599cf944ab4
+PODFILE CHECKSUM: cb0af725ea4045891b5313705d8c8e22ee596df1
 
 COCOAPODS: 1.9.0
