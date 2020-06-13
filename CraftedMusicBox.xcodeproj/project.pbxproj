@@ -889,7 +889,7 @@
 				CODE_SIGN_ENTITLEMENTS = CraftedMusicBox/CraftedMusicBox.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.4.4.2;
+				CURRENT_PROJECT_VERSION = 1.4.4.3;
 				DEVELOPMENT_TEAM = 7JDKPK4524;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -921,7 +921,7 @@
 				CODE_SIGN_ENTITLEMENTS = CraftedMusicBox/CraftedMusicBox.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hidetaka Matsumoto (7JDKPK4524)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.4.4.2;
+				CURRENT_PROJECT_VERSION = 1.4.4.3;
 				DEVELOPMENT_TEAM = 7JDKPK4524;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";

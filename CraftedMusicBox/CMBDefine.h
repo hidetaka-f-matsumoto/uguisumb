@@ -31,7 +31,7 @@ static NSString * const CMBURLParamSong = @"song";
 #ifdef DEBUG
 static NSString * const CMBSvURL = @"https://uguisumb-stg.herokuapp.com";
 #else
-static NSString * const CMBSvURL = @"https://api.uguisumb.app";
+static NSString * const CMBSvURL = @"https://uguisumb.app";
 #endif
 static NSString * const CMBSvApiSecret = @"JDVjhLA8";
 static NSString * const CMBSvApiSong = @"/api/v2/songs";
