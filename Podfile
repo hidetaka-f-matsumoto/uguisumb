@@ -12,6 +12,9 @@ target 'CraftedMusicBox' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'Firebase/AdMob'
+  pod 'Fabric', '~> 1.10.2'
+  pod 'Crashlytics', '~> 3.14.0'
+  pod 'Firebase/Analytics'
 
   target 'CraftedMusicBoxTests' do
     inherit! :search_paths

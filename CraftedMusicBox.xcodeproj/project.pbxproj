@@ -17,6 +17,7 @@
 		0477B0FA1E0FF48600F72F4F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0477B0F81E0FF48600F72F4F /* GoogleService-Info.plist */; };
 		04DFEF221E1768EC007483B3 /* Marimba.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 04DFEF201E1768EC007483B3 /* Marimba.aupreset */; };
 		04DFEF231E1768EC007483B3 /* Vibraphone.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 04DFEF211E1768EC007483B3 /* Vibraphone.aupreset */; };
+		04EC651F247ABF3600771713 /* sp-setofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04EC651E247ABF3600771713 /* sp-setofont.ttf */; };
 		04FCD3ED1B79F639006E71E1 /* CMBAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCD3EC1B79F639006E71E1 /* CMBAnimations.m */; };
 		0802C0871A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0802C0861A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.m */; };
 		0803C8E81A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0803C8EA1A2DB77300FE8357 /* CraftedMusicBoxTests-InfoPlist.strings */; };
@@ -97,6 +98,7 @@
 		04DFEF201E1768EC007483B3 /* Marimba.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Marimba.aupreset; sourceTree = "<group>"; };
 		04DFEF211E1768EC007483B3 /* Vibraphone.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Vibraphone.aupreset; sourceTree = "<group>"; };
 		04DFEF241E17DCAA007483B3 /* CraftedMusicBox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CraftedMusicBox.entitlements; sourceTree = "<group>"; };
+		04EC651E247ABF3600771713 /* sp-setofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sp-setofont.ttf"; sourceTree = "<group>"; };
 		04FCD3EB1B79F639006E71E1 /* CMBAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBAnimations.h; path = Utilities/CMBAnimations.h; sourceTree = "<group>"; };
 		04FCD3EC1B79F639006E71E1 /* CMBAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBAnimations.m; path = Utilities/CMBAnimations.m; sourceTree = "<group>"; };
 		0802C0851A2976F3000F0136 /* CMBMusicBoxTableViewHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBMusicBoxTableViewHeadCell.h; path = Views/CMBMusicBoxTableViewHeadCell.h; sourceTree = "<group>"; };
@@ -238,6 +240,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04EC651D247ABF3600771713 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04EC651E247ABF3600771713 /* sp-setofont.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		087D29B01A37FADC00BCA9F5 /* EPSSampler */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +319,7 @@
 				08883B191956D3E300F7EB68 /* Utilities */,
 				08883AE21956CC6A00F7EB68 /* CMBAppDelegate.h */,
 				08883AE31956CC6A00F7EB68 /* CMBAppDelegate.m */,
+				04EC651D247ABF3600771713 /* fonts */,
 				08883AE51956CC6A00F7EB68 /* Main.storyboard */,
 				0803C8C61A2D53A900FE8357 /* LaunchScreen.xib */,
 				08883AEE1956CC6A00F7EB68 /* Images.xcassets */,
@@ -472,6 +483,7 @@
 				08883ACD1956CC6A00F7EB68 /* Frameworks */,
 				08883ACE1956CC6A00F7EB68 /* Resources */,
 				691B9AC2822B238595988A03 /* [CP] Copy Pods Resources */,
+				043B0E4724832AAF00E16A46 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -508,7 +520,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CMB;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = hidetaka.f.matsumoto;
 				TargetAttributes = {
 					08883ACF1956CC6A00F7EB68 = {
@@ -524,13 +536,14 @@
 						};
 					};
 					08883AF31956CC6A00F7EB68 = {
+						DevelopmentTeam = 7JDKPK4524;
 						TestTargetID = 08883ACF1956CC6A00F7EB68;
 					};
 				};
 			};
 			buildConfigurationList = 08883ACB1956CC6A00F7EB68 /* Build configuration list for PBXProject "CraftedMusicBox" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
@@ -557,6 +570,7 @@
 				08289E1F1A2EACD800927D51 /* InfoPlist.strings in Resources */,
 				08A52E2E1A381232008F86C2 /* MusicBox.aupreset in Resources */,
 				04DFEF231E1768EC007483B3 /* Vibraphone.aupreset in Resources */,
+				04EC651F247ABF3600771713 /* sp-setofont.ttf in Resources */,
 				087D29B61A37FADC00BCA9F5 /* LICENSE in Resources */,
 				08A52E2B1A38121A008F86C2 /* Sounds in Resources */,
 				08289E221A2EAD0F00927D51 /* LaunchScreen.xib in Resources */,
@@ -580,6 +594,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		043B0E4724832AAF00E16A46 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
 		691B9AC2822B238595988A03 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -757,12 +788,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -770,8 +803,10 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: Hidetaka Matsumoto (RHWDK7JP52)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Hidetaka Matsumoto (RHWDK7JP52)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 7JDKPK4524;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -809,12 +844,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -822,8 +859,10 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Hidetaka Matsumoto (7JDKPK4524)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Hidetaka Matsumoto (7JDKPK4524)";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 7JDKPK4524;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -846,10 +885,11 @@
 			baseConfigurationReference = 377AD88E028C6C3FDB0ED804 /* Pods-CraftedMusicBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = CraftedMusicBox/CraftedMusicBox.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1.4.4.3;
 				DEVELOPMENT_TEAM = 7JDKPK4524;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -862,6 +902,7 @@
 				INFOPLIST_FILE = "CraftedMusicBox/CraftedMusicBox-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 1.4.4;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = hidetaka.f.matsumoto.uguisumb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -876,10 +917,11 @@
 			baseConfigurationReference = 6306A0C1A6DDDEBF08EF6901 /* Pods-CraftedMusicBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = CraftedMusicBox/CraftedMusicBox.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hidetaka Matsumoto (7JDKPK4524)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1.4.4.3;
 				DEVELOPMENT_TEAM = 7JDKPK4524;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -892,6 +934,7 @@
 				INFOPLIST_FILE = "CraftedMusicBox/CraftedMusicBox-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 1.4.4;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = hidetaka.f.matsumoto.uguisumb;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,7 +8,8 @@
 //"New feature information ver.1.4.0." = "- Vibraphone is now available.\n- Speed range has expanded.\n- Playback become more accurate.";
 //"New feature information ver.1.4.1." = "- Fixed incorrect speed during playback.";
 //"New feature information ver.1.4.2." = "- Made it easy to use the addition and deletion of time.\n- Improve display performance.\n- Fixed minor bugs.";
-"New feature information" = "- Fixed minor bugs.";
+//"New feature information ver.1.4.3" = "- Fixed minor bugs.";
+"New feature information" = "- Revert font to previous one.\n- Improve performance.";
 
 /* Cancel */
 "Cancel" = "Cancel";
