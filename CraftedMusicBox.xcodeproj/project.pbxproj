@@ -889,7 +889,7 @@
 				CODE_SIGN_ENTITLEMENTS = CraftedMusicBox/CraftedMusicBox.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.4.4.3;
+				CURRENT_PROJECT_VERSION = 1.4.5.0;
 				DEVELOPMENT_TEAM = 7JDKPK4524;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -902,7 +902,7 @@
 				INFOPLIST_FILE = "CraftedMusicBox/CraftedMusicBox-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.4.4;
+				MARKETING_VERSION = 1.4.5;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = hidetaka.f.matsumoto.uguisumb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -921,7 +921,7 @@
 				CODE_SIGN_ENTITLEMENTS = CraftedMusicBox/CraftedMusicBox.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hidetaka Matsumoto (7JDKPK4524)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.4.4.3;
+				CURRENT_PROJECT_VERSION = 1.4.5.0;
 				DEVELOPMENT_TEAM = 7JDKPK4524;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -934,7 +934,7 @@
 				INFOPLIST_FILE = "CraftedMusicBox/CraftedMusicBox-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.4.4;
+				MARKETING_VERSION = 1.4.5;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = hidetaka.f.matsumoto.uguisumb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
