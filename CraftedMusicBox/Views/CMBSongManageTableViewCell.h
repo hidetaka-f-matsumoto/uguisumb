@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SWTableViewCell.h"
 
-@interface CMBSongManageTableViewCell : SWTableViewCell
+@interface CMBSongManageTableViewCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 

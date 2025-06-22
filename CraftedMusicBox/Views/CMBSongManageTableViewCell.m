@@ -17,11 +17,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-    // 選択の場合
-    if (selected) {
-        // メニューを開く
-        [self showRightUtilityButtonsAnimated:YES];
-    }
+    // Native iOS swipe actions will handle the menu display
 }
 
 - (void)setupWithSongInfo:(NSDictionary *)info

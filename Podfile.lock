@@ -92,9 +92,10 @@ PODS:
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.4)
-  - Reachability (3.2)
-  - SVProgressHUD (2.2.5)
-  - SWTableViewCell (0.3.7)
+  - Reachability (3.7.6)
+  - SVProgressHUD (2.3.1):
+    - SVProgressHUD/Core (= 2.3.1)
+  - SVProgressHUD/Core (2.3.1)
 
 DEPENDENCIES:
   - Crashlytics (~> 3.14.0)
@@ -103,9 +104,8 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Core
   - Firebase/Messaging
-  - Reachability (~> 3.0)
-  - SVProgressHUD (~> 2.2)
-  - SWTableViewCell (~> 0.3)
+  - Reachability (~> 3.7)
+  - SVProgressHUD (~> 2.3)
 
 SPEC REPOS:
   trunk:
@@ -130,7 +130,6 @@ SPEC REPOS:
     - Protobuf
     - Reachability
     - SVProgressHUD
-    - SWTableViewCell
 
 SPEC CHECKSUMS:
   Crashlytics: 9220f5bc89e7a618df411b4f639389dbfb0e03d2
@@ -152,10 +151,9 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
-  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
+  Reachability: fd0ecd23705e2599e4cceeb943222ae02296cbc6
+  SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
 
-PODFILE CHECKSUM: cb0af725ea4045891b5313705d8c8e22ee596df1
+PODFILE CHECKSUM: 53d79210aac296578d233ce3838f7afc4a2ddd2f
 
 COCOAPODS: 1.16.2
