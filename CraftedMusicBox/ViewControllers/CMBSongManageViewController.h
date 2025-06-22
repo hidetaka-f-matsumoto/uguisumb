@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "CMBBaseModalViewController.h"
-#import "SWTableViewCell.h"
 #import "CMBSongHeaderData.h"
 
 @protocol CMBSongManageDelegate <NSObject>
@@ -23,7 +22,7 @@
 /**
  * 楽譜選択
  */
-@interface CMBSongManageViewController : CMBBaseModalViewController <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate>
+@interface CMBSongManageViewController : CMBBaseModalViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, assign) id<CMBSongManageDelegate> delegate;
 

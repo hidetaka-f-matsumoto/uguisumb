@@ -57,28 +57,7 @@
 }
 */
 
-- (NSArray *)rightButtons
-{
-    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
-    NSAttributedString *loadStr =
-    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Load", @"Load")
-                                    attributes:@{
-                                        NSFontAttributeName : [CMBUtility fontForButton],
-                                        NSForegroundColorAttributeName : [CMBUtility whiteColor],
-                                    }];
-    [rightUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility greenColor]
-                                      attributedTitle:loadStr];
-    NSAttributedString *deleteStr =
-    [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Delete", @"Delete")
-                                    attributes:@{
-                                        NSFontAttributeName : [CMBUtility fontForButton],
-                                        NSForegroundColorAttributeName : [CMBUtility whiteColor],
-                                    }];
-    [rightUtilityButtons sw_addUtilityButtonWithColor:[CMBUtility redColor]
-                                      attributedTitle:deleteStr];
-    
-    return rightUtilityButtons;
-}
+// Replaced rightButtons method with native iOS swipe actions in tableView:trailingSwipeActionsConfigurationForRowAtIndexPath:
 
 #pragma mark - UITableViewDataSource
 
@@ -111,9 +90,6 @@
         {
             CMBSongManageTableViewCell *smCell = [tableView dequeueReusableCellWithIdentifier:@"SongManageTableViewCell"];
             [smCell setupWithSongInfo:_songInfos[indexPath.row]];
-            // SWTableViewCell
-            smCell.rightUtilityButtons = [self rightButtons];
-            smCell.delegate = self;
             cell = smCell;
             break;
         }
@@ -136,41 +112,48 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 }
 
-#pragma mark - SWTableViewCellDelegate
+#pragma mark - UITableViewDelegate Swipe Actions
 
-- (void)        swipeableTableViewCell:(SWTableViewCell *)cell
- didTriggerRightUtilityButtonWithIndex:(NSInteger)index
+- (UISwipeActionsConfiguration *)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(11.0))
 {
-    CMBSongManageTableViewCell *songCell = (CMBSongManageTableViewCell *)cell;
-    NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:songCell];
-    switch (index) {
-        case 0:
-        {
-            // Load button was pressed
-            NSString *title = NSLocalizedString(@"Load song", @"Load song");
-            NSString *message = [NSString stringWithFormat:NSLocalizedString(@"You wanna load %@?", @"The message to confirm you want to load the song with name %@."), songCell.info[@"name"]];
-            [self showConfirmDialogWithTitle:title
-                                     message:message
-                                     handler:^(UIAlertAction *action) {
-                                         [self loadSongWithInfo:songCell.info];
-                                     }];
-            break;
-        }
-        case 1:
-        {
-            // Delete button was pressed
-            NSString *title = NSLocalizedString(@"Delete song", @"Delete song");
-            NSString *message = [NSString stringWithFormat:NSLocalizedString(@"You wanna delete %@?", @"The message to confirm you want to delete the song with name %@."), songCell.info[@"name"]];
-            [self showConfirmDialogWithTitle:title
-                                     message:message
-                                     handler:^(UIAlertAction *action) {
-                                         [self deleteSongWithInfo:songCell.info indexPath:cellIndexPath];
-                                     }];
-            break;
-        }
-        default:
-            break;
+    if (indexPath.section != 1) {
+        return nil;
     }
+    
+    CMBSongManageTableViewCell *songCell = (CMBSongManageTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    // Load action
+    UIContextualAction *loadAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal
+                                                                             title:NSLocalizedString(@"Load", @"Load")
+                                                                           handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        NSString *title = NSLocalizedString(@"Load song", @"Load song");
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"You wanna load %@?", @"The message to confirm you want to load the song with name %@."), songCell.info[@"name"]];
+        [self showConfirmDialogWithTitle:title
+                                 message:message
+                                 handler:^(UIAlertAction *alertAction) {
+                                     [self loadSongWithInfo:songCell.info];
+                                     completionHandler(YES);
+                                 }];
+    }];
+    loadAction.backgroundColor = [CMBUtility greenColor];
+    
+    // Delete action
+    UIContextualAction *deleteAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive
+                                                                               title:NSLocalizedString(@"Delete", @"Delete")
+                                                                             handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        NSString *title = NSLocalizedString(@"Delete song", @"Delete song");
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"You wanna delete %@?", @"The message to confirm you want to delete the song with name %@."), songCell.info[@"name"]];
+        [self showConfirmDialogWithTitle:title
+                                 message:message
+                                 handler:^(UIAlertAction *alertAction) {
+                                     [self deleteSongWithInfo:songCell.info indexPath:indexPath];
+                                     completionHandler(YES);
+                                 }];
+    }];
+    
+    UISwipeActionsConfiguration *configuration = [UISwipeActionsConfiguration configurationWithActions:@[deleteAction, loadAction]];
+    configuration.performsFirstActionWithFullSwipe = NO;
+    return configuration;
 }
 
 - (void)loadSongWithInfo:(NSDictionary *)songInfo

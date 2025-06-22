@@ -7,6 +7,7 @@
 //
 
 @import Firebase;
+@import UserNotifications;
 #import "CMBAppDelegate.h"
 #import "CMBUtility.h"
 #import "CMBSoundManager.h"
@@ -18,12 +19,16 @@
     // Override point for customization after application launch.
     [FIRApp configure];
     [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
-    // Push 通知
-    UIUserNotificationType allNotificationTypes = (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
-    UIUserNotificationSettings *settings =
-    [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    // Push 通知 - Modern UserNotifications framework (iOS 10+)
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge)
+                           completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (granted) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[UIApplication sharedApplication] registerForRemoteNotifications];
+            });
+        }
+    }];
     // SoundManager 初期化
     [CMBSoundManager sharedInstance];
     return YES;
